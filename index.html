@@ -2413,15 +2413,7 @@
   ======================================================== -->
   <div class="pointer-events-none absolute inset-0">
 
-    <!-- Fine editorial grid -->
-    <div
-      class="absolute inset-0 opacity-[0.03]"
-      style="
-        background-image:
-          linear-gradient(to right, #0B211A 1px, transparent 1px);
-        background-size: 8.333% 100%;
-      "
-    ></div>
+   
 
     <!-- Page lines -->
     <div
@@ -2975,16 +2967,7 @@
              blur-[100px]"
     ></div>
 
-    <!-- Subtle grid -->
-    <div
-      class="absolute inset-0 opacity-[0.035]"
-      style="
-        background-image:
-          linear-gradient(to right, rgba(255,255,255,0.8) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255,255,255,0.8) 1px, transparent 1px);
-        background-size: 80px 80px;
-      "
-    ></div>
+   
 
   </div>
 
@@ -3165,9 +3148,9 @@
           </span>
 
           <h3
-            class="mt-2 font-luxury text-3xl
+            class="mt-2 font-luxury text-5xl
                    font-light text-white
-                   sm:text-4xl"
+                   sm:text-5xl"
           >
             Your journey, considered.
           </h3>
@@ -3186,7 +3169,7 @@
 
 
       <!-- Service List -->
-      <div class="concierge-services border-t border-white/10">
+       <div class="grid grid-cols-1 gap-5 border-t border-white/10 md:grid-cols-2 concierge-services">
 
         <!-- 01 -->
         <div
@@ -3682,6 +3665,60 @@
 
         </div>
 
+          <!-- 09 -->
+        <div
+          class="concierge-service group
+                 border-b border-white/10
+                 transition-all duration-500
+                 hover:bg-white/[0.035]"
+        >
+
+          <div
+            class="flex items-center
+                   justify-between gap-6
+                   px-2 py-6
+                   sm:px-4 sm:py-7"
+          >
+
+            <div class="flex items-center gap-6 sm:gap-10">
+
+              <span
+                class="font-sans text-[10px]
+                       tracking-[0.2em]
+                       text-kavora-gold/70"
+              >
+                09
+              </span>
+
+              <h4
+                class="font-luxury text-2xl
+                       font-light
+                       transition duration-300
+                       group-hover:translate-x-2
+                       sm:text-3xl"
+              >
+                Personal Requests
+              </h4>
+
+            </div>
+
+            <span
+              class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-white/10
+                     text-white/30
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold"
+            >
+              →
+            </span>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -4093,7 +4130,7 @@
              sm:text-[24rem]"
     >
       09
-    ></span>
+    </span>
 
     <!-- Soft ambient light -->
     <div
@@ -4790,546 +4827,337 @@
 
 </style>
 
-
 <!-- =========================================================
      10 — GUEST STORIES
-========================================================= -->
+     ========================================================= -->
 
-<section id="guest-stories" class="relative overflow-hidden bg-[#f4f1eb] text-[#171717]">
+<section id="guest-stories" class="relative overflow-hidden bg-kavora-ivory py-28 md:py-36 lg:py-44">
 
-    <!-- Decorative Background -->
-    <div class="pointer-events-none absolute inset-0">
-        <div class="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-white/60 blur-3xl"></div>
-        <div class="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#ded8cd]/30 blur-3xl"></div>
+  <!-- Background Page Number -->
+  <div class="pointer-events-none absolute -right-8 top-12 select-none font-luxury text-[11rem] leading-none text-kavora-green/[0.035] md:text-[17rem] lg:text-[22rem]">
+    10
+  </div>
+
+  <!-- Subtle Vertical Grid -->
+  <div class="pointer-events-none absolute inset-0 opacity-[0.045]">
+    <div class="mx-auto grid h-full max-w-[1600px] grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+      <div class="border-l border-kavora-green"></div>
+    </div>
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
+
+    <!-- Section Header -->
+    <div class="guest-reveal mb-20 grid gap-10 lg:grid-cols-12 lg:items-end lg:mb-28">
+
+      <div class="lg:col-span-3">
+        <div class="flex items-center gap-4">
+          <span class="h-px w-10 bg-kavora-gold"></span>
+
+          <span class="font-sans text-[10px] font-medium uppercase tracking-[0.3em] text-kavora-green/60">
+            Guest Stories
+          </span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 lg:col-start-5">
+        <h2 class="font-luxury text-6xl leading-[0.95] text-kavora-green sm:text-6xl md:text-7xl lg:text-[5rem]">
+          The journey,
+          <span class="italic">in their words.</span>
+        </h2>
+      </div>
+
     </div>
 
 
-    <!-- Main Container -->
-    <div class="relative mx-auto max-w-[1500px] px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
+    <!-- Main Story -->
+    <div class="guest-reveal grid gap-12 lg:grid-cols-12 lg:gap-16">
 
+      <!-- Editorial Image -->
+      <div class="relative overflow-hidden lg:col-span-5">
 
-        <!-- =====================================================
-             SECTION HEADER
-        ====================================================== -->
+        <!-- Replace with approved/licensed Kavora photography -->
+        <div class="guest-image relative aspect-[4/5] overflow-hidden bg-kavora-green">
 
-        <div class="mb-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <img
+            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
+            alt="Luxury African safari landscape"
+            class="h-full w-full object-cover transition-transform duration-[1800ms] ease-out"
+          >
 
-            <!-- Heading -->
-            <div>
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-green/40 via-transparent to-transparent"></div>
 
-                <span class="mb-5 block text-[10px] font-medium uppercase tracking-[0.35em] text-black/45">
-                    10
-                </span>
+          <!-- Image Number -->
+          <div class="absolute left-6 top-6 flex items-center gap-3">
+            <span class="font-sans text-[9px] uppercase tracking-[0.3em] text-white/70">
+              Guest Story
+            </span>
 
-                <h2 class="font-serif text-5xl leading-[0.9] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
-                    Guest
-                    <br>
-                    <span class="italic">Stories</span>
-                </h2>
-
-            </div>
-
-
-            <!-- Intro -->
-            <div class="max-w-xl lg:pb-2">
-
-                <p class="mb-5 text-xs font-medium uppercase tracking-[0.28em] text-black/45">
-                    The journeys they still talk about.
-                </p>
-
-                <p class="max-w-lg text-base leading-7 text-black/60 sm:text-lg sm:leading-8">
-                    Every journey begins with a destination. The stories that remain
-                    are usually about something more personal — a moment, a feeling,
-                    a place that became theirs.
-                </p>
-
-            </div>
+            <span class="h-px w-8 bg-kavora-gold"></span>
+          </div>
 
         </div>
 
+      </div>
 
 
-        <!-- =====================================================
-             STORIES
-        ====================================================== -->
+      <!-- Testimonial -->
+      <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
 
-        <div class="relative">
+        <!-- Quote Mark -->
+        <div class="guest-quote mb-8 font-luxury text-7xl leading-none text-kavora-gold/70 md:text-8xl">
+          “
+        </div>
 
+        <!-- Quote -->
+        <blockquote class="guest-quote font-luxury text-4xl leading-[1.08] text-kavora-green sm:text-5xl md:text-6xl lg:text-[4.2rem]">
+          Kavora didn't simply arrange our safari.
+          <span class="italic text-kavora-green/70">
+            They understood how we wanted to experience Africa.
+          </span>
+        </blockquote>
 
-            <!-- =================================================
-                 STORY 01
-            ================================================== -->
+        <!-- Divider -->
+        <div class="my-10 h-px w-full bg-kavora-green/10"></div>
 
-            <article
-                class="guest-story grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
-                data-story="0"
-            >
+        <!-- Guest Details -->
+        <!-- Replace these placeholders with verified guest information -->
+        <div class="guest-meta flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
 
-                <!-- Image -->
-                <div class="group relative overflow-hidden">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-green">
+            Guest Name
+          </span>
 
-                    <div class="aspect-[4/5] overflow-hidden bg-[#ddd8cf] sm:aspect-[16/10] lg:aspect-[4/5]">
+          <span class="hidden h-1 w-1 rounded-full bg-kavora-gold sm:block"></span>
 
-                        <!-- Replace with verified guest image -->
-                        <img
-                            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1400&q=85"
-                            alt="African landscape"
-                            class="h-full w-full object-cover transition duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                        >
+          <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/50">
+            Country
+          </span>
 
-                    </div>
+          <span class="hidden h-1 w-1 rounded-full bg-kavora-gold sm:block"></span>
 
-
-                    <!-- Image Number -->
-                    <div class="absolute left-5 top-5 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white">
-
-                        <span>01</span>
-
-                        <span class="h-px w-8 bg-white/60"></span>
-
-                        <span>03</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Story Content -->
-                <div class="flex flex-col justify-center lg:py-12">
-
-
-                    <!-- Story Label -->
-                    <div class="mb-10 flex items-center gap-4">
-
-                        <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-black/40">
-                            Guest Story
-                        </span>
-
-                        <span class="h-px w-10 bg-black/20"></span>
-
-                        <span class="text-[10px] uppercase tracking-[0.25em] text-black/40">
-                            01 / 03
-                        </span>
-
-                    </div>
-
-
-
-                    <!-- Quote -->
-                    <div class="relative">
-
-                        <span class="absolute -left-5 -top-8 font-serif text-7xl leading-none text-black/10 sm:-left-8 sm:text-8xl">
-                            “
-                        </span>
-
-                        <!-- Replace with verified testimonial -->
-                        <blockquote class="relative max-w-2xl font-serif text-3xl leading-[1.15] tracking-[-0.025em] text-black sm:text-4xl lg:text-[2.9rem]">
-
-                            The journey felt completely ours. Nothing was rushed,
-                            and every detail seemed to have been considered before
-                            we even arrived.
-
-                        </blockquote>
-
-                    </div>
-
-
-
-                    <!-- Guest Information -->
-                    <div class="mt-10 border-t border-black/10 pt-6">
-
-                        <p class="text-xs font-medium uppercase tracking-[0.22em] text-black">
-                            Guest Name
-                        </p>
-
-                        <p class="mt-2 text-sm text-black/45">
-                            Journey / Location
-                        </p>
-
-                    </div>
-
-
-
-                    <!-- Navigation -->
-                    <div class="mt-12 flex items-center justify-between border-t border-black/10 pt-5">
-
-                        <div class="flex items-center gap-3">
-
-                            <!-- Previous -->
-                            <button
-                                type="button"
-                                class="guest-prev group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Previous guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:-translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M19 12H5"></path>
-                                    <path d="M12 19l-7-7 7-7"></path>
-                                </svg>
-
-                            </button>
-
-
-                            <!-- Next -->
-                            <button
-                                type="button"
-                                class="guest-next group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Next guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-
-                            </button>
-
-                        </div>
-
-
-                        <span class="hidden text-[10px] uppercase tracking-[0.25em] text-black/35 sm:block">
-                            Private journeys · Personal memories
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =================================================
-                 STORY 02
-            ================================================== -->
-
-            <article
-                class="guest-story hidden gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
-                data-story="1"
-            >
-
-                <!-- Image -->
-                <div class="group relative overflow-hidden">
-
-                    <div class="aspect-[4/5] overflow-hidden bg-[#ddd8cf] sm:aspect-[16/10] lg:aspect-[4/5]">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
-                            alt="Safari landscape"
-                            class="h-full w-full object-cover transition duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                        >
-
-                    </div>
-
-
-                    <div class="absolute left-5 top-5 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white">
-
-                        <span>02</span>
-
-                        <span class="h-px w-8 bg-white/60"></span>
-
-                        <span>03</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Story Content -->
-                <div class="flex flex-col justify-center lg:py-12">
-
-                    <div class="mb-10 flex items-center gap-4">
-
-                        <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-black/40">
-                            Guest Story
-                        </span>
-
-                        <span class="h-px w-10 bg-black/20"></span>
-
-                        <span class="text-[10px] uppercase tracking-[0.25em] text-black/40">
-                            02 / 03
-                        </span>
-
-                    </div>
-
-
-
-                    <div class="relative">
-
-                        <span class="absolute -left-5 -top-8 font-serif text-7xl leading-none text-black/10 sm:-left-8 sm:text-8xl">
-                            “
-                        </span>
-
-                        <!-- Replace with verified testimonial -->
-                        <blockquote class="relative max-w-2xl font-serif text-3xl leading-[1.15] tracking-[-0.025em] text-black sm:text-4xl lg:text-[2.9rem]">
-
-                            What stayed with us most was not simply where we went,
-                            but how effortless every part of the experience felt.
-
-                        </blockquote>
-
-                    </div>
-
-
-
-                    <div class="mt-10 border-t border-black/10 pt-6">
-
-                        <p class="text-xs font-medium uppercase tracking-[0.22em] text-black">
-                            Guest Name
-                        </p>
-
-                        <p class="mt-2 text-sm text-black/45">
-                            Journey / Location
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="mt-12 flex items-center justify-between border-t border-black/10 pt-5">
-
-                        <div class="flex items-center gap-3">
-
-                            <button
-                                type="button"
-                                class="guest-prev group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Previous guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:-translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M19 12H5"></path>
-                                    <path d="M12 19l-7-7 7-7"></path>
-                                </svg>
-
-                            </button>
-
-
-                            <button
-                                type="button"
-                                class="guest-next group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Next guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-
-                            </button>
-
-                        </div>
-
-
-                        <span class="hidden text-[10px] uppercase tracking-[0.25em] text-black/35 sm:block">
-                            Private journeys · Personal memories
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =================================================
-                 STORY 03
-            ================================================== -->
-
-            <article
-                class="guest-story hidden gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
-                data-story="2"
-            >
-
-                <!-- Image -->
-                <div class="group relative overflow-hidden">
-
-                    <div class="aspect-[4/5] overflow-hidden bg-[#ddd8cf] sm:aspect-[16/10] lg:aspect-[4/5]">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1534177616068-ecf3a6f4c9a7?auto=format&fit=crop&w=1400&q=85"
-                            alt="African wilderness"
-                            class="h-full w-full object-cover transition duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                        >
-
-                    </div>
-
-
-                    <div class="absolute left-5 top-5 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white">
-
-                        <span>03</span>
-
-                        <span class="h-px w-8 bg-white/60"></span>
-
-                        <span>03</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Story Content -->
-                <div class="flex flex-col justify-center lg:py-12">
-
-                    <div class="mb-10 flex items-center gap-4">
-
-                        <span class="text-[10px] font-medium uppercase tracking-[0.3em] text-black/40">
-                            Guest Story
-                        </span>
-
-                        <span class="h-px w-10 bg-black/20"></span>
-
-                        <span class="text-[10px] uppercase tracking-[0.25em] text-black/40">
-                            03 / 03
-                        </span>
-
-                    </div>
-
-
-
-                    <div class="relative">
-
-                        <span class="absolute -left-5 -top-8 font-serif text-7xl leading-none text-black/10 sm:-left-8 sm:text-8xl">
-                            “
-                        </span>
-
-                        <!-- Replace with verified testimonial -->
-                        <blockquote class="relative max-w-2xl font-serif text-3xl leading-[1.15] tracking-[-0.025em] text-black sm:text-4xl lg:text-[2.9rem]">
-
-                            There were moments when it felt less like travelling
-                            through Africa and more like being invited into it.
-
-                        </blockquote>
-
-                    </div>
-
-
-
-                    <div class="mt-10 border-t border-black/10 pt-6">
-
-                        <p class="text-xs font-medium uppercase tracking-[0.22em] text-black">
-                            Guest Name
-                        </p>
-
-                        <p class="mt-2 text-sm text-black/45">
-                            Journey / Location
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="mt-12 flex items-center justify-between border-t border-black/10 pt-5">
-
-                        <div class="flex items-center gap-3">
-
-                            <button
-                                type="button"
-                                class="guest-prev group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Previous guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:-translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M19 12H5"></path>
-                                    <path d="M12 19l-7-7 7-7"></path>
-                                </svg>
-
-                            </button>
-
-
-                            <button
-                                type="button"
-                                class="guest-next group flex h-11 w-11 items-center justify-center border border-black/15 transition hover:bg-black hover:text-white"
-                                aria-label="Next guest story"
-                            >
-
-                                <svg
-                                    class="h-4 w-4 transition-transform group-hover:translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-
-                            </button>
-
-                        </div>
-
-
-                        <span class="hidden text-[10px] uppercase tracking-[0.25em] text-black/35 sm:block">
-                            Private journeys · Personal memories
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
+          <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/50">
+            Private Safari
+          </span>
 
         </div>
 
-
-
-        <!-- =====================================================
-             BOTTOM STATEMENT
-        ====================================================== -->
-
-        <div class="mt-24 border-t border-black/10 pt-8 lg:mt-32">
-
-            <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-
-                <p class="max-w-md text-xs uppercase leading-6 tracking-[0.18em] text-black/40">
-                    A collection of personal moments, private journeys
-                    and places remembered long after departure.
-                </p>
-
-                <span class="text-[10px] uppercase tracking-[0.3em] text-black/30">
-                    Kavora · Guest Stories
-                </span>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
 
-</section>
+
+    <!-- Secondary Stories -->
+    <div class="mt-28 border-t border-kavora-green/10 pt-10 lg:mt-36 lg:pt-12">
+
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
+
+        <!-- Story 02 -->
+        <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-2">
+
+          <div class="mb-8 flex items-center justify-between">
+
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-green/50">
+              02 / Guest Story
+            </span>
+
+            <span class="h-px flex-1 mx-5 bg-kavora-green/10"></span>
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              02
+            </span>
+
+          </div>
+
+          <div class="mb-7 aspect-[4/3] overflow-hidden bg-kavora-green">
+
+            <!-- Replace with approved/licensed Kavora photography -->
+            <img
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+              alt="African landscape"
+              class="guest-story-image h-full w-full object-cover transition-transform duration-[1400ms] ease-out"
+            >
+
+          </div>
+
+          <!-- Placeholder until verified testimonial is supplied -->
+          <div class="mb-5 font-luxury text-3xl leading-[1.12] text-kavora-green sm:text-4xl">
+            “A journey designed around us, rather than a journey we simply joined.”
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[0.25em] text-kavora-green">
+              Guest Name
+            </span>
+
+            <span class="h-px w-5 bg-kavora-gold"></span>
+
+            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-green/50">
+              Country
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- Story 03 -->
+        <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-8 lg:pt-24">
+
+          <div class="mb-8 flex items-center justify-between">
+
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-green/50">
+              03 / Guest Story
+            </span>
+
+            <span class="h-px flex-1 mx-5 bg-kavora-green/10"></span>
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              03
+            </span>
+
+          </div>
+
+          <div class="mb-7 aspect-[4/3] overflow-hidden bg-kavora-green">
+
+            <!-- Replace with approved/licensed Kavora photography -->
+            <img
+              src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&w=1200&q=85"
+              alt="African travel experience"
+              class="guest-story-image h-full w-full object-cover transition-transform duration-[1400ms] ease-out"
+            >
+
+          </div>
+
+          <!-- Placeholder until verified testimonial is supplied -->
+          <div class="mb-5 font-luxury text-3xl leading-[1.12] text-kavora-green sm:text-4xl">
+            “Every detail felt considered. We could simply be present in the moment.”
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[0.25em] text-kavora-green">
+              Guest Name
+            </span>
+
+            <span class="h-px w-5 bg-kavora-gold"></span>
+
+            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-green/50">
+              Country
+            </span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- Closing Statement -->
+    <div class="guest-reveal mt-28 border-t border-kavora-green/10 pt-10 lg:mt-40 lg:pt-14">
+
+      <div class="grid gap-8 md:grid-cols-12 md:items-end">
+
+        <div class="md:col-span-4">
+          <span class="font-sans text-[10px] uppercase tracking-[0.3em] text-kavora-green/50">
+            The Kavora Difference
+          </span>
+        </div>
+
+        <div class="md:col-span-7 md:col-start-6">
+          <p class="font-luxury text-3xl leading-[1.15] text-kavora-green sm:text-4xl md:text-5xl">
+            The best journeys are remembered not only for
+            <span class="italic text-kavora-green/60">where you went,</span>
+            but for
+            <span class="italic text-kavora-green/60">how you felt.</span>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Reveal Animation -->
+  <style>
+    .guest-reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s cubic-bezier(.22, 1, .36, 1),
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .guest-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .guest-quote {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 1.2s cubic-bezier(.22, 1, .36, 1),
+        transform 1.2s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .guest-reveal.is-visible .guest-quote {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .guest-meta {
+      opacity: 0;
+      transform: translateY(15px);
+      transition:
+        opacity .9s ease .25s,
+        transform .9s ease .25s;
+    }
+
+    .guest-reveal.is-visible .guest-meta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .guest-image img,
+    .guest-story-image {
+      transform: scale(1.02);
+    }
+
+    .guest-image:hover img,
+    .guest-story:hover .guest-story-image {
+      transform: scale(1.07);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .guest-reveal,
+      .guest-quote,
+      .guest-meta {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .guest-image img,
+      .guest-story-image {
+        transition: none;
+        transform: none;
+      }
+    }
+  </style>
+  </section>
 
 <!-- =========================================================
      11 — FINAL CTA
@@ -5580,63 +5408,85 @@
 
 <!-- =========================================================
      12 — FOOTER
-========================================================= -->
+     ========================================================= -->
 
-<footer id="footer" class="relative overflow-hidden bg-kavora-green text-kavora-ivory">
+<footer id="footer" class="relative overflow-hidden bg-kavora-green text-white">
 
-  <!-- Subtle top border -->
-  <div class="absolute inset-x-0 top-0 h-px bg-kavora-gold/20"></div>
-
-  <!-- =======================================================
-       MAIN FOOTER
-  ======================================================== -->
-
-  <div class="relative mx-auto max-w-[1600px] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-
-    <!-- Intro -->
-    <div class="grid gap-16 lg:grid-cols-[1.2fr_1fr] lg:gap-24">
-
-      <div>
-        <p class="mb-8 font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-          Private Travel Concierge
-        </p>
-
-        <h2 class="max-w-4xl font-serif text-6xl leading-[0.85] tracking-[-0.03em] text-kavora-ivory sm:text-7xl lg:text-8xl xl:text-[9rem]">
-          KAVORA
-        </h2>
-
-        <p class="mt-10 max-w-xl font-sans text-sm leading-7 text-kavora-ivory/60 sm:text-base">
-          Private journeys across Africa, thoughtfully designed around
-          the people, places and moments that make travel personal.
-        </p>
-
-        <p class="mt-8 font-serif text-2xl italic text-kavora-ivory/90 sm:text-3xl">
-          Travel deeper. Remember longer.
-        </p>
-      </div>
+  <!-- Subtle Background Grid -->
+  <div class="pointer-events-none absolute inset-0 opacity-[0.035]">
+    <div class="mx-auto grid h-full max-w-[1600px] grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+      <div class="border-l border-white"></div>
+    </div>
+  </div>
 
 
-      <!-- Concierge statement -->
-      <div class="flex items-end lg:justify-end">
+  <!-- Large Background Wordmark -->
+  <div class="pointer-events-none absolute bottom-[-1rem] left-1/2 hidden -translate-x-1/2 select-none whitespace-nowrap font-luxury text-[18rem] leading-none tracking-[-0.06em] text-white/[0.025] lg:block">
+    KAVORA
+  </div>
 
-        <div class="max-w-sm border-l border-kavora-gold/30 pl-6 lg:pl-8">
 
-          <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-            The Kavora Way
-          </p>
+  <div class="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
 
-          <p class="mt-5 font-serif text-3xl leading-tight text-kavora-ivory sm:text-4xl">
-            Travel should feel
-            <span class="italic text-kavora-gold">
-              personal.
+
+    <!-- =====================================================
+         FOOTER INTRO
+         ===================================================== -->
+
+    <div class="footer-reveal border-b border-white/10 py-24 md:py-32 lg:py-40">
+
+      <div class="grid gap-12 lg:grid-cols-12 lg:items-end">
+
+        <!-- Brand -->
+        <div class="lg:col-span-7">
+
+          <div class="mb-8 flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span class="font-sans text-[10px] font-medium uppercase tracking-[0.32em] text-white/50">
+              KAVORA AFRICA
             </span>
+
+          </div>
+
+          <h2 class="font-luxury text-5xl leading-[0.9] tracking-[-0.02em] sm:text-7xl md:text-5xl lg:text-[6rem]">
+            Africa,
+            <span class="italic text-white/60">personally</span>
+            curated.
+          </h2>
+
+        </div>
+
+
+        <!-- Contact Direction -->
+        <div class="lg:col-span-4 lg:col-start-9">
+
+          <p class="mb-7 max-w-md font-luxury text-2xl leading-[1.2] text-white/75 md:text-3xl">
+            Your journey begins with a conversation.
           </p>
 
-          <p class="mt-6 font-sans text-sm leading-7 text-kavora-ivory/50">
-            From the first conversation to the final moment,
-            every detail is considered around how you want
-            to experience Africa.
-          </p>
+          <a
+            href="#contact"
+            class="group inline-flex items-center gap-5 border-b border-kavora-gold/60 pb-3 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-white transition-colors duration-300 hover:border-kavora-gold"
+          >
+            Begin Your Journey
+
+            <span class="transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </a>
 
         </div>
 
@@ -5646,209 +5496,156 @@
 
 
     <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+         MAIN FOOTER CONTENT
+         ===================================================== -->
 
-    <div class="mt-24 grid gap-12 border-t border-kavora-ivory/10 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="footer-reveal grid gap-16 py-20 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 lg:py-24">
 
-      <!-- Explore -->
-      <div>
-        <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-          Explore
-        </p>
 
-        <nav class="mt-6 flex flex-col gap-3">
+      <!-- Brand Column -->
+      <div class="lg:col-span-4">
+
+        <div class="mb-8">
 
           <a
-            href="#about"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
+            href="#"
+            class="inline-block font-sans text-2xl font-semibold tracking-[0.16em] text-white"
           >
-            About Kavora
+            KAVORA
+          </a>
+
+          <div class="mt-3 h-px w-10 bg-kavora-gold"></div>
+
+        </div>
+
+        <p class="max-w-xs font-luxury text-xl leading-[1.35] text-white/60">
+          Luxury Travel Concierge
+          <br>
+          & Private Journeys
+        </p>
+
+      </div>
+
+
+      <!-- Navigation -->
+      <div class="lg:col-span-3 lg:col-start-6">
+
+        <div class="mb-7 font-sans text-[9px] font-semibold uppercase tracking-[0.3em] text-white/35">
+          Explore
+        </div>
+
+        <nav class="flex flex-col">
+
+          <a
+            href="#destinations"
+            class="footer-link border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            Destinations
           </a>
 
           <a
             href="#journeys"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
+            class="footer-link border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
           >
-            Private Journeys
+            Journeys
           </a>
 
           <a
-            href="#experience"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
+            href="#concierge"
+            class="footer-link border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
           >
-            The Kavora Experience
+            Concierge
+          </a>
+
+          <a
+            href="#about"
+            class="footer-link border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            About
           </a>
 
           <a
             href="#journal"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
+            class="footer-link border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
           >
-            Kavora Journal
-          </a>
-
-        </nav>
-      </div>
-
-
-      <!-- Destinations -->
-      <div>
-        <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-          Destinations
-        </p>
-
-        <nav class="mt-6 flex flex-col gap-3">
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Tanzania
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Kenya
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Rwanda
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Uganda
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Beyond
-          </a>
-
-        </nav>
-      </div>
-
-
-      <!-- Connect -->
-      <div>
-        <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-          Connect
-        </p>
-
-        <div class="mt-6 flex flex-col gap-3">
-
-          <a
-            href="#contact"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            hello@kavora.com
+            Journal
           </a>
 
           <a
             href="#contact"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
+            class="footer-link py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
           >
-            +000 000 000 000
-          </a>
-
-          <span class="font-sans text-sm text-kavora-ivory/60">
-            Africa
-          </span>
-
-        </div>
-      </div>
-
-
-      <!-- Follow -->
-      <div>
-        <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-          Follow
-        </p>
-
-        <nav class="mt-6 flex flex-col gap-3">
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            Facebook
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            href="#"
-            class="w-fit font-sans text-sm text-kavora-ivory/60 transition-colors duration-300 hover:text-kavora-ivory"
-          >
-            WhatsApp
+            Contact
           </a>
 
         </nav>
+
       </div>
 
-    </div>
 
+      <!-- Social -->
+      <div class="lg:col-span-3 lg:col-start-10">
 
-    <!-- =====================================================
-         CTA STRIP
-    ====================================================== -->
-
-    <div class="mt-20 border-y border-kavora-gold/20 py-10 lg:mt-28">
-
-      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-
-        <div>
-
-          <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-gold">
-            Begin Something Personal
-          </p>
-
-          <h3 class="mt-3 font-serif text-4xl leading-tight text-kavora-ivory sm:text-5xl">
-            Have somewhere in mind?
-          </h3>
-
-          <p class="mt-2 font-serif text-2xl italic text-kavora-ivory/50 sm:text-3xl">
-            Let's make it personal.
-          </p>
-
+        <div class="mb-7 font-sans text-[9px] font-semibold uppercase tracking-[0.3em] text-white/35">
+          Follow Kavora
         </div>
 
+        <div class="flex flex-col">
 
-        <a
-          href="#contact"
-          class="group inline-flex w-fit items-center gap-6 border border-kavora-gold bg-kavora-gold px-7 py-4 font-sans text-[10px] uppercase tracking-luxury text-kavora-green transition-all duration-300 hover:bg-transparent hover:text-kavora-gold"
-        >
+          <!-- Replace # with verified social URLs -->
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            <span>Instagram</span>
 
-          <span>
-            Begin Your Journey
-          </span>
+            <span class="text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-kavora-gold">
+              ↗
+            </span>
+          </a>
 
-          <span class="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            <span>LinkedIn</span>
 
-        </a>
+            <span class="text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-kavora-gold">
+              ↗
+            </span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between border-b border-white/10 py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            <span>YouTube</span>
+
+            <span class="text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-kavora-gold">
+              ↗
+            </span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between py-3.5 font-sans text-sm text-white/70 transition-colors duration-300 hover:text-white"
+          >
+            <span>Facebook</span>
+
+            <span class="text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-kavora-gold">
+              ↗
+            </span>
+          </a>
+
+        </div>
 
       </div>
 
@@ -5856,57 +5653,66 @@
 
 
     <!-- =====================================================
-         BOTTOM FOOTER
-    ====================================================== -->
+         FOOTER PRINCIPLE
+         ===================================================== -->
 
-    <div class="mt-10 flex flex-col gap-6 border-t border-kavora-ivory/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+    <div class="footer-reveal border-y border-white/10 py-12 md:py-16">
 
-      <p class="font-sans text-[10px] uppercase tracking-luxury text-kavora-ivory/30">
-        © <span id="kavora-year"></span> Kavora. All rights reserved.
-      </p>
+      <div class="grid gap-8 md:grid-cols-12 md:items-center">
 
+        <div class="md:col-span-3">
 
-      <div class="flex flex-wrap gap-6">
+          <span class="font-sans text-[9px] uppercase tracking-[0.3em] text-white/35">
+            Our Philosophy
+          </span>
 
-        <a
-          href="#"
-          class="font-sans text-[10px] uppercase tracking-luxury text-kavora-ivory/30 transition-colors duration-300 hover:text-kavora-gold"
-        >
-          Privacy
-        </a>
+        </div>
 
-        <a
-          href="#"
-          class="font-sans text-[10px] uppercase tracking-luxury text-kavora-ivory/30 transition-colors duration-300 hover:text-kavora-gold"
-        >
-          Terms
-        </a>
+        <div class="md:col-span-8 md:col-start-5">
 
-        <a
-          href="#"
-          class="font-sans text-[10px] uppercase tracking-luxury text-kavora-ivory/30 transition-colors duration-300 hover:text-kavora-gold"
-        >
-          Cookies
-        </a>
+          <p class="font-luxury text-3xl leading-[1.15] text-white/80 sm:text-4xl md:text-5xl">
+            Africa is not a package.
+            <span class="italic text-white/45">
+              It is a journey designed around you.
+            </span>
+          </p>
+
+        </div>
 
       </div>
 
+    </div>
 
-      <button
-        id="kavora-top"
-        type="button"
-        class="group flex items-center gap-3 font-sans text-[10px] uppercase tracking-luxury text-kavora-ivory/40 transition-colors duration-300 hover:text-kavora-gold"
+
+    <!-- =====================================================
+         BOTTOM BAR
+         ===================================================== -->
+
+    <div class="footer-reveal flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+
+      <!-- Copyright -->
+      <div class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/35">
+        © KAVORA AFRICA
+      </div>
+
+
+      <!-- Descriptor -->
+      <div class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/35">
+        Luxury Travel Concierge & Private Journeys
+      </div>
+
+
+      <!-- Back To Top -->
+      <a
+        href="#"
+        class="group flex items-center gap-3 font-sans text-[9px] font-semibold uppercase tracking-[0.25em] text-white/50 transition-colors duration-300 hover:text-white"
       >
+        Back to top
 
-        <span>
-          Back to top
-        </span>
-
-        <span class="transition-transform duration-300 group-hover:-translate-y-1">
+        <span class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/15 text-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-kavora-gold group-hover:text-kavora-gold">
           ↑
         </span>
-
-      </button>
+      </a>
 
     </div>
 
@@ -5914,18 +5720,64 @@
 
 
   <!-- =======================================================
-       LARGE BACKGROUND WORDMARK
-  ======================================================== -->
+       REVEAL ANIMATION
+       ======================================================= -->
 
-  <div
-    aria-hidden="true"
-    class="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-serif text-[28vw] leading-none tracking-[-0.06em] text-kavora-forest/60"
-  >
-    KAVORA
-  </div>
+  <style>
 
+    .footer-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+
+      transition:
+        opacity 1s cubic-bezier(.22, 1, .36, 1),
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .footer-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer-link {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-link::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 1px;
+
+      background: #C8A96B;
+
+      transition: width .5s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .footer-link:hover::before {
+      width: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .footer-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .footer-link::before {
+        transition: none;
+      }
+
+    }
+
+  </style>
 </footer>
-
 
   <script>
 
@@ -6394,196 +6246,75 @@
 
   });
 
-   document.addEventListener("DOMContentLoaded", () => {
 
-        const stories = document.querySelectorAll(".guest-story");
-        const nextButtons = document.querySelectorAll(".guest-next");
-        const prevButtons = document.querySelectorAll(".guest-prev");
+  
+    /* =========================================================
+     GUEST STORIES REVEAL
+  ========================================================= */
+ document.addEventListener("DOMContentLoaded", () => {
+      const guestElements = document.querySelectorAll(".guest-reveal");
 
-        let currentStory = 0;
-
-
-        function showStory(index) {
-
-            if (!stories.length) return;
-
-
-            stories.forEach((story, i) => {
-
-                if (i === index) {
-
-                    story.classList.remove("hidden");
-
-                    story.classList.add("grid");
-
-
-                    story.animate(
-                        [
-                            {
-                                opacity: 0,
-                                transform: "translateY(15px)"
-                            },
-                            {
-                                opacity: 1,
-                                transform: "translateY(0)"
-                            }
-                        ],
-                        {
-                            duration: 600,
-                            easing: "cubic-bezier(.22, 1, .36, 1)"
-                        }
-                    );
-
-                } else {
-
-                    story.classList.add("hidden");
-
-                    story.classList.remove("grid");
-
-                }
-
-            });
-
-
-            currentStory = index;
-
+      const guestObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -60px 0px"
         }
+      );
 
-
-        function nextStory() {
-
-            const next =
-                (currentStory + 1) % stories.length;
-
-            showStory(next);
-
-        }
-
-
-        function previousStory() {
-
-            const previous =
-                (currentStory - 1 + stories.length) % stories.length;
-
-            showStory(previous);
-
-        }
-
-
-        /* Next Buttons */
-
-        nextButtons.forEach(button => {
-
-            button.addEventListener("click", nextStory);
-
-        });
-
-
-        /* Previous Buttons */
-
-        prevButtons.forEach(button => {
-
-            button.addEventListener("click", previousStory);
-
-        });
-
-
-        /* Keyboard Navigation */
-
-        document.addEventListener("keydown", event => {
-
-            if (event.key === "ArrowRight") {
-
-                nextStory();
-
-            }
-
-
-            if (event.key === "ArrowLeft") {
-
-                previousStory();
-
-            }
-
-        });
-
-
-        /* Touch Swipe */
-
-        let touchStartX = 0;
-
-
-        document.addEventListener(
-            "touchstart",
-            event => {
-
-                touchStartX =
-                    event.changedTouches[0].screenX;
-
-            },
-            {
-                passive: true
-            }
-        );
-
-
-        document.addEventListener(
-            "touchend",
-            event => {
-
-                const touchEndX =
-                    event.changedTouches[0].screenX;
-
-                const distance =
-                    touchEndX - touchStartX;
-
-
-                if (Math.abs(distance) < 60) {
-                    return;
-                }
-
-
-                if (distance < 0) {
-
-                    nextStory();
-
-                } else {
-
-                    previousStory();
-
-                }
-
-            },
-            {
-                passive: true
-            }
-        );
-
-    });
-
-
-/* =========================================================
-     FOOTER SCRIPT
-========================================================= */
- const yearElement = document.getElementById("kavora-year");
-
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
-
-
-  const topButton = document.getElementById("kavora-top");
-
-  if (topButton) {
-    topButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      guestElements.forEach((element) => {
+        guestObserver.observe(element);
       });
     });
-  }
+    
+
+    
+    /* =========================================================
+     FOOTER REVEAL
+  ========================================================= */
+     document.addEventListener("DOMContentLoaded", () => {
+
+      const footerElements = document.querySelectorAll(".footer-reveal");
+
+      const footerObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("is-visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -50px 0px"
+        }
+      );
 
 
+      footerElements.forEach((element, index) => {
+
+        element.style.transitionDelay = `${index * 80}ms`;
+
+        footerObserver.observe(element);
+
+      });
+
+    });
   </script>
 
 </body>
