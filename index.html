@@ -91,7 +91,7 @@
         aria-label="Kavora Africa Home"
       >
         <span
-          class="font-luxury text-3xl font-semibold tracking-[0.08em] text-white transition-colors duration-500"
+          class="font-luxury text-3xl font-semibold tracking-[0.08em] text-kavora-gold transition-colors duration-500"
         >
           KAVORA
         </span>
@@ -171,7 +171,7 @@
       <button
         id="menu-toggle"
         type="button"
-        class="relative z-50 flex h-10 w-10 items-center justify-center text-white lg:hidden"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
         aria-label="Open navigation menu"
         aria-expanded="false"
       >
@@ -295,7 +295,7 @@
     >
 
     <!-- Cinematic overlay -->
-    <div class="absolute inset-0 bg-kavora-green/35"></div>
+    <div class="absolute inset-0 bg-kavora-green/60"></div>
 
     <!-- Bottom cinematic gradient -->
     <div
@@ -336,7 +336,6 @@
           class="hero-reveal mb-6 flex items-center gap-4"
         >
 
-          <span class="h-px w-10 bg-kavora-gold"></span>
 
           <span
             class="text-[9px] font-semibold uppercase tracking-[0.35em] text-kavora-gold"
@@ -354,7 +353,7 @@
         >
           Africa,
           <br>
-          <span class="italic text-white/90">
+          <span class="italic text-kavora-gold">
             Personally Curated.
           </span>
         </h1>
@@ -417,13 +416,20 @@
             class="group inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.25em] text-white/80 transition-colors duration-300 hover:text-kavora-gold"
           >
 
-            <span>
+            <span class="text-kavora-gold">
               Explore Journeys
             </span>
 
-            <span
-              class="h-px w-8 bg-white/40 transition-all duration-500 group-hover:w-12 group-hover:bg-kavora-gold"
-            ></span>
+           <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
           </a>
 
@@ -444,12 +450,9 @@
 
           <div class="mb-5 flex items-center gap-3">
 
-            <span
-              class="h-1.5 w-1.5 rounded-full bg-kavora-gold"
-            ></span>
 
             <span
-              class="text-[8px] font-semibold uppercase tracking-[0.3em] text-white/60"
+              class="text-[8px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
             >
               Luxury Travel Concierge
             </span>
@@ -511,240 +514,104 @@
   }
 
 </style>
-
 <!-- =========================================================
      02 — BRAND POSITIONING
 ========================================================== -->
-
 <section
   id="positioning"
   class="relative overflow-hidden bg-kavora-ivory"
 >
 
   <!-- =======================================================
-       AMBIENT DETAILS
+       CONTENT CONTAINER
   ======================================================== -->
+  <div class="relative z-10 mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-40 lg:px-16 lg:py-48">
+    <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
 
-  <div class="pointer-events-none absolute inset-0">
-
-   
-
-    <div
-      class="absolute right-[8%] top-0 hidden h-full w-px bg-kavora-green/[0.06] lg:block"
-    ></div>
-
-    <!-- Large background number -->
-    <div
-      class="absolute -right-8 top-12 select-none font-luxury text-[18rem] leading-none text-kavora-gold/10 sm:text-[22rem]"
-    >
-      02
-    </div>
-
-    <!-- Small gold detail -->
-    <div
-      class="absolute left-[8%] top-24 hidden h-16 w-px bg-kavora-gold/50 lg:block"
-    ></div>
-
-  </div>
-
-
-  <!-- =======================================================
-       CONTENT
-  ======================================================== -->
-
-  <div
-    class="relative z-10 mx-auto max-w-[1600px] px-6 py-28 sm:px-8 sm:py-36 lg:px-12 lg:py-44"
-  >
-
-    <div class="grid lg:grid-cols-12 lg:gap-12">
-
-
-      <!-- ===================================================
-           LEFT — SECTION LABEL
-      ==================================================== -->
-
-      <div class="mb-12 lg:col-span-2 lg:mb-0">
-
-        <div
-          class="sticky top-32 flex items-center gap-4 lg:flex-col lg:items-start"
-        >
-
-          <span
-            class="h-px w-10 bg-kavora-gold lg:h-10 lg:w-px"
-          ></span>
-
-          <span
-            class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-green/50"
-          >
-            A DIFFERENT WAY TO EXPERIENCE AFRICA
+      <div class="mb-8 lg:col-span-3 lg:mb-0">
+        <div class="sticky top-32 flex items-center gap-4 lg:flex-col lg:items-start">
+          <span class="text-[10px] font-medium uppercase tracking-[0.35em] text-kavora-gold max-w-[180px] lg:leading-loose">
+            A Blueprint for Exploration
           </span>
-
         </div>
-
       </div>
 
-
       <!-- ===================================================
-           CENTER — MAIN STATEMENT
+           CENTER & RIGHT — EDITORIAL MANIFESTO STATEMENT
       ==================================================== -->
+      <div class="lg:col-span-9 xl:col-span-8">
 
-      <div class="lg:col-span-8">
-
-       
-
-
-        <!-- Main statement -->
-
-        <h2
-          class="positioning-reveal font-luxury text-[3.5rem] font-medium leading-[0.88] tracking-[-0.025em] text-kavora-green sm:text-[5rem] md:text-[5rem] lg:text-[5rem]"
-        >
-
-          We don't sell
-          <span class="italic text-kavora-gold">
-            tours.
-          </span>
-
-          <br>
-
-          We curate
-          <span class="relative inline-block">
-
-            exceptional
-            <span
-              class="absolute -bottom-2 left-0 h-px w-full bg-kavora-gold sm:-bottom-3"
-            ></span>
-
-          </span>
-
-          journeys.
-
+        <!-- High-contrast, clean headline typography -->
+        <h2 class="positioning-reveal font-luxury text-6xl font-medium leading-[0.92] tracking-tight text-kavora-green sm:text-[4.5rem] xl:text-[5.5rem]">
+          We do not sell <span class="italic font-serif text-kavora-gold font-normal">tours.</span>
+          <br class="hidden sm:inline">
+          We curate <span class="italic font-serif text-kavora-gold font-normal">exceptional</span> journeys.
         </h2>
 
-
-        <!-- Supporting copy -->
-
-        <div
-          class="mt-14 grid gap-10 border-t border-kavora-green/10 pt-10 sm:grid-cols-2 sm:gap-16"
-        >
-
-          <div class="positioning-reveal">
-
-            <p
-              class="font-luxury text-2xl leading-relaxed text-kavora-green/80 sm:text-3xl"
-            >
-              Africa is not a package.
-              It is a journey designed around you.
+        <!-- Dual Column Narrative Layout split via asymmetric grids -->
+        <div class="mt-16 grid gap-12 border-t border-kavora-green/10 pt-16 sm:grid-cols-12 sm:gap-16">
+          
+          <!-- Left Column Statement Callout -->
+          <div class="positioning-reveal sm:col-span-5">
+            <p class="font-luxury text-2xl font-light leading-relaxed tracking-wide text-kavora-green/90 sm:text-3xl">
+              The continent cannot be packaged. It yields only to bespoke choreography.
             </p>
-
           </div>
 
-
-          <div class="positioning-reveal">
-
-            <p
-              class="text-sm leading-7 text-kavora-green/60"
-            >
-              From the first conversation to the final farewell,
-              Kavora takes care of the details that transform a
-              trip into a personal experience.
+          <!-- Right Column Descriptive Details -->
+          <div class="positioning-reveal sm:col-span-7 space-y-6">
+            <p class="text-sm font-light leading-relaxed tracking-wide text-kavora-green/70 sm:text-base">
+              From the initial private dialogue to your final wheels up, Kavora handles the micro-logistics that insulate your trip, turning travel into effortless personal legacy.
             </p>
-
-            <p
-              class="mt-5 text-sm leading-7 text-kavora-green/60"
-            >
-              We listen, design, coordinate and curate —
-              bringing together the places, people and moments
-              that make Africa unforgettable.
+            <p class="text-sm font-light leading-relaxed tracking-wide text-kavora-green/70 sm:text-base">
+              We operate exclusively in the space between meticulous planning and absolute spontaneity&mdash;aligning the private sanctuaries, expert minds, and unscripted instances that make Africa raw yet completely refined.
             </p>
-
           </div>
 
         </div>
 
       </div>
 
-
-      <!-- ===================================================
-           RIGHT — EDITORIAL MARK
-      ==================================================== -->
-
-      <div
-        class="hidden lg:col-span-2 lg:flex lg:items-end lg:justify-end"
-      >
-
-      </div>
-
     </div>
-
 
     <!-- =======================================================
          BOTTOM PHILOSOPHY STRIP
     ======================================================== -->
-
-    <div
-      class="mt-24 border-y border-kavora-green/10 py-7 sm:mt-36"
-    >
-
-      <div
-        class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
-      >
-
-        <p
-          class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-green/40"
-        >
-          The Kavora approach
+    <div class="mt-32 border-y border-kavora-green/10 py-8 sm:mt-40">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        
+        <p class="text-[10px] font-semibold uppercase tracking-[0.35em] text-kavora-green/40">
+          The Kavora Framework
         </p>
 
-
-        <div
-          class="flex flex-wrap items-center gap-x-6 gap-y-3"
-        >
-
-          <span
-            class="text-[10px] uppercase tracking-[0.2em] text-kavora-green/70"
-          >
-            Personal
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-4">
+          <span class="text-[10px] font-medium uppercase tracking-[0.25em] text-kavora-green/80">
+            Personalized
           </span>
-
-          <span
-            class="h-1 w-1 rounded-full bg-kavora-gold"
-          ></span>
-
-          <span
-            class="text-[10px] uppercase tracking-[0.2em] text-kavora-green/70"
-          >
+          <span class="h-1 w-1 rounded-full bg-kavora-gold/60"></span>
+          
+          <span class="text-[10px] font-medium uppercase tracking-[0.25em] text-kavora-green/80">
             Discreet
           </span>
-
-          <span
-            class="h-1 w-1 rounded-full bg-kavora-gold"
-          ></span>
-
-          <span
-            class="text-[10px] uppercase tracking-[0.2em] text-kavora-green/70"
-          >
-            Thoughtful
+          <span class="h-1 w-1 rounded-full bg-kavora-gold/60"></span>
+          
+          <span class="text-[10px] font-medium uppercase tracking-[0.25em] text-kavora-green/80">
+            Uncompromised
           </span>
-
-          <span
-            class="h-1 w-1 rounded-full bg-kavora-gold"
-          ></span>
-
-          <span
-            class="text-[10px] uppercase tracking-[0.2em] text-kavora-green/70"
-          >
+          <span class="h-1 w-1 rounded-full bg-kavora-gold/60"></span>
+          
+          <span class="text-[10px] font-medium uppercase tracking-[0.25em] text-kavora-green/80">
             Seamless
           </span>
-
         </div>
 
       </div>
-
     </div>
 
   </div>
-
 </section>
+
+
 
 <!-- =========================================================
      03 — THE AFRICAN JOURNEY
@@ -773,7 +640,7 @@
   <div class="relative mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
 
     <div
-      class="grid grid-cols-1 gap-12 border-b border-white/10 py-24 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-36"
+      class="grid grid-cols-1 gap-12 border-white/10 py-24 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-36"
     >
 
       <!-- Number / Label -->
@@ -782,17 +649,12 @@
         data-delay="0"
       >
         <div class="flex items-center gap-4">
-          <span
-            class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
-          >
-            03
-          </span>
+         
 
-          <span class="h-px w-10 bg-kavora-gold/60"></span>
         </div>
 
         <p
-          class="mt-5 max-w-[150px] font-sans text-[10px] uppercase tracking-[0.2em] text-white/45"
+          class="mt-5 max-w-[150px] font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-gold"
         >
           The African Journey
         </p>
@@ -805,17 +667,11 @@
         data-delay="100"
       >
 
-        <p
-          class="mb-7 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
-        >
-          Africa, Your Way
-        </p>
-
         <h2
-          class="max-w-5xl font-luxury text-5xl font-medium leading-[0.92] tracking-[-0.025em] text-white sm:text-6xl md:text-7xl lg:text-[6.5rem]"
+          class="max-w-5xl font-luxury text-6xl font-medium leading-[0.92] tracking-[-0.025em] text-white sm:text-6xl md:text-7xl lg:text-[6.5rem]"
         >
           Every journey begins
-          <span class="italic text-white/65">with a reason.</span>
+          <span class="italic text-kavora-gold">with a reason.</span>
         </h2>
 
         <div
@@ -855,13 +711,13 @@
       data-delay="150"
     >
       <p
-        class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white/40"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
       >
         Choose your reason
       </p>
 
       <p
-        class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-white/30 sm:block"
+        class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-gold sm:block"
       >
         Six ways to experience Africa
       </p>
@@ -901,9 +757,6 @@
               01
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -923,12 +776,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Explore the wild
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -942,7 +804,7 @@
       >
 
         <img
-          src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=85"
+          src="https://www.shah-tours.com/wp-content/uploads/2025/06/Hot-air-balloon-floating-over-acacia-dotted-savannah-in-Serengeti-National-Park-at-sunrise.jpg"
           alt="Extraordinary African travel experience"
           class="absolute inset-0 h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-105"
         >
@@ -960,9 +822,6 @@
               02
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -982,12 +841,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Discover more
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -1019,9 +887,6 @@
               03
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -1040,12 +905,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Discover more
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -1077,9 +951,6 @@
               04
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -1098,12 +969,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Discover more
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -1135,9 +1015,6 @@
               05
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -1157,12 +1034,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Create something special
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -1194,9 +1080,6 @@
               06
             </span>
 
-            <span
-              class="h-px w-12 bg-kavora-gold/60 transition-all duration-500 group-hover:w-20"
-            ></span>
           </div>
 
           <h3
@@ -1216,12 +1099,21 @@
             class="mt-7 flex translate-y-3 items-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Make it personal
             </span>
 
-            <span class="text-kavora-gold">↗</span>
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
           </div>
 
         </div>
@@ -1239,10 +1131,10 @@
       <div class="md:col-span-7">
 
         <p
-          class="font-luxury text-3xl leading-tight text-white sm:text-4xl lg:text-5xl"
+          class="font-luxury text-4xl leading-tight text-white sm:text-4xl lg:text-5xl"
         >
           Your journey does not need to fit a category.
-          <span class="italic text-white/55">
+          <span class="italic text-kavora-gold">
             It only needs to feel like yours.
           </span>
         </p>
@@ -1256,17 +1148,24 @@
           class="group inline-flex items-center gap-5"
         >
 
-          <span
-            class="flex h-12 w-12 items-center justify-center rounded-full border border-kavora-gold/60 text-kavora-gold transition-all duration-500 group-hover:bg-kavora-gold group-hover:text-kavora-green"
-          >
-            ↗
-          </span>
+          
 
           <span
-            class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white transition-colors group-hover:text-kavora-gold"
+            class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors group-hover:text-kavora-gold"
           >
             Begin your journey
           </span>
+
+          <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
         </a>
 
@@ -1345,29 +1244,6 @@
   <!-- =======================================================
        BACKGROUND DETAILS
   ======================================================== -->
-  <div class="pointer-events-none absolute inset-0">
-
-    <!-- Editorial grid -->
-    <div
-      class="absolute inset-0 opacity-[0.035]"
-      style="
-        background-image:
-          linear-gradient(to right, #0B211A 1px, transparent 1px);
-        background-size: 8.333% 100%;
-      "
-    ></div>
-
-    <!-- Vertical page lines -->
-    <div
-      class="absolute left-[8.333%] top-0 h-full w-px bg-kavora-green/[0.08]"
-    ></div>
-
-    <div
-      class="absolute right-[8.333%] top-0 h-full w-px bg-kavora-green/[0.08]"
-    ></div>
-
-  </div>
-
 
   <!-- =======================================================
        SECTION INTRO
@@ -1379,34 +1255,6 @@
     <div
       class="grid grid-cols-1 gap-12 py-24 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-36"
     >
-
-      <!-- Section Number -->
-      <div
-        class="destination-reveal opacity-0 lg:col-span-2"
-      >
-
-        <div class="flex items-center gap-4">
-
-          <span
-            class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
-          >
-            04
-          </span>
-
-          <span
-            class="h-px w-10 bg-kavora-gold"
-          ></span>
-
-        </div>
-
-        <p
-          class="mt-5 max-w-[150px] font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/45"
-        >
-          Featured Destinations
-        </p>
-
-      </div>
-
 
       <!-- Main Heading -->
       <div
@@ -1421,10 +1269,10 @@
         </p>
 
         <h2
-          class="max-w-5xl font-luxury text-5xl font-medium leading-[0.9] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6.5rem]"
+          class="max-w-5xl font-luxury text-6xl font-medium leading-[0.9] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6.5rem]"
         >
           Places that become
-          <span class="italic text-kavora-green/55">
+          <span class="italic text-kavora-gold">
             part of the story.
           </span>
         </h2>
@@ -1475,7 +1323,7 @@
 
       <!-- Image -->
       <img
-        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=90"
+        src="https://africasafaristours.com/wp-content/uploads/2025/08/Serengeti-.jpg"
         alt="Serengeti wilderness in Tanzania"
         class="absolute inset-0 h-full w-full object-cover transition duration-[1600ms] ease-out"
       >
@@ -1506,15 +1354,7 @@
               Tanzania
             </span>
 
-            <span
-              class="h-px w-10 bg-kavora-gold"
-            ></span>
-
-            <span
-              class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/55"
-            >
-              01
-            </span>
+           
 
           </div>
 
@@ -1542,17 +1382,24 @@
               class="group inline-flex items-center gap-4"
             >
 
-              <span
-                class="flex h-11 w-11 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition-all duration-500 group-hover:bg-kavora-gold group-hover:text-kavora-green"
-              >
-                ↗
-              </span>
+             
 
               <span
-                class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white"
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
               >
                 Discover Serengeti
               </span>
+
+              <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
             </a>
 
@@ -1581,7 +1428,7 @@
       >
 
         <img
-          src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1600&q=85"
+          src="https://africajoytours.com/wp-content/uploads/2025/10/What-to-Pack-for-a-Romantic-Luxury-Safari-and-Zanzibar-Escape.jpg"
           alt="Zanzibar coastline and Indian Ocean"
           class="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out group-hover:scale-105"
         >
@@ -1605,11 +1452,6 @@
               Tanzania
             </span>
 
-            <span
-              class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50"
-            >
-              02
-            </span>
 
           </div>
 
@@ -1634,13 +1476,20 @@
           >
 
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Explore Zanzibar
             </span>
 
-            <span class="text-kavora-gold">
-              ↗
+            <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
             </span>
 
           </div>
@@ -1659,7 +1508,7 @@
       >
 
         <img
-          src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1600&q=85"
+          src="https://tanzaniabeautysafaris.com/wp-content/uploads/2024/01/8-day-zebra.jpg"
           alt="African landscape in Tanzania"
           class="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out group-hover:scale-105"
         >
@@ -1681,12 +1530,6 @@
               class="font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
             >
               East Africa
-            </span>
-
-            <span
-              class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50"
-            >
-              03
             </span>
 
           </div>
@@ -1712,13 +1555,20 @@
           >
 
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+              class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
             >
               Discover Tanzania
             </span>
 
-            <span class="text-kavora-gold">
-              ↗
+           <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
             </span>
 
           </div>
@@ -1755,7 +1605,7 @@
           class="font-luxury text-4xl leading-[1] tracking-[-0.015em] sm:text-5xl lg:text-6xl"
         >
           We don't simply choose where you go.
-          <span class="italic text-kavora-green/50">
+          <span class="italic text-kavora-gold">
             We consider how you want to feel when you get there.
           </span>
         </p>
@@ -1779,16 +1629,21 @@
       >
 
         <span
-          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-green transition-colors duration-300 group-hover:text-kavora-gold"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors duration-300 group-hover:text-kavora-gold"
         >
           Discuss your destination
         </span>
 
-        <span
-          class="flex h-12 w-12 items-center justify-center rounded-full border border-kavora-green/30 text-kavora-green transition-all duration-500 group-hover:border-kavora-gold group-hover:bg-kavora-gold"
-        >
-          ↗
-        </span>
+        <span class="flex h-8 w-8 fill-kavora-gold
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
       </a>
 
@@ -1839,22 +1694,9 @@
   ======================================================== -->
   <div class="pointer-events-none absolute inset-0">
 
-    <div
-      class="absolute inset-0 opacity-[0.035]"
-      style="
-        background-image:
-          linear-gradient(to right, rgba(255,255,255,.9) 1px, transparent 1px);
-        background-size: 8.333% 100%;
-      "
-    ></div>
+   
 
-    <div
-      class="absolute left-[8.333%] top-0 h-full w-px bg-white/[0.07]"
-    ></div>
-
-    <div
-      class="absolute right-[8.333%] top-0 h-full w-px bg-white/[0.07]"
-    ></div>
+    
 
     <div
       class="absolute right-[-15rem] top-[15rem] h-[35rem] w-[35rem] rounded-full bg-kavora-gold/10 blur-[130px]"
@@ -1874,32 +1716,6 @@
       class="grid grid-cols-1 gap-12 py-24 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-36"
     >
 
-      <!-- Section Label -->
-      <div
-        class="private-reveal opacity-0 lg:col-span-2"
-      >
-
-        <div class="flex items-center gap-4">
-
-          <span
-            class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
-          >
-            05
-          </span>
-
-          <span
-            class="h-px w-10 bg-kavora-gold"
-          ></span>
-
-        </div>
-
-        <p
-          class="mt-5 max-w-[150px] font-sans text-[10px] uppercase tracking-[0.2em] text-white/40"
-        >
-          Private Journeys
-        </p>
-
-      </div>
 
 
       <!-- Main Heading -->
@@ -1915,10 +1731,10 @@
         </p>
 
         <h2
-          class="max-w-5xl font-luxury text-5xl font-medium leading-[0.88] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6.5rem]"
+          class="max-w-5xl font-luxury text-6xl font-medium leading-[0.88] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6.5rem]"
         >
           Journeys with no
-          <span class="italic text-white/55">
+          <span class="italic text-kavora-gold">
             template.
           </span>
         </h2>
@@ -1965,13 +1781,13 @@
     >
 
       <span
-        class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
       >
         Featured Journeys
       </span>
 
       <span
-        class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-white/30 sm:block"
+        class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-gold sm:block"
       >
         Private · Personal · Considered
       </span>
@@ -1988,7 +1804,7 @@
     >
 
       <img
-        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=90"
+        src="https://www.hilmuks.com/wp-content/uploads/2026/04/great-migration-masai-mara-river-crossing-1.webp"
         alt="Serengeti private safari"
         class="absolute inset-0 h-full w-full object-cover transition duration-[1800ms] ease-out group-hover:scale-[1.04]"
       >
@@ -2004,9 +1820,7 @@
 
 
       <!-- Vertical gold detail -->
-      <div
-        class="absolute left-7 top-8 bottom-8 hidden w-px bg-kavora-gold/50 sm:left-10 lg:left-14 lg:block"
-      ></div>
+     
 
 
       <!-- Content -->
@@ -2025,19 +1839,10 @@
               Journey 01
             </span>
 
-            <p
-              class="mt-3 font-sans text-[9px] uppercase tracking-[0.22em] text-white/40"
-            >
-              Tanzania · Private Safari
-            </p>
+         
 
           </div>
 
-          <span
-            class="font-luxury text-5xl italic text-white/20 sm:text-6xl"
-          >
-            01
-          </span>
 
         </div>
 
@@ -2045,17 +1850,12 @@
         <!-- Main -->
         <div class="max-w-3xl">
 
-          <p
-            class="mb-6 font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white/45"
-          >
-            Featured journey
-          </p>
 
           <h3
-            class="font-luxury text-6xl font-medium leading-[0.82] tracking-[-0.02em] text-white sm:text-7xl md:text-8xl lg:text-[9rem]"
+            class="font-luxury text-5xl font-medium leading-[0.82] tracking-[-0.02em] text-white sm:text-7xl md:text-8xl lg:text-[6rem]"
           >
             The Serengeti,
-            <span class="italic text-white/70">
+            <span class="italic text-kavora-gold">
               Privately.
             </span>
           </h3>
@@ -2071,7 +1871,7 @@
 
         <!-- Bottom -->
         <div
-          class="mt-12 flex flex-col gap-8 border-t border-white/15 pt-6 sm:flex-row sm:items-center sm:justify-between"
+          class="mt-6 flex flex-col gap-8 border-t border-white/15 pt-6 sm:flex-row sm:items-center sm:justify-between"
         >
 
           <p
@@ -2088,15 +1888,20 @@
           >
 
             <span
-              class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white"
-            >
-              Explore this journey
-            </span>
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold transition-colors group-hover:text-kavora-gold"
+              >
+                Explore this journey
+              </span>
 
-            <span
-              class="flex h-11 w-11 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition-all duration-500 group-hover/link:bg-kavora-gold group-hover/link:text-kavora-green"
-            >
-              ↗
+           <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold
+                     group-hover:text-kavora-gold">
+              →
             </span>
 
           </a>
@@ -2124,7 +1929,7 @@
       >
 
         <img
-          src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1600&q=90"
+          src="https://media01.stockfood.com/largepreviews/MjIwMjM1NTE5Ng==/71043716-Palm-tree-white-sandy-beach-and-Indian-Ocean-Jambiani-island-of-Zanzibar-Tanzania-East-Africa-Africa.jpg"
           alt="Zanzibar Indian Ocean private journey"
           class="absolute inset-0 h-full w-full object-cover transition duration-[1600ms] ease-out group-hover:scale-105"
         >
@@ -2149,19 +1954,9 @@
                 Journey 02
               </span>
 
-              <p
-                class="mt-3 font-sans text-[9px] uppercase tracking-[0.22em] text-white/40"
-              >
-                Tanzania · Safari + Indian Ocean
-              </p>
+              
 
             </div>
-
-            <span
-              class="font-luxury text-4xl italic text-white/25"
-            >
-              02
-            </span>
 
           </div>
 
@@ -2170,11 +1965,11 @@
           <div>
 
             <h3
-              class="max-w-xl font-luxury text-5xl leading-[0.88] text-white sm:text-6xl lg:text-7xl"
+              class="max-w-xl font-luxury text-5xl leading-[0.88] text-white sm:text-6xl lg:text-6xl"
             >
               From Savannah
               <br>
-              <span class="italic text-white/65">
+              <span class="italic text-kavora-gold">
                 to the Indian Ocean
               </span>
             </h3>
@@ -2193,14 +1988,21 @@
             >
 
               <span
-                class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white transition-colors group-hover:text-kavora-gold"
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold transition-colors group-hover:text-kavora-gold"
               >
-                Explore journey
+                Explore this journey
               </span>
 
-              <span class="text-kavora-gold">
-                ↗
-              </span>
+              <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
             </a>
 
@@ -2245,19 +2047,7 @@
                 Journey 03
               </span>
 
-              <p
-                class="mt-3 font-sans text-[9px] uppercase tracking-[0.22em] text-white/40"
-              >
-                Africa · Designed for Two
-              </p>
-
             </div>
-
-            <span
-              class="font-luxury text-4xl italic text-white/25"
-            >
-              03
-            </span>
 
           </div>
 
@@ -2266,11 +2056,11 @@
           <div>
 
             <h3
-              class="max-w-xl font-luxury text-5xl leading-[0.88] text-white sm:text-6xl lg:text-7xl"
+              class="max-w-xl font-luxury text-5xl leading-[0.88] text-white sm:text-6xl lg:text-6xl"
             >
               The African
               <br>
-              <span class="italic text-white/65">
+              <span class="italic text-kavora-gold">
                 Honeymoon
               </span>
             </h3>
@@ -2289,14 +2079,21 @@
             >
 
               <span
-                class="font-sans text-[9px] font-semibold uppercase tracking-[0.22em] text-white"
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold transition-colors group-hover:text-kavora-gold"
               >
-                Explore journey
+                Explore this journey
               </span>
 
-              <span class="text-kavora-gold">
-                ↗
-              </span>
+              <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
             </a>
 
@@ -2334,7 +2131,7 @@
           class="font-luxury text-4xl leading-[0.98] tracking-[-0.015em] text-white sm:text-5xl lg:text-6xl"
         >
           These are not fixed packages.
-          <span class="italic text-white/45">
+          <span class="italic text-kavora-gold">
             They are invitations to begin a conversation.
           </span>
         </p>
@@ -2358,16 +2155,21 @@
       >
 
         <span
-          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white transition-colors group-hover:text-kavora-gold"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors group-hover:text-kavora-gold"
         >
           Explore all journeys
         </span>
 
-        <span
-          class="flex h-12 w-12 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition-all duration-500 group-hover:bg-kavora-gold group-hover:text-kavora-green"
-        >
-          ↗
-        </span>
+         <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
       </a>
 
@@ -2400,6 +2202,7 @@
 
 </style>
 
+
 <!-- =========================================================
      06 — THE KAVORA WAY
 ========================================================= -->
@@ -2412,17 +2215,6 @@
        AMBIENT BACKGROUND
   ======================================================== -->
   <div class="pointer-events-none absolute inset-0">
-
-   
-
-    <!-- Page lines -->
-    <div
-      class="absolute left-[8.333%] top-0 h-full w-px bg-kavora-green/[0.08]"
-    ></div>
-
-    <div
-      class="absolute right-[8.333%] top-0 h-full w-px bg-kavora-green/[0.08]"
-    ></div>
 
     <!-- Oversized background word -->
     <div
@@ -2449,27 +2241,6 @@
       <div
         class="way-reveal opacity-0 lg:col-span-2"
       >
-
-        <div class="flex items-center gap-4">
-
-          <span
-            class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
-          >
-            06
-          </span>
-
-          <span
-            class="h-px w-10 bg-kavora-gold"
-          ></span>
-
-        </div>
-
-        <p
-          class="mt-5 max-w-[150px] font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/45"
-        >
-          The Kavora Way
-        </p>
-
       </div>
 
 
@@ -2486,10 +2257,10 @@
         </p>
 
         <h2
-          class="max-w-5xl font-luxury text-5xl font-medium leading-[0.88] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6.5rem]"
+          class="max-w-5xl font-luxury text-6xl font-medium leading-[0.88] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[6rem]"
         >
           Thoughtfully designed.
-          <span class="italic text-kavora-green/50">
+          <span class="italic text-kavora-gold">
             Seamlessly experienced.
           </span>
         </h2>
@@ -2524,13 +2295,13 @@
       <div class="flex items-center justify-between">
 
         <span
-          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-green/40"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
         >
           The Kavora process
         </span>
 
         <span
-          class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/30 sm:block"
+          class="hidden font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-gold sm:block"
         >
           Five considered stages
         </span>
@@ -2555,7 +2326,7 @@
            01 DISCOVER
       ==================================================== -->
       <article
-        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-24 lg:pb-28"
+        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-0 lg:pb-28"
         style="transition-delay: 200ms;"
       >
 
@@ -2609,7 +2380,7 @@
            02 DESIGN
       ==================================================== -->
       <article
-        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-24 lg:pb-28"
+        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-0 lg:pb-28"
         style="transition-delay: 320ms;"
       >
 
@@ -2665,7 +2436,7 @@
            03 CURATE
       ==================================================== -->
       <article
-        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-24 lg:pb-28"
+        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-0 lg:pb-28"
         style="transition-delay: 440ms;"
       >
 
@@ -2718,7 +2489,7 @@
            04 EXPERIENCE
       ==================================================== -->
       <article
-        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-24 lg:pb-28"
+        class="way-step group relative grid grid-cols-1 gap-10 pb-20 opacity-0 lg:grid-cols-2 lg:gap-0 lg:pb-28"
         style="transition-delay: 560ms;"
       >
 
@@ -2774,7 +2545,7 @@
            05 REMEMBER
       ==================================================== -->
       <article
-        class="way-step group relative grid grid-cols-1 gap-10 opacity-0 lg:grid-cols-2 lg:gap-24"
+        class="way-step group relative grid grid-cols-1 gap-10 opacity-0 lg:grid-cols-2 lg:gap-0"
         style="transition-delay: 680ms;"
       >
 
@@ -2854,7 +2625,7 @@
             class="font-luxury text-4xl leading-[0.95] tracking-[-0.015em] sm:text-5xl lg:text-7xl"
           >
             A journey that feels effortless
-            <span class="italic text-kavora-green/45">
+            <span class="italic text-kavora-gold">
               because every detail has been considered.
             </span>
           </p>
@@ -2878,15 +2649,22 @@
       >
 
         <span
-          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-green transition-colors duration-300 group-hover:text-kavora-gold"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors duration-300 group-hover:text-kavora-gold"
         >
           Start with a conversation
         </span>
 
         <span
-          class="flex h-12 w-12 items-center justify-center rounded-full border border-kavora-green/30 text-kavora-green transition-all duration-500 group-hover:border-kavora-gold group-hover:bg-kavora-gold"
+          class="flex h-8 w-8
+                 items-center justify-center
+                 rounded-full border
+                 border-kavora-gold
+                 text-kavora-gold
+                 transition duration-300
+                 group-hover:border-kavora-gold
+                 group-hover:text-kavora-gold"
         >
-          ↗
+          →
         </span>
 
       </a>
@@ -2896,6 +2674,7 @@
   </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -2976,45 +2755,6 @@
   <div class="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 sm:py-28 lg:px-10 lg:py-36">
 
 
-    <!-- Section Header -->
-    <div class="concierge-reveal mb-20 flex items-center justify-between border-b border-white/15 pb-5 opacity-0 sm:mb-24">
-
-      <div class="flex items-center gap-4">
-
-        <span
-          class="font-sans text-[10px] font-medium
-                 uppercase tracking-[0.28em]
-                 text-kavora-gold"
-        >
-          07
-        </span>
-
-        <span
-          class="h-px w-8 bg-kavora-gold/60"
-        ></span>
-
-        <span
-          class="font-sans text-[10px] font-medium
-                 uppercase tracking-[0.28em]
-                 text-white/50"
-        >
-          The Kavora Concierge
-        </span>
-
-      </div>
-
-      <span
-        class="hidden font-sans text-[10px]
-               uppercase tracking-[0.25em]
-               text-white/30 sm:block"
-      >
-        Beyond the journey
-      </span>
-
-    </div>
-
-
-
     <!-- Intro / Image -->
     <div class="grid items-end gap-14 lg:grid-cols-12 lg:gap-16">
 
@@ -3033,14 +2773,14 @@
 
         <h2
           class="max-w-3xl
-                 font-luxury text-5xl
+                 font-luxury text-6xl
                  font-light leading-[0.95]
                  tracking-[-0.025em]
                  sm:text-6xl
                  lg:text-7xl"
         >
           Beyond the journey.
-          <span class="block italic text-white/75">
+          <span class="block italic text-kavora-gold">
             Consider it taken care of.
           </span>
         </h2>
@@ -3115,7 +2855,7 @@
             class="absolute bottom-5 right-5
                    font-sans text-[9px]
                    uppercase tracking-[0.25em]
-                   text-white/50"
+                   text-kavora-gold"
           >
             Seamlessly arranged
           </div>
@@ -3139,30 +2879,18 @@
       >
 
         <div>
-          <span
-            class="font-sans text-[10px]
-                   uppercase tracking-[0.28em]
-                   text-white/35"
-          >
-            The details
-          </span>
+         
 
           <h3
             class="mt-2 font-luxury text-5xl
                    font-light text-white
                    sm:text-5xl"
           >
-            Your journey, considered.
+            Your journey, <span class="text-kavora-gold">considered.</span>
           </h3>
         </div>
 
-        <span
-          class="hidden font-sans text-[10px]
-                 uppercase tracking-[0.2em]
-                 text-kavora-gold/70 sm:block"
-        >
-          09 services
-        </span>
+       
 
       </div>
 
@@ -3200,7 +2928,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Flights
@@ -3254,7 +2982,7 @@
               <h4
                 class="font-luxury text-2xl
                        font-light
-                       transition duration-300
+                       transition duration-300 group-hover:text-kavora-gold
                        group-hover:translate-x-2
                        sm:text-3xl"
               >
@@ -3309,7 +3037,7 @@
               <h4
                 class="font-luxury text-2xl
                        font-light
-                       transition duration-300
+                       transition duration-300 group-hover:text-kavora-gold
                        group-hover:translate-x-2
                        sm:text-3xl"
               >
@@ -3365,7 +3093,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Meet &amp; Assist
@@ -3420,7 +3148,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Dining
@@ -3475,7 +3203,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Spa
@@ -3530,7 +3258,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Special Experiences
@@ -3585,7 +3313,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Celebrations
@@ -3640,7 +3368,7 @@
                 class="font-luxury text-2xl
                        font-light
                        transition duration-300
-                       group-hover:translate-x-2
+                       group-hover:translate-x-2 group-hover:text-kavora-gold
                        sm:text-3xl"
               >
                 Personal Requests
@@ -3693,7 +3421,7 @@
               <h4
                 class="font-luxury text-2xl
                        font-light
-                       transition duration-300
+                       transition duration-300 group-hover:text-kavora-gold
                        group-hover:translate-x-2
                        sm:text-3xl"
               >
@@ -3738,13 +3466,13 @@
       <div class="lg:col-span-7">
 
         <p
-          class="font-luxury text-3xl
+          class="font-luxury text-4xl
                  font-light leading-tight
                  text-white/85
                  sm:text-4xl lg:text-5xl"
         >
           The details should disappear.
-          <span class="italic text-white/45">
+          <span class="italic text-kavora-gold">
             The experience should remain.
           </span>
         </p>
@@ -3754,33 +3482,24 @@
 
       <div class="lg:col-span-5 lg:flex lg:justify-end">
 
-        <a
-          href="#contact"
-          class="group inline-flex items-center gap-5
-                 border border-kavora-gold/60
-                 px-7 py-4
-                 font-sans text-[10px]
-                 font-medium uppercase
-                 tracking-[0.22em]
-                 text-white
-                 transition-all duration-300
-                 hover:bg-kavora-gold
-                 hover:text-kavora-green
-                 sm:px-8 sm:py-5"
-        >
+       <a href="#contact" class="group inline-flex items-center gap-5">
 
-          <span>
-            Begin Your Journey
-          </span>
+        <span class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors duration-300 group-hover:text-kavora-gold">
+          Start with a conversation
+        </span>
 
-          <span
-            class="transition-transform duration-300
-                   group-hover:translate-x-1"
-          >
-            →
-          </span>
+        <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
-        </a>
+      </a>
 
       </div>
 
@@ -3883,7 +3602,7 @@
   <div
     class="relative mx-auto flex w-full max-w-7xl
            flex-col justify-between
-           px-6 py-24 sm:px-8 sm:py-28
+           px-6 pb-28 sm:px-8 sm:py-12
            lg:min-h-[850px] lg:px-10 lg:py-32"
   >
 
@@ -3895,33 +3614,9 @@
 
       <div class="flex items-center gap-4">
 
-        <span
-          class="font-sans text-[10px] font-medium
-                 uppercase tracking-[0.28em]
-                 text-kavora-gold"
-        >
-          08
-        </span>
-
-        <span class="h-px w-8 bg-kavora-gold/70"></span>
-
-        <span
-          class="font-sans text-[10px] font-medium
-                 uppercase tracking-[0.28em]
-                 text-white/65"
-        >
-          A moment in Africa
-        </span>
-
       </div>
 
-      <span
-        class="hidden font-sans text-[10px]
-               uppercase tracking-[0.25em]
-               text-white/50 sm:block"
-      >
-        Kavora Africa
-      </span>
+      
 
     </div>
 
@@ -3931,7 +3626,6 @@
 
       <div class="mb-8 flex items-center gap-4">
 
-        <span class="h-px w-10 bg-kavora-gold"></span>
 
         <p
           class="font-sans text-[10px] font-medium
@@ -3945,18 +3639,18 @@
 
 
       <h2
-        class="font-luxury text-5xl
+        class="font-luxury text-6xl
                font-light leading-[0.98]
                tracking-[-0.035em]
                text-white
                sm:text-7xl
                lg:text-[6.5rem]
-               xl:text-[7.5rem]"
+               xl:text-[6rem]"
       >
 
         Leave with more
-        <span class="block italic text-white/75">
-          than photographs.
+        <span class="block italic text-kavora-gold">
+          than photographs,
         </span>
 
         <span
@@ -4002,7 +3696,7 @@
         <p
           class="font-sans text-[9px]
                  uppercase tracking-[0.25em]
-                 text-white/45"
+                 text-kavora-gold"
         >
           KAVORA AFRICA
         </p>
@@ -4026,7 +3720,7 @@
                font-sans text-[10px]
                font-medium uppercase
                tracking-[0.22em]
-               text-white/75
+               text-kavora-gold
                transition-colors duration-300
                hover:text-kavora-gold
                sm:self-auto"
@@ -4034,17 +3728,16 @@
 
         <span>Continue exploring</span>
 
-        <span
-          class="flex h-9 w-9 items-center
-                 justify-center rounded-full
-                 border border-white/35
-                 transition-all duration-300
-                 group-hover:translate-y-1
-                 group-hover:border-kavora-gold
-                 group-hover:text-kavora-gold"
-        >
-          ↓
-        </span>
+        <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold/60
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
       </a>
 
@@ -4120,17 +3813,7 @@
   <!-- Ambient Background -->
   <div class="pointer-events-none absolute inset-0">
 
-    <!-- Large editorial number -->
-    <span
-      class="absolute -right-8 top-[-4rem]
-             select-none font-luxury
-             text-[18rem] font-light
-             leading-none
-             text-kavora-green/[0.035]
-             sm:text-[24rem]"
-    >
-      09
-    </span>
+    
 
     <!-- Soft ambient light -->
     <div
@@ -4176,19 +3859,6 @@
                    tracking-[0.28em]
                    text-kavora-gold"
           >
-            09
-          </span>
-
-          <span
-            class="h-px w-8 bg-kavora-gold"
-          ></span>
-
-          <span
-            class="font-sans text-[10px]
-                   font-medium uppercase
-                   tracking-[0.28em]
-                   text-kavora-green/50"
-          >
             The Kavora Journal
           </span>
 
@@ -4197,14 +3867,14 @@
 
         <h2
           class="max-w-4xl
-                 font-luxury text-5xl
+                 font-luxury text-6xl
                  font-light leading-[0.95]
                  tracking-[-0.025em]
                  sm:text-6xl
                  lg:text-7xl"
         >
           Stories from Africa.
-          <span class="block italic text-kavora-green/55">
+          <span class="block italic text-kavora-gold">
             Places worth knowing.
           </span>
           <span class="block">
@@ -4398,217 +4068,319 @@
       </article>
 
 
-
-      <!-- =================================================
-           SECONDARY STORIES
+     <!-- =================================================
+           FEATURED STORY
       ================================================== -->
 
-      <div
-        class="flex flex-col gap-10
-               lg:col-span-5"
+      <article
+        class="journal-card group
+               opacity-0
+               lg:col-span-7"
       >
 
-
-        <!-- STORY 02 -->
-        <article
-          class="journal-card group
-                 opacity-0"
+        <a
+          href="#"
+          class="block"
         >
 
-          <a
-            href="#"
-            class="grid gap-6 sm:grid-cols-2
-                   lg:block"
+          <!-- Image -->
+          <div
+            class="relative aspect-[4/3]
+                   overflow-hidden bg-kavora-green"
           >
 
-            <!-- Image -->
-            <div
-              class="relative aspect-[4/3]
-                     overflow-hidden bg-kavora-green
-                     lg:aspect-[16/10]"
+            <img
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85"
+              alt="African safari landscape"
+              class="journal-image h-full w-full
+                     object-cover
+                     transition duration-[1200ms]
+                     ease-out
+                     group-hover:scale-[1.04]"
             >
 
-              <img
-                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=85"
-                alt="African wilderness landscape"
-                class="journal-image h-full w-full
-                       object-cover
-                       transition duration-[1000ms]
-                       ease-out
-                       group-hover:scale-[1.05]"
-              >
+            <!-- Image Overlay -->
+            <div
+              class="absolute inset-0
+                     bg-gradient-to-t
+                     from-kavora-green/60
+                     via-transparent
+                     to-transparent
+                     opacity-70"
+            ></div>
 
-              <div
-                class="absolute inset-0
-                       bg-gradient-to-t
-                       from-kavora-green/50
-                       via-transparent
-                       to-transparent"
-              ></div>
+
+            <!-- Category -->
+            <div
+              class="absolute left-5 top-5
+                     sm:left-7 sm:top-7"
+            >
 
               <span
-                class="absolute bottom-4 right-4
-                       font-luxury text-4xl
-                       font-light italic
-                       text-white/60"
+                class="border border-white/40
+                       bg-kavora-green/20
+                       px-4 py-2
+                       font-sans text-[9px]
+                       font-medium uppercase
+                       tracking-[0.22em]
+                       text-white
+                       backdrop-blur-sm"
               >
-                02
+                Safari
               </span>
 
             </div>
 
 
-            <!-- Content -->
-            <div class="pt-1 lg:pt-6">
+            <!-- Number -->
+            <span
+              class="absolute bottom-5 right-5
+                     font-luxury text-5xl
+                     font-light italic
+                     text-white/60
+                     sm:bottom-7 sm:right-7"
+            >
+              01
+            </span>
 
-              <div
-                class="mb-3 flex items-center gap-3"
-              >
-
-                <span
-                  class="h-px w-5 bg-kavora-gold"
-                ></span>
-
-                <span
-                  class="font-sans text-[9px]
-                         uppercase tracking-[0.22em]
-                         text-kavora-green/45"
-                >
-                  Safari Philosophy
-                </span>
-
-              </div>
+          </div>
 
 
-              <h3
-                class="font-luxury text-2xl
-                       font-light leading-tight
-                       transition-colors duration-300
-                       group-hover:text-kavora-gold
-                       sm:text-3xl"
-              >
-                The Art of a
-                Slow African Safari
-              </h3>
+          <!-- Story Content -->
+          <div class="pt-7">
 
-
-              <p
-                class="mt-3 font-sans text-sm
-                       font-light leading-6
-                       text-kavora-green/50"
-              >
-                Taking time to experience
-                the wilderness differently.
-              </p>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-
-        <!-- STORY 03 -->
-        <article
-          class="journal-card group
-                 opacity-0"
-        >
-
-          <a
-            href="#"
-            class="grid gap-6 sm:grid-cols-2
-                   lg:block"
-          >
-
-            <!-- Image -->
             <div
-              class="relative aspect-[4/3]
-                     overflow-hidden bg-kavora-green
-                     lg:aspect-[16/10]"
+              class="mb-4 flex items-center gap-3"
             >
 
-              <img
-                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85"
-                alt="Luxury African accommodation"
-                class="journal-image h-full w-full
-                       object-cover
-                       transition duration-[1000ms]
-                       ease-out
-                       group-hover:scale-[1.05]"
-              >
-
-              <div
-                class="absolute inset-0
-                       bg-gradient-to-t
-                       from-kavora-green/50
-                       via-transparent
-                       to-transparent"
-              ></div>
+              <span
+                class="h-px w-6 bg-kavora-gold"
+              ></span>
 
               <span
-                class="absolute bottom-4 right-4
-                       font-luxury text-4xl
-                       font-light italic
-                       text-white/60"
+                class="font-sans text-[9px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-kavora-green/45"
               >
-                03
+                Featured Journal
               </span>
 
             </div>
 
 
-            <!-- Content -->
-            <div class="pt-1 lg:pt-6">
-
-              <div
-                class="mb-3 flex items-center gap-3"
-              >
-
-                <span
-                  class="h-px w-5 bg-kavora-gold"
-                ></span>
-
-                <span
-                  class="font-sans text-[9px]
-                         uppercase tracking-[0.22em]
-                         text-kavora-green/45"
-                >
-                  Places to Know
-                </span>
-
-              </div>
+            <h3
+              class="max-w-2xl
+                     font-luxury text-3xl
+                     font-light leading-tight
+                     transition-colors duration-300
+                     group-hover:text-kavora-gold
+                     sm:text-4xl"
+            >
+              A Guide to Experiencing
+              the Serengeti Privately
+            </h3>
 
 
-              <h3
-                class="font-luxury text-2xl
-                       font-light leading-tight
-                       transition-colors duration-300
-                       group-hover:text-kavora-gold
-                       sm:text-3xl"
-              >
-                Extraordinary Places
-                to Stay in Tanzania
-              </h3>
-
+            <div
+              class="mt-5 flex items-center
+                     justify-between
+                     border-t border-kavora-green/10
+                     pt-5"
+            >
 
               <p
-                class="mt-3 font-sans text-sm
+                class="max-w-lg
+                       font-sans text-sm
                        font-light leading-6
-                       text-kavora-green/50"
+                       text-kavora-green/55"
               >
-                Discovering stays that become
-                part of the journey itself.
+                A considered look at experiencing
+                one of Africa's most iconic wilderness
+                destinations with greater privacy,
+                intention and space.
               </p>
+
+
+              <span
+                class="ml-5 flex h-10 w-10
+                       shrink-0 items-center
+                       justify-center
+                       rounded-full
+                       border border-kavora-green/20
+                       transition-all duration-300
+                       group-hover:border-kavora-gold
+                       group-hover:bg-kavora-gold
+                       group-hover:text-kavora-green"
+              >
+                →
+              </span>
 
             </div>
 
-          </a>
+          </div>
 
-        </article>
+        </a>
 
-      </div>
+      </article>
 
+
+
+        <!-- =================================================
+           FEATURED STORY
+      ================================================== -->
+
+      <article
+        class="journal-card group
+               opacity-0
+               lg:col-span-7"
+      >
+
+        <a
+          href="#"
+          class="block"
+        >
+
+          <!-- Image -->
+          <div
+            class="relative aspect-[4/3]
+                   overflow-hidden bg-kavora-green"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85"
+              alt="African safari landscape"
+              class="journal-image h-full w-full
+                     object-cover
+                     transition duration-[1200ms]
+                     ease-out
+                     group-hover:scale-[1.04]"
+            >
+
+            <!-- Image Overlay -->
+            <div
+              class="absolute inset-0
+                     bg-gradient-to-t
+                     from-kavora-green/60
+                     via-transparent
+                     to-transparent
+                     opacity-70"
+            ></div>
+
+
+            <!-- Category -->
+            <div
+              class="absolute left-5 top-5
+                     sm:left-7 sm:top-7"
+            >
+
+              <span
+                class="border border-white/40
+                       bg-kavora-green/20
+                       px-4 py-2
+                       font-sans text-[9px]
+                       font-medium uppercase
+                       tracking-[0.22em]
+                       text-white
+                       backdrop-blur-sm"
+              >
+                Safari
+              </span>
+
+            </div>
+
+
+            <!-- Number -->
+            <span
+              class="absolute bottom-5 right-5
+                     font-luxury text-5xl
+                     font-light italic
+                     text-white/60
+                     sm:bottom-7 sm:right-7"
+            >
+              01
+            </span>
+
+          </div>
+
+
+          <!-- Story Content -->
+          <div class="pt-7">
+
+            <div
+              class="mb-4 flex items-center gap-3"
+            >
+
+              <span
+                class="h-px w-6 bg-kavora-gold"
+              ></span>
+
+              <span
+                class="font-sans text-[9px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-kavora-green/45"
+              >
+                Featured Journal
+              </span>
+
+            </div>
+
+
+            <h3
+              class="max-w-2xl
+                     font-luxury text-3xl
+                     font-light leading-tight
+                     transition-colors duration-300
+                     group-hover:text-kavora-gold
+                     sm:text-4xl"
+            >
+              A Guide to Experiencing
+              the Serengeti Privately
+            </h3>
+
+
+            <div
+              class="mt-5 flex items-center
+                     justify-between
+                     border-t border-kavora-green/10
+                     pt-5"
+            >
+
+              <p
+                class="max-w-lg
+                       font-sans text-sm
+                       font-light leading-6
+                       text-kavora-green/55"
+              >
+                A considered look at experiencing
+                one of Africa's most iconic wilderness
+                destinations with greater privacy,
+                intention and space.
+              </p>
+
+
+              <span
+                class="ml-5 flex h-10 w-10
+                       shrink-0 items-center
+                       justify-center
+                       rounded-full
+                       border border-kavora-green/20
+                       transition-all duration-300
+                       group-hover:border-kavora-gold
+                       group-hover:bg-kavora-gold
+                       group-hover:text-kavora-green"
+              >
+                →
+              </span>
+
+            </div>
+
+          </div>
+
+        </a>
+
+      </article>
     </div>
 
 
@@ -4713,34 +4485,22 @@
              sm:mt-20"
     >
 
-      <a
-        href="#"
-        class="journal-button group
-               inline-flex items-center gap-5
-               border border-kavora-green/30
-               px-8 py-4
-               font-sans text-[10px]
-               font-medium uppercase
-               tracking-[0.24em]
-               text-kavora-green
-               transition-all duration-300
-               hover:border-kavora-green
-               hover:bg-kavora-green
-               hover:text-white
-               sm:px-10 sm:py-5"
-      >
+     <a href="#contact" class="group inline-flex items-center gap-5">
 
-        <span>
-          Explore Journal
+        <span class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold transition-colors duration-300 group-hover:text-kavora-green">
+          Start with a conversation
         </span>
 
-        <span
-          class="transition-transform
-                 duration-300
-                 group-hover:translate-x-1"
-        >
-          →
-        </span>
+        <span class="flex h-8 w-8
+                     items-center justify-center
+                     rounded-full border
+                     border-kavora-gold
+                     text-kavora-gold
+                     transition duration-300
+                     group-hover:border-kavora-gold
+                     group-hover:text-kavora-gold">
+              →
+            </span>
 
       </a>
 
@@ -4833,28 +4593,8 @@
 
 <section id="guest-stories" class="relative overflow-hidden bg-kavora-ivory py-28 md:py-36 lg:py-44">
 
-  <!-- Background Page Number -->
-  <div class="pointer-events-none absolute -right-8 top-12 select-none font-luxury text-[11rem] leading-none text-kavora-green/[0.035] md:text-[17rem] lg:text-[22rem]">
-    10
-  </div>
+  
 
-  <!-- Subtle Vertical Grid -->
-  <div class="pointer-events-none absolute inset-0 opacity-[0.045]">
-    <div class="mx-auto grid h-full max-w-[1600px] grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-      <div class="border-l border-kavora-green"></div>
-    </div>
-  </div>
 
   <div class="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
 
@@ -4863,9 +4603,8 @@
 
       <div class="lg:col-span-3">
         <div class="flex items-center gap-4">
-          <span class="h-px w-10 bg-kavora-gold"></span>
 
-          <span class="font-sans text-[10px] font-medium uppercase tracking-[0.3em] text-kavora-green/60">
+          <span class="font-sans text-[10px] font-medium uppercase tracking-[0.3em] text-kavora-gold">
             Guest Stories
           </span>
         </div>
@@ -4874,109 +4613,30 @@
       <div class="lg:col-span-7 lg:col-start-5">
         <h2 class="font-luxury text-6xl leading-[0.95] text-kavora-green sm:text-6xl md:text-7xl lg:text-[5rem]">
           The journey,
-          <span class="italic">in their words.</span>
+          <span class="italic text-kavora-gold">in their words.</span>
         </h2>
       </div>
 
     </div>
 
 
-    <!-- Main Story -->
-    <div class="guest-reveal grid gap-12 lg:grid-cols-12 lg:gap-16">
-
-      <!-- Editorial Image -->
-      <div class="relative overflow-hidden lg:col-span-5">
-
-        <!-- Replace with approved/licensed Kavora photography -->
-        <div class="guest-image relative aspect-[4/5] overflow-hidden bg-kavora-green">
-
-          <img
-            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
-            alt="Luxury African safari landscape"
-            class="h-full w-full object-cover transition-transform duration-[1800ms] ease-out"
-          >
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-green/40 via-transparent to-transparent"></div>
-
-          <!-- Image Number -->
-          <div class="absolute left-6 top-6 flex items-center gap-3">
-            <span class="font-sans text-[9px] uppercase tracking-[0.3em] text-white/70">
-              Guest Story
-            </span>
-
-            <span class="h-px w-8 bg-kavora-gold"></span>
-          </div>
-
-        </div>
-
-      </div>
+   
 
 
-      <!-- Testimonial -->
-      <div class="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
-
-        <!-- Quote Mark -->
-        <div class="guest-quote mb-8 font-luxury text-7xl leading-none text-kavora-gold/70 md:text-8xl">
-          “
-        </div>
-
-        <!-- Quote -->
-        <blockquote class="guest-quote font-luxury text-4xl leading-[1.08] text-kavora-green sm:text-5xl md:text-6xl lg:text-[4.2rem]">
-          Kavora didn't simply arrange our safari.
-          <span class="italic text-kavora-green/70">
-            They understood how we wanted to experience Africa.
-          </span>
-        </blockquote>
-
-        <!-- Divider -->
-        <div class="my-10 h-px w-full bg-kavora-green/10"></div>
-
-        <!-- Guest Details -->
-        <!-- Replace these placeholders with verified guest information -->
-        <div class="guest-meta flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-
-          <span class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-green">
-            Guest Name
-          </span>
-
-          <span class="hidden h-1 w-1 rounded-full bg-kavora-gold sm:block"></span>
-
-          <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/50">
-            Country
-          </span>
-
-          <span class="hidden h-1 w-1 rounded-full bg-kavora-gold sm:block"></span>
-
-          <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-kavora-green/50">
-            Private Safari
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Secondary Stories -->
-    <div class="mt-28 border-t border-kavora-green/10 pt-10 lg:mt-36 lg:pt-12">
+    <!-- Stories -->
+    <div class="mt-12 border-t border-kavora-green/10 pt-5 lg:mt-36 lg:pt-12">
 
       <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
 
-        <!-- Story 02 -->
+        <!-- Story 01 -->
         <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-2">
 
           <div class="mb-8 flex items-center justify-between">
 
-            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-green/50">
-              02 / Guest Story
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+              01
             </span>
 
-            <span class="h-px flex-1 mx-5 bg-kavora-green/10"></span>
-
-            <span class="font-luxury text-xl text-kavora-gold">
-              02
-            </span>
 
           </div>
 
@@ -5003,28 +4663,22 @@
 
             <span class="h-px w-5 bg-kavora-gold"></span>
 
-            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-green/50">
+            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-gold">
               Country
             </span>
           </div>
 
         </article>
 
-
-        <!-- Story 03 -->
-        <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-8 lg:pt-24">
+         <!-- Story 02 -->
+        <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-2">
 
           <div class="mb-8 flex items-center justify-between">
 
-            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-green/50">
-              03 / Guest Story
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+              02
             </span>
 
-            <span class="h-px flex-1 mx-5 bg-kavora-green/10"></span>
-
-            <span class="font-luxury text-xl text-kavora-gold">
-              03
-            </span>
 
           </div>
 
@@ -5032,8 +4686,8 @@
 
             <!-- Replace with approved/licensed Kavora photography -->
             <img
-              src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&w=1200&q=85"
-              alt="African travel experience"
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+              alt="African landscape"
               class="guest-story-image h-full w-full object-cover transition-transform duration-[1400ms] ease-out"
             >
 
@@ -5041,7 +4695,7 @@
 
           <!-- Placeholder until verified testimonial is supplied -->
           <div class="mb-5 font-luxury text-3xl leading-[1.12] text-kavora-green sm:text-4xl">
-            “Every detail felt considered. We could simply be present in the moment.”
+            “A journey designed around us, rather than a journey we simply joined.”
           </div>
 
           <div class="flex items-center gap-4">
@@ -5051,12 +4705,56 @@
 
             <span class="h-px w-5 bg-kavora-gold"></span>
 
-            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-green/50">
+            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-gold">
               Country
             </span>
           </div>
 
         </article>
+
+         <!-- Story 03 -->
+        <article class="guest-story guest-reveal lg:col-span-5 lg:col-start-2">
+
+          <div class="mb-8 flex items-center justify-between">
+
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+              03
+            </span>
+
+
+          </div>
+
+          <div class="mb-7 aspect-[4/3] overflow-hidden bg-kavora-green">
+
+            <!-- Replace with approved/licensed Kavora photography -->
+            <img
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+              alt="African landscape"
+              class="guest-story-image h-full w-full object-cover transition-transform duration-[1400ms] ease-out"
+            >
+
+          </div>
+
+          <!-- Placeholder until verified testimonial is supplied -->
+          <div class="mb-5 font-luxury text-3xl leading-[1.12] text-kavora-green sm:text-4xl">
+            “A journey designed around us, rather than a journey we simply joined.”
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[0.25em] text-kavora-green">
+              Guest Name
+            </span>
+
+            <span class="h-px w-5 bg-kavora-gold"></span>
+
+            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-kavora-gold">
+              Country
+            </span>
+          </div>
+
+        </article>
+
+
 
       </div>
 
@@ -5069,17 +4767,17 @@
       <div class="grid gap-8 md:grid-cols-12 md:items-end">
 
         <div class="md:col-span-4">
-          <span class="font-sans text-[10px] uppercase tracking-[0.3em] text-kavora-green/50">
+          <span class="font-sans text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
             The Kavora Difference
           </span>
         </div>
 
         <div class="md:col-span-7 md:col-start-6">
-          <p class="font-luxury text-3xl leading-[1.15] text-kavora-green sm:text-4xl md:text-5xl">
+          <p class="font-luxury text-4xl leading-[1.15] text-kavora-green sm:text-4xl md:text-5xl">
             The best journeys are remembered not only for
-            <span class="italic text-kavora-green/60">where you went,</span>
+            <span class="italic text-kavora-gold">where you went,</span>
             but for
-            <span class="italic text-kavora-green/60">how you felt.</span>
+            <span class="italic text-kavora-gold">how you felt.</span>
           </p>
         </div>
 
@@ -5225,13 +4923,7 @@
 
             <div class="mb-20 flex items-center gap-4">
 
-                <span class="text-[10px] font-medium uppercase tracking-[0.35em] text-white/50">
-                    11
-                </span>
-
-                <span class="h-px w-12 bg-white/30"></span>
-
-                <span class="text-[10px] uppercase tracking-[0.3em] text-white/50">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
                     Begin Your Journey
                 </span>
 
@@ -5246,13 +4938,13 @@
             <div class="max-w-5xl">
 
                 <h2
-                    class="font-serif text-5xl leading-[0.9] tracking-[-0.045em] sm:text-7xl lg:text-[8rem]"
+                    class="font-serif text-6xl leading-[0.9] tracking-[-0.045em] sm:text-7xl lg:text-[8rem]"
                 >
 
                     Your journey
                     <br>
 
-                    <span class="italic text-white/75">
+                    <span class="italic text-kavora-gold">
                         begins here.
                     </span>
 
@@ -5288,7 +4980,7 @@
 
                     <a
                         href="#contact"
-                        class="group inline-flex items-center gap-8 border border-white/30 px-7 py-5 text-[10px] font-medium uppercase tracking-[0.28em] transition duration-500 hover:border-white hover:bg-white hover:text-black"
+                        class="group inline-flex items-center gap-8 border border-white/30 px-7 py-5 text-[10px] font-medium uppercase tracking-[0.28em] transition duration-500 hover:border-white hover:bg-kavora-gold hover:text-kavora-green"
                     >
 
                         <span>
@@ -5296,7 +4988,7 @@
                         </span>
 
                         <span
-                            class="flex h-8 w-8 items-center justify-center border border-white/30 transition duration-500 group-hover:border-black/20"
+                            class="flex h-8 w-8 items-center justify-center border border-kavora-green transition duration-500 group-hover:border-kavora-green"
                         >
 
                             <svg
@@ -5332,7 +5024,7 @@
                     <!-- Item 01 -->
                     <div>
 
-                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-white/35">
+                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
                             Private Journeys
                         </p>
 
@@ -5347,7 +5039,7 @@
                     <!-- Item 02 -->
                     <div>
 
-                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-white/35">
+                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
                             Africa
                         </p>
 
@@ -5362,7 +5054,7 @@
                     <!-- Item 03 -->
                     <div class="sm:text-right">
 
-                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-white/35">
+                        <p class="mb-2 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
                             Kavora
                         </p>
 
@@ -5412,23 +5104,7 @@
 
 <footer id="footer" class="relative overflow-hidden bg-kavora-green text-white">
 
-  <!-- Subtle Background Grid -->
-  <div class="pointer-events-none absolute inset-0 opacity-[0.035]">
-    <div class="mx-auto grid h-full max-w-[1600px] grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-      <div class="border-l border-white"></div>
-    </div>
-  </div>
+ 
 
 
   <!-- Large Background Wordmark -->
@@ -5463,7 +5139,7 @@
 
           <h2 class="font-luxury text-5xl leading-[0.9] tracking-[-0.02em] sm:text-7xl md:text-5xl lg:text-[6rem]">
             Africa,
-            <span class="italic text-white/60">personally</span>
+            <span class="italic text-kavora-gold">personally</span>
             curated.
           </h2>
 
