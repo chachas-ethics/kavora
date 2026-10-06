@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Soul of Africa — Kavora Africa</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          },
+
+          letterSpacing: {
+            luxury: '0.18em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #0B211A;
+    }
+
+    .soul-reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .soul-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-zoom img {
+      transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .image-zoom:hover img {
+      transform: scale(1.05);
+    }
+
+    .heritage-line {
+      position: relative;
+    }
+
+    .heritage-line::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: rgba(200, 169, 107, 0.45);
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .07;
+      background-image:
+        radial-gradient(rgba(255,255,255,.8) .5px, transparent .5px);
+      background-size: 5px 5px;
+      mix-blend-mode: soft-light;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-kavora-green/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
+
+      <a
+        href="index.html"
+        class="font-luxury text-3xl tracking-wide text-kavora-ivory"
+      >
+        Kavora
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex">
+        <a href="index.html" class="text-xs uppercase tracking-luxury text-kavora-ivory/70 transition hover:text-kavora-gold">
+          Home
+        </a>
+
+        <a href="journeys.html" class="text-xs uppercase tracking-luxury text-kavora-ivory">
+          Journeys
+        </a>
+
+        <a href="destinations.html" class="text-xs uppercase tracking-luxury text-kavora-ivory/70 transition hover:text-kavora-gold">
+          Destinations
+        </a>
+
+        <a href="journal.html" class="text-xs uppercase tracking-luxury text-kavora-ivory/70 transition hover:text-kavora-gold">
+          Journal
+        </a>
+
+        <a
+          href="contact.html"
+          class="border border-kavora-gold/60 px-5 py-3 text-xs uppercase tracking-luxury text-kavora-ivory transition hover:bg-kavora-gold hover:text-kavora-green"
+        >
+          Begin Your Journey
+        </a>
+      </nav>
+
+      <button
+        class="flex h-10 w-10 items-center justify-center border border-white/20 lg:hidden"
+        aria-label="Open menu"
+      >
+        <span class="block h-px w-5 bg-kavora-ivory"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       01 — HERO
+  ========================================================== -->
+
+  <section class="relative min-h-screen overflow-hidden bg-kavora-green">
+
+    <img
+      src="images/soul-hero.jpg"
+      alt="African cultural portrait"
+      class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <div class="absolute inset-0 bg-kavora-green/55"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-kavora-green/20"></div>
+
+    <div class="grain"></div>
+
+    <div class="relative z-10 flex min-h-screen items-end px-6 pb-20 pt-32 sm:px-10 lg:px-16 lg:pb-24">
+
+      <div class="max-w-[1100px]">
+
+        <p class="mb-7 text-xs uppercase tracking-luxury text-kavora-gold soul-reveal">
+          04 — The Soul of Africa
+        </p>
+
+        <h1 class="font-luxury text-[clamp(5rem,13vw,12rem)] leading-[.78] text-kavora-ivory soul-reveal">
+          The Soul
+          <span class="block italic text-kavora-gold">of Africa</span>
+        </h1>
+
+        <div class="mt-10 max-w-2xl soul-reveal">
+
+          <p class="font-luxury text-3xl leading-tight text-kavora-ivory sm:text-4xl lg:text-5xl">
+            Go beyond the landscape. Meet the people who give it meaning.
+          </p>
+
+          <p class="mt-7 max-w-xl text-sm leading-7 text-kavora-ivory/75 sm:text-base">
+            Africa is not defined only by its wildlife and landscapes.
+            Its deepest stories live in its people, traditions, languages,
+            food, music and heritage.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="absolute bottom-8 right-8 hidden lg:block">
+      <p class="text-[10px] uppercase tracking-luxury text-kavora-ivory/50">
+        Scroll to discover
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       02 — INTRODUCTION
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+
+    <div class="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-24">
+
+      <div class="soul-reveal">
+
+        <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+          Beyond the landscape
+        </p>
+
+        <div class="mt-8 h-px w-20 bg-kavora-gold"></div>
+
+      </div>
+
+      <div class="soul-reveal">
+
+        <h2 class="font-luxury text-5xl leading-[.95] text-kavora-green sm:text-6xl lg:text-8xl">
+          Travel becomes
+          <span class="italic">meaningful</span>
+          when you understand the place.
+        </h2>
+
+        <p class="mt-10 max-w-2xl text-sm leading-8 text-kavora-green/65 sm:text-base">
+          Kavora creates opportunities to experience Africa with greater depth
+          and authenticity. Not through staged encounters, but through thoughtful
+          connections with the people, places, traditions and stories that shape
+          each destination.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       03 — CULTURE & HERITAGE
+  ========================================================== -->
+
+  <section class="bg-kavora-green text-kavora-ivory">
+
+    <div class="mx-auto grid max-w-[1500px] lg:grid-cols-2">
+
+      <div class="relative min-h-[650px] overflow-hidden image-zoom lg:min-h-[850px]">
+
+        <img
+          src="images/soul-culture.jpg"
+          alt="African cultural heritage"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green/80 via-transparent to-transparent"></div>
+
+        <div class="relative flex h-full min-h-[650px] items-end p-7 sm:p-10 lg:min-h-[850px] lg:p-14">
+
+          <div class="max-w-md">
+
+            <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+              01
+            </p>
+
+            <h2 class="mt-5 font-luxury text-6xl leading-none sm:text-7xl lg:text-8xl">
+              Culture &
+              <span class="italic">Heritage</span>
+            </h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flex items-center px-7 py-20 sm:px-10 lg:px-20 lg:py-28">
+
+        <div class="max-w-xl soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Understanding where you are
+          </p>
+
+          <p class="mt-8 text-lg leading-8 text-kavora-ivory/75">
+            Culture is not a performance. It is a living expression of history,
+            identity, knowledge and belonging.
+          </p>
+
+          <p class="mt-6 text-sm leading-8 text-kavora-ivory/55">
+            Our journeys create space to encounter these stories respectfully,
+            with context and genuine curiosity.
+          </p>
+
+
+          <div class="mt-12 grid grid-cols-1 gap-0 border-t border-white/10 sm:grid-cols-2">
+
+            <div class="border-b border-white/10 py-6 sm:border-r sm:pr-8">
+              <p class="font-luxury text-2xl">Traditional Communities</p>
+              <p class="mt-2 text-xs leading-6 text-kavora-ivory/45">
+                Meaningful encounters grounded in respect.
+              </p>
+            </div>
+
+            <div class="border-b border-white/10 py-6 sm:pl-8">
+              <p class="font-luxury text-2xl">Historical Sites</p>
+              <p class="mt-2 text-xs leading-6 text-kavora-ivory/45">
+                Places that preserve the stories of generations.
+              </p>
+            </div>
+
+            <div class="border-b border-white/10 py-6 sm:border-r sm:pr-8">
+              <p class="font-luxury text-2xl">Local Traditions</p>
+              <p class="mt-2 text-xs leading-6 text-kavora-ivory/45">
+                Discover customs through their deeper context.
+              </p>
+            </div>
+
+            <div class="border-b border-white/10 py-6 sm:pl-8">
+              <p class="font-luxury text-2xl">Indigenous Knowledge</p>
+              <p class="mt-2 text-xs leading-6 text-kavora-ivory/45">
+                Knowledge shaped by generations of experience.
+              </p>
+            </div>
+
+            <div class="py-6 sm:col-span-2">
+              <p class="font-luxury text-2xl">Cultural Storytelling</p>
+              <p class="mt-2 max-w-md text-xs leading-6 text-kavora-ivory/45">
+                Listen to the stories that give a destination its identity.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       04 — PEOPLE & CONNECTION
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+
+    <div class="mx-auto max-w-[1400px]">
+
+      <div class="max-w-3xl soul-reveal">
+
+        <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+          02 — People & Connection
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl leading-[.9] text-kavora-green sm:text-7xl lg:text-9xl">
+          The people
+          <span class="italic">behind the place.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="mt-16 grid gap-8 lg:grid-cols-[1.15fr_.85fr]">
+
+        <div class="relative min-h-[550px] overflow-hidden image-zoom soul-reveal">
+
+          <img
+            src="images/soul-people.jpg"
+            alt="People and community in Africa"
+            class="absolute inset-0 h-full w-full object-cover"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-green/70 via-transparent to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 max-w-xl p-7 sm:p-10 lg:p-12">
+
+            <p class="font-luxury text-4xl leading-tight text-kavora-ivory sm:text-5xl">
+              Connection should feel
+              <span class="italic">natural.</span>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex items-center soul-reveal">
+
+          <div class="heritage-line pl-8 sm:pl-10">
+
+            <p class="text-base leading-8 text-kavora-green/65 sm:text-lg">
+              Our experiences are designed around genuine human connection
+              rather than staged tourism.
+            </p>
+
+            <p class="mt-7 text-sm leading-8 text-kavora-green/50">
+              That might mean sharing a conversation, learning a craft,
+              hearing a family story, understanding a tradition or simply
+              spending time in a place without rushing through it.
+            </p>
+
+            <div class="mt-10 flex items-center gap-5">
+
+              <span class="h-px w-12 bg-kavora-gold"></span>
+
+              <span class="text-xs uppercase tracking-luxury text-kavora-gold">
+                Respect · Authenticity · Connection
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       05 — FOOD & FLAVOUR
+  ========================================================== -->
+
+  <section class="bg-kavora-forest text-kavora-ivory">
+
+    <div class="mx-auto grid max-w-[1500px] lg:grid-cols-[.85fr_1.15fr]">
+
+      <div class="order-2 flex items-center px-7 py-24 sm:px-10 lg:order-1 lg:px-20 lg:py-32">
+
+        <div class="max-w-xl soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            03 — Food & Flavour
+          </p>
+
+          <h2 class="mt-7 font-luxury text-6xl leading-[.9] sm:text-7xl lg:text-8xl">
+            Taste the
+            <span class="italic">story.</span>
+          </h2>
+
+          <p class="mt-8 text-sm leading-8 text-kavora-ivory/60 sm:text-base">
+            Food offers one of the most intimate ways to understand a culture.
+            From markets and kitchens to private tables, every flavour can reveal
+            something about the people and places behind it.
+          </p>
+
+
+          <div class="mt-12 space-y-0 border-t border-white/10">
+
+            <div class="flex items-center justify-between border-b border-white/10 py-5">
+              <span class="font-luxury text-2xl">Private Dining</span>
+              <span class="text-kavora-gold">01</span>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-white/10 py-5">
+              <span class="font-luxury text-2xl">Local Cuisine</span>
+              <span class="text-kavora-gold">02</span>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-white/10 py-5">
+              <span class="font-luxury text-2xl">Cooking Experiences</span>
+              <span class="text-kavora-gold">03</span>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-white/10 py-5">
+              <span class="font-luxury text-2xl">Market Visits</span>
+              <span class="text-kavora-gold">04</span>
+            </div>
+
+            <div class="flex items-center justify-between py-5">
+              <span class="font-luxury text-2xl">Culinary Storytelling</span>
+              <span class="text-kavora-gold">05</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="order-1 min-h-[600px] overflow-hidden image-zoom lg:order-2 lg:min-h-[850px]">
+
+        <img
+          src="images/soul-food.jpg"
+          alt="African food and culinary experience"
+          class="h-full w-full object-cover"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       06 — ART & CRAFT
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+
+    <div class="mx-auto max-w-[1400px]">
+
+      <div class="grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:items-end">
+
+        <div class="soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            04 — Art & Craft
+          </p>
+
+          <h2 class="mt-7 font-luxury text-6xl leading-[.9] text-kavora-green sm:text-7xl lg:text-8xl">
+            Made by
+            <span class="italic">hand.</span>
+          </h2>
+
+        </div>
+
+        <div class="max-w-2xl soul-reveal">
+
+          <p class="text-base leading-8 text-kavora-green/60 sm:text-lg">
+            Across Africa, craftsmanship carries memory. Materials, patterns,
+            techniques and forms often tell stories that reach far beyond
+            the finished object.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="group soul-reveal">
+
+          <div class="aspect-[4/5] overflow-hidden image-zoom">
+            <img
+              src="images/soul-artisan.jpg"
+              alt="African artisan craftsmanship"
+              class="h-full w-full object-cover"
+            >
+          </div>
+
+          <div class="border-b border-kavora-green/15 py-6">
+            <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+              01
+            </p>
+            <h3 class="mt-3 font-luxury text-3xl">
+              Local Artisans
+            </h3>
+          </div>
+
+        </div>
+
+
+        <div class="group soul-reveal">
+
+          <div class="aspect-[4/5] overflow-hidden image-zoom">
+            <img
+              src="images/soul-contemporary.jpg"
+              alt="Contemporary African art"
+              class="h-full w-full object-cover"
+            >
+          </div>
+
+          <div class="border-b border-kavora-green/15 py-6">
+            <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+              02
+            </p>
+            <h3 class="mt-3 font-luxury text-3xl">
+              Contemporary African Art
+            </h3>
+          </div>
+
+        </div>
+
+
+        <div class="group soul-reveal">
+
+          <div class="aspect-[4/5] overflow-hidden image-zoom">
+            <img
+              src="images/soul-craft.jpg"
+              alt="Traditional African craftsmanship"
+              class="h-full w-full object-cover"
+            >
+          </div>
+
+          <div class="border-b border-kavora-green/15 py-6">
+            <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+              03
+            </p>
+            <h3 class="mt-3 font-luxury text-3xl">
+              Traditional Craftsmanship
+            </h3>
+          </div>
+
+        </div>
+
+
+        <div class="group soul-reveal">
+
+          <div class="aspect-[4/5] overflow-hidden image-zoom">
+            <img
+              src="images/soul-design.jpg"
+              alt="African design and fashion"
+              class="h-full w-full object-cover"
+            >
+          </div>
+
+          <div class="border-b border-kavora-green/15 py-6">
+            <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+              04
+            </p>
+            <h3 class="mt-3 font-luxury text-3xl">
+              Design & Fashion
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       07 — HERITAGE JOURNEYS
+  ========================================================== -->
+
+  <section class="relative overflow-hidden bg-kavora-green px-6 py-24 text-kavora-ivory sm:px-10 lg:px-16 lg:py-36">
+
+    <div class="mx-auto max-w-[1400px]">
+
+      <div class="grid gap-14 lg:grid-cols-[.65fr_1.35fr]">
+
+        <div class="soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            05 — Heritage Journeys
+          </p>
+
+        </div>
+
+
+        <div class="soul-reveal">
+
+          <h2 class="font-luxury text-6xl leading-[.9] sm:text-7xl lg:text-9xl">
+            Understand the
+            <span class="italic text-kavora-gold">journey</span>
+            behind the destination.
+          </h2>
+
+          <p class="mt-10 max-w-2xl text-sm leading-8 text-kavora-ivory/60 sm:text-base">
+            Explore the history and heritage that shaped the places you visit.
+            From ancient routes and historic settlements to architecture,
+            traditions and stories passed between generations.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-20 grid gap-6 md:grid-cols-3">
+
+        <a
+          href="destinations.html"
+          class="group border border-white/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-9 soul-reveal"
+        >
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Discover
+          </p>
+
+          <h3 class="mt-12 font-luxury text-4xl">
+            Places With History
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-kavora-ivory/45">
+            Go beyond the postcard and understand how destinations became
+            what they are today.
+          </p>
+
+          <span class="mt-10 block text-xs uppercase tracking-luxury text-kavora-ivory/50 transition group-hover:text-kavora-gold">
+            Explore Destinations →
+          </span>
+
+        </a>
+
+
+        <div class="border border-white/10 p-7 sm:p-9 soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Learn
+          </p>
+
+          <h3 class="mt-12 font-luxury text-4xl">
+            Stories & Traditions
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-kavora-ivory/45">
+            Discover the traditions, beliefs and stories that continue to
+            shape communities.
+          </p>
+
+        </div>
+
+
+        <div class="border border-white/10 p-7 sm:p-9 soul-reveal">
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Connect
+          </p>
+
+          <h3 class="mt-12 font-luxury text-4xl">
+            A Deeper Perspective
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-kavora-ivory/45">
+            Travel with greater context, allowing the destination to become
+            more than simply somewhere you have visited.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       08 — POSITIONING
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+
+    <div class="mx-auto max-w-[1200px] text-center soul-reveal">
+
+      <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+        The Kavora Perspective
+      </p>
+
+      <h2 class="mx-auto mt-8 max-w-5xl font-luxury text-6xl leading-[.9] text-kavora-green sm:text-7xl lg:text-9xl">
+        Respect.
+        <span class="italic">Authenticity.</span>
+        Connection.
+        <span class="italic">Context.</span>
+      </h2>
+
+      <div class="mx-auto mt-12 h-px w-20 bg-kavora-gold"></div>
+
+      <p class="mx-auto mt-10 max-w-2xl text-sm leading-8 text-kavora-green/55 sm:text-base">
+        We believe meaningful travel begins with respect for the people,
+        cultures and places that make Africa what it is.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       09 — LARGE EDITORIAL IMAGE
+  ========================================================== -->
+
+  <section class="relative min-h-[75vh] overflow-hidden bg-kavora-green">
+
+    <img
+      src="images/soul-editorial.jpg"
+      alt="African cultural landscape"
+      class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <div class="absolute inset-0 bg-kavora-green/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-transparent to-transparent"></div>
+
+    <div class="relative z-10 flex min-h-[75vh] items-end px-6 py-20 sm:px-10 lg:px-16">
+
+      <div class="mx-auto w-full max-w-[1400px]">
+
+        <p class="text-xs uppercase tracking-luxury text-kavora-gold soul-reveal">
+          Africa, experienced differently
+        </p>
+
+        <h2 class="mt-6 max-w-4xl font-luxury text-6xl leading-[.85] text-kavora-ivory sm:text-7xl lg:text-9xl soul-reveal">
+          The memories that stay
+          <span class="italic text-kavora-gold">with you</span>
+          are rarely just places.
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       10 — FINAL CTA
+  ========================================================== -->
+
+  <section class="bg-kavora-green px-6 py-28 sm:px-10 lg:px-16 lg:py-40">
+
+    <div class="mx-auto max-w-[1200px] text-center soul-reveal">
+
+      <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+        Your journey awaits
+      </p>
+
+      <h2 class="mt-8 font-luxury text-7xl leading-[.82] text-kavora-ivory sm:text-8xl lg:text-[10rem]">
+        Experience Africa
+        <span class="block italic text-kavora-gold">
+          More Deeply.
+        </span>
+      </h2>
+
+      <p class="mx-auto mt-10 max-w-xl text-sm leading-8 text-kavora-ivory/55 sm:text-base">
+        Discover the people, stories, flavours and traditions that give
+        each destination its soul.
+      </p>
+
+      <a
+        href="contact.html"
+        class="mt-10 inline-flex border border-kavora-gold px-8 py-4 text-xs uppercase tracking-luxury text-kavora-ivory transition duration-300 hover:bg-kavora-gold hover:text-kavora-green"
+      >
+        Experience Africa More Deeply →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       11 — FOOTER
+  ========================================================== -->
+
+  <footer class="relative overflow-hidden bg-kavora-green text-kavora-ivory">
+
+    <!-- Savanna silhouette -->
+    <div class="relative h-28 overflow-hidden">
+
+      <svg
+        viewBox="0 0 1440 180"
+        preserveAspectRatio="none"
+        class="absolute bottom-0 h-full w-full"
+      >
+        <path
+          d="M0 155
+             C90 145 130 125 210 138
+             C280 148 330 128 395 137
+             C470 148 530 119 610 135
+             C690 150 750 125 830 138
+             C910 150 980 115 1060 132
+             C1140 148 1210 122 1280 136
+             C1340 146 1390 130 1440 135
+             L1440 180
+             L0 180 Z"
+          fill="#102D23"
+        />
+      </svg>
+
+      <!-- Birds -->
+      <div class="absolute right-[15%] top-10">
+        <svg width="70" height="35" viewBox="0 0 70 35" fill="none">
+          <path d="M2 20C10 10 18 10 27 20C36 10 44 10 52 20" stroke="#C8A96B" stroke-width="1"/>
+          <path d="M36 25C42 18 48 18 54 25C60 18 65 18 70 25" stroke="#C8A96B" stroke-width="1"/>
+        </svg>
+      </div>
+
+    </div>
+
+
+    <div class="mx-auto max-w-[1500px] px-6 pb-10 pt-8 sm:px-10 lg:px-16">
+
+      <div class="grid gap-14 border-b border-white/10 pb-14 lg:grid-cols-[1.4fr_.7fr_.7fr_.7fr]">
+
+        <div>
+
+          <a href="index.html" class="font-luxury text-5xl">
+            Kavora
+          </a>
+
+          <p class="mt-6 max-w-sm text-sm leading-7 text-kavora-ivory/50">
+            Luxury travel concierge and private journeys across Africa,
+            thoughtfully designed around you.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Explore
+          </p>
+
+          <div class="mt-6 space-y-4 text-sm text-kavora-ivory/55">
+
+            <a href="index.html" class="block transition hover:text-kavora-gold">
+              Home
+            </a>
+
+            <a href="journeys.html" class="block transition hover:text-kavora-gold">
+              Journeys
+            </a>
+
+            <a href="destinations.html" class="block transition hover:text-kavora-gold">
+              Destinations
+            </a>
+
+            <a href="journal.html" class="block transition hover:text-kavora-gold">
+              Journal
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Journeys
+          </p>
+
+          <div class="mt-6 space-y-4 text-sm text-kavora-ivory/55">
+
+            <a href="the-wild.html" class="block transition hover:text-kavora-gold">
+              The Wild
+            </a>
+
+            <a href="the-extraordinary.html" class="block transition hover:text-kavora-gold">
+              The Extraordinary
+            </a>
+
+            <a href="the-soul-of-africa.html" class="block transition hover:text-kavora-gold">
+              The Soul of Africa
+            </a>
+
+            <a href="contact.html" class="block transition hover:text-kavora-gold">
+              Private Journeys
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <p class="text-xs uppercase tracking-luxury text-kavora-gold">
+            Contact
+          </p>
+
+          <div class="mt-6 space-y-4 text-sm text-kavora-ivory/55">
+
+            <a href="#" class="block transition hover:text-kavora-gold">
+              WhatsApp
+            </a>
+
+            <a href="#" class="block transition hover:text-kavora-gold">
+              Instagram
+            </a>
+
+            <a href="#" class="block transition hover:text-kavora-gold">
+              LinkedIn
+            </a>
+
+            <a href="contact.html" class="block transition hover:text-kavora-gold">
+              Begin Your Journey
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flex flex-col gap-4 pt-8 text-xs text-kavora-ivory/35 sm:flex-row sm:items-center sm:justify-between">
+
+        <p>
+          © 2026 Kavora Africa. All rights reserved.
+        </p>
+
+        <p>
+          Designed & developed by
+          <span class="text-kavora-ivory/60">
+            Synlotech Technologies
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    const revealElements = document.querySelectorAll('.soul-reveal');
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>

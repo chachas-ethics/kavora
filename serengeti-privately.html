@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    The Serengeti, Privately — Kavora
+  </title>
+
+  <meta
+    name="description"
+    content="A private Serengeti safari designed around your pace, interests and way of travelling. Discover a considered journey through Tanzania's most iconic wilderness with Kavora."
+  >
+
+  <!-- =======================================================
+       GOOGLE FONTS
+  ======================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =======================================================
+       TAILWIND
+  ======================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            kavora: {
+
+              green: '#0B211A',
+
+              forest: '#102D23',
+
+              ivory: '#F7F5EF',
+
+              gold: '#C8A96B',
+
+            }
+
+          },
+
+          fontFamily: {
+
+            luxury: [
+              'Cormorant Garamond',
+              'serif'
+            ],
+
+            sans: [
+              'DM Sans',
+              'sans-serif'
+            ]
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+
+  <!-- =======================================================
+       PAGE STYLES
+  ======================================================== -->
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #0B211A;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    .page-reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .page-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-image {
+      animation: heroScale 2.5s ease forwards;
+    }
+
+    @keyframes heroScale {
+
+      from {
+        transform: scale(1.08);
+      }
+
+      to {
+        transform: scale(1);
+      }
+
+    }
+
+    .image-zoom {
+      transition:
+        transform 1.4s cubic-bezier(.2,.65,.2,1);
+    }
+
+    .image-zoom:hover {
+      transform: scale(1.045);
+    }
+
+    .gold-line {
+      width: 0;
+      transition: width 1.2s ease;
+    }
+
+    .gold-line.is-visible {
+      width: 100%;
+    }
+
+    .journey-number {
+      font-variant-numeric: tabular-nums;
+    }
+
+  </style>
+
+</head>
+
+
+<body class="font-sans text-white antialiased">
+
+
+<!-- =========================================================
+     PAGE WRAPPER
+========================================================= -->
+
+<div class="min-h-screen overflow-hidden">
+
+
+<!-- =========================================================
+     01 — HEADER
+========================================================= -->
+
+<header
+  id="site-header"
+  class="absolute left-0 right-0 top-0 z-50"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-6 sm:px-8 lg:px-12"
+  >
+
+    <nav
+      class="flex items-center justify-between"
+      aria-label="Main navigation"
+    >
+
+      <!-- Logo -->
+
+      <a
+        href="/"
+        class="font-luxury text-3xl font-medium tracking-[-0.03em] text-white"
+      >
+        Kavora
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <div
+        class="hidden items-center gap-8 lg:flex"
+      >
+
+        <a
+          href="/"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="/#journeys"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+        <a
+          href="/#concierge"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Concierge
+        </a>
+
+        <a
+          href="/#journal"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Journal
+        </a>
+
+        <a
+          href="/#contact"
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- CTA -->
+
+      <a
+        href="#conversation"
+        class="hidden items-center gap-3 border border-kavora-gold/60 px-5 py-3 transition hover:bg-kavora-gold hover:text-kavora-green sm:inline-flex"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em]"
+        >
+          Begin Your Journey
+        </span>
+
+      </a>
+
+
+      <!-- Mobile menu -->
+
+      <button
+        type="button"
+        class="flex h-10 w-10 items-center justify-center border border-white/20 lg:hidden"
+        aria-label="Open menu"
+      >
+
+        <span class="space-y-1.5">
+
+          <span
+            class="block h-px w-5 bg-white"
+          ></span>
+
+          <span
+            class="block h-px w-5 bg-white"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     02 — HERO
+========================================================= -->
+
+<main>
+
+<section
+  class="relative min-h-screen overflow-hidden bg-kavora-green"
+>
+
+  <!-- Image -->
+
+  <img
+    src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2400&q=90"
+    alt="Serengeti wilderness at golden hour"
+    class="hero-image absolute inset-0 h-full w-full object-cover"
+  >
+
+
+  <!-- Overlay -->
+
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-kavora-green via-kavora-green/65 to-kavora-green/10"
+  ></div>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-kavora-green via-transparent to-kavora-green/20"
+  ></div>
+
+
+  <!-- Hero content -->
+
+  <div
+    class="relative mx-auto flex min-h-screen max-w-[1600px] flex-col justify-between px-6 pb-10 pt-28 sm:px-8 sm:pb-12 lg:px-12"
+  >
+
+    <!-- Top metadata -->
+
+    <div
+      class="flex items-start justify-between"
+    >
+
+      <div>
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+        >
+          Private Journey
+        </p>
+
+        <p
+          class="mt-2 font-sans text-[10px] uppercase tracking-[0.2em] text-white/40"
+        >
+          Tanzania · East Africa
+        </p>
+
+      </div>
+
+
+      <div
+        class="hidden text-right sm:block"
+      >
+
+        <p
+          class="font-sans text-[10px] uppercase tracking-[0.2em] text-white/40"
+        >
+          Journey 01
+        </p>
+
+        <p
+          class="mt-2 font-sans text-[10px] uppercase tracking-[0.2em] text-white/40"
+        >
+          Kavora
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Main -->
+
+    <div
+      class="max-w-6xl"
+    >
+
+      <p
+        class="page-reveal mb-7 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+      >
+        Designed around you
+      </p>
+
+
+      <h1
+        class="page-reveal max-w-6xl font-luxury text-6xl font-medium leading-[0.8] tracking-[-0.035em] sm:text-7xl md:text-8xl lg:text-[9rem]"
+      >
+        The Serengeti,
+        <span class="italic text-kavora-gold">
+          Privately.
+        </span>
+      </h1>
+
+
+      <div
+        class="mt-10 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2"
+      >
+
+        <p
+          class="page-reveal font-luxury text-2xl italic leading-tight text-white/80 sm:text-3xl"
+        >
+          A private safari through Tanzania's most iconic wilderness.
+        </p>
+
+
+        <div
+          class="page-reveal"
+        >
+
+          <p
+            class="font-sans text-sm leading-7 text-white/65"
+          >
+            There is a difference between seeing the Serengeti
+            and experiencing it on your own terms. Kavora designs
+            private safari journeys around your pace, your interests
+            and the way you want to encounter the wilderness.
+          </p>
+
+
+          <a
+            href="#conversation"
+            class="mt-8 inline-flex items-center gap-4"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
+            >
+              Begin Designing Your Journey
+            </span>
+
+            <span
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 hover:bg-kavora-gold hover:text-kavora-green"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Scroll indicator -->
+
+    <div
+      class="hidden items-center gap-4 sm:flex"
+    >
+
+      <span
+        class="h-px w-10 bg-kavora-gold"
+      ></span>
+
+      <span
+        class="font-sans text-[9px] uppercase tracking-[0.25em] text-white/40"
+      >
+        Discover the journey
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 — JOURNEY INTRO
+========================================================= -->
+
+<section
+  id="idea"
+  class="bg-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-2">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          01 · The Idea
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-4"
+      >
+
+        <h2
+          class="page-reveal max-w-5xl font-luxury text-5xl font-medium leading-[0.88] tracking-[-0.025em] sm:text-6xl lg:text-[5.8rem]"
+        >
+          A safari
+          <span class="italic text-kavora-gold">
+            designed around you.
+          </span>
+        </h2>
+
+
+        <div
+          class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2"
+        >
+
+          <p
+            class="page-reveal font-sans text-sm leading-7 text-white/60 sm:text-[15px]"
+          >
+            The Serengeti does not need a rigid itinerary.
+            Your days can begin slowly with coffee overlooking
+            the plains, move into the wilderness when the light
+            is right, and end beneath an open African sky.
+          </p>
+
+
+          <p
+            class="page-reveal font-sans text-sm leading-7 text-white/60 sm:text-[15px]"
+          >
+            Whether your priority is wildlife, photography,
+            landscape, conservation, solitude or simply time
+            away from everything, the journey is shaped accordingly.
+            Kavora handles the details behind the experience so
+            that the journey itself feels effortless.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     04 — EDITORIAL IMAGE
+========================================================= -->
+
+<section
+  class="bg-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 pb-24 sm:px-8 sm:pb-28 lg:px-12 lg:pb-36"
+  >
+
+    <div
+      class="relative h-[55vh] min-h-[420px] overflow-hidden sm:h-[65vh]"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=2200&q=90"
+        alt="African savannah landscape"
+        class="image-zoom absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-kavora-green/70 via-transparent to-transparent"
+      ></div>
+
+
+      <div
+        class="absolute bottom-8 left-8 max-w-xl sm:bottom-12 sm:left-12 lg:bottom-16 lg:left-16"
+      >
+
+        <p
+          class="font-luxury text-3xl italic leading-tight text-white sm:text-4xl"
+        >
+          The wilderness is not a backdrop.
+          It is the journey.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 — THE EXPERIENCE
+========================================================= -->
+
+<section
+  id="experience"
+  class="bg-kavora-ivory text-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-10 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          02 · The Experience
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="page-reveal font-luxury text-5xl leading-[0.88] tracking-[-0.025em] sm:text-6xl lg:text-[5.7rem]"
+        >
+          The Serengeti,
+          <span class="italic">
+            beyond the expected.
+          </span>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <!-- Experience grid -->
+
+    <div
+      class="mt-20 grid grid-cols-1 gap-px bg-kavora-green/15 md:grid-cols-2 lg:grid-cols-3"
+    >
+
+
+      <!-- Card -->
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          01
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Private Game Drives
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Leave on your own schedule, spend longer with the
+          sightings that matter to you, and let the day develop
+          naturally rather than following a predetermined route.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          02
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Sunrise & Sunset
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Experience the wilderness when the landscape is at
+          its most atmospheric, from first light across the
+          plains to the final glow of the day.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          03
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          The Great Migration
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Time your journey around one of nature's most
+          remarkable movements while recognising that
+          wildlife remains beautifully unpredictable.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          04
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Wildlife Photography
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Build the journey around light, landscapes and
+          time in the field for travellers who want to
+          photograph rather than simply pass through.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          05
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Remote Wilderness
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Move beyond the obvious and consider quieter
+          corners where solitude becomes part of the experience.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          06
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Private Bush Dining
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Carefully considered meals in the landscape,
+          where appropriate and safely arranged.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          07
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Cultural Encounters
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Meaningful cultural experiences that add context
+          to the landscape rather than functioning as staged attractions.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          08
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          Walking Experiences
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Where permitted and appropriately guided, experience
+          the landscape on foot rather than always from a vehicle.
+        </p>
+
+      </article>
+
+
+      <article
+        class="group bg-kavora-ivory p-8 transition duration-500 hover:bg-kavora-green hover:text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          09
+        </span>
+
+        <h3
+          class="mt-16 font-luxury text-3xl leading-none"
+        >
+          A Different Perspective
+        </h3>
+
+        <p
+          class="mt-5 font-sans text-sm leading-7 opacity-60"
+        >
+          Hot-air ballooning, private camps and conservation-focused
+          encounters when they genuinely suit the journey.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     06 — WHERE YOU MIGHT GO
+========================================================= -->
+
+<section
+  id="route"
+  class="bg-kavora-green text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          03 · Where You Might Go
+        </p>
+
+        <p
+          class="mt-6 max-w-xs font-sans text-xs leading-6 text-white/40"
+        >
+          One possible rhythm. Never a prescription.
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.88] tracking-[-0.025em] sm:text-6xl lg:text-[5.7rem]"
+        >
+          One possible
+          <span class="italic text-kavora-gold">
+            rhythm.
+          </span>
+        </h2>
+
+
+        <div class="mt-16">
+
+
+          <!-- Route 01 -->
+
+          <article
+            class="group border-t border-white/10 py-9"
+          >
+
+            <div
+              class="grid grid-cols-[70px_1fr] gap-6 sm:grid-cols-[110px_1fr]"
+            >
+
+              <span
+                class="journey-number font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                01
+              </span>
+
+              <div>
+
+                <h3
+                  class="font-luxury text-4xl leading-none sm:text-5xl"
+                >
+                  Arusha
+                </h3>
+
+                <p
+                  class="mt-4 max-w-xl font-sans text-sm leading-7 text-white/50"
+                >
+                  A relaxed beginning. Time to arrive, settle in
+                  and prepare for the wilderness ahead.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Route 02 -->
+
+          <article
+            class="group border-t border-white/10 py-9"
+          >
+
+            <div
+              class="grid grid-cols-[70px_1fr] gap-6 sm:grid-cols-[110px_1fr]"
+            >
+
+              <span
+                class="journey-number font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                02
+              </span>
+
+              <div>
+
+                <h3
+                  class="font-luxury text-4xl leading-none sm:text-5xl"
+                >
+                  Serengeti
+                </h3>
+
+                <p
+                  class="mt-4 max-w-xl font-sans text-sm leading-7 text-white/50"
+                >
+                  Private safari, expansive landscapes and days
+                  shaped by wildlife, light and your own interests.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Route 03 -->
+
+          <article
+            class="group border-t border-white/10 py-9"
+          >
+
+            <div
+              class="grid grid-cols-[70px_1fr] gap-6 sm:grid-cols-[110px_1fr]"
+            >
+
+              <span
+                class="journey-number font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                03
+              </span>
+
+              <div>
+
+                <h3
+                  class="font-luxury text-4xl leading-none sm:text-5xl"
+                >
+                  Ngorongoro
+                </h3>
+
+                <p
+                  class="mt-4 max-w-xl font-sans text-sm leading-7 text-white/50"
+                >
+                  A dramatic landscape and a different perspective
+                  on northern Tanzania's wildlife and natural heritage.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Route 04 -->
+
+          <article
+            class="border-y border-white/10 py-9"
+          >
+
+            <div
+              class="grid grid-cols-[70px_1fr] gap-6 sm:grid-cols-[110px_1fr]"
+            >
+
+              <span
+                class="journey-number font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                04
+              </span>
+
+              <div>
+
+                <h3
+                  class="font-luxury text-4xl leading-none sm:text-5xl"
+                >
+                  Beyond the Classic Route
+                </h3>
+
+                <p
+                  class="mt-4 max-w-xl font-sans text-sm leading-7 text-white/50"
+                >
+                  Tarangire or another carefully selected wilderness
+                  area can be incorporated depending on your interests,
+                  timing and preferred pace.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     07 — PLACES TO STAY
+========================================================= -->
+
+<section
+  id="stays"
+  class="bg-kavora-ivory text-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-10 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          04 · Places to Stay
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.88] tracking-[-0.025em] sm:text-6xl lg:text-[5.7rem]"
+        >
+          Stay according to
+          <span class="italic">
+            the journey.
+          </span>
+        </h2>
+
+        <p
+          class="mt-8 max-w-2xl font-sans text-sm leading-7 text-kavora-green/60"
+        >
+          Your accommodation is selected according to the journey
+          we create together—not simply from a predetermined hotel list.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Cards -->
+
+    <div
+      class="mt-20 grid grid-cols-1 gap-5 md:grid-cols-3"
+    >
+
+
+      <article
+        class="min-h-[450px] border border-kavora-green/15 p-8 sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          01
+        </span>
+
+        <div class="mt-36">
+
+          <h3
+            class="font-luxury text-3xl leading-none sm:text-4xl"
+          >
+            The Classic
+            <br>
+            Safari Camp
+          </h3>
+
+          <p
+            class="mt-5 font-sans text-sm leading-7 text-kavora-green/55"
+          >
+            An intimate, traditional safari atmosphere with
+            a strong connection to the landscape.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="min-h-[450px] border border-kavora-green/15 bg-kavora-green p-8 text-white sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          02
+        </span>
+
+        <div class="mt-36">
+
+          <h3
+            class="font-luxury text-3xl leading-none sm:text-4xl"
+          >
+            The Private
+            <br>
+            Wilderness Retreat
+          </h3>
+
+          <p
+            class="mt-5 font-sans text-sm leading-7 text-white/55"
+          >
+            Greater privacy and a more secluded experience
+            for travellers who want to disappear into the wilderness.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="min-h-[450px] border border-kavora-green/15 p-8 sm:p-10 lg:p-12"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold tracking-[0.25em] text-kavora-gold"
+        >
+          03
+        </span>
+
+        <div class="mt-36">
+
+          <h3
+            class="font-luxury text-3xl leading-none sm:text-4xl"
+          >
+            The Contemporary
+            <br>
+            Safari Lodge
+          </h3>
+
+          <p
+            class="mt-5 font-sans text-sm leading-7 text-kavora-green/55"
+          >
+            Sophisticated design and considered service without
+            losing connection to the natural environment.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     08 — A DAY IN THE SERENGETI
+========================================================= -->
+
+<section
+  id="day"
+  class="bg-kavora-green text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          05 · A Day in the Serengeti
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.88] sm:text-6xl lg:text-[5.7rem]"
+        >
+          A day without
+          <span class="italic text-kavora-gold">
+            a checklist.
+          </span>
+        </h2>
+
+
+        <div class="mt-16">
+
+
+          <div
+            class="border-t border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                05:30 · First Light
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                Coffee. Stillness. The first movement across the plains.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="border-t border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                06:00 · Wilderness
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                A private vehicle leaves camp while the landscape wakes.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="border-t border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                10:30 · Slow Morning
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                Return to camp or continue exploring depending on the day's rhythm.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="border-t border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                13:00 · Lunch
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                A considered meal overlooking the wilderness.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="border-t border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                16:00 · Afternoon Safari
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                Return to the plains as the light begins to soften.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="border-y border-white/10 py-8"
+          >
+
+            <div
+              class="grid gap-4 sm:grid-cols-[150px_1fr]"
+            >
+
+              <span
+                class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+              >
+                19:00 · Under the Sky
+              </span>
+
+              <p
+                class="font-luxury text-2xl leading-tight text-white/80 sm:text-3xl"
+              >
+                Dinner, conversation and the sounds of the wilderness.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <p
+          class="mt-12 font-luxury text-3xl italic text-kavora-gold sm:text-4xl"
+        >
+          And tomorrow does not have to look like today.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     09 — WHEN TO GO
+========================================================= -->
+
+<section
+  id="season"
+  class="bg-kavora-ivory text-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          06 · When to Go
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.88] sm:text-6xl lg:text-[5.7rem]"
+        >
+          There is no single
+          <span class="italic">
+            perfect season.
+          </span>
+        </h2>
+
+        <p
+          class="mt-8 max-w-2xl font-sans text-sm leading-7 text-kavora-green/60"
+        >
+          The right time depends on what you want from the journey.
+          Weather, wildlife patterns, migration movements and your
+          personal preferences all influence how we shape the experience.
+        </p>
+
+
+        <div
+          class="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2"
+        >
+
+          <article
+            class="border-t border-kavora-green/15 pt-6"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+            >
+              Dry Season
+            </span>
+
+            <p
+              class="mt-4 font-sans text-sm leading-7 text-kavora-green/60"
+            >
+              Clearer conditions and strong wildlife viewing
+              opportunities in many areas.
+            </p>
+
+          </article>
+
+
+          <article
+            class="border-t border-kavora-green/15 pt-6"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+            >
+              Green Season
+            </span>
+
+            <p
+              class="mt-4 font-sans text-sm leading-7 text-kavora-green/60"
+            >
+              Lush landscapes, dramatic skies and a quieter
+              atmosphere in many parts of the ecosystem.
+            </p>
+
+          </article>
+
+
+          <article
+            class="border-t border-kavora-green/15 pt-6"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+            >
+              Great Migration
+            </span>
+
+            <p
+              class="mt-4 font-sans text-sm leading-7 text-kavora-green/60"
+            >
+              A journey can be timed around migration patterns,
+              while recognising that wildlife movements remain natural.
+            </p>
+
+          </article>
+
+
+          <article
+            class="border-t border-kavora-green/15 pt-6"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+            >
+              Calving Season
+            </span>
+
+            <p
+              class="mt-4 font-sans text-sm leading-7 text-kavora-green/60"
+            >
+              A distinctive period in the ecosystem for travellers
+              interested in predator-prey dynamics and new life.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     10 — DESIGNED AROUND YOU
+========================================================= -->
+
+<section
+  id="designed"
+  class="bg-kavora-green text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          07 · Designed Around You
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-8 lg:col-start-5"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.88] sm:text-6xl lg:text-[5.7rem]"
+        >
+          The journey changes
+          <span class="italic text-kavora-gold">
+            with you.
+          </span>
+        </h2>
+
+
+        <div
+          class="mt-16 grid grid-cols-1 gap-px bg-white/10 md:grid-cols-2"
+        >
+
+          <article
+            class="bg-kavora-green p-8 sm:p-10"
+          >
+
+            <span
+              class="font-sans text-[10px] uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              For the Photographer
+            </span>
+
+            <p
+              class="mt-6 font-luxury text-2xl leading-tight text-white/75"
+            >
+              More time in the field and flexibility around
+              light, landscapes and wildlife.
+            </p>
+
+          </article>
+
+
+          <article
+            class="bg-kavora-green p-8 sm:p-10"
+          >
+
+            <span
+              class="font-sans text-[10px] uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              For the Couple
+            </span>
+
+            <p
+              class="mt-6 font-luxury text-2xl leading-tight text-white/75"
+            >
+              Privacy, intimacy and carefully chosen stays
+              with room for spontaneity.
+            </p>
+
+          </article>
+
+
+          <article
+            class="bg-kavora-green p-8 sm:p-10"
+          >
+
+            <span
+              class="font-sans text-[10px] uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              For the Family
+            </span>
+
+            <p
+              class="mt-6 font-luxury text-2xl leading-tight text-white/75"
+            >
+              A comfortable rhythm with experiences suited
+              to different ages and interests.
+            </p>
+
+          </article>
+
+
+          <article
+            class="bg-kavora-green p-8 sm:p-10"
+          >
+
+            <span
+              class="font-sans text-[10px] uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              For the Returning Traveller
+            </span>
+
+            <p
+              class="mt-6 font-luxury text-2xl leading-tight text-white/75"
+            >
+              Less obvious routes and deeper experiences
+              beyond the classic safari circuit.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     11 — FINAL EDITORIAL STATEMENT
+========================================================= -->
+
+<section
+  class="relative overflow-hidden bg-kavora-ivory text-kavora-green"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-28 sm:px-8 sm:py-32 lg:px-12 lg:py-44"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-10 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-2">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          Beyond the itinerary
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-9 lg:col-start-4"
+      >
+
+        <p
+          class="font-luxury text-5xl leading-[0.88] tracking-[-0.025em] sm:text-6xl lg:text-[6.5rem]"
+        >
+          These are not fixed packages.
+
+          <span class="italic text-kavora-gold">
+            They are invitations to begin a conversation.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     12 — FINAL CTA
+========================================================= -->
+
+<section
+  id="conversation"
+  class="relative overflow-hidden bg-kavora-green text-white"
+>
+
+  <div
+    class="pointer-events-none absolute right-[-15rem] top-[-10rem] h-[40rem] w-[40rem] rounded-full bg-kavora-gold/10 blur-[140px]"
+  ></div>
+
+
+  <div
+    class="relative mx-auto max-w-[1600px] px-6 py-28 sm:px-8 sm:py-36 lg:px-12 lg:py-48"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-2">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold"
+        >
+          Begin the Conversation
+        </p>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-9 lg:col-start-4"
+      >
+
+        <h2
+          class="font-luxury text-5xl leading-[0.82] tracking-[-0.03em] sm:text-6xl md:text-7xl lg:text-[7rem]"
+        >
+          Your Serengeti does not have to look like
+          <span class="italic text-kavora-gold">
+            anyone else's.
+          </span>
+        </h2>
+
+
+        <div
+          class="mt-12 flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between"
+        >
+
+          <p
+            class="max-w-xl font-sans text-sm leading-7 text-white/50"
+          >
+            Tell us what you imagine. We will take it from there,
+            shaping the places, pace and experiences around the
+            journey you want to have.
+          </p>
+
+
+          <a
+            href="/#contact"
+            class="group inline-flex shrink-0 items-center gap-5"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              Start Designing Your Journey
+            </span>
+
+            <span
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     13 — FOOTER
+========================================================= -->
+
+<footer
+  class="relative overflow-hidden border-t border-white/10 bg-kavora-green text-white"
+>
+
+  <!-- Decorative silhouette -->
+
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-16 overflow-hidden"
+  >
+
+    <svg
+      viewBox="0 0 1600 120"
+      preserveAspectRatio="none"
+      class="absolute bottom-0 h-24 w-full fill-kavora-forest"
+      aria-hidden="true"
+    >
+
+      <path
+        d="
+          M0 120
+          V92
+          C45 88 70 84 110 91
+          C145 76 170 83 210 88
+          C250 68 285 79 325 85
+          C360 70 390 78 425 82
+          C465 61 510 76 548 83
+          C590 64 630 75 675 81
+          C715 56 755 72 800 79
+          C845 61 880 70 920 78
+          C965 53 1010 70 1050 78
+          C1095 59 1135 70 1175 77
+          C1215 50 1260 67 1300 76
+          C1345 57 1390 70 1430 77
+          C1475 54 1510 69 1545 76
+          C1570 65 1590 70 1600 71
+          V120
+          Z
+        "
+      ></path>
+
+    </svg>
+
+  </div>
+
+
+  <div
+    class="relative mx-auto max-w-[1600px] px-6 pb-10 pt-28 sm:px-8 lg:px-12"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-14 lg:grid-cols-12"
+    >
+
+
+      <!-- Brand -->
+
+      <div class="lg:col-span-5">
+
+        <a
+          href="/"
+          class="font-luxury text-5xl"
+        >
+          Kavora
+        </a>
+
+        <p
+          class="mt-5 max-w-sm font-luxury text-xl italic leading-relaxed text-white/55"
+        >
+          Africa, considered differently.
+        </p>
+
+      </div>
+
+
+      <!-- Explore -->
+
+      <div class="lg:col-span-2">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          Explore
+        </p>
+
+        <div
+          class="mt-6 space-y-3"
+        >
+
+          <a
+            href="/"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Home
+          </a>
+
+          <a
+            href="/#journeys"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="/#concierge"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Concierge
+          </a>
+
+          <a
+            href="/#journal"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Journal
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Journey -->
+
+      <div class="lg:col-span-2">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          This Journey
+        </p>
+
+        <div
+          class="mt-6 space-y-3"
+        >
+
+          <a
+            href="#idea"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            The Idea
+          </a>
+
+          <a
+            href="#experience"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Experience
+          </a>
+
+          <a
+            href="#route"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Route
+          </a>
+
+          <a
+            href="#stays"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            Places to Stay
+          </a>
+
+          <a
+            href="#season"
+            class="block font-sans text-xs text-white/50 transition hover:text-kavora-gold"
+          >
+            When to Go
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Contact -->
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          Begin
+        </p>
+
+        <p
+          class="mt-6 max-w-xs font-sans text-xs leading-6 text-white/50"
+        >
+          Tell us what you have in mind and let us begin
+          shaping the journey around you.
+        </p>
+
+        <a
+          href="/#contact"
+          class="mt-6 inline-flex items-center gap-3"
+        >
+
+          <span
+            class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
+          >
+            Contact Kavora
+          </span>
+
+          <span
+            class="text-kavora-gold"
+          >
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+
+    <div
+      class="mt-20 border-t border-white/10 pt-6"
+    >
+
+      <div
+        class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+      >
+
+        <p
+          class="font-sans text-[10px] uppercase tracking-[0.18em] text-white/30"
+        >
+          © 2026 Kavora Africa
+        </p>
+
+
+        <p
+          class="font-sans text-[10px] uppercase tracking-[0.18em] text-white/30"
+        >
+          Africa, considered differently.
+        </p>
+
+
+        <p
+          class="font-sans text-[10px] uppercase tracking-[0.18em] text-white/30"
+        >
+          Designed & Developed by Synlotech Technologies
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</div>
+
+
+<!-- =========================================================
+     PAGE REVEAL SCRIPT
+========================================================= -->
+
+<script>
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+      const reveals =
+        document.querySelectorAll(
+          '.page-reveal'
+        );
+
+      const observer =
+        new IntersectionObserver(
+          (entries) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    'is-visible'
+                  );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+
+      reveals.forEach(
+        (element) => {
+
+          observer.observe(
+            element
+          );
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>

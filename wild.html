@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Wild — Kavora Africa</title>
+
+  <meta
+    name="description"
+    content="Private safari and wilderness experiences across Africa, thoughtfully designed around you by Kavora Africa."
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #F7F5EF;
+    }
+
+    .wild-reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.22,1,.36,1);
+    }
+
+    .wild-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-reveal {
+      overflow: hidden;
+    }
+
+    .image-reveal img {
+      transform: scale(1.08);
+      transition:
+        transform 1.5s cubic-bezier(.22,1,.36,1);
+    }
+
+    .image-reveal.is-visible img {
+      transform: scale(1);
+    }
+
+    .experience-card img {
+      transition:
+        transform 1.2s cubic-bezier(.22,1,.36,1);
+    }
+
+    .experience-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .destination-card img {
+      transition:
+        transform 1.2s cubic-bezier(.22,1,.36,1);
+    }
+
+    .destination-card:hover img {
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+
+
+<body class="bg-kavora-ivory text-kavora-green">
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header
+  class="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-kavora-green/80 backdrop-blur-xl"
+>
+
+  <div
+    class="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 sm:px-8 lg:px-12"
+  >
+
+    <!-- Logo -->
+    <a
+      href="index.html"
+      class="font-luxury text-3xl tracking-tight text-white"
+    >
+      Kavora
+      <span class="italic text-kavora-gold">Africa</span>
+    </a>
+
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden items-center gap-10 lg:flex">
+
+      <a
+        href="index.html#journey"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+      >
+        Journeys
+      </a>
+
+      <a
+        href="index.html#destinations"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+      >
+        Destinations
+      </a>
+
+      <a
+        href="index.html#way"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+      >
+        The Kavora Way
+      </a>
+
+      <a
+        href="index.html#journal"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+      >
+        Journal
+      </a>
+
+      <a
+        href="index.html#contact"
+        class="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
+      >
+        Contact
+      </a>
+
+    </nav>
+
+
+    <!-- Mobile Menu -->
+    <button
+      class="flex h-10 w-10 items-center justify-center border border-white/15 text-white lg:hidden"
+      aria-label="Open menu"
+    >
+      <span class="text-lg">☰</span>
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     01 — HERO
+========================================================= -->
+
+<section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-green text-white"
+>
+
+  <!-- Background Image -->
+  <img
+    src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=90"
+    alt="African wilderness"
+    class="absolute inset-0 h-full w-full object-cover"
+  >
+
+  <!-- Dark cinematic overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-kavora-green/35 via-kavora-green/30 to-kavora-green"
+  ></div>
+
+  <div
+    class="absolute inset-0 bg-black/10"
+  ></div>
+
+
+  <!-- Hero Content -->
+  <div
+    class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 sm:px-8 sm:pb-24 lg:px-12 lg:pb-28"
+  >
+
+    <div class="max-w-6xl">
+
+      <p
+        class="wild-reveal mb-7 font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+      >
+        The African Journey / 01
+      </p>
+
+
+      <h1
+        class="wild-reveal max-w-5xl font-luxury text-7xl font-medium leading-[0.82] tracking-[-0.035em] sm:text-8xl md:text-[9rem] lg:text-[11rem]"
+        style="transition-delay:100ms"
+      >
+        The
+        <span class="italic text-kavora-gold">
+          Wild
+        </span>
+      </h1>
+
+
+      <div
+        class="mt-10 grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2"
+      >
+
+        <p
+          class="wild-reveal max-w-md font-luxury text-3xl leading-[1.05] text-white sm:text-4xl"
+          style="transition-delay:200ms"
+        >
+          Where the wilderness becomes
+          <span class="italic text-kavora-gold">
+            personal.
+          </span>
+        </p>
+
+
+        <div
+          class="wild-reveal"
+          style="transition-delay:300ms"
+        >
+
+          <p
+            class="max-w-md text-sm leading-7 text-white/65 sm:text-[15px]"
+          >
+            Africa's wild places are not simply destinations to be
+            visited. They are landscapes to be experienced slowly,
+            privately and on your own terms.
+          </p>
+
+
+          <a
+            href="#safari"
+            class="mt-8 inline-flex items-center gap-4 border-b border-kavora-gold pb-3"
+          >
+
+            <span
+              class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              Plan Your Safari
+            </span>
+
+            <span class="text-kavora-gold">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Scroll indicator -->
+  <div
+    class="absolute bottom-8 right-6 hidden items-center gap-4 lg:flex"
+  >
+
+    <span
+      class="font-sans text-[9px] uppercase tracking-[0.25em] text-white/40"
+    >
+      Explore
+    </span>
+
+    <div class="h-px w-12 bg-white/20"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     02 — PRIVATE SAFARIS
+========================================================= -->
+
+<section
+  id="safari"
+  class="bg-kavora-ivory"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16"
+    >
+
+      <!-- Label -->
+      <div class="lg:col-span-2">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          01 — Private Safaris
+        </p>
+
+      </div>
+
+
+      <!-- Text -->
+      <div class="lg:col-span-5">
+
+        <h2
+          class="wild-reveal font-luxury text-6xl leading-[0.9] tracking-[-0.025em] sm:text-7xl lg:text-8xl"
+        >
+          The wild,
+          <span class="italic text-kavora-gold">
+            your way.
+          </span>
+        </h2>
+
+        <p
+          class="wild-reveal mt-8 max-w-xl text-sm leading-7 text-kavora-green/65 sm:text-[15px]"
+          style="transition-delay:100ms"
+        >
+          Tailored safari experiences designed around your pace,
+          interests and sense of adventure.
+        </p>
+
+        <p
+          class="wild-reveal mt-5 max-w-xl text-sm leading-7 text-kavora-green/65 sm:text-[15px]"
+          style="transition-delay:200ms"
+        >
+          Whether you want extraordinary wildlife encounters,
+          remote landscapes or the quiet luxury of a private camp,
+          Kavora creates the journey around you.
+        </p>
+
+      </div>
+
+
+      <!-- Image -->
+      <div
+        class="image-reveal wild-reveal lg:col-span-5"
+        style="transition-delay:150ms"
+      >
+
+        <div class="relative h-[520px] overflow-hidden sm:h-[620px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1400&q=90"
+            alt="African safari landscape"
+            class="h-full w-full object-cover"
+          >
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-kavora-green/30 to-transparent"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 — SAFARI EXPERIENCES
+========================================================= -->
+
+<section
+  class="bg-kavora-green text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <!-- Header -->
+    <div
+      class="grid grid-cols-1 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          02 — Experiences
+        </p>
+
+      </div>
+
+      <div class="lg:col-span-7">
+
+        <h2
+          class="wild-reveal font-luxury text-6xl leading-[0.9] sm:text-7xl lg:text-8xl"
+        >
+          More than a safari.
+          <span class="italic text-kavora-gold">
+            A way of seeing.
+          </span>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <!-- Experience Grid -->
+    <div
+      class="mt-16 grid grid-cols-1 gap-px bg-white/10 md:grid-cols-2 lg:grid-cols-3"
+    >
+
+
+      <!-- Card -->
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85"
+          alt="Private game drive"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            01
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Private Game Drives
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Explore the wilderness with your own vehicle,
+            guide and pace.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1000&q=85"
+          alt="Walking safari"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            02
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Walking Safaris
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Slow down and experience the wilderness on foot.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+          alt="Exclusive safari camp"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            03
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Exclusive Camps
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Private and intimate stays surrounded by wilderness.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=85"
+          alt="Wildlife photography"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            04
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Wildlife Photography
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Create unforgettable images with time and access
+            on your side.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=85"
+          alt="African wildlife"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            05
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Big Five Encounters
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Follow Africa's most iconic wildlife in their
+            natural environment.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=85"
+          alt="African wilderness"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            06
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Night Drives
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Discover a different wilderness after sunset.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1000&q=85"
+          alt="Bush breakfast"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            07
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Bush Breakfasts
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Begin the day surrounded by the sounds of Africa.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+          alt="Safari sundowner"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            08
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Wilderness Sundowners
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Watch the African horizon disappear into evening.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article
+        class="experience-card group relative min-h-[430px] overflow-hidden bg-kavora-forest"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1000&q=85"
+          alt="Safari guide"
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/40 to-transparent"></div>
+
+        <div class="absolute inset-x-0 bottom-0 p-8">
+
+          <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            09
+          </span>
+
+          <h3 class="mt-5 font-luxury text-4xl italic">
+            Private Guides
+          </h3>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/60">
+            Travel with people who know the landscape intimately.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 — SELECTED DESTINATIONS
+========================================================= -->
+
+<section
+  class="bg-kavora-ivory"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          03 — Selected Destinations
+        </p>
+
+      </div>
+
+
+      <div class="lg:col-span-8">
+
+        <h2
+          class="wild-reveal font-luxury text-6xl leading-[0.9] sm:text-7xl lg:text-8xl"
+        >
+          Places where the
+          <span class="italic text-kavora-gold">
+            wild still speaks.
+          </span>
+        </h2>
+
+        <p
+          class="wild-reveal mt-8 max-w-2xl text-sm leading-7 text-kavora-green/60"
+          style="transition-delay:100ms"
+        >
+          From the open plains of the Serengeti to the remote
+          wilderness of Ruaha, every landscape offers a different
+          expression of Africa.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Destinations -->
+    <div
+      class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+    >
+
+      <!-- Serengeti -->
+      <a
+        href="destinations.html#serengeti"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=85"
+          alt="Serengeti"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Tanzania
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Serengeti
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <!-- Ngorongoro -->
+      <a
+        href="destinations.html#ngorongoro"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+          alt="Ngorongoro"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Tanzania
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Ngorongoro
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <!-- Ruaha -->
+      <a
+        href="destinations.html#ruaha"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1200&q=85"
+          alt="Ruaha"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Tanzania
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Ruaha
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <!-- Nyerere -->
+      <a
+        href="destinations.html#nyerere"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=85"
+          alt="Nyerere"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Tanzania
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Nyerere
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <!-- Maasai Mara -->
+      <a
+        href="destinations.html#maasai-mara"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=85"
+          alt="Maasai Mara"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Kenya
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Maasai Mara
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <!-- Tarangire -->
+      <a
+        href="destinations.html#tarangire"
+        class="destination-card group relative h-[520px] overflow-hidden bg-kavora-green"
+      >
+
+        <img
+          src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=85"
+          alt="Tarangire"
+          class="absolute inset-0 h-full w-full object-cover"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-kavora-green/10 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-0 left-0 p-8">
+
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Tanzania
+          </p>
+
+          <h3 class="mt-3 font-luxury text-5xl italic text-white">
+            Tarangire
+          </h3>
+
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <div class="mt-12 text-center">
+
+      <a
+        href="destinations.html"
+        class="inline-flex items-center gap-5 border-b border-kavora-green/20 pb-3"
+      >
+
+        <span
+          class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em]"
+        >
+          Explore all destinations
+        </span>
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     05 — SIGNATURE EXPERIENCE
+========================================================= -->
+
+<section
+  class="relative min-h-[850px] overflow-hidden bg-kavora-green text-white"
+>
+
+  <img
+    src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=2200&q=90"
+    alt="Private African safari"
+    class="absolute inset-0 h-full w-full object-cover"
+  >
+
+  <div
+    class="absolute inset-0 bg-kavora-green/65"
+  ></div>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-kavora-green via-transparent to-kavora-green/30"
+  ></div>
+
+
+  <div
+    class="relative mx-auto flex min-h-[850px] max-w-[1600px] items-end px-6 py-24 sm:px-8 lg:px-12 lg:py-32"
+  >
+
+    <div class="grid w-full grid-cols-1 gap-10 lg:grid-cols-12">
+
+      <div class="lg:col-span-7">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          Signature Experience
+        </p>
+
+        <h2
+          class="wild-reveal mt-6 font-luxury text-7xl leading-[0.82] sm:text-8xl lg:text-[9rem]"
+        >
+          The
+          <span class="italic text-kavora-gold">
+            Private
+          </span>
+          Safari
+        </h2>
+
+      </div>
+
+
+      <div class="lg:col-span-4 lg:col-start-9">
+
+        <p
+          class="wild-reveal text-sm leading-7 text-white/70 sm:text-[15px]"
+        >
+          Wake before the world does. Follow the tracks. Spend
+          the day moving through landscapes where the only
+          schedule is the rhythm of the wilderness.
+        </p>
+
+        <p
+          class="wild-reveal mt-6 text-sm leading-7 text-white/70 sm:text-[15px]"
+          style="transition-delay:100ms"
+        >
+          From the first light over the plains to the final
+          glow of a private sundowner, every element is shaped
+          around how you want to experience Africa.
+        </p>
+
+        <a
+          href="#contact"
+          class="mt-9 inline-flex items-center gap-5 border-b border-kavora-gold pb-3"
+        >
+
+          <span
+            class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+          >
+            Design My Safari
+          </span>
+
+          <span class="text-kavora-gold">
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     06 — KAVORA SAFARI PHILOSOPHY
+========================================================= -->
+
+<section
+  class="bg-kavora-forest text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-24 sm:px-8 sm:py-28 lg:px-12 lg:py-36"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-14 lg:grid-cols-12"
+    >
+
+      <div class="lg:col-span-3">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          04 — The Kavora Approach
+        </p>
+
+      </div>
+
+
+      <div class="lg:col-span-8">
+
+        <h2
+          class="wild-reveal font-luxury text-6xl leading-[0.9] sm:text-7xl lg:text-8xl"
+        >
+          There is no
+          <span class="italic text-kavora-gold">
+            perfect safari.
+          </span>
+          Only yours.
+        </h2>
+
+
+        <div
+          class="mt-14 grid grid-cols-1 gap-px bg-white/10 md:grid-cols-2"
+        >
+
+          <div class="bg-kavora-green p-8 sm:p-10">
+
+            <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+              01
+            </span>
+
+            <h3 class="mt-6 font-luxury text-4xl italic">
+              Your Pace
+            </h3>
+
+            <p class="mt-5 text-sm leading-7 text-white/60">
+              Early starts, slow afternoons, long game drives or
+              quiet days at camp. The rhythm belongs to you.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-green p-8 sm:p-10">
+
+            <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+              02
+            </span>
+
+            <h3 class="mt-6 font-luxury text-4xl italic">
+              Your Interests
+            </h3>
+
+            <p class="mt-5 text-sm leading-7 text-white/60">
+              Wildlife, photography, conservation, landscapes,
+              culture or simply the freedom to explore.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-green p-8 sm:p-10">
+
+            <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+              03
+            </span>
+
+            <h3 class="mt-6 font-luxury text-4xl italic">
+              Your Privacy
+            </h3>
+
+            <p class="mt-5 text-sm leading-7 text-white/60">
+              Private vehicles, intimate properties and carefully
+              selected experiences when privacy matters.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-green p-8 sm:p-10">
+
+            <span class="text-[10px] tracking-[0.25em] text-kavora-gold">
+              04
+            </span>
+
+            <h3 class="mt-6 font-luxury text-4xl italic">
+              Your Details
+            </h3>
+
+            <p class="mt-5 text-sm leading-7 text-white/60">
+              From the lodge you stay in to the smallest moments
+              between destinations, every detail is considered.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     07 — FINAL CTA
+========================================================= -->
+
+<section
+  id="contact"
+  class="relative overflow-hidden bg-kavora-ivory"
+>
+
+  <div
+    class="pointer-events-none absolute -right-40 -top-40 h-[35rem] w-[35rem] rounded-full bg-kavora-gold/10 blur-[120px]"
+  ></div>
+
+
+  <div
+    class="relative mx-auto max-w-[1600px] px-6 py-28 sm:px-8 sm:py-32 lg:px-12 lg:py-40"
+  >
+
+    <div
+      class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end"
+    >
+
+      <div class="lg:col-span-8">
+
+        <p
+          class="wild-reveal font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+        >
+          Begin Your Journey
+        </p>
+
+        <h2
+          class="wild-reveal mt-7 font-luxury text-7xl leading-[0.82] tracking-[-0.025em] sm:text-8xl lg:text-[9rem]"
+        >
+          Your Africa begins
+          <span class="italic text-kavora-gold">
+            beyond the ordinary.
+          </span>
+        </h2>
+
+      </div>
+
+
+      <div class="lg:col-span-4">
+
+        <p
+          class="wild-reveal max-w-md text-sm leading-7 text-kavora-green/60"
+        >
+          Tell us what you want from your time in Africa.
+          We will shape the journey around you.
+        </p>
+
+
+        <a
+          href="contact.html"
+          class="mt-8 inline-flex items-center gap-5 bg-kavora-green px-7 py-5"
+        >
+
+          <span
+            class="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
+          >
+            Plan Your Private Safari
+          </span>
+
+          <span class="text-kavora-gold">
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer
+  class="bg-kavora-green text-white"
+>
+
+  <div
+    class="mx-auto max-w-[1600px] px-6 py-12 sm:px-8 lg:px-12"
+  >
+
+    <div
+      class="flex flex-col gap-8 border-b border-white/10 pb-10 md:flex-row md:items-center md:justify-between"
+    >
+
+      <a
+        href="index.html"
+        class="font-luxury text-4xl"
+      >
+        Kavora
+        <span class="italic text-kavora-gold">
+          Africa
+        </span>
+      </a>
+
+
+      <div class="flex flex-wrap gap-7">
+
+        <a
+          href="index.html#journey"
+          class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50 transition hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+        <a
+          href="destinations.html"
+          class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50 transition hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="index.html#journal"
+          class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50 transition hover:text-kavora-gold"
+        >
+          Journal
+        </a>
+
+        <a
+          href="contact.html"
+          class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/50 transition hover:text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="flex flex-col gap-3 pt-7 text-[10px] text-white/35 sm:flex-row sm:items-center sm:justify-between"
+    >
+
+      <p>
+        © 2026 Kavora Africa. All rights reserved.
+      </p>
+
+      <p>
+        Luxury Travel Concierge & Private Journeys
+      </p>
+
+    </div>
+
+
+    <p
+      class="mt-8 text-[10px] uppercase tracking-[0.18em] text-white/30"
+    >
+      Designed & developed by Synlotech Technologies
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCROLL REVEAL
+========================================================= -->
+
+<script>
+
+  const revealElements =
+    document.querySelectorAll('.wild-reveal');
+
+  const observer =
+    new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('is-visible');
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+  revealElements.forEach((element) => {
+
+    observer.observe(element);
+
+  });
+
+</script>
+
+
+</body>
+</html>

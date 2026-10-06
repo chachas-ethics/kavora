@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Celebration — Kavora Africa</title>
+
+  <meta
+    name="description"
+    content="Kavora Africa creates unforgettable journeys around honeymoons, anniversaries, birthdays, proposals and life's most meaningful milestones."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#0B211A",
+              forest: "#102D23",
+              ivory: "#F7F5EF",
+              gold: "#C8A96B"
+            }
+          },
+
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          },
+
+          letterSpacing: {
+            luxury: "0.18em"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #0B211A;
+    }
+
+    .celebration-reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+    }
+
+    .celebration-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-zoom img {
+      transition: transform 1.2s cubic-bezier(.2,.65,.2,1);
+    }
+
+    .image-zoom:hover img {
+      transform: scale(1.05);
+    }
+
+    .hero-image {
+      animation: heroScale 8s ease-out forwards;
+    }
+
+    @keyframes heroScale {
+      from {
+        transform: scale(1.06);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .gold-line {
+      width: 46px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .occasion-card {
+      transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        background-color 0.45s ease;
+    }
+
+    .occasion-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(200, 169, 107, 0.55);
+      background-color: rgba(255,255,255,0.025);
+    }
+
+    .detail-item {
+      border-top: 1px solid rgba(200,169,107,0.25);
+    }
+
+    .detail-item:last-child {
+      border-bottom: 1px solid rgba(200,169,107,0.25);
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header class="fixed inset-x-0 top-0 z-50">
+
+    <div class="border-b border-white/10 bg-kavora-green/90 backdrop-blur-xl">
+
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
+
+        <a
+          href="index.html"
+          class="font-luxury text-3xl tracking-[0.12em] text-kavora-ivory"
+        >
+          KAVORA
+        </a>
+
+        <nav class="hidden items-center gap-8 lg:flex">
+
+          <a
+            href="index.html"
+            class="text-[10px] uppercase tracking-luxury text-white/65 transition hover:text-kavora-gold"
+          >
+            Home
+          </a>
+
+          <a
+            href="index.html#journeys"
+            class="text-[10px] uppercase tracking-luxury text-white transition hover:text-kavora-gold"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="index.html#destinations"
+            class="text-[10px] uppercase tracking-luxury text-white/65 transition hover:text-kavora-gold"
+          >
+            Destinations
+          </a>
+
+          <a
+            href="index.html#journal"
+            class="text-[10px] uppercase tracking-luxury text-white/65 transition hover:text-kavora-gold"
+          >
+            Journal
+          </a>
+
+          <a
+            href="index.html#contact"
+            class="border border-kavora-gold/60 px-5 py-3 text-[10px] uppercase tracking-luxury text-kavora-gold transition hover:bg-kavora-gold hover:text-kavora-green"
+          >
+            Begin Your Journey
+          </a>
+
+        </nav>
+
+        <a
+          href="index.html#contact"
+          class="lg:hidden text-[10px] uppercase tracking-luxury text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       01 — HERO
+  ========================================================== -->
+
+  <section class="relative min-h-screen overflow-hidden bg-kavora-green">
+
+    <img
+      src="images/celebration-hero.jpg"
+      alt="Luxury celebration journey in Africa"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
+    />
+
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-black/10"></div>
+
+    <div class="relative z-10 flex min-h-screen items-end">
+
+      <div class="mx-auto w-full max-w-7xl px-6 pb-20 pt-40 sm:px-8 lg:px-12 lg:pb-28">
+
+        <div class="max-w-4xl celebration-reveal">
+
+          <p class="mb-7 text-[10px] uppercase tracking-[0.35em] text-kavora-gold">
+            Private Journeys
+          </p>
+
+          <h1 class="font-luxury text-7xl leading-[0.85] text-kavora-ivory sm:text-8xl lg:text-[10rem]">
+            THE
+            <span class="block italic">CELEBRATION</span>
+          </h1>
+
+          <div class="mt-10 max-w-2xl">
+
+            <p class="font-luxury text-3xl leading-tight text-white sm:text-4xl">
+              Some moments deserve more than a dinner reservation.
+            </p>
+
+            <p class="mt-6 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
+              Whether it is a honeymoon, anniversary, birthday or milestone worth remembering,
+              Kavora transforms the occasion into a journey.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       02 — INTRO
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+
+    <div class="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+
+      <div class="celebration-reveal">
+
+        <div class="gold-line mb-7"></div>
+
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-green/55">
+          The Occasion
+        </p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-none text-kavora-green sm:text-6xl">
+          Travel becomes
+          <span class="italic">memory.</span>
+        </h2>
+
+      </div>
+
+      <div class="celebration-reveal max-w-2xl">
+
+        <p class="text-lg leading-8 text-kavora-green/75 sm:text-xl">
+          The most meaningful journeys are often attached to something personal.
+          A beginning. A return. A promise. A milestone.
+        </p>
+
+        <p class="mt-6 text-sm leading-7 text-kavora-green/60">
+          Kavora designs the destination around the occasion, allowing the journey,
+          the setting and the smallest details to become part of the celebration itself.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       03 — EXPERIENCES
+  ========================================================== -->
+
+  <section class="bg-kavora-green px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+
+    <div class="mx-auto max-w-7xl">
+
+      <div class="mb-16 max-w-2xl celebration-reveal">
+
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+          Experiences
+        </p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-none text-kavora-ivory sm:text-6xl lg:text-7xl">
+          Every occasion has
+          <span class="italic">its own story.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+
+        <!-- Honeymoons -->
+
+        <article class="occasion-card celebration-reveal min-h-[330px] border border-white/10 p-8 sm:p-10">
+
+          <p class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            01
+          </p>
+
+          <h3 class="mt-20 font-luxury text-4xl text-kavora-ivory">
+            Honeymoons
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-white/60">
+            Private villas, intimate dining, secluded beaches and unforgettable experiences.
+          </p>
+
+        </article>
+
+
+        <!-- Anniversaries -->
+
+        <article class="occasion-card celebration-reveal min-h-[330px] border border-white/10 p-8 sm:p-10">
+
+          <p class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            02
+          </p>
+
+          <h3 class="mt-20 font-luxury text-4xl text-kavora-ivory">
+            Anniversaries
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-white/60">
+            Return somewhere extraordinary — or discover somewhere completely new together.
+          </p>
+
+        </article>
+
+
+        <!-- Birthdays -->
+
+        <article class="occasion-card celebration-reveal min-h-[330px] border border-white/10 p-8 sm:p-10">
+
+          <p class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            03
+          </p>
+
+          <h3 class="mt-20 font-luxury text-4xl text-kavora-ivory">
+            Birthdays
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-white/60">
+            Celebrate privately, dramatically or somewhere nobody expects.
+          </p>
+
+        </article>
+
+
+        <!-- Proposals -->
+
+        <article class="occasion-card celebration-reveal min-h-[330px] border border-white/10 p-8 sm:p-10">
+
+          <p class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            04
+          </p>
+
+          <h3 class="mt-20 font-luxury text-4xl text-kavora-ivory">
+            Proposals
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-white/60">
+            From private wilderness settings to secluded island escapes,
+            every detail can be designed around the moment.
+          </p>
+
+        </article>
+
+
+        <!-- Milestones -->
+
+        <article class="occasion-card celebration-reveal min-h-[330px] border border-white/10 p-8 sm:p-10 md:col-span-2 lg:col-span-1">
+
+          <p class="text-[10px] tracking-[0.25em] text-kavora-gold">
+            05
+          </p>
+
+          <h3 class="mt-20 font-luxury text-4xl text-kavora-ivory">
+            Milestones
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-white/60">
+            Graduations, retirements, family milestones and other moments worth marking.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       04 — INTIMATE MOMENTS
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-24 sm:px-8 lg:px-12 lg:py-36">
+
+    <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+
+      <div class="image-zoom celebration-reveal overflow-hidden">
+
+        <img
+          src="images/celebration-intimate.jpg"
+          alt="Intimate luxury celebration"
+          class="h-[560px] w-full object-cover sm:h-[680px]"
+        />
+
+      </div>
+
+
+      <div class="celebration-reveal lg:pl-8">
+
+        <div class="gold-line mb-8"></div>
+
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-green/50">
+          Designed Around You
+        </p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-none text-kavora-green sm:text-6xl">
+          Make the
+          <span class="italic">moment personal.</span>
+        </h2>
+
+        <p class="mt-8 text-sm leading-7 text-kavora-green/65">
+          A celebration should feel unmistakably yours.
+          The destination is only the beginning. Kavora works around
+          the people, the story and the details that make the occasion meaningful.
+        </p>
+
+        <p class="mt-6 text-sm leading-7 text-kavora-green/65">
+          From an intimate dinner for two to an elaborate surprise surrounded
+          by family and friends, every journey can be shaped around the moment.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       05 — PERSONALISATION
+  ========================================================== -->
+
+  <section class="bg-kavora-forest px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+
+        <div class="celebration-reveal">
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Personalisation
+          </p>
+
+          <h2 class="mt-6 font-luxury text-5xl leading-none text-kavora-ivory sm:text-6xl">
+            The details
+            <span class="italic">matter.</span>
+          </h2>
+
+          <p class="mt-7 max-w-md text-sm leading-7 text-white/55">
+            Kavora can coordinate the details that transform a beautiful journey
+            into a deeply personal experience.
+          </p>
+
+        </div>
+
+
+        <div class="celebration-reveal">
+
+          <div class="grid sm:grid-cols-2">
+
+            <div class="detail-item flex items-center justify-between py-5 pr-6">
+              <span class="text-sm text-white/75">Private dinners</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 sm:pl-6">
+              <span class="text-sm text-white/75">Room styling</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 pr-6">
+              <span class="text-sm text-white/75">Flowers</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 sm:pl-6">
+              <span class="text-sm text-white/75">Champagne</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 pr-6">
+              <span class="text-sm text-white/75">Cakes</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 sm:pl-6">
+              <span class="text-sm text-white/75">Photography</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 pr-6">
+              <span class="text-sm text-white/75">Surprise experiences</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 sm:pl-6">
+              <span class="text-sm text-white/75">Private transfers</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 pr-6">
+              <span class="text-sm text-white/75">Special excursions</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+            <div class="detail-item flex items-center justify-between py-5 sm:pl-6">
+              <span class="text-sm text-white/75">Entertainment</span>
+              <span class="text-kavora-gold">+</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       06 — THE MOMENT
+  ========================================================== -->
+
+  <section class="relative min-h-[90vh] overflow-hidden bg-kavora-green">
+
+    <img
+      src="images/celebration-moment.jpg"
+      alt="Private celebration beneath the African night sky"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+
+    <div class="absolute inset-0 bg-kavora-green/45"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-green via-transparent to-kavora-green/20"></div>
+
+    <div class="relative z-10 flex min-h-[90vh] items-end">
+
+      <div class="mx-auto w-full max-w-7xl px-6 pb-20 sm:px-8 lg:px-12 lg:pb-28">
+
+        <div class="max-w-3xl celebration-reveal">
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            The Moment
+          </p>
+
+          <h2 class="mt-6 font-luxury text-6xl leading-[0.9] text-kavora-ivory sm:text-7xl lg:text-8xl">
+            The moment
+            <span class="block italic">is everything.</span>
+          </h2>
+
+          <div class="mt-10 max-w-xl space-y-5 font-luxury text-2xl leading-tight text-white/90 sm:text-3xl">
+
+            <p>
+              The destination matters.
+            </p>
+
+            <p>
+              But the detail they remember for years is often something much smaller.
+            </p>
+
+            <p>
+              A table beneath the stars.
+            </p>
+
+            <p>
+              A surprise waiting at the villa.
+            </p>
+
+            <p>
+              A private beach at sunset.
+            </p>
+
+            <p>
+              A moment created only for two.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       07 — EDITORIAL STATEMENT
+  ========================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-28 sm:px-8 lg:px-12 lg:py-40">
+
+    <div class="mx-auto max-w-5xl text-center celebration-reveal">
+
+      <div class="mx-auto gold-line"></div>
+
+      <p class="mt-8 font-luxury text-4xl leading-tight text-kavora-green sm:text-5xl lg:text-6xl">
+        The best celebrations are not simply remembered.
+        <span class="italic">They are felt long after the journey ends.</span>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       08 — CTA
+  ========================================================== -->
+
+  <section class="bg-kavora-green px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+
+    <div class="mx-auto max-w-5xl text-center celebration-reveal">
+
+      <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+        Your Occasion
+      </p>
+
+      <h2 class="mt-6 font-luxury text-6xl leading-none text-kavora-ivory sm:text-7xl lg:text-8xl">
+        Create Something
+        <span class="block italic">Worth Remembering.</span>
+      </h2>
+
+      <p class="mx-auto mt-8 max-w-xl text-sm leading-7 text-white/55">
+        Tell us what you are celebrating, and let us design the journey around it.
+      </p>
+
+      <a
+        href="index.html#contact"
+        class="mt-10 inline-flex items-center gap-5 border border-kavora-gold px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold transition hover:bg-kavora-gold hover:text-kavora-green"
+      >
+        Create Something Worth Remembering
+
+        <span class="text-base">
+          →
+        </span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       09 — FOOTER
+  ========================================================== -->
+
+  <footer class="relative overflow-hidden bg-kavora-green">
+
+    <!-- Savanna / birds silhouette -->
+
+    <div class="relative h-32 overflow-hidden">
+
+      <div class="absolute inset-x-0 bottom-0 h-20 bg-kavora-forest"></div>
+
+      <svg
+        class="absolute bottom-0 left-0 h-32 w-full"
+        viewBox="0 0 1440 220"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+
+        <path
+          d="M0 190
+             C80 180 120 175 190 185
+             C260 195 320 160 390 174
+             C470 190 510 165 580 178
+             C650 192 720 160 790 175
+             C870 190 930 165 1000 180
+             C1080 195 1140 160 1210 176
+             C1290 193 1350 168 1440 180
+             L1440 220
+             L0 220 Z"
+          fill="#102D23"
+        />
+
+        <path
+          d="M0 194
+             C90 184 130 180 200 190
+             C275 200 330 165 400 178
+             C470 190 530 168 600 181
+             C675 195 725 166 800 179
+             C875 192 930 170 1005 183
+             C1080 196 1145 166 1215 180
+             C1300 195 1360 172 1440 184"
+          fill="none"
+          stroke="#C8A96B"
+          stroke-opacity="0.4"
+          stroke-width="1"
+        />
+
+        <!-- birds -->
+
+        <path
+          d="M1080 58 Q1090 48 1100 58 Q1110 48 1120 58"
+          fill="none"
+          stroke="#C8A96B"
+          stroke-opacity="0.6"
+          stroke-width="2"
+        />
+
+        <path
+          d="M1160 78 Q1170 68 1180 78 Q1190 68 1200 78"
+          fill="none"
+          stroke="#C8A96B"
+          stroke-opacity="0.5"
+          stroke-width="2"
+        />
+
+        <path
+          d="M1240 45 Q1250 35 1260 45 Q1270 35 1280 45"
+          fill="none"
+          stroke="#C8A96B"
+          stroke-opacity="0.55"
+          stroke-width="2"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <div class="mx-auto max-w-7xl px-6 pb-10 pt-10 sm:px-8 lg:px-12">
+
+      <div class="grid gap-12 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-4">
+
+
+        <!-- Brand -->
+
+        <div class="lg:col-span-1">
+
+          <a
+            href="index.html"
+            class="font-luxury text-4xl tracking-[0.12em] text-kavora-ivory"
+          >
+            KAVORA
+          </a>
+
+          <p class="mt-5 max-w-xs text-sm leading-7 text-white/50">
+            Luxury Travel Concierge & Private Journeys across Africa.
+          </p>
+
+        </div>
+
+
+        <!-- Journeys -->
+
+        <div>
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Journeys
+          </p>
+
+          <div class="mt-5 space-y-3">
+
+            <a
+              href="the-wild.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Wild
+            </a>
+
+            <a
+              href="the-extraordinary.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Extraordinary
+            </a>
+
+            <a
+              href="the-soul-of-africa.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Soul of Africa
+            </a>
+
+            <a
+              href="the-escape.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Escape
+            </a>
+
+            <a
+              href="the-celebration.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Celebration
+            </a>
+
+            <a
+              href="the-unexpected.html"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              The Unexpected
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Explore -->
+
+        <div>
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Explore
+          </p>
+
+          <div class="mt-5 space-y-3">
+
+            <a
+              href="index.html#destinations"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              Destinations
+            </a>
+
+            <a
+              href="index.html#journal"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              Journal
+            </a>
+
+            <a
+              href="index.html#about"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              About Kavora
+            </a>
+
+            <a
+              href="index.html#contact"
+              class="block text-sm text-white/55 transition hover:text-kavora-gold"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div>
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Begin
+          </p>
+
+          <p class="mt-5 max-w-xs text-sm leading-7 text-white/50">
+            Tell us what you are imagining.
+            We will begin designing the journey around it.
+          </p>
+
+          <a
+            href="index.html#contact"
+            class="mt-6 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-kavora-gold"
+          >
+            Begin Your Journey
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Bottom -->
+
+      <div class="flex flex-col gap-5 pt-8 sm:flex-row sm:items-end sm:justify-between">
+
+        <div>
+
+          <p class="font-luxury text-2xl text-kavora-ivory">
+            Africa, considered differently.
+          </p>
+
+          <p class="mt-3 text-xs leading-6 text-white/35">
+            Luxury travel concierge & private journeys.
+          </p>
+
+        </div>
+
+        <div class="text-left sm:text-right">
+
+          <p class="text-xs text-white/35">
+            © 2026 Kavora Africa. All rights reserved.
+          </p>
+
+          <p class="mt-2 text-xs text-white/35">
+            Designed and developed by
+            <a
+              href="https://synlotech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-kavora-gold transition hover:text-kavora-ivory"
+            >
+              Synlotech Technologies
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       REVEAL ANIMATION
+  ========================================================== -->
+
+  <script>
+
+    const celebrationElements = document.querySelectorAll(
+      ".celebration-reveal"
+    );
+
+    const celebrationObserver = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("is-visible");
+
+            celebrationObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    celebrationElements.forEach((element) => {
+      celebrationObserver.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>

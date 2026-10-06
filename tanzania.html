@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tanzania | Kavora Luxury Travel & Concierge</title>
+
+  <meta
+    name="description"
+    content="Discover Tanzania through Kavora Luxury Travel & Concierge. From the Serengeti and Ngorongoro to Zanzibar, Kilimanjaro and the remote southern wilderness, every journey is designed around you."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          },
+
+          letterSpacing: {
+            luxury: '0.18em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #F7F5EF;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-zoom {
+      transition: transform 1.2s cubic-bezier(.2,.65,.25,1);
+    }
+
+    .group:hover .image-zoom {
+      transform: scale(1.06);
+    }
+
+    .hero-image {
+      animation: heroScale 12s ease-out forwards;
+    }
+
+    @keyframes heroScale {
+      from {
+        transform: scale(1.08);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .line-grow {
+      width: 0;
+      transition: width 1.2s ease;
+    }
+
+    .line-grow.is-visible {
+      width: 100%;
+    }
+
+    .destination-card {
+      transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 60px rgba(11, 33, 26, .12);
+    }
+
+    .season-track {
+      position: relative;
+    }
+
+    .season-track::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(11, 33, 26, .15);
+    }
+
+    .season-point {
+      position: relative;
+      z-index: 2;
+    }
+
+    .mobile-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all .35s ease;
+    }
+
+    .mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+
+<body class="bg-kavora-ivory text-kavora-green antialiased">
+
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header
+    id="navbar"
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-kavora-green/85 backdrop-blur-xl"
+  >
+    <div class="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-6 lg:px-12">
+
+      <a
+        href="/"
+        class="font-luxury text-3xl tracking-wide text-kavora-ivory"
+      >
+        Kavora
+      </a>
+
+      <nav class="hidden items-center gap-10 lg:flex">
+
+        <a
+          href="/"
+          class="text-[10px] uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="/destinations"
+          class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="/journeys"
+          class="text-[10px] uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+        <a
+          href="/concierge"
+          class="text-[10px] uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Concierge
+        </a>
+
+        <a
+          href="/journal"
+          class="text-[10px] uppercase tracking-[0.22em] text-white/70 transition hover:text-kavora-gold"
+        >
+          Journal
+        </a>
+
+        <a
+          href="#contact"
+          class="border border-kavora-gold/60 px-5 py-3 text-[10px] uppercase tracking-[0.22em] text-kavora-ivory transition hover:bg-kavora-gold hover:text-kavora-green"
+        >
+          Begin Your Journey
+        </a>
+
+      </nav>
+
+
+      <button
+        id="menuButton"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        aria-label="Open menu"
+      >
+        <span class="flex flex-col gap-1.5">
+          <span class="block h-px w-5 bg-white"></span>
+          <span class="block h-px w-5 bg-white"></span>
+        </span>
+      </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+      id="mobileMenu"
+      class="mobile-menu absolute left-0 right-0 top-full border-b border-white/10 bg-kavora-green px-6 py-8 lg:hidden"
+    >
+
+      <div class="flex flex-col gap-6">
+
+        <a
+          href="/"
+          class="text-xs uppercase tracking-[0.2em] text-white/70"
+        >
+          Home
+        </a>
+
+        <a
+          href="/destinations"
+          class="text-xs uppercase tracking-[0.2em] text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="/journeys"
+          class="text-xs uppercase tracking-[0.2em] text-white/70"
+        >
+          Journeys
+        </a>
+
+        <a
+          href="/concierge"
+          class="text-xs uppercase tracking-[0.2em] text-white/70"
+        >
+          Concierge
+        </a>
+
+        <a
+          href="/journal"
+          class="text-xs uppercase tracking-[0.2em] text-white/70"
+        >
+          Journal
+        </a>
+
+        <a
+          href="#contact"
+          class="mt-2 border border-kavora-gold/60 px-5 py-4 text-center text-xs uppercase tracking-[0.2em] text-kavora-ivory"
+        >
+          Begin Your Journey
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================================================
+         01 — HERO
+    ========================================================== -->
+
+    <section class="relative min-h-screen overflow-hidden bg-kavora-green">
+
+      <img
+        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=90"
+        alt="Tanzania wilderness"
+        class="hero-image absolute inset-0 h-full w-full object-cover"
+      />
+
+      <div class="absolute inset-0 bg-kavora-green/35"></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-kavora-green/90 via-kavora-green/55 to-kavora-green/10"
+      ></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-kavora-green via-transparent to-kavora-green/20"
+      ></div>
+
+
+      <div
+        class="relative z-10 mx-auto flex min-h-screen max-w-[1500px] items-end px-6 pb-20 pt-32 lg:px-12 lg:pb-28"
+      >
+
+        <div class="max-w-5xl">
+
+          <div class="mb-8 flex items-center gap-4">
+
+            <span class="h-px w-12 bg-kavora-gold"></span>
+
+            <p class="text-[10px] uppercase tracking-[0.35em] text-kavora-gold">
+              Tanzania — East Africa
+            </p>
+
+          </div>
+
+
+          <h1
+            class="max-w-5xl font-luxury text-6xl leading-[.9] text-kavora-ivory sm:text-7xl lg:text-[8rem]"
+          >
+            One country.
+            <br />
+            Endless ways
+            <br />
+            to experience Africa.
+          </h1>
+
+
+          <div class="mt-10 max-w-2xl">
+
+            <p class="text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              From the great plains of the Serengeti to the forests,
+              mountains, islands and Indian Ocean, Tanzania offers an
+              extraordinary range of experiences within one country.
+            </p>
+
+          </div>
+
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+
+            <a
+              href="#explore"
+              class="inline-flex items-center justify-center bg-kavora-gold px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-kavora-green transition hover:bg-kavora-ivory"
+            >
+              Explore Tanzania
+            </a>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center border border-white/30 px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-white transition hover:border-kavora-gold hover:text-kavora-gold"
+            >
+              Speak With A Travel Designer
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="absolute bottom-8 right-8 hidden lg:block">
+
+        <p class="rotate-90 origin-right text-[9px] uppercase tracking-[0.35em] text-white/50">
+          Discover Tanzania
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         02 — WHY TANZANIA
+    ========================================================== -->
+
+    <section class="bg-kavora-ivory py-28 lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-16 lg:grid-cols-12 lg:gap-10">
+
+          <div class="lg:col-span-5 reveal">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Why Tanzania
+              </p>
+
+            </div>
+
+
+            <h2
+              class="mt-7 max-w-xl font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl"
+            >
+              A country of remarkable contrast.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-6 lg:col-start-7 reveal">
+
+            <p class="text-lg leading-8 text-kavora-green/75">
+              Tanzania is not defined by one landscape or one way of
+              travelling. It is a country where vast wilderness gives way
+              to volcanic highlands, ancient cultures, tropical islands
+              and an extraordinary Indian Ocean coastline.
+            </p>
+
+            <p class="mt-7 text-base leading-8 text-kavora-green/60">
+              A journey here can be deeply adventurous, profoundly
+              restorative, culturally rich or quietly luxurious — often
+              all within the same itinerary. Kavora brings these contrasts
+              together into a journey that feels considered rather than
+              simply comprehensive.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-20 grid border-t border-kavora-green/10 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 sm:pr-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Wildlife</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              From the great migration to extraordinary resident wildlife.
+            </p>
+          </div>
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 sm:pl-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Wilderness</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Vast landscapes where space and silence become part of the experience.
+            </p>
+          </div>
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 lg:pl-8">
+            <p class="font-luxury text-3xl">Mountains</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              From Kilimanjaro to quieter mountain landscapes.
+            </p>
+          </div>
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 sm:pr-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Culture</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Living traditions, communities, history and heritage.
+            </p>
+          </div>
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 sm:pl-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Coast</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              A coastline shaped by the Indian Ocean and Swahili culture.
+            </p>
+          </div>
+
+          <div class="border-b border-kavora-green/10 px-0 py-8 lg:pl-8">
+            <p class="font-luxury text-3xl">Islands</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Zanzibar, Pemba, Mafia and the quieter side of island travel.
+            </p>
+          </div>
+
+          <div class="px-0 py-8 sm:pr-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Adventure</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Treks, wildlife encounters and active exploration.
+            </p>
+          </div>
+
+          <div class="px-0 py-8 sm:pl-8 lg:border-r lg:px-8">
+            <p class="font-luxury text-3xl">Luxury</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Private spaces, exceptional hospitality and thoughtful service.
+            </p>
+          </div>
+
+          <div class="px-0 py-8 lg:pl-8">
+            <p class="font-luxury text-3xl">Conservation</p>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/55">
+              Travel that supports the places and communities that make Tanzania special.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         03 — EXPLORE TANZANIA
+    ========================================================== -->
+
+    <section id="explore" class="bg-kavora-green py-28 lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+          <div class="lg:col-span-5 reveal">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Explore Tanzania
+              </p>
+
+            </div>
+
+            <h2
+              class="mt-7 font-luxury text-5xl leading-[.95] text-kavora-ivory sm:text-6xl lg:text-7xl"
+            >
+              A country.
+              <br />
+              Many worlds.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-5 lg:col-start-8 reveal">
+
+            <p class="text-base leading-8 text-white/55">
+              Tanzania unfolds differently depending on where you go.
+              We look beyond the obvious route to understand which
+              landscapes, properties and experiences belong together.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- NORTHERN TANZANIA -->
+
+        <div class="mt-24">
+
+          <div class="mb-10 flex items-center gap-5">
+
+            <span class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              01
+            </span>
+
+            <div class="h-px flex-1 bg-white/10"></div>
+
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40">
+              Northern Tanzania
+            </p>
+
+          </div>
+
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+            <!-- Serengeti -->
+
+            <a
+              href="/destinations/serengeti"
+              class="destination-card group relative min-h-[420px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1000&q=85"
+                alt="Serengeti wildlife"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Northern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Serengeti
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Wildlife and wilderness.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <!-- Ngorongoro -->
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[420px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85"
+                alt="Tanzania crater landscape"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Northern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Ngorongoro
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Crater landscapes and extraordinary wildlife.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <!-- Tarangire -->
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[420px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1000&q=85"
+                alt="African elephants"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Northern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Tarangire
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Elephants, baobabs and quieter safari landscapes.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <!-- Lake Manyara -->
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[420px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=85"
+                alt="African lake landscape"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Northern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Lake Manyara
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Forest, lake and wildlife.
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SOUTHERN TANZANIA -->
+
+        <div class="mt-24">
+
+          <div class="mb-10 flex items-center gap-5">
+
+            <span class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              02
+            </span>
+
+            <div class="h-px flex-1 bg-white/10"></div>
+
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40">
+              Southern Tanzania
+            </p>
+
+          </div>
+
+
+          <div class="grid gap-6 lg:grid-cols-2">
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[520px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=1400&q=85"
+                alt="African river wilderness"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-8 lg:p-10">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Southern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-5xl text-white">
+                  Nyerere
+                </h3>
+
+                <p class="mt-3 max-w-md text-sm leading-7 text-white/65">
+                  Rivers, wetlands and remote safari experiences.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[520px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1400&q=85"
+                alt="Tanzania wilderness"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-8 lg:p-10">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Southern Tanzania
+                </p>
+
+                <h3 class="mt-3 font-luxury text-5xl text-white">
+                  Ruaha
+                </h3>
+
+                <p class="mt-3 max-w-md text-sm leading-7 text-white/65">
+                  Wild, expansive and less visited.
+                </p>
+
+                <p class="mt-5 max-w-lg text-sm leading-7 text-white/50">
+                  For travellers seeking a more private relationship
+                  with the wilderness.
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- MOUNTAINS -->
+
+        <div class="mt-24">
+
+          <div class="mb-10 flex items-center gap-5">
+
+            <span class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              03
+            </span>
+
+            <div class="h-px flex-1 bg-white/10"></div>
+
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40">
+              Mountains
+            </p>
+
+          </div>
+
+
+          <div class="grid gap-6 md:grid-cols-2">
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[470px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1400&q=85"
+                alt="Mountain landscape"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 p-8 lg:p-10">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Mountain
+                </p>
+
+                <h3 class="mt-3 font-luxury text-5xl text-white">
+                  Kilimanjaro
+                </h3>
+
+                <p class="mt-3 text-sm text-white/65">
+                  Tanzania's iconic mountain.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[470px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=85"
+                alt="Mountain landscape in Tanzania"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+
+              <div class="absolute bottom-0 p-8 lg:p-10">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Mountain
+                </p>
+
+                <h3 class="mt-3 font-luxury text-5xl text-white">
+                  Usambara Mountains
+                </h3>
+
+                <p class="mt-3 text-sm text-white/65">
+                  Slower, more culturally connected journeys.
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- COAST & ISLANDS -->
+
+        <div class="mt-24">
+
+          <div class="mb-10 flex items-center gap-5">
+
+            <span class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              04
+            </span>
+
+            <div class="h-px flex-1 bg-white/10"></div>
+
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40">
+              Coast & Islands
+            </p>
+
+          </div>
+
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+            <a
+              href="/destinations/zanzibar"
+              class="destination-card group relative min-h-[440px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1100&q=85"
+                alt="Zanzibar beach"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+
+              <div class="absolute bottom-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Indian Ocean
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Zanzibar
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Indian Ocean and Swahili culture.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[440px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1100&q=85"
+                alt="Tropical island coastline"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+
+              <div class="absolute bottom-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Indian Ocean
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Pemba
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  More secluded island experiences.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="destination-card group relative min-h-[440px] overflow-hidden"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&w=1100&q=85"
+                alt="Tropical ocean"
+                class="image-zoom absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+
+              <div class="absolute bottom-0 p-7">
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Indian Ocean
+                </p>
+
+                <h3 class="mt-3 font-luxury text-4xl text-white">
+                  Mafia Island
+                </h3>
+
+                <p class="mt-2 text-sm text-white/65">
+                  Marine life and slower island travel.
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         04 — TANZANIA EXPERIENCES
+    ========================================================== -->
+
+    <section class="bg-kavora-ivory py-28 lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+          <div class="lg:col-span-5 reveal">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Tanzania Experiences
+              </p>
+
+            </div>
+
+            <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+              Travel by feeling,
+              <br />
+              not only by map.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-5 lg:col-start-8">
+
+            <p class="text-base leading-8 text-kavora-green/60">
+              Tanzania can be understood through the experiences that
+              matter most to you. We use these interests to shape the
+              geography around the journey rather than forcing every
+              traveller into the same route.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-20 grid gap-px bg-kavora-green/10 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">01</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Safari
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Private wildlife journeys across Tanzania's most remarkable
+              wilderness areas.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">02</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Beach & Island
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Indian Ocean escapes designed around privacy, restoration
+              and unhurried days.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">03</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Mountains
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Trekking and mountain experiences for travellers seeking
+              challenge, perspective and altitude.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">04</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Culture
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Local communities, history, heritage and experiences that
+              create meaningful connection.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">05</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Conservation
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Responsible experiences that bring guests closer to the
+              work protecting Tanzania's natural heritage.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">06</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Wellness
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              Private retreats, restorative stays and time designed
+              around slowing down.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-ivory p-8 lg:p-10 reveal">
+
+            <span class="text-[10px] text-kavora-gold">07</span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Adventure
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-kavora-green/55">
+              More active ways to experience Tanzania, from trekking
+              to exploration beyond the usual route.
+            </p>
+
+          </div>
+
+
+          <div class="flex items-end bg-kavora-green p-8 lg:p-10">
+
+            <p class="font-luxury text-3xl leading-tight text-kavora-ivory">
+              Your interests
+              <br />
+              shape the route.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         05 — WHEN TO VISIT TANZANIA
+    ========================================================== -->
+
+    <section class="bg-kavora-forest py-28 text-kavora-ivory lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-14 lg:grid-cols-12">
+
+          <div class="lg:col-span-5 reveal">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                When To Visit Tanzania
+              </p>
+
+            </div>
+
+            <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+              There isn't one
+              <br />
+              best time.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-6 lg:col-start-7">
+
+            <p class="text-lg leading-8 text-white/70">
+              The right time to visit Tanzania depends on what you want
+              to experience. Wildlife, migration, beaches, trekking and
+              different regions of the country each have their own rhythms.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-white/45">
+              Rather than treating the calendar as a simple high-season
+              chart, Kavora considers your priorities, the regions involved
+              and the experience you want to create.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="mt-24 overflow-x-auto">
+
+          <div class="min-w-[850px]">
+
+            <div class="grid grid-cols-13 border-b border-white/10 pb-6 text-[9px] uppercase tracking-[0.25em] text-white/35"
+                 style="grid-template-columns: 130px repeat(12, 1fr);">
+
+              <div></div>
+
+              <div class="text-center">Jan</div>
+              <div class="text-center">Feb</div>
+              <div class="text-center">Mar</div>
+              <div class="text-center">Apr</div>
+              <div class="text-center">May</div>
+              <div class="text-center">Jun</div>
+              <div class="text-center">Jul</div>
+              <div class="text-center">Aug</div>
+              <div class="text-center">Sep</div>
+              <div class="text-center">Oct</div>
+              <div class="text-center">Nov</div>
+              <div class="text-center">Dec</div>
+
+            </div>
+
+
+            <!-- WILDLIFE -->
+
+            <div
+              class="grid items-center border-b border-white/10 py-8"
+              style="grid-template-columns: 130px repeat(12, 1fr);"
+            >
+
+              <div class="font-luxury text-2xl">
+                Wildlife
+              </div>
+
+              <div class="col-span-12 mt-4 grid grid-cols-12 lg:mt-0">
+
+                <div class="col-span-10 mx-1 h-2 bg-kavora-gold/70"></div>
+
+              </div>
+
+            </div>
+
+
+            <!-- MIGRATION -->
+
+            <div
+              class="grid items-center border-b border-white/10 py-8"
+              style="grid-template-columns: 130px repeat(12, 1fr);"
+            >
+
+              <div class="font-luxury text-2xl">
+                Migration
+              </div>
+
+              <div class="col-span-12 mt-4 grid grid-cols-12 lg:mt-0">
+
+                <div class="col-start-7 col-span-6 mx-1 h-2 bg-kavora-gold"></div>
+
+              </div>
+
+            </div>
+
+
+            <!-- BEACH -->
+
+            <div
+              class="grid items-center border-b border-white/10 py-8"
+              style="grid-template-columns: 130px repeat(12, 1fr);"
+            >
+
+              <div class="font-luxury text-2xl">
+                Beach
+              </div>
+
+              <div class="col-span-12 mt-4 grid grid-cols-12 lg:mt-0">
+
+                <div class="col-start-6 col-span-7 mx-1 h-2 bg-white/40"></div>
+
+              </div>
+
+            </div>
+
+
+            <!-- TREKKING -->
+
+            <div
+              class="grid items-center border-b border-white/10 py-8"
+              style="grid-template-columns: 130px repeat(12, 1fr);"
+            >
+
+              <div class="font-luxury text-2xl">
+                Trekking
+              </div>
+
+              <div class="col-span-12 mt-4 grid grid-cols-12 lg:mt-0">
+
+                <div class="col-start-6 col-span-7 mx-1 h-2 bg-kavora-gold/60"></div>
+
+              </div>
+
+            </div>
+
+
+            <!-- RAINS -->
+
+            <div
+              class="grid items-center py-8"
+              style="grid-template-columns: 130px repeat(12, 1fr);"
+            >
+
+              <div class="font-luxury text-2xl">
+                Rains
+              </div>
+
+              <div class="col-span-12 mt-4 grid grid-cols-12 lg:mt-0">
+
+                <div class="col-start-3 col-span-2 mx-1 h-2 bg-white/25"></div>
+
+                <div class="col-start-11 col-span-2 mx-1 h-2 bg-white/25"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-12 grid gap-8 border-t border-white/10 pt-10 md:grid-cols-3">
+
+          <div>
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Regional Differences
+            </p>
+
+            <p class="mt-4 text-sm leading-7 text-white/50">
+              Tanzania's regions experience different weather patterns,
+              making itinerary design more nuanced than a single national
+              season.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Ocean Conditions
+            </p>
+
+            <p class="mt-4 text-sm leading-7 text-white/50">
+              Beach and marine experiences can be influenced by seasonal
+              winds, rainfall and ocean conditions.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Your Journey
+            </p>
+
+            <p class="mt-4 text-sm leading-7 text-white/50">
+              We work backwards from what you want to experience, then
+              determine the most suitable timing and route.
+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         06 — BUILD YOUR TANZANIA JOURNEY
+    ========================================================== -->
+
+    <section class="bg-kavora-ivory py-28 lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="max-w-3xl reveal">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              Build Your Tanzania Journey
+            </p>
+
+          </div>
+
+          <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+            Don't choose a package.
+            <br />
+            Build a journey.
+          </h2>
+
+          <p class="mt-7 max-w-2xl text-base leading-8 text-kavora-green/55">
+            Tanzania becomes more interesting when different landscapes
+            are allowed to complement each other. These combinations are
+            starting points, not fixed itineraries.
+          </p>
+
+        </div>
+
+
+        <div class="mt-20 grid gap-5 md:grid-cols-2">
+
+
+          <!-- JOURNEY 01 -->
+
+          <a
+            href="/journeys"
+            class="group relative overflow-hidden bg-kavora-green p-8 lg:p-12"
+          >
+
+            <div class="absolute right-8 top-8 font-luxury text-7xl text-white/5">
+              01
+            </div>
+
+            <div class="relative">
+
+              <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                Wild → Ocean
+              </p>
+
+              <h3 class="mt-8 font-luxury text-5xl text-kavora-ivory">
+                Safari + Zanzibar
+              </h3>
+
+              <p class="mt-4 max-w-md text-sm leading-7 text-white/50">
+                Days in the wilderness followed by time beside the Indian Ocean.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- JOURNEY 02 -->
+
+          <a
+            href="/journeys"
+            class="group relative overflow-hidden border border-kavora-green/10 p-8 lg:p-12"
+          >
+
+            <div class="absolute right-8 top-8 font-luxury text-7xl text-kavora-green/5">
+              02
+            </div>
+
+            <div class="relative">
+
+              <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                Northern Tanzania
+              </p>
+
+              <h3 class="mt-8 font-luxury text-5xl">
+                Serengeti + Ngorongoro
+              </h3>
+
+              <p class="mt-4 max-w-md text-sm leading-7 text-kavora-green/50">
+                A classic northern route shaped around wildlife and extraordinary landscapes.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- JOURNEY 03 -->
+
+          <a
+            href="/journeys"
+            class="group relative overflow-hidden border border-kavora-green/10 p-8 lg:p-12"
+          >
+
+            <div class="absolute right-8 top-8 font-luxury text-7xl text-kavora-green/5">
+              03
+            </div>
+
+            <div class="relative">
+
+              <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                Remote Wilderness
+              </p>
+
+              <h3 class="mt-8 font-luxury text-5xl">
+                Southern Tanzania
+              </h3>
+
+              <p class="mt-4 max-w-md text-sm leading-7 text-kavora-green/50">
+                A quieter relationship with the wilderness through Nyerere and Ruaha.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- JOURNEY 04 -->
+
+          <a
+            href="/journeys"
+            class="group relative overflow-hidden bg-kavora-forest p-8 lg:p-12"
+          >
+
+            <div class="absolute right-8 top-8 font-luxury text-7xl text-white/5">
+              04
+            </div>
+
+            <div class="relative">
+
+              <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                Mountain → Wilderness
+              </p>
+
+              <h3 class="mt-8 font-luxury text-5xl text-kavora-ivory">
+                Kilimanjaro + Safari
+              </h3>
+
+              <p class="mt-4 max-w-md text-sm leading-7 text-white/50">
+                Challenge and altitude followed by open landscapes and wildlife.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- JOURNEY 05 -->
+
+          <a
+            href="/journeys"
+            class="group relative overflow-hidden md:col-span-2"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85"
+              alt="Tanzania wilderness"
+              class="image-zoom h-[420px] w-full object-cover"
+            />
+
+            <div class="absolute inset-0 bg-gradient-to-r from-kavora-green/85 via-kavora-green/40 to-transparent"></div>
+
+            <div class="absolute inset-y-0 left-0 flex items-center p-8 lg:p-14">
+
+              <div>
+
+                <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+                  Wildlife → Culture → Ocean
+                </p>
+
+                <h3 class="mt-5 font-luxury text-6xl text-kavora-ivory">
+                  Tanzania Complete
+                </h3>
+
+                <p class="mt-5 max-w-lg text-sm leading-7 text-white/60">
+                  A deeper exploration of the country, connecting wilderness,
+                  culture and the Indian Ocean into one considered journey.
+                </p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         07 — ACCOMMODATION
+    ========================================================== -->
+
+    <section class="bg-kavora-green py-28 text-kavora-ivory lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-14 lg:grid-cols-12">
+
+          <div class="lg:col-span-5 reveal">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Accommodation
+              </p>
+
+            </div>
+
+            <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+              Where you stay
+              <br />
+              shapes the journey.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-6 lg:col-start-7">
+
+            <p class="text-base leading-8 text-white/65">
+              Accommodation is not simply somewhere to sleep. In Tanzania,
+              the setting, atmosphere, service and relationship with the
+              surrounding landscape can fundamentally change how a journey
+              feels.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-white/45">
+              Kavora selects properties according to the traveller and the
+              journey — not simply according to a list of famous hotels.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-20 grid border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="border-b border-white/10 py-10 sm:pr-10 lg:border-r lg:pr-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              01
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Safari Camps
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Intimate camps that place you close to the wilderness.
+            </p>
+          </div>
+
+
+          <div class="border-b border-white/10 py-10 sm:pl-10 lg:border-r lg:px-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              02
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Safari Lodges
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Refined lodges balancing comfort, landscape and service.
+            </p>
+          </div>
+
+
+          <div class="border-b border-white/10 py-10 lg:pl-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              03
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Beach Resorts
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Oceanfront properties for unhurried coastal stays.
+            </p>
+          </div>
+
+
+          <div class="border-b border-white/10 py-10 sm:pr-10 lg:border-r lg:pr-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              04
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Boutique Hotels
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Characterful stays with a stronger sense of place.
+            </p>
+          </div>
+
+
+          <div class="border-b border-white/10 py-10 sm:pl-10 lg:border-r lg:px-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              05
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Private Villas
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Privacy, space and personalised service.
+            </p>
+          </div>
+
+
+          <div class="border-b border-white/10 py-10 lg:pl-12">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              06
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Mountain Lodges
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Comfortable bases for mountain and highland journeys.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         08 — PRACTICAL TANZANIA GUIDE
+    ========================================================== -->
+
+    <section class="bg-kavora-ivory py-28 lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-14 lg:grid-cols-12">
+
+          <div class="lg:col-span-5">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Practical Tanzania Guide
+              </p>
+
+            </div>
+
+            <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+              The details
+              <br />
+              behind the journey.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-6 lg:col-start-7">
+
+            <p class="text-base leading-8 text-kavora-green/60">
+              A well-designed journey depends on more than beautiful
+              destinations. We help coordinate the practical details that
+              allow the experience itself to remain effortless.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-20 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Entry
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Entry Requirements</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Current entry requirements should always be checked against official government sources.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Entry
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Visa Information</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Requirements can vary by nationality and may change over time.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Arrival
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Airports</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              We help determine the most practical arrival point for your itinerary.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Movement
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Domestic Flights</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Regional air connections can significantly shape the pace of a Tanzania journey.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Movement
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Transfers</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Private transfers and carefully coordinated connections between destinations.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Essentials
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Currency</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Practical guidance around local currency and payments before departure.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Essentials
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Connectivity</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Guidance on connectivity expectations across cities, camps and remote areas.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Wellbeing
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Health Considerations</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Travellers should seek current professional health and travel advice before departure.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Preparation
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Packing</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              What to bring depends on region, season, activities and accommodation.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Planning
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Travel Times</h3>
+            <p class="mt-3 text-sm leading-7 text-kavora-green/50">
+              Tanzania is vast. Thoughtful routing helps reduce unnecessary travel between experiences.
+            </p>
+          </div>
+
+
+          <div class="border border-kavora-green/10 p-7 sm:col-span-2 lg:col-span-2">
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Responsibility
+            </p>
+            <h3 class="mt-4 font-luxury text-3xl">Responsible Travel</h3>
+            <p class="mt-3 max-w-2xl text-sm leading-7 text-kavora-green/50">
+              We encourage travellers to consider conservation, communities,
+              environmental impact and responsible local operators when planning their journey.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="mt-12 border-l border-kavora-gold pl-6">
+
+          <p class="text-sm leading-7 text-kavora-green/60">
+            For legally or operationally sensitive information such as
+            visas, entry requirements and health guidance, always refer to
+            current official sources before travelling.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         09 — RESPONSIBLE TRAVEL
+    ========================================================== -->
+
+    <section class="bg-kavora-forest py-28 text-kavora-ivory lg:py-40">
+
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-12">
+
+        <div class="grid gap-16 lg:grid-cols-12">
+
+          <div class="lg:col-span-5">
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+                Responsible Travel
+              </p>
+
+            </div>
+
+            <h2 class="mt-7 font-luxury text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+              Travel should
+              <br />
+              leave something behind.
+            </h2>
+
+          </div>
+
+
+          <div class="lg:col-span-5 lg:col-start-8">
+
+            <p class="text-lg leading-8 text-white/65">
+              Tanzania's landscapes, wildlife and communities are not simply
+              the backdrop to travel. They are the reason to protect the
+              places we visit.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-white/45">
+              Kavora considers the wider impact of each journey, from the
+              properties we recommend to the operators we work with and
+              the experiences we introduce to our guests.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-20 grid gap-px bg-white/10 md:grid-cols-2 lg:grid-cols-3">
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              01
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Conservation
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Supporting travel models that help protect Tanzania's
+              wildlife and landscapes.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              02
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Wildlife Protection
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Encouraging respectful wildlife encounters and responsible
+              behaviour in protected areas.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              03
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Community Benefit
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Creating opportunities for local communities to benefit
+              meaningfully from tourism.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              04
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Local Employment
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Valuing local knowledge, expertise and employment throughout
+              the travel experience.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              05
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Cultural Respect
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Approaching communities, traditions and cultural spaces
+              with respect and genuine curiosity.
+            </p>
+
+          </div>
+
+
+          <div class="bg-kavora-forest p-8 lg:p-10">
+
+            <span class="font-luxury text-5xl text-kavora-gold/70">
+              06
+            </span>
+
+            <h3 class="mt-12 font-luxury text-4xl">
+              Environmental Responsibility
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-white/45">
+              Considering the environmental footprint of accommodation,
+              movement and experiences.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="mt-16 max-w-3xl border-t border-white/10 pt-10">
+
+          <p class="font-luxury text-3xl leading-tight text-white/80 sm:text-4xl">
+            Luxury is not only about what you receive.
+            It is also about how thoughtfully the journey is created.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         10 — FINAL CTA
+    ========================================================== -->
+
+    <section
+      id="contact"
+      class="relative min-h-[720px] overflow-hidden"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=2200&q=90"
+        alt="Tanzania wildlife"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+
+      <div class="absolute inset-0 bg-kavora-green/65"></div>
+
+      <div class="absolute inset-0 bg-gradient-to-r from-kavora-green/90 via-kavora-green/50 to-transparent"></div>
+
+
+      <div class="relative z-10 mx-auto flex min-h-[720px] max-w-[1500px] items-center px-6 lg:px-12">
+
+        <div class="max-w-4xl">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+              Your Tanzania
+            </p>
+
+          </div>
+
+
+          <h2
+            class="mt-7 font-luxury text-6xl leading-[.9] text-kavora-ivory sm:text-7xl lg:text-[7.5rem]"
+          >
+            Tanzania is not
+            <br />
+            one journey.
+          </h2>
+
+
+          <p class="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+            Tell us what you want to experience, and we'll connect the
+            places that make sense for you.
+          </p>
+
+
+          <div class="mt-10">
+
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center bg-kavora-gold px-8 py-5 text-[10px] uppercase tracking-[0.25em] text-kavora-green transition hover:bg-kavora-ivory"
+            >
+              Design Your Tanzania Journey
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         11 — FOOTER
+    ========================================================== -->
+
+    <footer class="relative overflow-hidden bg-kavora-green text-kavora-ivory">
+
+      <!-- SILHOUETTE -->
+
+      <div class="relative h-32 overflow-hidden">
+
+        <svg
+          class="absolute bottom-0 left-0 h-full w-full"
+          viewBox="0 0 1600 180"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <path
+            d="
+              M0 180
+              L0 135
+              C80 130 105 120 155 130
+              C210 141 250 120 295 126
+              C350 134 390 116 440 123
+              C500 132 545 110 600 120
+              C660 132 700 105 755 115
+              C810 126 850 103 905 112
+              C960 122 1005 108 1055 115
+              C1115 125 1160 98 1210 109
+              C1270 123 1320 96 1375 108
+              C1430 120 1480 100 1530 105
+              C1565 109 1585 101 1600 98
+              L1600 180
+              Z
+            "
+            fill="#0B211A"
+          />
+
+        </svg>
+
+
+        <!-- BIRDS -->
+
+        <div class="absolute left-[18%] top-10">
+
+          <svg
+            width="50"
+            height="25"
+            viewBox="0 0 50 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <path
+              d="M2 14C8 7 14 7 21 14C27 7 34 7 48 3"
+              stroke="#C8A96B"
+              stroke-width="1"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <div class="absolute right-[22%] top-6">
+
+          <svg
+            width="40"
+            height="20"
+            viewBox="0 0 40 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <path
+              d="M1 11C6 5 11 5 17 11C23 5 29 5 39 2"
+              stroke="#C8A96B"
+              stroke-width="1"
+            />
+
+          </svg>
+
+        </div>
+
+      </div>
+
+
+      <div class="mx-auto max-w-[1500px] px-6 pb-10 lg:px-12">
+
+        <div class="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-12">
+
+          <div class="lg:col-span-5">
+
+            <a
+              href="/"
+              class="font-luxury text-5xl"
+            >
+              Kavora
+            </a>
+
+            <p class="mt-6 max-w-sm text-sm leading-7 text-white/45">
+              Luxury journeys through Africa, thoughtfully designed around
+              the way you want to travel.
+            </p>
+
+          </div>
+
+
+          <div class="lg:col-span-2">
+
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Explore
+            </p>
+
+            <div class="mt-6 flex flex-col gap-4">
+
+              <a href="/destinations" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Destinations
+              </a>
+
+              <a href="/journeys" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Journeys
+              </a>
+
+              <a href="/concierge" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Concierge
+              </a>
+
+              <a href="/journal" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Journal
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="lg:col-span-2">
+
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Destinations
+            </p>
+
+            <div class="mt-6 flex flex-col gap-4">
+
+              <a href="/destinations/tanzania" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Tanzania
+              </a>
+
+              <a href="/destinations/serengeti" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Serengeti
+              </a>
+
+              <a href="/destinations/zanzibar" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Zanzibar
+              </a>
+
+              <a href="#" class="text-sm text-white/55 transition hover:text-kavora-gold">
+                Kilimanjaro
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="lg:col-span-3">
+
+            <p class="text-[9px] uppercase tracking-[0.25em] text-kavora-gold">
+              Begin Your Journey
+            </p>
+
+            <p class="mt-6 max-w-xs text-sm leading-7 text-white/45">
+              Tell us where you want to go, how you want to travel,
+              and what you want to feel.
+            </p>
+
+            <a
+              href="/contact"
+              class="mt-6 inline-flex border border-kavora-gold/50 px-6 py-4 text-[9px] uppercase tracking-[0.25em] transition hover:bg-kavora-gold hover:text-kavora-green"
+            >
+              Contact Kavora
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex flex-col gap-5 pt-8 sm:flex-row sm:items-center sm:justify-between">
+
+          <p class="text-[9px] uppercase tracking-[0.2em] text-white/30">
+            © 2026 Kavora Luxury Travel & Concierge
+          </p>
+
+          <p class="text-[10px] text-white/35">
+            Designed and developed by
+            <span class="text-kavora-gold">
+              Synlotech Technologies
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+    --------------------------------------------------------- */
+
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+
+    });
+
+
+    /* ---------------------------------------------------------
+       SCROLL REVEALS
+    --------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('is-visible');
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* ---------------------------------------------------------
+       NAVBAR BACKGROUND
+    --------------------------------------------------------- */
+
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 50) {
+
+        navbar.classList.add('bg-kavora-green');
+
+        navbar.classList.remove('bg-kavora-green/85');
+
+      } else {
+
+        navbar.classList.remove('bg-kavora-green');
+
+        navbar.classList.add('bg-kavora-green/85');
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

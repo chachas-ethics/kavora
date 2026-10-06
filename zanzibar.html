@@ -1,0 +1,3032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zanzibar — Kavora Luxury Travel & Concierge</title>
+
+  <meta
+    name="description"
+    content="Discover Zanzibar with Kavora Luxury Travel & Concierge. Private beach escapes, Swahili culture, Indian Ocean experiences and carefully considered journeys designed around you."
+  >
+
+  <meta
+    name="keywords"
+    content="Zanzibar luxury travel, Zanzibar luxury safari, Tanzania luxury travel, private Zanzibar holidays, luxury travel Tanzania, Kavora"
+  >
+
+  <meta name="theme-color" content="#0B211A">
+
+  <!-- =========================================================
+       GOOGLE FONTS
+  ========================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =========================================================
+       TAILWIND CSS
+  ========================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          },
+
+          letterSpacing: {
+            'luxury': '0.18em',
+          },
+
+          boxShadow: {
+            luxury: '0 25px 80px rgba(11, 33, 26, 0.12)',
+          }
+
+        }
+      }
+    }
+  </script>
+
+  <!-- =========================================================
+       PAGE STYLES
+  ========================================================== -->
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #0B211A;
+      font-family: 'Manrope', sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    .hero-image {
+      animation: heroZoom 16s ease-out forwards;
+    }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1.06);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .line-grow {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s ease;
+    }
+
+    .line-grow.active {
+      transform: scaleX(1);
+    }
+
+    .destination-image {
+      transition:
+        transform 1s cubic-bezier(.2,.65,.2,1),
+        filter 0.7s ease;
+    }
+
+    .experience-card:hover .destination-image {
+      transform: scale(1.06);
+      filter: saturate(1.05);
+    }
+
+    .journey-image {
+      transition:
+        transform 1s cubic-bezier(.2,.65,.2,1);
+    }
+
+    .journey-card:hover .journey-image {
+      transform: scale(1.06);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.35s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .menu-line {
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    .menu-open .menu-line:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    .menu-open .menu-line:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .marquee-track {
+      animation: marquee 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-kavora-green/80 text-white backdrop-blur-xl"
+  >
+
+    <div
+      class="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-16"
+    >
+
+      <!-- Logo -->
+      <a
+        href="/"
+        class="group flex items-center gap-3"
+        aria-label="Kavora home"
+      >
+
+        <div
+          class="flex h-9 w-9 items-center justify-center border border-kavora-gold"
+        >
+
+          <span
+            class="font-luxury text-xl text-kavora-gold"
+          >
+            K
+          </span>
+
+        </div>
+
+        <div>
+
+          <p
+            class="font-luxury text-2xl leading-none tracking-wide"
+          >
+            Kavora
+          </p>
+
+          <p
+            class="mt-1 text-[7px] uppercase tracking-[0.3em] text-white/45"
+          >
+            Luxury Travel & Concierge
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- Desktop Navigation -->
+      <nav
+        class="hidden items-center gap-8 lg:flex"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="/"
+          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+        >
+          Home
+        </a>
+
+        <a
+          href="#introduction"
+          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+        >
+          Zanzibar
+        </a>
+
+        <a
+          href="#experiences"
+          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+        >
+          Experiences
+        </a>
+
+        <a
+          href="#stays"
+          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+        >
+          Stays
+        </a>
+
+        <a
+          href="#journeys"
+          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+        >
+          Journeys
+        </a>
+
+      </nav>
+
+
+      <!-- Desktop CTA -->
+      <a
+        href="#contact"
+        class="hidden border border-kavora-gold px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition duration-300 hover:bg-kavora-gold hover:text-kavora-green lg:inline-flex"
+      >
+        Begin Your Journey
+      </a>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        class="flex h-10 w-10 flex-col items-center justify-center gap-2 border border-white/20 lg:hidden"
+      >
+
+        <span class="menu-line h-px w-5 bg-white"></span>
+
+        <span class="menu-line h-px w-5 bg-white"></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu absolute left-0 right-0 top-full border-b border-white/10 bg-kavora-green px-6 py-8 shadow-2xl lg:hidden"
+    >
+
+      <nav class="flex flex-col">
+
+        <a
+          href="/"
+          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+        >
+          Home
+        </a>
+
+        <a
+          href="#introduction"
+          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+        >
+          Zanzibar
+        </a>
+
+        <a
+          href="#experiences"
+          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+        >
+          Experiences
+        </a>
+
+        <a
+          href="#stays"
+          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+        >
+          Where to Stay
+        </a>
+
+        <a
+          href="#journeys"
+          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+        >
+          Journeys
+        </a>
+
+        <a
+          href="#contact"
+          class="mt-6 inline-flex justify-center border border-kavora-gold px-5 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+        >
+          Begin Your Journey
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+
+  <main>
+
+
+    <!-- =========================================================
+         01 — HERO
+    ========================================================== -->
+
+    <section
+      id="hero"
+      class="relative min-h-screen overflow-hidden bg-kavora-green text-white"
+    >
+
+      <!-- Background -->
+      <div class="absolute inset-0">
+
+        <img
+          src="https://images.unsplash.com/photo-1568051243851-f9b136146e97?auto=format&fit=crop&w=2400&q=90"
+          alt="Zanzibar Indian Ocean"
+          class="hero-image h-full w-full object-cover"
+        >
+
+      </div>
+
+
+      <!-- Overlays -->
+      <div class="absolute inset-0 bg-kavora-green/30"></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/30 to-transparent"
+      ></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-kavora-green/60 via-kavora-green/10 to-transparent"
+      ></div>
+
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 flex min-h-screen items-end px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24"
+      >
+
+        <div class="mx-auto w-full max-w-7xl">
+
+          <div class="max-w-6xl">
+
+            <!-- Eyebrow -->
+            <div class="mb-7 flex items-center gap-4">
+
+              <span
+                class="line-grow h-px w-12 bg-kavora-gold"
+              ></span>
+
+              <p
+                class="text-[9px] font-semibold uppercase tracking-[0.35em] text-kavora-gold sm:text-xs"
+              >
+                Zanzibar — Tanzania
+              </p>
+
+            </div>
+
+
+            <!-- Heading -->
+            <h1
+              class="font-luxury text-6xl leading-[0.86] tracking-[-0.035em] sm:text-7xl md:text-8xl lg:text-[9rem]"
+            >
+
+              The Indian Ocean,
+
+              <span
+                class="block italic text-white/75"
+              >
+                at your own pace.
+              </span>
+
+            </h1>
+
+
+            <!-- Description -->
+            <p
+              class="mt-8 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8"
+            >
+              Beyond the beaches lies an island shaped by centuries of trade,
+              culture, architecture and ocean life. Kavora designs Zanzibar
+              stays around privacy, discovery and the simple luxury of having
+              nowhere else to be.
+            </p>
+
+
+            <!-- Buttons -->
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+
+              <a
+                href="#journeys"
+                class="group inline-flex items-center justify-center gap-4 bg-kavora-gold px-7 py-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-green transition duration-300 hover:bg-kavora-ivory"
+              >
+
+                Plan a Zanzibar Escape
+
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+
+              </a>
+
+
+              <a
+                href="#contact"
+                class="group inline-flex items-center justify-center gap-4 border border-white/30 bg-white/5 px-7 py-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-kavora-green"
+              >
+
+                Speak with a Travel Designer
+
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Scroll -->
+      <div
+        class="absolute bottom-8 right-6 hidden items-center gap-4 text-[8px] uppercase tracking-[0.3em] text-white/45 lg:flex"
+      >
+
+        <span>
+          Scroll to discover
+        </span>
+
+        <span class="h-px w-12 bg-white/30"></span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DESTINATION MARQUEE
+    ========================================================== -->
+
+    <div
+      class="overflow-hidden border-b border-kavora-green/10 bg-kavora-ivory py-5"
+    >
+
+      <div
+        class="marquee-track flex w-max items-center whitespace-nowrap"
+      >
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Zanzibar
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Indian Ocean
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Swahili Culture
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Slow Travel
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Private Journeys
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Zanzibar
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Indian Ocean
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Swahili Culture
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Slow Travel
+        </span>
+
+        <span class="text-kavora-gold">
+          ✦
+        </span>
+
+        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
+          Private Journeys
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         02 — INTRODUCTION
+    ========================================================== -->
+
+    <section
+      id="introduction"
+      class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div
+        class="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-20"
+      >
+
+        <!-- Left -->
+        <div class="reveal lg:col-span-4">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+            >
+              01 / The Island
+            </span>
+
+          </div>
+
+          <h2
+            class="mt-7 max-w-md font-luxury text-5xl leading-[0.93] tracking-tight sm:text-6xl"
+          >
+            An island with more than one rhythm.
+          </h2>
+
+        </div>
+
+
+        <!-- Right -->
+        <div class="reveal lg:col-span-7 lg:col-start-6">
+
+          <p
+            class="font-luxury text-3xl leading-[1.1] sm:text-4xl lg:text-5xl"
+          >
+            Zanzibar is not simply somewhere to finish a safari.
+            It is a destination in its own right.
+          </p>
+
+
+          <div
+            class="mt-10 grid gap-8 border-t border-kavora-green/15 pt-8 sm:grid-cols-2"
+          >
+
+            <p
+              class="text-sm leading-7 text-kavora-green/65"
+            >
+              The island moves between Indian Ocean horizons, centuries-old
+              architecture, Swahili culture, spice gardens and quiet stretches
+              of coast. Its history is visible in the streets of Stone Town,
+              while its natural character reveals itself offshore and along
+              the beaches.
+            </p>
+
+            <p
+              class="text-sm leading-7 text-kavora-green/65"
+            >
+              Kavora approaches Zanzibar as a slower chapter of the journey.
+              Carefully selected properties, private experiences and unhurried
+              days allow the island to become whatever you need it to be:
+              restorative, cultural, romantic or simply quiet.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         03 — THE ZANZIBAR EXPERIENCE
+    ========================================================== -->
+
+    <section
+      id="experiences"
+      class="bg-kavora-green px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Header -->
+        <div
+          class="reveal mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
+        >
+
+          <div>
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <span
+                class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+              >
+                02 / The Experience
+              </span>
+
+            </div>
+
+            <h2
+              class="mt-6 font-luxury text-5xl leading-none sm:text-6xl lg:text-7xl"
+            >
+              More than a beach.
+            </h2>
+
+          </div>
+
+          <p
+            class="max-w-md text-sm leading-7 text-white/50"
+          >
+            Zanzibar rewards travellers who leave room for discovery.
+            From historic streets to open water, the island offers a
+            different kind of luxury at every turn.
+          </p>
+
+        </div>
+
+
+        <!-- Experience Grid -->
+        <div
+          class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+        >
+
+
+          <!-- Card 01 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1400&q=85"
+              alt="Private Zanzibar beach escape"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/20"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                01
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Private Beach Escapes
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Secluded beaches, considered properties and days shaped
+                  entirely around your own pace.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Card 02 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1400&q=85"
+              alt="Stone Town Zanzibar"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/20"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                02
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Stone Town
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Architecture, markets, history and Swahili culture woven
+                  through one of East Africa's most distinctive old towns.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Card 03 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef8a8?auto=format&fit=crop&w=1400&q=85"
+              alt="Zanzibar spices"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/25"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                03
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Spice Experiences
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Discover the island's spice heritage through private visits
+                  and encounters with local growers.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Card 04 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
+              alt="Traditional dhow sailing"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/20"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                04
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Sailing & Dhow Experiences
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Private time on the Indian Ocean aboard traditional sailing
+                  vessels and carefully arranged ocean experiences.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Card 05 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=1400&q=85"
+              alt="Indian Ocean marine experience"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/20"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                05
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Marine Life
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Snorkelling, diving and carefully selected marine
+                  experiences for those who want to explore below the surface.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Card 06 -->
+          <article
+            class="experience-card group relative min-h-[430px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1519671282428-48f27b0b9b28?auto=format&fit=crop&w=1400&q=85"
+              alt="Luxury dining by the ocean"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/20"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/20 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-8"
+            >
+
+              <span
+                class="font-luxury text-3xl text-white/40"
+              >
+                06
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Island Dining
+                </h3>
+
+                <p
+                  class="mt-3 max-w-sm text-sm leading-6 text-white/60"
+                >
+                  Private dinners, beach dining and thoughtfully selected
+                  restaurants that make food part of the journey.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         04 — WHERE TO STAY
+    ========================================================== -->
+
+    <section
+      id="stays"
+      class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div
+        class="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-20"
+      >
+
+        <!-- Intro -->
+        <div class="reveal lg:col-span-4">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+            >
+              03 / Where to Stay
+            </span>
+
+          </div>
+
+          <h2
+            class="mt-7 font-luxury text-5xl leading-[0.93] sm:text-6xl"
+          >
+            The right place changes the experience.
+          </h2>
+
+          <p
+            class="mt-8 text-sm leading-7 text-kavora-green/60"
+          >
+            Zanzibar has very different personalities across the island.
+            Kavora selects properties according to the journey, rather than
+            simply presenting a list of hotels.
+          </p>
+
+        </div>
+
+
+        <!-- Areas -->
+        <div class="reveal lg:col-span-7 lg:col-start-6">
+
+
+          <!-- North -->
+          <div
+            class="group border-t border-kavora-green/15 py-8 transition duration-300 hover:border-kavora-gold"
+          >
+
+            <div
+              class="grid gap-5 sm:grid-cols-12 sm:items-start"
+            >
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold sm:col-span-2"
+              >
+                01
+              </span>
+
+              <div class="sm:col-span-7">
+
+                <h3 class="font-luxury text-3xl">
+                  North Zanzibar
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-kavora-green/60"
+                >
+                  Long stretches of coast, ocean access and properties suited
+                  to travellers looking for a classic Indian Ocean escape.
+                </p>
+
+              </div>
+
+              <span
+                class="hidden text-right text-[8px] uppercase tracking-[0.2em] text-kavora-green/40 sm:col-span-3 sm:block"
+              >
+                Ocean / Relaxation
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- East -->
+          <div
+            class="group border-t border-kavora-green/15 py-8 transition duration-300 hover:border-kavora-gold"
+          >
+
+            <div
+              class="grid gap-5 sm:grid-cols-12 sm:items-start"
+            >
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold sm:col-span-2"
+              >
+                02
+              </span>
+
+              <div class="sm:col-span-7">
+
+                <h3 class="font-luxury text-3xl">
+                  East Coast
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-kavora-green/60"
+                >
+                  A slower, more secluded side of the island with design-led
+                  properties, open horizons and a stronger sense of escape.
+                </p>
+
+              </div>
+
+              <span
+                class="hidden text-right text-[8px] uppercase tracking-[0.2em] text-kavora-green/40 sm:col-span-3 sm:block"
+              >
+                Seclusion / Design
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- South -->
+          <div
+            class="group border-t border-kavora-green/15 py-8 transition duration-300 hover:border-kavora-gold"
+          >
+
+            <div
+              class="grid gap-5 sm:grid-cols-12 sm:items-start"
+            >
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold sm:col-span-2"
+              >
+                03
+              </span>
+
+              <div class="sm:col-span-7">
+
+                <h3 class="font-luxury text-3xl">
+                  South Zanzibar
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-kavora-green/60"
+                >
+                  A quieter coastal setting with access to marine experiences,
+                  local encounters and a more understated atmosphere.
+                </p>
+
+              </div>
+
+              <span
+                class="hidden text-right text-[8px] uppercase tracking-[0.2em] text-kavora-green/40 sm:col-span-3 sm:block"
+              >
+                Marine / Quiet
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Stone Town -->
+          <div
+            class="border-y border-kavora-green/15 py-8 transition duration-300 hover:border-kavora-gold"
+          >
+
+            <div
+              class="grid gap-5 sm:grid-cols-12 sm:items-start"
+            >
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold sm:col-span-2"
+              >
+                04
+              </span>
+
+              <div class="sm:col-span-7">
+
+                <h3 class="font-luxury text-3xl">
+                  Stone Town
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-kavora-green/60"
+                >
+                  Historic architecture, narrow streets, cultural discovery
+                  and a more immersive introduction to the island.
+                </p>
+
+              </div>
+
+              <span
+                class="hidden text-right text-[8px] uppercase tracking-[0.2em] text-kavora-green/40 sm:col-span-3 sm:block"
+              >
+                Culture / History
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         05 — BEYOND THE BEACH
+    ========================================================== -->
+
+    <section
+      id="beyond-the-beach"
+      class="relative overflow-hidden bg-kavora-forest px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <!-- Decorative Circles -->
+      <div
+        class="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full border border-kavora-gold/10"
+      ></div>
+
+      <div
+        class="pointer-events-none absolute -right-20 top-40 h-[350px] w-[350px] rounded-full border border-kavora-gold/10"
+      ></div>
+
+
+      <div
+        class="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-24"
+      >
+
+        <!-- Intro -->
+        <div class="reveal lg:col-span-5">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+            >
+              04 / Beyond the Beach
+            </span>
+
+          </div>
+
+          <h2
+            class="mt-7 max-w-lg font-luxury text-5xl leading-[0.93] sm:text-6xl"
+          >
+            Leave room for the island.
+          </h2>
+
+          <p
+            class="mt-8 max-w-md text-sm leading-7 text-white/50"
+          >
+            Some of Zanzibar's most memorable moments happen away from the
+            shoreline. Experiences can be arranged privately and shaped
+            around your interests.
+          </p>
+
+        </div>
+
+
+        <!-- Experience List -->
+        <div class="reveal lg:col-span-6 lg:col-start-7">
+
+
+          <!-- 01 -->
+          <div class="border-t border-white/10 py-7">
+
+            <div class="flex gap-6">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                01
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Private Dhow Sailing
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-white/50"
+                >
+                  Take to the Indian Ocean aboard a traditional dhow for
+                  unhurried time on the water.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 02 -->
+          <div class="border-t border-white/10 py-7">
+
+            <div class="flex gap-6">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                02
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Stone Town Exploration
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-white/50"
+                >
+                  Discover the architecture, stories and cultural layers of
+                  the historic city with a knowledgeable local guide.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 03 -->
+          <div class="border-t border-white/10 py-7">
+
+            <div class="flex gap-6">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                03
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Spice Farm Visits
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-white/50"
+                >
+                  Explore the agricultural traditions that helped shape the
+                  island's identity.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 04 -->
+          <div class="border-t border-white/10 py-7">
+
+            <div class="flex gap-6">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                04
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Wellness & Restoration
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-white/50"
+                >
+                  Spa treatments, quiet mornings, private wellness sessions
+                  and time deliberately left unscheduled.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 05 -->
+          <div class="border-y border-white/10 py-7">
+
+            <div class="flex gap-6">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                05
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-3xl">
+                  Private Dining
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-white/50"
+                >
+                  From intimate beach dinners to carefully selected local
+                  restaurants, dining becomes part of the experience.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         06 — WHEN TO GO
+    ========================================================== -->
+
+    <section
+      id="when-to-go"
+      class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Header -->
+        <div
+          class="reveal mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
+        >
+
+          <div>
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <span
+                class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+              >
+                05 / When to Go
+              </span>
+
+            </div>
+
+            <h2
+              class="mt-7 max-w-4xl font-luxury text-5xl leading-none sm:text-6xl lg:text-7xl"
+            >
+              There is no single Zanzibar season.
+            </h2>
+
+          </div>
+
+          <p
+            class="max-w-md text-sm leading-7 text-kavora-green/60"
+          >
+            Timing depends on what you want from the island. Your Travel
+            Designer will consider weather patterns, ocean conditions and
+            the experiences you want to include.
+          </p>
+
+        </div>
+
+
+        <!-- Seasonal Rows -->
+        <div
+          class="border-t border-kavora-green/15"
+        >
+
+
+          <!-- June - October -->
+          <div
+            class="grid gap-6 border-b border-kavora-green/15 py-9 lg:grid-cols-12 lg:items-center"
+          >
+
+            <div class="lg:col-span-2">
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold"
+              >
+                Jun — Oct
+              </span>
+
+            </div>
+
+            <div class="lg:col-span-4">
+
+              <h3 class="font-luxury text-3xl">
+                Dry Season
+              </h3>
+
+            </div>
+
+            <p
+              class="text-sm leading-6 text-kavora-green/60 lg:col-span-5 lg:col-start-8"
+            >
+              Often favoured for beach escapes, outdoor exploration and
+              generally drier conditions.
+            </p>
+
+          </div>
+
+
+          <!-- November - December -->
+          <div
+            class="grid gap-6 border-b border-kavora-green/15 py-9 lg:grid-cols-12 lg:items-center"
+          >
+
+            <div class="lg:col-span-2">
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold"
+              >
+                Nov — Dec
+              </span>
+
+            </div>
+
+            <div class="lg:col-span-4">
+
+              <h3 class="font-luxury text-3xl">
+                Short Rains
+              </h3>
+
+            </div>
+
+            <p
+              class="text-sm leading-6 text-kavora-green/60 lg:col-span-5 lg:col-start-8"
+            >
+              A transitional period with changing conditions and renewed
+              landscapes.
+            </p>
+
+          </div>
+
+
+          <!-- January - March -->
+          <div
+            class="grid gap-6 border-b border-kavora-green/15 py-9 lg:grid-cols-12 lg:items-center"
+          >
+
+            <div class="lg:col-span-2">
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold"
+              >
+                Jan — Mar
+              </span>
+
+            </div>
+
+            <div class="lg:col-span-4">
+
+              <h3 class="font-luxury text-3xl">
+                Warm Ocean Months
+              </h3>
+
+            </div>
+
+            <p
+              class="text-sm leading-6 text-kavora-green/60 lg:col-span-5 lg:col-start-8"
+            >
+              Warm conditions and strong opportunities for ocean-focused
+              experiences, depending on local conditions.
+            </p>
+
+          </div>
+
+
+          <!-- April - May -->
+          <div
+            class="grid gap-6 border-b border-kavora-green/15 py-9 lg:grid-cols-12 lg:items-center"
+          >
+
+            <div class="lg:col-span-2">
+
+              <span
+                class="font-luxury text-2xl text-kavora-gold"
+              >
+                Apr — May
+              </span>
+
+            </div>
+
+            <div class="lg:col-span-4">
+
+              <h3 class="font-luxury text-3xl">
+                Long Rains
+              </h3>
+
+            </div>
+
+            <p
+              class="text-sm leading-6 text-kavora-green/60 lg:col-span-5 lg:col-start-8"
+            >
+              A quieter period with more variable rainfall and a different
+              rhythm across the island.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Note -->
+        <div
+          class="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+        >
+
+          <p
+            class="max-w-2xl text-xs leading-6 text-kavora-green/45"
+          >
+            Conditions vary across the island. Ocean activities, diving and
+            marine experiences should always be considered alongside current
+            local conditions.
+          </p>
+
+          <a
+            href="#contact"
+            class="group inline-flex shrink-0 items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-green"
+          >
+
+            Ask About Timing
+
+            <span
+              class="text-kavora-gold transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         07 — EXAMPLE JOURNEYS
+    ========================================================== -->
+
+    <section
+      id="journeys"
+      class="bg-kavora-green px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Header -->
+        <div
+          class="reveal mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
+        >
+
+          <div>
+
+            <div class="flex items-center gap-4">
+
+              <span class="h-px w-10 bg-kavora-gold"></span>
+
+              <span
+                class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+              >
+                06 / Example Journeys
+              </span>
+
+            </div>
+
+            <h2
+              class="mt-7 max-w-4xl font-luxury text-5xl leading-none sm:text-6xl lg:text-7xl"
+            >
+              Journeys shaped around you.
+            </h2>
+
+          </div>
+
+          <p
+            class="max-w-md text-sm leading-7 text-white/50"
+          >
+            These are starting points, not fixed packages. Every Kavora
+            journey is adjusted around your interests, preferred pace
+            and expectations.
+          </p>
+
+        </div>
+
+
+        <!-- Journey Grid -->
+        <div
+          class="grid gap-5 lg:grid-cols-3"
+        >
+
+
+          <!-- Journey 01 -->
+          <article
+            class="journey-card group relative min-h-[560px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=85"
+              alt="Zanzibar luxury beach escape"
+              class="journey-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/25"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/15 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-9"
+            >
+
+              <div class="flex items-center justify-between">
+
+                <span
+                  class="text-[8px] uppercase tracking-[0.3em] text-white/60"
+                >
+                  05 Nights
+                </span>
+
+                <span
+                  class="font-luxury text-2xl text-kavora-gold"
+                >
+                  01
+                </span>
+
+              </div>
+
+              <div>
+
+                <p
+                  class="mb-3 text-[8px] uppercase tracking-[0.25em] text-kavora-gold"
+                >
+                  Pure Restoration
+                </p>
+
+                <h3
+                  class="font-luxury text-4xl leading-none"
+                >
+                  Zanzibar Escape
+                </h3>
+
+                <p
+                  class="mt-5 text-sm leading-6 text-white/60"
+                >
+                  A slower island stay focused on privacy, ocean time,
+                  wellness and the luxury of having nowhere else to be.
+                </p>
+
+                <a
+                  href="#contact"
+                  class="group/link mt-7 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.2em]"
+                >
+
+                  Discuss This Journey
+
+                  <span
+                    class="transition-transform duration-300 group-hover/link:translate-x-1"
+                  >
+                    →
+                  </span>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Journey 02 -->
+          <article
+            class="journey-card group relative min-h-[560px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1400&q=85"
+              alt="Safari and Zanzibar journey"
+              class="journey-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/25"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/15 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-9"
+            >
+
+              <div class="flex items-center justify-between">
+
+                <span
+                  class="text-[8px] uppercase tracking-[0.3em] text-white/60"
+                >
+                  10–14 Nights
+                </span>
+
+                <span
+                  class="font-luxury text-2xl text-kavora-gold"
+                >
+                  02
+                </span>
+
+              </div>
+
+              <div>
+
+                <p
+                  class="mb-3 text-[8px] uppercase tracking-[0.25em] text-kavora-gold"
+                >
+                  Wilderness + Ocean
+                </p>
+
+                <h3
+                  class="font-luxury text-4xl leading-none"
+                >
+                  Zanzibar & Serengeti
+                </h3>
+
+                <p
+                  class="mt-5 text-sm leading-6 text-white/60"
+                >
+                  Begin in the wilderness before moving toward the Indian
+                  Ocean for a completely different kind of luxury.
+                </p>
+
+                <a
+                  href="#contact"
+                  class="group/link mt-7 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.2em]"
+                >
+
+                  Discuss This Journey
+
+                  <span
+                    class="transition-transform duration-300 group-hover/link:translate-x-1"
+                  >
+                    →
+                  </span>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Journey 03 -->
+          <article
+            class="journey-card group relative min-h-[560px] overflow-hidden"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1400&q=85"
+              alt="Luxury Tanzania journey"
+              class="journey-image absolute inset-0 h-full w-full object-cover"
+            >
+
+            <div class="absolute inset-0 bg-kavora-green/25"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/15 to-transparent"
+            ></div>
+
+            <div
+              class="relative flex h-full flex-col justify-between p-7 sm:p-9"
+            >
+
+              <div class="flex items-center justify-between">
+
+                <span
+                  class="text-[8px] uppercase tracking-[0.3em] text-white/60"
+                >
+                  12–16 Nights
+                </span>
+
+                <span
+                  class="font-luxury text-2xl text-kavora-gold"
+                >
+                  03
+                </span>
+
+              </div>
+
+              <div>
+
+                <p
+                  class="mb-3 text-[8px] uppercase tracking-[0.25em] text-kavora-gold"
+                >
+                  Tanzania In Depth
+                </p>
+
+                <h3
+                  class="font-luxury text-4xl leading-none"
+                >
+                  Tanzania in Depth
+                </h3>
+
+                <p
+                  class="mt-5 text-sm leading-6 text-white/60"
+                >
+                  A more expansive journey combining northern Tanzania's
+                  landscapes and wildlife with time on Zanzibar.
+                </p>
+
+                <a
+                  href="#contact"
+                  class="group/link mt-7 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.2em]"
+                >
+
+                  Discuss This Journey
+
+                  <span
+                    class="transition-transform duration-300 group-hover/link:translate-x-1"
+                  >
+                    →
+                  </span>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Journey CTA -->
+        <div
+          class="mt-12 flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center"
+        >
+
+          <p
+            class="max-w-xl text-sm leading-6 text-white/40"
+          >
+            Prefer something completely different? Tell us what you have
+            in mind and we will build from there.
+          </p>
+
+          <a
+            href="#contact"
+            class="group inline-flex items-center gap-4 border border-kavora-gold px-7 py-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold transition duration-300 hover:bg-kavora-gold hover:text-kavora-green"
+          >
+
+            Create My Journey
+
+            <span
+              class="transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         08 — KAVORA DIFFERENCE
+    ========================================================== -->
+
+    <section
+      id="kavora-difference"
+      class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div
+        class="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12 lg:gap-20"
+      >
+
+        <!-- Statement -->
+        <div class="reveal lg:col-span-6">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+            >
+              07 / The Kavora Difference
+            </span>
+
+          </div>
+
+          <h2
+            class="mt-7 font-luxury text-5xl leading-[0.93] sm:text-6xl lg:text-7xl"
+          >
+
+            After days in the wilderness,
+
+            <span class="italic text-kavora-green/55">
+              Zanzibar offers a different kind of luxury:
+            </span>
+
+            <span class="mt-3 block">
+              time.
+            </span>
+
+          </h2>
+
+        </div>
+
+
+        <!-- Principles -->
+        <div class="reveal lg:col-span-5 lg:col-start-8">
+
+          <p
+            class="mb-10 text-sm leading-7 text-kavora-green/60"
+          >
+            We do not believe in filling every day. We design the conditions
+            for a journey to feel natural, personal and unhurried.
+          </p>
+
+
+          <!-- Principle 01 -->
+          <div class="border-t border-kavora-green/15 py-7">
+
+            <div class="flex gap-5">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                01
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-2xl">
+                  Personal Planning
+                </h3>
+
+                <p
+                  class="mt-2 text-sm leading-6 text-kavora-green/55"
+                >
+                  Your preferences, pace and priorities shape the journey
+                  from the beginning.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Principle 02 -->
+          <div class="border-t border-kavora-green/15 py-7">
+
+            <div class="flex gap-5">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                02
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-2xl">
+                  Carefully Selected Properties
+                </h3>
+
+                <p
+                  class="mt-2 text-sm leading-6 text-kavora-green/55"
+                >
+                  We consider atmosphere, privacy, location and service
+                  before recommending where you stay.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Principle 03 -->
+          <div class="border-t border-kavora-green/15 py-7">
+
+            <div class="flex gap-5">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                03
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-2xl">
+                  Local Knowledge
+                </h3>
+
+                <p
+                  class="mt-2 text-sm leading-6 text-kavora-green/55"
+                >
+                  The best experiences often come from knowing when to look,
+                  where to go and who to meet.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Principle 04 -->
+          <div class="border-y border-kavora-green/15 py-7">
+
+            <div class="flex gap-5">
+
+              <span
+                class="font-luxury text-xl text-kavora-gold"
+              >
+                04
+              </span>
+
+              <div>
+
+                <h3 class="font-luxury text-2xl">
+                  Concierge Support
+                </h3>
+
+                <p
+                  class="mt-2 text-sm leading-6 text-kavora-green/55"
+                >
+                  From planning to the journey itself, support remains
+                  available when you need it.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         09 — PRACTICAL INFORMATION
+    ========================================================== -->
+
+    <section
+      id="practical"
+      class="bg-kavora-forest px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16 lg:py-40"
+    >
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Header -->
+        <div class="reveal mb-14">
+
+          <div class="flex items-center gap-4">
+
+            <span class="h-px w-10 bg-kavora-gold"></span>
+
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
+            >
+              08 / Practical Information
+            </span>
+
+          </div>
+
+          <h2
+            class="mt-7 max-w-3xl font-luxury text-5xl leading-none sm:text-6xl"
+          >
+            Everything considered before you arrive.
+          </h2>
+
+        </div>
+
+
+        <!-- Information Grid -->
+        <div
+          class="grid border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3"
+        >
+
+
+          <!-- 01 -->
+          <div
+            class="border-b border-white/10 p-7 sm:border-r lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              01
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              Getting There
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              We consider your arrival point, onward connections and the
+              most comfortable way to move between Tanzania's destinations.
+            </p>
+
+          </div>
+
+
+          <!-- 02 -->
+          <div
+            class="border-b border-white/10 p-7 lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              02
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              Recommended Length
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              Zanzibar can work as a short restorative stay or as a longer
+              chapter within a broader Tanzania journey.
+            </p>
+
+          </div>
+
+
+          <!-- 03 -->
+          <div
+            class="border-b border-white/10 p-7 sm:border-r lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              03
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              What to Pack
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              Lightweight clothing, beach essentials, comfortable walking
+              shoes and appropriate attire for cultural visits.
+            </p>
+
+          </div>
+
+
+          <!-- 04 -->
+          <div
+            class="border-b border-white/10 p-7 lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              04
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              Connectivity
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              Connectivity varies by location and property. We consider
+              your need for privacy, communication and digital access
+              when planning.
+            </p>
+
+          </div>
+
+
+          <!-- 05 -->
+          <div
+            class="border-b border-white/10 p-7 sm:border-r lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              05
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              Family Travel
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              Properties and experiences can be considered according to
+              family requirements, ages and preferred pace.
+            </p>
+
+          </div>
+
+
+          <!-- 06 -->
+          <div
+            class="border-b border-white/10 p-7 lg:p-9"
+          >
+
+            <span class="font-luxury text-xl text-kavora-gold">
+              06
+            </span>
+
+            <h3 class="mt-6 font-luxury text-2xl">
+              Photography
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-6 text-white/50"
+            >
+              From architecture and culture to ocean landscapes, Zanzibar
+              offers a very different photographic rhythm from safari.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div
+          class="mt-10 flex flex-col gap-5 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between"
+        >
+
+          <p
+            class="max-w-2xl text-xs leading-6 text-white/40"
+          >
+            Practical recommendations are tailored to the season, property,
+            activities and individual circumstances of each journey.
+          </p>
+
+          <a
+            href="#contact"
+            class="group inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-gold"
+          >
+
+            Ask Our Travel Designers
+
+            <span
+              class="transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         10 — FINAL CTA
+    ========================================================== -->
+
+    <section
+      id="contact"
+      class="relative min-h-[80vh] overflow-hidden bg-kavora-green text-white"
+    >
+
+      <!-- Background -->
+      <div class="absolute inset-0">
+
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=90"
+          alt="Indian Ocean landscape"
+          class="h-full w-full object-cover"
+        >
+
+      </div>
+
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-kavora-green/60"></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-kavora-green via-kavora-green/30 to-kavora-green/20"
+      ></div>
+
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex min-h-[80vh] items-center justify-center px-6 py-24 text-center sm:px-10"
+      >
+
+        <div class="reveal max-w-4xl">
+
+          <div class="flex justify-center">
+
+            <span
+              class="h-px w-12 bg-kavora-gold"
+            ></span>
+
+          </div>
+
+          <p
+            class="mt-7 text-[9px] font-semibold uppercase tracking-[0.35em] text-kavora-gold"
+          >
+            Your Zanzibar
+          </p>
+
+          <h2
+            class="mt-6 font-luxury text-6xl leading-[0.88] tracking-tight sm:text-7xl lg:text-8xl"
+          >
+
+            Stay longer.
+
+            <span
+              class="block italic text-white/70"
+            >
+              Move slower.
+            </span>
+
+          </h2>
+
+          <p
+            class="mx-auto mt-8 max-w-2xl text-sm leading-7 text-white/65 sm:text-base sm:leading-8"
+          >
+            Tell us how you want to experience Zanzibar, and we'll shape
+            the journey around you — from the property you stay in to the
+            moments you choose to leave completely unscheduled.
+          </p>
+
+          <div class="mt-10 flex justify-center">
+
+            <a
+              href="mailto:info@kavora.com"
+              class="group inline-flex items-center gap-5 bg-kavora-gold px-8 py-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-kavora-green transition duration-300 hover:bg-kavora-ivory"
+            >
+
+              Design My Zanzibar Journey
+
+              <span
+                class="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         11 — DESTINATION NAVIGATION
+    ========================================================== -->
+
+    <section
+      class="border-t border-kavora-green/10 bg-kavora-ivory px-6 py-10 sm:px-10 lg:px-16"
+    >
+
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+
+        <a
+          href="/destinations/serengeti"
+          class="group inline-flex items-center gap-4 text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-green"
+        >
+
+          <span
+            class="transition-transform duration-300 group-hover:-translate-x-1"
+          >
+            ←
+          </span>
+
+          Previous Destination — Serengeti
+
+        </a>
+
+
+        <a
+          href="/destinations/tanzania"
+          class="group inline-flex items-center gap-4 text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-green"
+        >
+
+          Next Destination — Tanzania
+
+          <span
+            class="transition-transform duration-300 group-hover:translate-x-1"
+          >
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         12 — FOOTER
+    ========================================================== -->
+
+    <footer
+      class="relative overflow-hidden bg-kavora-green px-6 pb-8 pt-20 text-white sm:px-10 lg:px-16"
+    >
+
+      <!-- Decorative Horizon -->
+      <div
+        class="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-kavora-gold/50 to-transparent"
+      ></div>
+
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Main Footer -->
+        <div
+          class="grid gap-14 border-b border-white/10 pb-16 lg:grid-cols-12 lg:gap-10"
+        >
+
+
+          <!-- Brand -->
+          <div class="lg:col-span-5">
+
+            <div class="flex items-center gap-3">
+
+              <div
+                class="flex h-10 w-10 items-center justify-center border border-kavora-gold"
+              >
+
+                <span
+                  class="font-luxury text-xl text-kavora-gold"
+                >
+                  K
+                </span>
+
+              </div>
+
+              <div>
+
+                <p
+                  class="font-luxury text-3xl leading-none"
+                >
+                  Kavora
+                </p>
+
+                <p
+                  class="mt-1 text-[7px] uppercase tracking-[0.3em] text-white/40"
+                >
+                  Luxury Travel & Concierge
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <p
+              class="mt-8 max-w-md font-luxury text-2xl leading-tight text-white/70"
+            >
+              Journeys shaped around how you want to experience Africa.
+            </p>
+
+
+            <p
+              class="mt-6 max-w-sm text-xs leading-6 text-white/35"
+            >
+              Private journeys, carefully selected stays and considered
+              experiences across Tanzania and beyond.
+            </p>
+
+          </div>
+
+
+          <!-- Explore -->
+          <div class="lg:col-span-2 lg:col-start-7">
+
+            <p
+              class="text-[8px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              Explore
+            </p>
+
+            <nav class="mt-6 flex flex-col gap-4">
+
+              <a
+                href="/"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Home
+              </a>
+
+              <a
+                href="/destinations/serengeti"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Serengeti
+              </a>
+
+              <a
+                href="/destinations/zanzibar"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Zanzibar
+              </a>
+
+              <a
+                href="/destinations/tanzania"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Tanzania
+              </a>
+
+              <a
+                href="/journeys"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Private Journeys
+              </a>
+
+            </nav>
+
+          </div>
+
+
+          <!-- Company -->
+          <div class="lg:col-span-2">
+
+            <p
+              class="text-[8px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              Kavora
+            </p>
+
+            <nav class="mt-6 flex flex-col gap-4">
+
+              <a
+                href="/about"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Our Story
+              </a>
+
+              <a
+                href="/the-kavora-way"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                The Kavora Way
+              </a>
+
+              <a
+                href="/concierge"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Concierge
+              </a>
+
+              <a
+                href="/journal"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Journal
+              </a>
+
+              <a
+                href="/contact"
+                class="text-sm text-white/55 transition hover:text-white"
+              >
+                Contact
+              </a>
+
+            </nav>
+
+          </div>
+
+
+          <!-- Contact -->
+          <div class="lg:col-span-3">
+
+            <p
+              class="text-[8px] font-semibold uppercase tracking-[0.25em] text-kavora-gold"
+            >
+              Begin a Conversation
+            </p>
+
+            <p
+              class="mt-6 text-sm leading-6 text-white/50"
+            >
+              Tell us where you want to go, how you want to travel and
+              what you want the journey to feel like.
+            </p>
+
+            <a
+              href="mailto:info@kavora.com"
+              class="mt-6 inline-flex text-sm text-white transition hover:text-kavora-gold"
+            >
+              info@kavora.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div
+          class="flex flex-col gap-5 py-7 sm:flex-row sm:items-center sm:justify-between"
+        >
+
+          <p
+            class="text-[8px] uppercase tracking-[0.18em] text-white/30"
+          >
+            © 2026 Kavora Luxury Travel & Concierge
+          </p>
+
+
+          <div
+            class="flex flex-wrap gap-6 text-[8px] uppercase tracking-[0.18em] text-white/30"
+          >
+
+            <a
+              href="/privacy"
+              class="transition hover:text-white"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="/terms"
+              class="transition hover:text-white"
+            >
+              Terms
+            </a>
+
+          </div>
+
+
+          <p
+            class="text-[8px] uppercase tracking-[0.18em] text-white/30"
+          >
+            Designed and developed by Synlotech Technologies
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================== */
+
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+
+      const isOpen = mobileMenu.classList.toggle('open');
+
+      menuButton.classList.toggle('menu-open', isOpen);
+
+      menuButton.setAttribute(
+        'aria-expanded',
+        isOpen ? 'true' : 'false'
+      );
+
+    });
+
+
+    /* Close mobile menu after navigation */
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        mobileMenu.classList.remove('open');
+
+        menuButton.classList.remove('menu-open');
+
+        menuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      });
+
+    });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================== */
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('active');
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* =========================================================
+       LINE ANIMATION
+    ========================================================== */
+
+    const lineElements = document.querySelectorAll('.line-grow');
+
+    const lineObserver = new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('active');
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+
+    lineElements.forEach(element => {
+      lineObserver.observe(element);
+    });
+
+
+    /* =========================================================
+       HEADER BACKGROUND ON SCROLL
+    ========================================================== */
+
+    const header = document.getElementById('site-header');
+
+    window.addEventListener(
+      'scroll',
+      () => {
+
+        if (window.scrollY > 40) {
+
+          header.classList.add(
+            'bg-kavora-green/95',
+            'shadow-lg'
+          );
+
+        } else {
+
+          header.classList.remove(
+            'bg-kavora-green/95',
+            'shadow-lg'
+          );
+
+        }
+
+      },
+      {
+        passive: true
+      }
+    );
+
+  </script>
+
+
+</body>
+</html>
