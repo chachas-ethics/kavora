@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Zanzibar — Kavora Luxury Travel & Concierge</title>
+  <title>Zanzibar | Kavora Luxury Travel & Concierge</title>
 
   <meta
     name="description"
@@ -237,184 +237,197 @@
 
 <body>
 
-  <!-- =========================================================
-       NAVIGATION
-  ========================================================== -->
-
-  <header
+   <header
     id="site-header"
-    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-kavora-green/80 text-white backdrop-blur-xl"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
   >
 
-    <div
-      class="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-16"
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between px-6 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
     >
 
       <!-- Logo -->
       <a
-        href="/"
-        class="group flex items-center gap-3"
-        aria-label="Kavora home"
+        href="#"
+        class="group relative z-10 flex items-center"
+        aria-label="Kavora Africa Home"
       >
-
-        <div
-          class="flex h-9 w-9 items-center justify-center border border-kavora-gold"
+        <span
+          class="font-luxury text-3xl font-semibold tracking-[0.08em] text-kavora-gold transition-colors duration-500"
         >
-
-          <span
-            class="font-luxury text-xl text-kavora-gold"
-          >
-            K
-          </span>
-
-        </div>
-
-        <div>
-
-          <p
-            class="font-luxury text-2xl leading-none tracking-wide"
-          >
-            Kavora
-          </p>
-
-          <p
-            class="mt-1 text-[7px] uppercase tracking-[0.3em] text-white/45"
-          >
-            Luxury Travel & Concierge
-          </p>
-
-        </div>
-
+          KAVORA
+        </span>
       </a>
 
 
       <!-- Desktop Navigation -->
-      <nav
-        class="hidden items-center gap-8 lg:flex"
-        aria-label="Main navigation"
-      >
+      <div class="hidden items-center gap-8 lg:flex">
 
         <a
-          href="/"
-          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+          href="#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
         >
-          Home
-        </a>
-
-        <a
-          href="#introduction"
-          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
-        >
-          Zanzibar
-        </a>
-
-        <a
-          href="#experiences"
-          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
-        >
-          Experiences
-        </a>
-
-        <a
-          href="#stays"
-          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
-        >
-          Stays
+          Destinations
         </a>
 
         <a
           href="#journeys"
-          class="nav-link text-[10px] uppercase tracking-[0.2em] text-white/70 transition hover:text-white"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
         >
           Journeys
         </a>
 
-      </nav>
-
-
-      <!-- Desktop CTA -->
-      <a
-        href="#contact"
-        class="hidden border border-kavora-gold px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition duration-300 hover:bg-kavora-gold hover:text-kavora-green lg:inline-flex"
-      >
-        Begin Your Journey
-      </a>
-
-
-      <!-- Mobile Menu Button -->
-      <button
-        id="menu-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        class="flex h-10 w-10 flex-col items-center justify-center gap-2 border border-white/20 lg:hidden"
-      >
-
-        <span class="menu-line h-px w-5 bg-white"></span>
-
-        <span class="menu-line h-px w-5 bg-white"></span>
-
-      </button>
-
-    </div>
-
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobile-menu"
-      class="mobile-menu absolute left-0 right-0 top-full border-b border-white/10 bg-kavora-green px-6 py-8 shadow-2xl lg:hidden"
-    >
-
-      <nav class="flex flex-col">
-
-        <a
-          href="/"
-          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+         <a
+          href="#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
         >
-          Home
+          About
         </a>
 
         <a
-          href="#introduction"
-          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
+          href="#journal"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
         >
-          Zanzibar
-        </a>
-
-        <a
-          href="#experiences"
-          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
-        >
-          Experiences
-        </a>
-
-        <a
-          href="#stays"
-          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
-        >
-          Where to Stay
-        </a>
-
-        <a
-          href="#journeys"
-          class="border-b border-white/10 py-5 text-sm uppercase tracking-[0.2em] text-white/80"
-        >
-          Journeys
+          Journal
         </a>
 
         <a
           href="#contact"
-          class="mt-6 inline-flex justify-center border border-kavora-gold px-5 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
         >
-          Begin Your Journey
+          Contact
         </a>
 
-      </nav>
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+          href="#contact"
+          class="group relative overflow-hidden border border-white/40 px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design Your Journey
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Destinations
+          </a>
+
+          <a
+            href="#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="#concierge"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Concierge
+          </a>
+
+          <a
+            href="#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            About
+          </a>
+
+          <a
+            href="#journal"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Journal
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="mt-auto">
+
+          <p class="mb-4 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
+
+          <p class="max-w-xs font-luxury text-xl leading-relaxed text-white/70">
+            Private journeys, exceptional stays and seamless experiences across Africa.
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
   </header>
-
 
   <!-- =========================================================
        MAIN
@@ -436,7 +449,7 @@
       <div class="absolute inset-0">
 
         <img
-          src="https://images.unsplash.com/photo-1568051243851-f9b136146e97?auto=format&fit=crop&w=2400&q=90"
+          src="https://theeastafricantraveller.com/wp-content/uploads/2023/04/Destination-Zanzibar.jpg"
           alt="Zanzibar Indian Ocean"
           class="hero-image h-full w-full object-cover"
         >
@@ -468,14 +481,10 @@
             <!-- Eyebrow -->
             <div class="mb-7 flex items-center gap-4">
 
-              <span
-                class="line-grow h-px w-12 bg-kavora-gold"
-              ></span>
-
-              <p
+             <p
                 class="text-[9px] font-semibold uppercase tracking-[0.35em] text-kavora-gold sm:text-xs"
               >
-                Zanzibar — Tanzania
+                Zanzibar
               </p>
 
             </div>
@@ -489,7 +498,7 @@
               The Indian Ocean,
 
               <span
-                class="block italic text-white/75"
+                class="block italic text-kavora-gold"
               >
                 at your own pace.
               </span>
@@ -513,7 +522,7 @@
 
               <a
                 href="#journeys"
-                class="group inline-flex items-center justify-center gap-4 bg-kavora-gold px-7 py-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-kavora-green transition duration-300 hover:bg-kavora-ivory"
+                class="group inline-flex gap-4 py-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold transition duration-300 hover:bg-kavora-ivory"
               >
 
                 Plan a Zanzibar Escape
@@ -525,23 +534,6 @@
                 </span>
 
               </a>
-
-
-              <a
-                href="#contact"
-                class="group inline-flex items-center justify-center gap-4 border border-white/30 bg-white/5 px-7 py-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-kavora-green"
-              >
-
-                Speak with a Travel Designer
-
-                <span
-                  class="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  →
-                </span>
-
-              </a>
-
             </div>
 
           </div>
@@ -549,115 +541,7 @@
         </div>
 
       </div>
-
-
-      <!-- Scroll -->
-      <div
-        class="absolute bottom-8 right-6 hidden items-center gap-4 text-[8px] uppercase tracking-[0.3em] text-white/45 lg:flex"
-      >
-
-        <span>
-          Scroll to discover
-        </span>
-
-        <span class="h-px w-12 bg-white/30"></span>
-
-      </div>
-
     </section>
-
-
-    <!-- =========================================================
-         DESTINATION MARQUEE
-    ========================================================== -->
-
-    <div
-      class="overflow-hidden border-b border-kavora-green/10 bg-kavora-ivory py-5"
-    >
-
-      <div
-        class="marquee-track flex w-max items-center whitespace-nowrap"
-      >
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Zanzibar
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Indian Ocean
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Swahili Culture
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Slow Travel
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Private Journeys
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Zanzibar
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Indian Ocean
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Swahili Culture
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Slow Travel
-        </span>
-
-        <span class="text-kavora-gold">
-          ✦
-        </span>
-
-        <span class="mx-6 font-luxury text-xl text-kavora-green/40">
-          Private Journeys
-        </span>
-
-      </div>
-
-    </div>
 
 
     <!-- =========================================================
@@ -678,12 +562,10 @@
 
           <div class="flex items-center gap-4">
 
-            <span class="h-px w-10 bg-kavora-gold"></span>
-
             <span
               class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
             >
-              01 / The Island
+            The Island
             </span>
 
           </div>
@@ -760,12 +642,10 @@
 
             <div class="flex items-center gap-4">
 
-              <span class="h-px w-10 bg-kavora-gold"></span>
-
               <span
                 class="text-[9px] font-semibold uppercase tracking-[0.3em] text-kavora-gold"
               >
-                02 / The Experience
+              The Experience
               </span>
 
             </div>
@@ -801,7 +681,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1400&q=85"
+              src="https://images.trvl-media.com/lodging/121000000/120310000/120302000/120301993/4189b0ba.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
               alt="Private Zanzibar beach escape"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -817,14 +697,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-xs text-kavora-gold"
               >
                 01
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Private Beach Escapes
                 </h3>
 
@@ -848,7 +728,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1400&q=85"
+              src="https://images.locationscout.net/2024/04/the-old-fort-stone-town-zanzibar-tanzania-avdj.webp?h=1400&q=80"
               alt="Stone Town Zanzibar"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -864,14 +744,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-xs text-kavora-gold"
               >
                 02
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Stone Town
                 </h3>
 
@@ -895,7 +775,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef8a8?auto=format&fit=crop&w=1400&q=85"
+              src="https://haber-apartments.com/wp-content/uploads/2026/01/R-53.jpg"
               alt="Zanzibar spices"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -911,14 +791,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-kavora-gold text-xs"
               >
                 03
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Spice Experiences
                 </h3>
 
@@ -942,7 +822,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/70/38/f5.jpg"
               alt="Traditional dhow sailing"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -958,14 +838,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-xs text-kavora-gold"
               >
                 04
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Sailing & Dhow Experiences
                 </h3>
 
@@ -989,7 +869,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=1400&q=85"
+              src="https://zanzibar-ecotourism.org/wp-content/uploads/2019/04/greenturtle.jpg"
               alt="Indian Ocean marine experience"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -1005,14 +885,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-xs text-kavora-gold"
               >
                 05
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Marine Life
                 </h3>
 
@@ -1036,7 +916,7 @@
           >
 
             <img
-              src="https://images.unsplash.com/photo-1519671282428-48f27b0b9b28?auto=format&fit=crop&w=1400&q=85"
+              src="https://www.neptunehotels.com/wp-content/uploads/2025/11/Neptune-Pwani-Zanzibar_Dining_Private-Services.jpg"
               alt="Luxury dining by the ocean"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
@@ -1052,14 +932,14 @@
             >
 
               <span
-                class="font-luxury text-3xl text-white/40"
+                class="text-xs text-kavora-gold"
               >
                 06
               </span>
 
               <div>
 
-                <h3 class="font-luxury text-3xl">
+                <h3 class="font-luxury text-kavora-gold text-3xl">
                   Island Dining
                 </h3>
 
@@ -2884,47 +2764,117 @@
        JAVASCRIPT
   ========================================================== -->
 
-  <script>
+   <script>
 
-    /* =========================================================
-       MOBILE MENU
-    ========================================================== */
-
-    const menuButton = document.getElementById('menu-button');
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    menuButton.addEventListener('click', () => {
+    let menuOpen = false;
 
-      const isOpen = mobileMenu.classList.toggle('open');
 
-      menuButton.classList.toggle('menu-open', isOpen);
+    /* Navbar scroll state */
 
-      menuButton.setAttribute(
-        'aria-expanded',
-        isOpen ? 'true' : 'false'
-      );
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 40) {
+
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
 
     });
 
 
-    /* Close mobile menu after navigation */
+    /* Mobile menu */
 
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
 
       link.addEventListener('click', () => {
 
-        mobileMenu.classList.remove('open');
-
-        menuButton.classList.remove('menu-open');
-
-        menuButton.setAttribute(
-          'aria-expanded',
-          'false'
-        );
+        if (menuOpen) {
+          toggleMenu();
+        }
 
       });
 
     });
+
+    
 
 
     /* =========================================================
@@ -2993,37 +2943,7 @@
     });
 
 
-    /* =========================================================
-       HEADER BACKGROUND ON SCROLL
-    ========================================================== */
-
-    const header = document.getElementById('site-header');
-
-    window.addEventListener(
-      'scroll',
-      () => {
-
-        if (window.scrollY > 40) {
-
-          header.classList.add(
-            'bg-kavora-green/95',
-            'shadow-lg'
-          );
-
-        } else {
-
-          header.classList.remove(
-            'bg-kavora-green/95',
-            'shadow-lg'
-          );
-
-        }
-
-      },
-      {
-        passive: true
-      }
-    );
+   
 
   </script>
 
