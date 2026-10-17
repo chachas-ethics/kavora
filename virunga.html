@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D23">
+
+  <title>Kavora Journal | Luxury Travel & Concierge</title>
+
+  <meta name="description" content="Discover exceptional destinations, luxury stays, safari experiences and thoughtful travel guides with Kavora Journal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            editorial: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: "Manrope", sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #102D23;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #C8A96B;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .article-image {
+      overflow: hidden;
+      background: #E8E4D9;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .article-card:hover .article-image img {
+      transform: scale(1.055);
+    }
+
+    .article-card {
+      animation: appear .45s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .category-button {
+      white-space: nowrap;
+      transition: all .25s ease;
+    }
+
+    .category-button.active {
+      color: #F7F5EF;
+      background: #102D23;
+      border-color: #102D23;
+    }
+
+    .search-field:focus {
+      outline: none;
+      border-color: #C8A96B;
+      box-shadow: 0 0 0 3px rgb(200 169 107 / 12%);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: #C8A96B;
+      width: 48px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-kavora-ivory text-kavora-green antialiased">
+
+  <!-- TOP PREMIUM NAVIGATION BAR -->
+  <header class="border-b border-kavora-line bg-kavora-ivory/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-[1440px] px-6 h-20 flex items-center justify-between lg:px-14">
+      <a href="#" class="relative back-link text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-muted flex items-center gap-2">
+        ← Back to Journal
+      </a>
+      <div class="font-editorial text-2xl tracking-[0.1em] uppercase font-medium">
+        Kavora<span class="text-kavora-gold">.</span>
+      </div>
+      <div class="w-20"></div> <!-- Visual Balance Spacer -->
+    </div>
+  </header>
+
+  <main>
+
+    <!-- EDITORIAL HERO / COVER BLOCK -->
+<section class="mx-auto max-w-[1440px] px-6 pt-12 lg:px-14 lg:pt-20">
+  <div class="mx-auto max-w-4xl text-center mb-12 lg:mb-16">
+    <div class="mb-4 flex items-center justify-center gap-3">
+      <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
+        Odysseys
+      </span>
+      <span class="w-1.5 h-1.5 rounded-full bg-kavora-gold/40"></span>
+      <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-muted">
+        Story 01
+      </span>
+    </div>
+    
+    <h1 class="font-editorial text-5xl leading-[1.1] tracking-[-0.02em] sm:text-6xl lg:text-7xl font-light">
+      Mists of the Virungas: Private Primatologist <br class="hidden sm:inline">
+      <span class="italic text-kavora-gold font-light">Deep-Forest Treks</span>
+    </h1>
+    
+    <p class="mt-6 mx-auto max-w-2xl font-sans text-sm leading-7 text-kavora-muted font-light sm:text-base sm:leading-8">
+      Bypass standard tourist trails with exclusive chartered helicopter transfers into isolated volcanic valleys. Accompany head field researchers into tightly restricted habitats for an intimate look at great ape conservation.
+    </p>
+  </div>
+
+  <!-- MULTI-IMAGE GALLERY SYSTEM -->
+  <!-- Becomes horizontal snap-scroll layout on mobile, clean side-by-side grid starting at md screens -->
+  <div class="flex w-full gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 md:gap-6">
+    
+    <!-- PICTURE 1: Landscape Panorama (Left) -->
+    <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start">
+      <img 
+        src=" https://www.exploretanzaniatours.com/wp-content/uploads/2023/08/site_0063_0001-750-750-20150413150423-2.jpg" 
+       
+        alt="Lush mist-covered volcanic rainforest mountains in East Africa" 
+        class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- PICTURE 2: The Emotional Core Ranger Connection (Center Hero) -->
+    <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start md:-translate-y-4 transition-transform duration-500">
+      <img 
+        src="https://c.files.bbci.co.uk/20A4/production/_117365380_virunga.jpg" 
+        alt="Ranger and orphaned mountain gorilla close connection" 
+        class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- PICTURE 3: Research Tracking Perspective (Right) -->
+    <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start">
+      <img 
+        src="https://virungaparkcongo.com/wp-content/uploads/2019/09/Vitunga-750x450.jpg" 
+        alt="Deep forest research tracking canopy expedition" 
+        class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- CONTENT LAYOUT GRID -->
+    <section class="mx-auto max-w-[1440px] px-6 py-16 lg:px-14 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- LEFT ASIDE: CONCIERGE INSIGHTS & META -->
+      <aside class="lg:col-span-4 lg:sticky lg:top-32 h-fit border-l-2 border-kavora-gold/30 pl-6 space-y-8">
+        <div>
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold mb-2">
+            The Experience
+          </h4>
+          <p class="font-editorial text-2xl font-light text-kavora-green italic">
+            "An intimate look behind active scientific preservation."
+          </p>
+        </div>
+
+        <div class="h-px bg-kavora-line w-full"></div>
+
+        <div class="space-y-4">
+          <div>
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">Location</span>
+            <span class="text-sm font-medium">Virunga Massif, East Africa</span>
+          </div>
+          <div>
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">Best Time to Journey</span>
+            <span class="text-sm font-medium">June to September / December to February</span>
+          </div>
+          <div>
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">Access Level</span>
+            <span class="text-sm font-medium text-kavora-gold font-semibold uppercase tracking-wider text-[11px]">Strictly Restricted / Private Charter</span>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button class="w-full bg-kavora-green text-kavora-ivory hover:bg-kavora-forest transition-colors duration-300 px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] shadow-md">
+            Inquire Privately
+          </button>
+        </div>
+      </aside>
+
+      <!-- RIGHT BODY: THE NARRATIVE CONTENT -->
+      <article class="lg:col-span-8 mx-auto max-w-2xl prose font-sans font-light text-sm sm:text-base text-kavora-green/90 space-y-8 leading-7 sm:leading-8">
+        
+        <p class="font-editorial text-2xl sm:text-3xl leading-relaxed text-kavora-green font-light first-letter:text-7xl first-letter:font-editorial first-letter:float-left first-letter:mr-3 first-letter:text-kavora-gold first-letter:font-light first-letter:leading-none">
+          To step into the Virunga Massif is to enter a kingdom where the modern world completely dissolves into the cloud forest. Shrouded in perpetual primeval fog, these ancient volcanic slopes serve as the last sanctuary for the endangered mountain gorilla. For the discerning elite traveler, Kavora opens doors to active research projects typically closed off to standard eco-tourism tracks.
+        </p>
+
+        <h3 class="font-editorial text-3xl sm:text-4xl text-kavora-green font-light pt-4">
+          Airborne Descents Into <span class="italic text-kavora-gold">The Isolated Wild</span>
+        </h3>
+
+        <p>
+          The odyssey begins with a private helicopter transfer tracking over the endless green canopy of East Africa. Touching down inside targeted scientific base camps avoids long land treks and brings you directly to the vanguard of global conservation. Here, you are not merely a spectator; you are introduced into the field alongside the rangers and lead primatologists who dedicate their lives to protecting these majestic mountain giants.
+        </p>
+
+        <!-- SECONDARY RESTORATION CAPTURE INSERT -->
+        <div class="my-10 space-y-3">
+          <div class="relative w-full aspect-[3/2] overflow-hidden bg-kavora-deep rounded-sm">
+            <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG4D0iSSwOpHs6WEuPD6j7jKEppXTvcjy2t2jgQA0hTPDfEteRRCQ8YnA&s=10" 
+              alt="Primatologist closely observing mountain gorillas up close in deep dense canopy jungles" 
+              class="w-full h-full object-cover object-center"
+            >
+          </div>
+          <span class="block text-[11px] font-sans italic text-kavora-muted text-center">
+            Generational heirs and anti-poaching wildlife handlers guarding vulnerable primates.
+          </span>
+        </div>
+
+        <h3 class="font-editorial text-3xl sm:text-4xl text-kavora-green font-light pt-4">
+          A Legacy Forged <span class="italic text-kavora-gold">In Permanent Footprints</span>
+        </h3>
+
+        <p>
+          Following the rangers through thick bamboo forests, you hear the raw canopy calls and look directly into the deep, intelligent eyes of an silverback gorilla. Every bespoke itinerary curated for this trek directly funds anti-poaching security logistics, local habitat restoration, and veterinarian research infrastructure. When a journey leaves a permanent blueprint on the landscape, an itinerary transforms into a lifetime legacy.
+        </p>
+
+        <!-- FOOTER SIGN OFF LINE -->
+        <div class="pt-8 border-t border-kavora-line flex items-center justify-between">
+          <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-kavora-muted">
+            Published Editorial // Kavora Concierge
+          </span>
+          <div class="flex gap-2">
+            <span class="w-2 h-2 rounded-full bg-kavora-gold"></span>
+            <span class="w-2 h-2 rounded-full bg-kavora-green"></span>
+            <span class="w-2 h-2 rounded-full bg-kavora-muted"></span>
+          </div>
+        </div>
+        <!-- FOOTER SIGN OFF LINE -->
+        <div class="pt-8 border-t border-kavora-line flex items-center justify-between">
+          <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-kavora-muted">
+            Published Editorial // Kavora Concierge
+          </span>
+          <div class="flex gap-2">
+            <span class="w-2 h-2 rounded-full bg-kavora-gold"></span>
+            <span class="w-2 h-2 rounded-full bg-kavora-green"></span>
+            <span class="w-2 h-2 rounded-full bg-kavora-muted"></span>
+          </div>
+        </div>
+
+      </article>
+    </section>
+  </main>
+
+  <!-- KAVORA CORPORATE FOOTER -->
+  <footer class="bg-kavora-deep text-kavora-ivory py-12 border-t border-kavora-forest/30">
+    <div class="mx-auto max-w-[1440px] px-6 lg:px-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div class="font-editorial text-xl tracking-[0.1em] uppercase font-medium">
+        Kavora<span class="text-kavora-gold">.</span>
+      </div>
+      <p class="text-[11px] font-light text-kavora-muted tracking-wider uppercase">
+        © 2026 Kavora Luxury Travel Concierge. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+

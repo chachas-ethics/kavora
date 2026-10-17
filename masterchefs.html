@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D23">
+
+  <title>Foraged and Fine | Kavora Journal</title>
+
+  <meta name="description" content="Discover the chefs transforming African haute cuisine through indigenous ingredients, traditional foraging, ancestral techniques, and contemporary culinary artistry with Kavora Journal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            editorial: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: "Manrope", sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #102D23;
+    }
+
+    .article-image {
+      overflow: hidden;
+      background: #E8E4D9;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .article-image:hover img {
+      transform: scale(1.055);
+    }
+
+    .gold-line {
+      height: 1px;
+      background: #C8A96B;
+      width: 48px;
+    }
+
+    .story-copy p {
+      margin: 1.5rem 0;
+      line-height: 1.95;
+    }
+
+    .drop-cap:first-letter {
+      float: left;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 5rem;
+      line-height: .75;
+      padding: .12em .12em 0 0;
+      color: #C8A96B;
+    }
+
+    .culinary-card img {
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .culinary-card:hover img {
+      transform: scale(1.055);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-kavora-ivory text-kavora-green antialiased">
+
+  <!-- PREMIUM NAVIGATION -->
+ 
+
+  <main>
+
+    <!-- EDITORIAL HERO -->
+    <section class="mx-auto max-w-[1440px] px-6 pt-12 lg:px-14 lg:pt-20">
+
+      <div class="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
+
+        <div class="mb-5 flex items-center justify-center gap-3">
+            
+        <span class="w-8 h-px bg-kavora-gold"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-muted">
+            Culinary Heritage
+          </span>
+
+        <span class="w-8 h-px bg-kavora-gold"></span>
+         
+        </div>
+
+        <h1 class="font-editorial text-5xl font-light leading-[1.06] tracking-[-0.025em] sm:text-6xl lg:text-7xl">
+          Foraged and Fine: The Masterchefs Reimagining African
+          <span class="block italic text-kavora-gold">
+            Haute Cuisine
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-7 text-kavora-muted sm:text-base sm:leading-8">
+          Across Africa, a new generation of chefs is transforming indigenous ingredients, ancestral cooking methods, and regional food traditions into extraordinary culinary experiences. From wild botanicals and heirloom grains to open-fire cooking and meticulously plated tasting menus, discover the chefs redefining luxury dining through the flavours of the continent.
+        </p>
+
+      </div>
+
+      <!-- RESPONSIVE IMAGE GALLERY -->
+      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+
+        <!-- IMAGE 1 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1100&q=85"
+            alt="Carefully prepared gourmet cuisine presented with refined culinary detail"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+            fetchpriority="high"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/60 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            The Art of the Plate
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 2 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto md:-translate-y-4">
+
+          <img
+            src="https://www.finedininglovers.com/sites/default/files/article_content_images/easy%20vegetarian%20meals%C2%A9iStock.jpg"
+            alt="Fresh ingredients prepared for a contemporary fine-dining experience"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/60 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            Nature's Pantry
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 3 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://kopabanausa.com/wp-content/uploads/2026/02/African-Recipes-1024x683.webp"
+            alt="Elegant fine-dining table setting in a refined restaurant"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/60 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            A New African Table
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+      <p class="mt-3 text-center text-[10px] uppercase tracking-[0.16em] text-kavora-muted md:hidden">
+        Swipe to explore the gallery
+      </p>
+
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <section class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:px-14 lg:py-24">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="h-fit space-y-8 border-l-2 border-kavora-gold/40 pl-6 lg:sticky lg:top-32 lg:col-span-4">
+
+        <div>
+          <h2 class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold">
+            The Experience
+          </h2>
+
+          <p class="font-editorial text-2xl font-light italic leading-snug text-kavora-green">
+            “A celebration of the land, the hands that harvest it, and the traditions that give every ingredient a story.”
+          </p>
+        </div>
+
+        <div class="h-px w-full bg-kavora-line"></div>
+
+        <div class="space-y-5">
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Region
+            </span>
+            <span class="text-sm font-medium">
+              Across Africa, from East Africa to the Cape
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Culinary Inspiration
+            </span>
+            <span class="text-sm font-medium">
+              Indigenous ingredients, seasonal harvests, and ancestral food traditions
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Dining Style
+            </span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-kavora-gold">
+              Contemporary African · Farm-to-table · Fine dining
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              A Journey Through
+            </span>
+            <span class="text-sm font-medium">
+              Indigenous ingredients, open-fire kitchens, regional food markets, and chef-led tasting menus
+            </span>
+          </div>
+
+        </div>
+
+        <div class="pt-2">
+          <a
+            href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27m%20interested%20in%20a%20bespoke%20African%20culinary%20and%20fine-dining%20experience."
+            class="block w-full bg-kavora-green px-6 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-ivory shadow-md transition-colors duration-300 hover:bg-kavora-forest"
+          >
+            Curate a Culinary Journey
+          </a>
+        </div>
+
+      </aside>
+
+      <!-- MAIN ARTICLE -->
+      <article class="story-copy mx-auto max-w-2xl font-sans text-sm font-light leading-8 text-kavora-green/90 sm:text-base lg:col-span-8">
+
+        <p class="drop-cap !mt-0 font-editorial text-2xl font-light tracking-tighter leading-relaxed text-kavora-green sm:text-2xl">
+          Before menus were printed in elegant typefaces and dishes arrived beneath the soft glow of candlelight, African food cultures were already built around an extraordinary understanding of the land. Communities knew which leaves carried bitterness, which roots offered nourishment, which fruits appeared after the rains, and how fire could transform the simplest ingredients into something memorable. Today, a new generation of African chefs is bringing this knowledge into the world of haute cuisine, demonstrating that culinary sophistication does not require abandoning tradition.
+        </p>
+
+        <p>
+          Their kitchens are places of rediscovery. Indigenous grains sit beside carefully sourced seafood. Fermented ingredients introduce depth to contemporary sauces. Wild herbs, seasonal vegetables, traditional oils, and forgotten varieties of produce become the foundations of dishes designed with precision and imagination. The result is not a single definition of African fine dining, but a diverse culinary movement rooted in the continent's many landscapes, cultures, and histories.
+        </p>
+
+        <p>
+          This movement also challenges an outdated perception that African cuisine belongs exclusively to informal markets, family kitchens, or rustic roadside restaurants. Those spaces remain essential to the continent's food identity, but the techniques and knowledge developed within them can inspire sophisticated dining experiences without losing their original character.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          From the Land:
+          <span class="italic text-kavora-gold">Rediscovering Africa's Pantry</span>
+        </h2>
+
+        <p>
+          The African continent contains an extraordinary range of edible plants, grains, fruits, nuts, seeds, and herbs. Their availability varies by climate, ecology, season, and local tradition, creating a culinary landscape that cannot be reduced to a handful of familiar ingredients. For ambitious chefs, this diversity offers an opportunity to build menus around the distinctive character of individual regions.
+        </p>
+
+        <p>
+          In East Africa, ingredients such as millet, sorghum, cassava, tamarind, coconut, baobab fruit, and indigenous leafy vegetables have long played roles in local food cultures. Along the coast, Swahili cooking reflects generations of exchange through combinations of seafood, spices, grains, and coconut. Inland, different communities have developed their own approaches to grains, legumes, fermented foods, and seasonal produce.
+        </p>
+
+        <p>
+          The contemporary chef's task is not simply to place an unfamiliar ingredient on an expensive plate. It is to understand its flavour, cultural significance, seasonality, and culinary potential. A traditional grain might become a delicate accompaniment to slow-cooked meat; a tart fruit could provide acidity to balance a rich sauce; an indigenous herb might introduce an aroma that no imported seasoning can replicate.
+        </p>
+
+        <p>
+          This process requires restraint as much as creativity. The strongest dishes often allow an ingredient to remain recognisable, using technique to reveal its qualities rather than overwhelm them. Fine dining becomes a conversation between the chef's imagination and the ingredient's original identity.
+        </p>
+
+        <!-- ARTICLE IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+            <img
+              src="https://www.finedininglovers.com/sites/default/files/article_content_images/easy%20vegetarian%20meals%C2%A9iStock.jpg"
+              alt="Fresh vegetables, herbs, and colourful ingredients arranged for culinary preparation"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            Indigenous produce and seasonal ingredients are inspiring chefs to explore the full range of Africa's culinary heritage.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          The Wisdom of Fire:
+          <span class="italic text-kavora-gold">Ancestral Techniques, Modern Precision</span>
+        </h2>
+
+        <p>
+          Long before precision-controlled ovens and laboratory-inspired kitchens, African cooks mastered a wide range of techniques for preserving, transforming, and enhancing food. Smoking, drying, fermenting, roasting, pounding, steaming, and slow cooking developed in response to local ingredients, climate, available equipment, and community preferences.
+        </p>
+
+        <p>
+          These methods are increasingly relevant to chefs seeking distinctive flavours and deeper connections to culinary heritage. Fermentation can produce complex acidity and savoury depth. Smoke can add layers of aroma to vegetables, meat, and fish. Slow cooking can transform tougher cuts into tender dishes while making efficient use of the whole ingredient.
+        </p>
+
+        <p>
+          Open-fire cooking holds a particularly powerful place in this conversation. Wood, charcoal, heat, and smoke introduce variables that demand experience and careful judgement. A skilled cook learns how different fuels behave, how to manage temperature without modern controls, and how to recognise the moment when an ingredient reaches its ideal texture.
+        </p>
+
+        <p>
+          Contemporary kitchens can combine these techniques with modern temperature control, refined presentation, and precise portioning. The aim is not to disguise the origins of a dish but to build upon them. Tradition supplies a foundation; contemporary technique provides another language through which that tradition can be expressed.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Foraging With Purpose:
+          <span class="italic text-kavora-gold">The Ethics of the Wild</span>
+        </h2>
+
+        <p>
+          Foraging offers chefs a direct relationship with the environments that supply their ingredients. Wild edible plants, seasonal fruits, mushrooms, and aromatic botanicals can introduce remarkable variation to a menu. Their availability changes with rainfall, temperature, soil conditions, and the rhythms of the surrounding ecosystem.
+        </p>
+
+        <p>
+          Yet responsible foraging requires considerably more than discovering an interesting flavour. Plants must be identified accurately, harvesting must comply with local rules, and collection must not undermine the regeneration of a species or damage a fragile habitat. Some protected areas prohibit the removal of natural materials altogether, while other ingredients may require specific permissions or specialist handling.
+        </p>
+
+        <p>
+          For fine-dining establishments, this means building relationships with knowledgeable local harvesters, botanists, farmers, and suppliers. Traceability matters. So does understanding where an ingredient comes from, how it was collected, and whether its supply can be sustained over time.
+        </p>
+
+        <p>
+          Not every ingredient needs to be gathered from the wild. Cultivated indigenous plants, community-managed farms, and responsibly produced traditional ingredients can offer chefs a more consistent supply while supporting local livelihoods. The most thoughtful interpretation of foraging is therefore not about scarcity or exclusivity; it is about understanding seasonality and treating nature as a partner rather than an unlimited resource.
+        </p>
+
+        <!-- SECONDARY IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+            <img
+              src="https://www.baker.edu/wp-content/uploads/famous-female-chefs.jpg"
+              alt="Chef preparing fresh ingredients in a professional kitchen"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            Behind every carefully composed dish is a chain of decisions about sourcing, preparation, sustainability, and flavour.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          The New Culinary Language:
+          <span class="italic text-kavora-gold">African Haute Cuisine</span>
+        </h2>
+
+        <p>
+          Haute cuisine is often associated with intricate techniques, exacting presentation, and elaborate tasting menus. Across Africa, chefs are adapting these conventions to tell stories grounded in their own regions. The result can be elegant without being detached from the everyday food cultures that inspired it.
+        </p>
+
+        <p>
+          A familiar stew may inspire a refined sequence of textures and flavours. A traditional grain can become the centrepiece of a contemporary vegetarian course. Regional spices might be incorporated into a carefully balanced sauce, while fermented accompaniments introduce the acidity needed to complement richer ingredients. Such interpretations can be innovative while retaining a recognisable relationship to the original food.
+        </p>
+
+        <p>
+          Presentation also becomes a form of storytelling. Colour, texture, temperature, and the arrangement of ingredients can evoke a landscape or season without resorting to superficial decoration. Natural materials and understated table settings may reinforce a restaurant's sense of place, allowing the food to remain the central expression of the experience.
+        </p>
+
+        <p>
+          Crucially, African haute cuisine is not one uniform style. The culinary traditions of Morocco, Senegal, Ethiopia, Tanzania, South Africa, Nigeria, and the many regions between them differ profoundly. A compelling restaurant develops its own point of view instead of combining unrelated ingredients merely to appear contemporary.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          From Farm to Table:
+          <span class="italic text-kavora-gold">The People Behind the Plate</span>
+        </h2>
+
+        <p>
+          Exceptional dining begins long before a chef enters the kitchen. Farmers, fishers, beekeepers, growers, foragers, food processors, and market traders all contribute to the ingredients that eventually reach the table. Their knowledge and labour are part of the culinary story, even when the final presentation draws attention primarily to the chef.
+        </p>
+
+        <p>
+          Restaurants that work closely with local producers can develop menus around harvest cycles, reduce dependence on long supply chains, and create opportunities for smaller suppliers. Seasonal purchasing may also encourage chefs to experiment with ingredients they would otherwise overlook, helping make menus more distinctive and responsive to their surroundings.
+        </p>
+
+        <p>
+          However, sourcing locally is not automatically sustainable or equitable. Responsible procurement also involves fair prices, reliable payment, food safety, appropriate storage, and realistic expectations about supply. A successful partnership must work for the people producing the food as well as the restaurant serving it.
+        </p>
+
+        <p>
+          For travellers, asking about ingredients and their origins can reveal another dimension of a dining experience. The person who grows a rare vegetable or preserves a traditional ingredient may have a story as compelling as the chef's own. Recognising these contributions helps position cuisine within a wider cultural and economic landscape.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Beyond the Menu:
+          <span class="italic text-kavora-gold">Food as Cultural Memory</span>
+        </h2>
+
+        <p>
+          Recipes are rarely static. They evolve through migration, trade, family preferences, available ingredients, and changing circumstances. What appears on a restaurant menu today may carry traces of centuries of exchange, with techniques and ingredients adapted by generations of cooks.
+        </p>
+
+        <p>
+          Preserving this heritage does not require chefs to reproduce every dish exactly as it was prepared in the past. It does require curiosity, respect, and a willingness to learn from the people whose food traditions are being interpreted. Consultation, proper attribution, and meaningful collaboration can help prevent cultural knowledge from being separated from the communities that sustain it.
+        </p>
+
+        <p>
+          The most interesting contemporary restaurants often balance innovation with this sense of responsibility. They allow traditional dishes to evolve while recognising the histories and people behind them. Luxury becomes more meaningful when it offers not only exceptional service and beautiful surroundings, but also a deeper appreciation of the place in which a meal is enjoyed.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          A Seat at the Table:
+          <span class="italic text-kavora-gold">The Future of African Dining</span>
+        </h2>
+
+        <p>
+          As culinary tourism develops, Africa's food traditions offer opportunities to create distinctive experiences for travellers seeking more than conventional luxury. Chef-led tastings, visits to local markets, cooking demonstrations, farm experiences, and carefully curated regional menus can connect guests with the people and places behind the food.
+        </p>
+
+        <p>
+          Building this future requires investment in culinary education, dependable supply chains, food safety, hospitality training, and platforms that allow African chefs to share their work with wider audiences. It also means ensuring that the benefits of growing interest in African cuisine extend beyond a small number of restaurants to producers, culinary professionals, and communities.
+        </p>
+
+        <p>
+          For travellers, approaching African cuisine with an open mind can be an education in itself. A meal may introduce an unfamiliar grain, reveal the complexity of a fermented ingredient, or offer a new perspective on a traditional cooking technique. These experiences challenge assumptions about what luxury tastes like and where culinary innovation begins.
+        </p>
+
+        <p>
+          Foraged and fine is ultimately more than a dining philosophy. It is an invitation to look closer at the land, recognise the intelligence embedded in traditional food systems, and appreciate the creativity of chefs who bring these elements together. Africa's culinary future does not depend on imitating established dining capitals. It lies in the confidence to tell its own stories, one ingredient and one carefully considered plate at a time.
+        </p>
+
+        <!-- ARTICLE SIGN-OFF -->
+        <div class="mt-12 border-t border-kavora-line pt-7">
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+             <span class="text-1xl font-editorial font-bold uppercase tracking-[0.15em] text-kavora-gold">
+              Kavora
+            </span>
+
+          
+
+          </div>
+
+          <p class="mt-3 text-xs leading-6 text-kavora-muted">
+            Ingredient availability varies by season and region. Wild foods should be sourced from knowledgeable, reputable suppliers and harvested in accordance with food-safety requirements, local regulations, and conservation principles.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    
+
+  </main>
+
+  <!-- CORPORATE FOOTER -->
+  <footer class="border-t border-kavora-forest/30 bg-kavora-deep py-12 text-kavora-ivory">
+
+    <div class="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-6 px-6 text-center sm:flex-row sm:text-left lg:px-14">
+
+      <a href="index.html" class="font-editorial text-xl font-medium uppercase tracking-[0.1em]">
+        Kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <p class="text-[10px] font-light uppercase tracking-wider text-kavora-muted">
+        © 2026 Kavora Luxury Travel &amp; Concierge. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

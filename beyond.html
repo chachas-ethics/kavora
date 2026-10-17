@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beyond the ordinary: discover Africa's extraordinary escapes, from secluded island retreats and wild savannahs to remote desert landscapes and intimate luxury experiences with Kavora." />
+  <title>Beyond the Ordinary | Kavora Journal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#102D23',
+              deep: '#0B211A',
+              forest: '#1D4535',
+              gold: '#C8A96B',
+              ivory: '#F7F5EF',
+              muted: '#74786F',
+              line: '#E4E0D6'
+            }
+          },
+          fontFamily: {
+            editorial: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .editorial-title {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: -0.035em;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.22em;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      background: #E4E0D6;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.035);
+    }
+
+    .article-copy p {
+      color: #535A52;
+      font-size: 15px;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 3vw, 40px);
+      line-height: 1.12;
+      color: #102D23;
+      margin-top: 3rem;
+      margin-bottom: 1.15rem;
+      font-weight: 500;
+    }
+
+    .article-copy h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      line-height: 1.2;
+      color: #102D23;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-copy blockquote {
+      border-left: 1px solid #C8A96B;
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+      color: #102D23;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 29px;
+      line-height: 1.35;
+    }
+
+    .article-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .side-rule {
+      border-top: 1px solid #E4E0D6;
+    }
+
+    .gold-link {
+      transition: color 0.25s ease;
+    }
+
+    .gold-link:hover {
+      color: #C8A96B;
+    }
+
+    @media (max-width: 640px) {
+      .article-copy p {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .gallery-strip {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .gallery-strip::-webkit-scrollbar {
+        display: none;
+      }
+
+      .gallery-strip .gallery-item {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 border-b border-kavora-line bg-kavora-ivory/95 backdrop-blur-md">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 h-[76px] flex items-center justify-between">
+
+      <a href="journal.html" class="flex items-center gap-3 text-kavora-green text-xs tracking-[0.14em] uppercase hover:text-kavora-gold transition">
+        <span class="text-lg">←</span>
+        <span class="hidden sm:inline">Back to Journal</span>
+        <span class="sm:hidden">Journal</span>
+      </a>
+
+      <a href="index.html" class="text-center">
+        <span class="block editorial-title text-[32px] leading-none tracking-[0.08em] font-medium">KAVORA</span>
+        <span class="block text-[8px] tracking-[0.38em] mt-1 text-kavora-muted uppercase">Luxury Travel & Concierge</span>
+      </a>
+
+      <a href="index.html#contact" class="text-[10px] sm:text-xs uppercase tracking-[0.16em] border-b border-kavora-gold pb-1 gold-link">
+        Enquire
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- ARTICLE HERO -->
+  <main>
+
+    <section class="max-w-[1100px] mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-10 text-center">
+
+      <div class="flex items-center justify-center gap-3 mb-7">
+        <span class="w-8 h-px bg-kavora-gold"></span>
+        <p class="eyebrow uppercase text-[9px] sm:text-[10px] text-kavora-muted font-semibold">
+          The Art of Extraordinary Travel
+        </p>
+        <span class="w-8 h-px bg-kavora-gold"></span>
+      </div>
+
+      <h1 class="editorial-title text-[44px] sm:text-[64px] lg:text-[78px] leading-[0.98] font-medium max-w-[950px] mx-auto">
+        Beyond the Ordinary:
+        <span class="block italic text-kavora-forest mt-2">Discovering Africa's Extraordinary Escapes</span>
+      </h1>
+
+      <p class="max-w-[660px] mx-auto mt-7 text-sm sm:text-[15px] text-kavora-muted leading-8">
+        From remote wilderness retreats to secluded coastlines, discover a different side of Africa through places that reward curiosity, invite stillness, and redefine the meaning of getting away.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-8 text-[9px] uppercase tracking-[0.17em] text-kavora-muted">
+        <span>Kavora Journal</span>
+        <span class="w-1 h-1 rounded-full bg-kavora-gold"></span>
+        <span>Travel & Discovery</span>
+        <span class="w-1 h-1 rounded-full bg-kavora-gold"></span>
+        <span>8 Minute Read</span>
+      </div>
+
+    </section>
+
+
+    <!-- IMAGE GALLERY -->
+    <section class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 pb-16">
+
+      <div class="gallery-strip grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 h-[300px] sm:h-[350px] lg:h-[440px]">
+
+        <div class="gallery-item relative">
+          <img
+            class="gallery-image"
+            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85"
+            alt="African wilderness stretching toward the horizon"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">The Untamed Interior</span>
+        </div>
+
+        <div class="gallery-item relative">
+          <img
+            class="gallery-image"
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
+            alt="Turquoise water meeting a secluded coastline"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">Coastal Seclusion</span>
+        </div>
+
+        <div class="gallery-item relative">
+          <img
+            class="gallery-image"
+            src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
+            alt="Ocean waves rolling toward a peaceful shore"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">A Different Rhythm</span>
+        </div>
+
+      </div>
+
+      <p class="text-[10px] text-kavora-muted mt-3 text-right">
+        A continent of contrasts, best discovered beyond the expected.
+      </p>
+
+    </section>
+
+
+    <!-- ARTICLE LAYOUT -->
+    <section class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-14 pb-24">
+
+      <div class="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,700px)] gap-12 lg:gap-20 justify-center">
+
+
+        <!-- SIDEBAR -->
+        <aside class="lg:sticky lg:top-28 lg:self-start order-2 lg:order-1">
+
+          <div class="border-t border-kavora-gold pt-5">
+            <p class="eyebrow uppercase text-[9px] text-kavora-muted font-semibold mb-5">
+              The Journey
+            </p>
+
+            <div class="space-y-5">
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">Explore</p>
+                <p class="text-sm text-kavora-green leading-6">Africa's lesser-known destinations</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">Experiences</p>
+                <p class="text-sm text-kavora-green leading-6">Private retreats, wilderness, islands and cultural discovery</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">Travel Style</p>
+                <p class="text-sm text-kavora-green leading-6">Considered, personal and unhurried</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">Best Approach</p>
+                <p class="text-sm text-kavora-green leading-6">Let your interests shape the itinerary</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="mt-10 bg-kavora-green text-kavora-ivory p-6 sm:p-7">
+            <p class="eyebrow uppercase text-[9px] text-kavora-gold mb-4">Your Africa, Your Way</p>
+
+            <h3 class="editorial-title text-3xl leading-tight mb-4">
+              The extraordinary is personal.
+            </h3>
+
+            <p class="text-xs leading-6 text-white/70 mb-6">
+              Tell us what you want to discover. We'll help you shape a journey around the places, pace and experiences that matter to you.
+            </p>
+
+            <a
+              href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27d%20like%20to%20explore%20an%20extraordinary%20African%20escape."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-between w-full border border-kavora-gold/70 px-4 py-3 text-[9px] uppercase tracking-[0.15em] hover:bg-kavora-gold hover:text-kavora-deep transition"
+            >
+              <span>Plan Your Escape</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="mt-8">
+            <p class="eyebrow uppercase text-[9px] text-kavora-muted mb-3">In This Story</p>
+
+            <nav class="space-y-3 text-xs text-kavora-muted">
+              <a href="#beyond-the-known" class="block gold-link">01 — Beyond the Known</a>
+              <a href="#wild-at-heart" class="block gold-link">02 — Wild at Heart</a>
+              <a href="#where-land-meets-sea" class="block gold-link">03 — Where Land Meets Sea</a>
+              <a href="#culture-and-connection" class="block gold-link">04 — Culture & Connection</a>
+              <a href="#travel-with-intention" class="block gold-link">05 — Travel with Intention</a>
+            </nav>
+          </div>
+
+        </aside>
+
+
+        <!-- ARTICLE CONTENT -->
+        <article class="article-copy order-1 lg:order-2 min-w-0">
+
+          <p class="text-[10px] uppercase tracking-[0.2em] text-kavora-gold font-semibold mb-5">
+            A Continent of Possibilities
+          </p>
+
+          <p class="!text-[17px] !leading-[1.9] !text-kavora-green">
+            There is an Africa that exists beyond the familiar postcard: beyond the well-trodden safari circuit, beyond the celebrated beach resorts, beyond the destinations already written into every itinerary. It is an Africa of quiet corners, remarkable contrasts and experiences that feel entirely your own.
+          </p>
+
+          <p>
+            Here, a journey might begin with the first light spilling across an open savannah, continue through an ancient trading town, and end beside an ocean so still that the horizon seems to disappear. Another might take you into remote mountain country, where the air is cool, the landscape dramatic and the only agenda is the day unfolding before you.
+          </p>
+
+          <p>
+            For the discerning traveller, extraordinary escapes are not simply about going somewhere beautiful. They are about discovering a place in a way that feels meaningful, with the freedom to slow down, follow curiosity and experience more than the obvious.
+          </p>
+
+          <blockquote>
+            “The most memorable journeys are not always the farthest ones. They are the ones that change the way you see a place — and perhaps yourself.”
+          </blockquote>
+
+
+          <!-- SECTION 1 -->
+          <h2 id="beyond-the-known">01. Beyond the Known: The Beauty of Somewhere Unexpected</h2>
+
+          <p>
+            Africa's scale is part of its magic. Across its landscapes lie remote valleys, forested highlands, ancient settlements, volcanic terrain and stretches of wilderness where the sense of space is almost difficult to comprehend. Even in countries known around the world, there are quieter regions that remain outside the usual travel conversation.
+          </p>
+
+          <p>
+            Consider the dramatic escarpments of the Great Rift Valley, the wide-open spaces of northern Kenya, the highland scenery of Tanzania, or the lesser-visited corners of southern Africa. Each offers its own character, shaped by geography, history, climate and the people who call it home.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=85"
+              alt="Wild animals moving through a natural African landscape"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              The wilderness offers a different kind of luxury: space, silence and a sense of perspective.
+            </figcaption>
+          </figure>
+
+          <p>
+            The appeal of these destinations is not that they are untouched by the world, but that they can offer a different relationship with it. Days may be shaped by local guides, changing light, weather and spontaneous discoveries rather than a packed schedule.
+          </p>
+
+          <p>
+            Finding these places often calls for thoughtful planning. Seasonal conditions, access, accommodation availability and local expertise all influence what is possible. The reward is a journey designed around the destination rather than a destination forced into a standard itinerary.
+          </p>
+
+
+          <!-- SECTION 2 -->
+          <h2 id="wild-at-heart">02. Wild at Heart: The Call of the African Wilderness</h2>
+
+          <p>
+            Few experiences are as compelling as spending time in Africa's wild places. Yet the safari experience is far more varied than the familiar image of a vehicle crossing the plains in search of wildlife.
+          </p>
+
+          <p>
+            Depending on the destination, a wilderness escape might involve walking with an experienced guide, watching wildlife from a discreet camp, exploring a conservation landscape, or spending an evening beneath a sky filled with stars. Some journeys are built around dramatic animal encounters; others are about learning to notice the details that are easy to miss when travelling too quickly.
+          </p>
+
+          <p>
+            The finest wilderness stays understand that proximity to nature does not require excess. Thoughtful architecture, a light footprint, attentive hosting and a strong relationship with the surrounding environment can create an experience that feels both comfortable and connected to place.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
+              alt="Safari landscape with wildlife in the African wilderness"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Beyond the sightings, the wilderness invites travellers to observe, listen and reconnect with the natural world.
+            </figcaption>
+          </figure>
+
+          <h3>The luxury of having room to breathe</h3>
+
+          <p>
+            For some travellers, the ideal escape means a private guide and a flexible schedule. For others, it is a small camp far from busy routes, where meals are unhurried and the rhythm of the day follows the natural world. Neither approach needs to be extravagant to feel exceptional; what matters is how well the experience fits the traveller.
+          </p>
+
+          <p>
+            Responsible wilderness travel also depends on respecting wildlife distances, following guide instructions and choosing operators who take conservation and community relationships seriously. These considerations help preserve the very qualities that make such places worth visiting.
+          </p>
+
+
+          <!-- SECTION 3 -->
+          <h2 id="where-land-meets-sea">03. Where Land Meets Sea: Africa's Coastal Sanctuaries</h2>
+
+          <p>
+            Africa's coastlines offer a different expression of escape. Along the Indian Ocean, warm water, coral reefs, historic ports and palm-lined shores create an atmosphere that invites travellers to slow down. Further west and south, rugged cliffs, fishing communities and powerful Atlantic landscapes tell another story entirely.
+          </p>
+
+          <p>
+            The Zanzibar archipelago is known for its turquoise waters and layered Swahili heritage. Mozambique offers long stretches of coast and island destinations where marine life can be central to the experience. The Seychelles and Mauritius bring their own combinations of island scenery, hospitality and outdoor discovery.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=85"
+              alt="A tranquil tropical island shoreline with clear water"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Along the coast, a well-planned escape can balance privacy with a genuine connection to local life.
+            </figcaption>
+          </figure>
+
+          <p>
+            A coastal journey need not be limited to a sun lounger. Days can include snorkelling, sailing, diving with qualified operators, exploring historic streets, visiting local markets or discovering the food traditions that connect coastal communities across generations.
+          </p>
+
+          <p>
+            For a more private experience, the right itinerary might combine a few nights on the mainland with time on an island, or pair an active coastal stay with several days of complete rest. Timing matters: tides, weather, marine conditions and seasonal travel patterns can all shape the experience.
+          </p>
+
+          <p>
+            The goal is not to fit in as many activities as possible. It is to create enough space for the destination to reveal itself.
+          </p>
+
+
+          <!-- SECTION 4 -->
+          <h2 id="culture-and-connection">04. Culture & Connection: The Stories That Make a Place</h2>
+
+          <p>
+            Landscapes may inspire the journey, but people often give it its lasting meaning. Across Africa, centuries of trade, migration, craftsmanship, food, music and storytelling have shaped distinct cultural identities. Engaging with these traditions can add depth to a journey that might otherwise remain purely scenic.
+          </p>
+
+          <p>
+            In coastal East Africa, Swahili culture reflects generations of exchange between African communities and the wider Indian Ocean world. Historic architecture, local cuisine, traditional sailing and the rhythm of everyday life offer ways to understand this heritage beyond a museum visit.
+          </p>
+
+          <p>
+            Elsewhere, a journey might include learning about regional craft traditions, exploring a historic city with a knowledgeable local guide, sharing a meal prepared around local ingredients, or visiting a community-led cultural initiative.
+          </p>
+
+          <blockquote>
+            “To travel well is not simply to see a place. It is to approach it with enough curiosity to understand that its story began long before your arrival.”
+          </blockquote>
+
+          <p>
+            Meaningful cultural experiences begin with respect. Ask before photographing people, follow local guidance, dress appropriately for the setting and seek experiences where hosts choose to share their knowledge and traditions. Supporting locally owned businesses and skilled guides can also help ensure that tourism brings value to the places it celebrates.
+          </p>
+
+          <p>
+            These encounters need not be staged or elaborate. Sometimes the most memorable moment is a conversation, a meal, or an unexpected insight into a way of life different from your own.
+          </p>
+
+
+          <!-- SECTION 5 -->
+          <h2 id="travel-with-intention">05. Travel with Intention: A More Considered Kind of Luxury</h2>
+
+          <p>
+            Luxury travel is often described through the language of exclusivity, exceptional service and beautiful surroundings. But there is another measure of luxury: having the freedom to travel at your own pace, knowing that the details have been considered and that the experience reflects what matters to you.
+          </p>
+
+          <p>
+            For one traveller, that may mean a remote lodge with time for wildlife observation. For another, it may be a private villa, a carefully curated food journey, an expedition through dramatic landscapes or a combination of several destinations connected by a seamless itinerary.
+          </p>
+
+          <p>
+            A considered journey begins with the right questions. What do you want to feel? What have you always wanted to understand? Would you rather spend longer in one place or discover several regions? Is privacy the priority, or is meeting people and learning about local life what makes a trip meaningful?
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=85"
+              alt="A peaceful luxury retreat surrounded by nature"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Thoughtful hospitality is less about excess and more about how naturally every detail fits the journey.
+            </figcaption>
+          </figure>
+
+          <h3>Designing the details around you</h3>
+
+          <p>
+            Thoughtful planning considers more than accommodation. Transfers, travel times, seasonal conditions, accessibility, dietary requirements, guide expertise and the amount of downtime between experiences can all influence how a journey feels.
+          </p>
+
+          <p>
+            It also leaves room for flexibility. A remarkable journey should be carefully organised without feeling over-managed. The itinerary provides direction, while still allowing space for a longer lunch, an unexpected detour or a quiet afternoon with nothing to do.
+          </p>
+
+          <p>
+            Consideration extends to the destination, too. Choosing responsible operators, respecting wildlife and local customs, reducing unnecessary waste and supporting locally rooted businesses can help make travel more mindful of its wider impact.
+          </p>
+
+
+          <!-- PRACTICAL PLANNING -->
+          <h2>Planning Your Extraordinary Escape</h2>
+
+          <p>
+            The best journeys begin with a clear sense of possibility rather than a fixed checklist. Before deciding on a destination, think about the experience you want and the conditions that will make it enjoyable.
+          </p>
+
+          <div class="my-8 border-y border-kavora-line py-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">01 / Start with a feeling</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Decide whether you want adventure, restoration, cultural discovery, wildlife encounters or a balance of several.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">02 / Respect the season</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Research weather, wildlife patterns, marine conditions and regional access before committing to dates.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">03 / Choose your pace</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Allow enough time to settle into each destination instead of turning every day into a transfer.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">04 / Plan with purpose</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Prioritise knowledgeable local expertise, reliable logistics and experiences that match your interests.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <p>
+            Africa is not a single experience, nor is there one definitive way to explore it. Its extraordinary escapes are as varied as its landscapes and communities. What connects them is the possibility of discovering something that stays with you long after the journey ends.
+          </p>
+
+          <p>
+            Look beyond the expected. Leave room for surprise. And choose a journey that feels less like following someone else's itinerary and more like discovering your own relationship with the continent.
+          </p>
+
+
+          <!-- CLOSING -->
+          <div class="mt-14 bg-[#EEEAE0] p-7 sm:p-10">
+
+            <p class="eyebrow uppercase text-[9px] text-kavora-gold font-semibold mb-4">
+              The Kavora Perspective
+            </p>
+
+            <h2 class="!mt-0 !mb-4 text-4xl sm:text-5xl">
+              Your next story begins somewhere extraordinary.
+            </h2>
+
+            <p class="!text-sm !leading-7 !mb-6">
+              Whether you imagine a secluded island retreat, a wilderness journey or an itinerary shaped around culture, cuisine and discovery, the right escape begins with what matters to you.
+            </p>
+
+            <a
+              href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27d%20like%20to%20plan%20a%20personalised%20African%20escape."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-4 bg-kavora-green text-kavora-ivory px-6 py-4 text-[10px] uppercase tracking-[0.15em] hover:bg-kavora-forest transition"
+            >
+              Begin Your Journey
+              <span class="text-kavora-gold">↗</span>
+            </a>
+
+          </div>
+
+
+          <!-- ARTICLE FOOTER -->
+          <div class="mt-12 pt-7 border-t border-kavora-line flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+
+            <div>
+              <p class="editorial-title text-2xl">KAVORA</p>
+              <p class="text-[9px] text-kavora-muted uppercase tracking-[0.2em] mt-1">
+                Travel with intention.
+              </p>
+            </div>
+
+            <a href="journal.html" class="text-[10px] uppercase tracking-[0.15em] text-kavora-green gold-link">
+              ← Explore More Stories
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-kavora-deep text-kavora-ivory">
+
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 py-12">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+
+        <div>
+          <a href="index.html" class="editorial-title text-4xl tracking-[0.08em]">KAVORA</a>
+          <p class="text-[9px] uppercase tracking-[0.28em] text-white/50 mt-2">
+            Luxury Travel & Concierge
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.14em] text-white/65">
+          <a href="index.html" class="hover:text-kavora-gold transition">Home</a>
+          <a href="journal.html" class="hover:text-kavora-gold transition">Journal</a>
+          <a href="index.html#experiences" class="hover:text-kavora-gold transition">Experiences</a>
+          <a href="index.html#contact" class="hover:text-kavora-gold transition">Contact</a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/15 mt-9 pt-5 flex flex-col sm:flex-row justify-between gap-3 text-[9px] text-white/40 tracking-[0.08em]">
+        <p>© 2026 Kavora. All rights reserved.</p>
+        <p>Curated journeys. Meaningful discoveries.</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

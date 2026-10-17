@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beyond the Perimeter: Discover the rise of ultra-exclusive African estates, where extraordinary landscapes, private sanctuaries and bespoke hospitality redefine luxury living." />
+  <title>Beyond the Perimeter: The Ultra-Exclusive African Estate | Kavora Journal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#102D23',
+              deep: '#0B211A',
+              forest: '#1D4535',
+              gold: '#C8A96B',
+              ivory: '#F7F5EF',
+              muted: '#74786F',
+              line: '#E4E0D6'
+            }
+          },
+          fontFamily: {
+            editorial: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .editorial-title {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: -0.035em;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.22em;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      background: #E4E0D6;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.04);
+    }
+
+    .article-copy p {
+      color: #535A52;
+      font-size: 15px;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 3vw, 40px);
+      line-height: 1.12;
+      color: #102D23;
+      margin-top: 3rem;
+      margin-bottom: 1.15rem;
+      font-weight: 500;
+      scroll-margin-top: 110px;
+    }
+
+    .article-copy h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      line-height: 1.2;
+      color: #102D23;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-copy blockquote {
+      border-left: 1px solid #C8A96B;
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+      color: #102D23;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 29px;
+      line-height: 1.35;
+    }
+
+    .article-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .side-rule {
+      border-top: 1px solid #E4E0D6;
+    }
+
+    .gold-link {
+      transition: color 0.25s ease;
+    }
+
+    .gold-link:hover {
+      color: #C8A96B;
+    }
+
+    .gold-button {
+      transition: all 0.3s ease;
+    }
+
+    .gold-button:hover {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    @media (max-width: 640px) {
+      .article-copy p {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .gallery-strip {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .gallery-strip::-webkit-scrollbar {
+        display: none;
+      }
+
+      .gallery-strip .gallery-item {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="max-w-[1100px] mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-10 text-center">
+
+      <div class="flex items-center justify-center gap-3 mb-7">
+        <span class="w-8 h-px bg-kavora-gold"></span>
+        <p class="eyebrow uppercase text-[9px] sm:text-[10px] text-kavora-muted font-semibold">
+          Private Estates & Exceptional Living
+        </p>
+        <span class="w-8 h-px bg-kavora-gold"></span>
+      </div>
+
+      <h1 class="editorial-title text-[44px] sm:text-[64px] lg:text-[78px] leading-[0.98] font-medium max-w-[1000px] mx-auto">
+        Beyond the Perimeter:
+        <span class="block italic text-kavora-gold mt-2">The Rise of the Ultra-Exclusive African Estate</span>
+      </h1>
+
+      <p class="max-w-[680px] mx-auto mt-7 text-sm sm:text-[15px] text-kavora-muted leading-8">
+        Beyond gates and grand entrances lies a different expression of African luxury: private estates where extraordinary landscapes, considered architecture and personalised hospitality create a world apart.
+      </p>
+
+      
+
+    </section>
+
+<section class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 pb-16">
+
+  <!-- ASYMMETRIC RESPONSIVE IMAGE GALLERY CONTAINER -->
+  <!-- Swipeable gallery loop layout on small viewports, clean multi-aspect column layout starting at md viewports -->
+  <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+
+    <!-- IMAGE 1 frame wrapper -->
+    <div class="gallery-item relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+      <img
+        class="gallery-image h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+        src="https://cdn.sanity.io/images/y0jkjygh/production/26419ca202941ffdc05d719b8f27107eafb6f464-1600x1068.jpg?w=2048&q=85&fit=max&auto=format"
+        alt="Contemporary luxury villa surrounded by landscaped grounds"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+      <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">Private Architecture</span>
+    </div>
+
+    <!-- IMAGE 2 frame wrapper (Asymmetric mid-column elevation) -->
+    <div class="gallery-item relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto md:-translate-y-4 transition-transform duration-500">
+      <img
+        class="gallery-image h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+        src="https://www.exploretanzania.nl/wp-content/uploads/2019/04/amini-hillside-retreat-meru-hillside-1920x1280-23-1920x1080.jpg"
+        alt="A secluded retreat nestled in a natural landscape"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+      <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">A World Apart</span>
+    </div>
+
+    <!-- IMAGE 3 frame wrapper -->
+    <div class="gallery-item relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+      <img
+        class="gallery-image h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+        src="https://www.chaloafrica.com/wp-content/uploads/2025/08/Sayari-Retreats-Pool.jpg"
+        alt="Elegant contemporary estate with expansive outdoor living spaces"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+      <span class="absolute bottom-5 left-5 text-white text-[9px] uppercase tracking-[0.2em]">Considered Luxury</span>
+    </div>
+
+  </div>
+
+  <!-- Mobile navigation instructions layout visible only on mobile screens -->
+  <p class="mt-3 text-center text-[10px] uppercase tracking-[0.16em] text-kavora-gold md:hidden">
+    Swipe to explore the gallery
+  </p>
+
+</section>
+
+
+
+    <!-- ARTICLE LAYOUT -->
+    <section class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-14 pb-24">
+
+      <div class="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,700px)] gap-12 lg:gap-20 justify-center">
+
+        <!-- SIDEBAR -->
+        <aside class="lg:sticky lg:top-28 lg:self-start order-2 lg:order-1">
+
+          <div class="border-t border-kavora-gold pt-5">
+            <p class="eyebrow uppercase text-[9px] text-kavora-muted font-semibold mb-5">
+              Inside the Estate
+            </p>
+
+            <div class="space-y-5">
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">The Concept</p>
+                <p class="text-sm text-kavora-green leading-6">Privacy, space and personal freedom</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">The Setting</p>
+                <p class="text-sm text-kavora-green leading-6">Coastal retreats, wilderness properties and countryside sanctuaries</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">The Experience</p>
+                <p class="text-sm text-kavora-green leading-6">Bespoke hosting and thoughtfully curated living</p>
+              </div>
+
+              <div class="side-rule pt-4">
+                <p class="text-[9px] uppercase tracking-[0.16em] text-kavora-muted mb-1">The Philosophy</p>
+                <p class="text-sm text-kavora-green leading-6">Exclusivity with a sense of place</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="mt-10 bg-kavora-green text-kavora-ivory p-6 sm:p-7">
+            <p class="eyebrow uppercase text-[9px] text-kavora-gold mb-4">A More Personal Escape</p>
+
+            <h3 class="editorial-title text-3xl leading-tight mb-4">
+              Find your own world beyond the ordinary.
+            </h3>
+
+            <p class="text-xs leading-6 text-white/70 mb-6">
+              From private villas to distinctive estate stays, let Kavora help you explore a more personal approach to African luxury.
+            </p>
+
+            <a
+              href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27m%20interested%20in%20an%20exclusive%20African%20estate%20experience."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gold-button inline-flex items-center justify-between w-full border border-kavora-gold/70 px-4 py-3 text-[9px] uppercase tracking-[0.15em]"
+            >
+              <span>Discuss Your Stay</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="mt-8">
+            <p class="eyebrow uppercase text-[9px] text-kavora-muted mb-3">In This Story</p>
+
+            <nav class="space-y-3 text-xs text-kavora-muted">
+              <a href="#new-definition" class="block gold-link">01 — A New Definition of Luxury</a>
+              <a href="#landscape" class="block gold-link">02 — The Landscape as a Boundary</a>
+              <a href="#private-experience" class="block gold-link">03 — Life Beyond the Gates</a>
+              <a href="#design" class="block gold-link">04 — Architecture with Identity</a>
+              <a href="#conscious-luxury" class="block gold-link">05 — Exclusivity with Purpose</a>
+            </nav>
+          </div>
+
+        </aside>
+
+
+        <!-- ARTICLE CONTENT -->
+        <article class="article-copy order-1 lg:order-2 min-w-0">
+
+          <p class="text-[10px] uppercase tracking-[0.2em] text-kavora-gold font-semibold mb-5">
+            The New Geography of Privacy
+          </p>
+
+          <p class="!text-[17px] !leading-[1.9] !text-kavora-green">
+            There is a growing appeal in having a place that feels entirely your own. Not simply a luxurious room or a beautiful view, but a private world: a stretch of land, a carefully designed residence and a setting where the experience unfolds on your terms.
+          </p>
+
+          <p>
+            Across Africa, the idea of the ultra-exclusive estate brings together elements that have long defined exceptional hospitality: space, privacy, architecture, service and a strong relationship with the surrounding landscape. The result is an approach to luxury that is less concerned with spectacle and more focused on the quality of the experience.
+          </p>
+
+          <p>
+            An estate may be a coastal residence overlooking the Indian Ocean, a secluded property in the highlands, a private countryside retreat or a wilderness setting designed around nature. Each offers a different expression of exclusivity, shaped by its environment and the way it welcomes those who enter.
+          </p>
+
+          <blockquote>
+            “True exclusivity is not about closing the world out. It is about creating the freedom to experience it on your own terms.”
+          </blockquote>
+
+
+          <!-- SECTION 1 -->
+          <h2 id="new-definition"><span class="text-kavora-gold">01.</span> Beyond the Address: A New Definition of Luxury</h2>
+
+          <p>
+            For much of the luxury market, prestige has traditionally been associated with recognisable addresses, grand interiors and visible signs of status. The private estate offers a different proposition. Its value often lies in what is not immediately visible: the distance from the crowds, the freedom to set the pace and the sense of continuity between the residence and its surroundings.
+          </p>
+
+          <p>
+            Rather than moving between public spaces and scheduled activities, guests can experience a destination through a more intimate setting. Breakfast may unfold on a terrace overlooking the landscape. An afternoon may be spent exploring nearby trails or enjoying the stillness of the property. Evenings can centre on a meal arranged around personal preferences.
+          </p>
+
+          <p>
+            This is not one standard model. Some estates emphasise architecture and design, others offer extensive grounds and outdoor experiences, while some are built around hospitality, privacy and access to a particular landscape. The defining feature is the ability to shape the stay around the people experiencing it.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://naturalselection.travel/wp-content/uploads/2024/04/Gallery-1100x733_0021_06-Tuludi-Double-bedroom-exterior1.jpg"
+              alt="Refined modern living space opening onto an outdoor landscape"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              The strongest estate experiences bring architecture, hospitality and setting into a single conversation.
+            </figcaption>
+          </figure>
+
+          <p>
+            Privacy is central, but it does not have to mean isolation. An estate can serve as a base for discovering a region, meeting local specialists, exploring nearby communities or arranging activities that would be difficult to coordinate independently.
+          </p>
+
+          <p>
+            The appeal is therefore both practical and emotional: a sense of ease, the ability to make spontaneous decisions and the reassurance that the details have been considered before arrival.
+          </p>
+
+
+          <!-- SECTION 2 -->
+          <h2 id="landscape"><span class="text-kavora-gold">02.</span> The Landscape as a Boundary: Africa's Extraordinary Settings</h2>
+
+          <p>
+            Africa provides a remarkable range of environments for private-estate experiences. From the coastline of East Africa to the dramatic mountain regions, fertile highlands and wide-open wilderness of the south, each setting creates its own relationship between privacy and place.
+          </p>
+
+          <p>
+            Along the Swahili Coast, a private residence might be shaped by ocean breezes, tropical gardens and the region's distinctive architectural heritage. In the highlands, cooler temperatures, rolling terrain and expansive views can lend themselves to restorative countryside stays. In selected wilderness destinations, the surrounding environment becomes an essential part of the experience itself.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://www.tanzaniainsideandsafari.com/assets/images/serval5.jpg"
+              alt="Open natural landscape with wildlife and distant trees"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              In wilderness settings, the landscape is more than a backdrop; it helps define the entire stay.
+            </figcaption>
+          </figure>
+
+          <p>
+            What distinguishes an exceptional property is not necessarily its size. It is how effectively it works with the land. Orientation, natural light, prevailing weather, vegetation, views and access can all influence how a place feels throughout the day.
+          </p>
+
+          <p>
+            A well-positioned estate can offer a feeling of seclusion without losing its connection to the wider region. The landscape provides a natural sense of separation, while thoughtful planning ensures that the property remains comfortable and accessible.
+          </p>
+
+          <h3>Choosing a setting that fits the journey</h3>
+
+          <p>
+            The right environment depends on the purpose of the stay. A coastal estate may suit travellers seeking ocean activities and relaxed outdoor living. A countryside retreat may appeal to those looking for slower days and scenic surroundings. A wilderness property may be ideal for guests whose priorities include wildlife, photography and guided exploration.
+          </p>
+
+          <p>
+            Seasonal weather, road conditions, transfer times and nearby services should all be considered. The most exclusive setting is not automatically the best choice; it is the one that matches the traveller's priorities and makes the experience feel effortless.
+          </p>
+
+
+          <!-- SECTION 3 -->
+          <h2 id="private-experience"><span class="text-kavora-gold">03.</span> Life Beyond the Gates: The Art of Personalised Hospitality</h2>
+
+          <p>
+            An extraordinary estate is defined as much by the way it operates as by the way it looks. Service should feel attentive without becoming intrusive, and the experience should respond naturally to the needs of the people staying there.
+          </p>
+
+          <p>
+            Depending on the property, this may include a dedicated host, private dining arrangements, tailored excursions, wellness services or carefully coordinated transfers. It may also mean something simpler: a flexible schedule, a quiet breakfast, a favourite meal prepared well or the freedom to spend an entire afternoon without interruption.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://www.amboselikenyasafaris.com/wp-content/uploads/2024/02/Bush-breakfast-in-Amboseli.jpg"
+              alt="Carefully presented dining experience in an intimate setting"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Personalised hospitality is often expressed through thoughtful details rather than grand gestures.
+            </figcaption>
+          </figure>
+
+          <p>
+            Dining can become a central part of the experience. Private meals may showcase local ingredients, regional cooking traditions and menus shaped around individual preferences. Where appropriate, arrangements can connect guests with local chefs, producers and culinary specialists.
+          </p>
+
+          <p>
+            For travellers seeking discovery, the estate can act as a private base for exploring the surrounding area. Guided walks, cultural visits, wildlife experiences and water-based activities can be arranged according to the location and available expertise.
+          </p>
+
+          <p>
+            The distinction lies in coordination. When the practical details are handled well, guests spend less time managing logistics and more time enjoying the experience they came for.
+          </p>
+
+          <blockquote>
+            “The finest service is often the kind you remember for how naturally everything seemed to fall into place.”
+          </blockquote>
+
+          <p>
+            Personalisation should always be grounded in what a property can genuinely deliver. Before booking, it is worth clarifying which services are included, which require advance arrangements and what additional costs may apply.
+          </p>
+
+
+          <!-- SECTION 4 -->
+          <h2 id="design"><span class="text-kavora-gold">04.</span> Architecture with Identity: Estates That Belong to Their Place</h2>
+
+          <p>
+            Architecture gives an estate its character. At its best, it does more than create an impressive residence: it responds to the climate, materials, traditions and landscape around it.
+          </p>
+
+          <p>
+            Across Africa, contemporary design can sit alongside local building knowledge, from shaded courtyards and natural ventilation to stone, timber and textures that echo the surrounding terrain. The intention is not to make every estate look the same, but to create spaces that feel connected to their setting.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://images.homify.com/v1464635523/p/photo/image/1528926/AnaCampeche1.jpg"
+              alt="Modern residence designed around open spaces and natural materials"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Architecture can create privacy while maintaining a close relationship with the surrounding environment.
+            </figcaption>
+          </figure>
+
+          <h3>Space, light and a sense of calm</h3>
+
+          <p>
+            A carefully designed estate considers the transitions between indoor and outdoor living. Terraces, gardens, shaded walkways and generous openings can create a natural flow through the property. Private rooms offer retreat, while shared spaces allow guests to gather without feeling confined.
+          </p>
+
+          <p>
+            Material choices and maintenance matter just as much as the initial visual impact. Durable finishes, climate-appropriate systems and well-planned infrastructure help ensure that a property remains functional and comfortable over time.
+          </p>
+
+          <p>
+            The most convincing design does not compete with its surroundings. It gives them room to be seen, felt and experienced.
+          </p>
+
+
+          <!-- SECTION 5 -->
+          <h2 id="conscious-luxury"><span class="text-kavora-gold">05.</span> Exclusivity with Purpose: A More Considered Estate Experience</h2>
+
+          <p>
+            As interest in private travel grows, the conversation around exclusivity increasingly intersects with questions of environmental responsibility, community relationships and long-term stewardship.
+          </p>
+
+          <p>
+            An estate's relationship with its setting deserves careful attention. Water use, energy consumption, waste management, land management and the sourcing of materials can all affect its wider footprint. In sensitive environments, these considerations are particularly important.
+          </p>
+
+          <p>
+            The same is true of local economic relationships. Where possible, travellers can look for properties that employ local teams, work with regional suppliers, collaborate with skilled guides and contribute meaningfully to the places in which they operate.
+          </p>
+
+          <figure class="my-9">
+            <img
+              class="article-image"
+              src="https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/Asilia_Camp-Lodges_Jabali-Private-House_Header-Images.jpg.webp"
+              alt="A secluded property surrounded by greenery and natural scenery"
+              loading="lazy"
+            />
+            <figcaption class="text-[10px] leading-5 text-kavora-muted mt-3">
+              Responsible design and thoughtful local partnerships can strengthen the relationship between an estate and its surroundings.
+            </figcaption>
+          </figure>
+
+          <p>
+            Responsible travel does not look identical everywhere. The appropriate approach depends on the ecosystem, the local context and the practical realities of operating a property. Rather than relying on broad claims, travellers can ask specific questions about conservation practices, staffing, sourcing and community engagement.
+          </p>
+
+          <p>
+            This adds another dimension to exclusivity. A private stay can offer exceptional comfort while also encouraging a more informed relationship with the landscape and people that make it distinctive.
+          </p>
+
+
+          <!-- PLANNING GUIDE -->
+          <h2>How to Choose the Right Private Estate</h2>
+
+          <p>
+            The phrase “ultra-exclusive estate” can describe very different experiences. A considered choice begins by identifying what matters most, then evaluating the property against those priorities.
+          </p>
+
+          <div class="my-8 border-y border-kavora-line py-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">01 / Define the purpose</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Decide whether the stay is centred on relaxation, celebration, family time, exploration or complete privacy.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">02 / Understand the setting</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Consider the climate, surrounding landscape, access routes and distance from activities or essential services.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">03 / Clarify the service</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Confirm staffing, dining, transport, privacy arrangements and which experiences require additional booking.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold mb-2">04 / Look beyond appearances</p>
+                <p class="!text-sm !leading-7 !mb-0">
+                  Ask about practical facilities, property management, local partnerships and responsible operating practices.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <p>
+            It is also worth considering the composition of the travelling party. Families may prioritise flexible shared spaces and suitable activities. Couples may prefer a more intimate setting. Groups may need several private suites alongside comfortable areas for gathering.
+          </p>
+
+          <p>
+            Finally, allow time for the details to be arranged. The most suitable properties may have limited availability, and special requests often need advance coordination. Clear expectations make it easier to create a stay that feels both personal and well managed.
+          </p>
+
+
+          <!-- CONCLUSION -->
+          <h2>Beyond the Perimeter, Beyond Expectations</h2>
+
+          <p>
+            The rise of the ultra-exclusive African estate reflects a broader desire for travel that feels personal rather than prescribed. It is an invitation to experience a destination through privacy, space, thoughtful design and hospitality shaped around individual needs.
+          </p>
+
+          <p>
+            Africa's landscapes make this possibility especially compelling. From coastal sanctuaries and highland retreats to properties set within remarkable natural environments, the continent offers many ways to create a stay that feels distinct.
+          </p>
+
+          <p>
+            Ultimately, an exceptional estate is not defined by the height of its perimeter or the scale of its architecture. It is defined by the quality of the time spent there, the relationship it creates with its setting and the freedom it gives guests to experience a place differently.
+          </p>
+
+          <p>
+            Beyond the perimeter is not simply a more exclusive address. It is a different way of inhabiting the journey.
+          </p>
+
+
+          <!-- FINAL CTA -->
+          <div class="mt-14 bg-[#EEEAE0] p-7 sm:p-10">
+
+            <p class="eyebrow uppercase text-[9px] text-kavora-gold font-semibold mb-4">
+              The Kavora Perspective
+            </p>
+
+            <h2 class="!mt-0 !mb-4 text-4xl sm:text-5xl">
+              Discover a more personal side of Africa.
+            </h2>
+
+            <p class="!text-sm !leading-7 !mb-6">
+              Whether you are planning a private coastal retreat, a special celebration or a stay defined by privacy and exceptional hospitality, Kavora can help you explore possibilities that fit your vision.
+            </p>
+
+            <a
+              href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27d%20like%20to%20discuss%20a%20private%20estate%20or%20exclusive%20African%20stay."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-4 bg-kavora-green text-kavora-ivory px-6 py-4 text-[10px] uppercase tracking-[0.15em] hover:bg-kavora-forest transition"
+            >
+              Curate Your Experience
+              <span class="text-kavora-gold">↗</span>
+            </a>
+
+          </div>
+
+
+          <!-- ARTICLE FOOTER -->
+          <div class="mt-12 pt-7 border-t border-kavora-line flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+
+            <div>
+                 <span class="text-1xl font-editorial font-bold uppercase tracking-[0.15em] text-kavora-gold">
+              Kavora
+            </span>
+             
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-kavora-deep text-kavora-ivory">
+
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 py-12">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+
+        <div>
+          <a href="index.html" class="editorial-title text-4xl tracking-[0.08em]">KAVORA</a>
+          <p class="text-[9px] uppercase tracking-[0.28em] text-white/50 mt-2">
+            Luxury Travel & Concierge
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.14em] text-white/65">
+          <a href="index.html" class="hover:text-kavora-gold transition">Home</a>
+          <a href="journal.html" class="hover:text-kavora-gold transition">Journal</a>
+          <a href="index.html#experiences" class="hover:text-kavora-gold transition">Experiences</a>
+          <a href="index.html#contact" class="hover:text-kavora-gold transition">Contact</a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/15 mt-9 pt-5 flex flex-col sm:flex-row justify-between gap-3 text-[9px] text-white/40 tracking-[0.08em]">
+        <p>© 2026 Kavora. All rights reserved.</p>
+        <p>Curated journeys. Meaningful discoveries.</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    let menuOpen = false;
+
+
+    /* Navbar scroll state */
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 40) {
+
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if (menuOpen) {
+          toggleMenu();
+        }
+
+      });
+
+    });
+    </script>
+</body>
+</html>

@@ -1,477 +1,300 @@
-1. THE SERENGETI, PRIVATELY
-Page purpose
+ <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
+
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+    <!-- Logo -->
+<a href="#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
+
+
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+
+        <a
+          href="#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+        <a
+          href="#journal"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journal
+        </a>
+
+        <a
+          href="#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+          href="#contact"
+          class="group relative overflow-hidden border border-white/40 px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design Your Journey
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
 
-This should be the strongest safari-focused page. It should make someone imagine what a private Serengeti journey feels like rather than simply listing hotels and activities.
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
 
-Recommended page structure
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
 
-Hero
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
 
-THE SERENGETI, PRIVATELY
-A private safari through Tanzania's most iconic wilderness.
+        </span>
 
-Supporting copy:
+      </button>
 
-There is a difference between seeing the Serengeti and experiencing it on your own terms. Kavora designs private safari journeys around your pace, your interests and the way you want to encounter the wilderness.
+    </nav>
 
-CTA:
 
-Begin Designing Your Journey
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
 
-01 — The Idea
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
 
-A safari designed around you.
+        <div class="flex flex-col">
 
-The Serengeti does not need a rigid itinerary.
+          <a
+            href="#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Destinations
+          </a>
 
-Your days can begin slowly with coffee overlooking the plains, move into the wilderness when the light is right, and end beneath an open African sky. Whether your priority is wildlife, photography, landscape, conservation, solitude or simply time away from everything, the journey is shaped accordingly.
+          <a
+            href="#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Journeys
+          </a>
 
-Kavora handles the details behind the experience so that the journey itself feels effortless.
+          <a
+            href="#concierge"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Concierge
+          </a>
 
-02 — The Experience
+          <a
+            href="#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            About
+          </a>
 
-The Serengeti, beyond the expected.
+          <a
+            href="#journal"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Journal
+          </a>
 
-Potential experience blocks:
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-4xl text-white"
+          >
+            Contact
+          </a>
 
-Private game drives
-Sunrise and sunset safaris
-Great Migration experiences
-Wildlife photography
-Remote wilderness locations
-Private bush dining
-Cultural encounters
-Walking experiences where appropriate
-Hot-air balloon experience
-Exclusive-use or intimate safari camps
-Conservation-focused experiences
+        </div>
 
-The page should explain these rather than just listing them.
 
-For example:
+        <div class="mt-auto">
 
-Private Game Drives
+          <p class="mb-4 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
 
-Leave on your own schedule, spend longer with the sightings that matter to you, and let the day develop naturally rather than following a predetermined route.
+          <p class="max-w-xs font-luxury text-xl leading-relaxed text-white/70">
+            Private journeys, exceptional stays and seamless experiences across Africa.
+          </p>
 
-03 — Where You Might Go
+        </div>
 
-Possible journey flow:
+      </div>
 
-Arusha → Serengeti → Ngorongoro → Tarangire / additional wilderness
+    </div>
 
-But present this as:
+  </header>
 
-One possible rhythm
+ <script>
 
-rather than:
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-Day 1 / Day 2 / Day 3
+    let menuOpen = false;
 
-That preserves the luxury/custom nature.
 
-04 — The Places You Might Stay
+    /* Navbar scroll state */
 
-Introduce accommodation according to character:
+    window.addEventListener('scroll', () => {
 
-The Classic Safari Camp
-For an intimate, traditional safari atmosphere.
+      if (window.scrollY > 40) {
 
-The Private Wilderness Retreat
-For greater privacy and a more secluded experience.
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
 
-The Contemporary Safari Lodge
-For travellers looking for sophisticated design without losing connection to the landscape.
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
 
-Then say:
+      } else {
 
-Your accommodation is selected according to the journey we create together—not simply from a predetermined hotel list.
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
 
-05 — A Day in the Serengeti
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
 
-This is an important editorial section.
+      }
 
-Show a cinematic example:
+    });
 
-05:30 — First Light
 
-Coffee. Stillness. The first movement across the plains.
+    /* Mobile menu */
 
-06:00 — Into the Wilderness
+    function toggleMenu() {
 
-A private vehicle leaves camp while the landscape wakes.
+      menuOpen = !menuOpen;
 
-10:30 — Slow Morning
+      menuToggle.setAttribute('aria-expanded', menuOpen);
 
-Return to camp or continue exploring depending on the day's rhythm.
+      if (menuOpen) {
 
-13:00 — Lunch
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
 
-A considered meal overlooking the wilderness.
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
 
-16:00 — Afternoon Safari
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
 
-Return to the plains as the light begins to soften.
+      } else {
 
-19:00 — Under the African Sky
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
 
-Dinner, conversation and the sounds of the wilderness.
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
 
-End with:
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
 
-And tomorrow does not have to look like today.
+      }
 
-06 — When to Go
+    }
 
-Explain seasons:
 
-Dry season
-Green season
-Great Migration
-Calving season
-Predator activity
-Shoulder seasons
+    menuToggle.addEventListener('click', toggleMenu);
 
-But avoid promising a particular wildlife sighting.
 
-07 — Designed Around You
+    /* Close mobile menu when a link is clicked */
 
-A simple preference section:
+    mobileLinks.forEach(link => {
 
-For the photographer
-More time in the field and flexibility around light and wildlife.
+      link.addEventListener('click', () => {
 
-For the couple
-Privacy, intimacy and carefully chosen stays.
+        if (menuOpen) {
+          toggleMenu();
+        }
 
-For the family
-A comfortable pace and experiences suitable for different generations.
+      });
 
-For the returning traveller
-Less obvious routes and deeper experiences beyond the classic safari circuit.
-
-08 — Begin the Conversation
-
-Your Serengeti does not have to look like anyone else's.
-
-CTA:
-
-Start Designing Your Journey
-
-2. FROM SAVANNAH TO THE INDIAN OCEAN
-
-This should be your Safari + Zanzibar combination page.
-
-Hero
-
-FROM SAVANNAH TO THE INDIAN OCEAN
-A private journey from the wilderness of Tanzania to the shores of Zanzibar.
-
-Supporting copy:
-
-Begin among the great landscapes of northern Tanzania before exchanging the rhythm of the savannah for warm Indian Ocean waters. One journey. Two completely different worlds.
-
-01 — The Concept
-
-From wilderness to water.
-
-Start with Tanzania's wildlife-rich landscapes.
-
-Then slow everything down.
-
-After days of safari, the journey moves towards Zanzibar—white sand, warm water, historic streets and long evenings by the ocean.
-
-The contrast is what makes the journey.
-
-02 — The Safari
-
-Potential destinations:
-
-Serengeti
-
-Wildlife and expansive landscapes.
-
-Ngorongoro
-
-The dramatic crater and one of Tanzania's most distinctive ecosystems.
-
-Tarangire
-
-Ancient baobabs, elephants and a quieter safari atmosphere.
-
-Again, these should be presented as possibilities, not mandatory stops.
-
-03 — The Transition
-
-This could be a beautiful editorial section.
-
-From dust to salt air.
-
-One moment you are watching elephants move across the plains.
-
-The next, you are walking barefoot beside the Indian Ocean.
-
-The transition itself becomes part of the journey.
-
-04 — Zanzibar
-
-Break Zanzibar into experiences.
-
-The Coast
-
-Private beaches, swimming, sailing and slow afternoons.
-
-Stone Town
-
-History, architecture, markets and culture.
-
-The Indian Ocean
-
-Snorkelling, diving, dhow sailing and marine experiences.
-
-Island Dining
-
-Private dinners, beachfront meals and locally influenced cuisine.
-
-05 — How the Journey Might Flow
-
-Example:
-
-Arusha
-
-Arrival and preparation.
-
-↓
-
-Serengeti
-
-Private safari.
-
-↓
-
-Ngorongoro
-
-Landscape, wildlife and culture.
-
-↓
-
-Zanzibar
-
-Ocean, relaxation and exploration.
-
-↓
-
-Departure
-
-Return home refreshed rather than rushed.
-
-Again, label this:
-
-One possible journey
-
-06 — The Balance
-
-This section should sell the emotional value.
-
-Adventure without exhaustion.
-
-The itinerary is designed so that moments of intensity are balanced with time to slow down.
-
-Safari mornings.
-
-Long lunches.
-
-Ocean afternoons.
-
-Sunset drinks.
-
-Unhurried dinners.
-
-The goal is not to see everything.
-
-It is to experience the right things well.
-
-07 — Who This Journey Suits
-Couples
-Honeymooners
-Families
-Multi-generational travellers
-First-time visitors to Tanzania
-Travellers wanting both safari and beach
-08 — CTA
-
-Two landscapes. One considered journey.
-
-Begin Designing Your Journey
-
-3. THE AFRICAN HONEYMOON
-
-This should be more emotional and intimate than the other two pages.
-
-Hero
-
-THE AFRICAN HONEYMOON
-Wild landscapes. Intimate stays. Unforgettable moments designed for two.
-
-Supporting copy:
-
-Your honeymoon should feel like yours. Kavora creates private African journeys that combine wilderness, intimacy and time to simply be together.
-
-01 — The Idea
-
-Not a honeymoon package. Your honeymoon.
-
-No two couples want exactly the same experience.
-
-Some want adventure.
-
-Some want privacy.
-
-Some want extraordinary landscapes.
-
-Some want long days by the ocean.
-
-Some want all of it.
-
-Kavora designs around the couple—not around a predetermined package.
-
-02 — The Journey
-
-Possible combination:
-
-Arusha
-
-A relaxed beginning.
-
-↓
-
-Serengeti
-
-Private safari and wilderness.
-
-↓
-
-Ngorongoro
-
-Landscape and culture.
-
-↓
-
-Zanzibar
-
-Beach and Indian Ocean.
-
-Or a completely different route depending on the couple.
-
-03 — Moments Designed for Two
-
-This is where the page should become highly visual.
-
-Private Bush Dinner
-
-An intimate dinner surrounded by the wilderness.
-
-Sunrise Together
-
-Wake before the world and watch the landscape come alive.
-
-Safari for Two
-
-A private vehicle and a day without anyone else's schedule.
-
-Ocean Escape
-
-Slow afternoons beside the Indian Ocean.
-
-Sunset Sailing
-
-A private experience as the sun disappears over the water.
-
-A Night Under the Stars
-
-A carefully chosen wilderness stay where the sky becomes part of the experience.
-
-04 — The Places You Stay
-
-Don't make this a hotel catalogue.
-
-Instead:
-
-Intimate Safari Camps
-
-For couples who want to feel immersed in the wilderness.
-
-Private Villas
-
-For privacy, space and uninterrupted time together.
-
-Beach Retreats
-
-For slowing down after the safari.
-
-Exceptional Lodges
-
-For couples who want architecture, design and service alongside nature.
-
-05 — The Rhythm
-
-This is important for honeymooners.
-
-Adventure. Pause. Adventure. Pause.
-
-Morning safari.
-
-Slow breakfast.
-
-Pool.
-
-Massage.
-
-Private dinner.
-
-Sleep.
-
-Then another day designed differently.
-
-The itinerary should never feel like a checklist.
-
-06 — Make It Personal
-
-Potential customisation:
-
-Proposal experiences
-Anniversary additions
-Private dinners
-Photography
-Spa and wellness
-Sailing
-Diving/snorkelling
-Cultural experiences
-Wildlife experiences
-Private transfers
-Special celebrations
-Room/villa arrangements
-07 — When to Travel
-
-Explain the different seasons and how they affect:
-
-Safari
-Wildlife
-Weather
-Beach conditions
-Migration
-Privacy
-Pricing
-
-This is also a good place to establish Kavora as an expert advisor, not just a booking intermediary.
-
-08 — The Final Section
-
-Large emotional statement:
-
-Some journeys are remembered for where you went.
-Others are remembered for who you became there—together.
-
-Then:
-
-Design Your Honeymoon
+    });
+    </script>

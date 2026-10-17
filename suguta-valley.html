@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D23">
+
+  <title>Desert Monoliths | Kavora Journal</title>
+
+  <meta name="description" content="Discover the remote volcanic landscapes of Kenya's Suguta Valley through exclusive airborne expeditions, desert monoliths, and extraordinary Rift Valley scenery with Kavora Journal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            editorial: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: "Manrope", sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #102D23;
+    }
+
+    .article-image {
+      overflow: hidden;
+      background: #E8E4D9;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .article-image:hover img {
+      transform: scale(1.055);
+    }
+
+    .gold-line {
+      height: 1px;
+      width: 48px;
+      background: #C8A96B;
+    }
+
+    .story-copy p {
+      margin: 1.5rem 0;
+      line-height: 1.95;
+    }
+
+    .drop-cap:first-letter {
+      float: left;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 5rem;
+      line-height: .75;
+      padding: .12em .12em 0 0;
+      color: #C8A96B;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-kavora-ivory text-kavora-green antialiased">
+
+  <!-- PREMIUM NAVIGATION -->
+  <header class="sticky top-0 z-50 border-b border-kavora-line bg-kavora-ivory/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-14">
+
+      <a href="journal.html"
+         class="text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-muted transition hover:text-kavora-green">
+        ← Back to Journal
+      </a>
+
+      <a href="index.html"
+         class="font-editorial text-2xl font-medium uppercase tracking-[0.1em]">
+        Kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <div class="w-20"></div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- EDITORIAL HERO -->
+    <section class="mx-auto max-w-[1440px] px-6 pt-12 lg:px-14 lg:pt-20">
+
+      <div class="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
+
+        <div class="mb-5 flex items-center justify-center gap-3">
+
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
+            Remote Horizons
+          </span>
+
+          <span class="h-1.5 w-1.5 rounded-full bg-kavora-gold/50"></span>
+
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-muted">
+            Story 03
+          </span>
+
+        </div>
+
+        <h1 class="font-editorial text-5xl font-light leading-[1.06] tracking-[-0.025em] sm:text-6xl lg:text-7xl">
+          Desert Monoliths: Airborne Expeditions Across the
+          <span class="block italic text-kavora-gold">
+            Suguta Valley
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-7 text-kavora-muted sm:text-base sm:leading-8">
+          Venture into one of Kenya’s most remote Rift Valley landscapes, where volcanic ridges, ancient lava formations, shimmering salt flats, and desert horizons reveal a side of East Africa few travellers experience. From the air, the Suguta Valley becomes a dramatic study in scale, geology, and raw natural beauty.
+        </p>
+
+      </div>
+
+      <!-- RESPONSIVE THREE-IMAGE GALLERY -->
+      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+
+        <!-- IMAGE 1: RIFT VALLEY LANDSCAPE -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1100&q=85"
+            alt="Vast African wilderness with dramatic natural formations"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+            fetchpriority="high"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            The Great Rift
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 2: DESERT TERRAIN -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto md:-translate-y-4">
+
+          <img
+            src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"
+            alt="Expansive desert terrain with sculpted dunes and warm earth tones"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            Desert Frontiers
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 3: VOLCANIC LANDSCAPE -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1100&q=85"
+            alt="Monumental mountain ridges rising above a rugged landscape"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            Ancient Monoliths
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+      <p class="mt-3 text-center text-[10px] uppercase tracking-[0.16em] text-kavora-muted md:hidden">
+        Swipe to explore the gallery
+      </p>
+
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <section class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:px-14 lg:py-24">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="h-fit space-y-8 border-l-2 border-kavora-gold/40 pl-6 lg:sticky lg:top-32 lg:col-span-4">
+
+        <div>
+
+          <h2 class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold">
+            The Experience
+          </h2>
+
+          <p class="font-editorial text-2xl font-light italic leading-snug text-kavora-green">
+            “A private passage above a landscape shaped by fire, wind, and time.”
+          </p>
+
+        </div>
+
+        <div class="h-px w-full bg-kavora-line"></div>
+
+        <div class="space-y-5">
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Location
+            </span>
+
+            <span class="text-sm font-medium">
+              Suguta Valley, Northern Kenya
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Best Time to Journey
+            </span>
+
+            <span class="text-sm font-medium">
+              Typically the drier months, subject to local conditions
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Journey Style
+            </span>
+
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-kavora-gold">
+              Private aviation · Remote exploration
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Expedition Focus
+            </span>
+
+            <span class="text-sm font-medium">
+              Rift Valley geology, volcanic formations, aerial photography, and remote wilderness
+            </span>
+          </div>
+
+        </div>
+
+        <div class="pt-2">
+
+          <a
+            href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27m%20interested%20in%20a%20bespoke%20Suguta%20Valley%20expedition."
+            class="block w-full bg-kavora-green px-6 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-ivory shadow-md transition-colors duration-300 hover:bg-kavora-forest"
+          >
+            Plan a Private Expedition
+          </a>
+
+        </div>
+
+      </aside>
+
+      <!-- MAIN ARTICLE -->
+      <article class="story-copy mx-auto max-w-2xl font-sans text-sm font-light leading-8 text-kavora-green/90 sm:text-base lg:col-span-8">
+
+        <p class="drop-cap !mt-0 font-editorial text-2xl font-light leading-relaxed tracking-tight text-kavora-green sm:text-2xl">
+          In northern Kenya, the Suguta Valley unfolds beneath an immense sky. Part of the dramatic East African Rift system, this remote landscape is marked by volcanic terrain, rugged escarpments, seasonal waterways, and intensely arid stretches of earth. From the ground, its scale can be difficult to comprehend. Seen from the air, the valley reveals the powerful geological forces that shaped it.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          A Landscape Sculpted by
+          <span class="italic text-kavora-gold">Ancient Fire</span>
+        </h2>
+
+        <p>
+          The Suguta Valley lies within the northern Kenyan Rift Valley, a region shaped by tectonic movement and volcanic activity over immense spans of geological time. Its surrounding highlands, lava fields, and eroded formations tell a story of a changing Earth. The landscape is not simply empty desert; it is a complex natural system where geology, climate, and water interact.
+        </p>
+
+        <p>
+          In this environment, dark volcanic rock can contrast sharply with pale sediment, mineral-stained earth, and distant mountain ridges. Light changes the character of the terrain throughout the day, drawing long shadows across the valley floor and revealing textures that are easily missed from a single viewpoint.
+        </p>
+
+        <!-- ARTICLE IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+
+            <img
+              src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=85"
+              alt="Wind-shaped desert landscape stretching towards the horizon"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            Wind, heat, and geological time leave their signatures across arid landscapes.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Airborne Perspectives:
+          <span class="italic text-kavora-gold">The Valley from Above</span>
+        </h2>
+
+        <p>
+          An aerial expedition offers a perspective that conventional road journeys cannot easily provide. From a properly planned flight, the Rift Valley's contours become more legible: ridgelines trace the horizon, drainage channels cut through dry terrain, and isolated geological formations emerge from the surrounding landscape.
+        </p>
+
+        <p>
+          The experience is as much about observation as spectacle. Aerial photography can reveal the relationship between different landforms, while the shifting angle of sunlight changes the appearance of rock, sand, and distant escarpments. For travellers interested in geography and natural history, the flight becomes an opportunity to see the land as a connected system rather than a collection of isolated viewpoints.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Remote Horizons and
+          <span class="italic text-kavora-gold">The Art of Discovery</span>
+        </h2>
+
+        <p>
+          The appeal of the Suguta Valley lies partly in its remoteness. Far from the familiar rhythms of major tourist centres, the landscape rewards careful preparation and a willingness to travel at a different pace. Its open horizons and stark contrasts offer a powerful setting for travellers seeking geological wonders, dramatic photography, and a deeper appreciation of northern Kenya's natural environments.
+        </p>
+
+        <p>
+          The valley should never be treated as an ordinary desert excursion. Extreme heat, limited infrastructure, difficult terrain, and changing local conditions make professional planning essential. Any landing or ground exploration must be assessed in advance, with appropriate permissions, experienced local support, sufficient water, reliable communications, and a clear emergency plan.
+        </p>
+
+        <!-- SECONDARY IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85"
+              alt="Rugged mountain formations beneath a vast open sky"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            The wider Rift Valley region is defined by dramatic elevation changes and powerful geological histories.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Exploration with a
+          <span class="italic text-kavora-gold">Considered Footprint</span>
+        </h2>
+
+        <p>
+          Remote landscapes are not empty spaces waiting to be discovered. They are part of larger ecological and cultural systems, and responsible exploration begins with recognising that fact. Flight paths, landing locations, and ground activities should be planned with attention to wildlife, fragile terrain, local communities, and applicable conservation requirements.
+        </p>
+
+        <p>
+          Working with experienced regional operators helps make an expedition safer and more meaningful. It also creates opportunities to understand the landscape through local knowledge rather than viewing it only from a distance. Luxury in a place like Suguta is not simply access to a private aircraft; it is the ability to explore thoughtfully, with careful preparation and respect for the environment.
+        </p>
+
+        <p>
+          Across the Suguta Valley, the monoliths, ridges, and volcanic expanses offer a reminder that some of East Africa's most extraordinary experiences are found beyond the familiar routes. From above, the land becomes a map of ancient forces and ongoing change. The journey is not about conquering the wilderness, but about seeing it clearly, travelling responsibly, and leaving its silence undisturbed.
+        </p>
+
+        <!-- ARTICLE SIGN-OFF -->
+        <div class="mt-12 border-t border-kavora-line pt-7">
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+            <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-kavora-muted">
+              Published Editorial · Kavora Journal
+            </span>
+
+            <div class="flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-kavora-gold"></span>
+              <span class="h-2 w-2 rounded-full bg-kavora-green"></span>
+              <span class="h-2 w-2 rounded-full bg-kavora-muted"></span>
+            </div>
+
+          </div>
+
+          <p class="mt-3 text-xs leading-6 text-kavora-muted">
+            Aircraft operations, access permissions, landing options, and weather conditions must be confirmed with qualified local operators before an expedition. The imagery on this page is illustrative and is not represented as verified photography of the Suguta Valley.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- CORPORATE FOOTER -->
+  <footer class="border-t border-kavora-forest/30 bg-kavora-deep py-12 text-kavora-ivory">
+
+    <div class="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-6 px-6 text-center sm:flex-row sm:text-left lg:px-14">
+
+      <a href="index.html" class="font-editorial text-xl font-medium uppercase tracking-[0.1em]">
+        Kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <p class="text-[10px] font-light uppercase tracking-wider text-kavora-muted">
+        © 2026 Kavora Luxury Travel &amp; Concierge. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

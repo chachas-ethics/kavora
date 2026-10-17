@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D23">
+
+  <title>Dhows of Antiquity | Kavora Journal</title>
+
+  <meta name="description" content="Discover Zanzibar's dhow heritage, Swahili coastal culture, and the hidden islands shaped by centuries of Indian Ocean trade with Kavora Journal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            editorial: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: "Manrope", sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #102D23;
+    }
+
+    .article-image {
+      overflow: hidden;
+      background: #E8E4D9;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .article-image:hover img {
+      transform: scale(1.055);
+    }
+
+    .gold-line {
+      height: 1px;
+      background: #C8A96B;
+      width: 48px;
+    }
+
+    .story-copy p {
+      margin: 1.5rem 0;
+      line-height: 1.95;
+    }
+
+    .drop-cap:first-letter {
+      float: left;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 5rem;
+      line-height: .75;
+      padding: .12em .12em 0 0;
+      color: #C8A96B;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-kavora-ivory text-kavora-green antialiased">
+
+  <!-- PREMIUM NAVIGATION -->
+  <header class="sticky top-0 z-50 border-b border-kavora-line bg-kavora-ivory/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-14">
+
+      <a href="journal.html"
+         class="text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-muted transition hover:text-kavora-green">
+        ← Back to Journal
+      </a>
+
+      <a href="index.html"
+         class="font-editorial text-2xl font-medium uppercase tracking-[0.1em]">
+        Kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <div class="w-20"></div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- EDITORIAL HERO -->
+    <section class="mx-auto max-w-[1440px] px-6 pt-12 lg:px-14 lg:pt-20">
+
+      <div class="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
+
+        <div class="mb-5 flex items-center justify-center gap-3">
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
+            Ocean Stories
+          </span>
+
+          <span class="h-1.5 w-1.5 rounded-full bg-kavora-gold/50"></span>
+
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-muted">
+            Story 02
+          </span>
+        </div>
+
+        <h1 class="font-editorial text-5xl font-light leading-[1.06] tracking-[-0.025em] sm:text-6xl lg:text-7xl">
+          Dhows of Antiquity: Navigating the Hidden
+          <span class="block italic text-kavora-gold">
+            Zanzibar Archipelago
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-7 text-kavora-muted sm:text-base sm:leading-8">
+          Follow the rhythm of the monsoon winds through a seascape shaped by sailors, spice merchants, and Swahili coastal communities. Beyond Zanzibar’s familiar shores lies a quieter world of historic harbours, coral islands, and traditions carried across the Indian Ocean.
+        </p>
+
+      </div>
+
+      <!-- RESPONSIVE IMAGE GALLERY -->
+      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+
+        <!-- IMAGE 1 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"
+            alt="Traditional sailing boat moving across Indian Ocean waters"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+            fetchpriority="high"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/40 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            The Indian Ocean
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 2 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto md:-translate-y-4">
+
+          <img
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"
+            alt="Ocean waves rolling towards a tropical coastline"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/40 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            Monsoon Passage
+          </figcaption>
+
+        </figure>
+
+        <!-- IMAGE 3 -->
+        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
+
+          <img
+            src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1100&q=85"
+            alt="A secluded tropical beach framed by palm trees"
+            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/40 via-transparent to-transparent"></div>
+
+          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
+            Hidden Shores
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+      <p class="mt-3 text-center text-[10px] uppercase tracking-[0.16em] text-kavora-muted md:hidden">
+        Swipe to explore the gallery
+      </p>
+
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <section class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:px-14 lg:py-24">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="h-fit space-y-8 border-l-2 border-kavora-gold/40 pl-6 lg:sticky lg:top-32 lg:col-span-4">
+
+        <div>
+          <h2 class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold">
+            The Experience
+          </h2>
+
+          <p class="font-editorial text-2xl font-light italic leading-snug text-kavora-green">
+            “A journey into the maritime memory of the Swahili coast.”
+          </p>
+        </div>
+
+        <div class="h-px w-full bg-kavora-line"></div>
+
+        <div class="space-y-5">
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Region
+            </span>
+            <span class="text-sm font-medium">
+              Zanzibar Archipelago, Tanzania
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Best Time to Journey
+            </span>
+            <span class="text-sm font-medium">
+              June–October and January–February
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Journey Style
+            </span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-kavora-gold">
+              Cultural discovery · Private sailing
+            </span>
+          </div>
+
+          <div>
+            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              A Journey Through
+            </span>
+            <span class="text-sm font-medium">
+              Stone Town, coastal villages, sandbanks and neighbouring islands
+            </span>
+          </div>
+
+        </div>
+
+        <div class="pt-2">
+          <a
+            href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27m%20interested%20in%20a%20bespoke%20Zanzibar%20archipelago%20journey."
+            class="block w-full bg-kavora-green px-6 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-ivory shadow-md transition-colors duration-300 hover:bg-kavora-forest"
+          >
+            Plan a Private Journey
+          </a>
+        </div>
+
+      </aside>
+
+      <!-- MAIN ARTICLE -->
+      <article class="story-copy mx-auto max-w-2xl font-sans text-sm font-light leading-8 text-kavora-green/90 sm:text-base lg:col-span-8">
+
+        <p class="drop-cap !mt-0 font-editorial text-2xl font-light leading-relaxed text-kavora-green sm:text-3xl">
+          Long before modern ferries and flight paths connected Zanzibar to the world, wooden dhows traced the Indian Ocean’s ancient highways. Their triangular lateen sails caught seasonal monsoon winds, carrying people, ideas, timber, textiles, ceramics, and spices between East Africa, Arabia, Persia, and the Indian subcontinent. The sea was not a boundary; it was a meeting place.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Where the Wind Writes
+          <span class="italic text-kavora-gold">the Route</span>
+        </h2>
+
+        <p>
+          The dhow belongs to a much wider maritime story. For centuries, sailors learned to read the changing winds and currents of the western Indian Ocean. The seasonal monsoon system helped shape when vessels departed, where they anchored, and how coastal settlements grew into busy trading centres. Zanzibar’s position along these routes connected its harbours to a world that stretched far beyond the horizon.
+        </p>
+
+        <p>
+          A traditional dhow is both a vessel and a record of accumulated craft knowledge. Wooden hulls, carefully shaped ribs, and the distinctive lateen sail reflect generations of adaptation to the sea. The designs and construction methods vary across the region, but the underlying skill remains visible in the work of boatbuilders and sailors who continue to keep maritime traditions alive.
+        </p>
+
+        <!-- ARTICLE IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85"
+              alt="Turquoise Indian Ocean water and pale sand along a tropical island coast"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            Along the Swahili coast, the ocean has long connected island communities, commerce, and culture.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Stone Town and the
+          <span class="italic text-kavora-gold">Memory of Trade</span>
+        </h2>
+
+        <p>
+          In Zanzibar’s Stone Town, maritime history can be read in the architecture, the narrow streets, the carved wooden doors, and the layers of cultural influence that define the old town. Merchants and travellers arrived with goods and beliefs from different shores, while local Swahili communities shaped a distinct culture rooted in the coast. The result is a place whose identity cannot be separated from the sea.
+        </p>
+
+        <p>
+          Spices became part of Zanzibar’s global reputation, but the island’s history is broader and more complex than a single commodity. Trade also brought profound inequalities, including the violence of the slave trade. A thoughtful journey makes room for this difficult history alongside the artistry, resilience, and cultural exchange that have shaped the archipelago.
+        </p>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Beyond the Familiar Shore:
+          <span class="italic text-kavora-gold">The Quiet Archipelago</span>
+        </h2>
+
+        <p>
+          Away from the busiest waterfronts, the archipelago reveals a slower rhythm: fishing boats returning to shore, village life following the tides, coral rag landscapes, and small islands set against open water. The experience is less about ticking off landmarks and more about understanding how people live with the ocean, how local knowledge passes between generations, and how the tides continue to shape daily routines.
+        </p>
+
+        <p>
+          A private sailing excursion can offer a different perspective on these coastlines, provided it is arranged with experienced local operators and respect for marine conditions. Routes should be adapted to the weather, tides, conservation rules, and the wishes of the communities being visited. The most memorable itinerary is not necessarily the most remote; it is the one that allows time to listen, observe, and travel responsibly.
+        </p>
+
+        <!-- SECONDARY IMAGE -->
+        <figure class="my-10 space-y-3">
+
+          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+            <img
+              src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1400&q=85"
+              alt="Sailboat on a calm stretch of open sea"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
+            A sailing journey is best shaped around local expertise, safe conditions, and respect for coastal life.
+          </figcaption>
+
+        </figure>
+
+        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
+          Travel That Leaves a
+          <span class="italic text-kavora-gold">Considered Footprint</span>
+        </h2>
+
+        <p>
+          The future of Zanzibar’s maritime heritage depends on more than preserving a beautiful image of the past. Supporting locally owned guides, skilled boatbuilders, responsible sailing operators, and community-led experiences helps keep knowledge and economic value within the places that make the journey meaningful. Visitors can contribute by asking questions, choosing operators who follow safety and environmental standards, and treating cultural sites with care.
+        </p>
+
+        <p>
+          To navigate the Zanzibar Archipelago by dhow is to encounter a living relationship between wind, water, memory, and movement. The sails may recall an older age of navigation, but the story continues in the people who work the sea today. For the traveller willing to move beyond the obvious, the islands offer not an escape from history, but an intimate passage through it.
+        </p>
+
+        <!-- ARTICLE SIGN-OFF -->
+        <div class="mt-12 border-t border-kavora-line pt-7">
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+            <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-kavora-muted">
+              Published Editorial · Kavora Journal
+            </span>
+
+            <div class="flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-kavora-gold"></span>
+              <span class="h-2 w-2 rounded-full bg-kavora-green"></span>
+              <span class="h-2 w-2 rounded-full bg-kavora-muted"></span>
+            </div>
+
+          </div>
+
+          <p class="mt-3 text-xs leading-6 text-kavora-muted">
+            Travel conditions, sailing routes, and access to smaller islands vary by season and local regulations. Confirm details with reputable local operators before travelling.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- CORPORATE FOOTER -->
+  <footer class="border-t border-kavora-forest/30 bg-kavora-deep py-12 text-kavora-ivory">
+
+    <div class="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-6 px-6 text-center sm:flex-row sm:text-left lg:px-14">
+
+      <a href="index.html" class="font-editorial text-xl font-medium uppercase tracking-[0.1em]">
+        Kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <p class="text-[10px] font-light uppercase tracking-wider text-kavora-muted">
+        © 2026 Kavora Luxury Travel &amp; Concierge. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

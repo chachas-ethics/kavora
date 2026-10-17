@@ -1,0 +1,1218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D23">
+
+  <title>Kavora Journal | Luxury Travel & Concierge</title>
+
+  <meta name="description" content="Discover exceptional destinations, luxury stays, safari experiences and thoughtful travel guides with Kavora Journal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            editorial: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #102D23;
+      font-family: "Manrope", sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #102D23;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #C8A96B;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .article-image {
+      overflow: hidden;
+      background: #E8E4D9;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .article-card:hover .article-image img {
+      transform: scale(1.055);
+    }
+
+    .article-card {
+      animation: appear .45s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .category-button {
+      white-space: nowrap;
+      transition: all .25s ease;
+    }
+
+    .category-button.active {
+      color: #F7F5EF;
+      background: #102D23;
+      border-color: #102D23;
+    }
+
+    .search-field:focus {
+      outline: none;
+      border-color: #C8A96B;
+      box-shadow: 0 0 0 3px rgb(200 169 107 / 12%);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: #C8A96B;
+      width: 48px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <!-- EDITORIAL INTRO -->
+  <main>
+
+    <section class="mx-auto max-w-[1440px] px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20 lg:px-14 lg:pt-24">
+
+      <div class="mb-7 flex items-center gap-3">
+        <p class="text-[10px] font-semibold uppercase tracking-[.25em] text-kavora-gold">
+          The Kavora Journal
+        </p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1.5fr_.65fr] lg:items-end">
+
+        <h1 class="max-w-4xl font-editorial text-[clamp(5rem,8vw,7.5rem)] leading-[.84] tracking-[-.045em] text-kavora-green">
+          The world,<br>
+          <span class="italic text-kavora-gold">experienced</span><br>
+          differently.
+        </h1>
+
+        <div class="max-w-md lg:justify-self-end lg:pb-2">
+          <p class="text-sm leading-7 text-kavora-muted sm:text-base sm:leading-8">
+            A considered perspective on travel, extraordinary destinations and the art of living well. Discover stories that inspire your next remarkable journey.
+          </p>
+
+          <a href="#journal" class="mt-6 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.16em]">
+            Discover our stories
+            <span class="text-lg text-kavora-gold">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-kavora-line sm:mt-16"></div>
+
+      <div class="flex flex-wrap items-center justify-between gap-4 py-5">
+        <p class="text-[10px] uppercase tracking-[.17em] text-kavora-muted">
+          A collection of places, people & possibilities
+        </p>
+      </div>
+    </section>
+
+
+    <!-- FEATURED ARTICLE -->
+    <section class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+      <article class="grid overflow-hidden bg-kavora-green lg:grid-cols-[1.25fr_.75fr]">
+
+        <a href="beyond.html" id="featuredLink" class="article-image relative block min-h-[300px] sm:min-h-[440px] lg:min-h-[580px]" aria-label="Read featured story">
+          <img
+            id="featuredImage"
+            src="https://stories.climateandforests-undp.org/the-vital-role-of-african-savanna-landscapes-in-global-climate-action/assets/H9AJ6xC1jL/sh-unsplash_t-lfvx-7ivg-4096x2730.jpg"
+            alt="African savannah landscape"
+            fetchpriority="high"
+          >
+          <div class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 sm:left-8 sm:top-8">
+            <span class="text-[9px] font-bold uppercase tracking-[.2em]">Our Editor's selection</span>
+          </div>
+        </a>
+
+        <div class="flex flex-col justify-center px-6 py-10 sm:px-10 sm:py-14 lg:px-12 xl:px-16">
+
+          <div class="mb-6 flex items-center gap-3">
+            <p id="featuredCategory" class="text-[9px] font-semibold uppercase tracking-[.22em] text-kavora-gold">
+              Destinations
+            </p>
+          </div>
+
+          <h2 id="featuredTitle" class="font-editorial text-4xl leading-[1.05] tracking-[-.02em] text-kavora-ivory sm:text-5xl xl:text-6xl">
+            Beyond the ordinary: discovering Africa's extraordinary escapes
+          </h2>
+
+          <p id="featuredExcerpt" class="mt-6 max-w-lg text-sm leading-7 text-white/65">
+            Discover the landscapes, experiences and hidden corners that make East Africa an unforgettable destination.
+          </p>
+
+          <a href="beyond.html" id="featuredRead" class="mt-9 inline-flex w-fit items-center gap-4 border-b border-kavora-gold pb-3 text-[10px] font-semibold uppercase tracking-[.16em] text-kavora-ivory transition hover:text-kavora-gold">
+            Read the featured story
+            <span class="text-base text-kavora-gold">↗</span>
+          </a>
+
+          <div class="mt-12 border-t border-white/15 pt-5">
+            <p class="text-[9px] uppercase tracking-[.18em] text-white/40">
+              Curated by Kavora Luxury Travel & Concierge
+            </p>
+          </div>
+
+        </div>
+      </article>
+    </section>
+ 
+<!-- JOURNAL SECTION -->
+<section id="journal" class="relative overflow-hidden bg-[#F7F5EF] py-24 sm:py-32">
+
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-10 lg:px-16">
+
+    <!-- SECTION HEADER -->
+    <div class="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <div>
+        <span class="mb-5 block text-xs uppercase tracking-[0.3em] text-[#9A8050]">
+          The Kavora Journal
+        </span>
+
+        <h2 class="font-['Cormorant_Garamond'] text-5xl leading-none text-[#102D23] sm:text-6xl lg:text-7xl">
+          Stories beyond <span class="italic text-kavora-gold">the ordinary.</span>
+        </h2>
+      </div>
+
+      <p class="max-w-md text-sm leading-7 text-[#74786F]">
+        A considered collection of extraordinary places, rare experiences,
+        and journeys that reveal Africa from a different perspective.
+      </p>
+    </div>
+
+
+    <!-- TOP ROW: FEATURED STORIES -->
+    <div class="mb-16">
+
+      <div class="mb-7 flex items-center justify-between border-b border-[#E4E0D6] pb-4">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-[#9A8050]">
+            The collection
+          </span>
+          <h3 class="mt-2 font-['Cormorant_Garamond'] text-3xl text-[#102D23]">
+            Featured stories
+          </h3>
+          
+             </div>
+
+        <span class="text-xs tracking-widest text-kavora-gold sm:block">
+          SCROLL TO EXPLORE →
+        </span>
+      </div>
+
+      <!-- Independent top carousel -->
+      <div
+        id="featuredArticles"
+        class="flex w-full snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain pb-5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+
+        <!-- ARTICLE 01 -->
+        <a href="bwindi.html"
+          class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/d4/02/b5/experience-the-beauty.jpg?w=1200&h=-1&s=1"
+              alt="Bwindi Impenetrable forest"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+            <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+              04
+            </span>
+
+            <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+              Iconic sanctuaries
+            </span>
+          </div>
+
+          <div class="pt-5">
+            <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+              The Emerald Sanctuary: Ridge Suites of Bwindi Impenetrable
+            </h4>
+
+            <p class="mt-3 text-sm leading-6 text-[#74786F]">
+              Where ancient rainforest, extraordinary wildlife and secluded
+              luxury come together.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F]">
+                DISCOVER MORE
+              </span>
+              <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </div>
+        </a>
+
+
+        <!-- ARTICLE 02 -->
+        <a href="zanzibar-archipelago.html"
+          class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+            <img
+              src="https://www.tanzaniatourism.com/images/uploads/Zanzibar_Dhow_Sunset_Cruise_03.jpg"
+              alt="Zanzibar Dhows"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+            <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+              05
+            </span>
+
+            <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+              Expeditions
+            </span>
+          </div>
+
+          <div class="pt-5">
+            <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+              Dhows of Antiquity: Navigating the Hidden Zanzibar Archipelago
+            </h4>
+
+            <p class="mt-3 text-sm leading-6 text-[#74786F]">
+              Discover forgotten islands and the timeless rhythm of the Indian Ocean.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F]">
+                DISCOVER MORE
+              </span>
+              <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </div>
+        </a>
+
+
+        <!-- ARTICLE 03 -->
+        <a href="suguta-valley.html"
+          class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+            <img
+              src="https://www.maranomads.com/uploads/0000/5/2023/02/27/suguta-valley-2.jpg"
+              alt="Suguta Valley"
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+            <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+              06
+            </span>
+
+            <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+              Remote escapes
+            </span>
+          </div>
+
+          <div class="pt-5">
+            <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+              Desert Monoliths: Airborne Expeditions Across the Suguta Valley
+            </h4>
+
+            <p class="mt-3 text-sm leading-6 text-[#74786F]">
+              A journey into remote landscapes shaped by time, silence and scale.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F]">
+                DISCOVER MORE
+              </span>
+              <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- BOTTOM ROW: MORE STORIES -->
+    <div>
+
+      <div class="mb-7 flex items-center justify-between border-b border-[#E4E0D6] pb-4">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-[#9A8050]">
+            Beyond the familiar
+          </span>
+          <h3 class="mt-2 font-['Cormorant_Garamond'] text-3xl text-[#102D23]">
+            More to discover
+          </h3>
+        </div>
+
+        <span class="text-xs tracking-widest text-kavora-gold sm:block">
+          SCROLL TO EXPLORE →
+        </span>
+      </div>
+
+      <!-- Independent bottom carousel -->
+      <div
+        id="moreArticles"
+        class="flex w-full snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain pb-5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+
+        <!-- ARTICLE 04 -->
+<a href="serengeti.html" class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+  <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+    <img
+      src="https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg"
+      alt="serengeti Wildebeest Migration"
+      class="h-full w-full object-cover transition duration-[1400ms] ease-out group-hover:scale-105"
+      loading="lazy"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+    <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+      07
+    </span>
+
+    <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+      Expeditions
+    </span>
+  </div>
+
+  <div class="pt-5">
+    <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+      The Migration Masterpiece: Moving Canvas Sanctuaries of the <span class="italic text-[#9A8050]">Serengeti Plains</span>
+    </h4>
+
+    <p class="mt-3 text-sm leading-6 text-[#74786F] font-light">
+      Follow the prehistoric pulse of the Great Migration from an ultra-private, ultra-luxurious mobile campsite engineered to move dynamically with the herds.
+    </p>
+
+    <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+      <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F] font-semibold">
+        DISCOVER MORE
+      </span>
+      <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+    </div>
+  </div>
+</a>
+
+
+
+       <!-- ARTICLE 05 -->
+<a href="maasai-mara.html" class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+  <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+    <img
+      src="https://www.maasaimarakenyapark.com/wp-content/uploads/2022/04/masai-mara-safari-kenya.jpg"
+      alt="Maasai Mara Kenya"
+      class="h-full w-full object-cover transition duration-[1400ms] ease-out group-hover:scale-105"
+      loading="lazy"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+    <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+      08
+    </span>
+
+    <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+      Expeditions
+    </span>
+  </div>
+
+  <div class="pt-5">
+    <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+      The Mara Chronicles: Classic Grandeur on the <span class="italic text-[#9A8050]">Great Savannah Plains</span>
+    </h4>
+
+    <p class="mt-3 text-sm leading-6 text-[#74786F] font-light">
+      Experience the quintessential African safari via private aircraft transfers and ultra-exclusive, low-impact luxury canvas camps meticulously placed near historical river crossing sectors.
+    </p>
+
+    <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+      <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F] font-semibold">
+        DISCOVER MORE
+      </span>
+      <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+    </div>
+  </div>
+</a>
+
+
+
+      <!-- ARTICLE 06 -->
+<a href="rwanda-gorillas.html" class="group w-[85vw] max-w-[460px] shrink-0 snap-start sm:w-[460px]">
+
+  <div class="relative aspect-[4/3] overflow-hidden bg-[#E4E0D6]">
+    <img
+      src="https://www.semugorillasafarisandtours.com/wp-content/uploads/2026/08/baby-mountain-gorilla-volcanoes-national-park-rwanda-close-up-2027.jpg"
+      alt="Volcanoes National Park in Rwanda"
+      class="h-full w-full object-cover transition duration-[1400ms] ease-out group-hover:scale-105"
+      loading="lazy"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/70 via-transparent to-transparent"></div>
+
+    <span class="absolute left-5 top-5 text-xs tracking-[0.2em] text-white">
+      09
+    </span>
+
+    <span class="absolute bottom-5 left-5 border border-white/50 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white">
+      Odysseys
+    </span>
+  </div>
+
+  <div class="pt-5">
+    <h4 class="font-['Cormorant_Garamond'] text-3xl leading-tight text-[#102D23] transition-colors group-hover:text-[#9A8050]">
+      Sovereign Slopes: Private Research Treks in <span class="italic text-[#9A8050]">Volcanoes National Park</span>
+    </h4>
+
+    <p class="mt-3 text-sm leading-6 text-[#74786F] font-light">
+      Go beyond standard permits. Secure elite access to join head primatologists on deep-forest tracking patrols, funding vital ape conservation in an intimate, low-impact encounter.
+    </p>
+
+    <div class="mt-5 flex items-center justify-between border-t border-[#E4E0D6] pt-4">
+      <span class="text-[10px] uppercase tracking-[0.2em] text-[#74786F] font-semibold">
+        DISCOVER MORE
+      </span>
+      <span class="text-lg text-[#9A8050] transition-transform group-hover:translate-x-1">→</span>
+    </div>
+  </div>
+</a>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- BRAND PHILOSOPHY -->
+    <section id="about" class="bg-[#EEECE3]">
+      <div class="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-14 lg:py-28">
+
+        <div class="max-w-xl">
+          <p class="mb-5 text-[10px] font-semibold uppercase tracking-[.23em] text-kavora-muted">
+            The Kavora perspective
+          </p>
+
+          <h2 class="font-editorial text-5xl leading-[.98] tracking-[-.03em] sm:text-6xl lg:text-7xl">
+            Travel is not just where you go.
+            <span class="italic text-kavora-gold">It's how you experience it.</span>
+          </h2>
+        </div>
+
+        <div class="max-w-lg lg:justify-self-end">
+          <p class="text-sm leading-8 text-kavora-muted">
+            We believe the most memorable journeys are shaped by thoughtful details, meaningful encounters and experiences that stay with you long after you return.
+          </p>
+
+          <p class="mt-5 text-sm leading-8 text-kavora-muted">
+            The Kavora Journal brings together inspiration and practical insight for those seeking a more considered approach to travel.
+          </p>
+
+          <a href="#contact" class="mt-8 inline-flex items-center gap-4 border-b border-kavora-green pb-3 text-[10px] font-bold uppercase tracking-[.15em]">
+            Discover Kavora
+            <span class="text-kavora-gold">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="bg-kavora-green">
+      <div class="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-20 lg:px-14 lg:py-24">
+
+        <div>
+          <p class="mb-5 text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-gold">
+            A note from Kavora
+          </p>
+
+          <h2 class="max-w-2xl font-editorial text-5xl leading-[.95] tracking-[-.03em] text-kavora-ivory sm:text-6xl lg:text-7xl">
+            Inspiration for your next great escape.
+          </h2>
+
+          <p class="mt-5 max-w-lg text-sm leading-7 text-white/60">
+            Discover new stories, remarkable destinations and considered travel inspiration.
+          </p>
+        </div>
+
+        <div>
+          <form id="newsletterForm" class="flex flex-col gap-4 sm:flex-row">
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+
+            <input
+              id="newsletterEmail"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="Your email address"
+              class="min-w-0 flex-1 border border-white/25 bg-white/5 px-5 py-4 text-sm text-white placeholder:text-white/45 focus:border-kavora-gold focus:outline-none"
+            >
+
+            <button type="submit" class="bg-kavora-gold px-7 py-4 text-[10px] font-bold uppercase tracking-[.15em] text-kavora-deep transition hover:bg-kavora-ivory">
+              Subscribe ↗
+            </button>
+          </form>
+
+          <p id="newsletterMessage" aria-live="polite" class="mt-4 text-xs text-white/60">
+            By subscribing, you agree to receive updates from Kavora.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-kavora-deep text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1440px] px-5 py-14 sm:px-8 sm:py-16 lg:px-14">
+
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_.7fr_.7fr_1fr]">
+
+        <div>
+          <a href="#" class="inline-flex flex-col leading-none">
+            <span class="font-editorial text-4xl tracking-[.12em]">KAVORA</span>
+            <span class="mt-2 text-[8px] font-semibold tracking-[.28em] text-white/45">
+              LUXURY TRAVEL & CONCIERGE
+            </span>
+          </a>
+
+          <p class="mt-6 max-w-xs text-xs leading-7 text-white/55">
+            Exceptional journeys, thoughtful details and experiences designed around you.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-[10px] font-bold uppercase tracking-[.18em] text-kavora-gold">
+            Explore
+          </h3>
+          <nav class="flex flex-col gap-4 text-xs text-white/65">
+            <a href="#journal" class="transition hover:text-white">The Journal</a>
+            <a href="#journal" class="transition hover:text-white">Destinations</a>
+            <a href="#journal" class="transition hover:text-white">Safari Experiences</a>
+            <a href="#journal" class="transition hover:text-white">Luxury Stays</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-[10px] font-bold uppercase tracking-[.18em] text-kavora-gold">
+            Discover
+          </h3>
+          <nav class="flex flex-col gap-4 text-xs text-white/65">
+            <a href="#about" class="transition hover:text-white">Our Philosophy</a>
+            <a href="#journal" class="transition hover:text-white">Travel Guides</a>
+            <a href="#contact" class="transition hover:text-white">Concierge Services</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="mb-5 text-[10px] font-bold uppercase tracking-[.18em] text-kavora-gold">
+            Begin your journey
+          </h3>
+
+          <p class="text-xs leading-7 text-white/55">
+            Have a destination in mind? Let us help you shape your next experience.
+          </p>
+
+          <!-- Replace # with Kavora's actual enquiry or contact page -->
+          <a href="#" class="mt-5 inline-flex items-center gap-3 border-b border-kavora-gold pb-3 text-[10px] font-semibold uppercase tracking-[.13em] transition hover:text-kavora-gold">
+            Enquire with Kavora
+            <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
+        <p class="text-[10px] text-white/40">
+          © <span id="currentYear"></span> Kavora. All rights reserved.
+        </p>
+
+        <p class="text-[10px] tracking-[.04em] text-white/40">
+          Considered travel. Exceptional experiences.
+        </p>
+
+        <a href="#" class="text-[10px] text-white/45 transition hover:text-white">
+          Back to top ↑
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    /*
+      KAVORA JOURNAL
+      Add, edit or remove article objects in this array.
+
+      IMPORTANT:
+      The included stories are editorial placeholders.
+      Replace them with approved Kavora content before publishing.
+    */
+
+    const articles = [
+      {
+        id: 1,
+        category: "Destinations",
+        title: "Tanzania, beyond the familiar",
+        excerpt: "Discover the extraordinary landscapes, rich cultures and remarkable experiences that make Tanzania worth exploring.",
+        date: "Travel inspiration",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80",
+        alt: "African savannah and wildlife landscape",
+        featured: true,
+        url: "#"
+      },
+      {
+        id: 2,
+        category: "Safari",
+        title: "The art of the African safari",
+        excerpt: "A thoughtful introduction to wildlife encounters, private guides and the details that elevate a safari.",
+        date: "Safari experiences",
+        readTime: "7 min read",
+        image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80",
+        alt: "Wild African safari landscape",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 3,
+        category: "Luxury Stays",
+        title: "Where luxury meets the wilderness",
+        excerpt: "Explore the appeal of intimate lodges, considered design and stays that connect you to the surrounding landscape.",
+        date: "Luxury stays",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=80",
+        alt: "Secluded architectural retreat surrounded by nature",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 4,
+        category: "Destinations",
+        title: "Zanzibar: an island of contrasts",
+        excerpt: "From historic streets to quiet shores, discover the different sides of an Indian Ocean island escape.",
+        date: "Destination guide",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1000&q=80",
+        alt: "Tropical coastal travel destination",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 5,
+        category: "Travel Guides",
+        title: "Planning a seamless luxury getaway",
+        excerpt: "A practical guide to timing, personal preferences, transfers and the details that make travel feel effortless.",
+        date: "Travel guides",
+        readTime: "4 min read",
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80",
+        alt: "Dramatic mountain scenery",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 6,
+        category: "Lifestyle",
+        title: "The quiet luxury of travelling slowly",
+        excerpt: "Why leaving room for discovery can make a journey more rewarding than filling every hour with plans.",
+        date: "The art of living",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=80",
+        alt: "Serene lake and mountain scenery",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 7,
+        category: "Safari",
+        title: "The Great Migration: a natural spectacle",
+        excerpt: "Understand the seasonal rhythms of East Africa's iconic wildlife migration and how to plan around them.",
+        date: "Safari experiences",
+        readTime: "8 min read",
+        image: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=80",
+        alt: "Wildlife in an African landscape",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 8,
+        category: "Luxury Stays",
+        title: "A different kind of island escape",
+        excerpt: "Consider privacy, location, service and atmosphere when choosing your next exceptional island retreat.",
+        date: "Luxury stays",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80",
+        alt: "Luxury resort swimming pool",
+        featured: false,
+        url: "#"
+      },
+      {
+        id: 9,
+        category: "Travel Guides",
+        title: "What to know before visiting East Africa",
+        excerpt: "A starting point for planning your itinerary, understanding local customs and preparing for a rewarding trip.",
+        date: "Travel guides",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80",
+        alt: "Expansive natural landscape",
+        featured: false,
+        url: "#"
+      }
+    ];
+
+
+    // SETTINGS
+    const ARTICLES_PER_PAGE = 6;
+
+    let activeCategory = "All";
+    let searchTerm = "";
+    let currentPage = 1;
+
+
+    // ELEMENTS
+    const articleGrid = document.getElementById("articleGrid");
+    const categoryFilters = document.getElementById("categoryFilters");
+    const articleSearch = document.getElementById("articleSearch");
+    const resultsLabel = document.getElementById("resultsLabel");
+    const pagination = document.getElementById("pagination");
+    const emptyState = document.getElementById("emptyState");
+    const clearFilters = document.getElementById("clearFilters");
+
+
+    // FEATURED STORY
+    function renderFeaturedArticle() {
+      const featured = articles.find(article => article.featured);
+
+      if (!featured) return;
+
+      document.getElementById("featuredImage").src = featured.image;
+      document.getElementById("featuredImage").alt = featured.alt;
+      document.getElementById("featuredCategory").textContent = featured.category;
+      document.getElementById("featuredDate").textContent =
+        `${featured.date} · ${featured.readTime}`;
+      document.getElementById("featuredTitle").textContent = featured.title;
+      document.getElementById("featuredExcerpt").textContent = featured.excerpt;
+
+      document.getElementById("featuredLink").href = featured.url;
+      document.getElementById("featuredRead").href = featured.url;
+
+      document.getElementById("storyCountTop").textContent =
+        `${String(articles.length).padStart(2, "0")} curated stories`;
+    }
+
+
+    // FILTER ARTICLES
+    function getFilteredArticles() {
+      return articles.filter(article => {
+        const matchesCategory =
+          activeCategory === "All" ||
+          article.category === activeCategory;
+
+        const searchableText = [
+          article.title,
+          article.excerpt,
+          article.category,
+          article.date
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = searchableText.includes(searchTerm);
+
+        return matchesCategory && matchesSearch && !article.featured;
+      });
+    }
+
+
+    // CREATE ARTICLE CARD
+    function createArticleCard(article, index) {
+      const card = document.createElement("article");
+
+      card.className = "article-card group";
+      card.style.animationDelay = `${Math.min(index * 50, 250)}ms`;
+
+      const link = document.createElement("a");
+      link.href = article.url;
+      link.className = "block";
+      link.setAttribute("aria-label", `Read: ${article.title}`);
+
+      const imageWrapper = document.createElement("div");
+      imageWrapper.className = "article-image relative aspect-[4/3]";
+
+      const image = document.createElement("img");
+      image.src = article.image;
+      image.alt = article.alt;
+      image.loading = "lazy";
+      image.decoding = "async";
+
+      imageWrapper.appendChild(image);
+
+      const imageCategory = document.createElement("span");
+      imageCategory.className =
+        "absolute bottom-0 left-0 bg-kavora-ivory px-4 py-3 text-[9px] font-bold uppercase tracking-[.12em]";
+      imageCategory.textContent = article.category;
+
+      imageWrapper.appendChild(imageCategory);
+      link.appendChild(imageWrapper);
+      card.appendChild(link);
+
+      const meta = document.createElement("div");
+      meta.className =
+        "mt-5 flex items-center gap-2 text-[9px] uppercase tracking-[.12em] text-kavora-muted";
+
+      const date = document.createElement("span");
+      date.textContent = article.date;
+
+      const separator = document.createElement("span");
+      separator.textContent = "·";
+
+      const readTime = document.createElement("span");
+      readTime.textContent = article.readTime;
+
+      meta.append(date, separator, readTime);
+      card.appendChild(meta);
+
+      const title = document.createElement("h3");
+      title.className =
+        "mt-3 font-editorial text-3xl leading-[1.08] tracking-[-.015em] transition-colors group-hover:text-kavora-forest sm:text-[2rem]";
+
+      const titleLink = document.createElement("a");
+      titleLink.href = article.url;
+      titleLink.textContent = article.title;
+
+      title.appendChild(titleLink);
+      card.appendChild(title);
+
+      const excerpt = document.createElement("p");
+      excerpt.className = "mt-3 text-xs leading-6 text-kavora-muted";
+      excerpt.textContent = article.excerpt;
+      card.appendChild(excerpt);
+
+      const readLink = document.createElement("a");
+      readLink.href = article.url;
+      readLink.className =
+        "mt-5 inline-flex items-center gap-3 border-b border-kavora-line pb-2 text-[9px] font-bold uppercase tracking-[.14em] transition hover:border-kavora-gold";
+
+      readLink.append(document.createTextNode("Read story "));
+
+      const arrow = document.createElement("span");
+      arrow.className = "text-base text-kavora-gold";
+      arrow.textContent = "↗";
+
+      readLink.appendChild(arrow);
+      card.appendChild(readLink);
+
+      return card;
+    }
+
+
+    // PAGINATION BUTTON
+    function createPageButton(label, page, options = {}) {
+      const button = document.createElement("button");
+
+      button.type = "button";
+      button.textContent = label;
+      button.disabled = Boolean(options.disabled);
+
+      button.className = options.current
+        ? "flex h-10 min-w-10 items-center justify-center border border-kavora-green bg-kavora-green px-3 text-xs text-white"
+        : "flex h-10 min-w-10 items-center justify-center border border-kavora-line px-3 text-xs transition hover:border-kavora-green disabled:cursor-not-allowed disabled:opacity-30";
+
+      if (options.current) {
+        button.setAttribute("aria-current", "page");
+      }
+
+      button.addEventListener("click", () => {
+        currentPage = page;
+        renderArticles();
+
+        document.getElementById("journal").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+
+      return button;
+    }
+
+
+    // RENDER PAGINATION
+    function renderPagination(totalPages) {
+      pagination.replaceChildren();
+
+      if (totalPages <= 1) return;
+
+      pagination.appendChild(
+        createPageButton("←", Math.max(1, currentPage - 1), {
+          disabled: currentPage === 1
+        })
+      );
+
+      for (let page = 1; page <= totalPages; page++) {
+        pagination.appendChild(
+          createPageButton(String(page), page, {
+            current: page === currentPage
+          })
+        );
+      }
+
+      pagination.appendChild(
+        createPageButton("→", Math.min(totalPages, currentPage + 1), {
+          disabled: currentPage === totalPages
+        })
+      );
+    }
+
+
+    // RENDER ARTICLE GRID
+    function renderArticles() {
+      const filtered = getFilteredArticles();
+      const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
+
+      // Keep current page within valid bounds.
+      if (totalPages === 0) {
+        currentPage = 1;
+      } else if (currentPage > totalPages) {
+        currentPage = totalPages;
+      }
+
+      const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+      const visibleArticles = filtered.slice(
+        startIndex,
+        startIndex + ARTICLES_PER_PAGE
+      );
+
+      articleGrid.replaceChildren();
+
+      visibleArticles.forEach((article, index) => {
+        articleGrid.appendChild(createArticleCard(article, index));
+      });
+
+      const hasResults = filtered.length > 0;
+
+      emptyState.classList.toggle("hidden", hasResults);
+      articleGrid.classList.toggle("hidden", !hasResults);
+
+      if (hasResults) {
+        const first = startIndex + 1;
+        const last = Math.min(startIndex + ARTICLES_PER_PAGE, filtered.length);
+
+        resultsLabel.textContent =
+          `Showing ${first}–${last} of ${filtered.length} stories`;
+      } else {
+        resultsLabel.textContent = "No matching stories";
+      }
+
+      clearFilters.classList.toggle(
+        "hidden",
+        activeCategory === "All" && searchTerm === ""
+      );
+
+      renderPagination(totalPages);
+    }
+
+
+    // CATEGORY FILTERS
+    categoryFilters.addEventListener("click", event => {
+      const button = event.target.closest("[data-category]");
+
+      if (!button) return;
+
+      activeCategory = button.dataset.category;
+      currentPage = 1;
+
+      categoryFilters.querySelectorAll("[data-category]").forEach(item => {
+        const isActive = item === button;
+
+        item.classList.toggle("active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      renderArticles();
+    });
+
+
+    // LIVE SEARCH
+    articleSearch.addEventListener("input", event => {
+      searchTerm = event.target.value.trim().toLowerCase();
+      currentPage = 1;
+      renderArticles();
+    });
+
+
+    // RESET FILTERS
+    function resetFilters() {
+      activeCategory = "All";
+      searchTerm = "";
+      currentPage = 1;
+
+      articleSearch.value = "";
+
+      categoryFilters.querySelectorAll("[data-category]").forEach(button => {
+        const isActive = button.dataset.category === "All";
+
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      renderArticles();
+    }
+
+    clearFilters.addEventListener("click", resetFilters);
+    document.getElementById("resetSearch").addEventListener("click", resetFilters);
+
+
+    // MOBILE MENU
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+
+
+    // NEWSLETTER DEMO
+    // Connect this form to a real mailing-list service before launch.
+    const newsletterForm = document.getElementById("newsletterForm");
+
+    newsletterForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const message = document.getElementById("newsletterMessage");
+
+      message.textContent =
+        "The form is ready, but newsletter registration has not been connected yet.";
+
+      message.setAttribute("role", "status");
+    });
+
+
+    // INITIALISE PAGE
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    renderFeaturedArticle();
+    renderArticles();
+
+  </script>
+
+</body>
+</html>
