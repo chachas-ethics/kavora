@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102D23" />
+
+  <title>Kenya | Kavora Africa — Considered Journeys</title>
+  <meta
+    name="description"
+    content="Discover Kenya with Kavora Africa. From the Maasai Mara and Amboseli to the Rift Valley and Indian Ocean coast, experience a journey designed around you."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "kavora-green": "#102D23",
+            "kavora-deep": "#0B211A",
+            "kavora-forest": "#1D4535",
+            "kavora-gold": "#C8A96B",
+            "kavora-ivory": "#F7F5EF",
+            "kavora-muted": "#74786F",
+            "kavora-line": "#E4E0D6"
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+    }
+
+    .hero-image {
+      animation: heroReveal 1.4s ease-out both;
+    }
+
+    .destination-image {
+      transition: transform 800ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .destination-card:hover .destination-image {
+      transform: scale(1.055);
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes heroReveal {
+      from { transform: scale(1.06); }
+      to { transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="absolute inset-x-0 top-0 z-30 border-b border-white/20 text-white">
+    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 md:px-12 lg:px-16">
+
+      <a href="index.html" class="flex flex-col leading-none">
+        <span class="font-luxury text-3xl tracking-[0.16em] md:text-4xl">
+          KAVORA
+        </span>
+        <span class="mt-1 text-[8px] tracking-[0.38em] text-white/75">
+          AFRICA · CONSIDERED JOURNEYS
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-[10px] uppercase tracking-[0.18em] md:flex">
+        <a href="index.html" class="transition hover:text-kavora-gold">Home</a>
+        <a href="#destinations" class="transition hover:text-kavora-gold">Destinations</a>
+        <a href="#philosophy" class="transition hover:text-kavora-gold">Our approach</a>
+        <a href="contact.html" class="border border-kavora-gold px-5 py-3 transition hover:bg-kavora-gold hover:text-kavora-deep">
+          Plan your journey
+        </a>
+      </div>
+
+      <button
+        id="menu-toggle"
+        class="flex h-11 w-11 items-center justify-center border border-white/40 md:hidden"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="text-xl">☰</span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-white/15 bg-kavora-deep/95 px-6 py-6 md:hidden">
+      <div class="flex flex-col gap-5 text-xs uppercase tracking-[0.18em]">
+        <a href="index.html">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#philosophy">Our approach</a>
+        <a href="contact.html" class="text-kavora-gold">Plan your journey</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+
+    <img
+      src="https://cdn.discoverafrica.com/wp-content/uploads/2021/11/15173405/1-2-4.jpg"
+      alt="Kenya's open savannah beneath a dramatic African sky"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
+      fetchpriority="high"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-black/25"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/60 via-transparent to-transparent"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-40 text-white md:px-12 md:pb-28 lg:px-16">
+
+      <div class="mb-7 flex items-center gap-4">
+      </div>
+       <div class="max-w-3xl">
+        <div class="mb-7 flex items-center gap-4">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
+            The Kenya destination collection
+          </p>
+        </div>
+
+      <h1 class="max-w-4xl font-luxury text-7xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
+        Kenya<span class="text-kavora-gold">.</span>
+      </h1>
+      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
+        From the great plains of the Maasai Mara to the shadow of Kilimanjaro
+        and the quiet shores of the Indian Ocean, discover Kenya at your own pace.
+      </p>
+
+       <div class="mt-9 flex flex-wrap items-center gap-6">
+          <a href="#destinations" class="group inline-flex items-center gap-5 bg-kavora-gold px-6 py-4 text-[9px] font-semibold uppercase tracking-[0.18em] text-kavora-deep transition hover:bg-white">
+            Explore Kenya
+            <span class="transition-transform group-hover:translate-y-1">↓</span>
+          </a>
+        </div>
+    </div>
+  </header>
+
+  <!-- INTRODUCTION -->
+  <section id="philosophy" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
+
+      <div class="reveal lg:col-span-5">
+        <p class="mb-6 text-[10px] uppercase tracking-[0.28em] text-kavora-muted">
+          A different kind of Africa
+        </p>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-6xl lg:text-7xl">
+          The extraordinary, <span class="italic text-kavora-gold">unhurried.</span>
+        </h2>
+      </div>
+
+      <div class="reveal lg:col-span-7 lg:pt-10">
+        <p class="text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          Kenya is a country of striking contrasts. Vast wildlife reserves give
+          way to mountain views, the Great Rift Valley, welcoming communities,
+          and a coastline shaped by the Indian Ocean.
+        </p>
+
+        <p class="mt-5 text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          At Kavora, we bring these places together with thoughtful pacing,
+          carefully chosen stays, and experiences shaped around the traveller
+          rather than a fixed itinerary.
+        </p>
+
+        <a
+          href="contact.html?destination=Kenya"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+        >
+          Begin your journey
+          <span class="text-lg">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="bg-white px-6 py-24 md:px-12 md:py-28 lg:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <div class="reveal mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <div class="mb-5 flex items-center gap-4">
+            <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+              The destination collection
+            </p>
+          </div>
+
+          <h2 class="font-luxury text-5xl font-normal md:text-7xl">
+            Discover Kenya
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          Five distinctive settings. Countless ways to experience them.
+          Choose a destination, or let us bring several together into one
+          considered journey.
+        </p>
+      </div>
+
+      <!-- DESTINATION 01 -->
+      <article class="destination-card reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[320px] overflow-hidden md:min-h-[480px]">
+          <img
+            src="https://cdn.discoverafrica.com/wp-content/uploads/2021/11/15173405/1-2-4.jpg"
+            alt="The Maasai Mara"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+          <h3 class="font-luxury text-5xl font-normal md:text-6xl">
+            Maasai Mara
+          </h3>
+
+          <div class="gold-line my-6"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            A landscape of sweeping grasslands, exceptional wildlife viewing,
+            and the possibility of witnessing the great wildebeest migration
+            during its seasonal passage. The Mara is the heart of a classic
+            Kenyan safari.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Best for: Big cats, game drives, migration season, luxury safari camps.
+          </p>
+
+          <a
+            href="contact.html?destination=Maasai%20Mara"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Maasai mara <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 02 -->
+      <article class="destination-card reveal group mt-7 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[320px] overflow-hidden md:order-2 md:min-h-[480px]">
+          <img
+            src="https://phronesistours.com/wp-content/uploads/2026/03/amboseli-8.webp"
+            alt="Elephants beneath Mount Kilimanjaro in Amboseli"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+
+          <h3 class="font-luxury text-5xl font-normal md:text-6xl">
+            Amboseli
+          </h3>
+
+          <div class="gold-line my-6"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Famous for its elephant herds and striking views of Mount
+            Kilimanjaro, Amboseli offers a different perspective on Kenya's
+            wilderness. Open plains and seasonal wetlands create a remarkable
+            setting for photography and slower safari days.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Best for: Elephants, photography, open landscapes, scenic stays.
+          </p>
+
+          <a
+            href="contact.html?destination=Amboseli"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Amboseli <span class="text-lg ">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 03 -->
+      <article class="destination-card reveal group mt-7 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[320px] overflow-hidden md:min-h-[430px]">
+          <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/01/c3/40/visit-lake-nakuru-and.jpg?w=1200&h=-1&s=1"
+            alt="Lake Nakuru surrounded by the landscapes of Kenya's Rift Valley"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+
+          <h3 class="font-luxury text-5xl font-normal md:text-6xl">
+            Lake Nakuru
+          </h3>
+
+          <div class="gold-line my-6"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            A scenic national park known for rhinos, birdlife, and a lake set
+            among the Rift Valley's dramatic terrain. Lake Nakuru makes a
+            useful wildlife stop on a journey between Nairobi, Naivasha,
+            and the Maasai Mara.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Best for: Rhino sightings, birdwatching, scenic game drives.
+          </p>
+
+          <a
+            href="contact.html?destination=Lake%20Nakuru"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 04 -->
+      <article class="destination-card reveal group mt-7 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[320px] overflow-hidden md:order-2 md:min-h-[430px]">
+          <img
+            src="https://kws.go.ke/wp-content/uploads/2026/02/hippo-and-flamingoes-scaled-e1770383985376.jpg"
+            alt="Peaceful waters and acacia trees around Lake Naivasha"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+
+          <h3 class="font-luxury text-5xl font-normal md:text-6xl">
+            Lake Naivasha
+          </h3>
+
+          <div class="gold-line my-6"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            A quieter side of Kenya, where freshwater landscapes, birdlife,
+            boat excursions, and nearby walking experiences offer a welcome
+            change of pace from traditional game drives.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Best for: Boat trips, birdlife, nature walks, relaxed interludes.
+          </p>
+
+          <a
+            href="contact.html?destination=Lake%20Naivasha"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 05 -->
+      <article class="destination-card reveal group mt-7 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[320px] overflow-hidden md:min-h-[480px]">
+          <img
+            src="https://www.tsavonationalparkkenya.com/wp-content/uploads/2023/04/istockphoto-1226321192-612x612-1.jpg"
+            alt="White sand and turquoise Indian Ocean waters at Diani Beach"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+
+          <h3 class="font-luxury text-5xl font-normal md:text-6xl">
+            Diani Beach
+          </h3>
+
+          <div class="gold-line my-6"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            A beautiful coastal escape with white sand, warm ocean waters,
+            palm-lined shores, and a relaxed atmosphere. Diani offers a
+            contrasting finale to a wildlife journey, with time for the
+            beach, water activities, and restorative stays.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Best for: Beach retreats, honeymoon extensions, ocean activities.
+          </p>
+
+          <a
+            href="contact.html?destination=Diani%20Beach"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- JOURNEY INSPIRATION -->
+  <section class="bg-kavora-green px-6 py-24 text-white md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="reveal grid gap-12 lg:grid-cols-2 lg:items-center">
+
+        <div>
+          <div class="mb-6 flex items-center gap-4">
+            <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+              Let the journey unfold
+            </p>
+          </div>
+
+          <h2 class="font-luxury text-6xl font-normal leading-[1.05] md:text-7xl">
+            More than one destination.
+            <span class="italic text-kavora-gold">One seamless story.</span>
+          </h2>
+
+          <p class="mt-7 max-w-lg text-sm font-light leading-8 text-white/70 md:text-base">
+            Kenya rewards thoughtful combinations. Pair a wildlife-rich
+            safari with the calm of the Rift Valley, or end your adventure
+            beside the Indian Ocean. We will help shape the pace, stays,
+            and connections around your priorities.
+          </p>
+
+          <a
+            href="contact.html?destination=Kenya"
+            class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
+          >
+            Create your itinerary <span class="text-lg">↗</span>
+          </a>
+        </div>
+
+        <div class="reveal border-t border-white/20 lg:border-l lg:border-t-0 lg:pl-12">
+          <div class="border-b border-white/20 py-7">
+            <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+              Journey 01
+            </p>
+            <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+              The Classic Safari
+            </h3>
+            <p class="mt-2 text-xs leading-6 text-white/65">
+              Nairobi · Maasai Mara · Lake Nakuru
+            </p>
+          </div>
+
+          <div class="border-b border-white/20 py-7">
+            <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+              Journey 02
+            </p>
+            <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+              Wildlife & Kilimanjaro
+            </h3>
+            <p class="mt-2 text-xs leading-6 text-white/65">
+              Nairobi · Amboseli · Maasai Mara
+            </p>
+          </div>
+
+          <div class="py-7">
+            <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+              Journey 03
+            </p>
+            <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+              Safari to Sea
+            </h3>
+            <p class="mt-2 text-xs leading-6 text-white/65">
+              Maasai Mara · Nairobi · Diani Beach
+            </p>
+          </div>
+
+          <p class="text-[10px] leading-5 text-white/50">
+            Suggested combinations only. Final routing depends on travel dates,
+            available flights, road transfers, and the pace you prefer.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="reveal mx-auto max-w-4xl text-center">
+
+      <div class="mx-auto mb-7 gold-line"></div>
+
+      <p class="mb-6 text-[10px] uppercase tracking-[0.28em] text-kavora-muted">
+        Your story, your pace
+      </p>
+
+      <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-7xl">
+        Kenya is waiting.
+        <span class="italic text-kavora-gold">Let's make it yours.</span>
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+        Tell us what you want to experience. We will help turn your ideas
+        into a considered journey through Kenya.
+      </p>
+
+      <a
+        href="contact.html?destination=Kenya"
+        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
+      >
+        Start planning <span class="text-lg text-kavora-gold">↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-kavora-deep px-6 py-12 text-white md:px-12 lg:px-16">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-end">
+
+      <div>
+        <a href="index.html" class="font-luxury text-4xl tracking-[0.16em]">
+          KAVORA
+        </a>
+
+        <p class="mt-2 text-[9px] uppercase tracking-[0.28em] text-white/50">
+          Africa · Considered Journeys
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.15em] text-white/65">
+        <a href="index.html" class="transition hover:text-kavora-gold">Home</a>
+        <a href="tanzania.html" class="transition hover:text-kavora-gold">Tanzania</a>
+        <a href="kenya.html" class="transition hover:text-kavora-gold">Kenya</a>
+        <a href="contact.html" class="transition hover:text-kavora-gold">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6">
+      <p class="text-[10px] text-white/40">
+        © <span id="year"></span> Kavora Africa. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle("hidden");
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Open navigation" : "Close navigation"
+      );
+      menuToggle.querySelector("span").textContent = isOpen ? "☰" : "✕";
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.querySelector("span").textContent = "☰";
+      });
+    });
+
+    // Subtle scroll reveal
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    // Current footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
