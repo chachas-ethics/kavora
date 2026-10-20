@@ -107,47 +107,7 @@
 <body class="font-sans antialiased">
 
   <!-- NAVIGATION -->
-  <nav class="absolute inset-x-0 top-0 z-30 border-b border-white/20 text-white">
-    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 md:px-12 lg:px-16">
-
-      <a href="index.html" class="flex flex-col leading-none">
-        <span class="font-luxury text-3xl tracking-[0.16em] md:text-4xl">
-          KAVORA
-        </span>
-        <span class="mt-1 text-[8px] tracking-[0.38em] text-white/75">
-          AFRICA · CONSIDERED JOURNEYS
-        </span>
-      </a>
-
-      <div class="hidden items-center gap-8 text-[10px] uppercase tracking-[0.18em] md:flex">
-        <a href="index.html" class="transition hover:text-kavora-gold">Home</a>
-        <a href="#destinations" class="transition hover:text-kavora-gold">Destinations</a>
-        <a href="#philosophy" class="transition hover:text-kavora-gold">Our approach</a>
-        <a href="contact.html" class="border border-kavora-gold px-5 py-3 transition hover:bg-kavora-gold hover:text-kavora-deep">
-          Plan your journey
-        </a>
-      </div>
-
-      <button
-        id="menu-toggle"
-        class="flex h-11 w-11 items-center justify-center border border-white/40 md:hidden"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <span class="text-xl">☰</span>
-      </button>
-    </div>
-
-    <div id="mobile-menu" class="hidden border-t border-white/15 bg-kavora-deep/95 px-6 py-6 md:hidden">
-      <div class="flex flex-col gap-5 text-xs uppercase tracking-[0.18em]">
-        <a href="index.html">Home</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#philosophy">Our approach</a>
-        <a href="contact.html" class="text-kavora-gold">Plan your journey</a>
-      </div>
-    </div>
-  </nav>
+ 
 
   <!-- HERO -->
   <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
@@ -595,30 +555,6 @@
   </footer>
 
   <script>
-    // Mobile navigation
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-
-      mobileMenu.classList.toggle("hidden");
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Open navigation" : "Close navigation"
-      );
-      menuToggle.querySelector("span").textContent = isOpen ? "☰" : "✕";
-    });
-
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.querySelector("span").textContent = "☰";
-      });
-    });
 
     // Subtle scroll reveal
     const revealElements = document.querySelectorAll(".reveal");

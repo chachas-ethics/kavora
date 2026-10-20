@@ -4,29 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0B211A" />
-  <meta name="description" content="Discover Tanzania with Kavora. Explore the Serengeti, Ngorongoro, Lake Manyara, Tarangire and Arusha National Park through thoughtfully curated luxury journeys." />
-  <title>Discover Tanzania | Kavora</title>
+  <meta name="theme-color" content="#102D23" />
+
+  <title>Tanzania | Kavora Africa — Considered Journeys</title>
+  <meta
+    name="description"
+    content="Discover Tanzania with Kavora Africa. Explore the Serengeti, Ngorongoro Crater, Lake Manyara, Tarangire, and Arusha National Park through a thoughtfully designed safari journey."
+  />
 
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            kavora: {
-              green: "#102D23",
-              deep: "#0B211A",
-              forest: "#1D4535",
-              gold: "#C8A96B",
-              ivory: "#F7F5EF",
-              muted: "#74786F",
-              line: "#E4E0D6"
-            }
+            "kavora-green": "#102D23",
+            "kavora-deep": "#0B211A",
+            "kavora-forest": "#1D4535",
+            "kavora-gold": "#C8A96B",
+            "kavora-ivory": "#F7F5EF",
+            "kavora-muted": "#74786F",
+            "kavora-line": "#E4E0D6"
           },
           fontFamily: {
             luxury: ["Cormorant Garamond", "serif"],
@@ -38,375 +44,555 @@
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; }
-    .destination-card img { transition: transform .8s ease; }
-    .destination-card:hover img { transform: scale(1.055); }
-    .destination-card .discover-arrow { transition: transform .3s ease; }
-    .destination-card:hover .discover-arrow { transform: translateX(5px); }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 35px;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+    }
 
     .hero-image {
-      animation: heroReveal 1.2s ease both;
-    }
-    @keyframes heroReveal {
-      from { opacity: .5; transform: scale(1.035); }
-      to { opacity: 1; transform: scale(1); }
+      animation: heroReveal 1.5s ease-out both;
     }
 
-    .destination-card:focus-within {
-      outline: 2px solid #C8A96B;
-      outline-offset: 4px;
+    .destination-image {
+      transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .destination-card:hover .destination-image {
+      transform: scale(1.045);
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 750ms ease, transform 750ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes heroReveal {
+      from { transform: scale(1.06); }
+      to { transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
 
-<body class="bg-kavora-ivory font-sans text-kavora-green antialiased">
+<body class="font-sans antialiased">
 
   <!-- HERO -->
-   <header class="relative flex min-h-screen items-end overflow-hidden bg-kavora-deep">
+  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
 
     <img
       src="https://tanzaniatimelesssafaris.com/wp-content/uploads/2025/09/best-time-to-visit-tanzania.jpg"
-      alt="The vast landscapes of Tanzania at golden hour"
-      class="hero-image absolute inset-0 h-full w-full object-cover brightness-75 contrast-125"
+      alt="The vast golden savannah of Tanzania at sunset"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
       fetchpriority="high"
     />
 
-    <div class="absolute inset-0 bg-gradient-to-b from-kavora-deep/35 via-kavora-deep/10 to-kavora-deep/90"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/45 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/45 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/50 via-transparent to-transparent"></div>
 
-   
+    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-24 text-white md:px-12 md:pb-28 lg:px-16">
 
-    <!-- Hero content -->
-    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 pb-20 pt-40 sm:px-10 sm:pb-28 lg:px-16 lg:pb-32">
+     
 
-      <div class="max-w-3xl">
-        <div class="mb-7 flex items-center gap-4">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
-            The Tanzania destination collection
-          </p>
-        </div>
-
-        <h1 class="font-luxury text-7xl leading-[0.94] text-white sm:text-8xl lg:text-[7.5rem]">
-          Tanzania<span class="text-kavora-gold">.</span>
-        </h1>
-
-        <p class="mt-8 max-w-xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-          Vast wilderness. Ancient landscapes. Extraordinary encounters.
-          Discover a Tanzania that stays with you long after the journey ends.
+      <div class="mb-7 flex items-center gap-4">
+        <p class="text-[10px] uppercase tracking-[0.32em] text-kavora-gold">
+          Tanzania Destinations Collection
         </p>
-
-        <div class="mt-9 flex flex-wrap items-center gap-6">
-          <a href="#destinations" class="group inline-flex items-center gap-5 bg-kavora-gold px-6 py-4 text-[9px] font-semibold uppercase tracking-[0.18em] text-kavora-deep transition hover:bg-white">
-            Explore Tanzania
-            <span class="transition-transform group-hover:translate-y-1">↓</span>
-          </a>
-        </div>
       </div>
-    </div>
+
+      <h1 class="max-w-4xl font-luxury text-8xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
+        Tanzania<span class="text-kavora-gold">.</span>
+      </h1>
+
+      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
+        From the legendary plains of the Serengeti to the wildlife-rich
+        Ngorongoro Crater and ancient baobabs of Tarangire, discover a
+        journey shaped by the landscapes that define Tanzania.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-5">
+        <a
+          href="#destinations"
+          class="bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
+        >
+          Explore Tanzania
+        </a>
+
+        <a
+          href="contact.html?destination=Tanzania"
+          class="border border-white/50 px-7 py-4 text-[10px] uppercase tracking-[0.2em] transition hover:border-kavora-gold hover:text-kavora-gold"
+        >
+          Design my journey 
+        </a>
+      </div>
+
+     
   </header>
 
-
   <!-- INTRODUCTION -->
-  <section id="philosophy" class="px-5 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
-    <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20">
+  <section id="philosophy" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
 
-      <div>
-        <p class="mb-5 flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-kavora-gold">
-          
-          A land of many worlds
-        </p>
-        <h2 class="font-luxury text-5xl leading-[1.04] sm:text-6xl lg:text-7xl">
-          One country.
-          <span class="block italic text-kavora-gold">Endless ways</span>
-          to feel alive.
+      <div class="reveal lg:col-span-5">
+        <div class="mb-6 flex items-center gap-4">
+          <p class="text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+            The spirit of Tanzania
+          </p>
+        </div>
+
+        <h2 class="font-luxury text-6xl font-normal leading-[1.05] md:text-6xl lg:text-7xl">
+          The wild, in its most <span class="italic text-kavora-gold">beautiful form.</span>
         </h2>
       </div>
 
-      <div class="max-w-2xl lg:pb-2">
-        <p class="text-sm leading-8 text-kavora-muted sm:text-base">
-          Tanzania invites you into a world of extraordinary contrasts.
-          Follow wildlife across open plains, descend into an ancient
-          volcanic crater, wander beneath towering baobabs, and discover
-          landscapes shaped by water, forest and mountain.
-        </p>
-        <p class="mt-5 text-sm leading-8 text-kavora-muted sm:text-base">
-          At Kavora, we help you discover the places that speak to you
-          and bring them together into a journey designed around your
-          interests, your pace and the experiences you value most.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- DESTINATIONS -->
-  <section id="destinations" class="bg-white px-5 py-20 sm:px-10 sm:py-28 lg:px-16">
-
-    <div class="mx-auto max-w-7xl">
-
-      <div class="mb-12 flex flex-col justify-between gap-6 sm:mb-16 sm:flex-row sm:items-end">
-        <div>
-          <p class="mb-4 text-[9px] font-semibold uppercase tracking-[0.24em] text-kavora-gold">
-            Five ways to discover the wild
-          </p>
-          <h2 class="font-luxury text-6xl sm:text-6xl lg:text-7xl">
-            Find your <span class="italic text-kavora-gold">Tanzania.</span>
-          </h2>
-        </div>
-
-        <p class="max-w-sm text-sm leading-7 text-kavora-muted">
-          Every destination has its own rhythm. Discover the one that
-          speaks to you — or let us combine several into one considered escape.
-        </p>
-      </div>
-
-
-      <!-- FEATURED DESTINATION: SERENGETI -->
-      <article class="destination-card group relative mb-5 min-h-[480px] overflow-hidden bg-kavora-deep sm:min-h-[580px]">
-
-        <img
-          src="https://www.wildernessdestinations.com/media/awxpvggn/serengeti-greencamp_wildlife-09-24-malicky3.jpg?rmode=crop"
-          alt="Serengeti plains and wildlife in Tanzania"
-          loading="lazy"
-          class="absolute inset-0 h-full w-full object-cover"
-        />
-
-        <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/90 via-kavora-deep/50 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/65 to-transparent"></div>
-
-        <div class="relative flex min-h-[480px] flex-col justify-end p-7 sm:min-h-[580px] sm:p-12 lg:min-h-[620px] lg:p-16">
-
-          <div class="mb-5 flex items-center gap-3">
-          </div>
-
-          <h3 class="max-w-2xl font-luxury text-5xl leading-none text-white sm:text-7xl lg:text-8xl">
-            Serengeti
-            <span class="block italic text-kavora-gold">National Park</span>
-          </h3>
-
-          <p class="mt-6 max-w-xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-            A vast wilderness where the horizon seems endless and wildlife
-            moves to the rhythm of the seasons. 
-          </p>
-
-          <div class="mt-8 flex flex-wrap items-center gap-6">
-            <a href="contact.html?destination=Serengeti" class="group/link inline-flex items-center gap-4  pb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
-              EXPLORE SERENGETI
-              <span class="discover-arrow text-lg text-kavora-gold">→</span>
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- DESTINATION GRID -->
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
-        <!-- NGORONGORO -->
-        <article class="destination-card group relative flex min-h-[440px] flex-col overflow-hidden bg-kavora-deep sm:min-h-[480px]">
-
-          <img
-            src="https://bwindiforestgorillatours.com/wp-content/uploads/2024/09/Ngorongoro-National-Park.jpg"
-            alt="The dramatic landscape of Ngorongoro Crater"
-            loading="lazy"
-            class="absolute inset-0 h-full w-full object-cover"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-transparent"></div>
-
-          <div class="relative mt-auto p-6 sm:p-7">
-
-            <h3 class="font-luxury text-5xl leading-[0.98] text-white">
-              Ngorongoro
-              <span class="mt-1 block italic text-kavora-gold">Conservation Area</span>
-            </h3>
-
-            <p class="mt-4 text-xs leading-6 text-white/70">
-              Descend into a remarkable volcanic caldera surrounded by
-              dramatic highland scenery and rich wildlife.
-            </p>
-
-            <a href="contact.html?destination=Ngorongoro" class="mt-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white">
-              Explore Ngorongoro
-              <span class="discover-arrow text-kavora-gold">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <!-- LAKE MANYARA -->
-        <article class="destination-card group relative flex min-h-[440px] flex-col overflow-hidden bg-kavora-deep sm:min-h-[480px]">
-
-          <img
-            src="https://adumusafaris.com/wp-content/uploads/Chem-Chem-Wildlife-Scott-Ramsay2-scaled.jpg"
-            alt="Lake Manyara and its surrounding forest landscape"
-            loading="lazy"
-            class="absolute inset-0 h-full w-full object-cover"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-transparent"></div>
-
-          <div class="relative mt-auto p-6 sm:p-7">
-           
-            <h3 class="font-luxury text-5xl leading-[0.98] text-white">
-              Lake
-              <span class="mt-1 block italic text-kavora-gold">Manyara</span>
-            </h3>
-
-            <p class="mt-4 text-xs leading-6 text-white/70">
-              Discover a striking blend of lake scenery, woodland,
-              escarpment views and abundant birdlife.
-            </p>
-
-            <a href="contact.html?destination=Lake%20Manyara" class="mt-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white">
-              Explore Lake Manyara
-              <span class="discover-arrow text-kavora-gold">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <!-- TARANGIRE -->
-        <article class="destination-card group relative flex min-h-[440px] flex-col overflow-hidden bg-kavora-deep sm:min-h-[480px]">
-
-          <img
-            src="https://143877041.fs1.hubspotusercontent-eu1.net/hubfs/143877041/Beach%20Safari%20-%20Destination%20Detail%20-%20Tarangire%20National%20Park%20-%20Left%20Image-1.webp"
-            alt="Elephants and baobab trees in Tarangire National Park"
-            loading="lazy"
-            class="absolute inset-0 h-full w-full object-cover"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-transparent"></div>
-
-          <div class="relative mt-auto p-6 sm:p-7">
-
-            <h3 class="font-luxury text-5xl leading-[0.98] text-white">
-              Tarangire
-              <span class="mt-1 block italic text-kavora-gold">National Park</span>
-            </h3>
-
-            <p class="mt-4 text-xs leading-6 text-white/70">
-              Encounter towering baobabs, sweeping landscapes and
-              remarkable elephant herds.
-            </p>
-
-            <a href="contact.html?destination=Tarangire" class="mt-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white">
-              Explore Tarangire
-              <span class="discover-arrow text-kavora-gold">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <!-- ARUSHA -->
-        <article class="destination-card group relative flex min-h-[440px] flex-col overflow-hidden bg-kavora-deep sm:min-h-[480px]">
-
-          <img
-            src="https://www.easytravel.co.tz/wp-content/uploads/2023/08/Giraffe-Sighting-Game-Drive-Arusha-National-Park-Tanzania.jpg"
-            alt="Mount Meru and the green landscapes of Arusha National Park"
-            loading="lazy"
-            class="absolute inset-0 h-full w-full object-cover"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-transparent"></div>
-
-          <div class="relative mt-auto p-6 sm:p-7">
-
-            <h3 class="font-luxury text-5xl leading-[0.98] text-white">
-              Arusha
-              <span class="mt-1 block italic text-kavora-gold">National Park</span>
-            </h3>
-
-            <p class="mt-4 text-xs leading-6 text-white/70">
-              Explore lush forest, crater lakes and views towards
-              Mount Meru in a different kind of safari landscape.
-            </p>
-
-            <a href="contact.html?destination=Arusha%20National%20Park" class="mt-6 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.15em] text-white">
-              Explore Arusha National Park
-              <span class="discover-arrow text-kavora-gold">→</span>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- BESPOKE ITINERARY SECTION -->
-  <section class="relative overflow-hidden bg-kavora-green px-5 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-32">
-
-
-    <div class="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.75fr] lg:items-center lg:gap-24">
-
-      <div>
-        <p class="mb-5 text-[9px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
-          Your story, your way
+      <div class="reveal lg:col-span-7 lg:pt-10">
+        <p class="text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          Tanzania is a land of remarkable scale and diversity. Vast savannahs
+          support extraordinary wildlife, volcanic landscapes reveal some of
+          Africa's most dramatic scenery, and ancient woodlands offer quieter
+          moments of discovery.
         </p>
 
-        <h2 class="font-luxury text-6xl leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-          Why choose
-          <span class="block italic text-kavora-gold">just one?</span>
-        </h2>
-
-        <p class="mt-6 max-w-xl text-sm leading-8 text-white/65">
-          Combine the Serengeti's sweeping plains with the Ngorongoro
-          highlands. Add Tarangire's extraordinary baobab landscapes or
-          begin your adventure among the forests of Arusha.
-          Your itinerary can bring together the experiences that matter
-          most to you.
-        </p>
-      </div>
-
-      <div class="border border-white/15 bg-white/[0.04] p-7 sm:p-10">
-
-        <h3 class="mt-5 font-luxury text-3xl text-white sm:text-4xl">
-          Let us imagine it with you.
-        </h3>
-
-        <p class="mt-4 text-xs leading-7 text-white/60">
-          Tell us what you would love to see, how you like to travel,
-          and the moments you hope to remember. We will help you explore
-          the possibilities for a personalised Tanzanian journey.
+        <p class="mt-5 text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          Our Tanzania collection brings together five distinctive
+          destinations across the northern safari circuit, creating
+          opportunities for immersive wildlife encounters, considered
+          stays, and journeys that unfold at a natural pace.
         </p>
 
-        <a href="contact.html" class="mt-7 flex items-center justify-between gap-5 bg-kavora-gold px-5 py-4 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-deep transition hover:bg-white">
-          Journey With Kavora
-          <span class="text-lg">↗</span>
+        <a
+          href="contact.html?destination=Tanzania"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+        >
+          Begin your journey 
         </a>
       </div>
     </div>
   </section>
 
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="bg-white px-6 py-24 md:px-12 md:py-28 lg:px-16">
+    <div class="mx-auto max-w-7xl">
 
-  <!-- FOOTER -->
-  <footer class="bg-kavora-deep px-5 py-10 sm:px-10 lg:px-16">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div class="reveal mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <div class="mb-5 flex items-center gap-4">
+            <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            remarkable Destinations
+            </p>
+          </div>
 
-      <a href="index.html" class="inline-block">
-        <span class="block font-luxury text-3xl tracking-[0.12em] text-white">KAVORA</span>
-        <span class="mt-1 block text-[8px] uppercase tracking-[0.28em] text-kavora-gold">Africa, considered</span>
-      </a>
+          <h2 class="font-luxury text-6xl font-normal md:text-7xl">
+            The <span class="text-kavora-gold italic">Tanzania</span> Collection
+          </h2>
+        </div>
 
-      <p class="text-xs leading-6 text-white/45">
-        Thoughtfully considered. Personally experienced.
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          Each destination offers its own perspective on the wild.
+          Discover them individually or let us bring them together
+          into one carefully considered safari.
+        </p>
+      </div>
+
+      <!-- DESTINATION 01: SERENGETI -->
+      <article class="destination-card reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:min-h-[540px]">
+          <img
+            src="https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg"
+            alt="Serengeti National Park"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+         
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <span class="block italic text-kavora-gold">Serengeti</span> National Park
+          </h3>
+
+          <div class="gold-line w-40 my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            One of Africa's most celebrated wildlife landscapes, the Serengeti
+            is known for its vast grasslands, exceptional predator sightings,
+            and the spectacular seasonal movement of wildebeest and zebra.
+            Every game drive offers a new perspective on life in the wild.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Great Migration, lions, cheetahs, expansive savannah.
+          </p>
+
+          <a
+            href="contact.html?destination=Serengeti"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore The Serengeti
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 02: NGORONGORO -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:order-2 md:min-h-[540px]">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9StPN8Z1xC1xWj2X0JJXJzVslPo5D1SSIbpZqY3N0I245BQUeT6iHnnk&s=10"
+            alt="Ngorongoro Crater"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+         
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <span class="block italic text-kavora-gold">Ngorongoro</span> Conservation Area
+          </h3>
+
+          <div class="gold-line w-40 my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Formed by a vast volcanic caldera, Ngorongoro brings dramatic
+            scenery and remarkable wildlife together in one extraordinary
+            setting. Its crater floor supports a rich variety of animals,
+            while the surrounding highlands provide sweeping views and
+            opportunities to experience the region's cultural heritage.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Crater landscapes, wildlife viewing, black rhinos, highland scenery.
+          </p>
+
+          <a
+            href="contact.html?destination=Ngorongoro"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Ngorongoro
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 03: LAKE MANYARA -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:min-h-[480px]">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOsEtR0r-0RuGx_x7iG_cRuWTdv3VDyr0lTyJxdIQXO1AIKUvJ_daBd2D2&s=10"
+            alt="Lake Manyara"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+          
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <span class="block italic text-kavora-gold">Lake Manyara</span> National Park
+          </h3>
+
+          <div class="gold-line w-40 my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Set beneath the Great Rift Valley escarpment, Lake Manyara offers
+            a changing landscape of groundwater forest, open plains, and
+            lakeshore. Its diverse habitats attract elephants, abundant birdlife,
+            and the park's famously elusive tree-climbing lions.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Birdlife, elephants, forest scenery, tree-climbing lions.
+          </p>
+
+          <a
+            href="contact.html?destination=Lake%20Manyara"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Lake Manyara
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 04: TARANGIRE -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:order-2 md:min-h-[480px]">
+          <img
+            src="https://143877041.fs1.hubspotusercontent-eu1.net/hubfs/143877041/Beach%20Safari%20-%20Destination%20Detail%20-%20Tarangire%20National%20Park%20-%20Left%20Image-1.webp"
+            alt="Tarangire National Park"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+         
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <span class="block italic text-kavora-gold">Tarangire</span> National Park
+          </h3>
+
+          <div class="gold-line w-40 my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Tarangire is a landscape of sculptural baobabs, golden grasslands,
+            and the Tarangire River, which becomes especially important to
+            wildlife during the dry season. Its elephant herds and quieter
+            atmosphere make it a distinctive addition to a northern Tanzania safari.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Elephant herds, baobabs, seasonal wildlife concentrations.
+          </p>
+
+          <a
+            href="contact.html?destination=Tarangire"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Tarangire
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 05: ARUSHA -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:min-h-[480px]">
+          <img
+            src="https://www.easytravel.co.tz/wp-content/uploads/2023/08/Giraffe-Sighting-Game-Drive-Arusha-National-Park-Tanzania.jpg"
+            alt="Green forest, mountain scenery, and open landscapes in Arusha National Park"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+          
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <span class="block italic text-kavora-gold">Arusha</span> National Park
+          </h3>
+
+          <div class="gold-line w-40 my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Smaller in scale but rich in variety, Arusha National Park
+            combines forest, crater lakes, open grasslands, and views of
+            Mount Meru. Walking safaris and canoeing opportunities offer
+            a more intimate way to experience Tanzania's landscapes
+            beyond the traditional vehicle-based safari.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Mount Meru scenery, giraffes, colobus monkeys, walking safaris.
+          </p>
+
+          <a
+            href="contact.html?destination=Arusha%20National%20Park"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
+          >
+            Explore Arusha National Park
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- JOURNEY INSPIRATION -->
+  <section class="bg-kavora-green px-6 py-24 text-white md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
+
+      <div class="reveal">
+        <div class="mb-6 flex items-center gap-4">
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            A journey shaped around you
+          </p>
+        </div>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-7xl">
+          Five destinations.
+          <span class="block italic text-kavora-gold">One unforgettable journey.</span>
+        </h2>
+
+        <p class="mt-7 max-w-lg text-sm font-light leading-8 text-white/70 md:text-base">
+          Explore Tanzania's northern safari circuit through a considered
+          combination of wildlife, dramatic landscapes, and quieter moments
+          in nature. Choose the places that interest you, and let us help
+          shape the journey around your time and travel style.
+        </p>
+
+        <a
+          href="contact.html?destination=Tanzania"
+          class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
+        >
+          Create your itinerary
+        </a>
+      </div>
+
+      <div class="reveal border-t border-white/20 lg:border-l lg:border-t-0 lg:pl-12">
+
+        <div class="border-b border-white/20 py-6">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            Journey 01
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            The Northern Safari
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Tarangire · Ngorongoro · Serengeti
+          </p>
+        </div>
+
+        <div class="border-b border-white/20 py-6">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            Journey 02
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            Wildlife & Landscapes
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Arusha National Park · Lake Manyara · Ngorongoro
+          </p>
+        </div>
+
+        <div class="py-6">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            Journey 03
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            The Complete Safari
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Arusha · Tarangire · Lake Manyara · Ngorongoro · Serengeti
+          </p>
+        </div>
+
+        <p class="text-[10px] leading-5 text-white/50">
+          These are suggested combinations, not fixed itineraries. Final
+          routing depends on your dates, available accommodation, wildlife
+          season, and preferred pace.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="reveal mx-auto max-w-4xl text-center">
+
+      <div class="gold-line mx-auto w-40 mb-7"></div>
+
+      <p class="mb-6 text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+        Your Tanzania journey begins here
       </p>
 
-      <a href="contact.html" class="self-start text-[9px] uppercase tracking-[0.17em] text-kavora-gold transition hover:text-white sm:self-auto">
-        Begin a conversation →
+      <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-7xl">
+        The wild is calling.
+        <span class="block italic text-kavora-gold">Experience it your way.</span>
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+        Tell us what you want to discover. We'll help you plan a considered
+        journey through Tanzania's remarkable wildlife destinations.
+      </p>
+
+      <a
+        href="contact.html?destination=Tanzania"
+        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
+      >
+        Start planning 
       </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-kavora-deep px-6 py-12 text-white md:px-12 lg:px-16">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-end">
+
+      <div>
+        <a href="index.html" class="font-luxury text-4xl tracking-[0.16em]">
+          KAVORA
+        </a>
+        <p class="mt-2 text-[9px] uppercase tracking-[0.28em] text-white/50">
+          Africa · Considered Journeys
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.15em] text-white/65">
+        <a href="index.html" class="transition hover:text-kavora-gold">Home</a>
+        <a href="tanzania.html" class="transition hover:text-kavora-gold">Tanzania</a>
+        <a href="kenya.html" class="transition hover:text-kavora-gold">Kenya</a>
+        <a href="rwanda.html" class="transition hover:text-kavora-gold">Rwanda</a>
+        <a href="contact.html" class="transition hover:text-kavora-gold">Contact</a>
+      </div>
+
     </div>
 
-    <div class="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-5">
-      <p class="text-[10px] text-white/35">
-        © <span id="year"></span> Kavora. All rights reserved.
+    <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6">
+      <p class="text-[10px] text-white/40">
+        © <span id="year"></span> Kavora Africa. All rights reserved.
       </p>
     </div>
   </footer>
 
   <script>
+    // Reveal sections as they enter the viewport.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    // Current footer year.
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 

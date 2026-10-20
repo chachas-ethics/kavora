@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102D23" />
+
+  <title>Rwanda | Kavora Africa — Considered Journeys</title>
+  <meta
+    name="description"
+    content="Discover Rwanda with Kavora Africa. Experience mountain gorillas in Volcanoes National Park, wildlife in Akagera, and ancient rainforest in Nyungwe through a thoughtfully designed journey."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "kavora-green": "#102D23",
+            "kavora-deep": "#0B211A",
+            "kavora-forest": "#1D4535",
+            "kavora-gold": "#C8A96B",
+            "kavora-ivory": "#F7F5EF",
+            "kavora-muted": "#74786F",
+            "kavora-line": "#E4E0D6"
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 35px;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+    }
+
+    .hero-image {
+      animation: heroReveal 1.5s ease-out both;
+    }
+
+    .destination-image {
+      transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .destination-card:hover .destination-image {
+      transform: scale(1.045);
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 750ms ease, transform 750ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes heroReveal {
+      from { transform: scale(1.06); }
+      to { transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- HERO -->
+  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+
+    <img
+      src="images/rwanda-hero.jpg"
+      alt="Rwanda's lush green highlands rising into the mist"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
+      fetchpriority="high"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/45 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/50 via-transparent to-transparent"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-24 text-white md:px-12 md:pb-28 lg:px-16">
+
+      <a
+        href="index.html"
+        class="mb-16 inline-flex flex-col leading-none"
+        aria-label="Kavora Africa home"
+      >
+        <span class="font-luxury text-3xl tracking-[0.16em] md:text-4xl">
+          KAVORA
+        </span>
+        <span class="mt-2 text-[8px] tracking-[0.38em] text-white/75">
+          AFRICA · CONSIDERED JOURNEYS
+        </span>
+      </a>
+
+      <div class="mb-7 flex items-center gap-4">
+        <div class="gold-line"></div>
+        <p class="text-[10px] uppercase tracking-[0.32em] text-kavora-gold">
+          East Africa · Destination Collection
+        </p>
+      </div>
+
+      <h1 class="max-w-4xl font-luxury text-7xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
+        Rwanda<span class="text-kavora-gold">.</span>
+      </h1>
+
+      <p class="mt-7 max-w-2xl font-luxury text-2xl leading-relaxed text-white/90 md:text-3xl lg:text-4xl">
+        A land of mist-covered mountains, remarkable wildlife, and quiet wonder.
+      </p>
+
+      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
+        Discover a country where ancient forests, volcanic landscapes, and
+        open savannahs create extraordinary encounters with the natural world.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-5">
+        <a
+          href="#destinations"
+          class="bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
+        >
+          Explore Rwanda
+        </a>
+
+        <a
+          href="contact.html?destination=Rwanda"
+          class="border border-white/50 px-7 py-4 text-[10px] uppercase tracking-[0.2em] transition hover:border-kavora-gold hover:text-kavora-gold"
+        >
+          Design my journey ↗
+        </a>
+      </div>
+
+      <div class="mt-14 flex items-center gap-4 text-[9px] uppercase tracking-[0.22em] text-white/60">
+        <span class="h-px w-10 bg-kavora-gold"></span>
+        Three landscapes. One extraordinary country.
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 right-8 hidden text-right text-white/60 md:block">
+      <p class="text-[9px] uppercase tracking-[0.25em]">01 / 03</p>
+      <p class="mt-1 font-luxury text-xl">The Rwanda Collection</p>
+    </div>
+  </header>
+
+  <!-- INTRODUCTION -->
+  <section id="philosophy" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
+
+      <div class="reveal lg:col-span-5">
+        <div class="mb-6 flex items-center gap-4">
+          <div class="gold-line"></div>
+          <p class="text-[10px] uppercase tracking-[0.28em] text-kavora-muted">
+            The spirit of Rwanda
+          </p>
+        </div>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-6xl lg:text-7xl">
+          Nature, in its most <span class="italic text-kavora-forest">intimate form.</span>
+        </h2>
+      </div>
+
+      <div class="reveal lg:col-span-7 lg:pt-10">
+        <p class="text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          Rwanda offers a different kind of African journey. Its volcanic
+          mountains shelter endangered mountain gorillas, its eastern
+          savannahs are home to remarkable wildlife, and its ancient
+          rainforests reveal a world of primates, birds, and towering trees.
+        </p>
+
+        <p class="mt-5 text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+          Three distinct national parks provide the foundation for a journey
+          shaped by nature, meaningful encounters, and time spent in some of
+          the country's most extraordinary landscapes.
+        </p>
+
+        <a
+          href="contact.html?destination=Rwanda"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition hover:text-kavora-gold"
+        >
+          Begin your journey <span class="text-lg">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="bg-white px-6 py-24 md:px-12 md:py-28 lg:px-16">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="reveal mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <div class="mb-5 flex items-center gap-4">
+            <div class="gold-line"></div>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+              Three remarkable places
+            </p>
+          </div>
+
+          <h2 class="font-luxury text-5xl font-normal md:text-7xl">
+            The Rwanda Collection
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          From the volcanic peaks of the north to the savannah in the east
+          and the ancient rainforest in the southwest, discover three
+          distinct expressions of Rwanda.
+        </p>
+      </div>
+
+      <!-- DESTINATION 01: VOLCANOES -->
+      <article class="destination-card reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:min-h-[540px]">
+          <img
+            src="images/volcanoes-national-park.jpg"
+            alt="Volcanic mountains and lush forest in Rwanda's Volcanoes National Park"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute left-6 top-6 border border-white/50 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white">
+            Mountain wilderness
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+          <p class="mb-5 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+            01 — Where the mountains breathe
+          </p>
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            Volcanoes
+            <span class="block italic text-kavora-forest">National Park</span>
+          </h3>
+
+          <div class="gold-line my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            Set among the dramatic Virunga volcanoes, this is one of the
+            world's most extraordinary places to encounter endangered
+            mountain gorillas in their natural habitat. Mist, bamboo forest,
+            and steep green slopes create an experience that is both
+            physically immersive and deeply memorable.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Mountain gorilla trekking, volcanic scenery, golden monkeys.
+          </p>
+
+          <a
+            href="contact.html?destination=Volcanoes%20National%20Park"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition group-hover:text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 02: AKAGERA -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:order-2 md:min-h-[540px]">
+          <img
+            src="images/akagera-national-park.jpg"
+            alt="Akagera National Park's open savannah and wildlife"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute left-6 top-6 border border-white/50 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white">
+            Classic safari
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+          <p class="mb-5 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+            02 — The wild east
+          </p>
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            Akagera
+            <span class="block italic text-kavora-forest">National Park</span>
+          </h3>
+
+          <div class="gold-line my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            A landscape of open plains, rolling hills, lakes, and wetlands,
+            Akagera reveals Rwanda's classic safari side. Game drives offer
+            opportunities to look for elephants, giraffes, zebras, antelope,
+            and the park's reintroduced lion and black rhino populations.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Big Five safari opportunities, savannah wildlife, lakes and wetlands.
+          </p>
+
+          <a
+            href="contact.html?destination=Akagera%20National%20Park"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition group-hover:text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- DESTINATION 03: NYUNGWE -->
+      <article class="destination-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+        <div class="relative min-h-[340px] overflow-hidden md:min-h-[540px]">
+          <img
+            src="images/nyungwe-national-park.jpg"
+            alt="Dense green rainforest in Nyungwe National Park"
+            loading="lazy"
+            class="destination-image absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute left-6 top-6 border border-white/50 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white">
+            Ancient rainforest
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+          <p class="mb-5 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+            03 — Into the green
+          </p>
+
+          <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            Nyungwe
+            <span class="block italic text-kavora-forest">National Park</span>
+          </h3>
+
+          <div class="gold-line my-7"></div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+            One of Africa's remarkable montane rainforests, Nyungwe is a
+            world of misty canopy, forest trails, and extraordinary
+            biodiversity. Chimpanzee tracking, encounters with other
+            primates, birdwatching, and the famous canopy walkway offer
+            a different rhythm from Rwanda's mountain and savannah safaris.
+          </p>
+
+          <p class="mt-5 text-xs leading-6 text-kavora-muted">
+            Known for: Chimpanzee tracking, primates, rainforest walks, canopy walkway.
+          </p>
+
+          <a
+            href="contact.html?destination=Nyungwe%20National%20Park"
+            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition group-hover:text-kavora-gold"
+          >
+            Explore this journey <span class="text-lg">↗</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- JOURNEY INSPIRATION -->
+  <section class="bg-kavora-green px-6 py-24 text-white md:px-12 md:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
+
+      <div class="reveal">
+        <div class="mb-6 flex items-center gap-4">
+          <div class="gold-line"></div>
+          <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            A journey shaped around you
+          </p>
+        </div>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-7xl">
+          Three worlds.
+          <span class="block italic text-kavora-gold">One Rwanda.</span>
+        </h2>
+
+        <p class="mt-7 max-w-lg text-sm font-light leading-8 text-white/70 md:text-base">
+          Combine gorilla trekking in the volcanic north, a wildlife safari
+          in the east, and the extraordinary biodiversity of the southwest
+          into a journey with a natural sense of progression.
+        </p>
+
+        <a
+          href="contact.html?destination=Rwanda"
+          class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
+        >
+          Create your itinerary <span class="text-lg">↗</span>
+        </a>
+      </div>
+
+      <div class="reveal border-t border-white/20 lg:border-l lg:border-t-0 lg:pl-12">
+
+        <div class="border-b border-white/20 py-7">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            01 — The primate experience
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            Into the Mountains
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Volcanoes National Park · Gorilla trekking and mountain landscapes
+          </p>
+        </div>
+
+        <div class="border-b border-white/20 py-7">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            02 — The wildlife experience
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            The Savannah Safari
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Akagera National Park · Game drives and open landscapes
+          </p>
+        </div>
+
+        <div class="py-7">
+          <p class="text-[9px] uppercase tracking-[0.24em] text-kavora-gold">
+            03 — The rainforest experience
+          </p>
+          <h3 class="mt-2 font-luxury text-3xl md:text-4xl">
+            Beneath the Canopy
+          </h3>
+          <p class="mt-2 text-xs leading-6 text-white/65">
+            Nyungwe National Park · Chimpanzees and ancient forest
+          </p>
+        </div>
+
+        <p class="text-[10px] leading-5 text-white/50">
+          The order and duration of each stop depend on your travel dates,
+          permits, transport connections, and preferred pace.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+    <div class="reveal mx-auto max-w-4xl text-center">
+
+      <div class="gold-line mx-auto mb-7"></div>
+
+      <p class="mb-6 text-[10px] uppercase tracking-[0.28em] text-kavora-muted">
+        Your Rwanda journey begins here
+      </p>
+
+      <h2 class="font-luxury text-5xl font-normal leading-[1.05] md:text-7xl">
+        Discover the extraordinary.
+        <span class="block italic text-kavora-forest">On your own terms.</span>
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+        Tell us what draws you to Rwanda. We'll help you plan a thoughtful
+        journey around its extraordinary wildlife, forests, and landscapes.
+      </p>
+
+      <a
+        href="contact.html?destination=Rwanda"
+        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
+      >
+        Start planning <span class="text-lg text-kavora-gold">↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-kavora-deep px-6 py-12 text-white md:px-12 lg:px-16">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-end">
+
+      <div>
+        <a href="index.html" class="font-luxury text-4xl tracking-[0.16em]">
+          KAVORA
+        </a>
+        <p class="mt-2 text-[9px] uppercase tracking-[0.28em] text-white/50">
+          Africa · Considered Journeys
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.15em] text-white/65">
+        <a href="index.html" class="transition hover:text-kavora-gold">Home</a>
+        <a href="tanzania.html" class="transition hover:text-kavora-gold">Tanzania</a>
+        <a href="kenya.html" class="transition hover:text-kavora-gold">Kenya</a>
+        <a href="rwanda.html" class="transition hover:text-kavora-gold">Rwanda</a>
+        <a href="contact.html" class="transition hover:text-kavora-gold">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6">
+      <p class="text-[10px] text-white/40">
+        © <span id="year"></span> Kavora Africa. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal sections as they enter the viewport.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    // Current footer year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
