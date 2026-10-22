@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ngorongoro Conservation Area Safari | Kavora Africa</title>
+
+  <meta
+    name="description"
+    content="Discover Tanzania's extraordinary Ngorongoro Conservation Area with Kavora Africa. Explore the legendary crater, encounter remarkable wildlife, and plan a privately curated safari."
+  />
+
+  <meta name="theme-color" content="#102D23" />
+
+  <link
+    rel="canonical"
+    href="https://yourdomain.com/ngorongoro-conservation-area.html"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: "#102D23",
+              deep: "#0B211A",
+              forest: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#E4E0D6"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --kavora-green: #102D23;
+      --kavora-deep: #0B211A;
+      --kavora-forest: #1D4535;
+      --kavora-gold: #C8A96B;
+      --kavora-ivory: #F7F5EF;
+      --kavora-muted: #74786F;
+      --kavora-line: #E4E0D6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--kavora-ivory);
+      color: var(--kavora-green);
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--kavora-gold);
+      color: var(--kavora-deep);
+    }
+
+    .font-luxury {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: var(--kavora-gold);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      min-height: 90svh;
+      background: var(--kavora-deep);
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 20, 14, 0.83) 0%,
+          rgba(5, 20, 14, 0.57) 43%,
+          rgba(5, 20, 14, 0.12) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(5, 20, 14, 0.55) 0%,
+          transparent 45%
+        );
+    }
+
+    .nav-link {
+      position: relative;
+      color: rgba(255, 255, 255, 0.78);
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--kavora-gold);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--kavora-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .gold-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 16px 23px;
+      background: var(--kavora-gold);
+      color: var(--kavora-deep);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .gold-button:hover {
+      background: #D8BC82;
+      transform: translateY(-2px);
+    }
+
+    .outline-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 15px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .outline-button:hover {
+      border-color: var(--kavora-gold);
+      color: var(--kavora-gold);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .experience-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--kavora-deep);
+      isolation: isolate;
+    }
+
+    .experience-card img {
+      transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .experience-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .experience-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(5, 20, 14, 0.91) 0%,
+        rgba(5, 20, 14, 0.24) 55%,
+        rgba(5, 20, 14, 0.03) 100%
+      );
+      pointer-events: none;
+    }
+
+    .destination-image {
+      transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .destination-card:hover .destination-image {
+      transform: scale(1.035);
+    }
+
+    .season-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--kavora-line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--kavora-line);
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 23px 0;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      color: var(--kavora-gold);
+      font-size: 22px;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .season-row {
+        grid-template-columns: 180px 1fr;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        min-height: 100%vh;
+        min-height: 100svh;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            0deg,
+            rgba(5, 20, 14, 0.91) 0%,
+            rgba(5, 20, 14, 0.53) 57%,
+            rgba(5, 20, 14, 0.2) 100%
+          );
+      }
+
+      .hero-image {
+        object-position: 56% center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+     <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
+
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
+
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+    <!-- Logo -->
+<a href="#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
+
+
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+
+         <a
+          href="#home"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+       
+
+        <a
+          href="#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+          href="#contact"
+          class="group relative overflow-hidden border border-white/40 px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design Your Journey
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="#home"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Home
+          </a>
+
+          <a
+            href="#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Destinations
+          </a>
+
+          <a
+            href="#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="#concierge"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Concierge
+          </a>
+
+          <a
+            href="#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            About
+          </a>
+
+          
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="mt-auto">
+
+          <p class="mb-4 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
+
+          <p class="max-w-xs font-luxury text-xl leading-relaxed text-white/70">
+            Private journeys, exceptional stays and seamless experiences across Africa.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="absolute hidden inset-x-0 top-0 z-50 border-b border-white/15">
+    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
+
+      <a href="index.html" class="flex items-center gap-3" aria-label="Kavora Africa home">
+        <span class="font-luxury text-3xl tracking-[0.08em] text-white md:text-4xl">
+          KAVORA
+        </span>
+
+        <span class="hidden h-8 w-px bg-kavora-gold/70 sm:block"></span>
+
+        <span class="hidden text-[8px] font-medium uppercase leading-4 tracking-[0.22em] text-white/75 sm:block">
+          AFRICA<br />
+          JOURNEYS
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-[10px] font-semibold uppercase tracking-[0.14em]">
+          Home
+        </a>
+
+        <a href="tanzania.html" class="nav-link text-[10px] font-semibold uppercase tracking-[0.14em]">
+          Tanzania
+        </a>
+
+        <a href="destinations.html" class="nav-link text-[10px] font-semibold uppercase tracking-[0.14em]">
+          Destinations
+        </a>
+
+        <a href="experiences.html" class="nav-link text-[10px] font-semibold uppercase tracking-[0.14em]">
+          Experiences
+        </a>
+
+        <a href="about.html" class="nav-link text-[10px] font-semibold uppercase tracking-[0.14em]">
+          Our Story
+        </a>
+      </nav>
+
+      <a
+        href="contact.html?destination=Ngorongoro"
+        class="hidden border border-kavora-gold px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-gold transition hover:bg-kavora-gold hover:text-kavora-deep sm:inline-flex"
+      >
+        Plan Your Safari
+      </a>
+
+      <button
+        id="menuToggle"
+        class="flex h-10 w-10 items-center justify-center border border-white/30 text-white lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <svg
+          id="menuIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+          aria-hidden="true"
+        >
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      id="mobileMenu"
+      class="mobile-menu border-t border-white/10 bg-kavora-deep/95 px-6 py-5 backdrop-blur-md lg:hidden"
+    >
+      <nav class="mx-auto flex max-w-[1440px] flex-col gap-5" aria-label="Mobile navigation">
+        <a href="index.html" class="text-xs uppercase tracking-[0.15em] text-white/80">Home</a>
+        <a href="tanzania.html" class="text-xs uppercase tracking-[0.15em] text-white/80">Tanzania</a>
+        <a href="destinations.html" class="text-xs uppercase tracking-[0.15em] text-white/80">Destinations</a>
+        <a href="experiences.html" class="text-xs uppercase tracking-[0.15em] text-white/80">Experiences</a>
+        <a href="about.html" class="text-xs uppercase tracking-[0.15em] text-white/80">Our Story</a>
+
+        <a
+          href="contact.html?destination=Ngorongoro"
+          class="mt-2 inline-flex w-fit border border-kavora-gold px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-gold"
+        >
+          Plan Your Safari
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hero flex items-end">
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9StPN8Z1xC1xWj2X0JJXJzVslPo5D1SSIbpZqY3N0I245BQUeT6iHnnk&s=10"
+      alt="The magnificent Ngorongoro Crater and its surrounding landscape"
+      class="hero-image"
+      fetchpriority="high"
+    />
+
+    <div class="hero-overlay"></div>
+
+    <div class="relative mx-auto w-full max-w-[1440px] px-6 pb-20 pt-40 md:px-10 md:pb-28 lg:px-16 lg:pb-32">
+
+      <div class="max-w-4xl">
+
+       
+
+        <h1 class="font-luxury text-6xl font-normal leading-[0.91] text-white sm:text-7xl md:text-8xl lg:text-[112px]">
+          Ngorongoro<span class="italic text-kavora-gold">.</span>
+        </h1>
+
+        <p class="mt-8 max-w-xl text-sm font-light leading-8 text-white/80 md:text-base md:leading-9">
+          Descend into one of Africa's most extraordinary natural landscapes,
+          where ancient volcanic beauty meets remarkable wildlife and every
+          horizon reveals another reason to stay a little longer.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+
+          <a href="contact.html?destination=Ngorongoro" class="gold-button">
+            Plan My Ngorongoro Safari
+
+          
+          </a>
+
+         
+
+        </div>
+      </div>
+
+     
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       INTRODUCTION
+  ====================================================== -->
+
+  <section id="discover" class="px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto grid max-w-[1240px] gap-12 md:grid-cols-12 md:gap-16">
+
+      <div class="md:col-span-5 reveal">
+
+        <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+          A Natural Wonder
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+          Nature's Own<br />
+          <span class="italic text-kavora-gold">Amphitheatre.</span>
+        </h2>
+
+      </div>
+
+      <div class="md:col-span-7 md:pt-3 reveal">
+
+        <p class="text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          In the highlands of northern Tanzania, the Ngorongoro Conservation
+          Area unfolds around an immense volcanic caldera. Its dramatic
+          crater walls frame a remarkable natural sanctuary where open
+          grasslands, wetlands, woodland, and seasonal water sources sustain
+          an exceptional variety of wildlife.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          Beyond the crater floor, the wider conservation area reveals a
+          different rhythm of life. Mist drifts across the highlands, Maasai
+          pastoral traditions remain part of the cultural landscape, and
+          the scenery shifts from green slopes to open plains.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          With Kavora Africa, your journey can be shaped around the
+          experiences that matter most to you, whether that means exceptional
+          wildlife viewing, quiet moments in the highlands, or a carefully
+          planned safari through Tanzania's northern circuit.
+        </p>
+
+        <div class="mt-9 flex items-center gap-5">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       DESTINATION HIGHLIGHT
+  ====================================================== -->
+
+  <section class="px-6 pb-24 md:px-10 md:pb-32 lg:px-16">
+
+    <div class="destination-card reveal mx-auto grid max-w-[1240px] overflow-hidden border border-kavora-line md:grid-cols-2">
+
+      <div class="relative min-h-[340px] overflow-hidden md:min-h-[590px]">
+
+        <img
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
+          alt="African wildlife in its natural savannah habitat"
+          loading="lazy"
+          class="destination-image absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/40 to-transparent"></div>
+
+        <div class="absolute bottom-6 left-6 border border-white/50 px-4 py-3 backdrop-blur-sm md:bottom-8 md:left-8">
+          <p class="eyebrow text-white">The Ngorongoro Experience</p>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+
+        <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+          The Crater Floor
+        </p>
+
+        <h2 class="mt-7 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          A Sanctuary
+          <span class="italic text-kavora-gold">Alive With Wildlife.</span>
+        </h2>
+
+        <div class="gold-line my-7 w-40"></div>
+
+        <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+          The crater floor is the heart of the Ngorongoro experience. Open
+          grasslands, marshes, and woodland create a varied habitat for
+          wildlife, while the immense crater walls form a striking natural
+          backdrop for game drives.
+        </p>
+
+        <p class="mt-5 text-sm font-light leading-8 text-kavora-muted md:text-base">
+          With experienced local guides, a day in the crater can bring
+          opportunities to observe lions, elephants, buffalo, zebras,
+          wildebeest, and, with luck, the endangered black rhino.
+        </p>
+
+        <p class="mt-6 text-xs leading-7 text-kavora-muted">
+          Known for: Crater scenery, exceptional wildlife viewing, black
+          rhinos, lions, and diverse habitats.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       WHY NGORONGORO
+  ====================================================== -->
+
+  <section class="bg-white px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto max-w-[1240px]">
+
+      <div class="mx-auto max-w-3xl text-center reveal">
+
+        <p class="eyebrow flex items-center justify-center gap-4 text-kavora-gold">
+          <span class="gold-line w-10"></span>
+          What Makes It Exceptional
+          <span class="gold-line w-10"></span>
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+          More Than a<br />
+          <span class="italic text-kavora-gold">Wildlife Destination.</span>
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+          Ngorongoro brings together extraordinary natural scenery,
+          remarkable wildlife, and a cultural landscape that gives the
+          destination a character all its own.
+        </p>
+
+      </div>
+
+      <div class="mt-16 grid gap-0 border-t border-kavora-line sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+
+        <!-- FEATURE 01 -->
+
+        <article class="reveal border-b border-kavora-line px-5 py-9 sm:border-r lg:px-7 lg:py-10">
+
+          <span class="font-luxury text-4xl italic text-kavora-gold">01</span>
+
+          <h3 class="mt-6 font-luxury text-3xl font-medium">
+            Ancient Caldera
+          </h3>
+
+          <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+            Explore the floor of a vast volcanic caldera, surrounded by
+            steep crater walls and extraordinary highland scenery.
+          </p>
+
+        </article>
+
+        <!-- FEATURE 02 -->
+
+        <article class="reveal border-b border-kavora-line px-5 py-9 sm:border-r lg:px-7 lg:py-10">
+
+          <span class="font-luxury text-4xl italic text-kavora-gold">02</span>
+
+          <h3 class="mt-6 font-luxury text-3xl font-medium">
+            Remarkable Wildlife
+          </h3>
+
+          <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+            Look for lions, elephants, buffalo, zebras, and other wildlife
+            across the crater's varied habitats.
+          </p>
+
+        </article>
+
+        <!-- FEATURE 03 -->
+
+        <article class="reveal border-b border-kavora-line px-5 py-9 sm:border-r-0 lg:border-r lg:px-7 lg:py-10">
+
+          <span class="font-luxury text-4xl italic text-kavora-gold">03</span>
+
+          <h3 class="mt-6 font-luxury text-3xl font-medium">
+            Highland Beauty
+          </h3>
+
+          <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+            Discover changing landscapes, sweeping viewpoints, misty
+            mornings, and the distinctive atmosphere of the highlands.
+          </p>
+
+        </article>
+
+        <!-- FEATURE 04 -->
+
+        <article class="reveal px-5 py-9 sm:col-span-2 lg:col-span-1 lg:px-7 lg:py-10">
+
+          <span class="font-luxury text-4xl italic text-kavora-gold">04</span>
+
+          <h3 class="mt-6 font-luxury text-3xl font-medium">
+            Living Heritage
+          </h3>
+
+          <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+            Experience a region where conservation, pastoral traditions,
+            and the surrounding communities form part of the landscape.
+          </p>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       SIGNATURE EXPERIENCES
+  ====================================================== -->
+
+  <section class="px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto max-w-[1240px]">
+
+      <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+        <div class="max-w-2xl reveal">
+
+          <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+            Curated Experiences
+          </p>
+
+          <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+            Experience Ngorongoro
+            <span class="italic text-kavora-gold">Your Way.</span>
+          </h2>
+
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-8 text-kavora-muted reveal">
+          From early-morning game drives to unhurried highland escapes,
+          shape your journey around the landscapes, wildlife, and moments
+          you most want to experience.
+        </p>
+
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+
+        <!-- EXPERIENCE 01 -->
+
+        <article class="experience-card reveal min-h-[420px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85"
+            alt="Wildlife safari in Tanzania"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
+
+            <p class="eyebrow text-kavora-gold">
+              On the Crater Floor
+            </p>
+
+            <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
+              Guided Game Drives
+            </h3>
+
+            <p class="mt-4 max-w-sm text-xs font-light leading-7 text-white/80">
+              Explore the crater with a knowledgeable guide and discover
+              the wildlife that inhabits its grasslands and wetlands.
+            </p>
+
+           
+
+          </div>
+        </article>
+
+
+        <!-- EXPERIENCE 02 -->
+
+        <article class="experience-card reveal min-h-[420px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85"
+            alt="Elephants moving through an African wildlife landscape"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
+
+            <p class="eyebrow text-kavora-gold">
+              Wildlife Encounters
+            </p>
+
+            <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
+              Search for the Big Five
+            </h3>
+
+            <p class="mt-4 max-w-sm text-xs font-light leading-7 text-white/80">
+              Look for elephants, lions, buffalo, and other remarkable
+              wildlife, with the possibility of encountering the elusive
+              black rhino.
+            </p>
+
+          </div>
+        </article>
+
+
+        <!-- EXPERIENCE 03 -->
+
+        <article class="experience-card reveal min-h-[420px] sm:col-span-2 lg:col-span-1">
+
+          <img
+            src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
+            alt="Open landscapes and changing natural scenery"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
+
+            <p class="eyebrow text-kavora-gold">
+              Beyond the Crater
+            </p>
+
+            <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
+              Highland Exploration
+            </h3>
+
+            <p class="mt-4 max-w-sm text-xs font-light leading-7 text-white/80">
+              Discover the wider conservation area, with its elevated
+              viewpoints, dramatic scenery, and cultural heritage.
+            </p>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       WHEN TO VISIT
+  ====================================================== -->
+
+  <section class="bg-white px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-12 lg:gap-20">
+
+      <div class="lg:col-span-5 reveal">
+
+        <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+          Planning Your Visit
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+          A Different<br />
+          <span class="italic text-kavora-gold">Beauty in Every Season.</span>
+        </h2>
+
+        <p class="mt-7 text-sm font-light leading-8 text-kavora-muted md:text-base">
+          Ngorongoro can be rewarding throughout the year. The experience
+          changes with rainfall, vegetation, and wildlife movement, so the
+          right time to visit depends on your priorities.
+        </p>
+
+        <p class="mt-5 text-xs font-light leading-7 text-kavora-muted">
+          Our team can help you choose suitable dates based on your preferred
+          safari experiences, wider itinerary, and travel style.
+        </p>
+
+        <a
+          href="contact.html?destination=Ngorongoro"
+          class="gold-button mt-8"
+        >
+          Discuss Your Travel Dates
+        </a>
+
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+
+        <!-- SEASON 01 -->
+
+        <div class="season-row">
+
+          <div>
+            <p class="eyebrow text-kavora-gold">
+              January – March
+            </p>
+
+            <h3 class="mt-2 font-luxury text-3xl">
+              Green Season
+            </h3>
+          </div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted">
+            The landscape can be especially green and atmospheric. This
+            period can suit travellers who appreciate lush scenery, changing
+            skies, and the quieter details of the natural environment.
+          </p>
+
+        </div>
+
+        <!-- SEASON 02 -->
+
+        <div class="season-row">
+
+          <div>
+            <p class="eyebrow text-kavora-gold">
+              June – October
+            </p>
+
+            <h3 class="mt-2 font-luxury text-3xl">
+              Dry Season
+            </h3>
+          </div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted">
+            Generally drier conditions can make this a popular period for
+            safari travel. Wildlife viewing and road conditions vary, so
+            your itinerary should account for the conditions at the time
+            of travel.
+          </p>
+
+        </div>
+
+        <!-- SEASON 03 -->
+
+        <div class="season-row">
+
+          <div>
+            <p class="eyebrow text-kavora-gold">
+              November – December
+            </p>
+
+            <h3 class="mt-2 font-luxury text-3xl">
+              Seasonal Renewal
+            </h3>
+          </div>
+
+          <p class="text-sm font-light leading-8 text-kavora-muted">
+            Short rains may bring fresh growth and changing scenery to the
+            region. Conditions are variable, making flexible planning
+            valuable for travellers exploring northern Tanzania.
+          </p>
+
+        </div>
+
+        <p class="mt-6 text-[10px] font-light leading-6 text-kavora-muted">
+          Seasonal descriptions are general guides. Actual conditions,
+          wildlife sightings, and rainfall vary from year to year.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       TAILORED SAFARIS
+  ====================================================== -->
+
+  <section class="px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto max-w-[1240px]">
+
+      <div class="mx-auto max-w-3xl text-center reveal">
+
+        <p class="eyebrow flex items-center justify-center gap-4 text-kavora-gold">
+          <span class="gold-line w-10"></span>
+          Designed Around You
+          <span class="gold-line w-10"></span>
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+          Your Safari.<br />
+          <span class="italic text-kavora-gold">Your Story.</span>
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+          No two travellers experience Africa in quite the same way.
+          We help you plan a journey that reflects your interests, pace,
+          accommodation preferences, and time available.
+        </p>
+
+      </div>
+
+      <div class="mt-14 grid gap-0 border-y border-kavora-line md:mt-20 md:grid-cols-3">
+
+        <!-- SAFARI TYPE 01 -->
+
+        <article class="reveal border-b border-kavora-line px-6 py-10 md:border-b-0 md:border-r md:px-8 lg:px-10">
+
+          <p class="eyebrow text-kavora-gold">
+            01 · For Two
+          </p>
+
+          <h3 class="mt-5 font-luxury text-4xl">
+            Private & Romantic Escapes
+          </h3>
+
+          <p class="mt-5 text-xs font-light leading-7 text-kavora-muted">
+            Plan a more personal safari with thoughtfully selected
+            accommodation, scenic moments, and time to enjoy the journey
+            together.
+          </p>
+
+        </article>
+
+        <!-- SAFARI TYPE 02 -->
+
+        <article class="reveal border-b border-kavora-line px-6 py-10 md:border-b-0 md:border-r md:px-8 lg:px-10">
+
+          <p class="eyebrow text-kavora-gold">
+            02 · Together
+          </p>
+
+          <h3 class="mt-5 font-luxury text-4xl">
+            Family Adventures
+          </h3>
+
+          <p class="mt-5 text-xs font-light leading-7 text-kavora-muted">
+            Create a shared wildlife experience with a pace, accommodation
+            plan, and itinerary suited to your family's needs.
+          </p>
+
+        </article>
+
+        <!-- SAFARI TYPE 03 -->
+
+        <article class="reveal px-6 py-10 md:px-8 lg:px-10">
+
+          <p class="eyebrow text-kavora-gold">
+            03 · In Depth
+          </p>
+
+          <h3 class="mt-5 font-luxury text-4xl">
+            Wildlife & Photography
+          </h3>
+
+          <p class="mt-5 text-xs font-light leading-7 text-kavora-muted">
+            Build your journey around wildlife observation, landscape
+            photography, and the opportunity to spend meaningful time
+            in the field.
+          </p>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       JOURNEY INSPIRATION
+  ====================================================== -->
+
+  <section class="relative overflow-hidden bg-kavora-green px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+
+    <div class="relative mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-12 lg:gap-20">
+
+      <div class="lg:col-span-7 reveal">
+
+        <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+          The Kavora Approach
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] text-white md:text-6xl lg:text-7xl">
+          Not Just a Destination.<br />
+          <span class="italic text-kavora-gold">A Journey Worth Taking.</span>
+        </h2>
+
+        <p class="mt-7 max-w-2xl text-sm font-light leading-8 text-white/70 md:text-base md:leading-9">
+          A remarkable safari begins long before you arrive. It begins with
+          understanding what you want from Africa and creating a journey
+          that brings those expectations to life.
+        </p>
+
+        <p class="mt-5 max-w-2xl text-sm font-light leading-8 text-white/70 md:text-base md:leading-9">
+          Kavora Africa helps you bring the details together, from selecting
+          the right experiences to coordinating your wider northern Tanzania
+          itinerary. Every recommendation starts with your interests and
+          the kind of travel experience you value.
+        </p>
+
+        <a
+          href="contact.html?destination=Ngorongoro"
+          class="gold-button mt-9"
+        >
+          Create Your Journey
+        </a>
+
+      </div>
+
+      <div class="reveal lg:col-span-5">
+
+        <div class="border border-white/15 p-7 md:p-9 lg:p-10">
+
+          <p class="eyebrow text-kavora-gold">
+            Your Journey, Considered
+          </p>
+
+          <div class="mt-8 space-y-7">
+
+            <div class="flex gap-5">
+
+              <span class="font-luxury text-3xl italic text-kavora-gold">
+                01
+              </span>
+
+              <div>
+                <h3 class="font-luxury text-2xl text-white">
+                  Tell Us What Inspires You
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-6 text-white/60">
+                  Share your travel dates, interests, and the experience
+                  you have in mind.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="h-px bg-white/10"></div>
+
+            <div class="flex gap-5">
+
+              <span class="font-luxury text-3xl italic text-kavora-gold">
+                02
+              </span>
+
+              <div>
+                <h3 class="font-luxury text-2xl text-white">
+                  Shape Your Safari
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-6 text-white/60">
+                  Discuss suitable experiences, accommodation preferences,
+                  and how Ngorongoro fits into your wider itinerary.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="h-px bg-white/10"></div>
+
+            <div class="flex gap-5">
+
+              <span class="font-luxury text-3xl italic text-kavora-gold">
+                03
+              </span>
+
+              <div>
+                <h3 class="font-luxury text-2xl text-white">
+                  Prepare for Africa
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-6 text-white/60">
+                  Finalise your arrangements and get ready for the
+                  experiences ahead.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FAQ
+  ====================================================== -->
+
+  <section class="px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <div class="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-12 lg:gap-20">
+
+      <div class="lg:col-span-5 reveal">
+
+        <p class="eyebrow flex items-center gap-4 text-kavora-gold">
+          Before You Travel
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
+          A Few Things<br />
+          <span class="italic text-kavora-gold">Worth Knowing.</span>
+        </h2>
+
+        <p class="mt-6 max-w-md text-sm font-light leading-8 text-kavora-muted">
+          Planning a safari comes with questions. Here are a few useful
+          details to help you prepare for your Ngorongoro experience.
+        </p>
+
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+
+        <details class="faq-item" open>
+
+          <summary>
+            <span class="font-luxury text-2xl md:text-3xl">
+              What makes Ngorongoro special?
+            </span>
+
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+
+          <p class="pb-6 pr-8 text-sm font-light leading-8 text-kavora-muted">
+            Ngorongoro is known for its vast volcanic caldera, distinctive
+            highland scenery, and remarkable concentration of wildlife on
+            the crater floor. The wider conservation area also offers
+            cultural and landscape experiences beyond the crater itself.
+          </p>
+
+        </details>
+
+        <details class="faq-item">
+
+          <summary>
+            <span class="font-luxury text-2xl md:text-3xl">
+              How much time should I spend there?
+            </span>
+
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+
+          <p class="pb-6 pr-8 text-sm font-light leading-8 text-kavora-muted">
+            Many itineraries include a crater game drive as part of a wider
+            northern Tanzania safari. The ideal length of stay depends on
+            your interests, accommodation choices, arrival arrangements,
+            and whether you want to explore other nearby destinations.
+          </p>
+
+        </details>
+
+        <details class="faq-item">
+
+          <summary>
+            <span class="font-luxury text-2xl md:text-3xl">
+              Can Ngorongoro be combined with Serengeti?
+            </span>
+
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+
+          <p class="pb-6 pr-8 text-sm font-light leading-8 text-kavora-muted">
+            Yes. Ngorongoro and Serengeti are frequently combined in
+            northern Tanzania safari itineraries. The route, number of
+            nights, and order of destinations can be tailored to your
+            travel dates and preferred experiences.
+          </p>
+
+        </details>
+
+        <details class="faq-item">
+
+          <summary>
+            <span class="font-luxury text-2xl md:text-3xl">
+              Is Ngorongoro suitable for first-time safari travellers?
+            </span>
+
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+
+          <p class="pb-6 pr-8 text-sm font-light leading-8 text-kavora-muted">
+            Ngorongoro can be an excellent choice for first-time safari
+            travellers because of its distinctive scenery and wildlife
+            viewing opportunities. We can help you understand the
+            practical arrangements and choose a suitable itinerary.
+          </p>
+
+        </details>
+
+        <details class="faq-item">
+
+          <summary>
+            <span class="font-luxury text-2xl md:text-3xl">
+              How do I arrange a safari with Kavora Africa?
+            </span>
+
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+
+          <p class="pb-6 pr-8 text-sm font-light leading-8 text-kavora-muted">
+            Contact Kavora Africa with your preferred travel dates, group
+            size, interests, and approximate budget. Our team can then
+            discuss suitable options and help you plan the next steps.
+          </p>
+
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FINAL CALL TO ACTION
+  ====================================================== -->
+
+  <section class="relative overflow-hidden bg-kavora-deep px-6 py-24 md:px-10 md:py-32 lg:px-16">
+
+    <img
+      src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover opacity-20"
+    />
+
+    <div class="absolute inset-0 bg-kavora-deep/75"></div>
+
+    <div class="relative mx-auto max-w-4xl text-center reveal">
+
+      <p class="eyebrow flex items-center justify-center gap-4 text-kavora-gold">
+        <span class="gold-line w-10"></span>
+        Your African Journey Begins Here
+        <span class="gold-line w-10"></span>
+      </p>
+
+      <h2 class="mt-8 font-luxury text-6xl font-normal leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+        Let Ngorongoro
+        <span class="italic text-kavora-gold">Stay With You.</span>
+      </h2>
+
+      <p class="mx-auto mt-7 max-w-2xl text-sm font-light leading-8 text-white/70 md:text-base md:leading-9">
+        From the first glimpse of the crater to the last light over the
+        highlands, let us help you plan a safari that brings you closer
+        to the Africa you came to discover.
+      </p>
+
+      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+
+        <a href="contact.html?destination=Ngorongoro" class="gold-button">
+          Create Your Journey
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="bg-kavora-deep px-6 pb-8 pt-14 md:px-10 lg:px-16">
+
+    <div class="mx-auto max-w-[1440px]">
+
+      <div class="grid gap-12 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- BRAND -->
+
+        <div class="sm:col-span-2 lg:col-span-1">
+
+          <a href="index.html" class="inline-block font-luxury text-4xl tracking-[0.08em] text-white">
+            KAVORA
+          </a>
+
+          <p class="eyebrow mt-2 text-kavora-gold">
+            Africa Journeys
+          </p>
+
+          <p class="mt-6 max-w-xs text-xs font-light leading-7 text-white/55">
+            Thoughtfully curated journeys for travellers seeking meaningful
+            experiences, extraordinary landscapes, and a deeper connection
+            with Africa.
+          </p>
+
+        </div>
+
+        <!-- EXPLORE -->
+
+        <div>
+
+          <h3 class="eyebrow text-kavora-gold">
+            Explore
+          </h3>
+
+          <ul class="mt-6 space-y-4 text-xs font-light text-white/65">
+
+            <li>
+              <a href="index.html" class="transition hover:text-kavora-gold">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="destinations.html" class="transition hover:text-kavora-gold">
+                All Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="tanzania.html" class="transition hover:text-kavora-gold">
+                Tanzania
+              </a>
+            </li>
+
+            <li>
+              <a href="serengeti-national-park.html" class="transition hover:text-kavora-gold">
+                Serengeti
+              </a>
+            </li>
+
+            <li>
+              <a href="ngorongoro-conservation-area.html" class="transition hover:text-kavora-gold">
+                Ngorongoro
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- EXPERIENCES -->
+
+        <div>
+
+          <h3 class="eyebrow text-kavora-gold">
+            Experiences
+          </h3>
+
+          <ul class="mt-6 space-y-4 text-xs font-light text-white/65">
+
+            <li>
+              <a href="experiences.html" class="transition hover:text-kavora-gold">
+                Wildlife Safaris
+              </a>
+            </li>
+
+            <li>
+              <a href="experiences.html" class="transition hover:text-kavora-gold">
+                Private Journeys
+              </a>
+            </li>
+
+            <li>
+              <a href="experiences.html" class="transition hover:text-kavora-gold">
+                Cultural Experiences
+              </a>
+            </li>
+
+            <li>
+              <a href="experiences.html" class="transition hover:text-kavora-gold">
+                Photography Safaris
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div>
+
+          <h3 class="eyebrow text-kavora-gold">
+            Begin Your Journey
+          </h3>
+
+          <p class="mt-6 max-w-xs text-xs font-light leading-7 text-white/55">
+            Tell us what you have in mind, and let us help you explore
+            the possibilities.
+          </p>
+
+          <a
+            href="contact.html?destination=Ngorongoro"
+            class="mt-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-kavora-gold transition hover:gap-5"
+          >
+            Contact Kavora Africa
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="flex flex-col justify-between gap-4 pt-7 sm:flex-row sm:items-center">
+
+        <p class="text-[10px] font-light text-white/40">
+          © <span id="currentYear"></span> Kavora Africa. All rights reserved.
+        </p>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[10px] font-light text-white/40">
+
+          <a href="privacy.html" class="transition hover:text-kavora-gold">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html" class="transition hover:text-kavora-gold">
+            Terms & Conditions
+          </a>
+
+          <a href="contact.html" class="transition hover:text-kavora-gold">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    let menuOpen = false;
+
+
+    /* Navbar scroll state */
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 40) {
+
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if (menuOpen) {
+          toggleMenu();
+        }
+
+      });
+
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("visible");
+      });
+    }
+  </script>
+
+</body>
+</html>

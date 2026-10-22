@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102D23" />
+
+  <title>Serengeti Safari | Private Safari Journeys — Kavora Africa</title>
+
+  <meta
+    name="description"
+    content="Experience the Serengeti with Kavora Africa. Discover the Great Migration, extraordinary wildlife, private game drives, and carefully curated safari stays across Tanzania's iconic wilderness."
+  />
+
+  <meta
+    name="keywords"
+    content="Serengeti safari, Serengeti National Park, Great Migration safari, Tanzania luxury safari, private safari Tanzania, Kavora Africa"
+  />
+
+  <link
+    rel="canonical"
+    href="https://yourdomain.com/serengeti-national-park.html"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "kavora-green": "#102D23",
+            "kavora-deep": "#0B211A",
+            "kavora-forest": "#1D4535",
+            "kavora-gold": "#C8A96B",
+            "kavora-ivory": "#F7F5EF",
+            "kavora-muted": "#74786F",
+            "kavora-line": "#E4E0D6"
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 35px;
+    }
+
+    body {
+      background: #F7F5EF;
+      color: #102D23;
+    }
+
+    .hero-image {
+      animation: heroReveal 1.5s ease-out both;
+    }
+
+    .experience-image {
+      transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .experience-card:hover .experience-image {
+      transform: scale(1.045);
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 750ms ease,
+        transform 750ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .outline-button {
+      transition:
+        background 250ms ease,
+        color 250ms ease,
+        border-color 250ms ease;
+    }
+
+    .outline-button:hover {
+      background: #C8A96B;
+      color: #0B211A;
+      border-color: #C8A96B;
+    }
+
+    .primary-button {
+      transition:
+        background 250ms ease,
+        color 250ms ease;
+    }
+
+    .primary-button:hover {
+      background: #FFFFFF;
+      color: #102D23;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #E4E0D6;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      transition: transform 250ms ease;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    @keyframes heroReveal {
+      from {
+        transform: scale(1.06);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body class="font-sans antialiased">
+
+     <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
+
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
+
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+    <!-- Logo -->
+<a href="#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
+
+
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+
+         <a
+          href="#home"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+        <a
+          href="#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+       
+
+        <a
+          href="#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+          href="#contact"
+          class="group relative overflow-hidden border border-white/40 px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design Your Journey
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="#home"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Home
+          </a>
+
+          <a
+            href="#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Destinations
+          </a>
+
+          <a
+            href="#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="#concierge"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Concierge
+          </a>
+
+          <a
+            href="#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            About
+          </a>
+
+          
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="mt-auto">
+
+          <p class="mb-4 text-[9px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
+
+          <p class="max-w-xs font-luxury text-xl leading-relaxed text-white/70">
+            Private journeys, exceptional stays and seamless experiences across Africa.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HEADER -->
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="relative flex min-h-[100%] min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+
+      <img
+        src="https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg"
+        alt="Wildebeest crossing the expansive Serengeti landscape"
+        class="hero-image absolute inset-0 h-full w-full object-cover"
+        fetchpriority="high"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/35 to-black/20"></div>
+
+      <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/60 via-kavora-deep/15 to-transparent"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-24 pt-36 text-white md:px-12 md:pb-32 lg:px-16">
+
+        
+
+        <h1 class="max-w-5xl font-luxury text-7xl font-normal leading-[0.84] tracking-tight sm:text-8xl md:text-9xl">
+
+          The <span class="italic text-kavora-gold">Serengeti.</span>
+
+        </h1>
+
+        <p class="mt-8 max-w-xl text-sm font-light leading-8 text-white/80 md:text-base md:leading-9 reveal">
+
+          Enter a landscape where the horizon stretches endlessly,
+          wildlife moves to its own ancient rhythm, and every day
+          offers the possibility of something extraordinary.
+
+          Discover the Serengeti with Kavora Africa.
+
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
+
+          <a
+            href="#enquire"
+            class="primary-button bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep"
+          >
+            Plan My Serengeti Safari
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
+
+        <div class="reveal lg:col-span-5">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+            extraordinary wilderness
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
+
+            Some places<br />
+            change the way<br/>
+            <span class="italic text-kavora-gold">you see the world.</span>
+
+          </h2>
+
+        </div>
+
+        <div class="reveal lg:col-span-7 lg:pt-8">
+
+          <p class="text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+
+            The Serengeti is one of Africa's most remarkable wildlife
+            destinations. Its vast grasslands, open plains, rocky
+            outcrops, and winding rivers support an extraordinary
+            diversity of wildlife and create a setting unlike anywhere
+            else.
+
+          </p>
+
+          <p class="mt-5 text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+
+            Here, the experience is not simply about seeing animals.
+            It is about the anticipation before sunrise, the silence
+            of the plains, the movement of herds across the horizon,
+            and the privilege of witnessing nature on its own terms.
+
+          </p>
+
+          <p class="mt-5 text-base font-light leading-8 text-kavora-muted md:text-lg md:leading-9">
+
+            Kavora Africa helps you turn that possibility into a
+            thoughtfully planned safari, connecting you with suitable
+            accommodation, knowledgeable safari guides, and experiences
+            shaped around the way you want to travel.
+
+          </p>
+
+          <a
+            href="#enquire"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:gap-6"
+          >
+            Start Planning Your Safari 
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- WHY SERENGETI -->
+
+    <section class="bg-white px-6 py-20 md:px-12 md:py-24 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="reveal mb-14 max-w-3xl">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+              The Serengeti Difference
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-7xl">
+
+            A wilderness with<br />
+            <span class="italic text-kavora-gold">many stories to tell.</span>
+
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+            Every part of the Serengeti reveals something different.
+            The right safari brings together the landscapes, wildlife,
+            timing, and pace that matter most to you.
+
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-8 border-t border-kavora-line pt-9 md:grid-cols-2 lg:grid-cols-4">
+
+          <article class="reveal">
+
+            <p class="font-luxury text-4xl text-kavora-gold">01</p>
+
+            <h3 class="mt-4 font-luxury text-3xl">
+              The Great Migration
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-kavora-muted">
+
+              Follow the seasonal movement of vast wildebeest and zebra
+              herds across the ecosystem, with opportunities that vary
+              by location and time of year.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal">
+
+            <p class="font-luxury text-4xl text-kavora-gold">02</p>
+
+            <h3 class="mt-4 font-luxury text-3xl">
+              Iconic Wildlife
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-kavora-muted">
+
+              Look for lions, elephants, giraffes, buffalo, cheetahs,
+              hyenas, and many other species during guided game drives
+              through diverse habitats.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal">
+
+            <p class="font-luxury text-4xl text-kavora-gold">03</p>
+
+            <h3 class="mt-4 font-luxury text-3xl">
+              Vast Landscapes
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-kavora-muted">
+
+              From sweeping grasslands to rocky kopjes and river
+              corridors, the Serengeti's scenery is as compelling
+              as its wildlife.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal">
+
+            <p class="font-luxury text-4xl text-kavora-gold">04</p>
+
+            <h3 class="mt-4 font-luxury text-3xl">
+              Safari at Your Pace
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-kavora-muted">
+
+              Build your days around early-morning drives, time in
+              camp, photography, or a longer journey through different
+              parts of the ecosystem.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SIGNATURE EXPERIENCES -->
+
+    <section id="experiences" class="px-6 py-24 md:px-12 md:py-28 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="reveal mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+
+          <div>
+
+            <div class="mb-6 flex items-center gap-4">
+
+              <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+                The Experiences
+              </p>
+
+            </div>
+
+            <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
+
+              More than a<br />
+              <span class="italic text-kavora-gold">game drive.</span>
+
+            </h2>
+
+          </div>
+
+          <p class="max-w-md text-sm font-light leading-8 text-kavora-muted">
+
+            The most memorable safaris are built around more than
+            a checklist. Discover the experiences that can shape
+            your time in the Serengeti.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- EXPERIENCE 01: GAME DRIVES -->
+
+        <article class="experience-card reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+          <div class="relative min-h-[340px] overflow-hidden md:min-h-[500px]">
+
+            <img
+              src="https://bushtopscamps.com/wp-content/uploads/2025/07/Sin-titulo-2000-x-1200-px.png"
+              alt="Safari vehicle exploring an African wildlife landscape"
+              loading="lazy"
+              class="experience-image absolute inset-0 h-full w-full object-cover"
+            />
+
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+
+            <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
+
+              Game Drives<br />
+              <span class="italic text-kavora-gold">Into the Wild.</span>
+
+            </h3>
+
+            <div class="gold-line w-40 my-7"></div>
+
+            <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+              Set out with an experienced safari guide to explore
+              the Serengeti's wildlife-rich landscapes. Early mornings
+              and late afternoons can offer rewarding opportunities
+              to observe animal behaviour, photograph the plains,
+              and discover the smaller details that make every
+              drive different.
+
+            </p>
+
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+
+              Ideal for: First-time safari travellers, wildlife
+              enthusiasts, couples, and photographers.
+
+            </p>
+          </div>
+
+        </article>
+
+
+
+        <!-- EXPERIENCE 02: GREAT MIGRATION -->
+
+        <article class="experience-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+          <div class="relative min-h-[340px] overflow-hidden md:order-2 md:min-h-[500px]">
+
+            <img
+              src="https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg"
+              alt="Wildebeest moving across the Serengeti during the Great Migration"
+              loading="lazy"
+              class="experience-image absolute inset-0 h-full w-full object-cover"
+            />
+
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+
+            <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
+
+              The Great<br />
+              <span class="italic text-kavora-gold">Migration.</span>
+
+            </h3>
+
+            <div class="gold-line w-40 my-7"></div>
+
+            <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+              Witness one of the world's most remarkable wildlife
+              movements as wildebeest and zebra travel through the
+              greater Serengeti ecosystem in search of fresh grazing
+              and water. The herds move throughout the year, so
+              choosing the right area and travel dates is essential
+              when planning a migration-focused safari.
+
+            </p>
+
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+
+              Best approached with: Flexible planning, appropriate
+              seasonal timing, and location-specific guidance.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- EXPERIENCE 03: BIG CATS -->
+
+        <article class="experience-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+          <div class="relative min-h-[340px] overflow-hidden md:min-h-[500px]">
+
+            <img
+              src="https://www.neliswolmarans.com/wp-content/uploads/2022/03/Serengeti-Big-Cats.jpg"
+              alt="Big cats in the serengeti national park"
+              loading="lazy"
+              class="experience-image absolute inset-0 h-full w-full object-cover"
+            />
+
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+            <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
+
+              The World<br />
+              <span class="italic text-kavora-gold">of Big Cats.</span>
+
+            </h3>
+
+            <div class="gold-line w-40 my-7"></div>
+
+            <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+              The Serengeti is known for its important populations
+              of lions, cheetahs, and leopards. Explore their habitats
+              with a knowledgeable guide and learn how predators
+              interact with the wider ecosystem. Each sighting is
+              a privilege, and the animals' movements can never
+              be guaranteed.
+
+            </p>
+
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+
+              Ideal for: Wildlife lovers, nature enthusiasts,
+              and safari photography.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- EXPERIENCE 04: SAFARI CAMP -->
+
+        <article class="experience-card reveal group mt-8 grid overflow-hidden border border-kavora-line md:grid-cols-2">
+
+          <div class="relative min-h-[340px] overflow-hidden md:order-2 md:min-h-[500px]">
+
+            <img
+              src="https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/A-magical-night-under-the-stars-at-Olakira.jpg.webp"
+              alt="wilderness accomodation in the serengeti"
+              loading="lazy"
+              class="experience-image absolute inset-0 h-full w-full object-cover"
+            />
+
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
+
+            <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
+
+              A Safari<br />
+              <span class="italic text-kavora-gold">Under the Stars.</span>
+
+            </h3>
+
+            <div class="gold-line w-40 my-7"></div>
+
+            <p class="text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+              Your accommodation is part of the experience. Depending
+              on your preferences and budget, your safari can be
+              designed around tented camps, intimate wilderness
+              retreats, or higher-end lodges. The right location
+              can also help reduce unnecessary travel between
+              wildlife areas and make the most of your time in
+              the park.
+
+            </p>
+
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+
+              Options can be tailored to: Comfort, location,
+              travel style, group size, and budget.
+
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- WHEN TO VISIT -->
+
+    <section class="bg-white px-6 py-24 md:px-12 md:py-28 lg:px-16">
+
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
+
+        <div class="reveal lg:col-span-5">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+              Planning Your Visit
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
+
+            The right time<br />
+            for <span class="italic text-kavora-gold">your safari.</span>
+
+          </h2>
+
+          <p class="mt-7 text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+            The Serengeti changes throughout the year. The best
+            time to visit depends on what you hope to experience,
+            which areas you want to explore, and how you prefer
+            to travel.
+
+          </p>
+
+          <a
+            href="#enquire"
+            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:gap-6"
+          >
+            Ask Us About Your Dates 
+          </a>
+
+        </div>
+
+
+        <div class="reveal lg:col-span-7">
+
+          <div class="border-t border-kavora-line">
+
+            <div class="grid gap-3 border-b border-kavora-line py-6 sm:grid-cols-[140px_1fr]">
+
+              <p class="font-luxury text-3xl text-kavora-gold">
+                Jan – Mar
+              </p>
+
+              <div>
+
+                <h3 class="text-sm font-semibold">
+                  Calving Season in the Southern Plains
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-7 text-kavora-muted">
+
+                  Parts of the southern Serengeti and Ndutu area
+                  can offer opportunities to observe wildebeest
+                  calving, with predator activity often drawing
+                  wildlife enthusiasts. Conditions and herd
+                  locations vary from year to year.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-3 border-b border-kavora-line py-6 sm:grid-cols-[140px_1fr]">
+
+              <p class="font-luxury text-3xl text-kavora-gold">
+                Apr – May
+              </p>
+
+              <div>
+
+                <h3 class="text-sm font-semibold">
+                  Green Landscapes & Fewer Crowds
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-7 text-kavora-muted">
+
+                  The longer rains can bring lush scenery and
+                  atmospheric photography conditions. Some roads
+                  may be more challenging, and travel plans should
+                  account for seasonal weather.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-3 border-b border-kavora-line py-6 sm:grid-cols-[140px_1fr]">
+
+              <p class="font-luxury text-3xl text-kavora-gold">
+                Jun – Jul
+              </p>
+
+              <div>
+
+                <h3 class="text-sm font-semibold">
+                  Dry Season & Herd Movements
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-7 text-kavora-muted">
+
+                  As conditions become drier, wildlife viewing
+                  can be rewarding in suitable areas. Herd
+                  movements vary, and the best location depends
+                  on the migration's progress.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-3 border-b border-kavora-line py-6 sm:grid-cols-[140px_1fr]">
+
+              <p class="font-luxury text-3xl text-kavora-gold">
+                Aug – Oct
+              </p>
+
+              <div>
+
+                <h3 class="text-sm font-semibold">
+                  Northern Serengeti & River Crossings
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-7 text-kavora-muted">
+
+                  The northern Serengeti can be an important
+                  migration area during this period. River
+                  crossings may occur, but their timing and
+                  location are unpredictable and cannot be
+                  guaranteed.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-3 border-b border-kavora-line py-6 sm:grid-cols-[140px_1fr]">
+
+              <p class="font-luxury text-3xl text-kavora-gold">
+                Nov – Dec
+              </p>
+
+              <div>
+
+                <h3 class="text-sm font-semibold">
+                  Short Rains & Changing Landscapes
+                </h3>
+
+                <p class="mt-2 text-xs font-light leading-7 text-kavora-muted">
+
+                  Seasonal rains begin to transform parts of
+                  the ecosystem, while wildlife movements
+                  continue. This period can suit travellers
+                  looking for a different perspective on
+                  the Serengeti.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="mt-5 text-[10px] leading-6 text-kavora-muted">
+
+            Seasonal patterns are approximate. Weather and wildlife
+            movements vary. We recommend confirming current conditions
+            and planning around your specific travel dates.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PERSONALIZED SAFARI -->
+
+    <section class="px-6 py-24 md:px-12 md:py-28 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="reveal mb-12 max-w-3xl">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+              Your Journey, Your Way
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
+
+            Designed around<br />
+            <span class="italic text-kavora-gold">what matters to you.</span>
+
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+            Whether this is your first African safari or a return
+            to the wilderness, we help you make informed choices
+            about how your time in the Serengeti is spent.
+
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-5 md:grid-cols-3">
+
+          <article class="reveal border border-kavora-line p-7 md:p-9">
+
+            <p class="text-[10px] uppercase tracking-[0.2em] text-kavora-gold">
+              For Two
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Couples & Private Escapes
+            </h3>
+
+            <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+
+              Create a safari with room to slow down, enjoy intimate
+              accommodation, and share memorable wildlife encounters
+              with a guide and itinerary suited to your preferences.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal border border-kavora-line p-7 md:p-9">
+
+            <p class="text-[10px] uppercase tracking-[0.2em] text-kavora-gold">
+              For Families
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Family Safari Adventures
+            </h3>
+
+            <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+
+              Plan around your family's ages, interests, preferred
+              pace, and accommodation requirements. We can help
+              you explore suitable options for a shared wilderness
+              experience.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal border border-kavora-line p-7 md:p-9">
+
+            <p class="text-[10px] uppercase tracking-[0.2em] text-kavora-gold">
+              For Explorers
+            </p>
+
+            <h3 class="mt-5 font-luxury text-4xl">
+              Wildlife & Photography
+            </h3>
+
+            <p class="mt-4 text-xs font-light leading-7 text-kavora-muted">
+
+              Focus your trip on wildlife observation, photography,
+              or a particular seasonal event. Travel dates, location,
+              and the pace of your game drives can be planned around
+              your priorities.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SAFARI PLANNING PROCESS -->
+
+    <section class="bg-kavora-green px-6 py-24 text-white md:px-12 md:py-28 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="reveal max-w-3xl">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+              The Kavora Approach
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-7xl">
+
+            From your first idea<br />
+            to <span class="italic text-kavora-gold">the open plains.</span>
+
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-white/65 md:text-base">
+
+            Planning a safari should feel like the beginning
+            of the experience. We help you work through the
+            important decisions before you travel.
+
+          </p>
+
+        </div>
+
+
+        <div class="mt-14 grid gap-9 border-t border-white/20 pt-9 md:grid-cols-3">
+
+          <article class="reveal">
+
+            <p class="font-luxury text-5xl text-kavora-gold">01</p>
+
+            <h3 class="mt-5 font-luxury text-3xl">
+              Tell Us What You Imagine
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-white/65">
+
+              Share your travel dates, group size, budget range,
+              and the experiences you hope to discover.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal">
+
+            <p class="font-luxury text-5xl text-kavora-gold">02</p>
+
+            <h3 class="mt-5 font-luxury text-3xl">
+              Shape Your Safari
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-white/65">
+
+              Explore suitable itinerary options, accommodation,
+              locations, and experiences aligned with your
+              priorities.
+
+            </p>
+
+          </article>
+
+
+          <article class="reveal">
+
+            <p class="font-luxury text-5xl text-kavora-gold">03</p>
+
+            <h3 class="mt-5 font-luxury text-3xl">
+              Prepare for the Wild
+            </h3>
+
+            <p class="mt-3 text-xs font-light leading-7 text-white/65">
+
+              Once the details are agreed, confirm arrangements
+              and prepare for a journey designed around your
+              travel plans.
+
+            </p>
+
+          </article>
+
+        </div>
+
+        <a
+          href="#enquire"
+          class="primary-button mt-12 inline-flex items-center gap-5 bg-kavora-gold px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep"
+        >
+          CREATE YOU JOURNEY
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FAQ -->
+
+    <section class="bg-white px-6 py-24 md:px-12 md:py-28 lg:px-16">
+
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:gap-20">
+
+        <div class="reveal lg:col-span-4">
+
+          <div class="mb-6 flex items-center gap-4">
+
+            <p class="text-[10px] uppercase tracking-[0.26em] text-kavora-gold">
+              Before You Travel
+            </p>
+
+          </div>
+
+          <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
+
+            Good to
+            <span class="italic text-kavora-gold">know.</span>
+
+          </h2>
+
+          <p class="mt-6 text-sm font-light leading-8 text-kavora-muted">
+
+            A few helpful answers as you begin planning
+            your Serengeti safari.
+
+          </p>
+
+        </div>
+
+
+        <div class="reveal lg:col-span-8">
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                How many days should I spend in the Serengeti?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              Three to four nights can provide a useful introduction,
+              while longer stays may allow more time to explore
+              different areas or focus on seasonal wildlife
+              movements. Your ideal duration depends on your
+              interests, travel route, and budget.
+
+            </p>
+
+          </details>
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                Can I see the Great Migration?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              The migration moves through the greater Serengeti
+              ecosystem during the year. The best area to visit
+              depends on your travel dates and recent herd
+              movements. We recommend planning around the
+              relevant season, while understanding that exact
+              sightings and river crossings cannot be guaranteed.
+
+            </p>
+
+          </details>
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                Is the Serengeti suitable for a luxury safari?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              Yes. Accommodation options range from comfortable
+              tented camps to high-end lodges and exclusive
+              wilderness retreats. Availability, location,
+              amenities, and pricing depend on your dates
+              and selected properties.
+
+            </p>
+
+          </details>
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                Can I combine the Serengeti with other destinations?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              Yes. Depending on your schedule, you may be able
+              to combine the Serengeti with destinations such
+              as Ngorongoro Crater, Tarangire National Park,
+              Lake Manyara, or a Zanzibar beach stay. The best
+              combination depends on travel time and your
+              preferred pace.
+
+            </p>
+
+          </details>
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                How much does a Serengeti safari cost?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              Costs vary according to the season, accommodation,
+              length of stay, group size, transport, and included
+              activities. Share your approximate budget with us
+              so suitable options can be explored before you
+              commit to a booking.
+
+            </p>
+
+          </details>
+
+
+          <details class="faq-item group py-6">
+
+            <summary class="flex items-center justify-between gap-5">
+
+              <span class="text-sm font-medium">
+                What should I bring on safari?
+              </span>
+
+              <span class="faq-icon font-luxury text-3xl text-kavora-gold">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-2xl text-xs font-light leading-7 text-kavora-muted">
+
+              Lightweight neutral-coloured clothing, comfortable
+              walking shoes, sun protection, insect repellent,
+              binoculars, and a camera are useful starting points.
+              Your final packing list should reflect the season,
+              itinerary, and accommodation arrangements.
+
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- BOOKING CTA -->
+
+    <section id="enquire" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
+
+      <div class="reveal mx-auto max-w-5xl text-center">
+
+        <div class="gold-line w-40 mx-auto mb-8"></div>
+
+        <p class="text-[10px] uppercase tracking-[0.28em] text-kavora-gold">
+          Your Serengeti Story Starts Here
+        </p>
+
+        <h2 class="mt-7 font-luxury text-6xl font-normal leading-[0.92] md:text-7xl">
+
+          The wild is calling.
+
+          <span class="italic text-kavora-gold">Will you answer?</span>
+
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-2xl text-sm font-light leading-8 text-kavora-muted md:text-base">
+
+          Tell us when you want to travel, who is coming with you,
+          and what you hope to experience. Let's start shaping
+          your Serengeti safari with Kavora Africa.
+
+        </p>
+
+        <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+
+          <a
+            id="whatsapp-enquiry"
+            href="https://wa.me/255700000000?text=Hello%20Kavora%20Africa%2C%20I%20would%20like%20to%20plan%20a%20Serengeti%20safari."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-button inline-flex items-center justify-center gap-4 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white"
+          >
+            Enquire Now
+          </a>
+
+        </div>
+
+        <p class="mt-6 text-[10px] leading-6 text-kavora-muted">
+          Your travel dates, preferences, and budget help us
+          recommend suitable safari options.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="bg-kavora-deep px-6 py-12 text-white md:px-12 lg:px-16">
+
+    <div class="mx-auto grid max-w-7xl gap-10 border-b border-white/10 pb-10 md:grid-cols-3">
+
+      <div>
+
+        <a href="index.html" class="font-luxury text-4xl tracking-[0.16em]">
+          KAVORA<span class="text-kavora-gold">.</span>
+        </a>
+
+        <p class="mt-4 max-w-xs text-xs font-light leading-7 text-white/55">
+
+          Thoughtfully curated journeys across Africa,
+          connecting travellers with extraordinary places
+          and meaningful experiences.
+
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold">
+          Explore
+        </h3>
+
+        <div class="flex flex-col items-start gap-3 text-xs text-white/65">
+
+          <a href="tanzania.html" class="transition hover:text-kavora-gold">
+            Tanzania
+          </a>
+
+          <a href="kenya.html" class="transition hover:text-kavora-gold">
+            Kenya
+          </a>
+
+          <a href="rwanda.html" class="transition hover:text-kavora-gold">
+            Rwanda
+          </a>
+
+          <a href="zanzibar.html" class="transition hover:text-kavora-gold">
+            The Zanzibar Collection
+          </a>
+
+          <a href="indian-ocean.html" class="transition hover:text-kavora-gold">
+            Indian Ocean Collection
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-kavora-gold">
+          Plan Your Journey
+        </h3>
+
+        <div class="flex flex-col items-start gap-3 text-xs text-white/65">
+
+          <a href="#enquire" class="transition hover:text-kavora-gold">
+            Plan a Serengeti Safari
+          </a>
+
+          <a href="contact.html" class="transition hover:text-kavora-gold">
+            Contact Us
+          </a>
+
+          <a href="index.html" class="transition hover:text-kavora-gold">
+            Kavora Africa Home
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 pt-6 text-[9px] tracking-[0.08em] text-white/40 sm:flex-row">
+
+      <p>
+        © <span id="year"></span> Kavora Africa. All rights reserved.
+      </p>
+
+      <p>
+        Tanzania · Africa
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- PAGE SCRIPTS -->
+
+  <script>
+     const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    let menuOpen = false;
+
+
+    /* Navbar scroll state */
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 40) {
+
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if (menuOpen) {
+          toggleMenu();
+        }
+
+      });
+
+    });
+
+
+    // Reveal page elements as they enter the viewport.
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+      const observer = new IntersectionObserver(
+        (entries, currentObserver) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              currentObserver.unobserve(entry.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -25px 0px"
+        }
+      );
+
+      revealElements.forEach(element => {
+        observer.observe(element);
+      });
+
+    } else {
+
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
+
+    }
+  </script>
+
+</body>
+</html>
