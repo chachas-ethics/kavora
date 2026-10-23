@@ -1,0 +1,1369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B211A">
+
+  <title>Diani Beach — Kavora Africa | Considered Coastal Journeys</title>
+  <meta
+    name="description"
+    content="Discover Diani Beach with Kavora Africa. Explore the Indian Ocean, white-sand beaches, coral reefs, dhow sailing, Swahili culture and considered coastal retreats."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          letterSpacing: {
+            luxury: '-0.025em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #0B211A;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-image {
+      animation: heroReveal 1.4s ease-out both;
+    }
+
+    @keyframes heroReveal {
+      from {
+        opacity: 0;
+        transform: scale(1.06);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .destination-image {
+      transition: transform 1.4s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .experience-card:hover .destination-image,
+    .stay-card:hover .destination-image {
+      transform: scale(1.06);
+    }
+
+    .kavora-link {
+      position: relative;
+      display: inline-flex;
+      width: fit-content;
+    }
+
+    .kavora-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 1px;
+      background: #C8A96B;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .45s ease;
+    }
+
+    .kavora-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(11, 33, 26, .14);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      color: #C8A96B;
+      font-size: 22px;
+      transition: transform .3s ease;
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-item.active .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- =====================================================
+       01 — HERO
+  ====================================================== -->
+
+  <section class="relative flex min-h-[90svh] items-end overflow-hidden bg-kavora-green text-kavora-ivory md:min-h-screen">
+
+    <img
+      src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=2400&q=90"
+      alt="Tropical coastline with white sand and clear ocean water"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
+      fetchpriority="high"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-kavora-green/90"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-40 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24">
+
+      <div class="max-w-5xl">
+
+        <p class="mb-7 flex items-center gap-4 font-sans text-[9px] font-semibold uppercase tracking-[.3em] text-kavora-gold sm:text-[10px]">
+          <span class="h-px w-10 bg-kavora-gold"></span>
+          Kenya · The Indian Ocean
+        </p>
+
+        <h1 class="font-luxury text-7xl font-normal leading-[.82] tracking-luxury sm:text-8xl md:text-[8.5rem] lg:text-[10rem]">
+          Diani
+          <span class="block italic text-kavora-gold">Beach.</span>
+        </h1>
+
+        <div class="mt-9 grid max-w-3xl gap-7 md:grid-cols-[1fr_auto] md:items-end">
+
+          <p class="max-w-xl font-sans text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+            Where the Indian Ocean meets a coastline of soft white
+            sand, swaying palms and warm coastal light. A place
+            to slow down, reconnect and discover the quieter
+            rhythms of the Kenyan coast.
+          </p>
+
+          <a
+            href="contact.html?destination=Diani%20Beach"
+            class="kavora-link pb-2 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-ivory"
+          >
+            Begin your journey
+            <span class="ml-4 text-lg text-kavora-gold">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="mt-16 flex items-center justify-between border-t border-white/20 pt-5">
+
+        <p class="font-sans text-[9px] uppercase tracking-[.22em] text-white/55">
+          A considered journey by Kavora
+        </p>
+
+        <a
+          href="#introduction"
+          aria-label="Scroll to introduction"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-lg text-kavora-gold transition hover:border-kavora-gold"
+        >
+          ↓
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       02 — INTRODUCTION
+  ====================================================== -->
+
+  <section id="introduction" class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
+
+        <div class="reveal md:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            01 / The Destination
+          </p>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[.95] sm:text-6xl lg:text-7xl">
+            A coastline
+            <span class="block italic">to call your own.</span>
+          </h2>
+
+        </div>
+
+        <div class="reveal md:col-span-6 md:col-start-7">
+
+          <p class="font-sans text-sm leading-8 text-kavora-green/70 sm:text-base sm:leading-9">
+            South of Mombasa, Diani Beach stretches along the
+            Kenyan coast with powder-soft sand, turquoise water
+            and a canopy of tropical greenery. Its appeal lies
+            in the balance between natural beauty and the
+            freedom to experience the coast at your own pace.
+          </p>
+
+          <p class="mt-6 font-sans text-sm leading-8 text-kavora-green/70 sm:text-base sm:leading-9">
+            Spend a morning on the water, discover the reef with
+            a local guide, wander through coastal forest or simply
+            let the hours pass beside the sea. Diani is as much
+            about the space to do very little as it is about
+            the experiences waiting beyond the shore.
+          </p>
+
+          <div class="mt-10 grid grid-cols-2 gap-7 border-t border-kavora-green/15 pt-7">
+
+            <div>
+              <p class="font-luxury text-3xl italic sm:text-4xl">Ocean-led</p>
+              <p class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-green/50">
+                Marine experiences
+              </p>
+            </div>
+
+            <div>
+              <p class="font-luxury text-3xl italic sm:text-4xl">Unhurried</p>
+              <p class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-green/50">
+                Coastal living
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       03 — THE DIANI EXPERIENCE
+  ====================================================== -->
+
+  <section class="bg-kavora-forest text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="reveal grid grid-cols-1 gap-8 md:grid-cols-12 md:items-end">
+
+        <div class="md:col-span-7">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            02 / The Experience
+          </p>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[.92] sm:text-6xl md:text-7xl">
+            Discover Diani,
+            <span class="italic text-kavora-gold">your way.</span>
+          </h2>
+
+        </div>
+
+        <p class="font-sans text-sm leading-7 text-white/55 md:col-span-4 md:col-start-9">
+          From the changing colours of the reef to the traditions
+          of the Swahili coast, Diani offers a range of experiences
+          best enjoyed without rushing from one to the next.
+        </p>
+
+      </div>
+
+
+      <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- EXPERIENCE 01 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
+              alt="Sunlight across clear ocean water"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / The shoreline</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Days by the Sea</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Walk the long white-sand beach, find a quiet stretch
+              of shoreline and spend the day moving between the
+              warm shallows and the shade of the palms.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 02 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=85"
+              alt="Snorkelling and underwater exploration"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Under the surface</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Coral Reef</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Explore the marine life of the Diani coastline
+              through guided snorkelling or diving, subject to
+              sea conditions and suitable reef access.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 03 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+              alt="Traditional sailing experience on open water"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">03 / Coastal tradition</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Dhow Sailing</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Take to the water aboard a traditional-style dhow
+              excursion and experience the coastline from a
+              different perspective, guided by the sea breeze.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 04 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
+              alt="Ocean waves rolling towards the shore"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">04 / On the water</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Ocean Adventures</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Depending on conditions, discover paddleboarding,
+              kayaking, kiteboarding and other water-based activities
+              along the Indian Ocean.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 05 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+              alt="A relaxed dining setting"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">05 / Coastal flavours</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Swahili Dining</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Discover coastal cuisine shaped by local seafood,
+              coconut, aromatic spices and the cultural heritage
+              of the Swahili coast.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 06 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85"
+              alt="Green coastal forest and tropical vegetation"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">06 / Beyond the beach</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Coastal Nature</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Explore the region’s coastal forests and nearby
+              natural areas with local guidance, discovering
+              a side of Diani beyond the shoreline.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       04 — WHEN TO GO
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-14 md:grid-cols-12">
+
+        <div class="reveal md:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            03 / Timing Your Visit
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+            The right time
+            <span class="block italic">to arrive.</span>
+          </h2>
+
+          <p class="mt-7 max-w-md font-sans text-sm leading-8 text-kavora-green/60">
+            Diani’s tropical coastal climate makes it a year-round
+            destination. Weather, wind and sea conditions influence
+            which experiences are most suitable, so timing should
+            reflect the kind of coastal stay you have in mind.
+          </p>
+
+        </div>
+
+
+        <div class="md:col-span-6 md:col-start-7">
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">January — March</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Often hot and dry</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A popular period for beach time and many marine
+              activities. Plan around the heat, sun exposure and
+              local sea conditions.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">April — May</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Long rains</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              Rainfall is generally more frequent. Lush scenery
+              and a quieter atmosphere can appeal to some visitors,
+              although outdoor and ocean plans may need flexibility.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">June — October</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Generally drier</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              Often a comfortable period for coastal exploration,
+              beach walks and combining Diani with a wider
+              Kenyan itinerary.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-y border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">November — December</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Short rains</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              Warm weather continues, with the possibility of
+              short rainfall periods. This can be a good time for
+              a coastal escape planned around flexible activities.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       05 — WHERE TO STAY
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-24 sm:px-8 sm:pb-28 lg:pb-36">
+
+      <div class="reveal flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+
+        <div>
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            04 / Your Stay
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+            Somewhere to
+            <span class="italic">belong.</span>
+          </h2>
+
+        </div>
+
+        <p class="max-w-md font-sans text-sm leading-7 text-kavora-green/60">
+          Your accommodation should feel like part of the coast,
+          whether that means a private villa, a thoughtful boutique
+          retreat or a refined resort beside the sea.
+        </p>
+
+      </div>
+
+
+      <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+        <!-- STAY 01 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=1000&q=85"
+              alt="Tropical villa and outdoor relaxation area"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / Privacy</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Private Beach Villa</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A more personal coastal escape, with room to settle
+              into your own rhythm and enjoy shared time away
+              from the demands of a busy itinerary.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Privacy · Space · Independence
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- STAY 02 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+              alt="Tropical resort surrounded by greenery"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Refined comfort</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Coastal Retreat</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A considered hideaway where attentive hospitality,
+              tropical gardens and easy access to the beach
+              define the experience.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Ease · Atmosphere · Service
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- STAY 03 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=85"
+              alt="Elegant accommodation with a calm coastal atmosphere"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">03 / Intimacy</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Boutique Stay</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              For travellers drawn to smaller-scale hospitality,
+              distinctive character and a more intimate connection
+              to the surrounding coastal community.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Character · Detail · Calm
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <p class="reveal mt-10 max-w-2xl font-sans text-xs leading-6 text-kavora-green/45">
+        These cards describe accommodation styles rather than
+        confirmed properties. Specific stays should be selected
+        according to your dates, preferences and availability.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       06 — CONSIDERED JOURNEYS
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-24 sm:px-8 sm:pb-28 lg:pb-36">
+
+      <div class="reveal">
+
+        <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+          <span class="h-px w-9 bg-kavora-gold"></span>
+          05 / Considered Journeys
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl">
+          Ways into
+          <span class="italic text-kavora-gold">Diani.</span>
+        </h2>
+
+        <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+          Diani can be the destination itself or the final chapter
+          of a wider journey through Kenya. Each itinerary can
+          be shaped around your interests, travel dates and pace.
+        </p>
+
+      </div>
+
+
+      <div class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+
+        <!-- JOURNEY 01 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">01</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">3—4 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Diani Escape
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Beach · Ocean · Rest
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            A relaxed coastal stay built around unhurried mornings,
+            ocean experiences, Swahili dining and the freedom
+            to spend each day as you choose.
+          </p>
+
+          <a
+            href="contact.html?journey=Diani%20Escape"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 02 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">02</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">4—5 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Ocean Discovery
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Reef · Sailing · Marine Life
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            Spend more time exploring the Indian Ocean, with
+            carefully arranged marine activities, time on the
+            water and space to enjoy the coastline between outings.
+          </p>
+
+          <a
+            href="contact.html?journey=Ocean%20Discovery"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 03 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">03</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">6—8 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Bush to Beach
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Maasai Mara + Diani
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            Contrast the drama of a wildlife safari with the
+            calm of the coast, moving from open savannah to
+            white-sand beaches and warm ocean water.
+          </p>
+
+          <a
+            href="contact.html?journey=Bush%20to%20Beach"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 04 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">04</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">7—10 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Kenyan Coast
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Diani + Watamu + Lamu
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            Follow the coastline through distinct coastal settings,
+            combining Diani’s long beaches with marine experiences
+            and the cultural character of other Kenyan coastal destinations.
+          </p>
+
+          <a
+            href="contact.html?journey=Kenyan%20Coast"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       07 — THE KAVORA APPROACH
+  ====================================================== -->
+
+  <section class="bg-kavora-green text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+
+        <div class="reveal lg:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            06 / The Kavora Approach
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+            Thoughtfully
+            <span class="block italic text-kavora-gold">put together.</span>
+          </h2>
+
+          <p class="mt-8 max-w-md font-sans text-sm leading-8 text-white/55">
+            The coast invites a different rhythm. We consider
+            how you want to spend your time, the setting you
+            want to return to and the details that allow a
+            journey to feel personal rather than prescribed.
+          </p>
+
+          <a
+            href="contact.html?destination=Diani%20Beach"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-gold"
+          >
+            Plan with Kavora
+            <span class="ml-4 text-lg">↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">01</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Personalised Planning</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              Your preferred pace, interests and travel style
+              guide the structure of your coastal escape.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">02</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Considered Stays</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              We look for accommodation that complements
+              your experience, whether you value privacy,
+              design, location or attentive hospitality.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">03</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Local Knowledge</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              Good coastal planning accounts for tides, weather,
+              local expertise and the conditions that shape
+              marine and outdoor activities.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">04</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Concierge Support</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              We help coordinate the moving parts of your
+              itinerary, from stays and transfers to
+              carefully chosen experiences.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="reveal mt-5 border-t border-white/10 pt-10 lg:col-span-12">
+
+          <p class="max-w-4xl font-luxury text-4xl leading-none sm:text-5xl lg:text-6xl">
+            Luxury is not having more.
+            <span class="italic text-kavora-gold">
+              It is having exactly what makes the journey yours.
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       08 — PRACTICAL INFORMATION
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1000px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="reveal mx-auto max-w-3xl text-center">
+
+        <p class="mb-7 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+          Before You Go
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+          A few things
+          <span class="italic">to know.</span>
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+          A little preparation helps make time on the Kenyan
+          coast more comfortable and rewarding.
+        </p>
+
+      </div>
+
+
+      <div class="mt-14">
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              How long should I spend in Diani?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Three to five nights provides time to enjoy the beach,
+                arrange a marine excursion and explore the local area.
+                A longer stay works well if you prefer a slower pace
+                or want to combine several coastal experiences.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              When is the best time to visit?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Diani is a year-round destination. January to March
+                and much of June to October are generally drier
+                periods, while the long rains usually fall around
+                April and May. Conditions vary from year to year.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              Can Diani be combined with a safari?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Yes. A bush-to-beach itinerary can combine a
+                destination such as the Maasai Mara with time
+                on the coast. The route depends on your schedule,
+                transport connections and preferred safari length.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              What should I bring?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Bring light clothing, swimwear, sun protection,
+                comfortable sandals and a light layer for evenings.
+                If you plan to snorkel or explore the coast, ask
+                your operator about any additional equipment needed.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              Are ocean activities available throughout the year?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Availability depends on the activity, tides, weather
+                and sea conditions. Marine excursions should be
+                arranged with reputable local operators, who can
+                advise on suitable timing and safety requirements.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       09 — FINAL CTA
+  ====================================================== -->
+
+  <section class="relative overflow-hidden bg-kavora-forest text-kavora-ivory">
+
+    <div class="absolute inset-0 opacity-30">
+      <img
+        src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=2000&q=85"
+        alt=""
+        loading="lazy"
+        class="h-full w-full object-cover"
+      >
+    </div>
+
+    <div class="absolute inset-0 bg-kavora-green/75"></div>
+
+    <div class="relative mx-auto max-w-[1200px] px-6 py-28 text-center sm:px-8 sm:py-36 lg:py-44">
+
+      <div class="reveal mx-auto max-w-4xl">
+
+        <p class="mb-8 font-sans text-[10px] font-semibold uppercase tracking-[.3em] text-kavora-gold">
+          Your journey, considered
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl lg:text-8xl">
+          Let the coast
+          <span class="block italic text-kavora-gold">become yours.</span>
+        </h2>
+
+        <p class="mx-auto mt-8 max-w-xl font-sans text-sm leading-8 text-white/65 sm:text-base">
+          Tell us what your ideal coastal escape looks like.
+          We will help shape a journey around your interests,
+          your pace and the experiences you want to remember.
+        </p>
+
+        <a
+          href="contact.html?destination=Diani%20Beach"
+          class="mt-10 inline-flex items-center gap-5 border border-kavora-gold px-8 py-5 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-ivory transition duration-500 hover:bg-kavora-gold hover:text-kavora-green"
+        >
+          Begin planning
+          <span class="text-lg">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="bg-kavora-green text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-7 pt-16 sm:px-8 lg:pt-20">
+
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+
+        <div class="sm:col-span-2 lg:col-span-5">
+
+          <a href="index.html" class="inline-block font-luxury text-4xl tracking-wide">
+            KAVORA<span class="ml-1 text-kavora-gold">.</span>
+          </a>
+
+          <p class="mt-2 font-sans text-[9px] uppercase tracking-[.28em] text-kavora-gold">
+            Africa · Considered Journeys
+          </p>
+
+          <p class="mt-7 max-w-sm font-sans text-sm leading-7 text-white/50">
+            Thoughtfully designed journeys across Africa,
+            shaped around the places, people and experiences
+            that stay with you.
+          </p>
+
+        </div>
+
+
+        <div class="lg:col-span-2 lg:col-start-7">
+
+          <h3 class="mb-6 font-sans text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore
+          </h3>
+
+          <ul class="space-y-4 font-sans text-xs text-white/65">
+            <li><a href="destinations.html" class="transition hover:text-kavora-gold">Destinations</a></li>
+            <li><a href="journeys.html" class="transition hover:text-kavora-gold">Journeys</a></li>
+            <li><a href="experiences.html" class="transition hover:text-kavora-gold">Experiences</a></li>
+          </ul>
+
+        </div>
+
+
+        <div class="lg:col-span-3">
+
+          <h3 class="mb-6 font-sans text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Get in Touch
+          </h3>
+
+          <ul class="space-y-4 font-sans text-xs text-white/65">
+            <li><a href="contact.html" class="transition hover:text-kavora-gold">Plan your journey</a></li>
+            <li><a href="mailto:info@kavora.africa" class="transition hover:text-kavora-gold">Email Kavora</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-16 border-t border-white/10 py-7">
+
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+          <p class="font-sans text-[9px] uppercase tracking-[.2em] text-white/40">
+            © 2026 Kavora Africa
+          </p>
+
+          <p class="font-sans text-[9px] uppercase tracking-[.2em] text-white/40">
+            Considered journeys. Lasting perspective.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -35px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

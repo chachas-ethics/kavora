@@ -1,0 +1,1449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nyungwe National Park | Kavora Africa</title>
+  <meta name="description" content="Discover Nyungwe National Park with Kavora Africa. Experience chimpanzee tracking, elevated canopy walks, ancient rainforest trails and carefully considered journeys through Rwanda.">
+  <meta name="theme-color" content="#0B211A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              forest: "#0B211A",
+              deep: "#102D23",
+              green: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#D8D3C8"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --forest: #0B211A;
+      --deep: #102D23;
+      --green: #1D4535;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --muted: #74786F;
+      --line: #D8D3C8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--forest);
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      min-height: 760px;
+      min-height: min(900px, 100svh);
+      position: relative;
+      isolation: isolate;
+      background: var(--forest);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      animation: heroSettle 1.5s ease-out both;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(5, 22, 16, .78) 0%, rgba(5, 22, 16, .48) 48%, rgba(5, 22, 16, .12) 100%),
+        linear-gradient(0deg, rgba(5, 22, 16, .62) 0%, transparent 42%, rgba(5, 22, 16, .2) 100%);
+    }
+
+    .hero-content {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .image-frame {
+      overflow: hidden;
+      background: #d9ddd4;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .9s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .group:hover .image-frame img,
+    .image-frame:hover img {
+      transform: scale(1.045);
+    }
+
+    .experience-card .image-frame {
+      aspect-ratio: 4 / 3;
+    }
+
+    .stay-card .image-frame {
+      aspect-ratio: 4 / 5;
+    }
+
+    .journey-card .image-frame {
+      aspect-ratio: 5 / 4;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: var(--gold);
+      width: 42px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .text-link .arrow {
+      transition: transform .25s ease;
+    }
+
+    .text-link:hover .arrow {
+      transform: translateX(5px);
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background: var(--gold);
+      transition: right .25s ease;
+    }
+
+    .nav-link:hover::after {
+      right: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(216, 211, 200, .22);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 23px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(200, 169, 107, .5);
+      border-radius: 50%;
+      color: var(--gold);
+      transition: transform .25s ease, background .25s ease;
+    }
+
+    .faq-trigger[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(200, 169, 107, .1);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-answer.open {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-answer p {
+      padding: 0 42px 22px 0;
+      color: #b7c0b7;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .season-row + .season-row {
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-link {
+      color: rgba(247, 245, 239, .65);
+      transition: color .2s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--gold);
+    }
+
+    .mobile-panel {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .mobile-panel.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes heroSettle {
+      from {
+        transform: scale(1.035);
+        opacity: .75;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        min-height: 760px;
+        min-height: 92svh;
+      }
+
+      .hero-content {
+        padding-top: 145px;
+        padding-bottom: 90px;
+      }
+
+      .experience-card .image-frame {
+        aspect-ratio: 5 / 4;
+      }
+
+      .stay-card .image-frame {
+        aspect-ratio: 5 / 4;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <header id="site-header" class="absolute top-0 left-0 z-50 w-full border-b border-white/15 text-white">
+    <div class="mx-auto flex h-[88px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-14">
+
+      <a href="index.html" aria-label="Kavora Africa home" class="relative z-50 block w-[205px] sm:w-[230px]">
+        <img
+          src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+          alt="Kavora Africa"
+          class="block h-auto w-full object-contain object-left"
+        >
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-[10px] tracking-[.12em]">Home</a>
+        <a href="destinations.html" class="nav-link text-[10px] tracking-[.12em]">Destinations</a>
+        <a href="journeys.html" class="nav-link text-[10px] tracking-[.12em]">Journeys</a>
+        <a href="about.html" class="nav-link text-[10px] tracking-[.12em]">Our Approach</a>
+        <a href="contact.html" class="ml-2 border border-kavora-gold px-5 py-3 text-[9px] font-semibold uppercase tracking-[.16em] transition hover:bg-kavora-gold hover:text-kavora-forest">
+          Enquire
+        </a>
+      </nav>
+
+      <button
+        id="menu-toggle"
+        class="relative z-50 flex h-11 w-11 items-center justify-center border border-white/30 lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-panel absolute left-0 right-0 top-full border-t border-white/10 bg-kavora-forest px-6 pb-8 pt-5 lg:hidden">
+      <nav class="mx-auto flex max-w-[1440px] flex-col" aria-label="Mobile navigation">
+        <a href="index.html" class="border-b border-white/10 py-4 text-sm">Home</a>
+        <a href="destinations.html" class="border-b border-white/10 py-4 text-sm">Destinations</a>
+        <a href="journeys.html" class="border-b border-white/10 py-4 text-sm">Journeys</a>
+        <a href="about.html" class="border-b border-white/10 py-4 text-sm">Our Approach</a>
+        <a href="contact.html" class="mt-5 border border-kavora-gold px-5 py-4 text-center text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">Begin an Enquiry</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
+
+  <section class="hero flex items-end text-white">
+
+    <img
+      class="hero-image"
+      src="images/nyungwe-national-park-hero.jpg"
+      alt="Misty green mountains and ancient montane rainforest in Nyungwe, Rwanda"
+      fetchpriority="high"
+    >
+
+    <div class="hero-content relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14">
+
+      <div class="max-w-[850px] reveal">
+        <div class="mb-7 flex items-center gap-4">
+          <span class="gold-line"></span>
+          <p class="eyebrow text-kavora-gold">Rwanda · The Rainforest</p>
+        </div>
+
+        <h1 class="font-luxury text-[clamp(4rem,10vw,9rem)] font-normal leading-[.84] tracking-[-.045em]">
+          Nyungwe
+          <span class="mt-3 block italic text-kavora-gold">National Park</span>
+        </h1>
+
+        <p class="mt-8 max-w-[500px] text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+          A world of ancient forest, hidden waterfalls and extraordinary encounters, where Rwanda reveals its wilder, quieter side.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-6">
+          <a href="#experiences" class="inline-flex items-center gap-4 bg-kavora-gold px-6 py-4 text-[9px] font-semibold uppercase tracking-[.18em] text-kavora-forest transition hover:bg-kavora-ivory">
+            Discover the Forest
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a href="#enquire" class="text-link text-white">
+            Plan Your Journey
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-white/25 pt-5">
+        <p class="eyebrow text-white/65">A considered journey through Rwanda</p>
+        <p class="eyebrow text-kavora-gold">01° 42′ S · 29° 29′ E</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       INTRODUCTION
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory py-24 sm:py-32 lg:py-40">
+    <div class="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-8 md:grid-cols-12 lg:gap-20 lg:px-14">
+
+      <div class="md:col-span-5 reveal">
+        <p class="eyebrow text-kavora-muted">An ancient living world</p>
+
+        <h2 class="mt-6 font-luxury text-5xl font-normal leading-[.98] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+          Enter a world<br>
+          <span class="italic text-kavora-green">of green.</span>
+        </h2>
+
+        <div class="mt-8 gold-line"></div>
+      </div>
+
+      <div class="md:col-span-7 md:pt-3 reveal reveal-delay-1">
+        <p class="max-w-[700px] text-[15px] leading-8 text-kavora-deep sm:text-base sm:leading-9">
+          In the mist-covered highlands of southwestern Rwanda, Nyungwe protects one of Africa’s remarkable montane rainforests. Its forested ridges, winding trails and hidden waterways create a landscape that rewards patience and curiosity.
+        </p>
+
+        <p class="mt-6 max-w-[700px] text-sm leading-8 text-kavora-muted">
+          This is a place for a different kind of safari: following chimpanzees through the forest, looking out across the canopy from a suspended walkway, and discovering rare birds and primates with knowledgeable local guides. Every experience begins with respect for the landscape and its wildlife.
+        </p>
+
+        <div class="mt-10 grid grid-cols-2 gap-8 border-t border-kavora-line pt-7 sm:grid-cols-3">
+          <div>
+            <p class="font-luxury text-4xl text-kavora-green">13</p>
+            <p class="mt-2 max-w-[140px] text-[9px] uppercase leading-5 tracking-[.12em] text-kavora-muted">Recorded primate species</p>
+          </div>
+
+          <div>
+            <p class="font-luxury text-4xl text-kavora-green">300+</p>
+            <p class="mt-2 max-w-[140px] text-[9px] uppercase leading-5 tracking-[.12em] text-kavora-muted">Recorded bird species</p>
+          </div>
+
+          <div class="col-span-2 sm:col-span-1">
+            <p class="font-luxury text-4xl text-kavora-green">70 m</p>
+            <p class="mt-2 max-w-[160px] text-[9px] uppercase leading-5 tracking-[.12em] text-kavora-muted">Approximate height of the canopy walkway above the forest floor</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       EXPERIENCES
+       ===================================================== -->
+
+  <section id="experiences" class="bg-white py-24 sm:py-32 lg:py-36">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+
+      <div class="mb-14 grid gap-7 md:grid-cols-12 md:items-end lg:mb-20">
+        <div class="md:col-span-7 reveal">
+          <p class="eyebrow text-kavora-muted">The experiences</p>
+          <h2 class="mt-5 font-luxury text-5xl leading-[.95] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+            Beyond the<br><span class="italic text-kavora-green">familiar safari.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-[430px] text-sm leading-7 text-kavora-muted md:col-span-5 md:justify-self-end reveal reveal-delay-1">
+          Follow the forest at its own pace, with guided encounters and immersive experiences shaped around the remarkable ecology of Nyungwe.
+        </p>
+      </div>
+
+      <div class="grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+
+        <!-- EXPERIENCE 01 -->
+        <article class="experience-card group reveal">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-chimpanzee-tracking.jpg"
+              alt="Chimpanzee in the lush rainforest of Nyungwe"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 01</span>
+            <span class="text-xs text-kavora-gold">01 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">Chimpanzee Tracking</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Venture into the forest with experienced trackers in search of chimpanzees. Listen for calls echoing through the canopy and observe these remarkable primates in their natural habitat.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Early starts and variable trekking times are part of the experience.
+          </p>
+        </article>
+
+        <!-- EXPERIENCE 02 -->
+        <article class="experience-card group reveal reveal-delay-1">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-canopy-walkway.jpg"
+              alt="Suspended canopy walkway above Nyungwe rainforest"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 02</span>
+            <span class="text-xs text-kavora-gold">02 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">The Canopy Walk</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Walk high above the forest floor on a suspended bridge, with sweeping views across layers of rainforest and the mist-softened hills beyond.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Accessed on a guided walk from the Uwinka area.
+          </p>
+        </article>
+
+        <!-- EXPERIENCE 03 -->
+        <article class="experience-card group reveal reveal-delay-2">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-waterfall-hiking.jpg"
+              alt="Waterfall flowing through dense green rainforest"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 03</span>
+            <span class="text-xs text-kavora-gold">03 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">Forest & Waterfall Trails</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Follow forest paths through ferns, towering trees and shifting mountain terrain, with selected trails leading to beautiful waterfalls and quiet viewpoints.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Trail choice should reflect fitness, weather and available time.
+          </p>
+        </article>
+
+        <!-- EXPERIENCE 04 -->
+        <article class="experience-card group reveal">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-colobus-monkeys.jpg"
+              alt="Black and white colobus monkeys moving through rainforest branches"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 04</span>
+            <span class="text-xs text-kavora-gold">04 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">Primate Encounters</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Discover the forest’s diverse primate life, including black-and-white colobus monkeys and other species that inhabit this rich mountain ecosystem.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Sightings depend on wildlife movement and forest conditions.
+          </p>
+        </article>
+
+        <!-- EXPERIENCE 05 -->
+        <article class="experience-card group reveal reveal-delay-1">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-birdwatching.jpg"
+              alt="Colourful forest bird perched on a branch in Nyungwe"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 05</span>
+            <span class="text-xs text-kavora-gold">05 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">Birding & Biodiversity</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Explore a habitat known for its remarkable birdlife, including species found in the Albertine Rift. Guided walks reveal the details often missed on a faster journey.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Specialist guiding can be arranged for birding-focused visits.
+          </p>
+        </article>
+
+        <!-- EXPERIENCE 06 -->
+        <article class="experience-card group reveal reveal-delay-2">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-tea-plantations.jpg"
+              alt="Green tea fields beside the forested hills of southwestern Rwanda"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="flex items-center justify-between border-b border-kavora-line py-4">
+            <span class="eyebrow text-kavora-muted">Experience 06</span>
+            <span class="text-xs text-kavora-gold">06 / 06</span>
+          </div>
+
+          <h3 class="mt-5 font-luxury text-3xl">Tea & Local Culture</h3>
+
+          <p class="mt-3 text-sm leading-7 text-kavora-muted">
+            Look beyond the forest to the surrounding communities, tea-growing landscapes and local experiences that bring the wider region into focus.
+          </p>
+
+          <p class="mt-4 text-[10px] leading-5 text-kavora-muted">
+            Community experiences are subject to availability and local arrangements.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="mt-16 border-t border-kavora-line pt-7 reveal">
+        <a href="#enquire" class="text-link text-kavora-green">
+          Build Your Forest Experience
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       WHEN TO GO
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory py-24 sm:py-32 lg:py-36">
+    <div class="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-8 md:grid-cols-12 lg:gap-20 lg:px-14">
+
+      <div class="md:col-span-5 reveal">
+        <p class="eyebrow text-kavora-muted">Timing your visit</p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-[.96] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+          A forest for<br><span class="italic text-kavora-green">every season.</span>
+        </h2>
+
+        <p class="mt-7 max-w-[420px] text-sm leading-7 text-kavora-muted">
+          Nyungwe is a rainforest, so rain can occur throughout the year. Drier periods generally make walking conditions easier, while wetter months bring a lush atmosphere and abundant greenery.
+        </p>
+
+        <div class="mt-8 flex items-start gap-4 border-l border-kavora-gold pl-5">
+          <p class="text-xs leading-6 text-kavora-muted">
+            For chimpanzee tracking, hiking and canopy walks, allow flexibility for changing weather and trail conditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 reveal reveal-delay-1">
+
+        <div class="season-row grid gap-3 py-6 sm:grid-cols-[145px_1fr] sm:gap-7">
+          <div>
+            <p class="eyebrow text-kavora-green">June — September</p>
+            <p class="mt-2 font-luxury text-2xl">Drier season</p>
+          </div>
+          <div>
+            <p class="text-sm leading-7 text-kavora-muted">
+              Often a favourable period for hiking and forest walks, with generally more manageable trail conditions. A strong choice for travellers wanting to combine multiple outdoor activities.
+            </p>
+          </div>
+        </div>
+
+        <div class="season-row grid gap-3 py-6 sm:grid-cols-[145px_1fr] sm:gap-7">
+          <div>
+            <p class="eyebrow text-kavora-green">December — February</p>
+            <p class="mt-2 font-luxury text-2xl">Another drier window</p>
+          </div>
+          <div>
+            <p class="text-sm leading-7 text-kavora-muted">
+              A second period often suited to guided trekking and canopy walks. Pack for cool mornings, changing mountain weather and the possibility of rain.
+            </p>
+          </div>
+        </div>
+
+        <div class="season-row grid gap-3 py-6 sm:grid-cols-[145px_1fr] sm:gap-7">
+          <div>
+            <p class="eyebrow text-kavora-green">March — May</p>
+            <p class="mt-2 font-luxury text-2xl">Long rains</p>
+          </div>
+          <div>
+            <p class="text-sm leading-7 text-kavora-muted">
+              Expect a particularly green landscape and potentially wetter, muddier trails. Journeys benefit from waterproof layers, sturdy footwear and a flexible itinerary.
+            </p>
+          </div>
+        </div>
+
+        <div class="season-row grid gap-3 py-6 sm:grid-cols-[145px_1fr] sm:gap-7">
+          <div>
+            <p class="eyebrow text-kavora-green">October — November</p>
+            <p class="mt-2 font-luxury text-2xl">Short rains</p>
+          </div>
+          <div>
+            <p class="text-sm leading-7 text-kavora-muted">
+              Forest conditions can be especially atmospheric, with rain showers and mist adding to the experience. Plan extra time between activities and confirm trail conditions before travel.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-5 text-[10px] leading-5 text-kavora-muted">
+          Seasonal descriptions are general guidance rather than a weather forecast. Actual conditions vary.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       WHERE TO STAY
+       ===================================================== -->
+
+  <section class="bg-white py-24 sm:py-32 lg:py-36">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+
+      <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between lg:mb-20">
+        <div class="reveal">
+          <p class="eyebrow text-kavora-muted">Where to stay</p>
+
+          <h2 class="mt-5 font-luxury text-5xl leading-[.95] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+            Stay close to<br><span class="italic text-kavora-green">the wild.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-[410px] text-sm leading-7 text-kavora-muted reveal reveal-delay-1">
+          The right base makes a difference in Nyungwe. We help shape accommodation around your preferred level of comfort, access to the forest and the rhythm of your journey.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+
+        <!-- STAY 01 -->
+        <article class="stay-card group reveal">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-luxury-forest-lodge.jpg"
+              alt="Luxury forest lodge surrounded by the green hills of Nyungwe"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow mt-6 text-kavora-muted">01 / Elevated comfort</p>
+          <h3 class="mt-3 font-luxury text-3xl">The Forest Retreat</h3>
+
+          <p class="mt-4 text-sm leading-7 text-kavora-muted">
+            A refined lodge stay for travellers who value thoughtful service, restorative spaces and the feeling of being immersed in the surrounding landscape.
+          </p>
+
+          <p class="mt-4 text-xs leading-6 text-kavora-muted">
+            Consider properties such as One&Only Nyungwe House, subject to availability and current arrangements.
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-green">
+            Explore Your Options <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- STAY 02 -->
+        <article class="stay-card group reveal reveal-delay-1">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-hillside-lodge.jpg"
+              alt="Hillside accommodation overlooking the green countryside near Nyungwe"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow mt-6 text-kavora-muted">02 / Local character</p>
+          <h3 class="mt-3 font-luxury text-3xl">The Hillside Hideaway</h3>
+
+          <p class="mt-4 text-sm leading-7 text-kavora-muted">
+            A welcoming base beyond the forest edge, suited to travellers who want to explore the surrounding hills, tea-growing areas and local communities.
+          </p>
+
+          <p class="mt-4 text-xs leading-6 text-kavora-muted">
+            We can help compare suitable guesthouses and lodges according to your itinerary.
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-green">
+            Explore Your Options <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- STAY 03 -->
+        <article class="stay-card group reveal reveal-delay-2">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-eco-lodge.jpg"
+              alt="Quiet nature-focused accommodation in a lush green setting"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow mt-6 text-kavora-muted">03 / Nature-led travel</p>
+          <h3 class="mt-3 font-luxury text-3xl">The Eco Escape</h3>
+
+          <p class="mt-4 text-sm leading-7 text-kavora-muted">
+            A simpler, nature-focused stay for guests who prefer to spend more time on the trails, rise early for wildlife activities and experience the region at a slower pace.
+          </p>
+
+          <p class="mt-4 text-xs leading-6 text-kavora-muted">
+            Specific amenities, locations and availability should be confirmed before booking.
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-green">
+            Explore Your Options <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CURATED JOURNEYS
+       ===================================================== -->
+
+  <section class="bg-kavora-forest py-24 text-kavora-ivory sm:py-32 lg:py-36">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+
+      <div class="mb-14 grid gap-7 md:grid-cols-12 md:items-end lg:mb-20">
+        <div class="md:col-span-7 reveal">
+          <p class="eyebrow text-kavora-gold">Curated journeys</p>
+
+          <h2 class="mt-5 font-luxury text-5xl leading-[.95] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+            Find your own<br><span class="italic text-kavora-gold">way into the forest.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-[420px] text-sm leading-7 text-white/60 md:col-span-5 md:justify-self-end reveal reveal-delay-1">
+          Each journey is a starting point. We can adapt the pace, accommodation and experiences to suit your interests and the time you have available.
+        </p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:gap-10">
+
+        <!-- JOURNEY 01 -->
+        <article class="journey-card group reveal">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-chimpanzee-journey.jpg"
+              alt="Chimpanzee in a rainforest canopy"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="mt-6 flex items-start justify-between gap-5">
+            <div>
+              <p class="eyebrow text-kavora-gold">Journey 01</p>
+              <h3 class="mt-3 font-luxury text-3xl sm:text-4xl">The Primate Encounter</h3>
+            </div>
+            <span class="pt-1 font-luxury text-2xl text-kavora-gold">01</span>
+          </div>
+
+          <p class="mt-4 max-w-[520px] text-sm leading-7 text-white/60">
+            An itinerary centred on chimpanzee tracking, guided forest exploration and time to discover Nyungwe’s diverse primate life.
+          </p>
+
+          <p class="mt-4 text-[10px] uppercase tracking-[.12em] text-white/45">
+            Best suited to wildlife-focused travellers
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-gold">
+            Shape This Journey <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- JOURNEY 02 -->
+        <article class="journey-card group reveal reveal-delay-1">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-canopy-journey.jpg"
+              alt="Elevated view across the rainforest canopy"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="mt-6 flex items-start justify-between gap-5">
+            <div>
+              <p class="eyebrow text-kavora-gold">Journey 02</p>
+              <h3 class="mt-3 font-luxury text-3xl sm:text-4xl">Above the Green</h3>
+            </div>
+            <span class="pt-1 font-luxury text-2xl text-kavora-gold">02</span>
+          </div>
+
+          <p class="mt-4 max-w-[520px] text-sm leading-7 text-white/60">
+            Pair the canopy walkway with selected forest trails, birdwatching and moments to take in the scale of the landscape.
+          </p>
+
+          <p class="mt-4 text-[10px] uppercase tracking-[.12em] text-white/45">
+            Best suited to first-time visitors
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-gold">
+            Shape This Journey <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- JOURNEY 03 -->
+        <article class="journey-card group reveal">
+          <div class="image-frame">
+            <img
+              src="images/nyungwe-waterfall-journey.jpg"
+              alt="Waterfall and lush forest trail in Nyungwe"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="mt-6 flex items-start justify-between gap-5">
+            <div>
+              <p class="eyebrow text-kavora-gold">Journey 03</p>
+              <h3 class="mt-3 font-luxury text-3xl sm:text-4xl">Trails & Stillness</h3>
+            </div>
+            <span class="pt-1 font-luxury text-2xl text-kavora-gold">03</span>
+          </div>
+
+          <p class="mt-4 max-w-[520px] text-sm leading-7 text-white/60">
+            Spend longer on the forest trails, seek out waterfalls and experience the quieter side of the park with time for unhurried discovery.
+          </p>
+
+          <p class="mt-4 text-[10px] uppercase tracking-[.12em] text-white/45">
+            Best suited to walkers and nature lovers
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-gold">
+            Shape This Journey <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- JOURNEY 04 -->
+        <article class="journey-card group reveal reveal-delay-1">
+          <div class="image-frame">
+            <img
+              src="images/rwanda-nyungwe-lake-kivu-journey.jpg"
+              alt="Green hills and calm waters in Rwanda"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="mt-6 flex items-start justify-between gap-5">
+            <div>
+              <p class="eyebrow text-kavora-gold">Journey 04</p>
+              <h3 class="mt-3 font-luxury text-3xl sm:text-4xl">Rwanda, Considered</h3>
+            </div>
+            <span class="pt-1 font-luxury text-2xl text-kavora-gold">04</span>
+          </div>
+
+          <p class="mt-4 max-w-[520px] text-sm leading-7 text-white/60">
+            Combine Nyungwe with other carefully selected Rwandan destinations, allowing the rainforest, wildlife and changing landscapes to form one considered journey.
+          </p>
+
+          <p class="mt-4 text-[10px] uppercase tracking-[.12em] text-white/45">
+            Best suited to longer Rwanda itineraries
+          </p>
+
+          <a href="#enquire" class="text-link mt-6 text-kavora-gold">
+            Shape This Journey <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       KAVORA APPROACH
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory py-24 sm:py-32 lg:py-40">
+    <div class="mx-auto grid max-w-[1440px] items-center gap-12 px-5 sm:px-8 md:grid-cols-2 lg:gap-24 lg:px-14">
+
+      <div class="reveal">
+        <div class="image-frame relative">
+          <img
+            src="images/nyungwe-misty-rainforest.jpg"
+            alt="Morning mist rising through the green mountains and rainforest of Nyungwe"
+            loading="lazy"
+            class="aspect-[4/5]"
+          >
+
+          <div class="absolute bottom-5 left-5 right-5 border border-white/40 bg-kavora-forest/80 p-5 text-white backdrop-blur-sm sm:bottom-8 sm:left-8 sm:right-8 sm:p-7">
+            <p class="eyebrow text-kavora-gold">Kavora Africa</p>
+            <p class="mt-3 font-luxury text-3xl leading-tight sm:text-4xl">
+              Travel with intention.<br>
+              <span class="italic">Experience more deeply.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <p class="eyebrow text-kavora-muted">The Kavora approach</p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-[.96] tracking-[-.025em] sm:text-6xl lg:text-7xl">
+          Considered<br>
+          <span class="italic text-kavora-green">in every detail.</span>
+        </h2>
+
+        <p class="mt-7 text-sm leading-8 text-kavora-muted sm:text-base">
+          A meaningful journey is shaped by more than where you go. It is the rhythm of the days, the people who guide you, the place you return to at dusk and the space to experience each moment without rushing.
+        </p>
+
+        <div class="mt-10 space-y-7">
+
+          <div class="flex gap-5 border-t border-kavora-line pt-6">
+            <span class="font-luxury text-2xl text-kavora-gold">01</span>
+            <div>
+              <h3 class="font-luxury text-2xl">Personalised planning</h3>
+              <p class="mt-2 text-sm leading-7 text-kavora-muted">
+                A journey shaped around your interests, pace, travel dates and preferred level of comfort.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 border-t border-kavora-line pt-6">
+            <span class="font-luxury text-2xl text-kavora-gold">02</span>
+            <div>
+              <h3 class="font-luxury text-2xl">Thoughtful local experiences</h3>
+              <p class="mt-2 text-sm leading-7 text-kavora-muted">
+                Guided activities and regional encounters selected to bring you closer to the places you visit.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 border-t border-kavora-line pt-6">
+            <span class="font-luxury text-2xl text-kavora-gold">03</span>
+            <div>
+              <h3 class="font-luxury text-2xl">A well-considered pace</h3>
+              <p class="mt-2 text-sm leading-7 text-kavora-muted">
+                Realistic travel times, room for changing conditions and space to appreciate the experience.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="about.html" class="text-link mt-10 text-kavora-green">
+          Discover Our Approach <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FAQ
+       ===================================================== -->
+
+  <section class="bg-kavora-deep py-24 text-kavora-ivory sm:py-32 lg:py-36">
+    <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 md:grid-cols-12 lg:gap-20 lg:px-14">
+
+      <div class="md:col-span-4 reveal">
+        <p class="eyebrow text-kavora-gold">Before you travel</p>
+
+        <h2 class="mt-5 font-luxury text-5xl leading-[.98] sm:text-6xl lg:text-7xl">
+          A few things<br><span class="italic text-kavora-gold">to know.</span>
+        </h2>
+
+        <p class="mt-7 max-w-[340px] text-sm leading-7 text-white/60">
+          A little preparation helps you make the most of Nyungwe’s forest, trails and wildlife experiences.
+        </p>
+
+        <a href="#enquire" class="text-link mt-8 text-kavora-gold">
+          Ask Us Directly <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="md:col-span-8 reveal reveal-delay-1">
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-trigger-1">
+            <span class="font-luxury text-2xl sm:text-3xl">What is Nyungwe National Park known for?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-trigger-1">
+            <div>
+              <p>
+                Nyungwe is known for its ancient montane rainforest, chimpanzee tracking, diverse primate species, exceptional birdlife, hiking trails, waterfalls and suspended canopy walkway.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-trigger-2">
+            <span class="font-luxury text-2xl sm:text-3xl">When is the best time to visit?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-trigger-2">
+            <div>
+              <p>
+                June to September and December to February are generally drier periods and often favourable for outdoor activities. Nyungwe remains a rainforest, so rain is possible throughout the year.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-trigger-3">
+            <span class="font-luxury text-2xl sm:text-3xl">Can I see chimpanzees in Nyungwe?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-trigger-3">
+            <div>
+              <p>
+                Yes. Guided chimpanzee tracking is one of Nyungwe’s signature experiences. Sightings are not guaranteed because chimpanzees move through the forest, and the length and difficulty of a trek can vary.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-trigger-4">
+            <span class="font-luxury text-2xl sm:text-3xl">How challenging are the forest activities?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-trigger-4">
+            <div>
+              <p>
+                It depends on the activity. Some trails are relatively gentle, while chimpanzee tracking and longer hikes can be physically demanding on steep or muddy terrain. Suitable footwear, rain protection and an honest assessment of fitness are important.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-trigger-5">
+            <span class="font-luxury text-2xl sm:text-3xl">How do I get to Nyungwe from Kigali?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-5" role="region" aria-labelledby="faq-trigger-5">
+            <div>
+              <p>
+                The drive from Kigali generally takes around five to six hours, depending on the route, stops and destination within the park area. A private transfer and an itinerary with suitable rest stops can make the journey more comfortable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-trigger-6">
+            <span class="font-luxury text-2xl sm:text-3xl">What should I pack?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1v12M1 7h12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-6" role="region" aria-labelledby="faq-trigger-6">
+            <div>
+              <p>
+                Pack sturdy hiking shoes, lightweight long-sleeved clothing, waterproof outerwear, drinking water and a small daypack. For wildlife activities, follow the park’s current guidance on equipment, conduct and any additional requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FINAL ENQUIRY CTA
+       ===================================================== -->
+
+  <section id="enquire" class="relative overflow-hidden bg-kavora-ivory py-24 sm:py-32 lg:py-40">
+    <div class="pointer-events-none absolute -right-20 -top-24 h-[350px] w-[350px] rounded-full border border-kavora-line/70 sm:h-[500px] sm:w-[500px]"></div>
+    <div class="pointer-events-none absolute -right-6 -top-10 h-[250px] w-[250px] rounded-full border border-kavora-line/70 sm:h-[400px] sm:w-[400px]"></div>
+
+    <div class="relative mx-auto max-w-[1000px] px-5 text-center sm:px-8">
+
+      <div class="reveal">
+        <div class="mb-7 flex items-center justify-center gap-4">
+          <span class="gold-line"></span>
+          <p class="eyebrow text-kavora-muted">Your journey begins here</p>
+          <span class="gold-line"></span>
+        </div>
+
+        <h2 class="font-luxury text-5xl leading-[.96] tracking-[-.025em] sm:text-7xl lg:text-8xl">
+          Let the forest<br>
+          <span class="italic text-kavora-green">set the pace.</span>
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-[570px] text-sm leading-8 text-kavora-muted sm:text-base">
+          Tell us what draws you to Nyungwe, how you like to travel and when you hope to go. We will help you shape a considered journey around the experience you have in mind.
+        </p>
+
+        <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <a href="contact.html" class="inline-flex items-center justify-center gap-4 bg-kavora-forest px-8 py-5 text-[9px] font-semibold uppercase tracking-[.18em] text-white transition hover:bg-kavora-green">
+            Begin Your Enquiry <span aria-hidden="true">↗</span>
+          </a>
+
+          <a href="destinations.html" class="inline-flex items-center justify-center gap-4 border border-kavora-line px-8 py-5 text-[9px] font-semibold uppercase tracking-[.18em] text-kavora-forest transition hover:border-kavora-gold">
+            Explore More Destinations <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="bg-kavora-forest text-kavora-ivory">
+
+    <div class="mx-auto grid max-w-[1440px] gap-12 px-5 py-16 sm:px-8 md:grid-cols-12 lg:gap-16 lg:px-14 lg:py-20">
+
+      <div class="md:col-span-5">
+        <a href="index.html" aria-label="Kavora Africa home" class="block w-full max-w-[320px]">
+          <img
+            src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+            alt="Kavora Africa"
+            class="block h-auto w-full max-w-[320px] object-contain object-left -ml-12"
+            style="width: 320px;"
+            loading="lazy"
+          >
+        </a>
+
+        <p class="mt-5 max-w-[340px] text-xs leading-7 text-white/55">
+          Considered journeys across Africa and beyond, shaped around the places, people and experiences that stay with you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 md:col-span-4">
+        <div>
+          <p class="eyebrow text-kavora-gold">Explore</p>
+
+          <nav class="mt-5 flex flex-col gap-4 text-xs">
+            <a href="destinations.html" class="footer-link">Destinations</a>
+            <a href="journeys.html" class="footer-link">Journeys</a>
+            <a href="about.html" class="footer-link">Our Approach</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="eyebrow text-kavora-gold">Rwanda</p>
+
+          <nav class="mt-5 flex flex-col gap-4 text-xs">
+            <a href="volcanoes-national-park.html" class="footer-link">Volcanoes National Park</a>
+            <a href="akagera-national-park.html" class="footer-link">Akagera National Park</a>
+            <a href="nyungwe-national-park.html" class="footer-link">Nyungwe National Park</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="eyebrow text-kavora-gold">Begin a conversation</p>
+
+        <p class="mt-5 max-w-[300px] text-xs leading-7 text-white/55">
+          Every journey starts with an idea. Tell us what you are imagining, and let us help you shape it.
+        </p>
+
+        <a href="contact.html" class="text-link mt-5 text-kavora-gold">
+          Make an Enquiry <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-[1440px] flex-col gap-3 px-5 py-6 text-[9px] uppercase tracking-[.12em] text-white/40 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-14">
+        <p>© 2026 Kavora Africa</p>
+        <p>Considered Journeys. Thoughtfully Designed.</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      document.body.classList.remove("menu-open");
+
+      menuIcon.innerHTML = `
+        <path d="M4 8h16M4 16h16"/>
+      `;
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      document.body.classList.toggle("menu-open", isOpen);
+
+      menuIcon.innerHTML = isOpen
+        ? `<path d="M6 6l12 12M18 6L6 18"/>`
+        : `<path d="M4 8h16M4 16h16"/>`;
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        closeMobileMenu();
+      }
+    });
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -35px 0px"
+      });
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    }
+
+    // FAQ accordion
+    const faqTriggers = document.querySelectorAll(".faq-trigger");
+
+    faqTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const answerId = trigger.getAttribute("aria-controls");
+        const answer = document.getElementById(answerId);
+        const currentlyExpanded =
+          trigger.getAttribute("aria-expanded") === "true";
+
+        // Close all answers before opening the selected one
+        faqTriggers.forEach((otherTrigger) => {
+          const otherAnswerId = otherTrigger.getAttribute("aria-controls");
+          const otherAnswer = document.getElementById(otherAnswerId);
+
+          otherTrigger.setAttribute("aria-expanded", "false");
+          otherAnswer.classList.remove("open");
+        });
+
+        if (!currentlyExpanded) {
+          trigger.setAttribute("aria-expanded", "true");
+          answer.classList.add("open");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

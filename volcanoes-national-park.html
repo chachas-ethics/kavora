@@ -1,0 +1,1507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Volcanoes National Park, Rwanda | Kavora Africa</title>
+  <meta
+    name="description"
+    content="Discover Rwanda's Volcanoes National Park with Kavora Africa. Private gorilla trekking journeys, extraordinary mountain lodges and considered luxury travel, tailored around you."
+  />
+  <meta name="theme-color" content="#0B211A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              forest: "#0B211A",
+              deep: "#102D23",
+              green: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#D8D3C8"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --forest: #0B211A;
+      --deep: #102D23;
+      --green: #1D4535;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --muted: #74786F;
+      --line: #D8D3C8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--forest);
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .font-luxury {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .gold-line {
+      height: 1px;
+      width: 100%;
+      background: var(--gold);
+      transform-origin: left;
+    }
+
+    .hero {
+      min-height: min(850px, 100svh);
+      position: relative;
+      isolation: isolate;
+      background: var(--forest);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 44%;
+      animation: hero-settle 1.4s ease-out both;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(5, 22, 16, 0.82) 0%, rgba(5, 22, 16, 0.46) 48%, rgba(5, 22, 16, 0.10) 100%),
+        linear-gradient(0deg, rgba(5, 22, 16, 0.58) 0%, transparent 48%);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 220ms ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 220ms ease;
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: #d9ded6;
+    }
+
+    .destination-image {
+      transition: transform 900ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .group:hover .destination-image {
+      transform: scale(1.045);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 800ms ease,
+        transform 800ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .experience-card {
+      border: 1px solid var(--line);
+      transition:
+        border-color 300ms ease,
+        background-color 300ms ease;
+    }
+
+    .experience-card:hover {
+      border-color: var(--gold);
+      background-color: #fffdf8;
+    }
+
+    .number-mark {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 29px;
+      line-height: 1;
+    }
+
+    .stay-card img {
+      transition: transform 850ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .stay-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(11, 33, 26, 0.16);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 23px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      flex: 0 0 auto;
+      transition: transform 250ms ease;
+    }
+
+    .faq-trigger[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-answer.open {
+      grid-template-rows: 1fr;
+    }
+
+    .button-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 54px;
+      padding: 0 25px;
+      background: var(--gold);
+      color: var(--forest);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      transition: background 250ms ease, color 250ms ease;
+    }
+
+    .button-gold:hover {
+      background: #e0c58d;
+    }
+
+    .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 54px;
+      padding: 0 25px;
+      border: 1px solid rgba(247, 245, 239, 0.5);
+      color: var(--ivory);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      transition: border-color 250ms ease, color 250ms ease;
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .mobile-menu {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+    }
+
+    .mobile-menu.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes hero-settle {
+      from {
+        transform: scale(1.035);
+        opacity: 0.7;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <header class="absolute inset-x-0 top-0 z-50 border-b border-white/15 text-white">
+    <nav class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
+
+      <a href="index.html" aria-label="Kavora Africa homepage" class="flex items-center">
+        <!-- Replace with your approved Kavora SVG logo if required -->
+        <img
+          src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+          alt="Kavora Africa"
+          class="h-auto w-[170px] object-contain object-left md:w-[190px]"
+        />
+      </a>
+
+      <div class="hidden items-center gap-8 lg:flex">
+        <a href="index.html" class="nav-link eyebrow">Home</a>
+        <a href="destinations.html" class="nav-link eyebrow">Destinations</a>
+        <a href="journeys.html" class="nav-link eyebrow">Journeys</a>
+        <a href="about.html" class="nav-link eyebrow">Our Philosophy</a>
+        <a href="contact.html" class="eyebrow text-kavora-gold">Enquire <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="flex h-11 w-11 items-center justify-center border border-white/30 lg:hidden"
+      >
+        <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.3" />
+        </svg>
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="mobile-menu absolute inset-x-0 top-full border-t border-white/10 bg-kavora-forest px-6 py-7 lg:hidden"
+    >
+      <div class="flex flex-col gap-6">
+        <a href="index.html" class="eyebrow">Home</a>
+        <a href="destinations.html" class="eyebrow">Destinations</a>
+        <a href="journeys.html" class="eyebrow">Journeys</a>
+        <a href="about.html" class="eyebrow">Our Philosophy</a>
+        <a href="contact.html" class="eyebrow text-kavora-gold">Plan Your Journey ↗</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       01 — HERO
+       ===================================================== -->
+
+  <section class="hero flex items-end text-white">
+
+    <img
+      src="https://visitrwanda.com/wp-content/uploads/2024/07/Rwanda-destination-Guide.pdf"
+      alt=""
+      class="hidden"
+      aria-hidden="true"
+    />
+
+    <!-- Replace with a licensed, high-resolution Volcanoes National Park landscape image -->
+    <img
+      src="images/volcanoes-national-park-hero.jpg"
+      alt="Misty volcanic mountains rising above the rainforest in Rwanda"
+      class="hero-image"
+      fetchpriority="high"
+    />
+
+    <div class="mx-auto w-full max-w-[1500px] px-6 pb-16 pt-40 md:px-10 md:pb-24 lg:px-16 lg:pb-28">
+
+      <div class="max-w-4xl">
+
+        <div class="mb-7 flex items-center gap-4">
+          <span class="h-px w-12 bg-kavora-gold"></span>
+          <p class="eyebrow text-kavora-gold">Rwanda · The Virunga Mountains</p>
+        </div>
+
+        <h1 class="font-luxury text-6xl font-normal leading-[0.91] tracking-[-0.035em] sm:text-7xl md:text-8xl lg:text-[112px]">
+          Volcanoes<br />
+          <span class="italic text-kavora-gold">National Park</span>
+        </h1>
+
+        <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/85 md:text-base md:leading-8">
+          Into the mist-covered mountains of Rwanda, where ancient forests,
+          rare wildlife and extraordinary encounters invite you to experience
+          Africa at a more considered pace.
+        </p>
+
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a href="contact.html?destination=Volcanoes%20National%20Park" class="button-gold">
+            Design My Journey <span aria-hidden="true">↗</span>
+          </a>
+          <a href="#experiences" class="button-outline">
+            Discover the Experience <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-16 flex items-end justify-between border-t border-white/30 pt-5 md:mt-24">
+        <p class="eyebrow max-w-[220px] leading-5 text-white/70">
+          A private journey, thoughtfully considered
+        </p>
+        <p class="font-luxury text-2xl italic text-white/90 md:text-3xl">
+          Rwanda, differently.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       02 — INTRODUCTION
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-36">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-muted">01 / The destination</p>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          A world above<br />
+          <span class="italic text-kavora-green">the ordinary.</span>
+        </h2>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+        <p class="text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          In north-western Rwanda, the slopes of the Virunga Mountains rise
+          through cloud and rainforest. Bamboo thickets, volcanic peaks and
+          rich montane habitats create a setting unlike any other on the
+          continent.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          The defining encounter is a trek into the forest to spend a carefully
+          managed hour observing mountain gorillas in their natural habitat.
+          Yet the experience need not end there. Golden monkey tracking,
+          mountain hikes, conservation history and secluded lodge stays can
+          all become part of a journey shaped around you.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          Kavora brings these elements together with considered pacing,
+          thoughtful accommodation choices and the practical details handled
+          before you arrive.
+        </p>
+
+        <a
+          href="contact.html?destination=Volcanoes%20National%20Park"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+        >
+          Begin a conversation <span class="text-lg" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       03 — SIGNATURE EXPERIENCES
+       ===================================================== -->
+
+  <section id="experiences" class="bg-white px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 flex flex-col justify-between gap-7 md:mb-16 md:flex-row md:items-end">
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-muted">02 / Beyond the expected</p>
+          <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+            Experiences with<br />
+            <span class="italic text-kavora-green">a deeper meaning.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          Begin with the encounter that draws you here. Let the surrounding
+          landscape, culture and conservation story shape the rest.
+        </p>
+
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- EXPERIENCE 01 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/volcanoes-mountain-gorillas.jpg"
+              alt="Mountain gorilla in the dense green forest of Volcanoes National Park"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+            <span class="absolute bottom-5 left-5 bg-kavora-ivory px-4 py-2 eyebrow text-kavora-forest">
+              The defining encounter
+            </span>
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">01</span>
+              <span class="eyebrow text-kavora-muted">Wildlife</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">Mountain Gorilla Trekking</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Follow experienced park trackers through the forest for a
+              rare, closely regulated encounter with a mountain gorilla family.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Permit coordination · Private transfers · Lodge planning
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 02 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/volcanoes-golden-monkeys.jpg"
+              alt="Golden monkey among bamboo and green foliage"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">02</span>
+              <span class="eyebrow text-kavora-muted">In the forest</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">Golden Monkey Tracking</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Enter the bamboo forest in search of the lively golden monkeys
+              that inhabit the Virunga landscape.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Guided tracking · Forest immersion
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 03 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/volcanoes-mount-bisoke.jpg"
+              alt="Mount Bisoke rising above the clouds in Rwanda"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">03</span>
+              <span class="eyebrow text-kavora-muted">On foot</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">Volcanic Mountain Hikes</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Explore the Virunga slopes on a guided hike, with options such
+              as Mount Bisoke chosen around your interests and fitness.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Guided routes · Personalised pacing
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 04 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/dian-fossey-conservation.jpg"
+              alt="Forested Virunga mountain landscape associated with gorilla conservation"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">04</span>
+              <span class="eyebrow text-kavora-muted">Conservation</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">The Dian Fossey Legacy</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Discover the history of mountain gorilla research and
+              conservation through a guided visit to the Dian Fossey research
+              area, subject to route conditions and current access.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Conservation history · Guided hike
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 05 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/volcanoes-twin-lakes.jpg"
+              alt="Lake Burera and Lake Ruhondo surrounded by Rwanda's green hills"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">05</span>
+              <span class="eyebrow text-kavora-muted">Slow exploration</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">The Twin Lakes</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Take in the quieter scenery around Lake Burera and Lake
+              Ruhondo, with time for viewpoints, a local guide or a boat
+              experience where available.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Scenic touring · Flexible pace
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 06 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/volcanoes-lodge-experience.jpg"
+              alt="Luxury lodge terrace overlooking the green Virunga mountains"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">06</span>
+              <span class="eyebrow text-kavora-muted">At your own pace</span>
+            </div>
+
+            <h3 class="font-luxury text-3xl">Time to Simply Be</h3>
+
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Leave room for slow mornings, thoughtful dining, mountain views
+              and the quiet comfort of a carefully selected lodge between
+              guided experiences.
+            </p>
+
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Private stays · Unhurried moments
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       04 — WHEN TO GO
+       ===================================================== -->
+
+  <section class="bg-kavora-forest px-6 py-20 text-kavora-ivory md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-gold">03 / Finding your moment</p>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          The right season.<br />
+          <span class="italic text-kavora-gold">Your kind of journey.</span>
+        </h2>
+
+        <p class="mt-7 max-w-md text-sm font-light leading-8 text-white/65">
+          Gorilla trekking is possible throughout the year. Seasonal rainfall,
+          trail conditions and your preferred experiences all help determine
+          when to travel.
+        </p>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">June — September</p>
+              <h3 class="mt-3 font-luxury text-3xl">The drier months</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Often preferred for trekking because trails may be less muddy.
+              This is a popular period, so advance planning is important.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">December — February</p>
+              <h3 class="mt-3 font-luxury text-3xl">A second drier window</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Another popular period for forest trekking and combining
+              Volcanoes National Park with other parts of Rwanda.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">March — May</p>
+              <h3 class="mt-3 font-luxury text-3xl">The greener season</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Rain can make trails more challenging. The landscape is lush,
+              but weather and walking conditions need careful consideration.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-y border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">October — November</p>
+              <h3 class="mt-3 font-luxury text-3xl">A quieter rhythm</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              A wetter period that can suit flexible travellers who are
+              comfortable with changing mountain weather.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs font-light leading-6 text-white/50">
+          Seasonal guidance is indicative. Conditions vary, and no season
+          guarantees a particular wildlife sighting or trail condition.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       05 — WHERE TO STAY
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+        <div>
+          <p class="eyebrow mb-5 text-kavora-muted">04 / A place to return to</p>
+          <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+            Stay close to<br />
+            <span class="italic text-kavora-green">what matters.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          Your lodge shapes the experience as much as the destination itself.
+          We help you choose a stay that suits your priorities, privacy and
+          preferred pace.
+        </p>
+      </div>
+
+      <div class="grid gap-7 md:grid-cols-3">
+
+        <!-- STAY 01 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/volcanoes-ultra-luxury-lodge.jpg"
+              alt="Contemporary luxury lodge nestled in the Virunga landscape"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Privacy & design
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For the considered traveller</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Intimate Luxury Lodges</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Design-led spaces, attentive service and a strong sense of place,
+              selected for travellers who value privacy and considered detail.
+            </p>
+          </div>
+        </article>
+
+        <!-- STAY 02 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/volcanoes-lodge-fireplace.jpg"
+              alt="Warm and elegant lodge lounge overlooking the mountains"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Warmth & comfort
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For restorative downtime</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Refined Mountain Retreats</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Inviting interiors, thoughtful dining and peaceful spaces in
+              which to recover after a day exploring the forest.
+            </p>
+          </div>
+        </article>
+
+        <!-- STAY 03 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/volcanoes-private-suite.jpg"
+              alt="Private suite with natural textures and views of green mountains"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Personalised stays
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For couples & special occasions</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Private, Personal Spaces</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Carefully matched rooms, suites and lodge experiences for
+              honeymoons, anniversaries or a meaningful journey together.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="reveal mt-10 max-w-3xl text-xs leading-6 text-kavora-muted">
+        Accommodation examples describe the types of stay we can help curate,
+        not confirmed availability or a representation that every property
+        offers every feature. Specific properties are selected to suit each
+        enquiry.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       06 — SAMPLE JOURNEYS
+       ===================================================== -->
+
+  <section class="bg-white px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 md:mb-16">
+        <p class="eyebrow mb-5 text-kavora-muted">05 / Ways to experience it</p>
+        <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+          One destination.<br />
+          <span class="italic text-kavora-green">Different ways to feel it.</span>
+        </h2>
+        <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted">
+          These are starting points, not fixed packages. We shape each journey
+          around available permits, your travel dates, accommodation
+          preferences and the pace you want.
+        </p>
+      </div>
+
+      <div class="space-y-7">
+
+        <!-- JOURNEY 01 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:min-h-[430px]">
+            <img
+              src="images/volcanoes-gorilla-journey.jpg"
+              alt="Mountain gorilla in its natural rainforest habitat"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 01 · Wildlife</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">
+              The Gorilla Encounter
+            </h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              A focused journey built around mountain gorilla trekking, with
+              carefully chosen accommodation, permit coordination and a
+              seamless road transfer from Kigali.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: trekking permit availability, arrival timing,
+              fitness and recovery time.
+            </p>
+            <a
+              href="contact.html?journey=The%20Gorilla%20Encounter"
+              class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+            >
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 02 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:order-2 md:min-h-[430px]">
+            <img
+              src="images/volcanoes-golden-monkey-journey.jpg"
+              alt="Golden monkey in the Virunga bamboo forest"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 02 · Forest & wildlife</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">
+              Into the Green
+            </h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              A slower exploration of the forest, combining golden monkey
+              tracking with time to appreciate the landscape and the quiet
+              rituals of a mountain lodge.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: activity availability, weather and preferred
+              level of walking.
+            </p>
+            <a
+              href="contact.html?journey=Into%20the%20Green"
+              class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+            >
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 03 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:min-h-[430px]">
+            <img
+              src="images/volcanoes-mountain-hiking-journey.jpg"
+              alt="Hiker looking toward the mist-covered Virunga volcanoes"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 03 · Active exploration</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">
+              Above the Clouds
+            </h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              A mountain-focused escape with guided hiking, dramatic volcanic
+              scenery and a comfortable base from which to explore the
+              surrounding region.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: trail difficulty, altitude, weather and the
+              physical demands of each route.
+            </p>
+            <a
+              href="contact.html?journey=Above%20the%20Clouds"
+              class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+            >
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 04 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:order-2 md:min-h-[430px]">
+            <img
+              src="images/rwanda-private-journey.jpg"
+              alt="Quiet luxury lodge setting in Rwanda's green mountainous landscape"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 04 · Private escape</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">
+              Rwanda, Considered
+            </h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              Make Volcanoes National Park one chapter of a wider Rwandan
+              journey, pairing forest encounters with time in Kigali or a
+              restorative stay by Lake Kivu.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: total trip length, road transfers and the
+              combination of destinations.
+            </p>
+            <a
+              href="contact.html?journey=Rwanda%20Considered"
+              class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+            >
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       07 — THE KAVORA APPROACH
+       ===================================================== -->
+
+  <section class="bg-kavora-deep px-6 py-20 text-kavora-ivory md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-14 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-gold">06 / The Kavora approach</p>
+
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          The details<br />
+          make the<br />
+          <span class="italic text-kavora-gold">difference.</span>
+        </h2>
+
+        <p class="mt-7 max-w-md text-sm font-light leading-8 text-white/65">
+          Luxury is not simply where you stay. It is how the entire journey
+          feels, from the first conversation to the final transfer.
+        </p>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">01</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Your priorities come first</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                We start with your interests, travel style, timing, preferred
+                pace and the experience you want to take away.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">02</span>
+            <div>
+              <h3 class="font-luxury text-3xl">The right pieces, thoughtfully joined</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                Accommodation, permits, guides, road transfers and additional
+                experiences are planned as one connected journey.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">03</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Space for the unexpected</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                Wildlife and mountain conditions cannot be scripted. We
+                plan carefully while allowing room for the destination to
+                reveal itself.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-y border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">04</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Personal coordination</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                Your journey is coordinated around the practical details,
+                so you can spend less time managing logistics and more time
+                experiencing Rwanda.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       08 — PRACTICAL INFORMATION / FAQ
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-4">
+        <p class="eyebrow mb-6 text-kavora-muted">07 / Before you go</p>
+
+        <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl">
+          A few things<br />
+          <span class="italic text-kavora-green">to know.</span>
+        </h2>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted">
+          The right preparation makes a meaningful difference in a mountain
+          environment. These are the essentials we consider when planning
+          your stay.
+        </p>
+
+        <a
+          href="contact.html?destination=Volcanoes%20National%20Park"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+        >
+          Ask a concierge <span class="text-lg" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="reveal lg:col-span-7 lg:col-start-6">
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">How do I arrange a gorilla trekking permit?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Gorilla trekking requires a valid permit for your chosen date.
+                We can help coordinate the permit process and align it with
+                your accommodation and transport plans. Availability should
+                be confirmed before travel arrangements are finalised.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">How many days should I allow?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                The right length depends on your activities and how much time
+                you want to spend at your lodge. A short stay can focus on
+                gorilla trekking; a longer visit allows additional experiences
+                and a more relaxed pace. We plan around your actual dates
+                rather than a standard package duration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">How demanding is gorilla trekking?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Trek duration and terrain vary according to the gorilla
+                family and conditions. Expect uneven, sometimes steep or muddy
+                forest trails. Tell us about your fitness, mobility and
+                preferences so we can help you prepare and confirm what is
+                suitable with the relevant operator.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">What should I pack?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Sturdy walking shoes, long trousers, layers, a lightweight
+                waterproof jacket and protection for your hands and lower
+                legs are useful. The mountain climate can be cool and wet.
+                We can provide a trip-specific packing list before departure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">Can Volcanoes National Park be combined with other destinations?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Yes. Depending on your available time, it can form part of a
+                wider Rwanda journey with Kigali, Lake Kivu, Akagera National
+                Park or Nyungwe National Park. We account for transfer times
+                and activity schedules when designing the route.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">When should I start planning?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Start as early as practical, particularly if your dates are
+                fixed or you have a preferred lodge. Gorilla permits and
+                sought-after accommodation are subject to availability.
+                We recommend checking both before committing to a final plan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       09 — FINAL ENQUIRY
+       ===================================================== -->
+
+  <section class="relative isolate overflow-hidden bg-kavora-forest text-kavora-ivory">
+
+    <img
+      src="images/volcanoes-misty-mountains-cta.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
+    />
+
+    <div class="absolute inset-0 -z-10 bg-kavora-forest/65"></div>
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 text-center md:px-10 md:py-32 lg:py-40">
+
+      <p class="reveal eyebrow mb-7 text-kavora-gold">Your journey begins here</p>
+
+      <h2 class="reveal mx-auto max-w-4xl font-luxury text-5xl font-normal leading-[0.98] md:text-7xl lg:text-8xl">
+        Some places stay<br />
+        <span class="italic text-kavora-gold">with you.</span>
+      </h2>
+
+      <p class="reveal mx-auto mt-7 max-w-xl text-sm font-light leading-8 text-white/75 md:text-base">
+        Tell us what draws you to Rwanda. We will help you bring the right
+        experiences, places to stay and details together into a journey
+        that feels entirely your own.
+      </p>
+
+      <div class="reveal mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+        <a
+          href="contact.html?destination=Volcanoes%20National%20Park"
+          class="button-gold"
+        >
+          Plan Your Private Journey <span aria-hidden="true">↗</span>
+        </a>
+        <a href="destinations.html" class="button-outline">
+          Explore More of Africa
+        </a>
+      </div>
+
+      <p class="reveal mt-9 text-[9px] uppercase tracking-[0.2em] text-white/50">
+        Kavora Africa · Considered journeys, personally curated
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="bg-kavora-forest px-6 text-kavora-ivory md:px-10 lg:px-16">
+
+    <div class="mx-auto grid max-w-[1400px] gap-12 py-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 lg:py-20">
+
+      <div class="lg:col-span-4">
+        <a href="index.html" aria-label="Kavora Africa homepage" class="inline-block">
+          <img
+            src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+            alt="Kavora Africa"
+            class="block h-auto w-full max-w-[320px] object-contain object-left -ml-12"
+            style="width: 320px;"
+          />
+        </a>
+
+        <p class="mt-5 max-w-sm text-sm font-light leading-7 text-white/55">
+          Private journeys, considered stays and personal travel
+          coordination across Africa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5 lg:col-start-6">
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Explore</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="destinations.html">Destinations</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="journeys.html">Private Journeys</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="luxury-stays.html">Luxury Stays</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="concierge.html">Concierge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Rwanda</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="volcanoes-national-park.html">Volcanoes National Park</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="akagera-national-park.html">Akagera National Park</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="nyungwe-national-park.html">Nyungwe National Park</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Connect</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="contact.html">Enquiries</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="about.html">Our Philosophy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="border-t border-white/15 py-6">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold">
+          © 2026 Kavora Africa
+        </p>
+        <p class="text-[9px] uppercase tracking-[0.15em] text-white/45">
+          Considered journeys. Meaningful connections.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       INTERACTIONS
+       ===================================================== -->
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    function closeMenu() {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      document.body.classList.toggle("menu-open", isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) closeMenu();
+    });
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    }
+
+    // FAQ accordion: one open item at a time
+    const faqTriggers = document.querySelectorAll(".faq-trigger");
+
+    faqTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const currentAnswer = trigger.nextElementSibling;
+        const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+
+        faqTriggers.forEach((otherTrigger) => {
+          otherTrigger.setAttribute("aria-expanded", "false");
+          otherTrigger.nextElementSibling.classList.remove("open");
+        });
+
+        if (willOpen) {
+          trigger.setAttribute("aria-expanded", "true");
+          currentAnswer.classList.add("open");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

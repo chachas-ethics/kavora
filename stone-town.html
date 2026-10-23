@@ -1,0 +1,2605 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stone Town Zanzibar | Private Cultural Journeys — Kavora Africa</title>
+  <meta name="description" content="Discover Stone Town, Zanzibar through private cultural experiences, historic architecture, Swahili cuisine and bespoke island journeys with Kavora Africa.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B211A">
+
+  <!-- Replace with your actual published URL -->
+  <link rel="canonical" href="https://kavoraafrica.com/zanzibar-stone-town.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stone Town, Zanzibar | Kavora Africa">
+  <meta property="og:description" content="An immersive journey into the heritage, character and quieter luxuries of Stone Town.">
+  <meta property="og:image" content="images/stone-town-hero.jpg">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              forest: "#0B211A",
+              deep: "#102D23",
+              green: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              sand: "#E4E0D6",
+              stone: "#74786F",
+              line: "#D8D2C5"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --forest: #0B211A;
+      --deep: #102D23;
+      --green: #1D4535;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --sand: #E4E0D6;
+      --stone: #74786F;
+      --line: #D8D2C5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--forest);
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .section-shell {
+      width: min(100% - 64px, 1320px);
+      margin-inline: auto;
+    }
+
+    .section-pad {
+      padding-block: 130px;
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .image-clip {
+      overflow: hidden;
+      background: var(--sand);
+    }
+
+    .image-clip img {
+      transition: transform 1s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .image-clip:hover img {
+      transform: scale(1.035);
+    }
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .site-header {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(247, 245, 239, .2);
+      color: var(--ivory);
+      transition: background .35s ease, box-shadow .35s ease;
+    }
+
+    .site-header.is-scrolled {
+      position: fixed;
+      background: rgba(11, 33, 26, .97);
+      box-shadow: 0 5px 25px rgba(0, 0, 0, .08);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      display: flex;
+      height: 88px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 190px;
+      height: auto;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-block: 8px;
+      color: rgba(247, 245, 239, .82);
+      font-size: 10px;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--gold);
+      padding: 0 18px;
+      color: var(--ivory);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(247, 245, 239, .35);
+      color: var(--ivory);
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow-y: auto;
+      background: var(--forest);
+      padding: 110px 28px 40px;
+    }
+
+    .mobile-nav.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-nav a {
+      border-bottom: 1px solid rgba(247, 245, 239, .14);
+      padding: 17px 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      color: var(--ivory);
+    }
+
+    .mobile-nav .mobile-cta {
+      margin-top: 25px;
+      border: 1px solid var(--gold);
+      padding: 16px;
+      color: var(--gold);
+      font-family: "Manrope", sans-serif;
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* =====================================================
+       CINEMATIC HERO
+       ===================================================== */
+
+    .hero {
+      position: relative;
+      min-height: 790px;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--forest);
+      color: var(--ivory);
+      isolation: isolate;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .hero-media img {
+      object-position: center 50%;
+      animation: hero-image-enter 1.5s cubic-bezier(.2, .7, .2, 1) both;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(5, 20, 15, .73) 0%, rgba(5, 20, 15, .40) 46%, rgba(5, 20, 15, .04) 100%),
+        linear-gradient(0deg, rgba(5, 20, 15, .67) 0%, rgba(5, 20, 15, .05) 68%);
+    }
+
+    .hero-content {
+      width: 100%;
+      padding-top: 180px;
+      padding-bottom: 125px;
+    }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--gold);
+    }
+
+    .hero-location::before {
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .hero-title {
+      max-width: 880px;
+      margin-top: 28px;
+      font-size: clamp(74px, 11.4vw, 158px);
+      letter-spacing: -.045em;
+      line-height: .78;
+    }
+
+    .hero-title .title-second-line {
+      display: block;
+      margin-top: 13px;
+      color: var(--ivory);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-top: 45px;
+    }
+
+    .hero-description {
+      max-width: 385px;
+      color: rgba(247, 245, 239, .83);
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .hero-action {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 12px;
+      color: var(--ivory);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: gap .25s ease;
+    }
+
+    .hero-action:hover {
+      gap: 23px;
+    }
+
+    .hero-action span {
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .hero-index {
+      position: absolute;
+      right: 32px;
+      bottom: 34px;
+      color: rgba(247, 245, 239, .75);
+      font-size: 9px;
+      letter-spacing: .18em;
+      writing-mode: vertical-rl;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(247, 245, 239, .65);
+      font-size: 8px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+    }
+
+    .hero-scroll::before {
+      width: 1px;
+      height: 30px;
+      background: var(--gold);
+      content: "";
+    }
+
+    /* =====================================================
+       INTRODUCTION / DESTINATION STORY
+       ===================================================== */
+
+    .intro-section {
+      padding-block: 150px 155px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 12%;
+      align-items: start;
+    }
+
+    .intro-heading {
+      margin-top: 26px;
+      font-size: clamp(48px, 6vw, 79px);
+      letter-spacing: -.035em;
+      line-height: .92;
+    }
+
+    .intro-right {
+      padding-top: 72px;
+    }
+
+    .intro-copy {
+      max-width: 570px;
+      color: var(--stone);
+      font-size: 13px;
+      line-height: 2.15;
+    }
+
+    .intro-copy + .intro-copy {
+      margin-top: 19px;
+    }
+
+    .intro-signature {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .intro-signature .gold-line {
+      flex-shrink: 0;
+    }
+
+    .intro-signature span:last-child {
+      color: var(--forest);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 23px;
+      font-style: italic;
+    }
+
+    /* =====================================================
+       IMAGE-LED HERITAGE FEATURE
+       ===================================================== */
+
+    .heritage-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--deep);
+      color: var(--ivory);
+    }
+
+    .heritage-layout {
+      display: grid;
+      min-height: 720px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .heritage-image {
+      position: relative;
+      min-height: 620px;
+    }
+
+    .heritage-image img {
+      position: absolute;
+      inset: 0;
+      object-position: center;
+    }
+
+    .heritage-image::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(5, 20, 15, .34), transparent 50%);
+      content: "";
+    }
+
+    .image-caption {
+      position: absolute;
+      right: 32px;
+      bottom: 30px;
+      left: 32px;
+      z-index: 1;
+      color: rgba(247, 245, 239, .8);
+      font-size: 9px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .heritage-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px clamp(36px, 7vw, 110px);
+    }
+
+    .heritage-heading {
+      margin-top: 27px;
+      font-size: clamp(48px, 5.5vw, 78px);
+      letter-spacing: -.035em;
+      line-height: .92;
+    }
+
+    .heritage-copy {
+      margin-top: 30px;
+      color: rgba(247, 245, 239, .68);
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .heritage-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 13px;
+      margin-top: 33px;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 10px;
+      color: var(--ivory);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .heritage-link span {
+      color: var(--gold);
+      font-size: 17px;
+    }
+
+    /* =====================================================
+       IMMERSIVE EXPERIENCES
+       ===================================================== */
+
+    .experiences-section {
+      padding-block: 145px 155px;
+    }
+
+    .experiences-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 60px;
+    }
+
+    .experiences-title {
+      max-width: 720px;
+      margin-top: 24px;
+      font-size: clamp(52px, 7vw, 92px);
+      letter-spacing: -.04em;
+      line-height: .88;
+    }
+
+    .experiences-lead {
+      max-width: 300px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .experience-feature {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 8%;
+    }
+
+    .experience-feature-image {
+      height: 650px;
+    }
+
+    .experience-feature-copy {
+      padding-block: 30px;
+    }
+
+    .experience-feature-copy h3 {
+      max-width: 500px;
+      margin-top: 25px;
+      font-size: clamp(44px, 5.4vw, 72px);
+      letter-spacing: -.035em;
+      line-height: .95;
+    }
+
+    .experience-feature-copy p {
+      max-width: 430px;
+      margin-top: 25px;
+      color: var(--stone);
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .experience-number {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: .18em;
+    }
+
+    .experience-list {
+      margin-top: 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-row {
+      display: grid;
+      grid-template-columns: 55px 1fr 1fr 25px;
+      align-items: center;
+      gap: 22px;
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .experience-row h4 {
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.05;
+    }
+
+    .experience-row p {
+      max-width: 390px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .experience-row .row-arrow {
+      color: var(--gold);
+      font-size: 21px;
+      transition: transform .25s ease;
+    }
+
+    .experience-row:hover .row-arrow {
+      transform: translateX(5px);
+    }
+
+    /* =====================================================
+       CINEMATIC PAUSE / PULL QUOTE
+       ===================================================== */
+
+    .pause-section {
+      position: relative;
+      display: flex;
+      min-height: 620px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--forest);
+      color: var(--ivory);
+      text-align: center;
+      isolation: isolate;
+    }
+
+    .pause-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .pause-image img {
+      object-position: center 53%;
+    }
+
+    .pause-section::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(6, 25, 18, .60);
+      content: "";
+    }
+
+    .pause-content {
+      width: min(800px, calc(100% - 40px));
+      padding-block: 100px;
+    }
+
+    .pause-quote {
+      margin-top: 30px;
+      font-size: clamp(45px, 7vw, 87px);
+      letter-spacing: -.035em;
+      line-height: .96;
+    }
+
+    .pause-caption {
+      max-width: 430px;
+      margin: 28px auto 0;
+      color: rgba(247, 245, 239, .76);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    /* =====================================================
+       TAILORED JOURNEY
+       ===================================================== */
+
+    .journey-section {
+      padding-block: 145px;
+      background: var(--sand);
+    }
+
+    .journey-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 12%;
+      align-items: start;
+    }
+
+    .journey-title {
+      max-width: 500px;
+      margin-top: 25px;
+      font-size: clamp(49px, 6vw, 79px);
+      letter-spacing: -.04em;
+      line-height: .9;
+    }
+
+    .journey-description {
+      max-width: 390px;
+      margin-top: 27px;
+      color: var(--stone);
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .journey-items {
+      border-top: 1px solid rgba(11, 33, 26, .22);
+    }
+
+    .journey-item {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+      border-bottom: 1px solid rgba(11, 33, 26, .22);
+      padding: 27px 0;
+    }
+
+    .journey-item .number {
+      padding-top: 6px;
+      color: #98773F;
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+
+    .journey-item h3 {
+      font-size: 30px;
+      line-height: 1.05;
+    }
+
+    .journey-item p {
+      max-width: 390px;
+      margin-top: 10px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    /* =====================================================
+       ACCOMMODATION
+       ===================================================== */
+
+    .stay-section {
+      padding-block: 145px;
+    }
+
+    .stay-intro {
+      display: grid;
+      grid-template-columns: 1fr .65fr;
+      gap: 50px;
+      align-items: end;
+      margin-bottom: 55px;
+    }
+
+    .stay-title {
+      max-width: 700px;
+      margin-top: 24px;
+      font-size: clamp(48px, 6vw, 78px);
+      letter-spacing: -.04em;
+      line-height: .91;
+    }
+
+    .stay-intro-copy {
+      color: var(--stone);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .stay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .stay-card:nth-child(2) {
+      margin-top: 100px;
+    }
+
+    .stay-card-image {
+      height: 470px;
+    }
+
+    .stay-card-label {
+      margin-top: 22px;
+      color: var(--stone);
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .stay-card h3 {
+      margin-top: 10px;
+      font-size: 36px;
+      line-height: 1.05;
+    }
+
+    .stay-card p:last-child {
+      max-width: 430px;
+      margin-top: 12px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .stay-disclaimer {
+      margin-top: 35px;
+      color: var(--stone);
+      font-size: 10px;
+      line-height: 1.8;
+    }
+
+    /* =====================================================
+       FAQ
+       ===================================================== */
+
+    .faq-section {
+      background: #fff;
+      padding-block: 110px;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 12%;
+    }
+
+    .faq-title {
+      max-width: 400px;
+      margin-top: 25px;
+      font-size: clamp(45px, 5vw, 67px);
+      letter-spacing: -.035em;
+      line-height: .92;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 23px 0;
+      border: 0;
+      background: transparent;
+      color: var(--forest);
+      cursor: pointer;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      text-align: left;
+    }
+
+    .faq-plus {
+      flex-shrink: 0;
+      color: var(--gold);
+      font-family: "Manrope", sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      transition: transform .25s ease;
+    }
+
+    .faq-question[aria-expanded="true"] .faq-plus {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-width: 630px;
+      padding: 0 30px 24px 0;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    /* =====================================================
+       FINAL ENQUIRY
+       ===================================================== */
+
+    .enquiry-section {
+      background: var(--forest);
+      color: var(--ivory);
+      padding-block: 130px;
+    }
+
+    .enquiry-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 12%;
+    }
+
+    .enquiry-title {
+      max-width: 550px;
+      margin-top: 25px;
+      font-size: clamp(53px, 7vw, 91px);
+      letter-spacing: -.045em;
+      line-height: .86;
+    }
+
+    .enquiry-copy {
+      max-width: 380px;
+      margin-top: 28px;
+      color: rgba(247, 245, 239, .68);
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .enquiry-form {
+      display: grid;
+      gap: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 10px;
+      color: rgba(247, 245, 239, .66);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .field {
+      display: block;
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(247, 245, 239, .25);
+      border-radius: 0;
+      outline: none;
+      background: transparent;
+      padding: 13px 14px;
+      color: var(--ivory);
+      font-size: 11px;
+      transition: border-color .2s ease;
+    }
+
+    .field:focus {
+      border-color: var(--gold);
+    }
+
+    .field::placeholder {
+      color: rgba(247, 245, 239, .44);
+    }
+
+    .field option {
+      background: var(--deep);
+      color: var(--ivory);
+    }
+
+    textarea.field {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      padding: 0 24px;
+      color: var(--forest);
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .form-submit:hover {
+      background: transparent;
+      color: var(--ivory);
+    }
+
+    .form-note {
+      max-width: 450px;
+      color: rgba(247, 245, 239, .42);
+      font-size: 9px;
+      line-height: 1.9;
+    }
+
+    .form-status {
+      color: var(--gold);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .site-footer {
+      background: var(--forest);
+      color: var(--ivory);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.25fr .7fr .8fr;
+      gap: 80px;
+      padding-block: 65px;
+      border-top: 1px solid rgba(247, 245, 239, .15);
+    }
+
+    .footer-logo {
+      display: block;
+      width: 270px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: left;
+      margin-left: -12px;
+    }
+
+    .footer-description {
+      max-width: 300px;
+      margin-top: 20px;
+      color: rgba(247, 245, 239, .5);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    .footer-heading {
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
+    }
+
+    .footer-links a,
+    .footer-enquiry {
+      color: rgba(247, 245, 239, .64);
+      font-size: 10px;
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-enquiry:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(247, 245, 239, .12);
+      padding-block: 22px;
+      color: rgba(247, 245, 239, .42);
+      font-size: 9px;
+      letter-spacing: .07em;
+    }
+
+    /* =====================================================
+       REVEAL ANIMATIONS
+       ===================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .12s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .22s;
+    }
+
+    @keyframes hero-image-enter {
+      from {
+        opacity: .7;
+        transform: scale(1.055);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 1000px) {
+      .desktop-nav {
+        gap: 18px;
+      }
+
+      .brand-logo {
+        width: 165px;
+      }
+
+      .section-pad {
+        padding-block: 100px;
+      }
+
+      .intro-grid,
+      .journey-layout,
+      .faq-layout,
+      .enquiry-layout {
+        gap: 8%;
+      }
+
+      .heritage-content {
+        padding-inline: 45px;
+      }
+
+      .experience-feature-image {
+        height: 540px;
+      }
+
+      .stay-card-image {
+        height: 390px;
+      }
+
+      .footer-main {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-shell {
+        width: min(100% - 38px, 1320px);
+      }
+
+      .section-pad {
+        padding-block: 85px;
+      }
+
+      .header-inner {
+        height: 72px;
+      }
+
+      .brand-logo {
+        width: 160px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 780px;
+        min-height: 100svh;
+        align-items: flex-end;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(0deg, rgba(5, 20, 15, .83) 0%, rgba(5, 20, 15, .36) 65%, rgba(5, 20, 15, .16) 100%);
+      }
+
+      .hero-content {
+        padding-top: 160px;
+        padding-bottom: 115px;
+      }
+
+      .hero-title {
+        font-size: clamp(67px, 17vw, 110px);
+        line-height: .8;
+      }
+
+      .hero-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 32px;
+      }
+
+      .hero-description {
+        max-width: 350px;
+        font-size: 11px;
+      }
+
+      .hero-index {
+        right: 19px;
+        bottom: 22px;
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .intro-section {
+        padding-block: 95px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .intro-heading {
+        max-width: 520px;
+        font-size: clamp(51px, 12vw, 75px);
+      }
+
+      .intro-right {
+        padding-top: 15px;
+      }
+
+      .heritage-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .heritage-image {
+        min-height: 490px;
+      }
+
+      .heritage-content {
+        padding: 80px 25px 90px;
+      }
+
+      .heritage-heading {
+        font-size: clamp(54px, 12vw, 76px);
+      }
+
+      .experiences-section {
+        padding-block: 95px;
+      }
+
+      .experiences-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 35px;
+      }
+
+      .experiences-title {
+        font-size: clamp(54px, 13vw, 79px);
+      }
+
+      .experience-feature {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .experience-feature-image {
+        height: 450px;
+      }
+
+      .experience-feature-copy {
+        padding-block: 0;
+      }
+
+      .experience-feature-copy h3 {
+        font-size: clamp(48px, 11vw, 67px);
+      }
+
+      .experience-list {
+        margin-top: 65px;
+      }
+
+      .experience-row {
+        grid-template-columns: 30px 1fr 20px;
+        gap: 12px;
+        padding-block: 22px;
+      }
+
+      .experience-row h4 {
+        font-size: 28px;
+      }
+
+      .experience-row p {
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 10px;
+      }
+
+      .experience-row .row-arrow {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      .pause-section {
+        min-height: 520px;
+      }
+
+      .pause-content {
+        padding-block: 75px;
+      }
+
+      .pause-quote {
+        font-size: clamp(48px, 12vw, 75px);
+      }
+
+      .journey-section {
+        padding-block: 90px;
+      }
+
+      .journey-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .journey-title {
+        font-size: clamp(53px, 12vw, 76px);
+      }
+
+      .journey-item h3 {
+        font-size: 28px;
+      }
+
+      .stay-section {
+        padding-block: 90px;
+      }
+
+      .stay-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 35px;
+      }
+
+      .stay-title {
+        font-size: clamp(51px, 12vw, 76px);
+      }
+
+      .stay-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .stay-card:nth-child(2) {
+        margin-top: 0;
+      }
+
+      .stay-card-image {
+        height: 410px;
+      }
+
+      .faq-section {
+        padding-block: 85px;
+      }
+
+      .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .faq-title {
+        font-size: clamp(49px, 11vw, 65px);
+      }
+
+      .faq-question {
+        font-size: 23px;
+      }
+
+      .enquiry-section {
+        padding-block: 90px;
+      }
+
+      .enquiry-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .enquiry-title {
+        font-size: clamp(57px, 14vw, 84px);
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 25px;
+        padding-block: 45px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-logo {
+        width: 250px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .section-shell {
+        width: calc(100% - 32px);
+      }
+
+      .brand-logo {
+        width: 145px;
+      }
+
+      .hero-title {
+        font-size: 64px;
+      }
+
+      .hero-location {
+        font-size: 8px;
+      }
+
+      .experience-feature-image {
+        height: 360px;
+      }
+
+      .stay-card-image {
+        height: 350px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header" id="site-header">
+    <div class="section-shell header-inner">
+
+      <a href="index.html" aria-label="Kavora Africa homepage">
+        <img
+          src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+          alt="Kavora Africa"
+          class="brand-logo"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">Our Approach</a>
+        <a href="tanzania.html" class="nav-link">Tanzania</a>
+        <a href="zanzibar.html" class="nav-link">Zanzibar</a>
+        <a href="#enquire" class="nav-cta">PLAN YOUR JOURNEY</a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg id="menu-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 7H21M3 12H21M3 17H21" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        <svg id="menu-icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">Our Approach</a>
+      <a href="tanzania.html">Tanzania</a>
+      <a href="zanzibar.html">Zanzibar</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#stays">Where to Stay</a>
+      <a href="#enquire" class="mobile-cta">Plan Your Journey</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero" id="top">
+
+      <div class="hero-media">
+        <img
+          src="images/stone-town-hero.jpg"
+          alt="Stone Town, Zanzibar, viewed in the warm light of the Indian Ocean coast"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="section-shell hero-content">
+
+        <p class="eyebrow hero-location">
+          Zanzibar · Tanzania · Indian Ocean
+        </p>
+
+        <h1 class="serif hero-title">
+          Stone
+          <span class="title-second-line">Town.</span>
+        </h1>
+
+        <div class="hero-bottom">
+
+          <p class="hero-description">
+            A world of carved doors, hidden courtyards and Swahili heritage.
+            Discover the character of Zanzibar through a journey shaped
+            entirely around you.
+          </p>
+
+          <a href="#story" class="hero-action">
+            Enter Stone Town
+            <span aria-hidden="true">↘</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <span class="hero-index">06°09′S · 39°11′E</span>
+
+      <a href="#story" class="hero-scroll" aria-label="Scroll to discover Stone Town">
+        Scroll to discover
+      </a>
+
+    </section>
+
+
+    <!-- ===================================================
+         DESTINATION INTRODUCTION
+         =================================================== -->
+
+    <section class="intro-section" id="story">
+      <div class="section-shell intro-grid">
+
+        <div class="reveal">
+          <p class="eyebrow text-kavora-stone">
+            A place with many layers
+          </p>
+
+          <h2 class="serif intro-heading">
+            Some places are best discovered slowly.
+          </h2>
+        </div>
+
+        <div class="intro-right reveal reveal-delay-1">
+
+          <p class="intro-copy">
+            On Zanzibar's western coast, Stone Town opens itself gradually.
+            Beyond its narrow streets and historic facades is a living
+            culture shaped by centuries of Indian Ocean exchange.
+          </p>
+
+          <p class="intro-copy">
+            The appeal is in the details: the artistry of a carved doorway,
+            the scent of spices in the air, the conversation that lasts
+            longer than expected, and the changing light along the waterfront.
+          </p>
+
+          <p class="intro-copy">
+            This is a destination for travellers who value character over
+            spectacle and meaningful encounters over a packed itinerary.
+            We help you experience it with the time, context and attention
+            it deserves.
+          </p>
+
+          <div class="intro-signature">
+            <span class="gold-line"></span>
+            <span>Travel, with intention.</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         IMMERSIVE HERITAGE SECTION
+         =================================================== -->
+
+    <section class="heritage-section">
+
+      <div class="heritage-layout">
+
+        <div class="heritage-image">
+          <img
+            src="images/stone-town-architecture.jpg"
+            alt="Historic Swahili architecture and intricately carved wooden doors in Stone Town"
+            loading="lazy"
+          >
+          <p class="image-caption">
+            The old town · A living heritage
+          </p>
+        </div>
+
+        <div class="heritage-content reveal">
+
+          <p class="eyebrow text-kavora-gold">
+            Beyond the first impression
+          </p>
+
+          <h2 class="serif heritage-heading">
+            A history you can walk through.
+          </h2>
+
+          <div class="gold-line mt-7"></div>
+
+          <p class="heritage-copy">
+            Stone Town's historic centre reflects African, Arab, Indian
+            and European influences, woven together through trade,
+            architecture and everyday life.
+          </p>
+
+          <p class="heritage-copy">
+            Explore with a private local guide, pause to appreciate the
+            craftsmanship, and discover the stories behind the streets.
+            The experience becomes richer when there is time to understand
+            what you are seeing.
+          </p>
+
+          <a href="#experiences" class="heritage-link">
+            Explore the experiences
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         EXPERIENCES
+         =================================================== -->
+
+    <section class="experiences-section" id="experiences">
+
+      <div class="section-shell">
+
+        <div class="experiences-heading reveal">
+
+          <div>
+            <p class="eyebrow text-kavora-stone">
+              Discover it differently
+            </p>
+
+            <h2 class="serif experiences-title">
+              Made of moments, not checklists.
+            </h2>
+          </div>
+
+          <p class="experiences-lead">
+            The experiences that stay with you are rarely the ones you
+            rush through. Choose what interests you and leave room for
+            the unexpected.
+          </p>
+
+        </div>
+
+
+        <!-- FEATURE EXPERIENCE -->
+
+        <div class="experience-feature">
+
+          <div class="image-clip experience-feature-image reveal">
+            <img
+              src="images/stone-town-heritage-walk.jpg"
+              alt="A quiet historic street in Stone Town, Zanzibar"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="experience-feature-copy reveal reveal-delay-1">
+
+            <p class="experience-number">01 / DISCOVER</p>
+
+            <h3 class="serif">
+              The town, through local eyes.
+            </h3>
+
+            <p>
+              Follow the lanes of the old town with a knowledgeable guide
+              who can bring its architecture, layered history and daily
+              life into focus. Go beyond the obvious landmarks and discover
+              the details you might otherwise walk past.
+            </p>
+
+            <p>
+              Keep the pace flexible, with time to stop, ask questions and
+              explore the parts of Stone Town that interest you most.
+            </p>
+
+            <a href="#enquire" class="heritage-link" style="color: var(--forest);">
+              Arrange a private experience
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPERIENCE LIST -->
+
+        <div class="experience-list" id="experience-list">
+
+          <a href="#enquire" class="experience-row reveal">
+            <span class="experience-number">02</span>
+            <h4 class="serif">The flavours of Zanzibar</h4>
+            <p>
+              Explore Swahili cuisine, aromatic spices and local food
+              traditions through a thoughtfully arranged culinary experience.
+            </p>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+            <span class="experience-number">03</span>
+            <h4 class="serif">An afternoon on the water</h4>
+            <p>
+              See the coastline from a traditional dhow, with sailing
+              arrangements tailored to the conditions and your preferences.
+            </p>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+            <span class="experience-number">04</span>
+            <h4 class="serif">Craft, culture and character</h4>
+            <p>
+              Discover the details behind carved doors, historic buildings,
+              local crafts and the traditions that continue to shape the town.
+            </p>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+            <span class="experience-number">05</span>
+            <h4 class="serif">The waterfront at dusk</h4>
+            <p>
+              End the day with coastal views, the changing evening atmosphere
+              and a dining experience selected around your tastes.
+            </p>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CINEMATIC PAUSE
+         =================================================== -->
+
+    <section class="pause-section">
+
+      <div class="pause-image">
+        <img
+          src="images/stone-town-waterfront.jpg"
+          alt="The Indian Ocean beside Stone Town in the late afternoon"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="pause-content reveal">
+
+        <p class="eyebrow text-kavora-gold">
+          Leave room for the moment
+        </p>
+
+        <h2 class="serif pause-quote">
+          Not every moment needs a plan.
+        </h2>
+
+        <p class="pause-caption">
+          Sometimes the most memorable part of a journey is simply
+          having the time to take it all in.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         BESPOKE JOURNEYS
+         =================================================== -->
+
+    <section class="journey-section" id="journeys">
+
+      <div class="section-shell journey-layout">
+
+        <div class="reveal">
+
+          <p class="eyebrow text-kavora-stone">
+            Your journey, considered
+          </p>
+
+          <h2 class="serif journey-title">
+            Stone Town is just the beginning.
+          </h2>
+
+          <p class="journey-description">
+            Make it a short cultural escape or let it become part of a
+            wider journey across Zanzibar and Tanzania. The best itinerary
+            is the one that reflects how you want to travel.
+          </p>
+
+          <a href="#enquire" class="heritage-link" style="color: var(--forest);">
+            Shape your itinerary
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="journey-items reveal reveal-delay-1">
+
+          <article class="journey-item">
+            <span class="number">01</span>
+            <div>
+              <h3 class="serif">The cultural escape</h3>
+              <p>
+                A considered stay focused on Stone Town's heritage,
+                architecture, local flavours and waterfront.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <span class="number">02</span>
+            <div>
+              <h3 class="serif">From town to shoreline</h3>
+              <p>
+                Balance cultural discovery with unhurried time on
+                Zanzibar's beaches.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <span class="number">03</span>
+            <div>
+              <h3 class="serif">A more private escape</h3>
+              <p>
+                Explore suitable boutique or secluded accommodation
+                options for a stay shaped around your preferences.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <span class="number">04</span>
+            <div>
+              <h3 class="serif">Island and safari</h3>
+              <p>
+                Pair Zanzibar's cultural and coastal experiences with
+                a mainland Tanzania safari for a broader journey.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ACCOMMODATION
+         =================================================== -->
+
+    <section class="stay-section" id="stays">
+
+      <div class="section-shell">
+
+        <div class="stay-intro reveal">
+
+          <div>
+            <p class="eyebrow text-kavora-stone">
+              Stay somewhere with character
+            </p>
+
+            <h2 class="serif stay-title">
+              Your own place in the story.
+            </h2>
+          </div>
+
+          <p class="stay-intro-copy">
+            The right accommodation adds another dimension to a destination.
+            We can help you consider the style, setting and level of comfort
+            that best suits your time in Stone Town.
+          </p>
+
+        </div>
+
+
+        <div class="stay-grid">
+
+          <article class="stay-card reveal">
+
+            <div class="image-clip stay-card-image">
+              <img
+                src="images/stone-town-stay-heritage.jpg"
+                alt="Heritage-style accommodation with traditional Zanzibar character"
+                loading="lazy"
+              >
+            </div>
+
+            <p class="stay-card-label">For a sense of place</p>
+
+            <h3 class="serif">Heritage & character</h3>
+
+            <p>
+              Consider properties where traditional architecture,
+              distinctive details and the atmosphere of the old town
+              are part of the experience.
+            </p>
+
+          </article>
+
+
+          <article class="stay-card reveal reveal-delay-1">
+
+            <div class="image-clip stay-card-image">
+              <img
+                src="images/stone-town-stay-boutique.jpg"
+                alt="An intimate boutique hotel courtyard in Zanzibar"
+                loading="lazy"
+              >
+            </div>
+
+            <p class="stay-card-label">For understated comfort</p>
+
+            <h3 class="serif">Boutique & considered</h3>
+
+            <p>
+              Explore boutique accommodation that offers a comfortable
+              base for discovering the town, with your preferences
+              guiding the choice.
+            </p>
+
+          </article>
+
+        </div>
+
+        <p class="stay-disclaimer">
+          Accommodation options depend on your travel dates, availability
+          and preferences. Specific properties can be recommended during
+          the planning process.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FAQ
+         =================================================== -->
+
+    <section class="faq-section" id="questions">
+
+      <div class="section-shell faq-layout">
+
+        <div class="reveal">
+
+          <p class="eyebrow text-kavora-stone">
+            A few useful details
+          </p>
+
+          <h2 class="serif faq-title">
+            Before you make your way here.
+          </h2>
+
+        </div>
+
+
+        <div class="faq-list reveal reveal-delay-1">
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span>How long should I stay?</span>
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </button>
+
+            <div class="faq-answer" id="faq-answer-1" hidden>
+              A half-day can introduce you to the historic centre. One or
+              two nights provide more time for guided exploration, local
+              dining and a slower pace. Your ideal stay depends on your
+              interests and whether you plan to explore other parts of Zanzibar.
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+            >
+              <span>Can I combine it with a beach stay?</span>
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </button>
+
+            <div class="faq-answer" id="faq-answer-2" hidden>
+              Yes. Stone Town pairs naturally with a beach stay elsewhere
+              on Zanzibar. Your itinerary can balance culture, ocean time,
+              transfers and accommodation according to your preferred pace.
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+            >
+              <span>Can experiences be arranged privately?</span>
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </button>
+
+            <div class="faq-answer" id="faq-answer-3" hidden>
+              Private guiding and tailored experiences may be available
+              depending on the activity, date and local availability.
+              Share your interests and we can help identify suitable options.
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-4"
+            >
+              <span>When is a good time to visit?</span>
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </button>
+
+            <div class="faq-answer" id="faq-answer-4" hidden>
+              Zanzibar is a year-round destination, although weather
+              conditions vary by season. Your preferred activities and
+              other stops on your itinerary can help determine suitable dates.
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-5"
+            >
+              <span>How does Kavora plan my trip?</span>
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </button>
+
+            <div class="faq-answer" id="faq-answer-5" hidden>
+              Begin by sharing your intended dates, group size and interests.
+              Kavora can then help shape suitable experiences and accommodation
+              options around your preferences, subject to confirmation and availability.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ENQUIRY
+         =================================================== -->
+
+    <section class="enquiry-section" id="enquire">
+
+      <div class="section-shell enquiry-layout">
+
+        <div class="reveal">
+
+          <p class="eyebrow text-kavora-gold">
+            Begin with a conversation
+          </p>
+
+          <h2 class="serif enquiry-title">
+            Let Stone Town become your story.
+          </h2>
+
+          <div class="gold-line mt-8"></div>
+
+          <p class="enquiry-copy">
+            Tell us what brings you to Zanzibar. Whether you are planning
+            a cultural escape, a special occasion or a longer journey,
+            we can begin shaping the experience around you.
+          </p>
+
+        </div>
+
+
+        <div class="reveal reveal-delay-1">
+
+          <form id="stone-town-form" class="enquiry-form">
+
+            <div class="form-row">
+
+              <div>
+                <label class="field-label" for="guest-name">Your name</label>
+                <input
+                  class="field"
+                  id="guest-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Full name"
+                  required
+                >
+              </div>
+
+              <div>
+                <label class="field-label" for="guest-email">Email address</label>
+                <input
+                  class="field"
+                  id="guest-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div>
+                <label class="field-label" for="arrival-date">Arrival date</label>
+                <input
+                  class="field"
+                  id="arrival-date"
+                  name="arrival"
+                  type="date"
+                >
+              </div>
+
+              <div>
+                <label class="field-label" for="travellers">Travellers</label>
+                <select class="field" id="travellers" name="travellers">
+                  <option value="">Select group size</option>
+                  <option value="1 traveller">1 traveller</option>
+                  <option value="2 travellers">2 travellers</option>
+                  <option value="3–4 travellers">3–4 travellers</option>
+                  <option value="5–8 travellers">5–8 travellers</option>
+                  <option value="9+ travellers">9 or more travellers</option>
+                </select>
+              </div>
+
+            </div>
+
+
+            <div>
+              <label class="field-label" for="interest">What would you like to experience?</label>
+              <select class="field" id="interest" name="interest">
+                <option value="">Choose your interests</option>
+                <option value="Culture and heritage">Culture and heritage</option>
+                <option value="Food and local experiences">Food and local experiences</option>
+                <option value="Boutique accommodation">Boutique accommodation</option>
+                <option value="Dhow sailing and ocean experiences">Dhow sailing and ocean experiences</option>
+                <option value="Stone Town and a beach stay">Stone Town and a beach stay</option>
+                <option value="A wider Tanzania journey">A wider Tanzania journey</option>
+                <option value="A tailored combination">A tailored combination</option>
+              </select>
+            </div>
+
+
+            <div>
+              <label class="field-label" for="guest-message">Tell us about your plans</label>
+              <textarea
+                class="field"
+                id="guest-message"
+                name="message"
+                placeholder="Your travel dates, preferences, occasion or anything you would like us to consider..."
+              ></textarea>
+            </div>
+
+
+            <button type="submit" class="form-submit">
+              Begin planning <span aria-hidden="true">↗</span>
+            </button>
+
+            <p class="form-note">
+              This enquiry is a starting point, not a booking commitment.
+              Your itinerary and arrangements will be subject to discussion
+              and confirmation.
+            </p>
+
+            <p
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="section-shell footer-main">
+
+      <div class="footer-brand">
+
+        <a href="index.html" aria-label="Kavora Africa homepage">
+          <img
+            src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+            alt="Kavora Africa"
+            class="footer-logo"
+          >
+        </a>
+
+        <p class="footer-description">
+          Thoughtfully considered journeys across Africa, shaped around
+          the places, people and experiences that matter to you.
+        </p>
+
+      </div>
+
+
+      <div>
+        <p class="footer-heading">Explore</p>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Approach</a>
+          <a href="tanzania.html">Tanzania</a>
+          <a href="zanzibar.html">Zanzibar</a>
+          <a href="indian-ocean.html">Indian Ocean</a>
+          <a href="#experiences">Experiences</a>
+        </div>
+
+      </div>
+
+
+      <div>
+        <p class="footer-heading">Your next journey</p>
+
+        <p class="footer-description" style="margin-top:0;">
+          Have a destination in mind? Start with a conversation about
+          the experience you want to have.
+        </p>
+
+        <a href="#enquire" class="footer-enquiry inline-block mt-5 border-b border-kavora-gold pb-2">
+          Make an enquiry ↗
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="section-shell footer-bottom">
+      <p>© 2026 Kavora Africa</p>
+      <p>Designed for considered journeys</p>
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+    /* -----------------------------------------------------
+       HEADER SCROLL STATE
+       ----------------------------------------------------- */
+
+    const siteHeader = document.getElementById("site-header");
+
+    function updateHeader() {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 45);
+    }
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU
+       ----------------------------------------------------- */
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    const menuIconOpen = document.getElementById("menu-icon-open");
+    const menuIconClose = document.getElementById("menu-icon-close");
+
+    function closeMenu() {
+      mobileNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+
+      menuIconOpen.classList.remove("hidden");
+      menuIconClose.classList.add("hidden");
+
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.contains("is-open");
+
+      if (isOpen) {
+        closeMenu();
+        return;
+      }
+
+      mobileNav.classList.add("is-open");
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuToggle.setAttribute("aria-label", "Close navigation");
+
+      menuIconOpen.classList.add("hidden");
+      menuIconClose.classList.remove("hidden");
+
+      document.body.classList.add("menu-open");
+    });
+
+    mobileNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 767) {
+        closeMenu();
+      }
+    });
+
+
+    /* -----------------------------------------------------
+       SCROLL REVEAL
+       ----------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: "0px 0px -30px 0px"
+      });
+
+      revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("is-visible"));
+    }
+
+
+    /* -----------------------------------------------------
+       FAQ ACCORDION
+       ----------------------------------------------------- */
+
+    const faqButtons = document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const wasExpanded = button.getAttribute("aria-expanded") === "true";
+        const answerId = button.getAttribute("aria-controls");
+        const answer = document.getElementById(answerId);
+
+        button.setAttribute("aria-expanded", String(!wasExpanded));
+        answer.hidden = wasExpanded;
+      });
+    });
+
+
+    /* -----------------------------------------------------
+       ENQUIRY FORM
+
+       This fallback prepares an email for the visitor.
+       Replace the placeholder address with Kavora's confirmed
+       enquiry email, or connect Formspree for direct submissions.
+       ----------------------------------------------------- */
+
+    const enquiryForm = document.getElementById("stone-town-form");
+    const formStatus = document.getElementById("form-status");
+
+    enquiryForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      if (!enquiryForm.reportValidity()) return;
+
+      const data = new FormData(enquiryForm);
+
+      const enquiryEmail = "YOUR-CONFIRMED-EMAIL@example.com";
+
+      if (enquiryEmail.includes("YOUR-CONFIRMED-EMAIL")) {
+        formStatus.textContent =
+          "The form design is ready. Connect your enquiry email or form service before publishing.";
+        formStatus.hidden = false;
+        return;
+      }
+
+      const subject = "Stone Town Zanzibar — Travel Enquiry";
+
+      const body = [
+        "STONE TOWN ZANZIBAR — TRAVEL ENQUIRY",
+        "",
+        `Name: ${data.get("name") || ""}`,
+        `Email: ${data.get("email") || ""}`,
+        `Arrival date: ${data.get("arrival") || "Not specified"}`,
+        `Travellers: ${data.get("travellers") || "Not specified"}`,
+        `Interests: ${data.get("interest") || "Not specified"}`,
+        "",
+        "Additional details:",
+        data.get("message") || "Not provided"
+      ].join("\n");
+
+      formStatus.textContent =
+        "Your email application will open with your enquiry prepared. Send the email to complete your request.";
+      formStatus.hidden = false;
+
+      window.location.href =
+        `mailto:${enquiryEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+
+    /* -----------------------------------------------------
+       DATE INPUT
+       ----------------------------------------------------- */
+
+    const arrivalInput = document.getElementById("arrival-date");
+
+    const now = new Date();
+    const localDate = new Date(
+      now.getTime() - now.getTimezoneOffset() * 60000
+    ).toISOString().slice(0, 10);
+
+    arrivalInput.min = localDate;
+  </script>
+
+</body>
+</html>

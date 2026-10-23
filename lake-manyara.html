@@ -101,14 +101,16 @@
       background: var(--kavora-gold);
     }
 
-    .hero {
-      position: relative;
-      min-height: 100%vh;
-      min-height: 100%svh;
-      background: var(--kavora-deep);
-      isolation: isolate;
-      overflow: hidden;
-    }
+    
+.hero {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  background: var(--kavora-deep);
+  isolation: isolate;
+  overflow: hidden;
+}
+
 
     .hero-image {
       position: absolute;
@@ -580,8 +582,8 @@
       <div class="relative min-h-[340px] overflow-hidden md:min-h-[560px]">
 
         <img
-          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
-          alt="African wildlife in its natural habitat"
+          src="https://www.shadowsofafrica.com/media/catalog/product/cache/1/image/900x/040ec09b1e35df139433887a97daa66f/l/a/lake_manyara_birds.jpg"
+          alt="Lake Manyara Birdlife"
           loading="lazy"
           class="destination-image absolute inset-0 h-full w-full object-cover"
         />
@@ -1076,9 +1078,6 @@
 
   <section class="relative overflow-hidden bg-kavora-green px-6 py-24 md:px-10 md:py-32 lg:px-16">
 
-    <div class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full border border-white/5"></div>
-    <div class="pointer-events-none absolute -right-10 -top-10 h-64 w-64 rounded-full border border-white/5"></div>
-    <div class="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full border border-kavora-gold/10"></div>
 
     <div class="relative mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-12 lg:gap-20">
 
@@ -1216,15 +1215,6 @@
         <p class="mt-6 max-w-md text-sm font-light leading-8 text-kavora-muted">
           A few useful answers to help you plan your Lake Manyara experience.
         </p>
-
-        <a
-          href="contact.html?destination=Lake%20Manyara"
-          class="mt-8 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.17em] text-kavora-green transition hover:text-kavora-gold"
-        >
-          Ask Us a Question
-          <span aria-hidden="true">→</span>
-        </a>
-
       </div>
 
       <div class="lg:col-span-7 reveal">

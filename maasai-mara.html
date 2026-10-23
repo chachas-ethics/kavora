@@ -1,0 +1,1482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maasai Mara | Kavora Africa — Considered Journeys</title>
+  <meta name="description" content="Discover the Maasai Mara with Kavora Africa. Explore extraordinary wildlife, the Great Migration, open savannah and private safari experiences designed around you.">
+  <meta name="theme-color" content="#0B211A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              forest: "#0B211A",
+              green: "#102D23",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              line: "#DCD8CD",
+              muted: "#74786F"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["DM Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --forest: #0B211A;
+      --green: #102D23;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --line: #DCD8CD;
+      --muted: #74786F;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--forest);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .section-pad {
+      padding-top: 112px;
+      padding-bottom: 112px;
+    }
+
+    .container-kavora {
+      width: min(100% - 48px, 1240px);
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      height: min(900px, 100svh);
+      min-height: 760px;
+      background: var(--forest);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 48%;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,25,19,.78) 0%,
+          rgba(7,25,19,.43) 48%,
+          rgba(7,25,19,.10) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(7,25,19,.66) 0%,
+          transparent 48%
+        );
+    }
+
+    .hero-content {
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-top: 150px;
+      padding-bottom: 88px;
+    }
+
+    .hero-title {
+      max-width: 900px;
+      font-size: clamp(4.4rem, 10vw, 9.2rem);
+      line-height: .83;
+      letter-spacing: -.045em;
+      font-weight: 400;
+    }
+
+    .hero-title em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .gold-rule {
+      width: 54px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: #d6d0c2;
+    }
+
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .group:hover .image-frame img,
+    .image-frame:hover img {
+      transform: scale(1.045);
+    }
+
+    .experience-card .image-frame,
+    .stay-card .image-frame {
+      aspect-ratio: 4 / 4.7;
+    }
+
+    .journey-card .image-frame {
+      aspect-ratio: 5 / 3.6;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 800ms ease,
+        transform 800ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 100ms;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 180ms;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 260ms;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 250ms ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 250ms ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid currentColor;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: gap 250ms ease;
+    }
+
+    .text-link:hover {
+      gap: 19px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      display: grid;
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      font-size: 16px;
+      transition:
+        transform 250ms ease,
+        background 250ms ease,
+        color 250ms ease;
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+      background: var(--green);
+      color: var(--ivory);
+      border-color: var(--green);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-answer.open {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-answer p {
+      padding: 0 40px 24px 0;
+    }
+
+    .mobile-menu {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition:
+        opacity 250ms ease,
+        transform 250ms ease,
+        visibility 250ms ease;
+    }
+
+    .mobile-menu.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer-link {
+      transition: color 200ms ease;
+    }
+
+    .footer-link:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 767px) {
+      .section-pad {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+
+      .container-kavora {
+        width: min(100% - 36px, 1240px);
+      }
+
+      .hero {
+        height: 92svh;
+        min-height: 720px;
+        max-height: 900px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(
+            0deg,
+            rgba(7,25,19,.86) 0%,
+            rgba(7,25,19,.35) 62%,
+            rgba(7,25,19,.15) 100%
+          );
+      }
+
+      .hero-content {
+        padding-top: 140px;
+        padding-bottom: 54px;
+      }
+
+      .hero-title {
+        font-size: clamp(4rem, 17vw, 6.5rem);
+      }
+
+      .experience-card .image-frame,
+      .stay-card .image-frame {
+        aspect-ratio: 5 / 3.8;
+      }
+
+      .journey-card .image-frame {
+        aspect-ratio: 5 / 3.4;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <header class="absolute inset-x-0 top-0 z-50 text-white">
+    <div class="container-kavora flex h-[86px] items-center justify-between border-b border-white/20">
+
+      <a href="index.html" aria-label="Kavora Africa home" class="relative z-50">
+        <span class="font-luxury text-[30px] tracking-[0.14em]">KAVORA</span>
+        <span class="mt-[-3px] block text-[8px] tracking-[0.32em] text-white/75">
+          AFRICA · CONSIDERED JOURNEYS
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-9 md:flex" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-[11px] tracking-[0.08em]">Home</a>
+        <a href="destinations.html" class="nav-link text-[11px] tracking-[0.08em]">Destinations</a>
+        <a href="journeys.html" class="nav-link text-[11px] tracking-[0.08em]">Journeys</a>
+        <a href="about.html" class="nav-link text-[11px] tracking-[0.08em]">Our Approach</a>
+      </nav>
+
+      <a
+        href="contact.html?destination=Maasai%20Mara"
+        class="hidden border border-white/60 px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.17em] transition hover:border-kavora-gold hover:bg-kavora-gold hover:text-kavora-forest md:inline-flex"
+      >
+        Plan Your Safari
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="relative z-50 grid h-11 w-11 place-items-center border border-white/30 md:hidden"
+      >
+        <span id="menu-icon" class="text-xl leading-none">+</span>
+      </button>
+    </div>
+
+    <nav
+      id="mobile-menu"
+      class="mobile-menu absolute inset-x-0 top-[86px] border-b border-white/10 bg-kavora-forest px-6 pb-8 pt-4 md:hidden"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <div class="flex flex-col">
+        <a href="index.html" class="border-b border-white/10 py-4 text-sm">Home</a>
+        <a href="destinations.html" class="border-b border-white/10 py-4 text-sm">Destinations</a>
+        <a href="journeys.html" class="border-b border-white/10 py-4 text-sm">Journeys</a>
+        <a href="about.html" class="border-b border-white/10 py-4 text-sm">Our Approach</a>
+        <a href="contact.html?destination=Maasai%20Mara" class="mt-6 bg-kavora-gold px-5 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.17em] text-kavora-forest">
+          Plan Your Safari
+        </a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- =====================================================
+       01 — HERO
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero text-white">
+
+      <img
+        class="hero-image"
+        src="images/maasai-mara-hero.jpg"
+        alt="Wildebeest and zebra moving across the open Maasai Mara savannah"
+        fetchpriority="high"
+      >
+
+      <div class="hero-content container-kavora">
+        <div class="mb-8 flex items-center gap-4">
+          <span class="eyebrow text-kavora-gold">Kenya · The Great Savannah</span>
+          <span class="h-px w-12 bg-white/50"></span>
+          <span class="text-[10px] tracking-[0.12em] text-white/75">01 / DESTINATION</span>
+        </div>
+
+        <h1 class="hero-title font-luxury">
+          Maasai Mara.<br>
+          <em>Wild, without end.</em>
+        </h1>
+
+        <div class="mt-8 flex max-w-2xl flex-col justify-between gap-8 sm:flex-row sm:items-end">
+          <p class="max-w-md text-sm leading-7 text-white/80">
+            A vast sweep of golden grasslands, extraordinary encounters with big cats and the ancient rhythm of the Great Migration. The Mara invites you to experience the wild at its own pace.
+          </p>
+
+          <a href="#introduction" class="inline-flex shrink-0 items-center gap-4 self-start text-[10px] font-semibold uppercase tracking-[0.17em] sm:self-auto">
+            Discover the Mara
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-white/50 text-lg transition hover:border-kavora-gold hover:bg-kavora-gold hover:text-kavora-forest">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 hidden border-t border-white/20 md:block">
+        <div class="container-kavora grid grid-cols-3 divide-x divide-white/20">
+          <div class="py-5 pr-6">
+            <p class="eyebrow text-white/60">Landscape</p>
+            <p class="mt-1 font-luxury text-xl">Endless open plains</p>
+          </div>
+          <div class="px-6 py-5">
+            <p class="eyebrow text-white/60">Signature encounter</p>
+            <p class="mt-1 font-luxury text-xl">The Great Migration</p>
+          </div>
+          <div class="py-5 pl-6">
+            <p class="eyebrow text-white/60">Wildlife</p>
+            <p class="mt-1 font-luxury text-xl">Big cats & great herds</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — INTRODUCTION
+         ===================================================== -->
+
+    <section id="introduction" class="section-pad bg-kavora-ivory">
+      <div class="container-kavora">
+
+        <div class="grid items-start gap-12 md:grid-cols-12 md:gap-16">
+
+          <div class="md:col-span-3 reveal">
+            <p class="eyebrow text-kavora-muted">02 / The destination</p>
+            <div class="gold-rule mt-5"></div>
+          </div>
+
+          <div class="md:col-span-9 reveal reveal-delay-1">
+            <h2 class="max-w-4xl font-luxury text-4xl leading-[1.05] tracking-[-0.025em] sm:text-5xl md:text-6xl">
+              Where the wild moves freely, and every horizon holds <em class="text-kavora-muted">another story.</em>
+            </h2>
+
+            <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-12">
+              <p class="text-sm leading-7 text-kavora-muted">
+                In south-western Kenya, the Maasai Mara forms part of the greater Mara–Serengeti ecosystem, a landscape of open grasslands, winding rivers and wildlife that follows the changing seasons.
+              </p>
+
+              <p class="text-sm leading-7 text-kavora-muted">
+                Lions rest beneath acacias, cheetahs scan the plains and enormous herds of wildebeest and zebra move across the grasslands during the migration. Beyond the celebrated spectacles, the Mara rewards travellers who make time for quieter moments and thoughtful guiding.
+              </p>
+            </div>
+
+            <a href="contact.html?destination=Maasai%20Mara" class="text-link mt-9 text-kavora-forest">
+              Begin planning <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="mt-16 grid gap-4 sm:grid-cols-2 md:mt-24 md:grid-cols-3">
+
+          <div class="reveal">
+            <div class="image-frame aspect-[5/4]">
+              <img
+                src="images/maasai-mara-lions.jpg"
+                alt="Lions resting in the grasslands of the Maasai Mara"
+                loading="lazy"
+              >
+            </div>
+            <p class="mt-4 eyebrow text-kavora-muted">Wildlife</p>
+            <p class="mt-1 font-luxury text-2xl">The kingdom of big cats</p>
+          </div>
+
+          <div class="reveal reveal-delay-1 sm:mt-10">
+            <div class="image-frame aspect-[5/4]">
+              <img
+                src="images/maasai-mara-migration.jpg"
+                alt="Wildebeest herds gathered across the Mara plains"
+                loading="lazy"
+              >
+            </div>
+            <p class="mt-4 eyebrow text-kavora-muted">The spectacle</p>
+            <p class="mt-1 font-luxury text-2xl">A landscape in motion</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 sm:col-span-2 md:col-span-1 md:mt-20">
+            <div class="image-frame aspect-[5/4]">
+              <img
+                src="images/maasai-mara-river.jpg"
+                alt="The Mara River winding through the reserve"
+                loading="lazy"
+              >
+            </div>
+            <p class="mt-4 eyebrow text-kavora-muted">The landscape</p>
+            <p class="mt-1 font-luxury text-2xl">Rivers through the wild</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         03 — THE MAASAI MARA EXPERIENCE
+         ===================================================== -->
+
+    <section class="section-pad bg-white">
+      <div class="container-kavora">
+
+        <div class="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+          <div class="reveal">
+            <p class="eyebrow text-kavora-muted">03 / What draws you here</p>
+            <div class="gold-rule mt-5"></div>
+            <h2 class="mt-6 max-w-2xl font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              The Maasai Mara<br><em>experience.</em>
+            </h2>
+          </div>
+
+          <p class="max-w-sm text-sm leading-7 text-kavora-muted reveal reveal-delay-1">
+            A destination of extraordinary contrasts, where iconic wildlife encounters meet open horizons, quiet observation and the changing rhythm of the seasons.
+          </p>
+        </div>
+
+        <div class="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Experience 01 -->
+          <article class="experience-card group reveal">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-great-migration.jpg"
+                alt="Large wildebeest herd crossing the Maasai Mara plains"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                01 / The migration
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">The Great Migration</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Witness the movement of wildebeest and zebra across the Mara–Serengeti ecosystem. During the right conditions, river crossings can offer extraordinary moments, although their timing is unpredictable.
+            </p>
+          </article>
+
+          <!-- Experience 02 -->
+          <article class="experience-card group reveal reveal-delay-1">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-big-cats.jpg"
+                alt="Lion surveying the grasslands of the Maasai Mara"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                02 / Predators
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">The world of big cats</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Look for lions, cheetahs and elusive leopards with a guide who can interpret animal behaviour and help you appreciate the details behind each sighting.
+            </p>
+          </article>
+
+          <!-- Experience 03 -->
+          <article class="experience-card group reveal reveal-delay-2">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-game-drive.jpg"
+                alt="Safari vehicle exploring an open savannah track"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                03 / Exploration
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">Private game drives</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Explore at a considered pace, allowing time for photography, interesting sightings and the unexpected moments that make a safari personal.
+            </p>
+          </article>
+
+          <!-- Experience 04 -->
+          <article class="experience-card group reveal">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-river-crossing.jpg"
+                alt="Wildebeest gathering along a riverbank in the Mara"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                04 / River life
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">The Mara River</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Explore a vital part of the ecosystem, home to hippos and crocodiles and a dramatic setting for migration-season wildlife activity.
+            </p>
+          </article>
+
+          <!-- Experience 05 -->
+          <article class="experience-card group reveal reveal-delay-1">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-sunrise.jpg"
+                alt="Golden morning light falling across the Maasai Mara grasslands"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                05 / Atmosphere
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">First light on the plains</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Begin the day as the grasslands catch the first light, with cooler temperatures and an opportunity to observe wildlife as it becomes active.
+            </p>
+          </article>
+
+          <!-- Experience 06 -->
+          <article class="experience-card group reveal reveal-delay-2">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-golden-plains.jpg"
+                alt="Open golden grasslands stretching towards the horizon"
+                loading="lazy"
+              >
+              <span class="absolute left-4 top-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                06 / The landscape
+              </span>
+            </div>
+            <h3 class="mt-5 font-luxury text-3xl">Beyond the sightings</h3>
+            <p class="mt-3 text-sm leading-6 text-kavora-muted">
+              Take in the scale of the landscape, its shifting light, distant herds and quieter details that make the Mara rewarding beyond its famous encounters.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         04 — WHEN TO GO
+         ===================================================== -->
+
+    <section class="section-pad bg-kavora-forest text-kavora-ivory">
+      <div class="container-kavora">
+
+        <div class="grid gap-12 md:grid-cols-12 md:gap-16">
+
+          <div class="md:col-span-5 reveal">
+            <p class="eyebrow text-kavora-gold">04 / Planning your visit</p>
+            <div class="gold-rule mt-5"></div>
+
+            <h2 class="mt-6 font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              When to<br><em class="text-kavora-gold">go.</em>
+            </h2>
+
+            <p class="mt-7 max-w-md text-sm leading-7 text-white/65">
+              The Mara is rewarding throughout the year, but seasonal rainfall changes the landscape, wildlife movement and overall safari experience. Your ideal dates depend on what you most want to see.
+            </p>
+
+            <div class="mt-9 border-t border-white/15 pt-6">
+              <p class="eyebrow text-kavora-gold">A useful consideration</p>
+              <p class="mt-3 text-sm leading-7 text-white/65">
+                The Great Migration follows rainfall and fresh grazing, not a fixed timetable. A river crossing is never guaranteed on a particular date.
+              </p>
+            </div>
+          </div>
+
+          <div class="md:col-span-7 reveal reveal-delay-1">
+
+            <div class="border-t border-white/20 py-7">
+              <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                <div>
+                  <p class="eyebrow text-kavora-gold">July – October</p>
+                  <h3 class="mt-2 font-luxury text-3xl">The migration season</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.14em] text-white/45">Peak demand</span>
+              </div>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-white/65">
+                This is the best-known period for migration herds and possible Mara River crossings. Demand for sought-after camps is often high, and the timing of wildlife activity varies with conditions.
+              </p>
+            </div>
+
+            <div class="border-t border-white/20 py-7">
+              <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                <div>
+                  <p class="eyebrow text-kavora-gold">January – March</p>
+                  <h3 class="mt-2 font-luxury text-3xl">Big cats & open plains</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.14em] text-white/45">Resident wildlife</span>
+              </div>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-white/65">
+                A strong option for general wildlife viewing and predator encounters. The landscape can be drier and the experience may be quieter than during peak migration periods.
+              </p>
+            </div>
+
+            <div class="border-t border-white/20 py-7">
+              <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                <div>
+                  <p class="eyebrow text-kavora-gold">November – December</p>
+                  <h3 class="mt-2 font-luxury text-3xl">The green season</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.14em] text-white/45">Fresh landscapes</span>
+              </div>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-white/65">
+                The short rains can bring fresh grass, dramatic skies and a renewed landscape. Wildlife remains present year-round, while rainfall and herd movements vary.
+              </p>
+            </div>
+
+            <div class="border-y border-white/20 py-7">
+              <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                <div>
+                  <p class="eyebrow text-kavora-gold">April – May</p>
+                  <h3 class="mt-2 font-luxury text-3xl">The long rains</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.14em] text-white/45">Lush & changeable</span>
+              </div>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-white/65">
+                Rainfall can create striking green scenery and a different atmosphere. Some tracks may become difficult, and individual camps may change their operating schedules. Confirm conditions before travelling.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         05 — WHERE TO STAY
+         ===================================================== -->
+
+    <section class="section-pad bg-kavora-ivory">
+      <div class="container-kavora">
+
+        <div class="mb-12 grid gap-7 md:mb-16 md:grid-cols-12 md:items-end">
+          <div class="md:col-span-7 reveal">
+            <p class="eyebrow text-kavora-muted">05 / Your place in the landscape</p>
+            <div class="gold-rule mt-5"></div>
+            <h2 class="mt-6 font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              Where to<br><em>stay.</em>
+            </h2>
+          </div>
+
+          <p class="max-w-md text-sm leading-7 text-kavora-muted reveal reveal-delay-1 md:col-span-5 md:justify-self-end">
+            Where you stay influences the rhythm of your safari. We consider location, access to wildlife areas, guiding, atmosphere and how each property fits into your wider journey.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+
+          <!-- Stay 01 -->
+          <article class="stay-card group reveal">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-luxury-lodge.jpg"
+                alt="Luxury safari lodge overlooking the Maasai Mara landscape"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flex items-center justify-between gap-4 border-b border-kavora-line py-4">
+              <span class="eyebrow text-kavora-muted">01 / Refined comfort</span>
+              <span class="text-kavora-gold">—</span>
+            </div>
+
+            <h3 class="mt-5 font-luxury text-3xl">Luxury lodges</h3>
+
+            <p class="mt-3 text-sm leading-7 text-kavora-muted">
+              Thoughtfully appointed spaces, attentive service and a comfortable base from which to explore the reserve and its surrounding wilderness.
+            </p>
+
+            <a href="contact.html?destination=Maasai%20Mara&stay=Luxury%20Lodge" class="text-link mt-6 text-kavora-forest">
+              Enquire about stays <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Stay 02 -->
+          <article class="stay-card group reveal reveal-delay-1">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-tented-camp.jpg"
+                alt="Elegant canvas safari tent set within the Mara wilderness"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flex items-center justify-between gap-4 border-b border-kavora-line py-4">
+              <span class="eyebrow text-kavora-muted">02 / Close to nature</span>
+              <span class="text-kavora-gold">—</span>
+            </div>
+
+            <h3 class="mt-5 font-luxury text-3xl">Tented camps</h3>
+
+            <p class="mt-3 text-sm leading-7 text-kavora-muted">
+              An intimate safari atmosphere with canvas accommodation, natural surroundings and the feeling of being closer to the rhythms of the bush.
+            </p>
+
+            <a href="contact.html?destination=Maasai%20Mara&stay=Tented%20Camp" class="text-link mt-6 text-kavora-forest">
+              Explore camp options <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Stay 03 -->
+          <article class="stay-card group reveal reveal-delay-2">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-private-camp.jpg"
+                alt="Private safari retreat surrounded by open grasslands"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flex items-center justify-between gap-4 border-b border-kavora-line py-4">
+              <span class="eyebrow text-kavora-muted">03 / Privacy</span>
+              <span class="text-kavora-gold">—</span>
+            </div>
+
+            <h3 class="mt-5 font-luxury text-3xl">Private retreats</h3>
+
+            <p class="mt-3 text-sm leading-7 text-kavora-muted">
+              For couples, families or small groups seeking a more personal experience, with accommodation and guiding chosen around their priorities.
+            </p>
+
+            <a href="contact.html?destination=Maasai%20Mara&stay=Private%20Retreat" class="text-link mt-6 text-kavora-forest">
+              Plan a private stay <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+        </div>
+
+        <p class="mt-10 max-w-2xl text-xs leading-6 text-kavora-muted">
+          Accommodation options vary by season, location and availability. The choice between the reserve and surrounding conservancies can affect access, activities and the overall safari experience.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         06 — JOURNEYS
+         ===================================================== -->
+
+    <section class="section-pad bg-white">
+      <div class="container-kavora">
+
+        <div class="mb-12 flex flex-col justify-between gap-7 md:mb-16 md:flex-row md:items-end">
+          <div class="reveal">
+            <p class="eyebrow text-kavora-muted">06 / Made around you</p>
+            <div class="gold-rule mt-5"></div>
+            <h2 class="mt-6 font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              Journeys into<br><em>the extraordinary.</em>
+            </h2>
+          </div>
+
+          <p class="max-w-md text-sm leading-7 text-kavora-muted reveal reveal-delay-1">
+            The Mara can be the centrepiece of your safari or one chapter in a wider East African journey. Each itinerary can be shaped around your dates, interests and preferred pace.
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2">
+
+          <!-- Journey 01 -->
+          <article class="journey-card group reveal">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-serengeti-journey.jpg"
+                alt="Wildebeest and zebra on the East African plains"
+                loading="lazy"
+              >
+              <span class="absolute bottom-4 left-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                Kenya & Tanzania
+              </span>
+            </div>
+
+            <div class="border-b border-kavora-line pb-5 pt-6">
+              <p class="eyebrow text-kavora-muted">Journey 01</p>
+              <h3 class="mt-2 font-luxury text-3xl sm:text-4xl">The great migration route</h3>
+              <p class="mt-3 max-w-lg text-sm leading-7 text-kavora-muted">
+                Connect the Maasai Mara with Tanzania's Serengeti to explore the wider ecosystem behind one of the world's great wildlife migrations.
+              </p>
+            </div>
+
+            <a href="contact.html?journey=Great%20Migration&destination=Maasai%20Mara" class="text-link mt-5 text-kavora-forest">
+              Shape this journey <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Journey 02 -->
+          <article class="journey-card group reveal reveal-delay-1">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-amboseli-journey.jpg"
+                alt="Elephants and wide savannah landscapes in Kenya"
+                loading="lazy"
+              >
+              <span class="absolute bottom-4 left-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                Kenya
+              </span>
+            </div>
+
+            <div class="border-b border-kavora-line pb-5 pt-6">
+              <p class="eyebrow text-kavora-muted">Journey 02</p>
+              <h3 class="mt-2 font-luxury text-3xl sm:text-4xl">The classic Kenya safari</h3>
+              <p class="mt-3 max-w-lg text-sm leading-7 text-kavora-muted">
+                Pair the Mara's grasslands and predators with Amboseli's celebrated elephants and mountain-framed scenery.
+              </p>
+            </div>
+
+            <a href="contact.html?journey=Classic%20Kenya&destination=Maasai%20Mara" class="text-link mt-5 text-kavora-forest">
+              Shape this journey <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Journey 03 -->
+          <article class="journey-card group reveal">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-honeymoon.jpg"
+                alt="Intimate safari setting overlooking the African plains"
+                loading="lazy"
+              >
+              <span class="absolute bottom-4 left-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                For two
+              </span>
+            </div>
+
+            <div class="border-b border-kavora-line pb-5 pt-6">
+              <p class="eyebrow text-kavora-muted">Journey 03</p>
+              <h3 class="mt-2 font-luxury text-3xl sm:text-4xl">A safari for two</h3>
+              <p class="mt-3 max-w-lg text-sm leading-7 text-kavora-muted">
+                A private escape built around intimate camps, considered game drives and time to celebrate a honeymoon or meaningful occasion.
+              </p>
+            </div>
+
+            <a href="contact.html?journey=Safari%20for%20Two&destination=Maasai%20Mara" class="text-link mt-5 text-kavora-forest">
+              Plan your escape <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Journey 04 -->
+          <article class="journey-card group reveal reveal-delay-1">
+            <div class="image-frame">
+              <img
+                src="images/maasai-mara-family-safari.jpg"
+                alt="Family-friendly safari experience in the African wilderness"
+                loading="lazy"
+              >
+              <span class="absolute bottom-4 left-4 bg-kavora-ivory px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-forest">
+                Together
+              </span>
+            </div>
+
+            <div class="border-b border-kavora-line pb-5 pt-6">
+              <p class="eyebrow text-kavora-muted">Journey 04</p>
+              <h3 class="mt-2 font-luxury text-3xl sm:text-4xl">A family in the wild</h3>
+              <p class="mt-3 max-w-lg text-sm leading-7 text-kavora-muted">
+                Bring the natural world closer with a family safari planned around suitable accommodation, flexible game drives and shared discoveries.
+              </p>
+            </div>
+
+            <a href="contact.html?journey=Family%20Safari&destination=Maasai%20Mara" class="text-link mt-5 text-kavora-forest">
+              Design a family safari <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         07 — THE KAVORA APPROACH
+         ===================================================== -->
+
+    <section class="relative overflow-hidden bg-kavora-green text-kavora-ivory">
+
+      <div class="grid md:min-h-[650px] md:grid-cols-2">
+
+        <div class="relative min-h-[380px] overflow-hidden md:min-h-full reveal">
+          <img
+            src="images/maasai-mara-landscape.jpg"
+            alt="A wide view across the Maasai Mara grasslands"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-forest/45 to-transparent"></div>
+
+          <div class="absolute bottom-7 left-7 md:bottom-10 md:left-10">
+            <p class="eyebrow text-white/80">Kavora Africa</p>
+            <p class="mt-2 font-luxury text-3xl">Travel, with intention.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center px-6 py-16 sm:px-10 md:px-14 lg:px-20">
+          <div class="max-w-xl reveal reveal-delay-1">
+            <p class="eyebrow text-kavora-gold">07 / The Kavora approach</p>
+            <div class="gold-rule mt-5"></div>
+
+            <h2 class="mt-6 font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              Less about<br>the checklist.<br><em class="text-kavora-gold">More about you.</em>
+            </h2>
+
+            <p class="mt-7 text-sm leading-7 text-white/65">
+              We believe a meaningful safari begins with understanding what you want from the journey. The wildlife matters, but so do the people guiding you, the places you stay and the pace at which you experience them.
+            </p>
+
+            <div class="mt-9 space-y-5">
+
+              <div class="flex gap-4 border-t border-white/15 pt-5">
+                <span class="font-luxury text-2xl text-kavora-gold">01</span>
+                <div>
+                  <h3 class="font-luxury text-2xl">Your priorities first</h3>
+                  <p class="mt-1 text-sm leading-6 text-white/55">
+                    A plan shaped around your interests, travel style and available time.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 border-t border-white/15 pt-5">
+                <span class="font-luxury text-2xl text-kavora-gold">02</span>
+                <div>
+                  <h3 class="font-luxury text-2xl">Thoughtful choices</h3>
+                  <p class="mt-1 text-sm leading-6 text-white/55">
+                    Accommodation, routes and experiences selected to work together.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 border-t border-white/15 pt-5">
+                <span class="font-luxury text-2xl text-kavora-gold">03</span>
+                <div>
+                  <h3 class="font-luxury text-2xl">A considered pace</h3>
+                  <p class="mt-1 text-sm leading-6 text-white/55">
+                    Space to stay longer, notice more and experience the Mara without rushing.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <a href="about.html" class="text-link mt-9 text-kavora-gold">
+              Discover our approach <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         08 — PRACTICAL INFORMATION / FAQ
+         ===================================================== -->
+
+    <section class="section-pad bg-kavora-ivory">
+      <div class="container-kavora">
+
+        <div class="grid gap-12 md:grid-cols-12 md:gap-16">
+
+          <div class="md:col-span-4 reveal">
+            <p class="eyebrow text-kavora-muted">08 / Before you travel</p>
+            <div class="gold-rule mt-5"></div>
+
+            <h2 class="mt-6 font-luxury text-5xl leading-[0.98] tracking-[-0.025em] sm:text-6xl">
+              The details,<br><em>considered.</em>
+            </h2>
+
+            <p class="mt-6 max-w-sm text-sm leading-7 text-kavora-muted">
+              A few practical considerations to help you prepare for your Maasai Mara safari.
+            </p>
+
+            <a href="contact.html?destination=Maasai%20Mara" class="text-link mt-8 text-kavora-forest">
+              Ask us a question <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="md:col-span-8 reveal reveal-delay-1">
+
+            <!-- FAQ 01 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                <span class="font-luxury text-2xl sm:text-3xl">When is the best time to visit the Maasai Mara?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-1" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    July to October is the best-known period for the Great Migration and possible river crossings. January to March can also be excellent for resident wildlife and predator viewing. The Mara can be visited year-round, with each season offering different conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 02 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                <span class="font-luxury text-2xl sm:text-3xl">Can I guarantee seeing a river crossing?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-2" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    No. The Great Migration is a natural movement influenced by rainfall, grazing and water availability. Herds may gather near a river for a long time before crossing, and a crossing may not happen during your stay. Plan for the wider Mara experience rather than a guaranteed event.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 03 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                <span class="font-luxury text-2xl sm:text-3xl">What wildlife can I expect to see?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-3" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    The Mara is known for lions, cheetahs, leopards, elephants, buffalo, giraffes, zebra, wildebeest and numerous antelope species. Hippos, crocodiles and a rich variety of birds can also be seen. Wildlife sightings are never guaranteed.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 04 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                <span class="font-luxury text-2xl sm:text-3xl">How many nights should I stay?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-4" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    Three days and two nights is a useful starting point. Four days and three nights gives you more time for game drives, photography and a less rushed experience. Longer stays can be worthwhile if wildlife observation is a central priority.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 05 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                <span class="font-luxury text-2xl sm:text-3xl">How do I get to the Maasai Mara?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-5" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    Travellers commonly reach the Mara by road from Nairobi or by domestic flight to a suitable airstrip, followed by a transfer to their camp or lodge. The best option depends on your itinerary, budget, dates and accommodation location.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 06 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+                <span class="font-luxury text-2xl sm:text-3xl">What should I pack for a safari?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-6" class="faq-answer">
+                <div>
+                  <p class="text-sm leading-7 text-kavora-muted">
+                    Pack comfortable neutral-coloured clothing, a warm layer for early mornings, sun protection, a hat, comfortable shoes and binoculars if available. Rain protection can be useful in wetter months. Check any luggage restrictions if your itinerary includes a light aircraft flight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         09 — FINAL CTA
+         ===================================================== -->
+
+    <section class="relative overflow-hidden bg-kavora-green text-kavora-ivory">
+
+      <div class="absolute inset-0">
+        <img
+          src="images/maasai-mara-evening.jpg"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          class="h-full w-full object-cover opacity-25"
+        >
+        <div class="absolute inset-0 bg-kavora-forest/70"></div>
+      </div>
+
+      <div class="container-kavora relative py-24 text-center sm:py-32 md:py-40">
+
+        <p class="eyebrow text-kavora-gold reveal">09 / Your journey begins here</p>
+        <div class="gold-rule mx-auto mt-5 reveal"></div>
+
+        <h2 class="mx-auto mt-7 max-w-4xl font-luxury text-5xl leading-[0.95] tracking-[-0.03em] sm:text-7xl md:text-8xl reveal">
+          Let the Mara<br><em class="text-kavora-gold">leave its mark.</em>
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-lg text-sm leading-7 text-white/70 reveal">
+          Tell us what draws you to the Maasai Mara. Together, we can shape a safari around the landscapes, wildlife and moments that matter to you.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+          <a
+            href="contact.html?destination=Maasai%20Mara"
+            class="inline-flex min-w-[220px] items-center justify-center gap-5 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.17em] text-kavora-forest transition hover:bg-kavora-ivory"
+          >
+            Plan Your Maasai Mara Safari <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="destinations.html"
+            class="inline-flex min-w-[190px] items-center justify-center border border-white/40 px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.17em] text-white transition hover:border-kavora-gold hover:text-kavora-gold"
+          >
+            Explore Destinations
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="bg-kavora-forest text-kavora-ivory">
+    <div class="container-kavora py-14 md:py-16">
+
+      <div class="grid gap-12 border-b border-white/15 pb-12 sm:grid-cols-2 md:grid-cols-12 md:gap-8">
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 md:col-span-5">
+          <a href="index.html" aria-label="Kavora Africa home" class="inline-block">
+            <span class="font-luxury text-4xl tracking-[0.14em]">KAVORA</span>
+            <span class="mt-[-2px] block text-[8px] tracking-[0.32em] text-white/60">
+              AFRICA · CONSIDERED JOURNEYS
+            </span>
+          </a>
+
+          <p class="mt-6 max-w-sm text-sm leading-7 text-white/55">
+            Thoughtfully considered journeys across Africa, shaped around the landscapes, encounters and experiences that matter to you.
+          </p>
+
+          <a href="contact.html" class="text-link mt-6 text-kavora-gold">
+            Begin a conversation <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <!-- Explore -->
+        <div class="md:col-span-2">
+          <p class="eyebrow text-kavora-gold">Explore</p>
+          <div class="mt-5 flex flex-col gap-3 text-sm text-white/65">
+            <a href="destinations.html" class="footer-link">Destinations</a>
+            <a href="journeys.html" class="footer-link">Journeys</a>
+            <a href="experiences.html" class="footer-link">Experiences</a>
+            <a href="about.html" class="footer-link">Our approach</a>
+          </div>
+        </div>
+
+        <!-- Destinations -->
+        <div class="md:col-span-2">
+          <p class="eyebrow text-kavora-gold">Discover</p>
+          <div class="mt-5 flex flex-col gap-3 text-sm text-white/65">
+            <a href="serengeti.html" class="footer-link">Serengeti</a>
+            <a href="maasai-mara.html" class="footer-link">Maasai Mara</a>
+            <a href="amboseli.html" class="footer-link">Amboseli</a>
+            <a href="zanzibar.html" class="footer-link">Zanzibar</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="md:col-span-3">
+          <p class="eyebrow text-kavora-gold">Get in touch</p>
+          <div class="mt-5 flex flex-col gap-3 text-sm text-white/65">
+            <a href="contact.html" class="footer-link">Plan your journey</a>
+            <a href="mailto:info@kavora.com" class="footer-link">Email our team</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Final bar -->
+      <div class="flex flex-col gap-5 pt-7 text-[9px] uppercase tracking-[0.15em] text-white/45 md:flex-row md:items-center md:justify-between">
+
+        <p>© 2026 Kavora Africa. All rights reserved.</p>
+
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <a href="privacy.html" class="footer-link">Privacy</a>
+          <a href="terms.html" class="footer-link">Terms</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+
+        <p>Designed for considered journeys.</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuIcon.textContent = "+";
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("open");
+
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        mobileMenu.classList.add("open");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+        menuIcon.textContent = "×";
+        document.body.classList.add("menu-open");
+      }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) {
+        closeMobileMenu();
+      }
+    });
+
+
+    // Scroll reveal animations
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    }
+
+
+    // FAQ accordion
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach((question) => {
+      question.addEventListener("click", () => {
+        const answerId = question.getAttribute("aria-controls");
+        const answer = document.getElementById(answerId);
+        const isExpanded = question.getAttribute("aria-expanded") === "true";
+
+        question.setAttribute("aria-expanded", String(!isExpanded));
+        answer.classList.toggle("open", !isExpanded);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -110,12 +110,6 @@
       text-transform: uppercase;
     }
 
-    .eyebrow::before {
-      width: 32px;
-      height: 1px;
-      background: currentColor;
-      content: "";
-    }
 
     .gold-line {
       height: 1px;
@@ -166,7 +160,7 @@
     .hero {
       position: relative;
       display: flex;
-      min-height: 780px;
+      height: 100vh;
       min-height: min(900px, 100svh);
       align-items: flex-end;
       overflow: hidden;
@@ -415,7 +409,7 @@
       justify-content: space-between;
       gap: 20px;
       padding: 25px 0;
-      font-size: 13px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.8;
     }
@@ -445,7 +439,7 @@
       max-width: 700px;
       padding: 0 0 25px;
       color: var(--kavora-muted);
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 300;
       line-height: 2.1;
     }
@@ -596,7 +590,7 @@
 <body>
 
   <!-- HEADER -->
-  <header class="site-header">
+  <header class="hidden site-header">
     <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
 
       <a href="index.html" class="relative z-[60] flex items-center gap-3" aria-label="Kavora Africa home">
@@ -672,18 +666,11 @@
       <div class="hero-content">
         <div class="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-16">
 
-          <div class="eyebrow mb-8">
-            Northern Tanzania · Forests & Mountains
-          </div>
-
           <h1 class="hero-title font-luxury">
-            Beyond<br>
-            the <em>Ordinary.</em>
+          <em>Arusha</em> National Park.
           </h1>
 
-          <div class="gold-line my-8 w-24"></div>
-
-          <p class="hero-description">
+          <p class="mt-10 hero-description">
             Mist-covered forests, tranquil crater lakes, curious giraffes,
             and the commanding presence of Mount Meru. Discover a quieter,
             more intimate side of Tanzania's wilderness.
@@ -694,21 +681,14 @@
               href="contact.html?destination=Arusha%20National%20Park"
               class="button-primary"
             >
-              Plan Your Arusha Safari <span aria-hidden="true">→</span>
-            </a>
-
-            <a href="#discover" class="button-outline">
-              Discover the Park <span aria-hidden="true">↓</span>
+              Plan Your Arusha Safari 
             </a>
           </div>
 
         </div>
       </div>
 
-      <div class="hero-bottom mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
-        <span>Arusha National Park</span>
-        <span class="hidden sm:inline-flex">A Different Side of Africa</span>
-      </div>
+    
 
     </section>
 
@@ -722,7 +702,7 @@
 
             <div class="eyebrow mb-7">A More Intimate Wilderness</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
               Where nature<br>
               takes a <em class="text-kavora-gold">different</em><br>
               pace.
@@ -794,15 +774,11 @@
           <div class="relative min-h-[380px] overflow-hidden md:min-h-[620px]">
 
             <img
-              src="https://www.easytravel.co.tz/wp-content/uploads/2023/08/Giraffe-Sighting-Game-Drive-Arusha-National-Park-Tanzania.jpg"
+              src="https://www.easytravel.co.tz/wp-content/uploads/2023/08/Masai-giraffes-plains-zebras-and-warthogs-in-Arusha-National-Park-Tanzania-1.jpg"
               alt="Giraffe in Arusha National Park"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-
-            <div class="image-caption">
-              Arusha National Park · Tanzania
-            </div>
 
           </div>
 
@@ -842,13 +818,6 @@
 
             </div>
 
-            <a
-              href="contact.html?destination=Arusha%20National%20Park"
-              class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:text-kavora-green"
-            >
-              Design Your Journey <span aria-hidden="true">→</span>
-            </a>
-
           </div>
 
         </article>
@@ -865,7 +834,7 @@
 
           <div class="eyebrow justify-center">What Makes It Special</div>
 
-          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
+          <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl">
             A world of landscapes<br>
             <em class="text-kavora-gold">in one destination.</em>
           </h2>
@@ -960,7 +929,7 @@
 
             <div class="eyebrow mb-6">Experiences in Arusha</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl lg:text-7xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[1] md:text-6xl lg:text-7xl">
               Explore beyond<br>
               the <em class="text-kavora-gold">ordinary.</em>
             </h2>
@@ -981,7 +950,7 @@
           <article class="experience-card reveal">
 
             <img
-              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1100&q=85"
+              src="https://images.ctfassets.net/p03x4m3svbfn/1fkJmCQ6IKgRbbf8tGejrm/0a37d7149fa5be2cbcea5bccf671a490/D0000EE7-374B-4617-907C-0CB4F0B8570C.jpeg"
               alt="Guided wildlife safari in Africa"
               loading="lazy"
             >
@@ -1010,8 +979,8 @@
           <article class="experience-card reveal">
 
             <img
-              src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1100&q=85"
-              alt="Sunlight filtering through a lush forest"
+              src="https://ellamckendrick.com/wp-content/uploads/2024/10/arusha-np-tanzania-safari-p1655478-1024x768.webp"
+              alt="Arusha National Park Guided walking"
               loading="lazy"
             >
 
@@ -1039,8 +1008,8 @@
           <article class="experience-card reveal">
 
             <img
-              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"
-              alt="Reflections and natural scenery on the water"
+              src="https://www.tanzaniatourism.com/images/uploads/Arusha_National_Park_Momella_Lake_Flamingos_65.jpg"
+              alt="Arusha National Park Momella lakes"
               loading="lazy"
             >
 
@@ -1096,7 +1065,7 @@
 
             <div class="eyebrow mb-7">Planning Your Visit</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl lg:text-7xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[1] md:text-6xl lg:text-7xl">
               Find your<br>
               moment in <em class="text-kavora-gold">nature.</em>
             </h2>
@@ -1119,7 +1088,7 @@
               href="contact.html?destination=Arusha%20National%20Park"
               class="button-primary mt-8"
             >
-              Discuss Your Travel Dates <span aria-hidden="true">→</span>
+              Discuss Your Travel Dates 
             </a>
 
           </div>
@@ -1235,7 +1204,7 @@
 
           <div class="eyebrow justify-center">Designed Around You</div>
 
-          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1] md:text-6xl">
+          <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1] md:text-6xl">
             A journey that<br>
             feels <em class="text-kavora-gold">like yours.</em>
           </h2>
@@ -1266,13 +1235,6 @@
               that gives the landscape room to unfold.
             </p>
 
-            <a
-              href="contact.html?destination=Arusha%20National%20Park"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Plan a Nature Safari <span aria-hidden="true">→</span>
-            </a>
-
           </article>
 
           <article class="reveal border border-kavora-line p-7 md:p-9">
@@ -1290,13 +1252,6 @@
               or Serengeti to experience contrasting landscapes
               across northern Tanzania.
             </p>
-
-            <a
-              href="contact.html?destination=Arusha%20National%20Park"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Explore a Multi-Park Trip <span aria-hidden="true">→</span>
-            </a>
 
           </article>
 
@@ -1316,13 +1271,6 @@
               pace at which you want to explore.
             </p>
 
-            <a
-              href="contact.html?destination=Arusha%20National%20Park"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Create Your Itinerary <span aria-hidden="true">→</span>
-            </a>
-
           </article>
 
         </div>
@@ -1332,15 +1280,7 @@
     <!-- PLAN YOUR JOURNEY -->
     <section class="relative overflow-hidden bg-kavora-green py-24 text-white md:py-32">
 
-      <div
-        class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full border border-white/10"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="pointer-events-none absolute -right-8 -top-8 h-64 w-64 rounded-full border border-white/10"
-        aria-hidden="true"
-      ></div>
+     
 
       <div class="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
 
@@ -1350,7 +1290,7 @@
 
             <div class="eyebrow mb-7">Begin Your Journey</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-8xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-8xl">
               Find your way<br>
               into the <em class="text-kavora-gold">wild.</em>
             </h2>
@@ -1370,11 +1310,7 @@
                 href="contact.html?destination=Arusha%20National%20Park"
                 class="button-primary"
               >
-                Plan Your Safari <span aria-hidden="true">→</span>
-              </a>
-
-              <a href="destinations.html" class="button-outline">
-                Explore More Destinations
+                Plan Your Safari 
               </a>
 
             </div>
@@ -1425,13 +1361,6 @@
 
               </div>
 
-              <a
-                href="contact.html?destination=Arusha%20National%20Park"
-                class="mt-8 flex w-full items-center justify-between border border-kavora-gold px-5 py-4 text-[9px] font-semibold uppercase tracking-[0.17em] text-kavora-gold transition hover:bg-kavora-gold hover:text-kavora-deep"
-              >
-                Start Planning <span aria-hidden="true">→</span>
-              </a>
-
             </div>
 
           </div>
@@ -1451,7 +1380,7 @@
 
             <div class="eyebrow mb-7">Useful Information</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[1] md:text-6xl">
               Arusha<br>
               <em class="text-kavora-gold">FAQs.</em>
             </h2>
@@ -1473,7 +1402,7 @@
           <div class="reveal lg:col-span-8">
 
             <details class="faq-item" open>
-              <summary>
+              <summary class="font-luxury">
                 What is Arusha National Park known for?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1487,7 +1416,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 Can I see Mount Meru from the park?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1500,7 +1429,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 Can I do a walking safari in Arusha National Park?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1514,7 +1443,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 Is canoeing available in Arusha National Park?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1528,7 +1457,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 What wildlife can I see in the park?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1542,7 +1471,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 How long should I spend in Arusha National Park?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1557,7 +1486,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 Can I combine Arusha with other Tanzania destinations?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1571,7 +1500,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+              <summary class="font-luxury">
                 How do I plan a safari with Kavora Africa?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1609,7 +1538,7 @@
           Your African Story Awaits
         </div>
 
-        <h2 class="mt-8 max-w-4xl font-luxury text-5xl font-normal leading-[0.98] text-white md:text-7xl lg:text-8xl">
+        <h2 class="mt-8 max-w-4xl font-luxury text-6xl font-normal leading-[0.98] text-white md:text-7xl lg:text-8xl">
           Discover a quieter<br>
           <em class="text-kavora-gold">side of the wild.</em>
         </h2>
@@ -1623,7 +1552,7 @@
           href="contact.html?destination=Arusha%20National%20Park"
           class="button-primary mt-9"
         >
-          Begin Your Journey <span aria-hidden="true">→</span>
+          Begin Your Journey 
         </a>
 
       </div>

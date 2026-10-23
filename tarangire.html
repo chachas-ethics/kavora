@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+<link rel="icon" href="thumbs/Logo 3 no circle.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -111,12 +113,7 @@
       text-transform: uppercase;
     }
 
-    .eyebrow::before {
-      width: 32px;
-      height: 1px;
-      background: currentColor;
-      content: "";
-    }
+   
 
     .gold-line {
       height: 1px;
@@ -167,13 +164,15 @@
     .hero {
       position: relative;
       display: flex;
-      min-height: 780px;
+      height: 100vh;
       min-height: min(900px, 100svh);
       align-items: flex-end;
       overflow: hidden;
       background: var(--kavora-deep);
       color: white;
     }
+
+
 
     .hero-image {
       position: absolute;
@@ -416,7 +415,7 @@
       justify-content: space-between;
       gap: 20px;
       padding: 25px 0;
-      font-size: 13px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.8;
     }
@@ -446,8 +445,8 @@
       max-width: 700px;
       padding: 0 0 25px;
       color: var(--kavora-muted);
-      font-size: 12px;
-      font-weight: 300;
+      font-size: 15px;
+      font-weight: light;
       line-height: 2.1;
     }
 
@@ -595,7 +594,7 @@
 <body>
 
   <!-- HEADER -->
-  <header class="site-header">
+  <header class="hidden site-header">
     <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
 
       <a href="index.html" class="relative z-[60] flex items-center gap-3" aria-label="Kavora Africa home">
@@ -665,16 +664,9 @@
       <div class="hero-content">
         <div class="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-16">
 
-          <div class="eyebrow mb-8">
-            Northern Tanzania · Wildlife & Wilderness
-          </div>
-
-          <h1 class="hero-title font-luxury">
-            The Land<br>
-            of <em>Giants.</em>
+          <h1 class="hero-title mb-10 font-luxury"><em>Tarangire</em> National Park.
           </h1>
 
-          <div class="gold-line my-8 w-24"></div>
 
           <p class="hero-description">
             Ancient baobabs rise above golden plains. Elephants move through
@@ -686,19 +678,12 @@
             <a href="contact.html?destination=Tarangire" class="button-primary">
               Plan Your Tarangire Safari <span aria-hidden="true">→</span>
             </a>
-
-            <a href="#discover" class="button-outline">
-              Discover the Park <span aria-hidden="true">↓</span>
-            </a>
           </div>
 
         </div>
       </div>
 
-      <div class="hero-bottom mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
-        <span>Tarangire National Park</span>
-        <span class="hidden sm:inline-flex">Wild Africa, Unhurried</span>
-      </div>
+    
 
     </section>
 
@@ -711,9 +696,9 @@
           <div class="reveal lg:col-span-5">
             <div class="eyebrow mb-7">A Different Kind of Safari</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-              Where the<br>
-              <em class="text-kavora-gold">wild</em> feels<br>
+            <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+              Where the
+              <em class="text-kavora-gold">wild</em> feels
               timeless.
             </h2>
 
@@ -785,10 +770,6 @@
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-
-            <div class="image-caption">
-              Tarangire · Northern Tanzania
-            </div>
           </div>
 
           <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
@@ -796,8 +777,7 @@
             <div class="eyebrow mb-7">The Landscape</div>
 
             <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-              Tarangire<br>
-              <span class="italic text-kavora-gold">National Park</span>
+              <span class="italic text-kavora-gold">Tanrangire</span> National Park
             </h2>
 
             <div class="gold-line my-7 w-40"></div>
@@ -825,13 +805,6 @@
               </p>
             </div>
 
-            <a
-              href="contact.html?destination=Tarangire"
-              class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:text-kavora-green"
-            >
-              Design Your Journey <span aria-hidden="true">→</span>
-            </a>
-
           </div>
 
         </article>
@@ -846,7 +819,7 @@
         <div class="reveal mx-auto mb-16 max-w-2xl text-center">
           <div class="eyebrow justify-center">What Makes It Special</div>
 
-          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
+          <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1.02] md:text-6xl">
             An African wilderness<br>
             <em class="text-kavora-gold">with its own character.</em>
           </h2>
@@ -929,7 +902,7 @@
           <div>
             <div class="eyebrow mb-6">Experiences in Tarangire</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl lg:text-7xl">
+            <h2 class="font-luxury text-6xl font-normal md:text-6xl lg:text-7xl">
               A closer look<br>
               at the <em class="text-kavora-gold">wild.</em>
             </h2>
@@ -947,8 +920,8 @@
           <!-- EXPERIENCE 01 -->
           <article class="experience-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1100&q=85"
-              alt="Wildlife safari in Africa"
+              src="https://www.tanzaniatarangiresafaris.com/wp-content/uploads/2024/03/Game-drives-In-Tarangire-Park.webp"
+              alt="Tarangire National park Game drive"
               loading="lazy"
             >
 
@@ -972,8 +945,8 @@
           <!-- EXPERIENCE 02 -->
           <article class="experience-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1100&q=85"
-              alt="Elephants in the African wilderness"
+              src="https://tanzaniawildcamps.com/wp-content/uploads/2025/06/African-Safari-Packages-How-to-Choose-the-Perfect-Tanzania-Adventure-min-1024x683.jpg"
+              alt="Tarangire Ntaional Park elephants"
               loading="lazy"
             >
 
@@ -997,8 +970,8 @@
           <!-- EXPERIENCE 03 -->
           <article class="experience-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1100&q=85"
-              alt="Wild animals in a natural African landscape"
+              src="https://www.journeyera.com/wp-content/uploads/2021/03/tarangire-national-park-photos-05356.jpg"
+              alt="Tarangire National Park wildlife Photography"
               loading="lazy"
             >
 
@@ -1028,7 +1001,7 @@
           </p>
 
           <a href="contact.html?destination=Tarangire" class="button-dark">
-            Build Your Safari <span aria-hidden="true">→</span>
+            Build Your Safari 
           </a>
         </div>
 
@@ -1044,7 +1017,7 @@
           <div class="reveal lg:col-span-5">
             <div class="eyebrow mb-7">Planning Your Visit</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl lg:text-7xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[1] md:text-6xl lg:text-7xl">
               The right<br>
               time to <em class="text-kavora-gold">go.</em>
             </h2>
@@ -1064,7 +1037,7 @@
             </p>
 
             <a href="contact.html?destination=Tarangire" class="button-primary mt-8">
-              Discuss Your Travel Dates <span aria-hidden="true">→</span>
+              Discuss Your Travel Dates
             </a>
           </div>
 
@@ -1161,7 +1134,7 @@
         <div class="reveal mx-auto mb-16 max-w-2xl text-center">
           <div class="eyebrow justify-center">Designed Around You</div>
 
-          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1] md:text-6xl">
+          <h2 class="mt-7 font-luxury text-6xl font-normal leading-[1] md:text-6xl">
             Your safari.<br>
             <em class="text-kavora-gold">Your way.</em>
           </h2>
@@ -1189,13 +1162,6 @@
               greater flexibility over your daily pace and wildlife
               viewing priorities.
             </p>
-
-            <a
-              href="contact.html?destination=Tarangire"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Plan a Private Safari <span aria-hidden="true">→</span>
-            </a>
           </article>
 
           <article class="reveal border border-kavora-line p-7 md:p-9">
@@ -1212,13 +1178,6 @@
               Ngorongoro, or Lake Manyara to experience the diversity
               of northern Tanzania.
             </p>
-
-            <a
-              href="contact.html?destination=Tarangire"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Explore a Multi-Park Trip <span aria-hidden="true">→</span>
-            </a>
           </article>
 
           <article class="reveal border border-kavora-line p-7 md:p-9">
@@ -1235,13 +1194,6 @@
               trip duration, special occasions, photography interests,
               and the level of comfort you want.
             </p>
-
-            <a
-              href="contact.html?destination=Tarangire"
-              class="mt-8 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-kavora-green transition hover:text-kavora-gold"
-            >
-              Create Your Itinerary <span aria-hidden="true">→</span>
-            </a>
           </article>
 
         </div>
@@ -1251,15 +1203,6 @@
     <!-- PLAN YOUR JOURNEY -->
     <section class="relative overflow-hidden bg-kavora-green py-24 text-white md:py-32">
 
-      <div
-        class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full border border-white/10"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="pointer-events-none absolute -right-8 -top-8 h-64 w-64 rounded-full border border-white/10"
-        aria-hidden="true"
-      ></div>
 
       <div class="relative z-10 mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
 
@@ -1268,7 +1211,7 @@
           <div class="reveal lg:col-span-7">
             <div class="eyebrow mb-7">Begin Your Journey</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-8xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-8xl">
               Let the wild<br>
               <em class="text-kavora-gold">lead the way.</em>
             </h2>
@@ -1284,11 +1227,7 @@
 
             <div class="mt-9 flex flex-wrap gap-3">
               <a href="contact.html?destination=Tarangire" class="button-primary">
-                Plan Your Safari <span aria-hidden="true">→</span>
-              </a>
-
-              <a href="destinations.html" class="button-outline">
-                Explore More Destinations
+                Plan Your Safari 
               </a>
             </div>
           </div>
@@ -1327,13 +1266,6 @@
 
               </div>
 
-              <a
-                href="contact.html?destination=Tarangire"
-                class="mt-8 flex w-full items-center justify-between border border-kavora-gold px-5 py-4 text-[9px] font-semibold uppercase tracking-[0.17em] text-kavora-gold transition hover:bg-kavora-gold hover:text-kavora-deep"
-              >
-                Start Planning <span aria-hidden="true">→</span>
-              </a>
-
             </div>
           </div>
 
@@ -1350,7 +1282,7 @@
           <div class="reveal lg:col-span-4">
             <div class="eyebrow mb-7">Useful Information</div>
 
-            <h2 class="font-luxury text-5xl font-normal leading-[1] md:text-6xl">
+            <h2 class="font-luxury text-6xl font-normal leading-[1] md:text-6xl">
               Tarangire<br>
               <em class="text-kavora-gold">FAQs.</em>
             </h2>
@@ -1371,7 +1303,7 @@
           <div class="reveal lg:col-span-8">
 
             <details class="faq-item" open>
-              <summary>
+              <summary class="font-luxury text-2xl md:text-3xl">
                 What is Tarangire National Park known for?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1384,7 +1316,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 When is the best time to visit Tarangire?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1400,7 +1332,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 How many days should I spend in Tarangire?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1414,7 +1346,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 Can Tarangire be combined with Serengeti and Ngorongoro?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1429,7 +1361,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 What wildlife might I see in Tarangire?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1444,7 +1376,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 Is Tarangire suitable for a private safari?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1458,7 +1390,7 @@
             </details>
 
             <details class="faq-item">
-              <summary>
+               <summary class="font-luxury text-2xl md:text-3xl">
                 How do I plan a Tarangire safari with Kavora Africa?
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
@@ -1493,7 +1425,7 @@
 
         <div class="eyebrow justify-center">Your African Story Awaits</div>
 
-        <h2 class="mt-8 max-w-4xl font-luxury text-5xl font-normal leading-[0.98] text-white md:text-7xl lg:text-8xl">
+        <h2 class="mt-8 max-w-4xl font-luxury text-6xl font-normal leading-[0.98] text-white md:text-7xl lg:text-8xl">
           Come closer to<br>
           <em class="text-kavora-gold">the extraordinary.</em>
         </h2>
@@ -1504,7 +1436,7 @@
         </p>
 
         <a href="contact.html?destination=Tarangire" class="button-primary mt-9">
-          Begin Your Journey <span aria-hidden="true">→</span>
+          Begin Your Journey 
         </a>
 
       </div>

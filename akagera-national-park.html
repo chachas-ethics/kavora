@@ -1,0 +1,1370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Akagera National Park, Rwanda | Kavora Africa</title>
+  <meta name="description" content="Discover Akagera National Park with Kavora Africa. Privately curated Big Five safaris, luxury lodges, lake excursions and considered journeys across Rwanda." />
+  <meta name="theme-color" content="#0B211A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              forest: "#0B211A",
+              deep: "#102D23",
+              green: "#1D4535",
+              gold: "#C8A96B",
+              ivory: "#F7F5EF",
+              muted: "#74786F",
+              line: "#D8D3C8"
+            }
+          },
+          fontFamily: {
+            luxury: ["Cormorant Garamond", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --forest: #0B211A;
+      --deep: #102D23;
+      --green: #1D4535;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --muted: #74786F;
+      --line: #D8D3C8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--forest);
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    .font-luxury { font-family: "Cormorant Garamond", serif; }
+
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: var(--gold);
+      transform-origin: left;
+    }
+
+    .hero {
+      min-height: min(850px, 100svh);
+      position: relative;
+      isolation: isolate;
+      background: var(--forest);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 48%;
+      animation: hero-settle 1.4s ease-out both;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(5, 22, 16, .78) 0%, rgba(5, 22, 16, .42) 48%, rgba(5, 22, 16, .08) 100%),
+        linear-gradient(0deg, rgba(5, 22, 16, .6) 0%, transparent 48%);
+    }
+
+    .nav-link { position: relative; transition: color 220ms ease; }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 220ms ease;
+    }
+
+    .nav-link:hover { color: var(--gold); }
+    .nav-link:hover::after { width: 100%; }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: #d9ded6;
+    }
+
+    .destination-image {
+      transition: transform 900ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .group:hover .destination-image { transform: scale(1.045); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 800ms ease, transform 800ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .experience-card {
+      border: 1px solid var(--line);
+      transition: border-color 300ms ease, background-color 300ms ease;
+    }
+
+    .experience-card:hover {
+      border-color: var(--gold);
+      background-color: #fffdf8;
+    }
+
+    .number-mark {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 29px;
+      line-height: 1;
+    }
+
+    .stay-card img {
+      transition: transform 850ms cubic-bezier(.2, .65, .25, 1);
+    }
+
+    .stay-card:hover img { transform: scale(1.045); }
+
+    .faq-item { border-bottom: 1px solid rgba(11, 33, 26, .16); }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 23px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      flex: 0 0 auto;
+      transition: transform 250ms ease;
+    }
+
+    .faq-trigger[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms ease;
+    }
+
+    .faq-answer > div { overflow: hidden; }
+    .faq-answer.open { grid-template-rows: 1fr; }
+
+    .button-gold, .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 54px;
+      padding: 0 25px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      transition: background 250ms ease, color 250ms ease, border-color 250ms ease;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--forest);
+    }
+
+    .button-gold:hover { background: #e0c58d; }
+
+    .button-outline {
+      border: 1px solid rgba(247, 245, 239, .5);
+      color: var(--ivory);
+      font-weight: 600;
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .mobile-menu {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+    }
+
+    .mobile-menu.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes hero-settle {
+      from { transform: scale(1.035); opacity: .7; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <header class="absolute inset-x-0 top-0 z-50 border-b border-white/15 text-white">
+    <nav class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
+
+      <a href="index.html" aria-label="Kavora Africa homepage" class="flex items-center">
+        <img
+          src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+          alt="Kavora Africa"
+          class="h-auto w-[170px] object-contain object-left md:w-[190px]"
+        />
+      </a>
+
+      <div class="hidden items-center gap-8 lg:flex">
+        <a href="index.html" class="nav-link eyebrow">Home</a>
+        <a href="destinations.html" class="nav-link eyebrow">Destinations</a>
+        <a href="journeys.html" class="nav-link eyebrow">Journeys</a>
+        <a href="about.html" class="nav-link eyebrow">Our Philosophy</a>
+        <a href="contact.html" class="eyebrow text-kavora-gold">Enquire <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="flex h-11 w-11 items-center justify-center border border-white/30 lg:hidden"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.3" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu absolute inset-x-0 top-full border-t border-white/10 bg-kavora-forest px-6 py-7 lg:hidden">
+      <div class="flex flex-col gap-6">
+        <a href="index.html" class="eyebrow">Home</a>
+        <a href="destinations.html" class="eyebrow">Destinations</a>
+        <a href="journeys.html" class="eyebrow">Journeys</a>
+        <a href="about.html" class="eyebrow">Our Philosophy</a>
+        <a href="contact.html" class="eyebrow text-kavora-gold">Plan Your Journey ↗</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       01 — HERO
+       ===================================================== -->
+
+  <section class="hero flex items-end text-white">
+    <img
+      src="images/akagera-national-park-hero.jpg"
+      alt="Open savannah and distant wildlife in Akagera National Park, Rwanda"
+      class="hero-image"
+      fetchpriority="high"
+    />
+
+    <div class="mx-auto w-full max-w-[1500px] px-6 pb-16 pt-40 md:px-10 md:pb-24 lg:px-16 lg:pb-28">
+      <div class="max-w-4xl">
+
+        <div class="mb-7 flex items-center gap-4">
+          <span class="h-px w-12 bg-kavora-gold"></span>
+          <p class="eyebrow text-kavora-gold">Rwanda · The Eastern Savannah</p>
+        </div>
+
+        <h1 class="font-luxury text-6xl font-normal leading-[0.91] tracking-[-0.035em] sm:text-7xl md:text-8xl lg:text-[112px]">
+          Akagera<br />
+          <span class="italic text-kavora-gold">National Park</span>
+        </h1>
+
+        <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/85 md:text-base md:leading-8">
+          Across open plains, acacia woodland and shimmering lakes, discover
+          Rwanda’s savannah wilderness through private game drives, remarkable
+          wildlife encounters and stays shaped around you.
+        </p>
+
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a href="contact.html?destination=Akagera%20National%20Park" class="button-gold">
+            Design My Journey <span aria-hidden="true">↗</span>
+          </a>
+          <a href="#experiences" class="button-outline">
+            Discover the Experience <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-16 flex items-end justify-between border-t border-white/30 pt-5 md:mt-24">
+        <p class="eyebrow max-w-[220px] leading-5 text-white/70">
+          A private journey, thoughtfully considered
+        </p>
+        <p class="font-luxury text-2xl italic text-white/90 md:text-3xl">
+          The wild, your way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       02 — INTRODUCTION
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-36">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-muted">01 / The destination</p>
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          Rwanda’s wild<br />
+          <span class="italic text-kavora-green">side revealed.</span>
+        </h2>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+        <p class="text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          In eastern Rwanda, Akagera unfolds across grasslands, rolling
+          woodland, wetlands and a chain of lakes fed by the Akagera River.
+          It is the country’s defining savannah safari destination and a
+          remarkable contrast to its mist-covered mountain forests.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          The park is home to the Big Five—lion, leopard, elephant, buffalo
+          and rhino—alongside giraffes, zebras, antelope, hippos, crocodiles
+          and a rich diversity of birdlife. Sightings are never guaranteed,
+          but every drive offers a different view of this varied landscape.
+        </p>
+
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted md:text-base md:leading-9">
+          With Kavora, the experience extends beyond the game drive. We help
+          bring together the right guides, carefully selected accommodation,
+          lake excursions and private transfers into a seamless journey.
+        </p>
+
+        <a
+          href="contact.html?destination=Akagera%20National%20Park"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+        >
+          Begin a conversation <span class="text-lg" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       03 — SIGNATURE EXPERIENCES
+       ===================================================== -->
+
+  <section id="experiences" class="bg-white px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 flex flex-col justify-between gap-7 md:mb-16 md:flex-row md:items-end">
+        <div>
+          <p class="eyebrow mb-5 text-kavora-muted">02 / Beyond the expected</p>
+          <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+            The savannah,<br />
+            <span class="italic text-kavora-green">experienced differently.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          From the stillness of the lakes to the anticipation of a morning
+          game drive, each experience reveals a different side of Akagera.
+        </p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- EXPERIENCE 01 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-big-five-safari.jpg"
+              alt="Lion resting in the savannah of Akagera National Park"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+            <span class="absolute bottom-5 left-5 bg-kavora-ivory px-4 py-2 eyebrow text-kavora-forest">
+              The classic safari
+            </span>
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">01</span>
+              <span class="eyebrow text-kavora-muted">Wildlife</span>
+            </div>
+            <h3 class="font-luxury text-3xl">Private Game Drives</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Explore the park with an experienced guide, looking for lions,
+              elephants, buffalo, giraffes and other wildlife across its
+              changing habitats.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Guided exploration · Flexible pace
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 02 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-lake-ihema-boat-safari.jpg"
+              alt="Boat safari across Lake Ihema surrounded by wetland scenery"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">02</span>
+              <span class="eyebrow text-kavora-muted">On the water</span>
+            </div>
+            <h3 class="font-luxury text-3xl">Lake Ihema by Boat</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Drift along the lake to observe hippos, crocodiles and waterbirds
+              from a different perspective, with private boat arrangements
+              available subject to confirmation.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Lake excursions · Birdlife
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 03 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-night-game-drive.jpg"
+              alt="Safari vehicle exploring Akagera at dusk"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">03</span>
+              <span class="eyebrow text-kavora-muted">After sunset</span>
+            </div>
+            <h3 class="font-luxury text-3xl">The Night Safari</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Discover another rhythm of the wilderness on an authorised
+              night drive, when nocturnal animals become part of the search.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Guided night drives · Wildlife
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 04 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-birdwatching-wetlands.jpg"
+              alt="Waterbirds among the wetlands and papyrus of Akagera"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">04</span>
+              <span class="eyebrow text-kavora-muted">Birdlife</span>
+            </div>
+            <h3 class="font-luxury text-3xl">Wetlands & Birdwatching</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Spend time with the park’s remarkable birdlife, from waterbirds
+              around the lakes to species found in woodland and papyrus habitats.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Birding · Nature interpretation
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 05 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-savannah-photography.jpg"
+              alt="Giraffes and zebra on the open plains of Akagera"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">05</span>
+              <span class="eyebrow text-kavora-muted">Visual storytelling</span>
+            </div>
+            <h3 class="font-luxury text-3xl">A Photographer’s Safari</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Shape game-drive timing around light, landscapes and photography
+              interests, with time to observe rather than rush from one sighting
+              to the next.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Photography-led planning · Private pacing
+            </p>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE 06 -->
+        <article class="experience-card reveal group">
+          <div class="image-frame h-[290px]">
+            <img
+              src="images/akagera-community-experience.jpg"
+              alt="Rwandan community members sharing local knowledge and traditions"
+              loading="lazy"
+              class="destination-image h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="p-6 md:p-7">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="number-mark">06</span>
+              <span class="eyebrow text-kavora-muted">Local connections</span>
+            </div>
+            <h3 class="font-luxury text-3xl">Community & Conservation</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Where available, add a community-led cultural experience or
+              conservation-focused visit that deepens your understanding
+              of the landscape and the people connected to it.
+            </p>
+            <p class="mt-5 border-t border-kavora-line pt-4 text-[10px] uppercase leading-5 tracking-[0.15em] text-kavora-green">
+              Community-led visits · Conservation
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       04 — WHEN TO GO
+       ===================================================== -->
+
+  <section class="bg-kavora-forest px-6 py-20 text-kavora-ivory md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-gold">03 / Finding your moment</p>
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          Follow the<br />
+          <span class="italic text-kavora-gold">seasons.</span>
+        </h2>
+        <p class="mt-7 max-w-md text-sm font-light leading-8 text-white/65">
+          Akagera can be explored throughout the year. Seasonal conditions
+          influence road access, landscapes and wildlife viewing, so the best
+          time depends on the experiences you value most.
+        </p>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">June — September</p>
+              <h3 class="mt-3 font-luxury text-3xl">The drier season</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Often favoured for game viewing as vegetation can be less dense
+              and animals may gather around available water sources.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">December — February</p>
+              <h3 class="mt-3 font-luxury text-3xl">A second drier window</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              A useful period to consider for classic safari activities,
+              with weather and conditions checked against your exact dates.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">March — May</p>
+              <h3 class="mt-3 font-luxury text-3xl">The greener months</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Greener scenery and wetter conditions can bring a different
+              character to the landscape. Road conditions may require
+              additional planning.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-y border-white/20 py-7">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+            <div>
+              <p class="eyebrow text-kavora-gold">October — November</p>
+              <h3 class="mt-3 font-luxury text-3xl">A changing landscape</h3>
+            </div>
+            <p class="max-w-sm text-sm font-light leading-7 text-white/65">
+              Seasonal rains may refresh the scenery and appeal to birders.
+              We plan around current weather, access and your preferred
+              activities.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs font-light leading-6 text-white/50">
+          These are general seasonal patterns, not guarantees of animal
+          sightings, road conditions or weather. Conditions vary from year
+          to year.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       05 — WHERE TO STAY
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+        <div>
+          <p class="eyebrow mb-5 text-kavora-muted">04 / A place to return to</p>
+          <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+            A stay that<br />
+            <span class="italic text-kavora-green">belongs to the journey.</span>
+          </h2>
+        </div>
+
+        <p class="max-w-md text-sm font-light leading-7 text-kavora-muted">
+          From intimate tented camps to comfortable safari lodges, the right
+          base shapes your time in the wilderness. We match the stay to your
+          preferred atmosphere and level of service.
+        </p>
+      </div>
+
+      <div class="grid gap-7 md:grid-cols-3">
+
+        <!-- STAY 01 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/akagera-luxury-tented-camp.jpg"
+              alt="Luxury tented safari accommodation surrounded by Akagera wilderness"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Immersive luxury
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For an intimate safari</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Luxury Tented Camps</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              A closer connection to the landscape, with considered comfort,
+              attentive hospitality and a sense of being immersed in nature.
+            </p>
+          </div>
+        </article>
+
+        <!-- STAY 02 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/akagera-lakeside-lodge.jpg"
+              alt="Safari lodge overlooking a lake and green landscape in Akagera"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Space & stillness
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For restorative downtime</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Refined Safari Lodges</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              A comfortable retreat between drives, chosen for its setting,
+              service, dining and suitability for your planned route.
+            </p>
+          </div>
+        </article>
+
+        <!-- STAY 03 -->
+        <article class="stay-card reveal group">
+          <div class="image-frame h-[380px] md:h-[430px]">
+            <img
+              src="images/akagera-private-suite.jpg"
+              alt="Elegant private safari suite with natural materials and open views"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
+              Personalised comfort
+            </span>
+          </div>
+
+          <div class="pt-6">
+            <p class="eyebrow text-kavora-muted">For couples & special occasions</p>
+            <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Private Safari Retreats</h3>
+            <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
+              Carefully selected accommodation for honeymoons, anniversaries,
+              family trips or guests who value privacy and a more personal pace.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="reveal mt-10 max-w-3xl text-xs leading-6 text-kavora-muted">
+        These cards represent accommodation styles, not confirmed properties
+        or availability. Specific lodges and camps will be proposed according
+        to your dates, route, preferences and current availability.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       06 — SAMPLE JOURNEYS
+       ===================================================== -->
+
+  <section class="bg-white px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto max-w-[1300px]">
+
+      <div class="reveal mb-12 md:mb-16">
+        <p class="eyebrow mb-5 text-kavora-muted">05 / Ways to experience it</p>
+        <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+          One wilderness.<br />
+          <span class="italic text-kavora-green">Your own perspective.</span>
+        </h2>
+        <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted">
+          These journey concepts are starting points rather than fixed
+          itineraries. We build the final plan around your dates, accommodation
+          preferences, interests and confirmed activity availability.
+        </p>
+      </div>
+
+      <div class="space-y-7">
+
+        <!-- JOURNEY 01 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:min-h-[430px]">
+            <img
+              src="images/akagera-big-five-journey.jpg"
+              alt="Elephants moving across the open plains of Akagera"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 01 · Classic safari</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">The Big Five Search</h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              Build your stay around guided game drives, varied landscapes and
+              time to observe the wildlife that makes Akagera a distinctive
+              savannah destination.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: length of stay, park sectors, guide arrangements
+              and wildlife viewing expectations.
+            </p>
+            <a href="contact.html?journey=The%20Big%20Five%20Search" class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold">
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 02 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:order-2 md:min-h-[430px]">
+            <img
+              src="images/akagera-lake-journey.jpg"
+              alt="Hippos and waterbirds on Lake Ihema"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 02 · Lakes & wetlands</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">Water, Wildlife & Stillness</h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              Combine a lake excursion with relaxed wildlife viewing and
+              time to appreciate the wetlands, birdlife and quieter moments
+              between activities.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: boat schedules, birding interests, lodge location
+              and current activity availability.
+            </p>
+            <a href="contact.html?journey=Water%20Wildlife%20and%20Stillness" class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold">
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 03 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:min-h-[430px]">
+            <img
+              src="images/akagera-night-safari-journey.jpg"
+              alt="Golden evening light over the Akagera savannah"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 03 · From day to night</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">The Changing Light</h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              Follow the changing atmosphere of the park through carefully
+              timed game drives, a sunset pause and an authorised night drive
+              where available.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: night-drive access, accommodation location
+              and the park's operating arrangements.
+            </p>
+            <a href="contact.html?journey=The%20Changing%20Light" class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold">
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- JOURNEY 04 -->
+        <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
+          <div class="image-frame min-h-[300px] md:order-2 md:min-h-[430px]">
+            <img
+              src="images/rwanda-akagera-combined-journey.jpg"
+              alt="Rwanda's countryside with green hills and a peaceful rural road"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
+            <p class="eyebrow text-kavora-muted">Journey 04 · A wider Rwanda</p>
+            <h3 class="mt-5 font-luxury text-4xl font-normal md:text-5xl">Rwanda, Considered</h3>
+            <div class="gold-line my-6 max-w-[160px]"></div>
+            <p class="text-sm font-light leading-8 text-kavora-muted">
+              Make Akagera one chapter of a wider journey, pairing savannah
+              wildlife with time in Kigali, the forests of Volcanoes National
+              Park or Nyungwe National Park.
+            </p>
+            <p class="mt-5 text-xs leading-6 text-kavora-muted">
+              Considerations: total duration, transfer times and the order
+              of destinations.
+            </p>
+            <a href="contact.html?journey=Rwanda%20Considered" class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold">
+              Shape this journey <span class="text-lg" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       07 — THE KAVORA APPROACH
+       ===================================================== -->
+
+  <section class="bg-kavora-deep px-6 py-20 text-kavora-ivory md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-14 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow mb-6 text-kavora-gold">06 / The Kavora approach</p>
+        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+          The details<br />
+          make the<br />
+          <span class="italic text-kavora-gold">difference.</span>
+        </h2>
+        <p class="mt-7 max-w-md text-sm font-light leading-8 text-white/65">
+          A memorable safari is about more than the animals you see. It is
+          about the thought behind every transition, the quality of the
+          guidance and the freedom to experience the wilderness at your pace.
+        </p>
+      </div>
+
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">01</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Your priorities come first</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                We begin with your interests, travel style, preferred
+                accommodation and the kind of wildlife experience you value.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">02</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Every detail has its place</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                Accommodation, transfers, guides, park activities and
+                additional experiences are considered together rather than
+                as disconnected bookings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">03</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Room to experience the wild</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                Wildlife cannot be scheduled. We create a thoughtful plan
+                while leaving space for changing conditions and unexpected
+                encounters.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-y border-white/20 py-7">
+          <div class="flex gap-6">
+            <span class="number-mark">04</span>
+            <div>
+              <h3 class="font-luxury text-3xl">Personal coordination</h3>
+              <p class="mt-3 text-sm font-light leading-7 text-white/60">
+                We help coordinate the practical elements of your journey
+                so that your attention stays on the landscape, the wildlife
+                and the experience itself.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       08 — PRACTICAL INFORMATION / FAQ
+       ===================================================== -->
+
+  <section class="bg-kavora-ivory px-6 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32">
+    <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
+
+      <div class="reveal lg:col-span-4">
+        <p class="eyebrow mb-6 text-kavora-muted">07 / Before you go</p>
+        <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl">
+          A few things<br />
+          <span class="italic text-kavora-green">to know.</span>
+        </h2>
+        <p class="mt-6 text-sm font-light leading-8 text-kavora-muted">
+          A little preparation helps you make the most of the landscape.
+          These are the practical details we consider when shaping your
+          Akagera experience.
+        </p>
+        <a href="contact.html?destination=Akagera%20National%20Park" class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold">
+          Ask a concierge <span class="text-lg" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="reveal lg:col-span-7 lg:col-start-6">
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">Can I see the Big Five in Akagera?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Akagera is Rwanda’s Big Five safari destination and is home
+                to lion, leopard, elephant, buffalo and rhino. Sightings are
+                not guaranteed. An experienced guide and a well-planned
+                itinerary can help you make the most of your time in the park.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">How long should I spend in the park?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                The right duration depends on your interests, accommodation
+                and whether you want to explore different areas of the park.
+                We can plan a focused safari or allow more time for several
+                game drives, a boat excursion and slower moments at your lodge.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">Can I take a boat safari?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Boat excursions on Lake Ihema are a popular way to see
+                hippos, crocodiles and waterbirds. Scheduled trips and
+                private arrangements depend on the park’s current operating
+                schedule and availability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">What should I pack for a safari?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Neutral, comfortable clothing, sun protection, a hat,
+                binoculars, insect repellent and a light layer for early
+                mornings are useful. Pack according to the season and your
+                planned activities; we can provide a tailored checklist
+                before departure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">Can Akagera be combined with other destinations in Rwanda?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Yes. Akagera can form part of a wider Rwanda journey with
+                Volcanoes National Park, Nyungwe National Park, Kigali or
+                Lake Kivu. The ideal order depends on your total trip length,
+                transport and preferred experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" type="button" aria-expanded="false">
+            <span class="font-luxury text-2xl md:text-3xl">When should I book my safari?</span>
+            <span class="faq-icon text-2xl text-kavora-gold" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div>
+              <p class="pb-6 pr-8 text-sm font-light leading-7 text-kavora-muted">
+                Planning early gives you more flexibility with accommodation
+                and preferred dates. Once your travel window is known, we
+                can help check the relevant lodges, transfers and activities
+                before the itinerary is confirmed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       09 — FINAL ENQUIRY
+       ===================================================== -->
+
+  <section class="relative isolate overflow-hidden bg-kavora-forest text-kavora-ivory">
+
+    <img
+      src="images/akagera-savannah-sunset-cta.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
+    />
+
+    <div class="absolute inset-0 -z-10 bg-kavora-forest/65"></div>
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 text-center md:px-10 md:py-32 lg:py-40">
+
+      <p class="reveal eyebrow mb-7 text-kavora-gold">Your journey begins here</p>
+
+      <h2 class="reveal mx-auto max-w-4xl font-luxury text-5xl font-normal leading-[0.98] md:text-7xl lg:text-8xl">
+        Let the wild<br />
+        <span class="italic text-kavora-gold">set the pace.</span>
+      </h2>
+
+      <p class="reveal mx-auto mt-7 max-w-xl text-sm font-light leading-8 text-white/75 md:text-base">
+        Tell us what you want from your time in Rwanda. We will help bring
+        the right wildlife experiences, places to stay and travel details
+        together into a journey that feels entirely your own.
+      </p>
+
+      <div class="reveal mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="contact.html?destination=Akagera%20National%20Park" class="button-gold">
+          Plan Your Private Journey <span aria-hidden="true">↗</span>
+        </a>
+        <a href="destinations.html" class="button-outline">
+          Explore More of Africa
+        </a>
+      </div>
+
+      <p class="reveal mt-9 text-[9px] uppercase tracking-[0.2em] text-white/50">
+        Kavora Africa · Considered journeys, personally curated
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="bg-kavora-forest px-6 text-kavora-ivory md:px-10 lg:px-16">
+
+    <div class="mx-auto grid max-w-[1400px] gap-12 py-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 lg:py-20">
+
+      <div class="lg:col-span-4">
+        <a href="index.html" aria-label="Kavora Africa homepage" class="inline-block">
+          <img
+            src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg"
+            alt="Kavora Africa"
+            class="block h-auto w-full max-w-[320px] object-contain object-left -ml-12"
+            style="width: 320px;"
+          />
+        </a>
+
+        <p class="mt-5 max-w-sm text-sm font-light leading-7 text-white/55">
+          Private journeys, considered stays and personal travel
+          coordination across Africa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5 lg:col-start-6">
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Explore</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="destinations.html">Destinations</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="journeys.html">Private Journeys</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="luxury-stays.html">Luxury Stays</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="concierge.html">Concierge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Rwanda</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="volcanoes-national-park.html">Volcanoes National Park</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="akagera-national-park.html">Akagera National Park</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="nyungwe-national-park.html">Nyungwe National Park</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow mb-5 text-kavora-gold">Connect</p>
+          <ul class="space-y-4 text-xs font-light text-white/65">
+            <li><a class="transition hover:text-kavora-gold" href="contact.html">Enquiries</a></li>
+            <li><a class="transition hover:text-kavora-gold" href="about.html">Our Philosophy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="border-t border-white/15 py-6">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <p class="text-[9px] uppercase tracking-[0.18em] text-kavora-gold">
+          © 2026 Kavora Africa
+        </p>
+        <p class="text-[9px] uppercase tracking-[0.15em] text-white/45">
+          Considered journeys. Meaningful connections.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       INTERACTIONS
+       ===================================================== -->
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    function closeMenu() {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      document.body.classList.toggle("menu-open", isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) closeMenu();
+    });
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    }
+
+    // FAQ accordion: keep one answer open at a time
+    const faqTriggers = document.querySelectorAll(".faq-trigger");
+
+    faqTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const currentAnswer = trigger.nextElementSibling;
+        const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+
+        faqTriggers.forEach((otherTrigger) => {
+          otherTrigger.setAttribute("aria-expanded", "false");
+          otherTrigger.nextElementSibling.classList.remove("open");
+        });
+
+        if (willOpen) {
+          trigger.setAttribute("aria-expanded", "true");
+          currentAnswer.classList.add("open");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

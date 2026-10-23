@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B211A" />
+
+  <title>Lake Naivasha — Kavora Africa</title>
+  <meta
+    name="description"
+    content="Discover Lake Naivasha with Kavora Africa. Explore freshwater landscapes, take a private boat safari, encounter remarkable birdlife and enjoy considered lakeside retreats in Kenya."
+  />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
+            }
+          },
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          letterSpacing: {
+            luxury: '-0.025em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- CUSTOM CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F5EF;
+      color: #0B211A;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    ::selection {
+      background: #C8A96B;
+      color: #0B211A;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-reveal {
+      overflow: hidden;
+    }
+
+    .image-reveal img {
+      transform: scale(1.08);
+      transition: transform 1.5s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .image-reveal.visible img {
+      transform: scale(1);
+    }
+
+    .destination-image {
+      transition: transform 1.4s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .experience-card:hover .destination-image,
+    .stay-card:hover .destination-image {
+      transform: scale(1.06);
+    }
+
+    .kavora-link {
+      position: relative;
+      display: inline-flex;
+      width: fit-content;
+    }
+
+    .kavora-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 1px;
+      background: #C8A96B;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .45s ease;
+    }
+
+    .kavora-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .hero-image {
+      animation: heroReveal 1.4s ease-out both;
+    }
+
+    @keyframes heroReveal {
+      from {
+        opacity: 0;
+        transform: scale(1.06);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .gold-line {
+      width: 42px;
+      height: 1px;
+      background: #C8A96B;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(11, 33, 26, .14);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 0;
+      text-align: left;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      color: #C8A96B;
+      font-size: 22px;
+      transition: transform .3s ease;
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-item.active .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- =====================================================
+       01 — HERO
+  ====================================================== -->
+
+  <section class="relative flex min-h-[90svh] items-end overflow-hidden bg-kavora-green text-kavora-ivory md:min-h-screen">
+
+    <img
+      src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2400&q=90"
+      alt="Wildlife in a natural African landscape"
+      class="hero-image absolute inset-0 h-full w-full object-cover"
+      fetchpriority="high"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-kavora-green/90"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-40 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24">
+
+      <div class="max-w-5xl">
+
+        <p class="mb-7 flex items-center gap-4 font-sans text-[9px] font-semibold uppercase tracking-[.3em] text-kavora-gold sm:text-[10px]">
+          <span class="h-px w-10 bg-kavora-gold"></span>
+          Kenya · The Great Rift Valley
+        </p>
+
+        <h1 class="font-luxury text-7xl font-normal leading-[.82] tracking-luxury sm:text-8xl md:text-[8.5rem] lg:text-[10rem]">
+          Lake
+          <span class="block italic text-kavora-gold">Naivasha.</span>
+        </h1>
+
+        <div class="mt-9 grid max-w-3xl gap-7 md:grid-cols-[1fr_auto] md:items-end">
+
+          <p class="max-w-xl font-sans text-sm font-normal leading-7 text-white/75 sm:text-base sm:leading-8">
+            A quieter side of Kenya, where freshwater horizons,
+            acacia-lined shores and extraordinary birdlife invite
+            you to experience the wilderness at a gentler pace.
+          </p>
+
+          <a
+            href="contact.html?destination=Lake%20Naivasha"
+            class="kavora-link pb-2 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-ivory"
+          >
+            Begin your journey
+            <span class="ml-4 text-lg text-kavora-gold">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="mt-16 flex items-center justify-between border-t border-white/20 pt-5">
+
+        <p class="font-sans text-[9px] uppercase tracking-[.22em] text-white/55">
+          A considered journey by Kavora
+        </p>
+
+        <a href="#introduction" aria-label="Scroll to introduction" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-lg text-kavora-gold transition hover:border-kavora-gold">
+          ↓
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       02 — INTRODUCTION
+  ====================================================== -->
+
+  <section id="introduction" class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
+
+        <div class="reveal md:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            01 / The Destination
+          </p>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[.95] sm:text-6xl lg:text-7xl">
+            A different
+            <span class="block italic">kind of wild.</span>
+          </h2>
+
+        </div>
+
+        <div class="reveal md:col-span-6 md:col-start-7">
+
+          <p class="font-sans text-sm font-normal leading-8 text-kavora-green/70 sm:text-base sm:leading-9">
+            Set within Kenya’s Great Rift Valley, Lake Naivasha offers
+            a striking contrast to the open plains of a traditional
+            safari. Its freshwater setting draws an abundance of birds,
+            supports resident hippos and provides a natural setting
+            for slower, more intimate encounters with the landscape.
+          </p>
+
+          <p class="mt-6 font-sans text-sm font-normal leading-8 text-kavora-green/70 sm:text-base sm:leading-9">
+            Days here might begin on the water, continue along quiet
+            lakeside paths and end in a secluded retreat beneath the
+            trees. It is a destination that rewards curiosity rather
+            than a hurried itinerary.
+          </p>
+
+          <div class="mt-10 grid grid-cols-2 gap-7 border-t border-kavora-green/15 pt-7">
+
+            <div>
+              <p class="font-luxury text-3xl italic sm:text-4xl">On the water</p>
+              <p class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-green/50">
+                Boat safaris
+              </p>
+            </div>
+
+            <div>
+              <p class="font-luxury text-3xl italic sm:text-4xl">By the shore</p>
+              <p class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-green/50">
+                Private retreats
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       03 — THE NAIVASHA EXPERIENCE
+  ====================================================== -->
+
+  <section class="bg-kavora-forest text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="reveal grid grid-cols-1 gap-8 md:grid-cols-12 md:items-end">
+
+        <div class="md:col-span-7">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            02 / The Experience
+          </p>
+
+          <h2 class="font-luxury text-5xl font-normal leading-[.92] sm:text-6xl md:text-7xl">
+            Discover Naivasha,
+            <span class="italic text-kavora-gold">your way.</span>
+          </h2>
+
+        </div>
+
+        <p class="font-sans text-sm leading-7 text-white/55 md:col-span-4 md:col-start-9">
+          Time on the lake is best shaped around the moments
+          that matter to you: wildlife, open landscapes, quiet
+          water and the freedom to explore at your own pace.
+        </p>
+
+      </div>
+
+
+      <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- EXPERIENCE 01 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
+              alt="Calm water and reflections on a lake"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / On the lake</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Private Boat Safari</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Drift across the lake with a local guide, observing
+              hippos and the birdlife that gathers along its shores.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 02 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=1000&q=85"
+              alt="Wildlife in a natural habitat"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Wildlife</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Crescent Island</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Walk through open wildlife habitat with a guide,
+              with opportunities to encounter giraffes, zebras
+              and antelope at close range.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 03 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1000&q=85"
+              alt="Bird perched among branches"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">03 / Birdlife</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">A Birder’s Retreat</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Look for fish eagles, pelicans, cormorants and
+              other bird species that make the lake a rewarding
+              destination for birdwatching.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 04 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85"
+              alt="Wildlife beneath the trees"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">04 / Beyond the lake</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Hell’s Gate</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Explore dramatic cliffs, volcanic formations and
+              deep gorges in a nearby national park, with
+              walking and cycling opportunities.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 05 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85"
+              alt="Secluded accommodation surrounded by nature"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">05 / Slow living</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Lakeside Living</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Leave room in the itinerary for long breakfasts,
+              garden walks, thoughtful meals and quiet afternoons
+              overlooking the surrounding landscape.
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- EXPERIENCE 06 -->
+        <article class="experience-card reveal group">
+
+          <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
+            <img
+              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+              alt="Mountain landscape in soft evening light"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">06 / The wider valley</span>
+          </div>
+
+          <div class="border-b border-white/15 py-7">
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">Rift Valley Landscapes</h3>
+            <p class="mt-4 font-sans text-sm leading-7 text-white/55">
+              Pair time beside the lake with scenic drives and
+              carefully chosen stops across the Great Rift Valley.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       04 — WHEN TO GO
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-14 md:grid-cols-12">
+
+        <div class="reveal md:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            03 / Timing Your Visit
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+            The right time
+            <span class="block italic">to arrive.</span>
+          </h2>
+
+          <p class="mt-7 max-w-md font-sans text-sm leading-8 text-kavora-green/60">
+            Lake Naivasha can be visited throughout the year.
+            Your preferred experiences, road conditions and
+            the seasonal weather can help determine the best
+            time for your stay.
+          </p>
+
+        </div>
+
+
+        <div class="md:col-span-6 md:col-start-7">
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">January — March</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Generally drier</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              Often a good period for outdoor activities, boat
+              trips and exploring nearby landscapes. Conditions
+              vary, so daily planning still matters.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">April — May</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Long rains</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              Greener scenery can make this period appealing.
+              Rain may affect roads and outdoor plans, so flexible
+              scheduling and suitable transport are important.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">June — October</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Often drier</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A popular window for combining lakeside experiences
+              with walking, cycling and wider Rift Valley exploration.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-y border-kavora-green/15 py-7">
+
+            <div class="flex items-start justify-between gap-6">
+              <h3 class="font-luxury text-3xl italic sm:text-4xl">November — December</h3>
+              <span class="mt-2 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">Short rains</span>
+            </div>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A changing landscape and quieter moments may appeal
+              to travellers who prefer a flexible pace. Rainfall
+              varies from year to year.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       05 — WHERE TO STAY
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-24 sm:px-8 sm:pb-28 lg:pb-36">
+
+      <div class="reveal flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+
+        <div>
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            04 / Your Stay
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+            Somewhere to
+            <span class="italic">slow down.</span>
+          </h2>
+
+        </div>
+
+        <p class="max-w-md font-sans text-sm leading-7 text-kavora-green/60">
+          The right base shapes the entire experience.
+          We consider setting, atmosphere, privacy and access
+          to the activities that matter most to you.
+        </p>
+
+      </div>
+
+
+      <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+        <!-- STAY 01 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=85"
+              alt="A secluded lodge surrounded by nature"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / Seclusion</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Private Lakeside Retreat</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              For travellers seeking a peaceful setting, considered
+              service and time away from the pace of everyday life.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Privacy · Space · Stillness
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- STAY 02 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85"
+              alt="A nature-focused lodge setting"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Nature</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Nature-Led Lodge</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              A comfortable base for early starts, guided outings
+              and returning to the calm of the surrounding gardens.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Wildlife · Gardens · Discovery
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- STAY 03 -->
+        <article class="stay-card reveal group">
+
+          <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
+            <img
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+              alt="A refined retreat with a pool and landscaped grounds"
+              loading="lazy"
+              class="destination-image absolute inset-0 h-full w-full object-cover"
+            >
+            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">03 / Comfort</span>
+          </div>
+
+          <div class="pt-6">
+
+            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Refined Country House</h3>
+
+            <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
+              For a more intimate escape, with thoughtful hospitality,
+              generous spaces and a slower daily rhythm.
+            </p>
+
+            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
+              Character · Comfort · Ease
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <p class="reveal mt-10 max-w-2xl font-sans text-xs leading-6 text-kavora-green/45">
+        Accommodation suggestions are presented as stay styles.
+        Specific properties should be selected and confirmed according
+        to your dates, preferences and availability.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       06 — CONSIDERED JOURNEYS
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-24 sm:px-8 sm:pb-28 lg:pb-36">
+
+      <div class="reveal">
+
+        <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+          <span class="h-px w-9 bg-kavora-gold"></span>
+          05 / Considered Journeys
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl">
+          Ways into
+          <span class="italic text-kavora-gold">Naivasha.</span>
+        </h2>
+
+        <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+          Lake Naivasha works beautifully as a destination in its
+          own right or as part of a wider Kenyan journey. Each route
+          can be adapted to your pace and interests.
+        </p>
+
+      </div>
+
+
+      <div class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+
+        <!-- JOURNEY 01 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">01</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">2—3 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Lakeside Escape
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Lake Naivasha at leisure
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            A relaxed stay centred on boat safaris, birdwatching,
+            leisurely meals and unhurried time beside the water.
+          </p>
+
+          <a
+            href="contact.html?journey=Lakeside%20Escape"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 02 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">02</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">3—4 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Rift Valley Explorer
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Naivasha + Hell’s Gate
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            Combine peaceful lakeside moments with walking,
+            cycling and the dramatic geological scenery of
+            Hell’s Gate National Park.
+          </p>
+
+          <a
+            href="contact.html?journey=Rift%20Valley%20Explorer"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 03 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">03</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">5—7 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Classic Kenya Journey
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Naivasha + Maasai Mara
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            Move from the quiet waters of the Rift Valley to
+            the wide savannahs and celebrated wildlife of the
+            Maasai Mara.
+          </p>
+
+          <a
+            href="contact.html?journey=Classic%20Kenya"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+
+        <!-- JOURNEY 04 -->
+        <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
+
+          <div class="flex items-start justify-between gap-8">
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">04</span>
+            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">7—10 Nights</span>
+          </div>
+
+          <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
+            The Great Kenya Circuit
+          </h3>
+
+          <p class="mt-4 font-sans text-[10px] font-semibold uppercase tracking-[.2em] text-kavora-gold">
+            Naivasha + Amboseli + Mara
+          </p>
+
+          <p class="mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+            A broader journey through contrasting landscapes,
+            from the Rift Valley to elephant country and the
+            wildlife-rich plains of the Mara.
+          </p>
+
+          <a
+            href="contact.html?journey=Great%20Kenya%20Circuit"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
+          >
+            Explore Journey
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       07 — THE KAVORA APPROACH
+  ====================================================== -->
+
+  <section class="bg-kavora-green text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+
+        <div class="reveal lg:col-span-5">
+
+          <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            06 / The Kavora Approach
+          </p>
+
+          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+            Thoughtfully
+            <span class="block italic text-kavora-gold">put together.</span>
+          </h2>
+
+          <p class="mt-8 max-w-md font-sans text-sm leading-8 text-white/55">
+            A meaningful journey is shaped by more than the
+            destination. It is the considered balance of timing,
+            place, people and the freedom to experience each day
+            in your own way.
+          </p>
+
+          <a
+            href="contact.html?destination=Lake%20Naivasha"
+            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-gold"
+          >
+            Plan with Kavora
+            <span class="ml-4 text-lg">↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-6 lg:col-start-7">
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">01</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Personalised Planning</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              Your interests, travel pace and preferred style of
+              accommodation guide the design of your journey.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">02</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Considered Stays</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              We focus on finding the right setting for the
+              experience you want, rather than simply filling nights.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">03</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Local Knowledge</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              Good planning considers when to visit, how to move
+              between places and which experiences suit the season.
+            </p>
+
+          </div>
+
+
+          <div class="reveal border-t border-white/10 pt-6">
+
+            <span class="font-sans text-[9px] uppercase tracking-[.25em] text-kavora-gold">04</span>
+
+            <h3 class="mt-5 font-luxury text-3xl italic text-kavora-gold">Concierge Support</h3>
+
+            <p class="mt-4 font-sans text-sm leading-6 text-white/55">
+              From the initial enquiry through the details of
+              your itinerary, we help bring the moving parts together.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="reveal mt-5 border-t border-white/10 pt-10 lg:col-span-12">
+
+          <p class="max-w-4xl font-luxury text-4xl leading-none sm:text-5xl lg:text-6xl">
+            Luxury is not having more.
+            <span class="italic text-kavora-gold">
+              It is having exactly what makes the journey yours.
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       08 — PRACTICAL INFORMATION
+  ====================================================== -->
+
+  <section class="bg-kavora-ivory text-kavora-green">
+
+    <div class="mx-auto max-w-[1000px] px-6 py-24 sm:px-8 sm:py-28 lg:py-36">
+
+      <div class="reveal mx-auto max-w-3xl text-center">
+
+        <p class="mb-7 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
+          Before You Go
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+          A few things
+          <span class="italic">to know.</span>
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
+          A little preparation helps make time at Lake Naivasha
+          more comfortable, flexible and rewarding.
+        </p>
+
+      </div>
+
+
+      <div class="mt-14">
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              How long should I spend at Lake Naivasha?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Two to three nights can provide time for a boat safari,
+                a visit to Crescent Island and a relaxed lakeside stay.
+                Add more time if you want to explore Hell’s Gate or
+                include additional stops in the Rift Valley.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              Can Lake Naivasha be combined with a safari?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Yes. It can be combined with destinations such as the
+                Maasai Mara or Amboseli. The best route depends on your
+                total travel time, preferred experiences and transport
+                arrangements.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              What should I bring?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Comfortable walking shoes, light layers, sun protection,
+                binoculars for birdwatching and a light waterproof layer
+                are useful. What you need will depend on the season and
+                the activities planned.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              Is Lake Naivasha suitable for a private trip?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                Yes. Private transport, a carefully chosen lodge and
+                individually arranged activities can make the visit
+                feel more personal. Boat trips and guided walks should
+                be arranged with qualified local operators.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button class="faq-question" aria-expanded="false">
+
+            <span class="font-luxury text-2xl sm:text-3xl">
+              Is Lake Naivasha a good destination for birdwatching?
+            </span>
+
+            <span class="faq-icon">+</span>
+
+          </button>
+
+          <div class="faq-answer">
+            <div>
+              <p class="max-w-3xl pb-6 font-sans text-sm leading-7 text-kavora-green/60">
+                The lake and its surrounding habitats support diverse
+                birdlife. A knowledgeable local guide can help you
+                identify species and choose suitable locations and times.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       09 — FINAL CTA
+  ====================================================== -->
+
+  <section class="relative overflow-hidden bg-kavora-forest text-kavora-ivory">
+
+    <div class="absolute inset-0 opacity-25">
+
+      <img
+        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85"
+        alt=""
+        loading="lazy"
+        class="h-full w-full object-cover"
+      >
+
+    </div>
+
+    <div class="absolute inset-0 bg-kavora-green/75"></div>
+
+    <div class="relative mx-auto max-w-[1200px] px-6 py-28 text-center sm:px-8 sm:py-36 lg:py-44">
+
+      <div class="reveal mx-auto max-w-4xl">
+
+        <p class="mb-8 font-sans text-[10px] font-semibold uppercase tracking-[.3em] text-kavora-gold">
+          Your journey, considered
+        </p>
+
+        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl lg:text-8xl">
+          Let the lake
+          <span class="block italic text-kavora-gold">set the pace.</span>
+        </h2>
+
+        <p class="mx-auto mt-8 max-w-xl font-sans text-sm leading-8 text-white/65 sm:text-base">
+          Tell us how you would like to experience Lake Naivasha.
+          We will help shape a journey around your interests,
+          your pace and the details that matter to you.
+        </p>
+
+        <a
+          href="contact.html?destination=Lake%20Naivasha"
+          class="mt-10 inline-flex items-center gap-5 border border-kavora-gold px-8 py-5 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-ivory transition duration-500 hover:bg-kavora-gold hover:text-kavora-green"
+        >
+          Begin planning
+          <span class="text-lg">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="bg-kavora-green text-kavora-ivory">
+
+    <div class="mx-auto max-w-[1200px] px-6 pb-7 pt-16 sm:px-8 lg:pt-20">
+
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+
+        <div class="sm:col-span-2 lg:col-span-5">
+
+          <a href="index.html" class="inline-block font-luxury text-4xl tracking-wide">
+            KAVORA
+            <span class="ml-1 text-kavora-gold">.</span>
+          </a>
+
+          <p class="mt-2 font-sans text-[9px] uppercase tracking-[.28em] text-kavora-gold">
+            Africa · Considered Journeys
+          </p>
+
+          <p class="mt-7 max-w-sm font-sans text-sm leading-7 text-white/50">
+            Thoughtfully designed journeys across Africa,
+            shaped around the places, people and experiences
+            that stay with you.
+          </p>
+
+        </div>
+
+
+        <div class="lg:col-span-2 lg:col-start-7">
+
+          <h3 class="mb-6 font-sans text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore
+          </h3>
+
+          <ul class="space-y-4 font-sans text-xs text-white/65">
+            <li><a href="destinations.html" class="transition hover:text-kavora-gold">Destinations</a></li>
+            <li><a href="journeys.html" class="transition hover:text-kavora-gold">Journeys</a></li>
+            <li><a href="experiences.html" class="transition hover:text-kavora-gold">Experiences</a></li>
+          </ul>
+
+        </div>
+
+
+        <div class="lg:col-span-3">
+
+          <h3 class="mb-6 font-sans text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Get in Touch
+          </h3>
+
+          <ul class="space-y-4 font-sans text-xs text-white/65">
+            <li><a href="contact.html" class="transition hover:text-kavora-gold">Plan your journey</a></li>
+            <li><a href="mailto:info@kavora.africa" class="transition hover:text-kavora-gold">Email Kavora</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-16 border-t border-white/10 py-7">
+
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+          <p class="font-sans text-[9px] uppercase tracking-[.2em] text-white/40">
+            © 2026 Kavora Africa
+          </p>
+
+          <p class="font-sans text-[9px] uppercase tracking-[.2em] text-white/40">
+            Considered journeys. Lasting perspective.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -35px 0px'
+    });
+
+    document.querySelectorAll('.reveal, .image-reveal').forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
