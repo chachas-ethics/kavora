@@ -104,12 +104,16 @@
       transform-origin: left;
     }
 
-    .hero {
-      min-height: min(850px, 100svh);
-      position: relative;
-      isolation: isolate;
-      background: var(--forest);
-    }
+  
+.hero {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  background: var(--kavora-deep);
+  isolation: isolate;
+  overflow: hidden;
+}
+
 
     .hero-image {
       position: absolute;
@@ -335,7 +339,7 @@
        NAVIGATION
        ===================================================== -->
 
-  <header class="absolute inset-x-0 top-0 z-50 border-b border-white/15 text-white">
+  <header class="hidden absolute inset-x-0 top-0 z-50 border-b border-white/15 text-white">
     <nav class="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 md:px-10 lg:px-16">
 
       <a href="index.html" aria-label="Kavora Africa homepage" class="flex items-center">
@@ -391,7 +395,7 @@
   <section class="hero flex items-end text-white">
 
     <img
-      src="https://visitrwanda.com/wp-content/uploads/2024/07/Rwanda-destination-Guide.pdf"
+      src="https://visitrwanda.com/wp-content/uploads/2024/07/Rwanda-destination-Guide.pf"
       alt=""
       class="hidden"
       aria-hidden="true"
@@ -399,8 +403,8 @@
 
     <!-- Replace with a licensed, high-resolution Volcanoes National Park landscape image -->
     <img
-      src="images/volcanoes-national-park-hero.jpg"
-      alt="Misty volcanic mountains rising above the rainforest in Rwanda"
+      src="https://www.selfdriverwanda.com/wp-content/uploads/2025/09/rwanda-gorilla-volcanoes-park-1024x683-1.jpg"
+      alt="Volcanoes national Park Wildlife"
       class="hero-image"
       fetchpriority="high"
     />
@@ -409,14 +413,10 @@
 
       <div class="max-w-4xl">
 
-        <div class="mb-7 flex items-center gap-4">
-          <span class="h-px w-12 bg-kavora-gold"></span>
-          <p class="eyebrow text-kavora-gold">Rwanda · The Virunga Mountains</p>
-        </div>
+      
 
         <h1 class="font-luxury text-6xl font-normal leading-[0.91] tracking-[-0.035em] sm:text-7xl md:text-8xl lg:text-[112px]">
-          Volcanoes<br />
-          <span class="italic text-kavora-gold">National Park</span>
+          <span class="italic text-kavora-gold">Volcanoes</span> National Park
         </h1>
 
         <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/85 md:text-base md:leading-8">
@@ -429,21 +429,11 @@
           <a href="contact.html?destination=Volcanoes%20National%20Park" class="button-gold">
             Design My Journey <span aria-hidden="true">↗</span>
           </a>
-          <a href="#experiences" class="button-outline">
-            Discover the Experience <span aria-hidden="true">↓</span>
-          </a>
+        
         </div>
 
       </div>
 
-      <div class="mt-16 flex items-end justify-between border-t border-white/30 pt-5 md:mt-24">
-        <p class="eyebrow max-w-[220px] leading-5 text-white/70">
-          A private journey, thoughtfully considered
-        </p>
-        <p class="font-luxury text-2xl italic text-white/90 md:text-3xl">
-          Rwanda, differently.
-        </p>
-      </div>
 
     </div>
   </section>
@@ -457,11 +447,11 @@
     <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
 
       <div class="reveal lg:col-span-5">
-        <p class="eyebrow mb-6 text-kavora-muted">01 / The destination</p>
+        <p class="eyebrow mb-6 text-kavora-gold">The destination</p>
 
-        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+        <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
           A world above<br />
-          <span class="italic text-kavora-green">the ordinary.</span>
+          <span class="italic text-kavora-gold">the ordinary.</span>
         </h2>
       </div>
 
@@ -489,9 +479,9 @@
 
         <a
           href="contact.html?destination=Volcanoes%20National%20Park"
-          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition hover:text-kavora-gold"
+          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:text-kavora-gold"
         >
-          Begin a conversation <span class="text-lg" aria-hidden="true">↗</span>
+          Begin a conversation
         </a>
       </div>
 
@@ -509,10 +499,10 @@
       <div class="reveal mb-12 flex flex-col justify-between gap-7 md:mb-16 md:flex-row md:items-end">
 
         <div>
-          <p class="eyebrow mb-5 text-kavora-muted">02 / Beyond the expected</p>
+          <p class="eyebrow mb-5 text-kavora-gold">Beyond the expected</p>
           <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
             Experiences with<br />
-            <span class="italic text-kavora-green">a deeper meaning.</span>
+            <span class="italic text-kavora-gold">a deeper meaning.</span>
           </h2>
         </div>
 
@@ -529,20 +519,16 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/volcanoes-mountain-gorillas.jpg"
-              alt="Mountain gorilla in the dense green forest of Volcanoes National Park"
+              src="https://www.theafricaspecialists.com/wp-content/uploads/2025/12/mountain-gorilla-pic-4-africa-specialists-hdr-pic-q76-1a-2048x1152.jpg.webp"
+              alt="Mountain Gorilla in Volcanoes national park"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
             />
-            <span class="absolute bottom-5 left-5 bg-kavora-ivory px-4 py-2 eyebrow text-kavora-forest">
-              The defining encounter
-            </span>
+          
           </div>
 
           <div class="p-6 md:p-7">
             <div class="mb-5 flex items-center justify-between">
-              <span class="number-mark">01</span>
-              <span class="eyebrow text-kavora-muted">Wildlife</span>
             </div>
 
             <h3 class="font-luxury text-3xl">Mountain Gorilla Trekking</h3>
@@ -562,8 +548,8 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/volcanoes-golden-monkeys.jpg"
-              alt="Golden monkey among bamboo and green foliage"
+              src="https://images.ctfassets.net/wds1hqrprqxb/5xMCh8YLJE1G5w1lOQTcoc/6b40a8fca065c58195091846b1cf2b3f/SVNP_WILDLIFE_Golden_Monkey_Ross_Couper_8.jpg"
+              alt="Golden monkey Trekking in volcanoes national parks"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
             />
@@ -571,8 +557,6 @@
 
           <div class="p-6 md:p-7">
             <div class="mb-5 flex items-center justify-between">
-              <span class="number-mark">02</span>
-              <span class="eyebrow text-kavora-muted">In the forest</span>
             </div>
 
             <h3 class="font-luxury text-3xl">Golden Monkey Tracking</h3>
@@ -592,7 +576,7 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/volcanoes-mount-bisoke.jpg"
+              src="https://www.africangorilla.com/wp-content/uploads/2019/02/Mount-Bisoke-Trekking-Guide-Costs-Permits-and-Essentials.jpg"
               alt="Mount Bisoke rising above the clouds in Rwanda"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
@@ -601,8 +585,6 @@
 
           <div class="p-6 md:p-7">
             <div class="mb-5 flex items-center justify-between">
-              <span class="number-mark">03</span>
-              <span class="eyebrow text-kavora-muted">On foot</span>
             </div>
 
             <h3 class="font-luxury text-3xl">Volcanic Mountain Hikes</h3>
@@ -622,7 +604,7 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/dian-fossey-conservation.jpg"
+              src="https://www.volcanoesnationalpark.com/wp-content/uploads/2025/05/Dian-Fossey.jpg"
               alt="Forested Virunga mountain landscape associated with gorilla conservation"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
@@ -631,8 +613,6 @@
 
           <div class="p-6 md:p-7">
             <div class="mb-5 flex items-center justify-between">
-              <span class="number-mark">04</span>
-              <span class="eyebrow text-kavora-muted">Conservation</span>
             </div>
 
             <h3 class="font-luxury text-3xl">The Dian Fossey Legacy</h3>
@@ -653,7 +633,7 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/volcanoes-twin-lakes.jpg"
+              src="https://trekgorillasafaris.com/wp-content/uploads/2024/07/Exploring-the-Twin-Lakes-in-Rwanda-1.jpg"
               alt="Lake Burera and Lake Ruhondo surrounded by Rwanda's green hills"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
@@ -662,8 +642,6 @@
 
           <div class="p-6 md:p-7">
             <div class="mb-5 flex items-center justify-between">
-              <span class="number-mark">05</span>
-              <span class="eyebrow text-kavora-muted">Slow exploration</span>
             </div>
 
             <h3 class="font-luxury text-3xl">The Twin Lakes</h3>
@@ -684,8 +662,8 @@
         <article class="experience-card reveal group">
           <div class="image-frame h-[290px]">
             <img
-              src="images/volcanoes-lodge-experience.jpg"
-              alt="Luxury lodge terrace overlooking the green Virunga mountains"
+              src="https://yourperfectafrica.com/wp-content/uploads/2022/03/virunga-lodge-8.jpg?ref=virunga-lodge"
+              alt="Virunga Mountains Luxury lodge"
               loading="lazy"
               class="destination-image h-full w-full object-cover"
             />
@@ -724,9 +702,9 @@
     <div class="mx-auto grid max-w-[1300px] gap-12 lg:grid-cols-12 lg:gap-16">
 
       <div class="reveal lg:col-span-5">
-        <p class="eyebrow mb-6 text-kavora-gold">03 / Finding your moment</p>
+        <p class="eyebrow mb-6 text-kavora-gold">Finding your moment</p>
 
-        <h2 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
+        <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
           The right season.<br />
           <span class="italic text-kavora-gold">Your kind of journey.</span>
         </h2>
@@ -811,10 +789,10 @@
 
       <div class="reveal mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
         <div>
-          <p class="eyebrow mb-5 text-kavora-muted">04 / A place to return to</p>
-          <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
+          <p class="eyebrow mb-5 text-kavora-gold">A place to return to</p>
+          <h2 class="font-luxury text-6xl font-normal leading-none md:text-6xl lg:text-7xl">
             Stay close to<br />
-            <span class="italic text-kavora-green">what matters.</span>
+            <span class="italic text-kavora-gold">what matters.</span>
           </h2>
         </div>
 
@@ -831,18 +809,15 @@
         <article class="stay-card reveal group">
           <div class="image-frame h-[380px] md:h-[430px]">
             <img
-              src="images/volcanoes-ultra-luxury-lodge.jpg"
+              src="https://yourperfectafrica.com/wp-content/uploads/2022/03/virunga-lodge-8.jpg?ref=virunga-lodge"
               alt="Contemporary luxury lodge nestled in the Virunga landscape"
               loading="lazy"
               class="h-full w-full object-cover"
             />
-            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
-              Privacy & design
-            </span>
           </div>
 
           <div class="pt-6">
-            <p class="eyebrow text-kavora-muted">For the considered traveller</p>
+            <p class="eyebrow text-kavora-gold">For the considered traveller</p>
             <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Intimate Luxury Lodges</h3>
             <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
               Design-led spaces, attentive service and a strong sense of place,
@@ -855,18 +830,15 @@
         <article class="stay-card reveal group">
           <div class="image-frame h-[380px] md:h-[430px]">
             <img
-              src="images/volcanoes-lodge-fireplace.jpg"
-              alt="Warm and elegant lodge lounge overlooking the mountains"
+              src="https://visit.virunga.org/wp-content/uploads/2020/08/MikenoLodge-VisitVirunga.jpg"
+              alt="Mikeno Lodge Rwanda"
               loading="lazy"
               class="h-full w-full object-cover"
             />
-            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
-              Warmth & comfort
-            </span>
           </div>
 
           <div class="pt-6">
-            <p class="eyebrow text-kavora-muted">For restorative downtime</p>
+            <p class="eyebrow text-kavora-gold">For restorative downtime</p>
             <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Refined Mountain Retreats</h3>
             <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
               Inviting interiors, thoughtful dining and peaceful spaces in
@@ -879,18 +851,15 @@
         <article class="stay-card reveal group">
           <div class="image-frame h-[380px] md:h-[430px]">
             <img
-              src="images/volcanoes-private-suite.jpg"
+              src="https://www.chaloafrica.com/wp-content/uploads/2018/05/Mikeno-Lodge-View.jpg"
               alt="Private suite with natural textures and views of green mountains"
               loading="lazy"
               class="h-full w-full object-cover"
             />
-            <span class="absolute left-5 top-5 bg-kavora-ivory px-4 py-2 eyebrow">
-              Personalised stays
-            </span>
           </div>
 
           <div class="pt-6">
-            <p class="eyebrow text-kavora-muted">For couples & special occasions</p>
+            <p class="eyebrow text-kavora-gold">For couples & special occasions</p>
             <h3 class="mt-3 font-luxury text-3xl md:text-4xl">Private, Personal Spaces</h3>
             <p class="mt-4 text-sm font-light leading-7 text-kavora-muted">
               Carefully matched rooms, suites and lodge experiences for
@@ -920,10 +889,10 @@
     <div class="mx-auto max-w-[1300px]">
 
       <div class="reveal mb-12 md:mb-16">
-        <p class="eyebrow mb-5 text-kavora-muted">05 / Ways to experience it</p>
+        <p class="eyebrow mb-5 text-kavora-gold">Ways to experience it</p>
         <h2 class="font-luxury text-5xl font-normal leading-none md:text-6xl lg:text-7xl">
           One destination.<br />
-          <span class="italic text-kavora-green">Different ways to feel it.</span>
+          <span class="italic text-kavora-gold">Different ways to feel it.</span>
         </h2>
         <p class="mt-6 max-w-2xl text-sm font-light leading-8 text-kavora-muted">
           These are starting points, not fixed packages. We shape each journey
@@ -938,8 +907,8 @@
         <article class="reveal group grid overflow-hidden border border-kavora-line md:grid-cols-2">
           <div class="image-frame min-h-[300px] md:min-h-[430px]">
             <img
-              src="images/volcanoes-gorilla-journey.jpg"
-              alt="Mountain gorilla in its natural rainforest habitat"
+              src="https://www.explorerwandatours.com/wp-content/uploads/2021/11/volcanoes-national-park-355158194-1200x900-1.jpg"
+              alt="Mountain gorilla habitat"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             />

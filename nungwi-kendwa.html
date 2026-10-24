@@ -1,0 +1,2623 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nungwi & Kendwa | Kavora Africa — Considered Journeys</title>
+
+  <meta name="description" content="Discover Nungwi and Kendwa with Kavora Africa. Explore Zanzibar's northern beaches, private dhow sailing, turquoise waters, intimate oceanfront stays and considered island journeys.">
+
+  <meta name="theme-color" content="#0B211A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kavora: {
+              deep: '#0B211A',
+              green: '#102D23',
+              forest: '#1D4535',
+              gold: '#C8A96B',
+              ivory: '#F7F5EF',
+              sand: '#E4E0D6',
+              stone: '#74786F',
+              line: '#D8D2C5'
+            }
+          },
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --deep: #0B211A;
+      --green: #102D23;
+      --forest: #1D4535;
+      --gold: #C8A96B;
+      --ivory: #F7F5EF;
+      --sand: #E4E0D6;
+      --stone: #74786F;
+      --line: #D8D2C5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--deep);
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--deep);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .section-shell {
+      width: min(100% - 48px, 1320px);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--stone);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .eyebrow-light {
+      color: rgba(247, 245, 239, .7);
+    }
+
+    .gold-line {
+      width: 64px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .image-clip {
+      overflow: hidden;
+      background: var(--sand);
+    }
+
+    .image-clip img,
+    .destination-image {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.1s cubic-bezier(.2, .65, .3, 1);
+    }
+
+    .image-clip:hover img,
+    .group:hover .destination-image {
+      transform: scale(1.045);
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: fixed;
+      z-index: 50;
+      inset: 0 0 auto;
+      border-bottom: 1px solid rgba(247, 245, 239, .16);
+      color: var(--ivory);
+      transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(247, 245, 239, .96);
+      color: var(--deep);
+      border-color: var(--line);
+      box-shadow: 0 8px 30px rgba(11, 33, 26, .04);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      min-height: 86px;
+    }
+
+    .brand-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 29px;
+      font-weight: 500;
+      letter-spacing: .19em;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      margin-top: 7px;
+      font-size: 7px;
+      font-weight: 500;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      position: relative;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid currentColor;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 780px;
+      height: 100svh;
+      max-height: 1080px;
+      align-items: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: var(--ivory);
+    }
+
+    .hero-background,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      animation: heroReveal 1.7s ease both;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(5, 20, 15, .68) 0%, rgba(5, 20, 15, .28) 55%, rgba(5, 20, 15, .12) 100%),
+        linear-gradient(0deg, rgba(5, 20, 15, .48), transparent 40%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(100% - 48px, 1320px);
+      margin: 90px auto 0;
+    }
+
+    .hero-kicker {
+      color: rgba(247, 245, 239, .85);
+      font-size: 9px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      max-width: 850px;
+      margin-top: 28px;
+      font-size: clamp(76px, 11.5vw, 156px);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: .79;
+    }
+
+    .hero-title em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      max-width: 420px;
+      margin-top: 36px;
+      color: rgba(247, 245, 239, .82);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 2.1;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 26px;
+      margin-top: 34px;
+    }
+
+    .button-primary {
+      display: inline-flex;
+      min-height: 53px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 25px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--deep);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: background .3s ease, color .3s ease;
+    }
+
+    .button-primary:hover {
+      background: transparent;
+      color: var(--ivory);
+    }
+
+    .button-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .button-text span {
+      color: var(--gold);
+      transition: transform .3s ease;
+    }
+
+    .button-text:hover span {
+      transform: translateX(5px);
+    }
+
+    .hero-index {
+      position: absolute;
+      right: 30px;
+      bottom: 55px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: rgba(247, 245, 239, .78);
+      font-size: 8px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .hero-index::before {
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .hero-side-label {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      color: rgba(247, 245, 239, .75);
+      font-size: 8px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: translateY(-50%);
+    }
+
+    @keyframes heroReveal {
+      from {
+        opacity: .45;
+        transform: scale(1.055);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      padding-block: 145px 125px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .intro-heading {
+      max-width: 580px;
+      margin-top: 28px;
+      font-size: clamp(48px, 6vw, 78px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: .99;
+    }
+
+    .intro-heading em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .intro-copy {
+      max-width: 510px;
+      padding-top: 43px;
+    }
+
+    .intro-copy p {
+      margin-bottom: 19px;
+      color: var(--stone);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 2.15;
+    }
+
+    .intro-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 43px;
+      padding-top: 27px;
+      border-top: 1px solid var(--line);
+    }
+
+    .intro-fact strong {
+      display: block;
+      color: var(--deep);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .intro-fact span {
+      display: block;
+      margin-top: 5px;
+      color: var(--stone);
+      font-size: 8px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* HERITAGE / FEATURE */
+
+    .heritage-section {
+      padding-bottom: 135px;
+    }
+
+    .heritage-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .heritage-image {
+      position: relative;
+      min-height: 660px;
+    }
+
+    .heritage-image img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 18px 23px;
+      background: var(--ivory);
+      color: var(--stone);
+      font-size: 8px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .heritage-copy {
+      padding-block: 35px;
+    }
+
+    .heritage-copy h2 {
+      max-width: 520px;
+      margin-top: 28px;
+      font-size: clamp(48px, 5.6vw, 72px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: .98;
+    }
+
+    .heritage-copy h2 em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .heritage-copy p {
+      max-width: 440px;
+      margin-top: 25px;
+      color: var(--stone);
+      font-size: 12px;
+      line-height: 2.15;
+    }
+
+    .heritage-list {
+      display: grid;
+      gap: 0;
+      max-width: 440px;
+      margin-top: 33px;
+      border-top: 1px solid var(--line);
+    }
+
+    .heritage-list div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding-block: 15px;
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+    }
+
+    .heritage-list span:first-child {
+      color: var(--deep);
+      font-weight: 500;
+    }
+
+    .heritage-list span:last-child {
+      color: var(--stone);
+      font-size: 9px;
+    }
+
+    /* EXPERIENCES */
+
+    .experiences-section {
+      padding-block: 120px 140px;
+      background: #EEECE4;
+    }
+
+    .section-heading-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 54px;
+    }
+
+    .section-heading {
+      max-width: 660px;
+      margin-top: 23px;
+      font-size: clamp(48px, 6vw, 76px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: .98;
+    }
+
+    .section-heading em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .section-description {
+      max-width: 330px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .experience-feature {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      min-height: 530px;
+      border: 1px solid var(--line);
+    }
+
+    .experience-feature-image {
+      min-height: 420px;
+    }
+
+    .experience-feature-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(30px, 5vw, 75px);
+      background: var(--ivory);
+    }
+
+    .experience-number {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+    }
+
+    .experience-feature-copy h3 {
+      max-width: 390px;
+      margin-top: 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(39px, 4.5vw, 57px);
+      font-weight: 400;
+      line-height: .98;
+    }
+
+    .experience-feature-copy p {
+      max-width: 390px;
+      margin-top: 22px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2.1;
+    }
+
+    .experience-feature-copy .button-text {
+      align-self: flex-start;
+      margin-top: 27px;
+    }
+
+    .experience-rows {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 50px;
+      margin-top: 45px;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-row {
+      display: grid;
+      grid-template-columns: 52px 1fr 25px;
+      align-items: center;
+      gap: 15px;
+      padding-block: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-row .row-number {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+    }
+
+    .experience-row h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      font-weight: 400;
+    }
+
+    .experience-row p {
+      margin-top: 5px;
+      color: var(--stone);
+      font-size: 10px;
+      line-height: 1.8;
+    }
+
+    .experience-row .row-arrow {
+      color: var(--forest);
+      font-size: 19px;
+      transition: transform .25s ease;
+    }
+
+    .experience-row:hover .row-arrow {
+      transform: translateX(4px);
+    }
+
+    /* PAUSE */
+
+    .pause-section {
+      position: relative;
+      display: flex;
+      min-height: 540px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--deep);
+      color: var(--ivory);
+      text-align: center;
+    }
+
+    .pause-background,
+    .pause-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .pause-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pause-overlay {
+      background: rgba(7, 28, 21, .58);
+    }
+
+    .pause-content {
+      position: relative;
+      z-index: 2;
+      width: min(100% - 40px, 850px);
+      padding-block: 90px;
+    }
+
+    .pause-quote {
+      margin-top: 27px;
+      font-size: clamp(45px, 6.6vw, 82px);
+      font-weight: 400;
+      letter-spacing: -.025em;
+      line-height: 1.02;
+    }
+
+    .pause-quote em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .pause-content p {
+      max-width: 430px;
+      margin: 26px auto 0;
+      color: rgba(247, 245, 239, .78);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    /* JOURNEYS */
+
+    .journey-section {
+      padding-block: 140px;
+      background: var(--deep);
+      color: var(--ivory);
+    }
+
+    .journey-section .section-heading em {
+      color: var(--gold);
+    }
+
+    .journey-section .section-description {
+      color: rgba(247, 245, 239, .65);
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 60px;
+    }
+
+    .journey-card {
+      display: flex;
+      min-height: 395px;
+      flex-direction: column;
+      justify-content: end;
+      padding: 32px;
+      border: 1px solid rgba(247, 245, 239, .19);
+      background: rgba(247, 245, 239, .035);
+      transition: background .3s ease, border-color .3s ease;
+    }
+
+    .journey-card:hover {
+      border-color: rgba(200, 169, 107, .6);
+      background: rgba(247, 245, 239, .065);
+    }
+
+    .journey-card .journey-number {
+      margin-bottom: auto;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+    }
+
+    .journey-card h3 {
+      max-width: 300px;
+      margin-top: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .journey-card p {
+      margin-top: 17px;
+      color: rgba(247, 245, 239, .67);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    .journey-card a {
+      display: inline-flex;
+      align-self: flex-start;
+      gap: 12px;
+      margin-top: 25px;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    /* STAYS */
+
+    .stay-section {
+      padding-block: 140px;
+    }
+
+    .stay-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 95px;
+      align-items: center;
+    }
+
+    .stay-copy h2 {
+      max-width: 470px;
+      margin-top: 26px;
+      font-size: clamp(48px, 5.5vw, 72px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: .97;
+    }
+
+    .stay-copy h2 em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .stay-copy p {
+      max-width: 420px;
+      margin-top: 24px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2.1;
+    }
+
+    .stay-copy .button-primary {
+      margin-top: 28px;
+    }
+
+    .stay-image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .stay-image-grid .stay-image:first-child {
+      margin-top: 50px;
+    }
+
+    .stay-image {
+      height: 360px;
+    }
+
+    .stay-image:nth-child(2) {
+      height: 300px;
+    }
+
+    .stay-image-label {
+      margin-top: 13px;
+      color: var(--stone);
+      font-size: 8px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding-block: 115px;
+      background: #EEECE4;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px;
+    }
+
+    .faq-intro h2 {
+      max-width: 420px;
+      margin-top: 25px;
+      font-size: clamp(45px, 5.5vw, 66px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1;
+    }
+
+    .faq-intro h2 em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .faq-intro p {
+      max-width: 340px;
+      margin-top: 22px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 23px;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span:first-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .faq-icon {
+      color: var(--forest);
+      font-size: 20px;
+      transition: transform .3s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .faq-answer p {
+      max-width: 580px;
+      padding-bottom: 23px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2.1;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* ENQUIRY */
+
+    .enquiry-section {
+      padding-block: 140px;
+      background: var(--ivory);
+    }
+
+    .enquiry-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 100px;
+    }
+
+    .enquiry-copy h2 {
+      max-width: 500px;
+      margin-top: 26px;
+      font-size: clamp(48px, 5.5vw, 74px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: .95;
+    }
+
+    .enquiry-copy h2 em {
+      color: var(--forest);
+      font-weight: 400;
+    }
+
+    .enquiry-copy p {
+      max-width: 380px;
+      margin-top: 24px;
+      color: var(--stone);
+      font-size: 11px;
+      line-height: 2.1;
+    }
+
+    .enquiry-note {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 40px;
+      color: var(--stone);
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .enquiry-note::before {
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .enquiry-form {
+      padding: clamp(25px, 4vw, 48px);
+      border: 1px solid var(--line);
+      background: #F2F0E9;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 20px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--stone);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 45px;
+      padding: 11px 0;
+      border: 0;
+      border-bottom: 1px solid #CFC9BC;
+      border-radius: 0;
+      outline: none;
+      background: transparent;
+      color: var(--deep);
+      font-size: 11px;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-field textarea {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 28px;
+      cursor: pointer;
+    }
+
+    .form-privacy {
+      margin-top: 16px;
+      color: var(--stone);
+      font-size: 9px;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding-top: 75px;
+      background: var(--deep);
+      color: var(--ivory);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr .7fr;
+      gap: 70px;
+      padding-bottom: 65px;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 37px;
+      font-weight: 500;
+      letter-spacing: .16em;
+    }
+
+    .footer-tagline {
+      margin-top: 8px;
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+
+    .footer-description {
+      max-width: 320px;
+      margin-top: 24px;
+      color: rgba(247, 245, 239, .62);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    .footer-heading {
+      margin-bottom: 21px;
+      color: var(--gold);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: rgba(247, 245, 239, .75);
+      font-size: 10px;
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(247, 245, 239, .15);
+      color: rgba(247, 245, 239, .48);
+      font-size: 8px;
+      letter-spacing: .09em;
+    }
+
+    .footer-bottom a {
+      color: var(--gold);
+    }
+
+    /* REVEAL ANIMATION */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .65, .3, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1024px) {
+      .intro-grid,
+      .heritage-grid,
+      .stay-grid,
+      .faq-grid,
+      .enquiry-grid {
+        gap: 55px;
+      }
+
+      .heritage-image {
+        min-height: 560px;
+      }
+
+      .stay-image {
+        height: 300px;
+      }
+
+      .stay-image:nth-child(2) {
+        height: 250px;
+      }
+
+      .footer-main {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-shell {
+        width: min(100% - 38px, 600px);
+      }
+
+      .header-inner {
+        min-height: 75px;
+      }
+
+      .brand-mark {
+        font-size: 25px;
+      }
+
+      .desktop-nav,
+      .header-enquiry {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        inset: 75px 0 0;
+        z-index: 49;
+        overflow-y: auto;
+        padding: 30px 24px 50px;
+        background: var(--ivory);
+        color: var(--deep);
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .mobile-menu nav {
+        display: grid;
+      }
+
+      .mobile-menu a {
+        padding-block: 19px;
+        border-bottom: 1px solid var(--line);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 31px;
+      }
+
+      .hero {
+        min-height: 740px;
+        height: 92svh;
+      }
+
+      .hero-content {
+        width: min(100% - 38px, 600px);
+        margin-top: 65px;
+      }
+
+      .hero-title {
+        font-size: clamp(70px, 17vw, 115px);
+      }
+
+      .hero-description {
+        max-width: 330px;
+        font-size: 11px;
+      }
+
+      .hero-side-label {
+        display: none;
+      }
+
+      .hero-index {
+        right: 20px;
+        bottom: 30px;
+      }
+
+      .intro-section {
+        padding-block: 90px;
+      }
+
+      .intro-grid,
+      .heritage-grid,
+      .experience-feature,
+      .stay-grid,
+      .faq-grid,
+      .enquiry-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-heading {
+        font-size: 57px;
+      }
+
+      .intro-copy {
+        padding-top: 0;
+      }
+
+      .intro-fact strong {
+        font-size: 26px;
+      }
+
+      .heritage-section {
+        padding-bottom: 90px;
+      }
+
+      .heritage-image {
+        min-height: 450px;
+      }
+
+      .heritage-copy {
+        padding-top: 0;
+      }
+
+      .heritage-copy h2 {
+        font-size: 57px;
+      }
+
+      .experiences-section,
+      .journey-section,
+      .stay-section,
+      .enquiry-section {
+        padding-block: 90px;
+      }
+
+      .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 35px;
+      }
+
+      .section-heading {
+        font-size: 57px;
+      }
+
+      .experience-feature-image {
+        min-height: 360px;
+      }
+
+      .experience-feature-copy {
+        padding: 32px 25px 38px;
+      }
+
+      .experience-feature-copy h3 {
+        font-size: 46px;
+      }
+
+      .experience-rows {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+      }
+
+      .pause-section {
+        min-height: 460px;
+      }
+
+      .pause-quote {
+        font-size: 53px;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 35px;
+      }
+
+      .journey-card {
+        min-height: 310px;
+        padding: 27px;
+      }
+
+      .journey-card h3 {
+        font-size: 36px;
+      }
+
+      .stay-copy h2,
+      .enquiry-copy h2 {
+        font-size: 58px;
+      }
+
+      .stay-image {
+        height: 280px;
+      }
+
+      .stay-image:nth-child(2) {
+        height: 230px;
+      }
+
+      .faq-section {
+        padding-block: 90px;
+      }
+
+      .faq-question span:first-child {
+        font-size: 23px;
+      }
+
+      .enquiry-form {
+        padding: 25px 20px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px 25px;
+      }
+
+      .footer-brand-column {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        min-height: 90px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9px;
+        padding-block: 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+
+      .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header" id="site-header">
+    <div class="section-shell header-inner flex items-center justify-between">
+
+      <a href="index.html" aria-label="Kavora Africa homepage">
+        <div class="brand-mark">KAVORA</div>
+        <div class="brand-subtitle">Africa · Considered Journeys</div>
+      </a>
+
+      <nav class="desktop-nav flex items-center gap-8" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="#experiences">Experiences</a>
+        <a class="nav-link" href="#journeys">Journeys</a>
+        <a class="nav-link" href="#stays">Where to Stay</a>
+      </nav>
+
+      <a href="#enquire" class="header-enquiry button-primary !min-h-[43px] !px-5">
+        Plan Your Stay
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        type="button"
+      >
+        <span id="menu-icon" class="text-xl">☰</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION -->
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="#introduction">Discover the North</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#journeys">Tailored Journeys</a>
+      <a href="#stays">Where to Stay</a>
+      <a href="#faq">Frequently Asked Questions</a>
+      <a href="#enquire">Plan Your Stay</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero" id="top">
+
+      <div class="hero-background">
+        <img
+          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=90"
+          alt="Turquoise ocean and tropical coastal scenery"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <p class="hero-kicker reveal">
+          Zanzibar · The Northern Coast
+        </p>
+
+        <h1 class="hero-title serif reveal">
+          Nungwi<br>
+          <em>& Kendwa.</em>
+        </h1>
+
+        <p class="hero-description reveal">
+          Where turquoise waters meet unhurried days. Discover Zanzibar's
+          northern shores through private ocean experiences, considered stays
+          and the quiet luxury of having nowhere else to be.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#experiences" class="button-primary">
+            Discover the North
+          </a>
+
+          <a href="#enquire" class="button-text">
+            Create Your Journey <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-side-label">
+        The Indian Ocean · Tanzania
+      </div>
+
+      <div class="hero-index">
+        01 / Zanzibar Collection
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         DESTINATION INTRODUCTION
+         ===================================================== -->
+
+    <section class="intro-section" id="introduction">
+
+      <div class="section-shell intro-grid">
+
+        <div class="reveal">
+          <span class="eyebrow">The Northern Shore</span>
+
+          <h2 class="intro-heading serif">
+            A different rhythm<br>
+            of <em>island living.</em>
+          </h2>
+        </div>
+
+        <div class="intro-copy reveal">
+
+          <p>
+            At the northern tip of Zanzibar, Nungwi and Kendwa offer a
+            different expression of island life. The Indian Ocean shifts
+            through shades of blue, traditional dhow sails cross the horizon,
+            and the day unfolds at its own pace.
+          </p>
+
+          <p>
+            Nungwi brings together coastal culture, fishing traditions,
+            ocean excursions and a lively village atmosphere. Nearby Kendwa
+            offers a more open stretch of sand, spacious beach settings and
+            sunsets that invite you to stay a little longer.
+          </p>
+
+          <p>
+            With Kavora, these two neighbouring destinations become one
+            considered journey, shaped around your interests, preferred pace
+            and idea of the perfect escape.
+          </p>
+
+          <div class="intro-facts">
+
+            <div class="intro-fact">
+              <strong class="serif">01</strong>
+              <span>Island</span>
+            </div>
+
+            <div class="intro-fact">
+              <strong class="serif">02</strong>
+              <span>Coastal Escapes</span>
+            </div>
+
+            <div class="intro-fact">
+              <strong class="serif">∞</strong>
+              <span>Ways to Explore</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         DESTINATION FEATURE
+         ===================================================== -->
+
+    <section class="heritage-section">
+
+      <div class="section-shell heritage-grid">
+
+        <div class="heritage-image image-clip reveal">
+          <img
+            src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=85"
+            alt="Tropical island coastline surrounded by clear blue water"
+            loading="lazy"
+          >
+
+          <div class="image-caption">
+            The Northern Beaches · Zanzibar
+          </div>
+        </div>
+
+        <div class="heritage-copy reveal">
+
+          <span class="eyebrow">Two Shores, One Island</span>
+
+          <h2 class="serif">
+            The character<br>
+            of <em>Nungwi.</em>
+          </h2>
+
+          <div class="gold-line my-7"></div>
+
+          <p>
+            Nungwi is a coastal community where the island's relationship
+            with the sea remains part of everyday life. Wooden dhows,
+            traditional boatbuilding, fishing culture and warm ocean evenings
+            give this northern village a character beyond its beaches.
+          </p>
+
+          <p>
+            Explore the shoreline, arrange a private dhow excursion, discover
+            local traditions or simply allow the hours to unfold between
+            the water and the village.
+          </p>
+
+          <div class="heritage-list">
+
+            <div>
+              <span>Dhow sailing</span>
+              <span>Ocean exploration</span>
+            </div>
+
+            <div>
+              <span>Coastal culture</span>
+              <span>Local traditions</span>
+            </div>
+
+            <div>
+              <span>Marine experiences</span>
+              <span>By arrangement</span>
+            </div>
+
+            <div>
+              <span>Sunset moments</span>
+              <span>Along the shore</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         EXPERIENCES
+         ===================================================== -->
+
+    <section class="experiences-section" id="experiences">
+
+      <div class="section-shell">
+
+        <div class="section-heading-row reveal">
+
+          <div>
+            <span class="eyebrow">The Art of Being Here</span>
+
+            <h2 class="section-heading serif">
+              Experiences<br>
+              <em>worth lingering for.</em>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            From private time on the water to unhurried afternoons on the
+            beach, discover the northern coast in a way that feels entirely
+            your own.
+          </p>
+
+        </div>
+
+        <!-- FEATURED EXPERIENCE -->
+
+        <article class="experience-feature reveal">
+
+          <div class="experience-feature-image image-clip">
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
+              alt="Boat excursion across clear tropical water"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="experience-feature-copy">
+
+            <span class="experience-number">01</span>
+
+            <span class="eyebrow mt-4">Out on the Indian Ocean</span>
+
+            <h3>
+              The sea,<br>
+              at your own pace.
+            </h3>
+
+            <p>
+              Set out across Zanzibar's blue waters on a carefully arranged
+              ocean excursion. Depending on the conditions and your
+              preferences, your day might include dhow sailing, snorkelling,
+              a private boat trip or quiet time anchored off the coast.
+            </p>
+
+            <a href="#enquire" class="button-text">
+              Arrange an Ocean Experience <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- EXPERIENCE ROWS -->
+
+        <div class="experience-rows">
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">02</span>
+
+            <div>
+              <h4>Sunset by Dhow</h4>
+              <p>
+                Take to the water as the light softens over the horizon.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">03</span>
+
+            <div>
+              <h4>The Kendwa Shore</h4>
+              <p>
+                Spend a slower day along a broad stretch of pale sand.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">04</span>
+
+            <div>
+              <h4>Underwater Zanzibar</h4>
+              <p>
+                Explore marine life with a suitable snorkelling or diving
+                experience.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">05</span>
+
+            <div>
+              <h4>Island Flavours</h4>
+              <p>
+                Discover fresh seafood, Swahili dishes and oceanfront dining.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">06</span>
+
+            <div>
+              <h4>Village & Coastal Life</h4>
+              <p>
+                Experience the traditions and daily rhythms of northern
+                Zanzibar.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+          <a href="#enquire" class="experience-row reveal">
+
+            <span class="row-number">07</span>
+
+            <div>
+              <h4>Private Beach Moments</h4>
+              <p>
+                Let us help arrange a more intimate occasion by the sea.
+              </p>
+            </div>
+
+            <span class="row-arrow">↗</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         CINEMATIC PAUSE
+         ===================================================== -->
+
+    <section class="pause-section">
+
+      <div class="pause-background">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85"
+          alt="Soft waves reaching a tropical beach"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="pause-overlay"></div>
+
+      <div class="pause-content reveal">
+
+        <span class="eyebrow eyebrow-light">
+          A Moment to Yourself
+        </span>
+
+        <blockquote class="pause-quote serif">
+          Some places ask<br>
+          nothing of you<br>
+          but to <em>slow down.</em>
+        </blockquote>
+
+        <p>
+          Let the tides set the pace. Leave room for long lunches, salt
+          in your hair, unplanned afternoons and sunsets that never need
+          an audience.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         TAILORED JOURNEYS
+         ===================================================== -->
+
+    <section class="journey-section" id="journeys">
+
+      <div class="section-shell">
+
+        <div class="section-heading-row reveal">
+
+          <div>
+            <span class="eyebrow eyebrow-light">Made Around You</span>
+
+            <h2 class="section-heading serif">
+              Your island.<br>
+              <em>Your way.</em>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Every Kavora journey begins with what matters to you. Choose
+            the atmosphere you are looking for, and we will help shape
+            the details around it.
+          </p>
+
+        </div>
+
+        <div class="journey-grid">
+
+          <article class="journey-card reveal">
+
+            <span class="journey-number">01</span>
+
+            <span class="eyebrow eyebrow-light">For Two</span>
+
+            <h3>Romance by the Ocean</h3>
+
+            <p>
+              Thoughtful stays, sunset sailing, intimate dining and
+              unhurried days designed for couples.
+            </p>
+
+            <a href="#enquire">
+              Create This Journey <span>→</span>
+            </a>
+
+          </article>
+
+          <article class="journey-card reveal">
+
+            <span class="journey-number">02</span>
+
+            <span class="eyebrow eyebrow-light">A Private Escape</span>
+
+            <h3>Slow Island Living</h3>
+
+            <p>
+              Beachfront relaxation, private experiences and the freedom
+              to spend each day exactly as you please.
+            </p>
+
+            <a href="#enquire">
+              Create This Journey <span>→</span>
+            </a>
+
+          </article>
+
+          <article class="journey-card reveal">
+
+            <span class="journey-number">03</span>
+
+            <span class="eyebrow eyebrow-light">Explore Together</span>
+
+            <h3>Ocean & Adventure</h3>
+
+            <p>
+              Marine encounters, boat excursions, local discovery and
+              memorable days along the northern coast.
+            </p>
+
+            <a href="#enquire">
+              Create This Journey <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         ACCOMMODATION
+         ===================================================== -->
+
+    <section class="stay-section" id="stays">
+
+      <div class="section-shell stay-grid">
+
+        <div class="stay-copy reveal">
+
+          <span class="eyebrow">Where You Belong</span>
+
+          <h2 class="serif">
+            Stay close<br>
+            to what <em>matters.</em>
+          </h2>
+
+          <div class="gold-line my-7"></div>
+
+          <p>
+            Your choice of stay shapes the entire island experience. From
+            intimate beachfront retreats to refined resorts and private
+            villas, Nungwi and Kendwa offer different ways to experience
+            the coast.
+          </p>
+
+          <p>
+            Tell us whether you value privacy, direct beach access, space
+            for family, a romantic atmosphere or easy access to local life.
+            We can help you explore accommodation that suits your journey
+            and budget.
+          </p>
+
+          <a href="#enquire" class="button-primary">
+            Find Your Stay
+          </a>
+
+        </div>
+
+        <div class="stay-image-grid reveal">
+
+          <div>
+            <div class="stay-image image-clip">
+              <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85"
+                alt="Tropical resort with a swimming pool"
+                loading="lazy"
+              >
+            </div>
+
+            <p class="stay-image-label">Refined Coastal Retreats</p>
+          </div>
+
+          <div>
+            <div class="stay-image image-clip">
+              <img
+                src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=85"
+                alt="Private island accommodation surrounded by tropical scenery"
+                loading="lazy"
+              >
+            </div>
+
+            <p class="stay-image-label">A More Private Escape</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         FAQ
+         ===================================================== -->
+
+    <section class="faq-section" id="faq">
+
+      <div class="section-shell faq-grid">
+
+        <div class="faq-intro reveal">
+
+          <span class="eyebrow">Before You Arrive</span>
+
+          <h2 class="serif">
+            A few things<br>
+            worth <em>knowing.</em>
+          </h2>
+
+          <p>
+            A little preparation leaves more room to enjoy the island.
+            Here are some useful things to consider when planning your
+            stay in Nungwi and Kendwa.
+          </p>
+
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item active">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="true"
+            >
+              <span>When is the best time to visit?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer" style="max-height: 180px;">
+              <p>
+                Zanzibar is a year-round destination. June to October
+                generally brings drier weather, while January and February
+                are also popular for warm, sunny conditions. March to May
+                is typically wetter. The right time depends on your
+                priorities and preferred activities.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>What is the difference between Nungwi and Kendwa?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Nungwi has a stronger village atmosphere, with fishing
+                traditions, boatbuilding and a wider mix of coastal
+                activities. Kendwa is known for its broad sandy beach and
+                relaxed beach-resort setting. Both can be combined in one
+                northern Zanzibar itinerary.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Can I combine the north with Stone Town?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Yes. You can combine time on the northern beaches with
+                Stone Town's historic streets, architecture, markets and
+                Swahili heritage. The drive between the areas is usually
+                around one to one-and-a-half hours, depending on traffic
+                and your exact locations.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Can experiences be arranged privately?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Private boat excursions, selected dining arrangements,
+                transfers and tailored activities may be arranged
+                depending on availability, conditions and your requirements.
+                We will confirm the details when planning your journey.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Can Kavora arrange accommodation and transfers?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Share your dates, group size, arrival details and
+                accommodation preferences. We can discuss suitable
+                options and the arrangements available for your itinerary.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>How do I begin planning my trip?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Send us an enquiry with your approximate travel dates,
+                number of travellers and the kind of experience you want.
+                We can then discuss the details and work towards a journey
+                that fits your needs.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         ENQUIRY
+         ===================================================== -->
+
+    <section class="enquiry-section" id="enquire">
+
+      <div class="section-shell enquiry-grid">
+
+        <div class="enquiry-copy reveal">
+
+          <span class="eyebrow">Begin Your Journey</span>
+
+          <h2 class="serif">
+            The coast<br>
+            is calling.<br>
+            <em>Let's begin.</em>
+          </h2>
+
+          <div class="gold-line my-7"></div>
+
+          <p>
+            Tell us a little about the journey you have in mind. Whether
+            you are planning a romantic escape, a family holiday or a
+            longer island stay, we will use your preferences as the
+            starting point.
+          </p>
+
+          <div class="enquiry-note">
+            Made thoughtfully, around you
+          </div>
+
+        </div>
+
+        <form class="enquiry-form reveal" id="enquiry-form">
+
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label for="guest-name">Your Name</label>
+              <input
+                type="text"
+                id="guest-name"
+                name="name"
+                placeholder="Full name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="guest-email">Email Address</label>
+              <input
+                type="email"
+                id="guest-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="arrival-date">Arrival Date</label>
+              <input
+                type="date"
+                id="arrival-date"
+                name="arrival"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="departure-date">Departure Date</label>
+              <input
+                type="date"
+                id="departure-date"
+                name="departure"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="travellers">Number of Travellers</label>
+              <select id="travellers" name="travellers" required>
+                <option value="" disabled selected>Select guests</option>
+                <option value="1">1 traveller</option>
+                <option value="2">2 travellers</option>
+                <option value="3-4">3–4 travellers</option>
+                <option value="5-6">5–6 travellers</option>
+                <option value="7+">7 or more travellers</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="journey-type">Journey Style</label>
+              <select id="journey-type" name="journey" required>
+                <option value="" disabled selected>Choose a preference</option>
+                <option value="Romantic escape">Romantic escape</option>
+                <option value="Beach retreat">Beach retreat</option>
+                <option value="Family holiday">Family holiday</option>
+                <option value="Ocean and adventure">Ocean and adventure</option>
+                <option value="Honeymoon">Honeymoon</option>
+                <option value="Bespoke journey">Bespoke journey</option>
+              </select>
+            </div>
+
+            <div class="form-field full">
+              <label for="guest-message">Tell Us More</label>
+              <textarea
+                id="guest-message"
+                name="message"
+                placeholder="Your preferred stay, experiences, budget or anything else we should know..."
+              ></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit" class="button-primary form-submit">
+            Send Your Enquiry
+          </button>
+
+          <p class="form-privacy">
+            Your enquiry will open an email draft addressed to Kavora.
+            Please review and send it to complete your enquiry.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="section-shell">
+
+      <div class="footer-main">
+
+        <div class="footer-brand-column">
+
+          <a href="index.html" aria-label="Kavora Africa homepage">
+            <div class="footer-brand">KAVORA</div>
+            <div class="footer-tagline">Africa · Considered Journeys</div>
+          </a>
+
+          <p class="footer-description">
+            Thoughtfully considered journeys across Africa and the Indian
+            Ocean. Created around places, people and experiences that
+            stay with you.
+          </p>
+
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#introduction">Nungwi & Kendwa</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#journeys">Tailored Journeys</a>
+            <a href="#stays">Accommodation</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Continue Exploring</h3>
+
+          <div class="footer-links">
+            <a href="stone-town.html">Stone Town</a>
+            <a href="#enquire">Plan Your Journey</a>
+            <a href="#faq">Travel Questions</a>
+            <a href="mailto:">Contact Kavora</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2026</span> Kavora Africa. All rights reserved.</p>
+
+        <p>
+          Designed for considered journeys
+          <span class="mx-2 text-kavora-gold">·</span>
+          <a href="#top">Back to top ↑</a>
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+    // Header background on scroll
+    const header = document.getElementById('site-header');
+
+    function updateHeader() {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      menuIcon.textContent = '☰';
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+
+      document.body.classList.toggle('menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+
+      menuIcon.textContent = isOpen ? '×' : '☰';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 767) closeMenu();
+    });
+
+
+    // Reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add('is-visible'));
+    }
+
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const wasActive = item.classList.contains('active');
+
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherQuestion = otherItem.querySelector('.faq-question');
+
+          otherAnswer.style.maxHeight = null;
+          otherQuestion.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!wasActive) {
+          item.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+
+    // Set date inputs to prevent past dates
+    const arrivalInput = document.getElementById('arrival-date');
+    const departureInput = document.getElementById('departure-date');
+
+    const today = new Date();
+    const localToday = [
+      today.getFullYear(),
+      String(today.getMonth() + 1).padStart(2, '0'),
+      String(today.getDate()).padStart(2, '0')
+    ].join('-');
+
+    arrivalInput.min = localToday;
+    departureInput.min = localToday;
+
+    arrivalInput.addEventListener('change', () => {
+      departureInput.min = arrivalInput.value || localToday;
+
+      if (
+        departureInput.value &&
+        arrivalInput.value &&
+        departureInput.value < arrivalInput.value
+      ) {
+        departureInput.value = '';
+      }
+    });
+
+
+    // Enquiry email draft
+    // Replace the empty recipient below with Kavora's confirmed email address.
+    const enquiryForm = document.getElementById('enquiry-form');
+
+    enquiryForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      if (!enquiryForm.reportValidity()) return;
+
+      const recipient = ''; // Add Kavora's email address here.
+
+      if (!recipient) {
+        alert(
+          'The enquiry form is ready, but Kavora’s email address has not ' +
+          'been configured yet. Add the recipient address in the page ' +
+          'JavaScript before using the form.'
+        );
+        return;
+      }
+
+      const data = new FormData(enquiryForm);
+
+      const subject = encodeURIComponent(
+        'Nungwi & Kendwa Journey Enquiry — ' + data.get('name')
+      );
+
+      const body = encodeURIComponent(
+        'NUNGWI & KENDWA JOURNEY ENQUIRY\n\n' +
+        'Name: ' + data.get('name') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Arrival: ' + data.get('arrival') + '\n' +
+        'Departure: ' + data.get('departure') + '\n' +
+        'Travellers: ' + data.get('travellers') + '\n' +
+        'Journey style: ' + data.get('journey') + '\n\n' +
+        'Additional details:\n' + (data.get('message') || 'Not provided')
+      );
+
+      window.location.href =
+        'mailto:' + recipient +
+        '?subject=' + subject +
+        '&body=' + body;
+    });
+
+
+    // Footer year
+    document.getElementById('current-year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
