@@ -198,6 +198,8 @@
         transform: none;
       }
     }
+
+    
   </style>
 </head>
 
@@ -207,14 +209,21 @@
        01 — HERO
   ====================================================== -->
 
-  <section class="relative flex min-h-[90svh] items-end overflow-hidden bg-kavora-green text-kavora-ivory md:min-h-screen">
+  <section class="relative flex min-h-[100svh] items-end overflow-hidden bg-kavora-green text-kavora-ivory md:min-h-screen">
 
     <img
-      src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2400&q=90"
+      src="https://kws.go.ke/wp-content/uploads/2026/02/hippo-and-flamingoes-scaled-e1770383985376.jpg"
       alt="Wildlife in a natural African landscape"
       class="hero-image absolute inset-0 h-full w-full object-cover"
       fetchpriority="high"
     >
+
+    
+    <div class="absolute inset-0 bg-kavora-green/45"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-r from-kavora-green/95 via-kavora-green/45 to-transparent"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-kavora-green/90 via-transparent to-kavora-green/20"></div>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-kavora-green/90"></div>
 
@@ -222,12 +231,7 @@
 
       <div class="max-w-5xl">
 
-        <p class="mb-7 flex items-center gap-4 font-sans text-[9px] font-semibold uppercase tracking-[.3em] text-kavora-gold sm:text-[10px]">
-          <span class="h-px w-10 bg-kavora-gold"></span>
-          Kenya · The Great Rift Valley
-        </p>
-
-        <h1 class="font-luxury text-7xl font-normal leading-[.82] tracking-luxury sm:text-8xl md:text-[8.5rem] lg:text-[10rem]">
+        <h1 class="font-luxury text-8xl font-normal leading-[.82] tracking-luxury sm:text-8xl md:text-[8.5rem] lg:text-[7rem]">
           Lake
           <span class="block italic text-kavora-gold">Naivasha.</span>
         </h1>
@@ -240,28 +244,22 @@
             you to experience the wilderness at a gentler pace.
           </p>
 
-          <a
-            href="contact.html?destination=Lake%20Naivasha"
-            class="kavora-link pb-2 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-ivory"
-          >
-            Begin your journey
-            <span class="ml-4 text-lg text-kavora-gold">↗</span>
-          </a>
+        </div>
 
+         <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+          <a href="#introduction" class="group inline-flex items-center gap-5">
+            <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+              Plan a Lake Naivasha Journey
+            </span>
+
+            <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+              →
+            </span>
+          </a>
         </div>
       </div>
 
-      <div class="mt-16 flex items-center justify-between border-t border-white/20 pt-5">
-
-        <p class="font-sans text-[9px] uppercase tracking-[.22em] text-white/55">
-          A considered journey by Kavora
-        </p>
-
-        <a href="#introduction" aria-label="Scroll to introduction" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-lg text-kavora-gold transition hover:border-kavora-gold">
-          ↓
-        </a>
-
-      </div>
+     
     </div>
   </section>
 
@@ -279,13 +277,12 @@
         <div class="reveal md:col-span-5">
 
           <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
-            01 / The Destination
+            The Destination
           </p>
 
-          <h2 class="font-luxury text-5xl font-normal leading-[.95] sm:text-6xl lg:text-7xl">
+          <h2 class="font-luxury text-6xl font-normal leading-[.95] sm:text-6xl lg:text-7xl">
             A different
-            <span class="block italic">kind of wild.</span>
+            <span class="block italic text-kavora-gold">kind of wild.</span>
           </h2>
 
         </div>
@@ -344,11 +341,10 @@
         <div class="md:col-span-7">
 
           <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
-            02 / The Experience
+          The Experience
           </p>
 
-          <h2 class="font-luxury text-5xl font-normal leading-[.92] sm:text-6xl md:text-7xl">
+          <h2 class="font-luxury text-6xl font-normal leading-[.92] sm:text-6xl md:text-7xl">
             Discover Naivasha,
             <span class="italic text-kavora-gold">your way.</span>
           </h2>
@@ -371,16 +367,15 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
-              alt="Calm water and reflections on a lake"
+              src="https://media1.thrillophilia.com/filestore/9ecfms19wvwetnynq7zu0n6vl2a4_shutterstock_2107642256.jpg"
+              alt="Lake Naivasha Boat Safari"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / On the lake</span>
           </div>
 
-          <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">Private Boat Safari</h3>
+          <div class=" py-7">
+            <h3 class="font-luxury text-3xl sm:text-4xl">Private Boat Safari</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Drift across the lake with a local guide, observing
               hippos and the birdlife that gathers along its shores.
@@ -395,16 +390,15 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=1000&q=85"
-              alt="Wildlife in a natural habitat"
+              src="https://www.africarevealsafaris.com/wp-content/uploads/2024/12/impala-7248936_1280.jpg"
+              alt="Lake Naivasha Wildlife"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Wildlife</span>
           </div>
 
-          <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">Crescent Island</h3>
+          <div class="py-7">
+            <h3 class="font-luxury text-3xl sm:text-4xl">Crescent Island</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Walk through open wildlife habitat with a guide,
               with opportunities to encounter giraffes, zebras
@@ -420,16 +414,15 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1000&q=85"
-              alt="Bird perched among branches"
+              src="https://humbo.s3.eu-north-1.amazonaws.com/place-photo/6058f0bf109020e863c7e0b4/sYCmjhZvcs.jpeg"
+              alt="Lake Naivasha Birdlife"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">03 / Birdlife</span>
           </div>
 
-          <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">A Birder’s Retreat</h3>
+          <div class="py-7">
+            <h3 class="font-luxury text-3xl sm:text-4xl">A Birder’s Retreat</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Look for fish eagles, pelicans, cormorants and
               other bird species that make the lake a rewarding
@@ -445,16 +438,15 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85"
-              alt="Wildlife beneath the trees"
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/2d/57/bd/caption.jpg?w=1100&h=1100&s=1"
+              alt="Lake Naivasha Hell's Gate"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">04 / Beyond the lake</span>
           </div>
 
-          <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">Hell’s Gate</h3>
+          <div class="py-7">
+            <h3 class="font-luxury text-3xl sm:text-4xl">Hell’s Gate</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Explore dramatic cliffs, volcanic formations and
               deep gorges in a nearby national park, with
@@ -470,16 +462,15 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85"
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/8c/8b/74/lake-naivasha-crescent.jpg?w=900&h=500&s=1"
               alt="Secluded accommodation surrounded by nature"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">05 / Slow living</span>
           </div>
 
           <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">Lakeside Living</h3>
+            <h3 class="font-luxury text-3xl sm:text-4xl">Lakeside Living</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Leave room in the itinerary for long breakfasts,
               garden walks, thoughtful meals and quiet afternoons
@@ -495,7 +486,7 @@
 
           <div class="relative h-[300px] overflow-hidden sm:h-[340px]">
             <img
-              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+              src="https://yellowzebrasafaris.com/wp-content/uploads/2026/05/Giraffe-at-Lake-Naivasha-Loldia-House-Great-Rift-Valley-Kenya.jpg"
               alt="Mountain landscape in soft evening light"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
@@ -503,8 +494,8 @@
             <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">06 / The wider valley</span>
           </div>
 
-          <div class="border-b border-white/15 py-7">
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">Rift Valley Landscapes</h3>
+          <div class="py-7">
+            <h3 class="font-luxury text-3xl sm:text-4xl">Rift Valley Landscapes</h3>
             <p class="mt-4 font-sans text-sm leading-7 text-white/55">
               Pair time beside the lake with scenic drives and
               carefully chosen stops across the Great Rift Valley.
@@ -531,13 +522,12 @@
         <div class="reveal md:col-span-5">
 
           <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
-            03 / Timing Your Visit
+          Timing Your Visit
           </p>
 
-          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+          <h2 class="font-luxury text-6xl leading-[.92] sm:text-6xl lg:text-7xl">
             The right time
-            <span class="block italic">to arrive.</span>
+            <span class="block italic text-kavora-gold">to arrive.</span>
           </h2>
 
           <p class="mt-7 max-w-md font-sans text-sm leading-8 text-kavora-green/60">
@@ -633,13 +623,12 @@
         <div>
 
           <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
-            04 / Your Stay
+            Your Stay
           </p>
 
-          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+          <h2 class="font-luxury text-6xl leading-[.92] sm:text-6xl md:text-7xl">
             Somewhere to
-            <span class="italic">slow down.</span>
+            <span class="italic text-kavora-gold">slow down.</span>
           </h2>
 
         </div>
@@ -660,25 +649,20 @@
 
           <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
             <img
-              src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=85"
+              src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NTI3NDg1MDU5MjEwODA3Nw==/original/586ed7e7-bd0b-43a8-9018-122c921743fd.jpeg"
               alt="A secluded lodge surrounded by nature"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">01 / Seclusion</span>
           </div>
 
           <div class="pt-6">
 
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Private Lakeside Retreat</h3>
+            <h3 class="font-luxury text-3xl sm:text-4xl">The Private Lakeside Retreat</h3>
 
             <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
               For travellers seeking a peaceful setting, considered
               service and time away from the pace of everyday life.
-            </p>
-
-            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
-              Privacy · Space · Stillness
             </p>
 
           </div>
@@ -691,25 +675,20 @@
 
           <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
             <img
-              src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85"
+              src="https://www.travelnerdsblog.com/wp-content/uploads/2025/10/lake-naivasha-sopa-lodge-main-mobile.jpg"
               alt="A nature-focused lodge setting"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
             >
-            <span class="absolute left-5 top-5 font-sans text-[9px] uppercase tracking-[.2em] text-white">02 / Nature</span>
           </div>
 
           <div class="pt-6">
-
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Nature-Led Lodge</h3>
+  
+            <h3 class="font-luxury text-3xl sm:text-4xl">The Nature-Led Lodge</h3>
 
             <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
               A comfortable base for early starts, guided outings
               and returning to the calm of the surrounding gardens.
-            </p>
-
-            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
-              Wildlife · Gardens · Discovery
             </p>
 
           </div>
@@ -722,7 +701,7 @@
 
           <div class="relative h-[360px] overflow-hidden sm:h-[430px]">
             <img
-              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+              src="https://adequatesafaris.com/wp-content/uploads/2026/01/Lake-Naivasha-Sopa.jpg"
               alt="A refined retreat with a pool and landscaped grounds"
               loading="lazy"
               class="destination-image absolute inset-0 h-full w-full object-cover"
@@ -732,15 +711,11 @@
 
           <div class="pt-6">
 
-            <h3 class="font-luxury text-3xl italic sm:text-4xl">The Refined Country House</h3>
+            <h3 class="font-luxury text-3xl sm:text-4xl">The Refined Country House</h3>
 
             <p class="mt-4 font-sans text-sm leading-7 text-kavora-green/60">
               For a more intimate escape, with thoughtful hospitality,
               generous spaces and a slower daily rhythm.
-            </p>
-
-            <p class="mt-5 font-sans text-[9px] uppercase tracking-[.18em] text-kavora-gold">
-              Character · Comfort · Ease
             </p>
 
           </div>
@@ -770,11 +745,10 @@
       <div class="reveal">
 
         <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-          <span class="h-px w-9 bg-kavora-gold"></span>
-          05 / Considered Journeys
+        Considered Journeys
         </p>
 
-        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl">
+        <h2 class="font-luxury text-6xl leading-[.9] sm:text-6xl md:text-7xl">
           Ways into
           <span class="italic text-kavora-gold">Naivasha.</span>
         </h2>
@@ -794,8 +768,6 @@
         <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
 
           <div class="flex items-start justify-between gap-8">
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">01</span>
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">2—3 Nights</span>
           </div>
 
           <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
@@ -811,13 +783,6 @@
             leisurely meals and unhurried time beside the water.
           </p>
 
-          <a
-            href="contact.html?journey=Lakeside%20Escape"
-            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
-          >
-            Explore Journey
-          </a>
-
         </article>
 
 
@@ -825,8 +790,6 @@
         <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
 
           <div class="flex items-start justify-between gap-8">
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">02</span>
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">3—4 Nights</span>
           </div>
 
           <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
@@ -843,13 +806,6 @@
             Hell’s Gate National Park.
           </p>
 
-          <a
-            href="contact.html?journey=Rift%20Valley%20Explorer"
-            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
-          >
-            Explore Journey
-          </a>
-
         </article>
 
 
@@ -857,8 +813,6 @@
         <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
 
           <div class="flex items-start justify-between gap-8">
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">03</span>
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">5—7 Nights</span>
           </div>
 
           <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
@@ -875,13 +829,6 @@
             Maasai Mara.
           </p>
 
-          <a
-            href="contact.html?journey=Classic%20Kenya"
-            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
-          >
-            Explore Journey
-          </a>
-
         </article>
 
 
@@ -889,8 +836,6 @@
         <article class="reveal group border border-kavora-green/10 p-7 transition duration-500 hover:border-kavora-gold/50 sm:p-10 lg:p-12">
 
           <div class="flex items-start justify-between gap-8">
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.25em] text-kavora-gold">04</span>
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[.2em] text-kavora-green/40">7—10 Nights</span>
           </div>
 
           <h3 class="mt-16 font-luxury text-5xl italic leading-none sm:text-6xl">
@@ -906,13 +851,6 @@
             from the Rift Valley to elephant country and the
             wildlife-rich plains of the Mara.
           </p>
-
-          <a
-            href="contact.html?journey=Great%20Kenya%20Circuit"
-            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-green"
-          >
-            Explore Journey
-          </a>
 
         </article>
 
@@ -934,11 +872,10 @@
         <div class="reveal lg:col-span-5">
 
           <p class="mb-7 flex items-center gap-4 font-sans text-[10px] font-semibold uppercase tracking-[.28em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
-            06 / The Kavora Approach
+            The Kavora Approach
           </p>
 
-          <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl lg:text-7xl">
+          <h2 class="font-luxury text-6xl leading-[.92] sm:text-6xl lg:text-7xl">
             Thoughtfully
             <span class="block italic text-kavora-gold">put together.</span>
           </h2>
@@ -949,14 +886,6 @@
             place, people and the freedom to experience each day
             in your own way.
           </p>
-
-          <a
-            href="contact.html?destination=Lake%20Naivasha"
-            class="kavora-link mt-9 font-sans text-[10px] font-semibold uppercase tracking-[.22em] text-kavora-gold"
-          >
-            Plan with Kavora
-            <span class="ml-4 text-lg">↗</span>
-          </a>
 
         </div>
 
@@ -1051,9 +980,9 @@
           Before You Go
         </p>
 
-        <h2 class="font-luxury text-5xl leading-[.92] sm:text-6xl md:text-7xl">
+        <h2 class="font-luxury text-6xl leading-[.92] sm:text-6xl md:text-7xl">
           A few things
-          <span class="italic">to know.</span>
+          <span class="italic text-kavora-gold">to know.</span>
         </h2>
 
         <p class="mx-auto mt-7 max-w-xl font-sans text-sm leading-7 text-kavora-green/60">
@@ -1208,8 +1137,8 @@
     <div class="absolute inset-0 opacity-25">
 
       <img
-        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85"
-        alt=""
+        src="https://kws.go.ke/wp-content/uploads/2026/02/hippo-and-flamingoes-scaled-e1770383985376.jpg"
+        alt="lake naivasha"
         loading="lazy"
         class="h-full w-full object-cover"
       >
@@ -1226,7 +1155,7 @@
           Your journey, considered
         </p>
 
-        <h2 class="font-luxury text-5xl leading-[.9] sm:text-6xl md:text-7xl lg:text-8xl">
+        <h2 class="font-luxury text-6xl leading-[.9] sm:text-6xl md:text-7xl lg:text-8xl">
           Let the lake
           <span class="block italic text-kavora-gold">set the pace.</span>
         </h2>
