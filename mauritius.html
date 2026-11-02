@@ -145,7 +145,7 @@
           <div>
             <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">Experiences</p>
             <h2 class="mt-4 font-['Cormorant_Garamond',serif] text-5xl font-normal leading-none sm:text-6xl">
-              Discover the many sides of Mauritius.
+              Discover the many sides of <span class="text-kavora-gold">Mauritius.</span>
             </h2>
           </div>
 
@@ -197,10 +197,10 @@
       <div class="mx-auto max-w-[1240px]">
 
         <div class="mb-12 max-w-2xl">
-          <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-[#74786F]">Where to Stay</p>
+          <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">Where to Stay</p>
 
           <h2 class="mt-4 font-['Cormorant_Garamond',serif] text-5xl font-normal leading-none sm:text-6xl">
-            Find your own way to island living.
+            Find your own way to <span class="text-kavora-gold italic">island living.</span>
           </h2>
 
           <p class="mt-6 text-sm leading-8 text-[#74786F]">
@@ -221,7 +221,7 @@
         <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
 
           <div>
-            <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-[#74786F]">Curated Journeys</p>
+            <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">Curated Journeys</p>
 
             <h2 class="mt-4 font-['Cormorant_Garamond',serif] text-5xl font-normal leading-none sm:text-6xl">
               A journey with your own signature.
@@ -312,7 +312,7 @@
       <div class="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
 
         <div>
-          <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-[#74786F]">Useful to Know</p>
+          <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-kavora-gold">Useful to Know</p>
 
           <h2 class="mt-5 font-['Cormorant_Garamond',serif] text-5xl font-normal leading-[1.02] sm:text-6xl">
             Before you set off.
@@ -347,17 +347,7 @@
           <a href="contact.html" class="inline-flex min-h-[49px] items-center justify-center bg-[#C8A96B] px-6 text-[9px] font-bold uppercase tracking-[.16em] text-[#0B211A] transition hover:bg-[#F7F5EF]">
             Enquire with Kavora
           </a>
-
-          <a href="indian-ocean.html" class="inline-flex min-h-[49px] items-center justify-center border border-white/45 px-6 text-[9px] font-semibold uppercase tracking-[.16em] text-[#F7F5EF] transition hover:border-[#C8A96B] hover:bg-[#C8A96B]/10">
-            Explore the Collection
-          </a>
         </div>
-
-        <div class="mx-auto mt-12 h-px max-w-20 bg-[#C8A96B]/70"></div>
-
-        <p class="mt-5 text-[9px] uppercase tracking-[.2em] text-white/45">
-          KAVORA · AFRICA · CONSIDERED JOURNEYS
-        </p>
 
       </div>
     </section>
@@ -668,10 +658,6 @@
               alt="${item.alt}"
               class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]"
               loading="lazy">
-
-            <span class="absolute left-4 top-4 bg-[#0B211A] px-3 py-2 text-[9px] tracking-[.15em] text-[#C8A96B]">
-              ${item.number}
-            </span>
           </div>
 
           <div class="pt-5">
@@ -715,7 +701,6 @@
           </div>
 
           <div class="p-6 sm:p-7">
-            <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-[#74786F]">${item.number} / Accommodation</p>
             <h3 class="mt-4 font-['Cormorant_Garamond',serif] text-3xl font-medium">${item.title}</h3>
             <p class="mt-3 text-xs leading-7 text-[#74786F]">${item.description}</p>
             <div class="mt-6 border-t border-[#D8D5CB] pt-4">
@@ -744,20 +729,12 @@
           </div>
 
           <div class="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-            <p class="text-[9px] font-semibold uppercase tracking-[.24em] text-[#74786F]">Journey ${item.number}</p>
             <h3 class="mt-4 font-['Cormorant_Garamond',serif] text-3xl font-medium leading-tight sm:text-4xl">${item.title}</h3>
             <p class="mt-4 text-xs leading-7 text-[#74786F]">${item.description}</p>
 
             <div class="mt-6 border-t border-[#D8D5CB] pt-4">
-              <p class="text-[9px] uppercase tracking-[.13em] text-[#1D4535]">${item.duration}</p>
+              <p class="text-[9px] uppercase tracking-[.13em] text-kavora-gold">${item.duration}</p>
             </div>
-
-            <a
-              href="contact.html"
-              class="mt-6 inline-flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[.19em] text-[#C8A96B]"
-              aria-label="Enquire about ${item.title}">
-              Enquire about this journey <span class="text-sm">↗</span>
-            </a>
           </div>
 
         </article>
