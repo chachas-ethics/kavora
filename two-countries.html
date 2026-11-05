@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Two Countries, One Journey | Kavora Luxury Travel & Concierge</title>
+
+  <meta
+    name="description"
+    content="Explore Kenya's distinctive wildlife conservancies and Tanzania's celebrated safari landscapes in one carefully coordinated private journey with Kavora."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'kavora-green': '#0B211A',
+            'kavora-dark': '#081A14',
+            'kavora-forest': '#102D23',
+            'kavora-gold': '#C8A96B',
+            'kavora-ivory': '#F7F5EF',
+            'kavora-muted': '#74786F',
+            'kavora-sand': '#E4E0D6'
+          },
+          fontFamily: {
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-kavora-ivory font-sans text-kavora-green antialiased">
+
+  <!-- HEADER -->
+  <header class="absolute left-0 top-0 z-50 w-full border-b border-white/15">
+
+    <div class="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 sm:px-10 lg:px-16">
+
+      <a href="index.html" class="font-luxury text-3xl tracking-wide text-white">
+        kavora<span class="text-kavora-gold">.</span>
+      </a>
+
+      <nav class="hidden items-center gap-9 text-[10px] uppercase tracking-[0.2em] text-white/85 lg:flex">
+        <a href="index.html" class="transition-colors duration-300 hover:text-kavora-gold">Home</a>
+        <a href="index.html#journeys" class="text-kavora-gold">Private Journeys</a>
+        <a href="index.html#destinations" class="transition-colors duration-300 hover:text-kavora-gold">Destinations</a>
+        <a href="index.html#approach" class="transition-colors duration-300 hover:text-kavora-gold">The Kavora Way</a>
+        <a href="contact.html" class="transition-colors duration-300 hover:text-kavora-gold">Contact</a>
+      </nav>
+
+      <a
+        href="contact.html?journey=Two%20Countries%2C%20One%20Journey"
+        class="hidden border border-kavora-gold/70 px-6 py-3 text-[9px] uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:bg-kavora-gold hover:text-kavora-green sm:inline-flex"
+      >
+        Begin Your Journey
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+      >
+        <span class="h-px w-6 bg-white"></span>
+        <span class="h-px w-6 bg-white"></span>
+      </button>
+
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-kavora-dark px-6 py-7 lg:hidden">
+
+      <nav class="flex flex-col gap-6 text-[10px] uppercase tracking-[0.2em] text-white/80">
+        <a href="index.html" class="transition-colors hover:text-kavora-gold">Home</a>
+        <a href="index.html#journeys" class="text-kavora-gold">Private Journeys</a>
+        <a href="index.html#destinations" class="transition-colors hover:text-kavora-gold">Destinations</a>
+        <a href="index.html#approach" class="transition-colors hover:text-kavora-gold">The Kavora Way</a>
+        <a href="contact.html" class="transition-colors hover:text-kavora-gold">Contact</a>
+        <a href="contact.html?journey=Two%20Countries%2C%20One%20Journey" class="border border-kavora-gold/60 px-5 py-4 text-center text-kavora-gold">
+          Begin Your Journey
+        </a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative flex min-h-[100svh] items-end overflow-hidden bg-kavora-dark">
+
+      <img
+        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2400&q=90"
+        alt="African wildlife across an expansive safari landscape"
+        fetchpriority="high"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-kavora-dark/90"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-kavora-dark/45 to-transparent"></div>
+
+      <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
+
+        <div class="max-w-3xl">
+
+          <p class="mb-7 flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            <span class="h-px w-10 bg-kavora-gold"></span>
+            Private Journey No. 05
+          </p>
+
+          <h1 class="font-luxury text-6xl font-normal leading-[0.9] tracking-tight text-white sm:text-7xl md:text-8xl lg:text-[110px]">
+            Two Countries,
+            <span class="block text-kavora-gold">One Journey.</span>
+          </h1>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4 text-[10px] uppercase tracking-[0.22em] text-white/80">
+            <span>Kenya & Tanzania</span>
+            <span class="h-1 w-1 rounded-full bg-kavora-gold"></span>
+            <span>10–14 Nights</span>
+          </div>
+
+          <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/75 sm:text-base sm:leading-8">
+            Discover two remarkable safari destinations in one carefully coordinated journey. From Kenya's distinctive wildlife conservancies to Tanzania's celebrated wilderness landscapes.
+          </p>
+
+          <a
+            href="#journey"
+            class="mt-10 inline-flex items-center gap-5 border-b border-kavora-gold/70 pb-3 text-[10px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:text-kavora-gold"
+          >
+            Discover the journey
+            <span class="text-kavora-gold">↓</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="absolute bottom-10 right-10 hidden text-[9px] uppercase tracking-[0.25em] text-white/50 lg:block">
+        Africa · Considered Journeys
+      </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section id="journey" class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40">
+
+      <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-20">
+
+        <div class="lg:col-span-4">
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            The Journey
+          </p>
+
+          <p class="mt-8 font-luxury text-2xl italic leading-snug text-kavora-muted sm:text-3xl">
+            Different landscapes. A richer story.
+          </p>
+
+        </div>
+
+        <div class="lg:col-span-8">
+
+          <h2 class="font-luxury text-5xl font-normal leading-[1.05] tracking-tight text-kavora-green sm:text-6xl lg:text-7xl">
+            Two countries.
+            <span class="text-kavora-muted">Endless perspectives.</span>
+          </h2>
+
+          <p class="mt-9 max-w-2xl text-sm font-light leading-8 text-kavora-muted sm:text-base sm:leading-9">
+            Explore Kenya's distinctive wildlife conservancies and Tanzania's celebrated safari landscapes in one carefully coordinated journey. Discover two countries, each offering its own character, scenery, and remarkable encounters.
+          </p>
+
+          <p class="mt-5 max-w-2xl text-sm font-light leading-8 text-kavora-muted sm:text-base sm:leading-9">
+            Move between different wilderness settings and experience the diversity of East Africa through a journey designed to bring two remarkable destinations together.
+          </p>
+
+          <div class="mt-12 flex items-center gap-5">
+            <span class="h-px w-14 bg-kavora-gold"></span>
+            <span class="text-[10px] uppercase tracking-[0.22em] text-kavora-muted">10–14 nights · Kenya & Tanzania</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TWO COUNTRIES -->
+    <section class="bg-kavora-green px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mb-14 max-w-2xl sm:mb-20">
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            Two Distinct Destinations
+          </p>
+
+          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
+            East Africa,
+            <span class="text-kavora-gold">beautifully connected.</span>
+          </h2>
+
+          <p class="mt-7 max-w-xl text-sm font-light leading-8 text-white/60">
+            Experience the individuality of two countries, each bringing its own landscapes, atmosphere and character to the journey.
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-6 md:grid-cols-2">
+
+          <!-- KENYA -->
+          <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
+
+            <img
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1400&q=85"
+              alt="Open African savanna landscape"
+              loading="lazy"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-kavora-dark via-kavora-dark/30 to-transparent"></div>
+
+            <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
+
+              <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+                Part One
+              </p>
+
+              <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
+                Kenya
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm font-light leading-7 text-white/75">
+                Discover distinctive wildlife conservancies and the varied landscapes that give Kenya its own unique safari character.
+              </p>
+
+              <div class="mt-8 flex items-center gap-4">
+                <span class="h-px w-10 bg-kavora-gold"></span>
+                <span class="text-[9px] uppercase tracking-[0.2em] text-white/70">Wildlife Conservancies</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- TANZANIA -->
+          <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
+
+            <img
+              src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85"
+              alt="Wildlife and expansive safari landscapes in Tanzania"
+              loading="lazy"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-kavora-dark via-kavora-dark/30 to-transparent"></div>
+
+            <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
+
+              <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+                Part Two
+              </p>
+
+              <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
+                Tanzania
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm font-light leading-7 text-white/75">
+                Explore celebrated safari landscapes and the remarkable wilderness that makes Tanzania one of Africa's defining destinations.
+              </p>
+
+              <div class="mt-8 flex items-center gap-4">
+                <span class="h-px w-10 bg-kavora-gold"></span>
+                <span class="text-[9px] uppercase tracking-[0.2em] text-white/70">Iconic Safari Landscapes</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE KAVORA EXPERIENCE -->
+    <section class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40">
+
+      <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-24">
+
+        <div class="relative">
+
+          <div class="absolute -bottom-5 -right-5 h-2/3 w-2/3 border border-kavora-gold/50"></div>
+
+          <img
+            src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1400&q=85"
+            alt="Elephants moving through an African wilderness landscape"
+            loading="lazy"
+            class="relative h-[480px] w-full object-cover sm:h-[600px]"
+          >
+
+          <div class="absolute bottom-7 left-7 bg-kavora-green px-6 py-5 text-white sm:bottom-10 sm:left-10">
+            <p class="font-luxury text-3xl">The Kavora Way</p>
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/60">Considered in every detail</p>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
+            <span class="h-px w-9 bg-kavora-gold"></span>
+            The Experience
+          </p>
+
+          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.05] text-kavora-green sm:text-6xl lg:text-7xl">
+            More than one destination.
+            <span class="text-kavora-muted">One considered experience.</span>
+          </h2>
+
+          <p class="mt-7 text-sm font-light leading-8 text-kavora-muted sm:text-base">
+            Crossing borders should feel like a natural continuation of the journey. Each destination offers something different, while thoughtful coordination brings the experience together.
+          </p>
+
+
+          <div class="mt-12 divide-y divide-kavora-green/15">
+
+            <div class="py-6">
+              <div class="flex items-start gap-6">
+                <span class="font-luxury text-2xl text-kavora-gold">01</span>
+                <div>
+                  <h3 class="font-luxury text-2xl text-kavora-green">Distinctive Wildlife Conservancies</h3>
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Discover Kenya's distinctive conservancy landscapes and their own character.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-6">
+              <div class="flex items-start gap-6">
+                <span class="font-luxury text-2xl text-kavora-gold">02</span>
+                <div>
+                  <h3 class="font-luxury text-2xl text-kavora-green">Celebrated Safari Landscapes</h3>
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Experience the scale and diversity of Tanzania's renowned wilderness settings.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-6">
+              <div class="flex items-start gap-6">
+                <span class="font-luxury text-2xl text-kavora-gold">03</span>
+                <div>
+                  <h3 class="font-luxury text-2xl text-kavora-green">Two Distinct Perspectives</h3>
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Appreciate the different scenery, atmosphere and encounters that each country offers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-6">
+              <div class="flex items-start gap-6">
+                <span class="font-luxury text-2xl text-kavora-gold">04</span>
+                <div>
+                  <h3 class="font-luxury text-2xl text-kavora-green">A Carefully Coordinated Journey</h3>
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Bring both destinations together through a journey thoughtfully planned around your experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMMERSIVE IMAGE BREAK -->
+    <section class="relative flex min-h-[75svh] items-center overflow-hidden bg-kavora-dark">
+
+      <img
+        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2400&q=90"
+        alt="The expansive landscapes of the African savanna"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="absolute inset-0 bg-kavora-dark/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-kavora-dark/75 via-kavora-dark/20 to-transparent"></div>
+
+      <div class="relative mx-auto w-full max-w-7xl px-6 py-28 sm:px-10 lg:px-16">
+
+        <div class="max-w-2xl">
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Across Borders
+          </p>
+
+          <h2 class="mt-8 font-luxury text-5xl font-normal leading-[1.05] text-white sm:text-6xl lg:text-8xl">
+            Different landscapes.
+            <span class="block italic text-kavora-gold">A richer story.</span>
+          </h2>
+
+          <p class="mt-8 max-w-lg text-sm font-light leading-8 text-white/75 sm:text-base">
+            Two countries, each with its own rhythm and character. Together, they create a deeper appreciation of East Africa's extraordinary diversity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING STATEMENT -->
+    <section class="bg-kavora-green px-6 py-28 text-center text-white sm:px-10 sm:py-36">
+
+      <div class="mx-auto max-w-4xl">
+
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+          Two Countries, One Journey
+        </p>
+
+        <h2 class="mt-9 font-luxury text-5xl font-normal leading-[1.1] sm:text-6xl lg:text-7xl">
+          Different landscapes.
+          <span class="block italic text-kavora-gold">A richer story.</span>
+        </h2>
+
+        <p class="mx-auto mt-8 max-w-2xl text-sm font-light leading-8 text-white/60 sm:text-base">
+          From Kenya's distinctive wildlife conservancies to Tanzania's celebrated safari landscapes, discover two sides of East Africa in one considered journey.
+        </p>
+
+        <div class="mx-auto mt-12 h-px w-16 bg-kavora-gold/70"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden bg-kavora-dark px-6 py-28 text-center text-white sm:px-10 sm:py-36 lg:px-16">
+
+      <div class="absolute inset-0 opacity-20">
+        <img
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=80"
+          alt=""
+          loading="lazy"
+          class="h-full w-full object-cover"
+        >
+      </div>
+
+      <div class="absolute inset-0 bg-kavora-dark/80"></div>
+
+      <div class="relative mx-auto max-w-3xl">
+
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+          Your Journey Begins Here
+        </p>
+
+        <h2 class="mt-8 font-luxury text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
+          Two countries.
+          <span class="italic text-kavora-gold">One extraordinary journey.</span>
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-xl text-sm font-light leading-8 text-white/65">
+          Tell us what you would like to discover. We will work with you to shape a considered journey through Kenya and Tanzania.
+        </p>
+
+        <a
+          href="contact.html?journey=Two%20Countries%2C%20One%20Journey"
+          class="mt-10 inline-flex items-center gap-6 border border-kavora-gold bg-kavora-gold px-8 py-5 text-[10px] uppercase tracking-[0.2em] text-kavora-green transition-colors duration-300 hover:bg-transparent hover:text-kavora-gold"
+        >
+          Enquire About This Journey
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[#06140F] px-6 pb-8 pt-20 text-white sm:px-10 lg:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid gap-14 border-b border-white/10 pb-16 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="sm:col-span-2">
+
+          <a href="index.html" class="font-luxury text-4xl tracking-wide text-white">
+            kavora<span class="text-kavora-gold">.</span>
+          </a>
+
+          <p class="mt-5 text-[10px] uppercase tracking-[0.2em] text-kavora-gold">
+            Luxury Travel & Concierge
+          </p>
+
+          <p class="mt-6 max-w-sm text-sm font-light leading-7 text-white/50">
+            Thoughtfully considered journeys across Africa, shaped around the places, people and experiences that make every journey meaningful.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold">
+            Explore
+          </h3>
+
+          <div class="mt-7 flex flex-col gap-4 text-sm font-light text-white/60">
+            <a href="index.html" class="transition-colors hover:text-kavora-gold">Home</a>
+            <a href="index.html#journeys" class="transition-colors hover:text-kavora-gold">Private Journeys</a>
+            <a href="index.html#destinations" class="transition-colors hover:text-kavora-gold">Destinations</a>
+            <a href="index.html#approach" class="transition-colors hover:text-kavora-gold">The Kavora Way</a>
+            <a href="contact.html" class="transition-colors hover:text-kavora-gold">Contact</a>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold">
+            Private Journeys
+          </h3>
+
+          <div class="mt-7 flex flex-col gap-4 text-sm font-light text-white/60">
+            <a href="the-wild.html" class="transition-colors hover:text-kavora-gold">The Wild</a>
+            <a href="wilderness-ocean.html" class="transition-colors hover:text-kavora-gold">Wilderness & Ocean</a>
+            <a href="the-rare-encounter.html" class="transition-colors hover:text-kavora-gold">The Rare Encounter</a>
+            <a href="the-summit-and-the-savanna.html" class="transition-colors hover:text-kavora-gold">The Summit & The Savanna</a>
+            <a href="two-countries-one-journey.html" class="text-kavora-gold">Two Countries, One Journey</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flex flex-col gap-5 pt-8 text-[9px] uppercase tracking-[0.17em] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+
+        <p>© <span id="current-year"></span> Kavora. All rights reserved.</p>
+
+        <p class="text-kavora-gold/70">
+          Africa · Considered Journeys
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+
+      mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

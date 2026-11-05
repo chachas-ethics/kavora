@@ -92,7 +92,7 @@
     }
 
     .eyebrow {
-      display: inline-flex;
+      display: hidden;
       align-items: center;
       gap: 13px;
       color: var(--stone);
@@ -1247,7 +1247,7 @@
 
   <!-- HEADER -->
 
-  <header class="site-header" id="site-header">
+  <header class="hidden site-header" id="site-header">
     <div class="section-shell header-inner flex items-center justify-between">
 
       <a href="index.html" aria-label="Kavora Africa homepage">
@@ -1296,51 +1296,25 @@
 
     <!-- HERO -->
 
-    <section class="hero" id="top">
-
-      <div class="hero-background">
-        <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=90"
-          alt="Turquoise Indian Ocean waves along a tropical beach"
-          fetchpriority="high"
-        >
+   <section id="top" class="relative flex min-h-[100svh] items-end overflow-hidden bg-[#0B211A] sm:min-h-[100svh]" style="background-image: linear-gradient(90deg, rgba(11,33,26,.83) 0%, rgba(11,33,26,.50) 46%, rgba(11,33,26,.10) 100%), linear-gradient(0deg, rgba(11,33,26,.48), transparent 45%), url('https://www.easytravel.co.tz/wp-content/uploads/2023/08/aerial-view-of-jambiani-beach-zanzibar-easy-travel-tanzania.jpg'); background-position: center; background-size: cover;" >
+  <div class="mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-20 lg:pb-24">
+    <div class="max-w-[850px]">
+      <h1 id="hero-title" class="font-['Cormorant_Garamond',serif] text-6xl font-normal leading-none tracking-[-.025em] text-[#F7F5EF] sm:text-8xl lg:text-[112px]" >
+        Paje <span class="font-sans font-light text-5xl sm:text-7xl lg:text-[90px]">&amp;</span> <span class="text-kavora-gold italic">Jambiani.</span>
+      </h1>
+      <p id="hero-subtitle" class="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8" >
+        Where the tide shapes the day and the horizon invites you to linger. Discover Zanzibar's south-eastern coast through barefoot luxury, ocean adventures and the quiet rhythms of Swahili life.
+      </p>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+        <a href="#experiences" class="group inline-flex items-center gap-5">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold"> Discover the Coast </span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-[#0B211A]"> → </span>
+        </a>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-
-        <p class="hero-kicker reveal">
-          Zanzibar · The South-Eastern Coast
-        </p>
-
-        <h1 class="hero-title serif reveal">
-          Paje<br>
-          <em>& Jambiani.</em>
-        </h1>
-
-        <p class="hero-description reveal">
-          Where the tide shapes the day and the horizon invites you to
-          linger. Discover Zanzibar's south-eastern coast through barefoot
-          luxury, ocean adventures and the quiet rhythms of Swahili life.
-        </p>
-
-        <div class="hero-actions reveal">
-          <a href="#experiences" class="button-primary">
-            Discover the Coast
-          </a>
-
-          <a href="#enquire" class="button-text">
-            Create Your Journey <span>→</span>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="hero-side-label">The Indian Ocean · Tanzania</div>
-      <div class="hero-index">02 / Zanzibar Collection</div>
-
-    </section>
 
     <!-- INTRODUCTION -->
 
@@ -1349,11 +1323,11 @@
       <div class="section-shell intro-grid">
 
         <div class="reveal">
-          <span class="eyebrow">The South-Eastern Shore</span>
+          <span class="eyebrow text-kavora-gold">The South-Eastern Shore</span>
 
           <h2 class="intro-heading serif">
-            Life follows<br>
-            the <em>rhythm of the tide.</em>
+            Life follows
+            the <span class="text-kavora-gold italic">rhythm of the tide.</em>
           </h2>
         </div>
 
@@ -1413,7 +1387,7 @@
 
         <div class="heritage-image image-clip reveal">
           <img
-            src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=85"
+            src="https://pub-ceb4902b6d5c4cfb9e7142b8b700459f.r2.dev/tours/cover_images/1756729162085-3-Days%20Zanzibar%20Beach%20holiday%20Trip%20Paje%20beach%20&%20Jambiani%20Beaches%20activities.jpg"
             alt="Tropical coastline and clear ocean water"
             loading="lazy"
           >
@@ -1428,11 +1402,9 @@
           <span class="eyebrow">Two Shores, Different Rhythms</span>
 
           <h2 class="serif">
-            The energy<br>
-            of <em>Paje.</em>
+            The energy
+            of <span class="text-kavora-gold italic">Paje.</em>
           </h2>
-
-          <div class="gold-line my-7"></div>
 
           <p>
             Paje brings together an expansive shoreline, a relaxed
@@ -1488,11 +1460,11 @@
         <div class="section-heading-row reveal">
 
           <div>
-            <span class="eyebrow">The Art of Being Here</span>
+            <span class="eyebrow text-kavora-gold">The Art of Being Here</span>
 
             <h2 class="section-heading serif">
-              Experiences<br>
-              <em>shaped by the sea.</em>
+              Experiences 
+              <span class="text-kavora-gold italic">shaped by the sea.</em>
             </h2>
           </div>
 
@@ -1510,8 +1482,8 @@
 
           <div class="experience-feature-image image-clip">
             <img
-              src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1400&q=85"
-              alt="Surfer enjoying the open ocean"
+              src="https://gregadventures.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fg4y5qdkl%2Fproduction%2Ff74c942c96d72ddd8705a41d18afc3e91a0b4f01-6000x3999.jpg%3Fh%3D1296%26w%3D2304%26fit%3Dcrop%26crop%3Dcenter&w=3840&q=80"
+              alt="kite surfing in paje"
               loading="lazy"
             >
           </div>
@@ -1534,10 +1506,6 @@
               activities available during your stay.
             </p>
 
-            <a href="#enquire" class="button-text">
-              Plan an Ocean Experience <span>→</span>
-            </a>
-
           </div>
 
         </article>
@@ -1552,7 +1520,6 @@
               <h4>Kitesurfing in Paje</h4>
               <p>Explore lessons and sessions suited to your experience level.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1561,7 +1528,6 @@
               <h4>Jambiani Village Life</h4>
               <p>Discover local traditions and the rhythms of a coastal community.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1570,7 +1536,6 @@
               <h4>Seaweed Farming</h4>
               <p>Learn about an important part of coastal livelihoods and heritage.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1579,7 +1544,6 @@
               <h4>Low-Tide Walks</h4>
               <p>Observe the changing shoreline and its tidal landscape.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1588,7 +1552,6 @@
               <h4>Swahili Coastal Flavours</h4>
               <p>Discover local dishes, fresh seafood and relaxed dining.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1597,7 +1560,6 @@
               <h4>Slow Beach Days</h4>
               <p>Make space for reading, resting and unhurried ocean views.</p>
             </div>
-            <span class="row-arrow">↗</span>
           </a>
 
         </div>
@@ -1622,7 +1584,7 @@
 
       <div class="pause-content reveal">
 
-        <span class="eyebrow eyebrow-light">A Moment to Yourself</span>
+        <span class="eyebrow eyebrow-light text-kavora-gold">A Moment to Yourself</span>
 
         <blockquote class="pause-quote serif">
           Let the tide<br>
@@ -1649,7 +1611,7 @@
         <div class="section-heading-row reveal">
 
           <div>
-            <span class="eyebrow eyebrow-light">Made Around You</span>
+            <span class="eyebrow eyebrow-light text-kavora-gold">Made Around You</span>
 
             <h2 class="section-heading serif">
               Your island.<br>
@@ -1675,7 +1637,6 @@
               Kitesurfing, time on the water and a beach stay shaped
               around active days and relaxed evenings.
             </p>
-            <a href="#enquire">Create This Journey <span>→</span></a>
           </article>
 
           <article class="journey-card reveal">
@@ -1686,7 +1647,6 @@
               Intimate stays, sunset moments, Swahili flavours and
               unhurried days along the shore.
             </p>
-            <a href="#enquire">Create This Journey <span>→</span></a>
           </article>
 
           <article class="journey-card reveal">
@@ -1697,7 +1657,6 @@
               Explore village life, local traditions and the coastal
               landscape beyond the beach.
             </p>
-            <a href="#enquire">Create This Journey <span>→</span></a>
           </article>
 
         </div>
@@ -1717,11 +1676,9 @@
           <span class="eyebrow">Where You Belong</span>
 
           <h2 class="serif">
-            A place to<br>
-            call your <em>own.</em>
+            A place to
+            call your <span class="text-kavora-gold italic">own.</em>
           </h2>
-
-          <div class="gold-line my-7"></div>
 
           <p>
             Paje and Jambiani offer different settings for a coastal stay,
@@ -1737,8 +1694,6 @@
             options for your dates and budget.
           </p>
 
-          <a href="#enquire" class="button-primary">Find Your Stay</a>
-
         </div>
 
         <div class="stay-image-grid reveal">
@@ -1746,7 +1701,7 @@
           <div>
             <div class="stay-image image-clip">
               <img
-                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85"
+                src="https://images.trvl-media.com/lodging/95000000/94880000/94878100/94878046/de7bf289.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
                 alt="Tropical resort with a swimming pool"
                 loading="lazy"
               >
@@ -1757,7 +1712,7 @@
           <div>
             <div class="stay-image image-clip">
               <img
-                src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=85"
+                src="https://a0.muscache.com/im/pictures/miso/Hosting-688255649414805756/original/d2b270da-4981-4216-bc20-c07701330d43.jpeg"
                 alt="Private island accommodation surrounded by tropical scenery"
                 loading="lazy"
               >
@@ -1779,11 +1734,11 @@
 
         <div class="faq-intro reveal">
 
-          <span class="eyebrow">Before You Arrive</span>
+          <span class="eyebrow text-kavora-gold">Before You Arrive</span>
 
           <h2 class="serif">
-            A few things<br>
-            worth <em>knowing.</em>
+            A few things
+            worth <span class="text-kavora-gold italic">knowing.</span>
           </h2>
 
           <p>

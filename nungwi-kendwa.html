@@ -108,7 +108,7 @@
     }
 
     .eyebrow {
-      display: inline-flex;
+      display: hidden;
       align-items: center;
       gap: 13px;
       color: var(--stone);
@@ -1466,7 +1466,7 @@
        HEADER
        ===================================================== -->
 
-  <header class="site-header" id="site-header">
+  <header class="hidden site-header" id="site-header">
     <div class="section-shell header-inner flex items-center justify-between">
 
       <a href="index.html" aria-label="Kavora Africa homepage">
@@ -1518,57 +1518,25 @@
     <!-- =====================================================
          HERO
          ===================================================== -->
-
-    <section class="hero" id="top">
-
-      <div class="hero-background">
-        <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=90"
-          alt="Turquoise ocean and tropical coastal scenery"
-          fetchpriority="high"
-        >
+<section id="top" class="relative flex min-h-[100svh] items-end overflow-hidden bg-[#0B211A] sm:min-h-[100svh]" style="background-image: linear-gradient(90deg, rgba(11,33,26,.83) 0%, rgba(11,33,26,.50) 46%, rgba(11,33,26,.10) 100%), linear-gradient(0deg, rgba(11,33,26,.48), transparent 45%), url('https://africanoverlandtours.com/wp-content/uploads/2026/01/african-overland-tours-Kendwa-Island-scaled.jpg'); background-position: center; background-size: cover;" >
+  <div class="mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-20 lg:pb-24">
+    <div class="max-w-[850px]">
+      <h1 id="hero-title" class="font-['Cormorant_Garamond',serif] text-6xl font-normal leading-[.95] tracking-[-.025em] text-[#F7F5EF] sm:text-8xl lg:text-[112px]" >
+        Nungwi <span class="font-sans font-light text-5xl sm:text-7xl lg:text-[90px]">&amp;</span> <span class="text-kavora-gold italic">Kendwa.</span>
+      </h1>
+      <p id="hero-subtitle" class="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8" >
+        Where turquoise waters meet unhurried days. Discover Zanzibar's northern shores through private ocean experiences, considered stays and the quiet luxury of having nowhere else to be.
+      </p>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+        <a href="#experiences" class="group inline-flex items-center gap-5">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold"> Discover the North </span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-[#0B211A]"> → </span>
+        </a>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-
-        <p class="hero-kicker reveal">
-          Zanzibar · The Northern Coast
-        </p>
-
-        <h1 class="hero-title serif reveal">
-          Nungwi<br>
-          <em>& Kendwa.</em>
-        </h1>
-
-        <p class="hero-description reveal">
-          Where turquoise waters meet unhurried days. Discover Zanzibar's
-          northern shores through private ocean experiences, considered stays
-          and the quiet luxury of having nowhere else to be.
-        </p>
-
-        <div class="hero-actions reveal">
-          <a href="#experiences" class="button-primary">
-            Discover the North
-          </a>
-
-          <a href="#enquire" class="button-text">
-            Create Your Journey <span>→</span>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="hero-side-label">
-        The Indian Ocean · Tanzania
-      </div>
-
-      <div class="hero-index">
-        01 / Zanzibar Collection
-      </div>
-
-    </section>
 
     <!-- =====================================================
          DESTINATION INTRODUCTION
@@ -1579,11 +1547,11 @@
       <div class="section-shell intro-grid">
 
         <div class="reveal">
-          <span class="eyebrow">The Northern Shore</span>
+          <span class="eyebrow text-kavora-gold">The Northern Shore</span>
 
           <h2 class="intro-heading serif">
             A different rhythm<br>
-            of <em>island living.</em>
+            of <span class="text-kavora-gold italic">island living.</span>
           </h2>
         </div>
 
@@ -1644,7 +1612,7 @@
 
         <div class="heritage-image image-clip reveal">
           <img
-            src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=85"
+            src="https://xanadu-villas.com/files/image/beaches/xanadu-villas-beaches-at-zanzibar-03.jpg"
             alt="Tropical island coastline surrounded by clear blue water"
             loading="lazy"
           >
@@ -1656,14 +1624,12 @@
 
         <div class="heritage-copy reveal">
 
-          <span class="eyebrow">Two Shores, One Island</span>
+          <span class="eyebrow text-kavora-gold">Two Shores, One Island</span>
 
           <h2 class="serif">
             The character<br>
-            of <em>Nungwi.</em>
+            of <span class="text-kavora-gold italic">Nungwi.</span>
           </h2>
-
-          <div class="gold-line my-7"></div>
 
           <p>
             Nungwi is a coastal community where the island's relationship
@@ -1719,11 +1685,11 @@
         <div class="section-heading-row reveal">
 
           <div>
-            <span class="eyebrow">The Art of Being Here</span>
+            <span class="eyebrow text-kavora-gold">The Art of Being Here</span>
 
             <h2 class="section-heading serif">
               Experiences<br>
-              <em>worth lingering for.</em>
+              <span class="text-kavora-gold italic">worth lingering for.</span>
             </h2>
           </div>
 
@@ -1741,7 +1707,7 @@
 
           <div class="experience-feature-image image-clip">
             <img
-              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
+              src="https://www.easytravel.co.tz/wp-content/uploads/2023/07/Swimming-with-a-turtle-at-Nungwi-Beach-Easy-Travel-Tanzania-scaled-2.jpg"
               alt="Boat excursion across clear tropical water"
               loading="lazy"
             >
@@ -1765,10 +1731,6 @@
               a private boat trip or quiet time anchored off the coast.
             </p>
 
-            <a href="#enquire" class="button-text">
-              Arrange an Ocean Experience <span>→</span>
-            </a>
-
           </div>
 
         </article>
@@ -1788,7 +1750,6 @@
               </p>
             </div>
 
-            <span class="row-arrow">↗</span>
 
           </a>
 
@@ -1803,7 +1764,6 @@
               </p>
             </div>
 
-            <span class="row-arrow">↗</span>
 
           </a>
 
@@ -1819,8 +1779,6 @@
               </p>
             </div>
 
-            <span class="row-arrow">↗</span>
-
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1833,8 +1791,6 @@
                 Discover fresh seafood, Swahili dishes and oceanfront dining.
               </p>
             </div>
-
-            <span class="row-arrow">↗</span>
 
           </a>
 
@@ -1850,8 +1806,6 @@
               </p>
             </div>
 
-            <span class="row-arrow">↗</span>
-
           </a>
 
           <a href="#enquire" class="experience-row reveal">
@@ -1864,8 +1818,6 @@
                 Let us help arrange a more intimate occasion by the sea.
               </p>
             </div>
-
-            <span class="row-arrow">↗</span>
 
           </a>
 
@@ -1883,7 +1835,7 @@
 
       <div class="pause-background">
         <img
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85"
+          src="https://safarisoko.com/wp-content/uploads/2023/08/Nungwi-Beach-Zanzibar-Tanzania.jpg"
           alt="Soft waves reaching a tropical beach"
           loading="lazy"
         >
@@ -1893,7 +1845,7 @@
 
       <div class="pause-content reveal">
 
-        <span class="eyebrow eyebrow-light">
+        <span class="eyebrow eyebrow-light text-kavora-gold">
           A Moment to Yourself
         </span>
 
@@ -1955,10 +1907,6 @@
               unhurried days designed for couples.
             </p>
 
-            <a href="#enquire">
-              Create This Journey <span>→</span>
-            </a>
-
           </article>
 
           <article class="journey-card reveal">
@@ -1974,10 +1922,6 @@
               to spend each day exactly as you please.
             </p>
 
-            <a href="#enquire">
-              Create This Journey <span>→</span>
-            </a>
-
           </article>
 
           <article class="journey-card reveal">
@@ -1992,10 +1936,6 @@
               Marine encounters, boat excursions, local discovery and
               memorable days along the northern coast.
             </p>
-
-            <a href="#enquire">
-              Create This Journey <span>→</span>
-            </a>
 
           </article>
 
@@ -2015,14 +1955,12 @@
 
         <div class="stay-copy reveal">
 
-          <span class="eyebrow">Where You Belong</span>
+          <span class="eyebrow text-kavora-gold">Where You Belong</span>
 
           <h2 class="serif">
             Stay close<br>
-            to what <em>matters.</em>
+            to what <span class="text-kavora-gold italic">matters.</em>
           </h2>
-
-          <div class="gold-line my-7"></div>
 
           <p>
             Your choice of stay shapes the entire island experience. From
@@ -2038,10 +1976,6 @@
             and budget.
           </p>
 
-          <a href="#enquire" class="button-primary">
-            Find Your Stay
-          </a>
-
         </div>
 
         <div class="stay-image-grid reveal">
@@ -2049,7 +1983,7 @@
           <div>
             <div class="stay-image image-clip">
               <img
-                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/b6/c2/e4/caption.jpg?w=900&h=500&s=1"
                 alt="Tropical resort with a swimming pool"
                 loading="lazy"
               >
@@ -2061,7 +1995,7 @@
           <div>
             <div class="stay-image image-clip">
               <img
-                src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=85"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/2d/13/ba/caption.jpg?w=900&h=500&s=1"
                 alt="Private island accommodation surrounded by tropical scenery"
                 loading="lazy"
               >
@@ -2086,11 +2020,11 @@
 
         <div class="faq-intro reveal">
 
-          <span class="eyebrow">Before You Arrive</span>
+          <span class="eyebrow text-kavora-gold">Before You Arrive</span>
 
           <h2 class="serif">
-            A few things<br>
-            worth <em>knowing.</em>
+            A few things
+            worth <span class="text-kavora-gold italic">knowing.</em>
           </h2>
 
           <p>
@@ -2253,15 +2187,13 @@
 
         <div class="enquiry-copy reveal">
 
-          <span class="eyebrow">Begin Your Journey</span>
+          <span class="eyebrow text-kavora-gold">Begin Your Journey</span>
 
           <h2 class="serif">
-            The coast<br>
-            is calling.<br>
-            <em>Let's begin.</em>
+            The coast
+            is calling.
+            <span class="text-kavora-gold italic">Let's begin.</em>
           </h2>
-
-          <div class="gold-line my-7"></div>
 
           <p>
             Tell us a little about the journey you have in mind. Whether

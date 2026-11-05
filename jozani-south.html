@@ -296,49 +296,29 @@
        HERO
        ===================================================== -->
 
-  <section class="relative flex min-h-[90svh] items-end overflow-hidden bg-kavora-forest md:min-h-screen">
-
-    <img
-      src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2400&q=90"
-      alt="Lush tropical forest in Zanzibar"
-      class="hero-image absolute inset-0"
-    >
-
-    <div class="absolute inset-0 bg-gradient-to-t from-kavora-forest/90 via-kavora-forest/25 to-black/25"></div>
-
-    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-40 text-white md:px-12 md:pb-28 lg:px-16">
-
-      <div class="reveal max-w-4xl">
-        <div class="mb-7 flex items-center gap-4">
-          <span class="gold-line"></span>
-          <p class="eyebrow text-kavora-gold">Zanzibar · Tanzania</p>
-        </div>
-
-        <h1 class="max-w-4xl font-luxury text-6xl font-normal leading-[.93] tracking-[-.035em] sm:text-7xl md:text-8xl lg:text-[112px]">
-          Jozani &<br>
-          <span class="italic text-kavora-gold">South Zanzibar.</span>
-        </h1>
-
-        <p class="mt-7 max-w-xl text-sm leading-7 text-white/80 md:text-base md:leading-8">
-          Into the quiet heart of the island, where ancient forest,
-          red colobus monkeys and the rhythms of the southern coast
-          reveal a more intimate side of Zanzibar.
-        </p>
-
-        <div class="mt-10 flex flex-wrap items-center gap-7">
-          <a href="#discover" class="text-link text-white">
-            Discover the south <span aria-hidden="true">↘</span>
-          </a>
-          <span class="eyebrow text-white/60">Forest · Coast · Culture</span>
-        </div>
-      </div>
-
-      <div class="absolute bottom-8 right-6 hidden items-center gap-4 md:flex lg:right-16">
-        <span class="h-px w-12 bg-white/50"></span>
-        <span class="eyebrow text-white/70">06° south of the equator</span>
+ <section id="top" class="relative flex min-h-[100svh] items-end overflow-hidden bg-[#0B211A] sm:min-h-[100svh]" style="background-image: linear-gradient(90deg, rgba(11,33,26,.83) 0%, rgba(11,33,26,.50) 46%, rgba(11,33,26,.10) 100%), linear-gradient(0deg, rgba(11,33,26,.48), transparent 45%), url('https://www.exploretanzaniatours.com/wp-content/uploads/2022/02/Jozani-Chwaka-Bay-National-park.jpg'); background-position: center; background-size: cover;" >
+  <div class="mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-20 lg:pb-24">
+    <div class="max-w-[850px]">
+      <h1 id="hero-title" class="font-['Cormorant_Garamond',serif] text-6xl font-normal leading-[.91] tracking-[-.025em] text-[#F7F5EF] sm:text-8xl lg:text-[112px]" >
+        Jozani <span class="font-sans font-light text-5xl sm:text-7xl lg:text-[90px]">&amp;</span> <span class="text-kavora-gold italic">South Zanzibar.</span>
+      </h1>
+      <p id="hero-subtitle" class="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8" >
+        Into the quiet heart of the island, where ancient forest, red colobus monkeys and the rhythms of the southern coast reveal a more intimate side of Zanzibar.
+      </p>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+        <a href="#discover" class="group inline-flex items-center gap-5">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold"> Discover the South </span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-[#0B211A]"> → </span>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="absolute bottom-8 right-6 hidden items-center gap-4 md:flex lg:right-16">
+    <span class="h-px w-12 bg-white/20"></span>
+    <span class="font-sans text-[10px] uppercase tracking-[.24em] text-white/50">06° south of the equator</span>
+  </div>
+</section>
+
 
 
   <!-- =====================================================
@@ -349,15 +329,14 @@
     <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16">
 
       <div class="reveal md:col-span-5">
-        <p class="eyebrow mb-6 text-kavora-stone">A different side of the island</p>
+        <p class="eyebrow mb-6 text-kavora-gold">A different side of the island</p>
         <h2 class="font-luxury text-5xl font-normal leading-[1.04] tracking-tight md:text-6xl lg:text-7xl">
           Where the island<br>
-          <span class="italic text-kavora-green">slows down.</span>
+          <span class="italic text-kavora-gold">slows down.</span>
         </h2>
       </div>
 
       <div class="reveal md:col-span-6 md:col-start-7">
-        <div class="gold-line mb-7"></div>
 
         <p class="text-sm leading-8 text-kavora-stone md:text-base md:leading-9">
           Beyond Zanzibar's historic streets and northern beaches lies a
@@ -385,160 +364,152 @@
        DESTINATION 01: JOZANI FOREST
        ===================================================== -->
 
-  <section class="px-6 pb-16 md:px-12 md:pb-24 lg:px-16">
-    <article class="destination-card reveal group mx-auto grid max-w-7xl overflow-hidden border border-kavora-line md:grid-cols-2">
+ <section class="px-6 pb-16 md:px-10 md:pb-24 lg:px-16">
+  <article class="reveal group mx-auto grid max-w-[1440px] overflow-hidden border border-kavora-line lg:h-[580px] lg:grid-cols-12 bg-[#0B211A]/5">
 
-      <div class="destination-image relative min-h-[360px] md:min-h-[590px]">
-        <img
-          src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85"
-          alt="Sunlight falling through a dense tropical forest"
-          loading="lazy"
-        >
-        <span class="absolute bottom-6 left-6 eyebrow text-white">01 / Nature</span>
-      </div>
+    <!-- Compact Image Container bound to explicit heights on desktop -->
+    <div class="relative min-h-[360px] lg:col-span-6 lg:h-full">
+      <img
+        src="https://www.exploretanzaniatours.com/wp-content/uploads/2022/02/Jozani-Chwaka-Bay-National-park.jpg"
+        alt="Sunlight falling through a dense tropical forest"
+        class="absolute h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+        loading="lazy"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/30 to-transparent"></div>
+    </div>
 
-      <div class="flex flex-col justify-center px-7 py-12 md:px-12 lg:px-16 lg:py-20">
-        <p class="eyebrow mb-6 text-kavora-stone">The green heart of Zanzibar</p>
-        <div class="gold-line mb-7"></div>
+    <!-- Tightly constrained Text Area to fix long length heights -->
+    <div class="flex flex-col justify-between p-8 sm:p-12 lg:col-span-6 lg:h-full lg:p-14 xl:p-16">
+      <div>
 
-        <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
-          Jozani<br>
-          <span class="italic text-kavora-green">Forest.</span>
+        <h2 class="font-['Cormorant_Garamond',serif] text-5xl text-kavora-green font-normal leading-tight text-[#F7F5EF] sm:text-6xl">
+          Jozani <span class="italic text-kavora-gold">Forest.</span>
         </h2>
 
-        <p class="mt-7 text-sm leading-8 text-kavora-stone">
-          Step into one of Zanzibar's most remarkable natural environments.
-          Jozani is known for its rich forest habitat, distinctive mangrove
-          ecosystems and the endemic Zanzibar red colobus monkey.
+        <p class="mt-6 text-sm leading-7 text-kavora-stone/90">
+          Step into one of Zanzibar's most remarkable natural environments. Jozani is celebrated for its rich tropical woodland, raw biodiversity, shifting mangrove ecosystems, and the rare endemic Zanzibar red colobus monkey.
         </p>
+      </div>
 
-        <p class="mt-4 text-sm leading-8 text-kavora-stone">
-          Guided walks offer a closer look at the island's biodiversity,
-          from towering trees and forest plants to the shifting landscapes
-          where woodland gives way to mangrove.
-        </p>
-
-        <div class="mt-8 border-t border-kavora-line pt-6">
-          <p class="eyebrow mb-3 text-kavora-stone">Known for</p>
-          <p class="text-xs leading-6 text-kavora-forest">
-            Red colobus monkeys · Forest walks · Mangrove boardwalks · Birdlife
-          </p>
-        </div>
-
-        <div class="mt-8">
-          <a href="#enquire" class="text-link">Explore a forest journey <span aria-hidden="true">↗</span></a>
+      <!-- Footer Elements held neatly at the bottom baseline -->
+      <div class="mt-8 border-t border-kavora-line pt-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="font-sans text-[9px] font-bold uppercase tracking-[.24em] text-kavora-stone/50 mb-1">Known for</p>
+            <p class="font-sans text-[10px] font-semibold uppercase tracking-[.12em] text-kavora-gold">
+              Colobus Monkeys · Boardwalks · Guided Walks
+            </p>
+          </div>
         </div>
       </div>
-    </article>
-  </section>
+    </div>
+
+  </article>
+</section>
+
 
 
   <!-- =====================================================
        DESTINATION 02: KIZIMKAZI
        ===================================================== -->
 
-  <section class="px-6 pb-16 md:px-12 md:pb-24 lg:px-16">
-    <article class="destination-card reveal group mx-auto grid max-w-7xl overflow-hidden border border-kavora-line md:grid-cols-2">
+ <section class="px-6 pb-16 md:px-10 md:pb-24 lg:px-16">
+  <article class="reveal group mx-auto grid max-w-[1440px] overflow-hidden border border-kavora-line lg:h-[580px] lg:grid-cols-12 bg-[#0B211A]/5">
 
-      <div class="destination-image relative min-h-[360px] md:order-2 md:min-h-[590px]">
-        <img
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
-          alt="Traditional wooden boat on clear tropical water"
-          loading="lazy"
-        >
-        <span class="absolute bottom-6 left-6 eyebrow text-white">02 / Coast</span>
-      </div>
+    <!-- Compact Image Container (Ordered second on desktop to alternate layout pattern) -->
+    <div class="relative min-h-[360px] lg:col-span-6 lg:order-2 lg:h-full">
+      <img
+        src="https://www.safaribando.com/uploads/destination_1773306349.jpg"
+        alt="Traditional wooden boat on clear tropical water"
+        class="absolute h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+        loading="lazy"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/30 to-transparent"></div>
+    </div>
 
-      <div class="flex flex-col justify-center px-7 py-12 md:order-1 md:px-12 lg:px-16 lg:py-20">
-        <p class="eyebrow mb-6 text-kavora-stone">The southern shoreline</p>
-        <div class="gold-line mb-7"></div>
+    <!-- Tightly constrained Text Area matching the identical vertical layout block -->
+    <div class="flex flex-col justify-between p-8 sm:p-12 lg:col-span-6 lg:order-1 lg:h-full lg:p-14 xl:p-16">
+      <div>
 
-        <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
-          Kizimkazi<br>
-          <span class="italic text-kavora-green">by the sea.</span>
+        <h2 class="font-['Cormorant_Garamond',serif] text-5xl text-kavora-green font-normal leading-tight text-[#F7F5EF] sm:text-6xl">
+          Kizimkazi <span class="italic text-kavora-gold">by the sea.</span>
         </h2>
 
-        <p class="mt-7 text-sm leading-8 text-kavora-stone">
-          On Zanzibar's southern coast, Kizimkazi offers a glimpse of a
-          long-standing relationship between island communities and the sea.
-          Traditional fishing culture, coastal scenery and open horizons
-          give this part of the island a character of its own.
+        <p class="mt-6 text-sm leading-7 text-kavora-stone/90">
+          On Zanzibar's southern coast, Kizimkazi offers a glimpse of a long-standing relationship between island communities and the sea. Traditional fishing culture, raw coastal scenery, and pristine open horizons give this village a character completely its own.
         </p>
+      </div>
 
-        <p class="mt-4 text-sm leading-8 text-kavora-stone">
-          Boat excursions are available in the area, including trips where
-          dolphins may be encountered in their natural environment. Sightings
-          are never guaranteed, and responsible operators should prioritise
-          distance, animal welfare and respectful observation.
-        </p>
-
-        <div class="mt-8 border-t border-kavora-line pt-6">
-          <p class="eyebrow mb-3 text-kavora-stone">Known for</p>
-          <p class="text-xs leading-6 text-kavora-forest">
-            Coastal villages · Traditional boats · Ocean excursions · Seascapes
-          </p>
-        </div>
-
-        <div class="mt-8">
-          <a href="#enquire" class="text-link">Discover the southern coast <span aria-hidden="true">↗</span></a>
+      <!-- Footer Elements held neatly at the bottom baseline -->
+      <div class="mt-8 border-t border-kavora-line pt-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="font-sans text-[9px] font-bold uppercase tracking-[.24em] text-kavora-stone/50 mb-1">Known for</p>
+            <p class="font-sans text-[10px] font-semibold uppercase tracking-[.12em] text-kavora-gold">
+              Coastal Villages · Ocean Excursions · Seascapes
+            </p>
+          </div>
         </div>
       </div>
-    </article>
-  </section>
+    </div>
+
+  </article>
+</section>
+
 
 
   <!-- =====================================================
        DESTINATION 03: MAKUNDUCHI
        ===================================================== -->
 
-  <section class="px-6 pb-24 md:px-12 md:pb-32 lg:px-16">
-    <article class="destination-card reveal group mx-auto grid max-w-7xl overflow-hidden border border-kavora-line md:grid-cols-2">
+  <section class="px-6 pb-16 md:px-10 md:pb-24 lg:px-16">
+  <article class="reveal group mx-auto grid max-w-[1440px] overflow-hidden border border-kavora-line lg:h-[580px] lg:grid-cols-12 bg-[#0B211A]/5">
 
-      <div class="destination-image relative min-h-[360px] md:min-h-[590px]">
-        <img
-          src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=85"
-          alt="Quiet tropical coastline with palms and turquoise water"
-          loading="lazy"
-        >
-        <span class="absolute bottom-6 left-6 eyebrow text-white">03 / Island life</span>
-      </div>
+    <!-- Compact Image Container (Ordered first to maintain clean alignment rhythm) -->
+    <div class="relative min-h-[360px] lg:col-span-6 lg:h-full">
+      <img
+        src="https://bamboozanzibar.com/wp-content/uploads/FC270F1B-DEEC-41F9-BEBE-9F1FA2D42CE3-e1769012399432.jpg"
+        alt="Makunduchi Village"
+        class="absolute h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+        loading="lazy"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0B211A]/30 to-transparent"></div>
+    </div>
 
-      <div class="flex flex-col justify-center px-7 py-12 md:px-12 lg:px-16 lg:py-20">
-        <p class="eyebrow mb-6 text-kavora-stone">Traditions of the south</p>
-        <div class="gold-line mb-7"></div>
+    <!-- Tightly constrained Text Area matching the identical vertical layout block -->
+    <div class="flex flex-col justify-between p-8 sm:p-12 lg:col-span-6 lg:h-full lg:p-14 xl:p-16">
+      <div>
+       
 
-        <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
-          Makunduchi<br>
-          <span class="italic text-kavora-green">and beyond.</span>
+        <h2 class="font-['Cormorant_Garamond',serif] text-5xl font-normal text-kavora-green leading-tight text-[#F7F5EF] sm:text-6xl">
+          Makunduchi <span class="italic text-kavora-gold">and beyond.</span>
         </h2>
 
-        <p class="mt-7 text-sm leading-8 text-kavora-stone">
-          Discover a more everyday expression of Zanzibar in the island's
-          southern villages. Here, the pace of life is shaped by community,
-          the seasons, fishing, farming and the traditions carried between
-          generations.
+        <p class="mt-6 text-sm leading-7 text-kavora-stone/90">
+          Discover a more everyday expression of Zanzibar in the island's southern villages. Here, the pace of life is shaped by community, the seasons, fishing, farming, and the quiet traditions carried intentionally between generations.
         </p>
+      </div>
 
-        <p class="mt-4 text-sm leading-8 text-kavora-stone">
-          With thoughtful local guidance, village visits can offer meaningful
-          encounters with Swahili culture, local food and island crafts.
-          Experiences should be arranged with respect for residents and
-          their privacy, with community consent at the centre.
-        </p>
-
-        <div class="mt-8 border-t border-kavora-line pt-6">
-          <p class="eyebrow mb-3 text-kavora-stone">Known for</p>
-          <p class="text-xs leading-6 text-kavora-forest">
-            Swahili heritage · Village life · Local food · Cultural encounters
-          </p>
-        </div>
-
-        <div class="mt-8">
-          <a href="#enquire" class="text-link">Plan a cultural encounter <span aria-hidden="true">↗</span></a>
+      <!-- Footer Elements held neatly at the bottom baseline -->
+      <div class="mt-8 border-t border-kavora-line pt-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="font-sans text-[9px] font-bold uppercase tracking-[.24em] text-kavora-stone/50 mb-1">Known for</p>
+            <p class="font-sans text-[10px] font-semibold uppercase tracking-[.12em] text-kavora-gold">
+              Swahili Heritage · Village Life · Crafts
+            </p>
+          </div>
+          
+          <a href="#enquire" class="group inline-flex items-center gap-3 font-sans text-[11px] font-bold uppercase tracking-[.24em] text-[#F7F5EF] hover:text-kavora-gold transition-colors duration-300">
+            Explore <span class="inline-block transform transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
-    </article>
-  </section>
+    </div>
+
+  </article>
+</section>
+
 
 
   <!-- =====================================================
@@ -549,11 +520,10 @@
     <div class="mx-auto max-w-7xl">
 
       <div class="reveal mb-14 max-w-2xl md:mb-20">
-        <p class="eyebrow mb-6 text-kavora-stone">Experiences, considered</p>
-        <div class="gold-line mb-7"></div>
+        <p class="eyebrow mb-6 text-kavora-gold">Experiences, considered</p>
         <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
           Moments that bring<br>
-          <span class="italic text-kavora-green">the south to life.</span>
+          <span class="italic text-kavora-gold">the south to life.</span>
         </h2>
         <p class="mt-6 max-w-xl text-sm leading-8 text-kavora-stone">
           From forest trails to the water's edge, experience the island
@@ -566,8 +536,8 @@
         <article class="experience-card reveal md:col-span-7">
           <div class="experience-image relative h-[350px] md:h-[520px]">
             <img
-              src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1500&q=85"
-              alt="A path through a lush forest"
+              src="https://www.easytravel.co.tz/wp-content/uploads/Tourists-walking-on-the-Jozani-Forest-boardwalk.webp"
+              alt="A walk in jozani forest zanzibar"
               loading="lazy"
             >
             <span class="absolute bottom-5 left-5 eyebrow text-white">01 / Guided nature</span>
@@ -581,7 +551,6 @@
                 habitats while learning about the island's distinctive ecology.
               </p>
             </div>
-            <a href="#enquire" aria-label="Enquire about a Jozani forest walk" class="mt-1 text-xl text-kavora-green">↗</a>
           </div>
         </article>
 
@@ -590,11 +559,10 @@
           <article class="experience-card reveal">
             <div class="experience-image relative h-[260px] md:h-[320px]">
               <img
-                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"
+                src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/37/54/5f.jpg"
                 alt="Waves moving along a tropical island shore"
                 loading="lazy"
               >
-              <span class="absolute bottom-5 left-5 eyebrow text-white">02 / Ocean</span>
             </div>
             <div class="py-6">
               <h3 class="font-luxury text-3xl md:text-4xl">Time on the water</h3>
@@ -608,11 +576,10 @@
           <article class="experience-card reveal">
             <div class="experience-image relative h-[260px] md:h-[320px]">
               <img
-                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85"
+                src="https://www.zanzibarbookings.com/storage/deals/photos/hu48DGhw3wTDvr5mdjH1oRRloxEp63sue8YeUr3s.jpg"
                 alt="Freshly prepared local food"
                 loading="lazy"
               >
-              <span class="absolute bottom-5 left-5 eyebrow text-white">03 / Flavours</span>
             </div>
             <div class="py-6">
               <h3 class="font-luxury text-3xl md:text-4xl">The taste of Zanzibar</h3>
@@ -636,7 +603,7 @@
   <section class="editorial-image relative flex min-h-[540px] items-center overflow-hidden bg-kavora-forest md:min-h-[680px]">
 
     <img
-      src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=90"
+      src="https://www.zanzibar.com/media-assets/Kendwa_beach-3-992.jpg"
       alt="Open ocean along the Zanzibar coast"
       loading="lazy"
       class="absolute inset-0"
@@ -646,7 +613,7 @@
       <div class="reveal max-w-3xl">
         <p class="eyebrow mb-8 text-kavora-gold">The art of travelling slowly</p>
 
-        <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-7xl lg:text-8xl">
+        <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-7xl lg:text-7xl">
           Some places ask<br>
           you to do less.<br>
           <span class="italic text-kavora-gold">And feel more.</span>
@@ -671,7 +638,6 @@
       <div class="reveal mb-14 grid gap-8 md:mb-20 md:grid-cols-12 md:items-end">
         <div class="md:col-span-7">
           <p class="eyebrow mb-6 text-kavora-gold">Your journey, your rhythm</p>
-          <div class="gold-line mb-7"></div>
           <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
             Made for the way<br>
             <span class="italic text-kavora-gold">you want to travel.</span>
@@ -688,33 +654,30 @@
       <div class="grid gap-px border border-white/15 md:grid-cols-3">
 
         <article class="reveal border-b border-white/15 p-7 md:border-b-0 md:border-r md:p-9 lg:p-11">
-          <p class="eyebrow text-kavora-gold">01 / Nature</p>
+          <p class="eyebrow text-kavora-gold">Nature</p>
           <h3 class="mt-8 font-luxury text-3xl md:text-4xl">Forest & coast</h3>
           <p class="mt-5 text-sm leading-7 text-white/65">
             A nature-led escape combining a guided visit to Jozani with
             time to unwind along the southern shoreline.
           </p>
-          <a href="#enquire" class="mt-8 inline-block text-link text-white">Shape this journey <span>↗</span></a>
         </article>
 
         <article class="reveal border-b border-white/15 p-7 md:border-b-0 md:border-r md:p-9 lg:p-11">
-          <p class="eyebrow text-kavora-gold">02 / Discovery</p>
+          <p class="eyebrow text-kavora-gold">Discovery</p>
           <h3 class="mt-8 font-luxury text-3xl md:text-4xl">The island revealed</h3>
           <p class="mt-5 text-sm leading-7 text-white/65">
             Pair the forest with coastal discoveries, local food and
             opportunities to learn about Swahili island life.
           </p>
-          <a href="#enquire" class="mt-8 inline-block text-link text-white">Shape this journey <span>↗</span></a>
         </article>
 
         <article class="reveal p-7 md:p-9 lg:p-11">
-          <p class="eyebrow text-kavora-gold">03 / Slow living</p>
+          <p class="eyebrow text-kavora-gold">Slow living</p>
           <h3 class="mt-8 font-luxury text-3xl md:text-4xl">A gentler escape</h3>
           <p class="mt-5 text-sm leading-7 text-white/65">
             A restorative stay with flexible days, peaceful accommodation
             and only the experiences you genuinely want.
           </p>
-          <a href="#enquire" class="mt-8 inline-block text-link text-white">Shape this journey <span>↗</span></a>
         </article>
 
       </div>
@@ -731,11 +694,10 @@
 
       <div class="reveal mb-14 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
         <div>
-          <p class="eyebrow mb-6 text-kavora-stone">Where you stay matters</p>
-          <div class="gold-line mb-7"></div>
+          <p class="eyebrow mb-6 text-kavora-gold">Where you stay matters</p>
           <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl lg:text-7xl">
-            A place to<br>
-            <span class="italic text-kavora-green">come back to.</span>
+            A place to
+            <span class="italic text-kavora-gold">come back to.</span>
           </h2>
         </div>
 
@@ -750,11 +712,10 @@
         <article class="reveal group">
           <div class="experience-image relative h-[320px] md:h-[450px]">
             <img
-              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85"
-              alt="A tranquil tropical resort with a swimming pool"
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/35/05/29/2d/caption.jpg?w=1200&h=-1&s=1"
+              alt="Beach resort in jozani zanzibar"
               loading="lazy"
             >
-            <span class="absolute bottom-5 left-5 eyebrow text-white">Coastal retreats</span>
           </div>
           <div class="flex items-start justify-between gap-5 py-6">
             <div>
@@ -764,18 +725,16 @@
                 quiet moments and restorative island living.
               </p>
             </div>
-            <a href="#enquire" aria-label="Enquire about coastal retreats" class="pt-1 text-xl">↗</a>
           </div>
         </article>
 
         <article class="reveal group md:mt-16">
           <div class="experience-image relative h-[320px] md:h-[450px]">
             <img
-              src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=85"
+              src="https://paradise-wilderness.com/wp-content/smush-webp/zanzibar-bay-resort-pool_55476931972_o-2560x1441.jpg.webp"
               alt="A peaceful boutique accommodation surrounded by greenery"
               loading="lazy"
             >
-            <span class="absolute bottom-5 left-5 eyebrow text-white">Intimate stays</span>
           </div>
           <div class="flex items-start justify-between gap-5 py-6">
             <div>
@@ -785,7 +744,6 @@
                 drawn to nature, privacy and a slower pace.
               </p>
             </div>
-            <a href="#enquire" aria-label="Enquire about intimate nature stays" class="pt-1 text-xl">↗</a>
           </div>
         </article>
 
@@ -807,11 +765,10 @@
     <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-12 md:gap-16">
 
       <div class="reveal md:col-span-4">
-        <p class="eyebrow mb-6 text-kavora-stone">A few useful details</p>
-        <div class="gold-line mb-7"></div>
+        <p class="eyebrow mb-6 text-kavora-gold">A few useful details</p>
         <h2 class="font-luxury text-5xl font-normal leading-[1.02] md:text-6xl">
-          Before you<br>
-          <span class="italic text-kavora-green">set off.</span>
+          Before you
+          <span class="italic text-kavora-gold">set off.</span>
         </h2>
         <p class="mt-6 text-sm leading-8 text-kavora-stone">
           A little preparation helps make your time in southern Zanzibar
