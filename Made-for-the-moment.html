@@ -4,439 +4,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Celebrate life's most meaningful moments with a tailor-made private journey by Kavora Luxury Travel & Concierge.">
+
   <title>Made for the Moment | Kavora Luxury Travel & Concierge</title>
+
+  <meta
+    name="description"
+    content="Celebrate life's most meaningful moments with a tailor-made private journey by Kavora Luxury Travel & Concierge."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            forest: "#0B211A",
-            deepforest: "#081A14",
-            green: "#102D23",
-            gold: "#C8A96B",
-            ivory: "#F7F5EF",
-            muted: "#74786F",
-            sand: "#E4E0D6"
+            'kavora-green': '#0B211A',
+            'kavora-dark': '#081A14',
+            'kavora-forest': '#102D23',
+            'kavora-gold': '#C8A96B',
+            'kavora-ivory': '#F7F5EF',
+            'kavora-muted': '#74786F',
+            'kavora-sand': '#E4E0D6'
           },
           fontFamily: {
-            serif: ["Cormorant Garamond", "serif"],
-            sans: ["Manrope", "sans-serif"]
+            luxury: ['Cormorant Garamond', 'serif'],
+            sans: ['Manrope', 'sans-serif']
           }
         }
       }
-    }
+    };
   </script>
 </head>
 
-<body class="bg-ivory font-sans text-forest antialiased">
+<body class="bg-kavora-ivory font-sans text-kavora-green antialiased">
 
-  <!-- HEADER -->
-  <header class="absolute left-0 top-0 z-50 w-full border-b border-white/15">
-    <div class="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 sm:px-10 lg:px-16">
+  <main>
 
-      <a href="index.html" class="font-serif text-3xl tracking-wide text-ivory">
-        kavora<span class="text-gold">.</span>
-      </a>
-
-      <nav class="hidden items-center gap-9 lg:flex">
-        <a href="index.html" class="text-[11px] uppercase tracking-[0.18em] text-white/75 transition hover:text-gold">Home</a>
-        <a href="index.html#journeys" class="text-[11px] uppercase tracking-[0.18em] text-white transition hover:text-gold">Private Journeys</a>
-        <a href="index.html#destinations" class="text-[11px] uppercase tracking-[0.18em] text-white/75 transition hover:text-gold">Destinations</a>
-        <a href="index.html#our-way" class="text-[11px] uppercase tracking-[0.18em] text-white/75 transition hover:text-gold">The Kavora Way</a>
-        <a href="contact.html" class="text-[11px] uppercase tracking-[0.18em] text-white/75 transition hover:text-gold">Contact</a>
-      </nav>
-
-      <a href="contact.html" class="hidden border border-gold/70 px-6 py-3 text-[10px] uppercase tracking-[0.2em] text-ivory transition hover:bg-gold hover:text-forest lg:block">
-        Begin Your Journey
-      </a>
-
-      <button id="menuButton" class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden" aria-label="Open menu" aria-expanded="false">
-        <span class="h-px w-6 bg-white"></span>
-        <span class="h-px w-6 bg-white"></span>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="hidden border-t border-white/10 bg-deepforest px-6 py-8 lg:hidden">
-      <nav class="flex flex-col gap-6">
-        <a href="index.html" class="text-xs uppercase tracking-[0.2em] text-white/80">Home</a>
-        <a href="index.html#journeys" class="text-xs uppercase tracking-[0.2em] text-white/80">Private Journeys</a>
-        <a href="index.html#destinations" class="text-xs uppercase tracking-[0.2em] text-white/80">Destinations</a>
-        <a href="index.html#our-way" class="text-xs uppercase tracking-[0.2em] text-white/80">The Kavora Way</a>
-        <a href="contact.html" class="text-xs uppercase tracking-[0.2em] text-white/80">Contact</a>
-        <a href="contact.html" class="mt-2 border border-gold px-5 py-4 text-center text-[10px] uppercase tracking-[0.2em] text-gold">Begin Your Journey</a>
-      </nav>
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-  <section class="relative flex min-h-[100svh] items-end overflow-hidden bg-forest">
-
-    <img
-      src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2400&q=90"
-      alt="An intimate celebration in an elegant outdoor setting"
-      class="absolute inset-0 h-full w-full object-cover object-center"
-      fetchpriority="high"
+    <!-- HERO -->
+    <section
+      class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+      style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.5) 35%, rgba(5,20,15,0.90)), url('https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/Asilia-Africa-Ubuntu-Migration-Camp.jpg.webp'); background-size: cover; background-position: center;"
     >
 
-    <div class="absolute inset-0 bg-gradient-to-r from-[#081A14]/85 via-[#081A14]/45 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#081A14]/80 via-transparent to-[#081A14]/30"></div>
+      <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-    <div class="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-20 pt-44 sm:px-10 sm:pb-28 lg:px-16 lg:pb-32">
+      <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-      <div class="mb-8 flex items-center gap-4">
-        <span class="h-px w-10 bg-gold"></span>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-gold">Private Journey No. 07</p>
-      </div>
+        <div class="max-w-4xl">
 
-      <p class="mb-5 text-[11px] uppercase tracking-[0.28em] text-white/75">
-        Tailor-made · 5–10 Nights
-      </p>
+          <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-white sm:text-8xl lg:text-[130px]">
+            Made for
+            <span class="block italic text-kavora-gold">the Moment.</span>
+          </h1>
 
-      <h1 class="max-w-4xl font-serif text-6xl font-medium leading-[0.95] text-ivory sm:text-7xl md:text-8xl lg:text-[110px]">
-        Made for<br>
-        <span class="italic text-gold">the Moment.</span>
-      </h1>
+          <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+            Some moments deserve more than a celebration. They deserve a journey designed entirely around them.
+          </p>
 
-      <p class="mt-8 max-w-xl text-sm font-light leading-8 text-white/80 sm:text-base">
-        Some moments deserve more than a celebration. They deserve a journey designed entirely around them.
-      </p>
+          <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
 
-      <a href="contact.html?journey=Made%20for%20the%20Moment" class="mt-10 inline-flex items-center gap-5 border-b border-gold pb-3 text-[10px] uppercase tracking-[0.22em] text-ivory transition hover:text-gold">
-        Create Your Celebration
-        <span class="text-lg text-gold">↗</span>
-      </a>
-    </div>
+            <a
+              href="contact.html?journey=Made%20for%20the%20Moment"
+              class="group inline-flex items-center gap-5"
+            >
 
-    <div class="absolute bottom-10 right-10 z-10 hidden text-right md:block">
-      <p class="text-[9px] uppercase tracking-[0.25em] text-white/50">Kavora Private Journeys</p>
-      <p class="mt-2 font-serif text-xl italic text-white/80">Every moment, considered.</p>
-    </div>
-  </section>
+              <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+                Create Your Celebration
+              </span>
 
+              <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+                →
+              </span>
 
-  <!-- INTRODUCTION -->
-  <section class="bg-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
-    <div class="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-2 lg:items-center lg:gap-24">
+            </a>
 
-      <div>
-        <div class="mb-8 flex items-center gap-4">
-          <span class="h-px w-10 bg-gold"></span>
-          <p class="text-[10px] uppercase tracking-[0.25em] text-muted">A Journey Worth Remembering</p>
-        </div>
-
-        <h2 class="max-w-xl font-serif text-5xl leading-[1.05] text-forest sm:text-6xl lg:text-7xl">
-          Life's most meaningful moments deserve <span class="italic text-gold">something extraordinary.</span>
-        </h2>
-      </div>
-
-      <div class="lg:pl-8">
-        <p class="text-sm leading-8 text-muted sm:text-base">
-          Turn a honeymoon, anniversary, birthday, or special reunion into a journey designed around the occasion. Thoughtful details, exceptional settings, and personal touches make every celebration uniquely yours.
-        </p>
-
-        <p class="mt-8 border-l border-gold pl-6 font-serif text-2xl italic leading-relaxed text-forest sm:text-3xl">
-          Not just a celebration, but a memory to last.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- THE JOURNEY -->
-  <section class="bg-forest px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
-    <div class="mx-auto max-w-[1400px]">
-
-      <div class="mb-14 max-w-2xl">
-        <div class="mb-7 flex items-center gap-4">
-          <span class="h-px w-10 bg-gold"></span>
-          <p class="text-[10px] uppercase tracking-[0.25em] text-gold">Designed Around You</p>
-        </div>
-
-        <h2 class="font-serif text-5xl leading-tight text-ivory sm:text-6xl">
-          More than a destination.<br>
-          <span class="italic text-gold">A personal celebration.</span>
-        </h2>
-
-        <p class="mt-6 max-w-xl text-sm leading-8 text-white/60">
-          Every occasion has its own meaning. We shape the journey around yours, from the setting to the smallest details.
-        </p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-2">
-
-        <div class="group relative min-h-[430px] overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=85"
-            alt="An intimate celebration arranged with thoughtful details"
-            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-[#081A14]/90 via-[#081A14]/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-8 sm:p-10">
-            <p class="mb-4 text-[9px] uppercase tracking-[0.25em] text-gold">01 · The Occasion</p>
-            <h3 class="font-serif text-4xl text-ivory sm:text-5xl">Your Moment</h3>
-            <p class="mt-4 max-w-md text-sm leading-7 text-white/75">
-              Whether it is a honeymoon, anniversary, birthday, or reunion, the journey begins with what you are celebrating.
-            </p>
           </div>
-        </div>
 
-        <div class="group relative min-h-[430px] overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1400&q=85"
-            alt="Friends and loved ones sharing a special moment together"
-            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          >
-          <div class="absolute inset-0 bg-gradient-to-t from-[#081A14]/90 via-[#081A14]/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-8 sm:p-10">
-            <p class="mb-4 text-[9px] uppercase tracking-[0.25em] text-gold">02 · The Details</p>
-            <h3 class="font-serif text-4xl text-ivory sm:text-5xl">Made Personal</h3>
-            <p class="mt-4 max-w-md text-sm leading-7 text-white/75">
-              Thoughtful experiences, exceptional settings, and personal touches come together to make the occasion distinctly yours.
-            </p>
-          </div>
         </div>
 
       </div>
-    </div>
-  </section>
+
+    </section>
 
 
-  <!-- THE KAVORA EXPERIENCE -->
-  <section class="bg-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
-    <div class="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-2 lg:items-center lg:gap-24">
+    <!-- INTRODUCTION -->
+    <section class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40">
 
-      <div class="relative">
+      <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-20">
+
+        <div class="lg:col-span-4">
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            A Journey Worth Remembering
+          </p>
+
+        </div>
+
+        <div class="lg:col-span-8">
+
+          <h2 class="font-luxury text-5xl font-normal leading-[1.05] tracking-tight text-kavora-green sm:text-6xl lg:text-7xl">
+            Life's most meaningful moments deserve
+            <span class="italic text-kavora-gold">something extraordinary.</span>
+          </h2>
+
+          <p class="mt-9 max-w-2xl text-sm font-light leading-8 text-kavora-muted sm:text-base sm:leading-9">
+            Turn a honeymoon, anniversary, birthday, or special reunion into a journey designed around the occasion. Thoughtful details, exceptional settings, and personal touches make every celebration uniquely yours.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE JOURNEY -->
+    <section class="bg-kavora-green px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mb-14 max-w-2xl sm:mb-20">
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            Designed Around You
+          </p>
+
+          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
+            More than a destination.
+            <span class="block italic text-kavora-gold">A personal celebration.</span>
+          </h2>
+
+          <p class="mt-7 max-w-xl text-sm font-light leading-8 text-white/60 sm:text-base">
+            Every occasion has its own meaning. We shape the journey around yours, from the setting to the smallest details.
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-6 md:grid-cols-2">
+
+          <!-- YOUR MOMENT -->
+          <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
+
+            <img
+              src="https://image-tc.galaxy.tf/wijpeg-1z92vusw7oepproe8fq1o9jl8/dsc08226_standard.jpg?rotate=0&crop=0%2C836%2C1502%2C1127"
+              alt="An intimate celebration arranged with thoughtful details"
+              loading="lazy"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-kavora-dark via-kavora-dark/30 to-transparent"></div>
+
+            <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
+
+
+              <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
+                Your Moment
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm font-light leading-7 text-white/75">
+                Whether it is a honeymoon, anniversary, birthday, or reunion, the journey begins with what you are celebrating.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- MADE PERSONAL -->
+          <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
+
+            <img
+              src="https://pictures.altai-travel.com/1160x0/young-couple-enjoying-a-game-drive-in-a-safari-vehicle-watching-zebras-in-the-distance-istock-5094.jpg"
+              alt="Friends and loved ones sharing a special moment together"
+              loading="lazy"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-kavora-dark via-kavora-dark/30 to-transparent"></div>
+
+            <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
+
+
+              <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
+                Made Personal
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm font-light leading-7 text-white/75">
+                Thoughtful experiences, exceptional settings, and personal touches come together to make the occasion distinctly yours.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE KAVORA EXPERIENCE -->
+    <section class="bg-kavora-ivory px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40">
+
+      <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-24">
+
+        <div class="relative">
+
+          <img
+            src="https://www.nkuringosafaris.com/wp-content/uploads/2024/08/romantic_safari_serengeti_meal.jpg"
+            alt="A beautifully arranged celebration"
+            loading="lazy"
+            class="relative h-[480px] w-full object-cover sm:h-[600px]"
+          >
+
+          <div class="absolute bottom-7 left-7 bg-kavora-green px-6 py-5 text-white sm:bottom-10 sm:left-10">
+
+            <p class="font-luxury text-3xl">
+              Uniquely yours.
+            </p>
+
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-kavora-gold">
+              The Kavora approach
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
+            The Kavora Experience
+          </p>
+
+          <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.05] text-kavora-green sm:text-6xl lg:text-7xl">
+            Every detail has
+            <span class="italic text-kavora-gold">a purpose.</span>
+          </h2>
+
+          <p class="mt-7 text-sm font-light leading-8 text-kavora-muted sm:text-base">
+            We believe the difference lies in the details. Your celebration is thoughtfully considered from the first conversation to the final moment of your journey.
+          </p>
+
+
+          <div class="mt-12 divide-y divide-kavora-green/15">
+
+            <div class="py-6">
+
+              <div class="flex items-start gap-6">
+
+                <span class="font-luxury text-2xl text-kavora-gold">01</span>
+
+                <div>
+
+                  <h3 class="font-luxury text-2xl text-kavora-green">
+                    Personalised Planning
+                  </h3>
+
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    A journey shaped around your occasion, preferences, and the people who matter most.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="py-6">
+
+              <div class="flex items-start gap-6">
+
+                <span class="font-luxury text-2xl text-kavora-gold">02</span>
+
+                <div>
+
+                  <h3 class="font-luxury text-2xl text-kavora-green">
+                    Exceptional Settings
+                  </h3>
+
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Carefully considered destinations and private retreats suited to the experience you envision.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="py-6">
+
+              <div class="flex items-start gap-6">
+
+                <span class="font-luxury text-2xl text-kavora-gold">03</span>
+
+                <div>
+
+                  <h3 class="font-luxury text-2xl text-kavora-green">
+                    Thoughtful Details
+                  </h3>
+
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Meaningful touches and considered arrangements that make your celebration feel personal.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="py-6">
+
+              <div class="flex items-start gap-6">
+
+                <span class="font-luxury text-2xl text-kavora-gold">04</span>
+
+                <div>
+
+                  <h3 class="font-luxury text-2xl text-kavora-green">
+                    Seamless Coordination
+                  </h3>
+
+                  <p class="mt-2 text-sm font-light leading-7 text-kavora-muted">
+                    Every element brought together with care, leaving you free to enjoy the moment.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMMERSIVE IMAGE BREAK -->
+    <section class="relative flex min-h-[75svh] items-center overflow-hidden bg-kavora-dark">
+
+      <img
+        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2400&q=90"
+        alt="An elegant celebration beneath the evening sky"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="absolute inset-0 bg-kavora-dark/45"></div>
+
+      <div class="absolute inset-0 bg-gradient-to-r from-kavora-dark/75 via-kavora-dark/20 to-transparent"></div>
+
+      <div class="relative mx-auto w-full max-w-7xl px-6 py-28 sm:px-10 lg:px-16">
+
+        <div class="max-w-3xl">
+
+          <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            A Moment That Stays With You
+          </p>
+
+          <h2 class="mt-8 font-luxury text-5xl font-normal leading-[1.05] text-white sm:text-6xl lg:text-8xl">
+            Some memories are worth
+            <span class="block italic text-kavora-gold">travelling for.</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden bg-kavora-dark px-6 py-28 text-center text-white sm:px-10 sm:py-36 lg:px-16">
+
+      <div class="absolute inset-0 opacity-20">
+
         <img
-          src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=85"
-          alt="A beautifully arranged celebration"
-          class="h-[500px] w-full object-cover sm:h-[620px]"
+          src="https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/Asilia-Africa-Ubuntu-Migration-Camp.jpg.webp"
+          alt=""
+          loading="lazy"
+          class="h-full w-full object-cover"
         >
 
-        <div class="absolute -bottom-7 -right-3 hidden border border-gold/60 bg-ivory px-8 py-6 sm:block lg:-right-7">
-          <p class="font-serif text-3xl italic text-forest">Uniquely yours.</p>
-          <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-muted">The Kavora approach</p>
-        </div>
       </div>
 
-      <div>
-        <div class="mb-8 flex items-center gap-4">
-          <span class="h-px w-10 bg-gold"></span>
-          <p class="text-[10px] uppercase tracking-[0.25em] text-muted">The Kavora Experience</p>
-        </div>
+      <div class="absolute inset-0 bg-kavora-dark/80"></div>
 
-        <h2 class="font-serif text-5xl leading-[1.05] text-forest sm:text-6xl">
-          Every detail has <span class="italic text-gold">a purpose.</span>
-        </h2>
+      <div class="relative mx-auto max-w-3xl">
 
-        <p class="mt-7 text-sm leading-8 text-muted">
-          We believe the difference lies in the details. Your celebration is thoughtfully considered from the first conversation to the final moment of your journey.
+        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+          Your Story, Your Journey
         </p>
 
-        <div class="mt-12 space-y-8">
-
-          <div class="flex gap-6 border-b border-sand pb-7">
-            <span class="font-serif text-2xl text-gold">01</span>
-            <div>
-              <h3 class="font-serif text-2xl text-forest">Personalised Planning</h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                A journey shaped around your occasion, preferences, and the people who matter most.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-6 border-b border-sand pb-7">
-            <span class="font-serif text-2xl text-gold">02</span>
-            <div>
-              <h3 class="font-serif text-2xl text-forest">Exceptional Settings</h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                Carefully considered destinations and private retreats suited to the experience you envision.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-6 border-b border-sand pb-7">
-            <span class="font-serif text-2xl text-gold">03</span>
-            <div>
-              <h3 class="font-serif text-2xl text-forest">Thoughtful Details</h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                Meaningful touches and considered arrangements that make your celebration feel personal.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-6">
-            <span class="font-serif text-2xl text-gold">04</span>
-            <div>
-              <h3 class="font-serif text-2xl text-forest">Seamless Coordination</h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                Every element brought together with care, leaving you free to enjoy the moment.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- IMMERSIVE IMAGE -->
-  <section class="relative h-[65vh] min-h-[450px] overflow-hidden sm:h-[75vh]">
-    <img
-      src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2400&q=90"
-      alt="An elegant celebration beneath the evening sky"
-      class="absolute inset-0 h-full w-full object-cover"
-    >
-    <div class="absolute inset-0 bg-[#081A14]/45"></div>
-
-    <div class="relative z-10 flex h-full items-center justify-center px-6 text-center">
-      <div class="max-w-3xl">
-        <p class="mb-7 text-[10px] uppercase tracking-[0.3em] text-gold">A Moment That Stays With You</p>
-        <h2 class="font-serif text-5xl leading-tight text-ivory sm:text-6xl md:text-7xl">
-          Some memories are worth <span class="italic text-gold">travelling for.</span>
-        </h2>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CLOSING STATEMENT -->
-  <section class="bg-forest px-6 py-24 text-center sm:px-10 sm:py-32">
-    <div class="mx-auto max-w-4xl">
-      <div class="mb-8 flex items-center justify-center gap-4">
-        <span class="h-px w-10 bg-gold"></span>
-        <p class="text-[10px] uppercase tracking-[0.25em] text-gold">Made for Your Moment</p>
-        <span class="h-px w-10 bg-gold"></span>
-      </div>
-
-      <h2 class="font-serif text-5xl leading-[1.05] text-ivory sm:text-6xl md:text-7xl">
-        Not just a celebration,<br>
-        <span class="italic text-gold">but a memory to last.</span>
-      </h2>
-
-      <p class="mx-auto mt-8 max-w-xl text-sm leading-8 text-white/60">
-        However you choose to celebrate, let us create a journey that gives the occasion the meaning it deserves.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- CTA -->
-  <section class="bg-deepforest px-6 py-24 sm:px-10 sm:py-28 lg:px-16">
-    <div class="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
-
-      <div class="max-w-2xl">
-        <p class="mb-6 text-[10px] uppercase tracking-[0.25em] text-gold">Your Story, Your Journey</p>
-
-        <h2 class="font-serif text-5xl leading-tight text-ivory sm:text-6xl">
-          Let's make this <span class="italic text-gold">moment unforgettable.</span>
+        <h2 class="mt-8 font-luxury text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
+          Let's make this
+          <span class="italic text-kavora-gold">moment unforgettable.</span>
         </h2>
 
-        <p class="mt-6 max-w-lg text-sm leading-8 text-white/55">
+        <p class="mx-auto mt-7 max-w-xl text-sm font-light leading-8 text-white/65">
           Tell us what you are celebrating. We will take care of the details.
         </p>
+
+        <a
+          href="contact.html?journey=Made%20for%20the%20Moment"
+          class="mt-10 inline-flex items-center gap-6 border border-kavora-gold bg-kavora-gold px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition-colors duration-300 hover:bg-transparent hover:text-kavora-gold"
+        >
+          Plan Your Celebration
+          <span>→</span>
+        </a>
+
       </div>
 
-      <a href="contact.html?journey=Made%20for%20the%20Moment" class="inline-flex shrink-0 items-center gap-8 border border-gold px-8 py-5 text-[10px] uppercase tracking-[0.2em] text-ivory transition hover:bg-gold hover:text-forest">
-        Plan Your Celebration
-        <span class="text-lg">↗</span>
-      </a>
+    </section>
 
-    </div>
-  </section>
+  </main>
 
 
   <!-- FOOTER -->
-  <footer class="bg-[#06140F] px-6 pb-8 pt-20 sm:px-10 lg:px-16">
-    <div class="mx-auto max-w-[1400px]">
+  <footer class="bg-[#06140F] px-6 pb-8 pt-20 text-white sm:px-10 lg:px-16">
+
+    <div class="mx-auto max-w-7xl">
 
       <div class="grid gap-14 border-b border-white/10 pb-16 sm:grid-cols-2 lg:grid-cols-4">
 
         <div class="sm:col-span-2">
-          <a href="index.html" class="font-serif text-4xl tracking-wide text-ivory">
-            kavora<span class="text-gold">.</span>
+
+          <a href="index.html" class="font-luxury text-4xl tracking-wide text-white">
+            kavora<span class="text-kavora-gold">.</span>
           </a>
 
-          <p class="mt-5 text-[10px] uppercase tracking-[0.2em] text-gold">
-            Africa · Considered Journeys
+          <p class="mt-5 text-[10px] uppercase tracking-[0.2em] text-kavora-gold">
+            Luxury Travel & Concierge
           </p>
 
-          <p class="mt-5 max-w-sm text-sm leading-7 text-white/45">
-            Luxury Travel & Concierge. Thoughtfully designed private journeys shaped around the way you want to experience the world.
+          <p class="mt-6 max-w-sm text-sm font-light leading-7 text-white/50">
+            Thoughtfully considered journeys across Africa, shaped around the places, people and experiences that make every journey meaningful.
           </p>
+
         </div>
 
-        <div>
-          <h3 class="mb-7 text-[10px] uppercase tracking-[0.2em] text-gold">Explore</h3>
-          <div class="flex flex-col gap-4">
-            <a href="index.html" class="text-xs text-white/55 transition hover:text-gold">Home</a>
-            <a href="index.html#destinations" class="text-xs text-white/55 transition hover:text-gold">Destinations</a>
-            <a href="index.html#our-way" class="text-xs text-white/55 transition hover:text-gold">The Kavora Way</a>
-            <a href="contact.html" class="text-xs text-white/55 transition hover:text-gold">Contact</a>
-          </div>
-        </div>
 
         <div>
-          <h3 class="mb-7 text-[10px] uppercase tracking-[0.2em] text-gold">Private Journeys</h3>
-          <div class="flex flex-col gap-4">
-            <a href="the-wild.html" class="text-xs text-white/55 transition hover:text-gold">The Wild</a>
-            <a href="wilderness-ocean.html" class="text-xs text-white/55 transition hover:text-gold">Wilderness & Ocean</a>
-            <a href="the-rare-encounter.html" class="text-xs text-white/55 transition hover:text-gold">The Rare Encounter</a>
-            <a href="the-summit-and-the-savanna.html" class="text-xs text-white/55 transition hover:text-gold">The Summit & The Savanna</a>
-            <a href="two-countries-one-journey.html" class="text-xs text-white/55 transition hover:text-gold">Two Countries, One Journey</a>
-            <a href="the-art-of-escape.html" class="text-xs text-white/55 transition hover:text-gold">The Art of Escape</a>
-            <a href="made-for-the-moment.html" class="text-xs text-gold">Made for the Moment</a>
+
+          <h3 class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold">
+            Explore
+          </h3>
+
+          <div class="mt-7 flex flex-col gap-4 text-sm font-light text-white/60">
+
+            <a href="index.html" class="transition-colors hover:text-kavora-gold">Home</a>
+
+            <a href="index.html#destinations" class="transition-colors hover:text-kavora-gold">Destinations</a>
+
+            <a href="index.html#our-way" class="transition-colors hover:text-kavora-gold">The Kavora Way</a>
+
+            <a href="contact.html" class="transition-colors hover:text-kavora-gold">Contact</a>
+
           </div>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold">
+            Private Journeys
+          </h3>
+
+          <div class="mt-7 flex flex-col gap-4 text-sm font-light text-white/60">
+
+            <a href="the-wild.html" class="transition-colors hover:text-kavora-gold">The Wild</a>
+
+            <a href="wilderness-ocean.html" class="transition-colors hover:text-kavora-gold">Wilderness & Ocean</a>
+
+            <a href="the-rare-encounter.html" class="transition-colors hover:text-kavora-gold">The Rare Encounter</a>
+
+            <a href="the-summit-and-the-savanna.html" class="transition-colors hover:text-kavora-gold">The Summit & The Savanna</a>
+
+            <a href="two-countries-one-journey.html" class="transition-colors hover:text-kavora-gold">Two Countries, One Journey</a>
+
+            <a href="the-art-of-escape.html" class="transition-colors hover:text-kavora-gold">The Art of Escape</a>
+
+            <a href="made-for-the-moment.html" class="text-kavora-gold">Made for the Moment</a>
+
+          </div>
+
         </div>
 
       </div>
 
-      <div class="flex flex-col justify-between gap-5 py-7 sm:flex-row sm:items-center">
-        <p class="text-[10px] tracking-wide text-white/35">
-          © <span id="currentYear"></span> Kavora. All rights reserved.
+
+      <div class="flex flex-col gap-5 pt-8 text-[9px] uppercase tracking-[0.17em] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+
+        <p>
+          © <span id="current-year"></span> Kavora. All rights reserved.
         </p>
 
-        <p class="text-[10px] tracking-wide text-white/35">
-          Luxury Travel & Concierge · Africa
+        <p class="text-kavora-gold/70">
+          Africa · Considered Journeys
         </p>
+
       </div>
 
     </div>
+
   </footer>
 
 
   <!-- JAVASCRIPT -->
   <script>
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuButton.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-
-      mobileMenu.classList.toggle("hidden");
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-    });
-
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        menuButton.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 
 </body>

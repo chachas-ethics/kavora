@@ -48,111 +48,52 @@
 <body class="bg-kavora-ivory font-sans text-kavora-green antialiased">
 
   <!-- HEADER -->
-  <header class="absolute left-0 top-0 z-50 w-full border-b border-white/15">
-    <div class="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 sm:px-10 lg:px-16">
-
-      <a href="index.html" class="font-luxury text-3xl tracking-wide text-white">
-        kavora<span class="text-kavora-gold">.</span>
-      </a>
-
-      <nav class="hidden items-center gap-9 text-[10px] uppercase tracking-[0.2em] text-white/85 lg:flex">
-        <a href="index.html" class="transition-colors duration-300 hover:text-kavora-gold">Home</a>
-        <a href="index.html#journeys" class="text-kavora-gold">Private Journeys</a>
-        <a href="index.html#destinations" class="transition-colors duration-300 hover:text-kavora-gold">Destinations</a>
-        <a href="index.html#approach" class="transition-colors duration-300 hover:text-kavora-gold">The Kavora Way</a>
-        <a href="contact.html" class="transition-colors duration-300 hover:text-kavora-gold">Contact</a>
-      </nav>
-
-      <a
-        href="contact.html?journey=The%20Art%20of%20Escape"
-        class="hidden border border-kavora-gold/70 px-6 py-3 text-[9px] uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:bg-kavora-gold hover:text-kavora-green sm:inline-flex"
-      >
-        Begin Your Journey
-      </a>
-
-      <button
-        id="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-      >
-        <span class="h-px w-6 bg-white"></span>
-        <span class="h-px w-6 bg-white"></span>
-      </button>
-
-    </div>
-
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-kavora-dark px-6 py-7 lg:hidden">
-      <nav class="flex flex-col gap-6 text-[10px] uppercase tracking-[0.2em] text-white/80">
-        <a href="index.html" class="transition-colors hover:text-kavora-gold">Home</a>
-        <a href="index.html#journeys" class="text-kavora-gold">Private Journeys</a>
-        <a href="index.html#destinations" class="transition-colors hover:text-kavora-gold">Destinations</a>
-        <a href="index.html#approach" class="transition-colors hover:text-kavora-gold">The Kavora Way</a>
-        <a href="contact.html" class="transition-colors hover:text-kavora-gold">Contact</a>
-        <a href="contact.html?journey=The%20Art%20of%20Escape" class="border border-kavora-gold/60 px-5 py-4 text-center text-kavora-gold">
-          Begin Your Journey
-        </a>
-      </nav>
-    </div>
-  </header>
-
+ 
 
   <main>
 
     <!-- HERO -->
-    <section class="relative flex min-h-[100svh] items-end overflow-hidden bg-kavora-dark">
+   <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.5) 35%, rgba(5,20,15,0.90)), url('https://api.viptralux.com/uploads/general/58962171-c26e-4d3a-94f6-e28309e6a945.jpg'); background-size: cover; background-position: center;"
+>
 
-      <img
-        src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2400&q=90"
-        alt="Tropical island coastline surrounded by clear turquoise water"
-        fetchpriority="high"
-        class="absolute inset-0 h-full w-full object-cover"
-      >
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-      <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-kavora-dark/90"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-kavora-dark/45 to-transparent"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-      <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
+    <div class="max-w-4xl">
 
-        <div class="max-w-3xl">
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-white sm:text-8xl lg:text-[130px]">
+        The Art
+        <span class="block italic text-kavora-gold">of Escape.</span>
+      </h1>
 
-          <p class="mb-7 flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
-            <span class="h-px w-10 bg-kavora-gold"></span>
-            Private Journey No. 06
-          </p>
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        Step away from the demands of everyday life and discover the quiet luxury of island living. Let the ocean set the pace, with beautiful beaches, private retreats and time to simply be.
+      </p>
 
-          <h1 class="font-luxury text-6xl font-normal leading-[0.9] tracking-tight text-white sm:text-7xl md:text-8xl lg:text-[110px]">
-            The Art
-            <span class="block text-kavora-gold">of Escape</span>
-          </h1>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
 
-          <div class="mt-8 flex flex-wrap items-center gap-4 text-[10px] uppercase tracking-[0.22em] text-white/80">
-            <span>Seychelles</span>
-            <span class="h-1 w-1 rounded-full bg-kavora-gold"></span>
-            <span>5–8 Nights</span>
-          </div>
+        <a href="#journey" class="group inline-flex items-center gap-5">
 
-          <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/75 sm:text-base sm:leading-8">
-            Step away from the demands of everyday life and discover the quiet luxury of island living. Let the ocean set the pace, with beautiful beaches, private retreats and time to simply be.
-          </p>
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Discover This Journey
+          </span>
 
-          <a
-            href="#journey"
-            class="mt-10 inline-flex items-center gap-5 border-b border-kavora-gold/70 pb-3 text-[10px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:text-kavora-gold"
-          >
-            Discover the journey
-            <span class="text-kavora-gold">↓</span>
-          </a>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
 
-        </div>
+        </a>
+
       </div>
 
-      <div class="absolute bottom-10 right-10 hidden text-[9px] uppercase tracking-[0.25em] text-white/50 lg:block">
-        Africa · Considered Journeys
-      </div>
+    </div>
 
-    </section>
+  </div>
+
+</section>
 
 
     <!-- INTRODUCTION -->
@@ -161,13 +102,8 @@
       <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-20">
 
         <div class="lg:col-span-4">
-          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
-            <span class="h-px w-9 bg-kavora-gold"></span>
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
             The Journey
-          </p>
-
-          <p class="mt-8 font-luxury text-2xl italic leading-snug text-kavora-muted sm:text-3xl">
-            For those who understand that true luxury is time.
           </p>
         </div>
 
@@ -175,7 +111,7 @@
 
           <h2 class="font-luxury text-5xl font-normal leading-[1.05] tracking-tight text-kavora-green sm:text-6xl lg:text-7xl">
             Find your own rhythm.
-            <span class="text-kavora-muted">Rediscover the beauty of slowing down.</span>
+            <span class="text-kavora-gold italic">Rediscover the beauty of slowing down.</span>
           </h2>
 
           <p class="mt-9 max-w-2xl text-sm font-light leading-8 text-kavora-muted sm:text-base sm:leading-9">
@@ -187,8 +123,7 @@
           </p>
 
           <div class="mt-12 flex items-center gap-5">
-            <span class="h-px w-14 bg-kavora-gold"></span>
-            <span class="text-[10px] uppercase tracking-[0.22em] text-kavora-muted">5–8 nights · Seychelles</span>
+            <span class="text-[10px] uppercase tracking-[0.22em] text-kavora-gold">5–8 nights · Seychelles</span>
           </div>
 
         </div>
@@ -205,7 +140,6 @@
         <div class="mb-14 max-w-2xl sm:mb-20">
 
           <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
-            <span class="h-px w-9 bg-kavora-gold"></span>
             The Island Experience
           </p>
 
@@ -227,7 +161,7 @@
           <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
 
             <img
-              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=85"
+              src="https://blog.pentravel.co.za/wp-content/uploads/2023/08/maldives2-1.png"
               alt="Turquoise ocean waves meeting a tropical coastline"
               loading="lazy"
               class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -237,9 +171,6 @@
 
             <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
 
-              <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
-                The Setting
-              </p>
 
               <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
                 The Ocean
@@ -250,7 +181,6 @@
               </p>
 
               <div class="mt-8 flex items-center gap-4">
-                <span class="h-px w-10 bg-kavora-gold"></span>
                 <span class="text-[9px] uppercase tracking-[0.2em] text-white/70">Coastal Beauty · Seychelles</span>
               </div>
 
@@ -262,8 +192,8 @@
           <article class="group relative min-h-[520px] overflow-hidden sm:min-h-[620px]">
 
             <img
-              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85"
-              alt="Private luxury island resort surrounded by tropical greenery"
+              src="https://images.luxuryescapes.com/fl_progressive,q_auto:good/xo8hl54fs7jodbdy4vcn"
+              alt="seychelles private retreat"
               loading="lazy"
               class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             >
@@ -272,9 +202,6 @@
 
             <div class="relative flex h-full min-h-[520px] flex-col justify-end p-8 sm:min-h-[620px] sm:p-11">
 
-              <p class="text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
-                The Retreat
-              </p>
 
               <h3 class="mt-5 font-luxury text-5xl font-normal text-white sm:text-6xl">
                 Private Moments
@@ -285,7 +212,6 @@
               </p>
 
               <div class="mt-8 flex items-center gap-4">
-                <span class="h-px w-10 bg-kavora-gold"></span>
                 <span class="text-[9px] uppercase tracking-[0.2em] text-white/70">Private Retreats · Seychelles</span>
               </div>
 
@@ -306,10 +232,9 @@
 
         <div class="relative">
 
-          <div class="absolute -bottom-5 -right-5 h-2/3 w-2/3 border border-kavora-gold/50"></div>
 
           <img
-            src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=85"
+            src="https://www.andbeyond.com/wp-content/uploads/sites/5/why-seychelles.jpg"
             alt="Peaceful tropical beach and turquoise island waters"
             loading="lazy"
             class="relative h-[480px] w-full object-cover sm:h-[600px]"
@@ -317,7 +242,7 @@
 
           <div class="absolute bottom-7 left-7 bg-kavora-green px-6 py-5 text-white sm:bottom-10 sm:left-10">
             <p class="font-luxury text-3xl">The Kavora Way</p>
-            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/60">Considered in every detail</p>
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-kavora-gold">Considered in every detail</p>
           </div>
 
         </div>
@@ -325,14 +250,13 @@
 
         <div>
 
-          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-muted">
-            <span class="h-px w-9 bg-kavora-gold"></span>
+          <p class="flex items-center gap-4 text-[10px] uppercase tracking-[0.25em] text-kavora-gold">
             The Experience
           </p>
 
           <h2 class="mt-7 font-luxury text-5xl font-normal leading-[1.05] text-kavora-green sm:text-6xl lg:text-7xl">
             Time to pause.
-            <span class="text-kavora-muted">Space to simply be.</span>
+            <span class="text-kavora-gold italic">Space to simply be.</span>
           </h2>
 
           <p class="mt-7 text-sm font-light leading-8 text-kavora-muted sm:text-base">
@@ -403,7 +327,7 @@
     <section class="relative flex min-h-[75svh] items-center overflow-hidden bg-kavora-dark">
 
       <img
-        src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2400&q=90"
+        src="https://seychelles-luxury-resorts.com/wp-content/uploads/2022/02/mahe-island-aerial-photo.jpg"
         alt="A secluded tropical island surrounded by the Indian Ocean"
         loading="lazy"
         class="absolute inset-0 h-full w-full object-cover"
@@ -436,37 +360,12 @@
     </section>
 
 
-    <!-- CLOSING STATEMENT -->
-    <section class="bg-kavora-green px-6 py-28 text-center text-white sm:px-10 sm:py-36">
-
-      <div class="mx-auto max-w-4xl">
-
-        <p class="text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
-          The Art of Escape
-        </p>
-
-        <h2 class="mt-9 font-luxury text-5xl font-normal leading-[1.1] sm:text-6xl lg:text-7xl">
-          For those who understand
-          <span class="block italic text-kavora-gold">that true luxury is time.</span>
-        </h2>
-
-        <p class="mx-auto mt-8 max-w-2xl text-sm font-light leading-8 text-white/60 sm:text-base">
-          Leave the everyday behind and rediscover the pleasure of having time to yourself. In Seychelles, the greatest luxury may simply be the freedom to slow down.
-        </p>
-
-        <div class="mx-auto mt-12 h-px w-16 bg-kavora-gold/70"></div>
-
-      </div>
-
-    </section>
-
-
     <!-- CTA -->
     <section class="relative overflow-hidden bg-kavora-dark px-6 py-28 text-center text-white sm:px-10 sm:py-36 lg:px-16">
 
       <div class="absolute inset-0 opacity-20">
         <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80"
+          src="https://api.viptralux.com/uploads/general/58962171-c26e-4d3a-94f6-e28309e6a945.jpg"
           alt=""
           loading="lazy"
           class="h-full w-full object-cover"
