@@ -106,49 +106,46 @@
 <body class="font-sans antialiased">
 
   <!-- HERO -->
-  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+   <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.35), rgba(5,20,15,0.5) 35%, rgba(5,20,15,0.90)), url('https://www.serengetiparktanzania.com/wp-content/uploads/2021/12/3-Days-Volcanoes-National-Park-Safari-1.jpg'); background-size: cover; background-position: center;"
+>
 
-    <img
-      src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=85"
-      alt="Rwanda's lush green highlands rising into the mist"
-      class="hero-image absolute inset-0 h-full w-full object-cover"
-      fetchpriority="high"
-    />
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/45 to-black/20"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/50 via-transparent to-transparent"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-24 text-white md:px-12 md:pb-28 lg:px-16">
+    <div class="max-w-4xl">
 
-
-      <div class="mb-7 flex items-center gap-4">
-        <p class="text-[10px] uppercase tracking-[0.32em] text-kavora-gold">
-          Rwanda Destinations Collection
-        </p>
-      </div>
-
-      <h1 class="max-w-4xl font-luxury text-7xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-kavora-gold sm:text-8xl lg:text-[130px]">
         Rwanda<span class="text-kavora-gold">.</span>
       </h1>
 
-      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
-        Discover a country where ancient forests, volcanic landscapes, and
-        open savannahs create extraordinary encounters with the natural world.
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        Discover a country where ancient forests, volcanic landscapes, and open savannahs create extraordinary encounters with the natural world.
       </p>
 
-      <div class="mt-9 flex flex-wrap items-center gap-5">
-        <a
-          href="#destinations"
-          class="bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
-        >
-          Explore Rwanda
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+
+        <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Discover Our Destinations
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
 
-        
       </div>
 
-     
-  </header>
+    </div>
+
+  </div>
+
+</section>
 
   <!-- INTRODUCTION -->
   <section id="philosophy" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
@@ -179,15 +176,22 @@
           shaped by nature, meaningful encounters, and time spent in some of
           the country's most extraordinary landscapes.
         </p>
-
-        <a
-          href="contact.html?destination=Rwanda"
-          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-        >
-          Begin your journey
-        </a>
       </div>
     </div>
+
+     <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Rwanda Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
   <!-- DESTINATIONS -->
@@ -229,7 +233,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
          
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Volcanoes</span> National Park
+            <span class="block text-kavora-gold">Volcanoes</span> National Park
           </h3>
 
           <div class="gold-line w-40 my-7"></div>
@@ -246,12 +250,17 @@
             Known for: Mountain gorilla trekking, volcanic scenery, golden monkeys.
           </p>
 
-          <a
-            href="volcanoes-national-park.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+          <a href="volcanoes-national-park.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Volcanoes National Park
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -270,7 +279,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
          
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Akagera</span> National Park
+            <span class="block text-kavora-gold">Akagera</span> National Park
           </h3>
 
           <div class="gold-line w-40 my-7"></div>
@@ -286,12 +295,17 @@
             Known for: Big Five safari opportunities, savannah wildlife, lakes and wetlands.
           </p>
 
-          <a
-            href="akagera-national-park.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+          <a href="akagera-national-park.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Akagera National Park
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -310,7 +324,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
          
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Nyungwe</span> National Park
+            <span class="block text-kavora-gold">Nyungwe</span> National Park
           </h3>
 
           <div class="gold-line w-40 my-7"></div>
@@ -327,12 +341,17 @@
             Known for: Chimpanzee tracking, primates, rainforest walks, canopy walkway.
           </p>
 
-          <a
-            href="nyungwe-national-park.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+          <a href="nyungwe-national-park.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Nyungwe National Park
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -360,13 +379,6 @@
           in the east, and the extraordinary biodiversity of the southwest
           into a journey with a natural sense of progression.
         </p>
-
-        <a
-          href="contact.html?destination=Rwanda"
-          class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
-        >
-          Create your Journey
-        </a>
       </div>
 
       <div class="reveal border-t border-white/20 lg:border-l lg:border-t-0 lg:pl-12">
@@ -411,9 +423,22 @@
           The order and duration of each stop depend on your travel dates,
           permits, transport connections, and preferred pace.
         </p>
-
       </div>
     </div>
+
+     <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Rwanda Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
   <!-- FINAL CTA -->
@@ -436,12 +461,19 @@
         journey around its extraordinary wildlife, forests, and landscapes.
       </p>
 
-      <a
-        href="contact.html?destination=Rwanda"
-        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
-      >
-        CREATE YOUR JOURNEY
-      </a>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Rwanda Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
 
     </div>
   </section>
@@ -501,5 +533,6 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+  <script src="site-navbar.js"></script>
 </body>
 </html>

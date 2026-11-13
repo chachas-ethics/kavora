@@ -115,48 +115,47 @@
 <body class="font-sans antialiased">
 
   <!-- HERO -->
-  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+  <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.35), rgba(5,20,15,0.5) 35%, rgba(5,20,15,0.90)), url('https://www.easytravel.co.tz/wp-content/uploads/2020/09/Aerial-wide-shot-of-Zanzibar-Island-Tanzania-1.jpg'); background-size: cover; background-position: center;"
+>
 
-    <img
-      src="https://www.easytravel.co.tz/wp-content/uploads/2020/09/Aerial-wide-shot-of-Zanzibar-Island-Tanzania-1.jpg"
-      alt="Turquoise ocean and tropical island coastline in Zanzibar"
-      class="hero-image absolute inset-0 h-full w-full object-cover"
-      fetchpriority="high"
-    />
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/45 to-black/20"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/50 via-transparent to-transparent"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-24 text-white md:px-12 md:pb-28 lg:px-16">
+    <div class="max-w-4xl">
 
-      <div class="mb-7 flex items-center gap-4">
-        <p class="text-[10px] uppercase tracking-[0.32em] text-kavora-gold">
-          Zanzibar Destinations Collection
-        </p>
-      </div>
-
-      <h1 class="max-w-4xl font-luxury text-8xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-kavora-gold sm:text-8xl lg:text-[130px]">
         Zanzibar<span class="text-kavora-gold">.</span>
       </h1>
 
-      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
-        From the historic streets of Stone Town to the turquoise waters
-        of the northern coast and the quiet villages of the east,
-        discover Zanzibar through the places that define its character.
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        From the historic streets of Stone Town to the turquoise waters of the northern coast and the quiet villages of the east, discover Zanzibar through the places that define its character.
       </p>
 
-      <div class="mt-9 flex flex-wrap items-center gap-5">
-        <a
-          href="#destinations"
-          class="bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
-        >
-          Explore Zanzibar
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+
+        <a href="#destinations" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Discover Our Destinations
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
+
       </div>
 
     </div>
 
-  </header>
+  </div>
+
+</section>
+
 
 
   <!-- INTRODUCTION -->
@@ -196,16 +195,23 @@
           and experiences shaped around your preferred pace.
         </p>
 
-        <a
-          href="contact.html?destination=Zanzibar"
-          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-        >
-          Begin your journey 
-        </a>
-
       </div>
 
     </div>
+
+     <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Zanzibar Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
 
   </section>
 
@@ -257,7 +263,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Stone Town</span>
+            <span class="block text-kavora-gold">Stone Town</span>
             Zanzibar
           </h3>
 
@@ -278,12 +284,17 @@
             traditional markets, cultural discovery.
           </p>
 
-          <a
-            href="stone-town.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Stone Town 
-          </a>
+           <a href="stone-town.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Stone Town
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -307,7 +318,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Nungwi &</span>
+            <span class="block text-kavora-gold">Nungwi &</span>
             Kendwa
           </h3>
 
@@ -328,12 +339,17 @@
             dhow sailing, oceanfront retreats.
           </p>
 
-          <a
-            href="nungwi-kendwa.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Nungwi & Kendwa
-          </a>
+           <a href="nungwi-kendwa.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Nungwi & Kendwa 
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -357,7 +373,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Paje &</span>
+            <span class="block text-kavora-gold">Paje &</span>
             Jambiani
           </h3>
 
@@ -378,12 +394,17 @@
             laid-back island living, ocean experiences.
           </p>
 
-          <a
-            href="paje-jambiani.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Paje & Jambiani 
-          </a>
+           <a href="paje-jambiani.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Paje & Jambiani
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -407,7 +428,7 @@
         <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
-            <span class="block italic text-kavora-gold">Jozani &</span>
+            <span class="block text-kavora-gold">Jozani &</span>
             The South
           </h3>
 
@@ -428,12 +449,17 @@
             indigenous vegetation, natural landscapes.
           </p>
 
-          <a
-            href="jozani-south.html"
-            class="mt-9 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Jozani
-          </a>
+          <a href="jozani-south.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Jozani & The South
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -469,13 +495,6 @@
           you, and let us shape the journey around your time,
           preferences, and travel style.
         </p>
-
-        <a
-          href="contact.html?destination=Zanzibar"
-          class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
-        >
-          Create Your Journey 
-        </a>
 
       </div>
 
@@ -542,6 +561,19 @@
 
     </div>
 
+     <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Zanzibar Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
 
@@ -567,13 +599,19 @@
         cultural, and natural destinations.
       </p>
 
-      <a
-        href="contact.html?destination=Zanzibar"
-        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
-      >
-        Create Your Journey 
-      </a>
+      <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
 
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Zanzibar Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
     </div>
 
   </section>
@@ -656,5 +694,6 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+  <script src="site-navbar.js"></script>
 </body>
 </html>

@@ -110,45 +110,46 @@
  
 
   <!-- HERO -->
-  <header class="relative flex min-h-screen min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+  <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.2) 35%, rgba(5,20,15,0.82)), url('https://cdn.discoverafrica.com/wp-content/uploads/2021/11/15173405/1-2-4.jpg'); background-size: cover; background-position: center;"
+>
 
-    <img
-      src="https://cdn.discoverafrica.com/wp-content/uploads/2021/11/15173405/1-2-4.jpg"
-      alt="Kenya's open savannah beneath a dramatic African sky"
-      class="hero-image absolute inset-0 h-full w-full object-cover"
-      fetchpriority="high"
-    />
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/40 to-black/25"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/60 via-transparent to-transparent"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-    <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-20 pt-40 text-white md:px-12 md:pb-28 lg:px-16">
+    <div class="max-w-4xl">
 
-      <div class="mb-7 flex items-center gap-4">
-      </div>
-       <div class="max-w-3xl">
-        <div class="mb-7 flex items-center gap-4">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
-            The Kenya destinations collection
-          </p>
-        </div>
-
-      <h1 class="max-w-4xl font-luxury text-7xl font-normal leading-[0.88] tracking-tight sm:text-8xl md:text-9xl">
-        Kenya<span class="text-kavora-gold">.</span>
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-kavora-gold sm:text-8xl lg:text-[130px]">
+        Kenya.
       </h1>
-      <p class="mt-5 max-w-lg text-sm font-light leading-7 text-white/75 md:text-base">
-        From the great plains of the Maasai Mara to the shadow of Kilimanjaro
-        and the quiet shores of the Indian Ocean, discover Kenya at your own pace.
+
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        From the great plains of the Maasai Mara to the shadow of Kilimanjaro and the quiet shores of the Indian Ocean, discover Kenya at your own pace.
       </p>
 
-       <div class="mt-9 flex flex-wrap items-center gap-6">
-          <a href="#destinations" class="group inline-flex items-center gap-5 bg-kavora-gold px-6 py-4 text-[9px] font-semibold uppercase tracking-[0.18em] text-kavora-deep transition hover:bg-white">
-            Explore Kenya
-            <span class="transition-transform group-hover:translate-y-1">↓</span>
-          </a>
-        </div>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
+
+        <a href="#destinations" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Discover Our Destinations
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+
+      </div>
+
     </div>
-  </header>
+
+  </div>
+
+</section>
 
   <!-- INTRODUCTION -->
   <section id="philosophy" class="px-6 py-24 md:px-12 md:py-32 lg:px-16">
@@ -176,15 +177,22 @@
           carefully chosen stays, and experiences shaped around the traveller
           rather than a fixed itinerary.
         </p>
-
-        <a
-          href="contact.html?destination=Kenya"
-          class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-        >
-          Begin your journey
-        </a>
       </div>
     </div>
+
+      <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Kenya Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
   <!-- DESTINATIONS -->
@@ -201,7 +209,7 @@
           </div>
 
           <h2 class="font-luxury text-5xl font-normal md:text-7xl">
-            Discover Kenya
+            Discover <span class="text-kavora-gold italic">Kenya</span>
           </h2>
         </div>
 
@@ -226,7 +234,7 @@
 
         <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
           <h3 class="font-luxury text-5xl font-normal md:text-6xl">
-            Maasai Mara
+            The <span class="text-kavora-gold">Maasai Mara</span>
           </h3>
 
           <div class="gold-line w-40 my-6"></div>
@@ -242,12 +250,17 @@
             Best for: Big cats, game drives, migration season, luxury safari camps.
           </p>
 
-          <a
-            href="maasai-mara.html"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Maasai mara 
-          </a>
+          <a href="maasai-mara.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Maasai Mara
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -266,7 +279,7 @@
         <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal md:text-6xl">
-            Amboseli
+            <span class="text-kavora-gold">Amboseli</span> National Park
           </h3>
 
           <div class="gold-line w-40 my-6"></div>
@@ -282,12 +295,17 @@
             Best for: Elephants, photography, open landscapes, scenic stays.
           </p>
 
-          <a
-            href="amboseli.html"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
-            Explore Amboseli 
-          </a>
+           <a href="amboseli.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Explore Amboseli
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -306,7 +324,7 @@
         <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal md:text-6xl">
-            Lake Nakuru
+            Lake <span class="text-kavora-gold">Nakuru</span>
           </h3>
 
           <div class="gold-line w-40 my-6"></div>
@@ -322,12 +340,17 @@
             Best for: Rhino sightings, birdwatching, scenic game drives.
           </p>
 
-          <a
-            href="lake-nakuru.html"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+           <a href="lake-nakuru.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Lake Nakuru
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -346,7 +369,7 @@
         <div class="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14 lg:px-16">
 
           <h3 class="font-luxury text-5xl font-normal md:text-6xl">
-            Lake Naivasha
+            Lake <span class="text-kavora-gold">Naivasha</span>
           </h3>
 
           <div class="gold-line w-40 my-6"></div>
@@ -361,12 +384,17 @@
             Best for: Boat trips, birdlife, nature walks, relaxed interludes.
           </p>
 
-          <a
-            href="lake-naivasha.html"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+           <a href="lake-naivasha.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Lake Naivasha
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -401,12 +429,17 @@
             Best for: Beach retreats, honeymoon extensions, ocean activities.
           </p>
 
-          <a
-            href="diani-beach.html"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] transition text-kavora-gold"
-          >
+          <a href="diani-beach.html" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Explore Diani Beach
-          </a>
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
         </div>
       </article>
 
@@ -437,13 +470,6 @@
             beside the Indian Ocean. We will help shape the pace, stays,
             and connections around your priorities.
           </p>
-
-          <a
-            href="contact.html?destination=Kenya"
-            class="mt-9 inline-flex items-center gap-4 bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep transition hover:bg-white"
-          >
-            Create your Journey
-          </a>
         </div>
 
         <div class="reveal border-t border-white/20 lg:border-l lg:border-t-0 lg:pl-12">
@@ -491,6 +517,20 @@
 
       </div>
     </div>
+
+      <div class="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Kenya Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
   <!-- FINAL CTA -->
@@ -512,15 +552,21 @@
         Tell us what you want to experience. We will help turn your ideas
         into a considered journey through Kenya.
       </p>
-
-      <a
-        href="contact.html?destination=Kenya"
-        class="mt-9 inline-flex items-center gap-5 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-kavora-forest"
-      >
-        Create Your journey
-      </a>
-
     </div>
+
+     <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Kenya Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
+        </div>
   </section>
 
   <!-- FOOTER -->
@@ -579,5 +625,6 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
+  <script src="site-navbar.js"></script>
 </body>
 </html>

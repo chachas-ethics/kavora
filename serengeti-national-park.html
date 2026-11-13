@@ -172,10 +172,6 @@
 
 <body class="font-sans antialiased">
 
-     <!-- =========================================================
-       NAVBAR
-  ========================================================== -->
-
   <!-- =========================================================
        NAVBAR
   ========================================================== -->
@@ -372,53 +368,46 @@
 
     <!-- HERO -->
 
-    <section class="relative flex min-h-[100%] min-h-[100svh] items-end overflow-hidden bg-kavora-deep">
+    <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.2) 35%, rgba(5,20,15,0.82)), url('https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg'); background-size: cover; background-position: center;"
+>
 
-      <img
-        src="https://images.ctfassets.net/p03x4m3svbfn/AiLzp3URBYehMZxicilQM/3c909ed8a0f10296b553c9e319ac9aac/Serengeti_wildebeest_migration.jpg"
-        alt="Wildebeest crossing the expansive Serengeti landscape"
-        class="hero-image absolute inset-0 h-full w-full object-cover"
-        fetchpriority="high"
-      />
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-      <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep via-kavora-deep/35 to-black/20"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-      <div class="absolute inset-0 bg-gradient-to-r from-kavora-deep/60 via-kavora-deep/15 to-transparent"></div>
+    <div class="max-w-4xl">
 
-      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-24 pt-36 text-white md:px-12 md:pb-32 lg:px-16">
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-white sm:text-8xl lg:text-[130px]">
+        The <span class="text-kavora-gold">Serengeti.</span>
+      </h1>
 
-        
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        Enter a landscape where the horizon stretches endlessly, wildlife moves to its own ancient rhythm, and every day offers the possibility of something extraordinary. Discover the Serengeti with Kavora Africa.
+      </p>
 
-        <h1 class="max-w-5xl font-luxury text-7xl font-normal leading-[0.84] tracking-tight sm:text-8xl md:text-9xl">
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
 
-          The <span class="italic text-kavora-gold">Serengeti.</span>
+        <a href="#enquire" class="group inline-flex items-center gap-5">
 
-        </h1>
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Serengeti Experience
+          </span>
 
-        <p class="mt-8 max-w-xl text-sm font-light leading-8 text-white/80 md:text-base md:leading-9 reveal">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
 
-          Enter a landscape where the horizon stretches endlessly,
-          wildlife moves to its own ancient rhythm, and every day
-          offers the possibility of something extraordinary.
-
-          Discover the Serengeti with Kavora Africa.
-
-        </p>
-
-        <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
-
-          <a
-            href="#enquire"
-            class="primary-button bg-kavora-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep"
-          >
-            Plan My Serengeti Safari
-          </a>
-
-        </div>
+        </a>
 
       </div>
 
-    </section>
+    </div>
+
+  </div>
+
+</section>
 
     <!-- INTRODUCTION -->
 
@@ -438,8 +427,7 @@
 
           <h2 class="font-luxury text-6xl font-normal leading-[0.98] md:text-7xl">
 
-            Some places<br />
-            change the way<br/>
+            Some places change the way
             <span class="italic text-kavora-gold">you see the world.</span>
 
           </h2>
@@ -476,12 +464,17 @@
 
           </p>
 
-          <a
-            href="#enquire"
-            class="mt-8 inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition hover:gap-6"
-          >
-            Start Planning Your Safari 
-          </a>
+          <a href="#enquire" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Serengeti Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -669,7 +662,7 @@
             <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
 
               Game Drives<br />
-              <span class="italic text-kavora-gold">Into the Wild.</span>
+              <span class="text-kavora-gold">Into the Wild.</span>
 
             </h3>
 
@@ -717,8 +710,8 @@
 
             <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
 
-              The Great<br />
-              <span class="italic text-kavora-gold">Migration.</span>
+              The Great
+              <span class="text-kavora-gold">Migration.</span>
 
             </h3>
 
@@ -766,8 +759,8 @@
           <div class="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16 lg:px-16">
             <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
 
-              The World<br />
-              <span class="italic text-kavora-gold">of Big Cats.</span>
+              The World
+              <span class="text-kavora-gold">of Big Cats.</span>
 
             </h3>
 
@@ -816,8 +809,8 @@
 
             <h3 class="mt-5 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl">
 
-              A Safari<br />
-              <span class="italic text-kavora-gold">Under the Stars.</span>
+              A Safari
+              <span class="text-kavora-gold">Under the Stars.</span>
 
             </h3>
 
@@ -841,11 +834,23 @@
               travel style, group size, and budget.
 
             </p>
+            
 
           </div>
 
         </article>
 
+        <a href="#contact" class="group mt-20 inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Serengeti Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
       </div>
 
     </section>
@@ -1249,11 +1254,16 @@
 
         </div>
 
-        <a
-          href="#enquire"
-          class="primary-button mt-12 inline-flex items-center gap-5 bg-kavora-gold px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-deep"
-        >
-          CREATE YOU JOURNEY
+       <a href="#enquire" class="group mt-20 inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Serengeti Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
 
       </div>
@@ -1300,9 +1310,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex font-luxury items-center justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 How many days should I spend in the Serengeti?
               </span>
 
@@ -1327,9 +1337,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex font-luxury items-center justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 Can I see the Great Migration?
               </span>
 
@@ -1355,9 +1365,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex font-luxury items-center justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 Is the Serengeti suitable for a luxury safari?
               </span>
 
@@ -1382,9 +1392,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex items-center font-luxury justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 Can I combine the Serengeti with other destinations?
               </span>
 
@@ -1410,9 +1420,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex items-center font-luxury justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 How much does a Serengeti safari cost?
               </span>
 
@@ -1437,9 +1447,9 @@
 
           <details class="faq-item group py-6">
 
-            <summary class="flex items-center justify-between gap-5">
+            <summary class="flex font-luxury items-center justify-between gap-5">
 
-              <span class="text-sm font-medium">
+              <span class="text-2xl font-medium">
                 What should I bring on safari?
               </span>
 
@@ -1499,15 +1509,17 @@
 
         <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
 
-          <a
-            id="whatsapp-enquiry"
-            href="https://wa.me/255700000000?text=Hello%20Kavora%20Africa%2C%20I%20would%20like%20to%20plan%20a%20Serengeti%20safari."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="primary-button inline-flex items-center justify-center gap-4 bg-kavora-green px-8 py-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white"
-          >
-            Enquire Now
-          </a>
+        <a href="#enquire" class="group mt-20 inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Serengeti Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
 
         </div>
 
@@ -1774,5 +1786,6 @@
     }
   </script>
 
+  <script src="site-navbar.js"></script>
 </body>
 </html>

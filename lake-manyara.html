@@ -477,46 +477,46 @@
        HERO
   ====================================================== -->
 
-  <section class="hero flex items-end">
+ <section
+  class="relative flex min-h-screen items-end overflow-hidden bg-kavora-forest"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.2) 35%, rgba(5,20,15,0.82)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOsEtR0r-0RuGx_x7iG_cRuWTdv3VDyr0lTyJxdIQXO1AIKUvJ_daBd2D2&s=10'); background-size: cover; background-position: center;"
+>
 
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOsEtR0r-0RuGx_x7iG_cRuWTdv3VDyr0lTyJxdIQXO1AIKUvJ_daBd2D2&s=10"
-      alt="Lake Manyara National Park in northern Tanzania"
-      class="hero-image"
-      fetchpriority="high"
-    />
+  <div class="absolute inset-0 bg-kavora-forest/10"></div>
 
-    <div class="hero-overlay"></div>
+  <div class="relative mx-auto w-full max-w-[1600px] px-6 pb-20 pt-40 lg:px-12 lg:pb-28">
 
-    <div class="relative mx-auto w-full max-w-[1440px] px-6 pb-20 pt-40 md:px-10 md:pb-28 lg:px-16 lg:pb-32">
+    <div class="max-w-4xl">
 
-      <div class="max-w-4xl">
+      <h1 class="font-luxury text-7xl font-normal leading-[0.9] text-white sm:text-8xl lg:text-[130px]">
+        Lake <span class="text-kavora-gold">Manyara.</span>
+      </h1>
 
-       
+      <p class="mt-4 max-w-xl text-sm font-light leading-8 text-white/75 sm:text-base">
+        Discover a landscape of lush forests, open plains, shimmering lakeshore, and remarkable wildlife beneath the dramatic Great Rift Valley escarpment.
+      </p>
 
-        <h1 class="font-luxury text-6xl font-normal leading-[0.91] text-white sm:text-7xl md:text-8xl lg:text-[112px]">
-          Lake
-          <span class="italic text-kavora-gold">Manyara</span>
-        </h1>
+      <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
 
-        <p class="mt-8 max-w-xl text-sm font-light leading-8 text-white/80 md:text-base md:leading-9">
-          Discover a landscape of lush forests, open plains, shimmering
-          lakeshore, and remarkable wildlife beneath the dramatic Great
-          Rift Valley escarpment.
-        </p>
+        <a href="#contact" class="group inline-flex items-center gap-5">
 
-        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Lake Manyara Experience
+          </span>
 
-          <a href="contact.html?destination=Lake%20Manyara" class="gold-button">
-            Plan Your Lake Manyara Safari
-          </a>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
 
+        </a>
 
-        </div>
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
   <!-- =====================================================
@@ -600,7 +600,7 @@
 
         <h2 class="mt-7 font-luxury text-5xl font-normal leading-[0.98] md:text-6xl lg:text-7xl">
           A World of<br />
-          <span class="italic text-kavora-gold">Quiet Discovery.</span>
+          <span class="text-kavora-gold">Quiet Discovery.</span>
         </h2>
 
         <div class="gold-line my-7 w-40"></div>
@@ -779,10 +779,6 @@
 
           <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
 
-            <p class="eyebrow text-kavora-gold">
-              Into the Wilderness
-            </p>
-
             <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
               Guided Game Drives
             </h3>
@@ -811,10 +807,6 @@
 
           <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
 
-            <p class="eyebrow text-kavora-gold">
-              A Birder's Paradise
-            </p>
-
             <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
               Birdwatching
             </h3>
@@ -841,10 +833,6 @@
 
           <div class="absolute inset-x-0 bottom-0 z-10 p-7 md:p-8">
 
-            <p class="eyebrow text-kavora-gold">
-              Forest & Plains
-            </p>
-
             <h3 class="mt-4 font-luxury text-4xl font-medium text-white">
               Landscape Exploration
             </h3>
@@ -858,6 +846,18 @@
         </article>
 
       </div>
+
+       <a href="#contact" class="group inline-flex mt-20 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Lake Manyara Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
+        </a>
     </div>
   </section>
 
@@ -892,11 +892,16 @@
           determine the most suitable time to visit.
         </p>
 
-        <a
-          href="contact.html?destination=Lake%20Manyara"
-          class="gold-button mt-8"
-        >
-          Discuss Your Travel Dates
+       <a href="#contact" class="group inline-flex mt-20 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Lake Manyara Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
 
       </div>
@@ -1104,11 +1109,16 @@
           destinations across northern Tanzania.
         </p>
 
-        <a
-          href="contact.html?destination=Lake%20Manyara"
-          class="gold-button mt-9"
-        >
-          Begin Planning Your Journey
+        <a href="#contact" class="group inline-flex mt-10 items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Lake Manyara Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
 
       </div>
@@ -1338,7 +1348,7 @@
         <span class="gold-line w-10"></span>
       </p>
 
-      <h2 class="mt-8 font-luxury text-6xl font-normal leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+      <h2 class="mt-8 font-luxury text-6xl font-normal leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-7xl">
         Discover the<br />
         <span class="italic text-kavora-gold">Magic of Manyara.</span>
       </h2>
@@ -1351,9 +1361,16 @@
 
       <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
 
-        <a href="contact.html?destination=Lake%20Manyara" class="gold-button">
-          Plan Your Lake Manyara Safari
-          <span aria-hidden="true">→</span>
+        <a href="#contact" class="group inline-flex items-center gap-5">
+
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Lake Manyara Experience
+          </span>
+
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
+
         </a>
 
       </div>
@@ -1600,5 +1617,6 @@
     }
   </script>
 
+  <script src="site-navbar.js"></script>
 </body>
 </html>
