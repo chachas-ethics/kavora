@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +9,7 @@
 
   <title>Desert Monoliths | Kavora Journal</title>
 
-  <meta name="description" content="Discover the remote volcanic landscapes of Kenya's Suguta Valley through exclusive airborne expeditions, desert monoliths, and extraordinary Rift Valley scenery with Kavora Journal.">
+  <meta name="description" content="A journey into the remote Suguta Valley of northern Kenya, exploring its volcanic landscapes, immense horizons and extraordinary geological formations through a private airborne expedition.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,6 +64,25 @@
       color: #102D23;
     }
 
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #C8A96B;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
     .article-image {
       overflow: hidden;
       background: #E8E4D9;
@@ -74,28 +95,55 @@
       transition: transform .7s cubic-bezier(.2,.7,.2,1);
     }
 
-    .article-image:hover img {
+    .article-card:hover .article-image img {
       transform: scale(1.055);
+    }
+
+    .article-card {
+      animation: appear .45s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .category-button {
+      white-space: nowrap;
+      transition: all .25s ease;
+    }
+
+    .category-button.active {
+      color: #F7F5EF;
+      background: #102D23;
+      border-color: #102D23;
+    }
+
+    .search-field:focus {
+      outline: none;
+      border-color: #C8A96B;
+      box-shadow: 0 0 0 3px rgb(200 169 107 / 12%);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: block;
     }
 
     .gold-line {
       height: 1px;
-      width: 48px;
       background: #C8A96B;
-    }
-
-    .story-copy p {
-      margin: 1.5rem 0;
-      line-height: 1.95;
-    }
-
-    .drop-cap:first-letter {
-      float: left;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 5rem;
-      line-height: .75;
-      padding: .12em .12em 0 0;
-      color: #C8A96B;
+      width: 48px;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -112,146 +160,304 @@
 
 <body class="bg-kavora-ivory text-kavora-green antialiased">
 
-  <!-- PREMIUM NAVIGATION -->
-  <header class="sticky top-0 z-50 border-b border-kavora-line bg-kavora-ivory/90 backdrop-blur-md">
-    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-14">
 
-      <a href="journal.html"
-         class="text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-muted transition hover:text-kavora-green">
-        ← Back to Journal
-      </a>
+ <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
 
-      <a href="index.html"
-         class="font-editorial text-2xl font-medium uppercase tracking-[0.1em]">
-        Kavora<span class="text-kavora-gold">.</span>
-      </a>
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
 
-      <div class="w-20"></div>
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
 
-    </div>
-  </header>
+    <!-- Logo -->
+<a href="index.html#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
 
-  <main>
 
-    <!-- EDITORIAL HERO -->
-    <section class="mx-auto max-w-[1440px] px-6 pt-12 lg:px-14 lg:pt-20">
 
-      <div class="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
 
-        <div class="mb-5 flex items-center justify-center gap-3">
+         <a
+          href="index.html#home"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Home
+        </a>
 
-          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
-            Remote Horizons
+        <a
+          href="index.html#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="index.html#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+         <a
+          href="index.html#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+       
+
+        <a
+          href="index.html#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+          href="booking.html"
+          class="group relative overflow-hidden border border-kavora-gold px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="text-kavora-gold relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Create Your Journey
           </span>
 
-          <span class="h-1.5 w-1.5 rounded-full bg-kavora-gold/50"></span>
+        </a>
 
-          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-muted">
-            Story 03
-          </span>
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="index.html#home"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            Home
+          </a>
+
+            <a
+            href="index.html#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="index.html#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            Destinations
+          </a>
+
+        
+
+          <a
+            href="index.html#about"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            About
+          </a>
+
+          <a
+            href="index.html#journal"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            Journal
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-editorial text-3xl text-white"
+          >
+            Contact Us
+          </a>
 
         </div>
 
-        <h1 class="font-editorial text-5xl font-light leading-[1.06] tracking-[-0.025em] sm:text-6xl lg:text-7xl">
-          Desert Monoliths: Airborne Expeditions Across the
-          <span class="block italic text-kavora-gold">
-            Suguta Valley
-          </span>
-        </h1>
 
-        <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-7 text-kavora-muted sm:text-base sm:leading-8">
-          Venture into one of Kenya’s most remote Rift Valley landscapes, where volcanic ridges, ancient lava formations, shimmering salt flats, and desert horizons reveal a side of East Africa few travellers experience. From the air, the Suguta Valley becomes a dramatic study in scale, geology, and raw natural beauty.
-        </p>
+        <div class="mt-auto">
 
-      </div>
-
-      <!-- RESPONSIVE THREE-IMAGE GALLERY -->
-      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
-
-        <!-- IMAGE 1: RIFT VALLEY LANDSCAPE -->
-        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
-
-          <img
-            src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1100&q=85"
-            alt="Vast African wilderness with dramatic natural formations"
-            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
-            fetchpriority="high"
-          >
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
-
-          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
-            The Great Rift
-          </figcaption>
-
-        </figure>
-
-        <!-- IMAGE 2: DESERT TERRAIN -->
-        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto md:-translate-y-4">
-
-          <img
-            src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"
-            alt="Expansive desert terrain with sculpted dunes and warm earth tones"
-            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
-          >
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
-
-          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
-            Desert Frontiers
-          </figcaption>
-
-        </figure>
-
-        <!-- IMAGE 3: VOLCANIC LANDSCAPE -->
-        <figure class="relative aspect-[4/3] w-[78vw] shrink-0 snap-start overflow-hidden rounded-sm bg-kavora-deep shadow-xl md:aspect-[3/4] md:w-auto">
-
-          <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1100&q=85"
-            alt="Monumental mountain ridges rising above a rugged landscape"
-            class="h-full w-full object-cover transition duration-700 hover:scale-[1.04]"
-          >
-
-          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/45 via-transparent to-transparent"></div>
-
-          <figcaption class="absolute bottom-5 left-5 text-[9px] font-semibold uppercase tracking-[0.2em] text-white">
-            Ancient Monoliths
-          </figcaption>
-
-        </figure>
-
-      </div>
-
-      <p class="mt-3 text-center text-[10px] uppercase tracking-[0.16em] text-kavora-muted md:hidden">
-        Swipe to explore the gallery
-      </p>
-
-    </section>
-
-    <!-- ARTICLE CONTENT -->
-    <section class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:px-14 lg:py-24">
-
-      <!-- LEFT SIDEBAR -->
-      <aside class="h-fit space-y-8 border-l-2 border-kavora-gold/40 pl-6 lg:sticky lg:top-32 lg:col-span-4">
-
-        <div>
-
-          <h2 class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold">
-            The Experience
-          </h2>
-
-          <p class="font-editorial text-2xl font-light italic leading-snug text-kavora-green">
-            “A private passage above a landscape shaped by fire, wind, and time.”
+          <p class="mb-4 text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
           </p>
 
         </div>
 
-        <div class="h-px w-full bg-kavora-line"></div>
+      </div>
 
-        <div class="space-y-5">
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- EDITORIAL HERO / COVER BLOCK -->
+    <section class="mx-auto max-w-[1440px] px-6 pt-40 lg:px-14 lg:pt-40">
+
+      <div class="mx-auto max-w-4xl text-center mb-12 lg:mb-16">
+
+        <div class="mb-4 flex items-center justify-center gap-3">
+
+          <span class="text-[10px] font-semibold uppercase tracking-[0.25em] text-kavora-gold">
+            Odysseys
+          </span>
+
+         
+
+        </div>
+
+        <h1 class="font-editorial text-5xl leading-[1.1] tracking-[-0.02em] sm:text-6xl lg:text-7xl font-light">
+          Desert Monoliths: Airborne Expeditions Across the
+          <br class="hidden sm:inline">
+          <span class="italic text-kavora-gold font-light">Suguta Valley</span>
+        </h1>
+
+        <p class="mt-6 mx-auto max-w-2xl font-sans text-sm leading-7 text-kavora-muted font-light sm:text-base sm:leading-8">
+          A journey into remote landscapes shaped by time, silence and scale. Take to the skies above northern Kenya's extraordinary volcanic frontier, discovering immense desert plains, ancient geological formations and a wilderness far removed from the familiar.
+        </p>
+
+      </div>
+
+      <!-- MULTI-IMAGE GALLERY SYSTEM -->
+      <!-- Horizontal snap-scroll on mobile, three-column gallery on desktop -->
+
+      <div class="flex w-full gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 md:gap-6">
+
+        <!-- PICTURE 1: Suguta Valley Landscape -->
+        <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start">
+
+          <img
+            src="https://www.maranomads.com/uploads/0000/5/2023/02/27/suguta-valley-2.jpg"
+            alt="Vast desert landscape with rolling ochre sand formations"
+            class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+
+        </div>
+
+        <!-- PICTURE 2: Aerial Perspective -->
+        <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start md:-translate-y-4 transition-transform duration-500">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElNBLItq90hilmq3s3-WfYUraStbmx0DEnSYwtcAjN9dabTaD4qwbvow&s=10"
+            alt="Dramatic desert terrain and expansive remote wilderness"
+            class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+
+        </div>
+
+        <!-- PICTURE 3: Rugged Geological Formations -->
+        <div class="relative w-[75vw] shrink-0 aspect-[4/3] md:w-auto md:aspect-[3/4] overflow-hidden bg-kavora-deep shadow-xl rounded-sm snap-start">
+
+          <img
+            src="https://scenicairsafaris.com/wp-content/uploads/2024/10/sas-suguta-valley-lake-turkana-gallery-8.jpg"
+            alt="Towering rugged mountain formations rising above a remote landscape"
+            class="w-full h-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-kavora-deep/30 via-transparent to-transparent"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTENT LAYOUT GRID -->
+    <section class="mx-auto max-w-[1440px] px-6 py-16 lg:px-14 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+      <!-- LEFT ASIDE: CONCIERGE INSIGHTS & META -->
+      <aside class="lg:col-span-4 lg:sticky lg:top-32 h-fit border-l-2 border-kavora-gold/30 pl-6 space-y-8">
+
+        <div>
+
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-kavora-gold mb-2">
+            The Experience
+          </h4>
+
+          <p class="font-editorial text-2xl font-light text-kavora-green italic">
+            "A rare perspective across one of East Africa's most remote geological frontiers."
+          </p>
+
+        </div>
+
+        <div class="h-px bg-kavora-line w-full"></div>
+
+        <div class="space-y-4">
 
           <div>
-            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
               Location
             </span>
 
@@ -261,175 +467,111 @@
           </div>
 
           <div>
-            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
               Best Time to Journey
             </span>
 
             <span class="text-sm font-medium">
-              Typically the drier months, subject to local conditions
+              Generally during drier weather windows
             </span>
           </div>
 
           <div>
-            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
-              Journey Style
+            <span class="block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
+              Access Level
             </span>
 
-            <span class="text-[11px] font-semibold uppercase tracking-wider text-kavora-gold">
-              Private aviation · Remote exploration
-            </span>
-          </div>
-
-          <div>
-            <span class="mb-1 block text-[9px] font-semibold uppercase tracking-[0.15em] text-kavora-muted">
-              Expedition Focus
-            </span>
-
-            <span class="text-sm font-medium">
-              Rift Valley geology, volcanic formations, aerial photography, and remote wilderness
+            <span class="text-sm font-medium text-kavora-gold font-semibold uppercase tracking-wider text-[11px]">
+              Private Charter / Remote Expedition
             </span>
           </div>
 
         </div>
+ <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row reveal">
+         <a href="#contact" class="group inline-flex items-center gap-5">
 
-        <div class="pt-2">
+          <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
+            Design My Experience
+          </span>
 
-          <a
-            href="https://wa.me/255000000000?text=Hello%20Kavora%2C%20I%27m%20interested%20in%20a%20bespoke%20Suguta%20Valley%20expedition."
-            class="block w-full bg-kavora-green px-6 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-kavora-ivory shadow-md transition-colors duration-300 hover:bg-kavora-forest"
-          >
-            Plan a Private Expedition
-          </a>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold text-kavora-gold transition duration-300 group-hover:bg-kavora-gold group-hover:text-kavora-green">
+            →
+          </span>
 
+        </a>
         </div>
 
       </aside>
 
-      <!-- MAIN ARTICLE -->
-      <article class="story-copy mx-auto max-w-2xl font-sans text-sm font-light leading-8 text-kavora-green/90 sm:text-base lg:col-span-8">
 
-        <p class="drop-cap !mt-0 font-editorial text-2xl font-light leading-relaxed tracking-tight text-kavora-green sm:text-2xl">
-          In northern Kenya, the Suguta Valley unfolds beneath an immense sky. Part of the dramatic East African Rift system, this remote landscape is marked by volcanic terrain, rugged escarpments, seasonal waterways, and intensely arid stretches of earth. From the ground, its scale can be difficult to comprehend. Seen from the air, the valley reveals the powerful geological forces that shaped it.
+      <!-- RIGHT BODY: THE NARRATIVE CONTENT -->
+      <article class="lg:col-span-8 mx-auto max-w-2xl prose font-sans font-light text-sm sm:text-base text-kavora-green/90 space-y-8 leading-7 sm:leading-8">
+
+        <p class="font-editorial text-2xl sm:text-2xl leading-relaxed text-kavora-green font-light first-letter:text-7xl first-letter:font-editorial first-letter:float-left first-letter:mr-3 first-letter:text-kavora-gold first-letter:font-light first-letter:leading-none">
+
+          There are few places in East Africa where the sheer scale of the natural world feels as immediate as it does in the Suguta Valley. Set within Kenya's northern Rift Valley, this remote landscape unfolds through vast arid plains, volcanic terrain and imposing mountain silhouettes. Far removed from the familiar safari circuits, its character is defined by geological time, extraordinary isolation and an almost overwhelming sense of space. For the discerning traveller, Kavora presents a different way to encounter this frontier: from above.
+
         </p>
 
-        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
-          A Landscape Sculpted by
-          <span class="italic text-kavora-gold">Ancient Fire</span>
-        </h2>
+
+        <h3 class="font-editorial text-3xl sm:text-4xl text-kavora-green font-light pt-4">
+          Above the Valley Into
+          <span class="italic text-kavora-gold">The Ancient Wild</span>
+        </h3>
 
         <p>
-          The Suguta Valley lies within the northern Kenyan Rift Valley, a region shaped by tectonic movement and volcanic activity over immense spans of geological time. Its surrounding highlands, lava fields, and eroded formations tell a story of a changing Earth. The landscape is not simply empty desert; it is a complex natural system where geology, climate, and water interact.
+
+          The expedition begins with a privately arranged aerial journey across the dramatic landscapes of northern Kenya. As the aircraft moves beyond established routes, the terrain reveals itself in extraordinary detail: long mountain ridges, expansive desert basins and geological formations shaped by the forces of the Great Rift Valley. From this elevated perspective, the Suguta Valley becomes an immense natural composition, its scale and remoteness difficult to appreciate from the ground.
+
         </p>
 
-        <p>
-          In this environment, dark volcanic rock can contrast sharply with pale sediment, mineral-stained earth, and distant mountain ridges. Light changes the character of the terrain throughout the day, drawing long shadows across the valley floor and revealing textures that are easily missed from a single viewpoint.
-        </p>
 
-        <!-- ARTICLE IMAGE -->
-        <figure class="my-10 space-y-3">
+        <!-- SECONDARY LANDSCAPE IMAGE -->
+        <div class="my-10 space-y-3">
 
-          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
+          <div class="relative w-full aspect-[3/2] overflow-hidden bg-kavora-deep rounded-sm">
 
             <img
-              src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=85"
-              alt="Wind-shaped desert landscape stretching towards the horizon"
-              class="h-full w-full object-cover"
-              loading="lazy"
+              src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1500&q=85"
+              alt="Expansive remote wilderness beneath a dramatic open sky"
+              class="w-full h-full object-cover object-center"
             >
 
           </div>
 
-          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
-            Wind, heat, and geological time leave their signatures across arid landscapes.
-          </figcaption>
-
-        </figure>
-
-        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
-          Airborne Perspectives:
-          <span class="italic text-kavora-gold">The Valley from Above</span>
-        </h2>
-
-        <p>
-          An aerial expedition offers a perspective that conventional road journeys cannot easily provide. From a properly planned flight, the Rift Valley's contours become more legible: ridgelines trace the horizon, drainage channels cut through dry terrain, and isolated geological formations emerge from the surrounding landscape.
-        </p>
-
-        <p>
-          The experience is as much about observation as spectacle. Aerial photography can reveal the relationship between different landforms, while the shifting angle of sunlight changes the appearance of rock, sand, and distant escarpments. For travellers interested in geography and natural history, the flight becomes an opportunity to see the land as a connected system rather than a collection of isolated viewpoints.
-        </p>
-
-        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
-          Remote Horizons and
-          <span class="italic text-kavora-gold">The Art of Discovery</span>
-        </h2>
-
-        <p>
-          The appeal of the Suguta Valley lies partly in its remoteness. Far from the familiar rhythms of major tourist centres, the landscape rewards careful preparation and a willingness to travel at a different pace. Its open horizons and stark contrasts offer a powerful setting for travellers seeking geological wonders, dramatic photography, and a deeper appreciation of northern Kenya's natural environments.
-        </p>
-
-        <p>
-          The valley should never be treated as an ordinary desert excursion. Extreme heat, limited infrastructure, difficult terrain, and changing local conditions make professional planning essential. Any landing or ground exploration must be assessed in advance, with appropriate permissions, experienced local support, sufficient water, reliable communications, and a clear emergency plan.
-        </p>
-
-        <!-- SECONDARY IMAGE -->
-        <figure class="my-10 space-y-3">
-
-          <div class="aspect-[3/2] overflow-hidden rounded-sm bg-kavora-deep">
-
-            <img
-              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85"
-              alt="Rugged mountain formations beneath a vast open sky"
-              class="h-full w-full object-cover"
-              loading="lazy"
-            >
-
-          </div>
-
-          <figcaption class="text-center font-sans text-[11px] italic leading-5 text-kavora-muted">
-            The wider Rift Valley region is defined by dramatic elevation changes and powerful geological histories.
-          </figcaption>
-
-        </figure>
-
-        <h2 class="font-editorial text-3xl font-light leading-tight text-kavora-green sm:text-4xl">
-          Exploration with a
-          <span class="italic text-kavora-gold">Considered Footprint</span>
-        </h2>
-
-        <p>
-          Remote landscapes are not empty spaces waiting to be discovered. They are part of larger ecological and cultural systems, and responsible exploration begins with recognising that fact. Flight paths, landing locations, and ground activities should be planned with attention to wildlife, fragile terrain, local communities, and applicable conservation requirements.
-        </p>
-
-        <p>
-          Working with experienced regional operators helps make an expedition safer and more meaningful. It also creates opportunities to understand the landscape through local knowledge rather than viewing it only from a distance. Luxury in a place like Suguta is not simply access to a private aircraft; it is the ability to explore thoughtfully, with careful preparation and respect for the environment.
-        </p>
-
-        <p>
-          Across the Suguta Valley, the monoliths, ridges, and volcanic expanses offer a reminder that some of East Africa's most extraordinary experiences are found beyond the familiar routes. From above, the land becomes a map of ancient forces and ongoing change. The journey is not about conquering the wilderness, but about seeing it clearly, travelling responsibly, and leaving its silence undisturbed.
-        </p>
-
-        <!-- ARTICLE SIGN-OFF -->
-        <div class="mt-12 border-t border-kavora-line pt-7">
-
-          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-
-            <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-kavora-muted">
-              Published Editorial · Kavora Journal
-            </span>
-
-            <div class="flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-kavora-gold"></span>
-              <span class="h-2 w-2 rounded-full bg-kavora-green"></span>
-              <span class="h-2 w-2 rounded-full bg-kavora-muted"></span>
-            </div>
-
-          </div>
-
-          <p class="mt-3 text-xs leading-6 text-kavora-muted">
-            Aircraft operations, access permissions, landing options, and weather conditions must be confirmed with qualified local operators before an expedition. The imagery on this page is illustrative and is not represented as verified photography of the Suguta Valley.
-          </p>
+          <span class="block text-[11px] font-sans italic text-kavora-muted text-center">
+            The immense horizons and geological contrasts of the northern frontier.
+          </span>
 
         </div>
+
+
+        <h3 class="font-editorial text-3xl sm:text-4xl text-kavora-green font-light pt-4">
+          A Landscape Shaped
+          <span class="italic text-kavora-gold">By Time and Silence</span>
+        </h3>
+
+        <p>
+
+          Beyond the aerial perspective lies a world of striking contrasts. The valley's dry terrain, rugged volcanic features and distant mountain walls tell a story of geological transformation on a vast scale. Light moves differently across these open spaces, revealing new textures and shadows as the day progresses. It is an environment that rewards observation rather than hurried exploration.
+
+        </p>
+
+        <p>
+
+          Where access and conditions permit, a carefully planned ground experience can bring travellers closer to the landscape itself. Accompanied by qualified local guides and supported by appropriate logistics, selected stops may offer opportunities to appreciate the terrain, its natural details and the extraordinary quiet of this remote region. Every landing and ground excursion must be assessed in advance, with safety and environmental sensitivity guiding the itinerary.
+
+        </p>
+
+
+        <!-- FINAL EDITORIAL PARAGRAPH -->
+        <p>
+
+          Every bespoke journey is shaped around thoughtful preparation: suitable aircraft, experienced aviation operators, weather assessments and the necessary access permissions. The result is not simply a flight across a remote landscape, but an opportunity to experience northern Kenya from an entirely different perspective. When the horizon stretches beyond the limits of sight, the journey becomes a reminder of just how much of the natural world remains extraordinary.
+
+        </p>
+
+
 
       </article>
 
@@ -437,23 +579,744 @@
 
   </main>
 
-  <!-- CORPORATE FOOTER -->
-  <footer class="border-t border-kavora-forest/30 bg-kavora-deep py-12 text-kavora-ivory">
+  
+<!-- KAVORA PRIVATE TRAVEL CONSULTATION -->
+<section id="contact" class="bg-[#F7F5EF] scroll-mt-10 px-4 py-20 sm:px-6 sm:py-28">
+  <div class="mx-auto max-w-6xl">
 
-    <div class="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-6 px-6 text-center sm:flex-row sm:text-left lg:px-14">
+    <!-- INTRO -->
+    <div class="mx-auto mb-12 max-w-2xl text-center sm:mb-16">
+      <div class="mb-5 flex items-center justify-center gap-3">
+        <span class="h-px w-8 bg-[#C8A96B]"></span>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
+          Your private travel consultation
+        </p>
+        <span class="h-px w-8 bg-[#C8A96B]"></span>
+      </div>
 
-      <a href="index.html" class="font-editorial text-xl font-medium uppercase tracking-[0.1em]">
+      <h2 class="font-editorial text-5xl leading-[1.05] text-[#102D23] sm:text-7xl">
+        Tell us what
+        <span class="italic text-kavora-gold">moves you.</span>
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-xl text-sm leading-7 text-[#74786F] sm:text-base">
+        The places you dream about. The moments you want to experience.
+        The way you want to feel. Share a little with us, and let Kavora
+        begin imagining a journey that feels entirely your own.
+      </p>
+
+      <p class="mt-5 font-editorial text-xl italic text-[#102D23]">
+        Every extraordinary journey begins with a conversation.
+      </p>
+    </div>
+
+    <!-- FORM PANEL -->
+    <div class="mx-auto max-w-4xl border border-[#E4E0D6] bg-white">
+
+      <!-- PROGRESS -->
+      <div class="border-b border-[#E4E0D6] px-5 py-6 sm:px-10">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <p id="step-label" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#102D23]">
+            Step 01 — The vision
+          </p>
+          <p id="step-count" class="text-xs text-[#74786F]">01 / 04</p>
+        </div>
+
+        <div class="h-[3px] w-full bg-[#EAE7DF]">
+          <div id="progress-bar" class="h-full bg-kavora-gold transition-all duration-500" style="width:25%"></div>
+        </div>
+      </div>
+
+      <form id="kavora-form" class="p-5 sm:p-10" novalidate>
+
+        <!-- STEP 1: THE VISION -->
+        <div class="form-step" data-step="0">
+          <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A17E43]">
+            First, imagine
+          </p>
+          <h3 class="font-editorial text-4xl text-[#102D23] sm:text-5xl">
+            What does your ideal escape look like?
+          </h3>
+          <p class="mt-3 text-sm leading-6 text-[#74786F]">
+            There is no right answer. Start with the feeling or experience
+            you want to take away from your journey.
+          </p>
+
+          <div class="mt-8">
+            <label for="dream" class="mb-3 block text-xs font-semibold text-[#102D23]">
+              If you could design your perfect trip, what would it feel like?
+            </label>
+            <textarea
+              id="dream"
+              name="dream"
+              rows="4"
+              placeholder="Perhaps a private safari at sunrise, a secluded island retreat, or a journey filled with culture and discovery..."
+              class="w-full resize-y border border-[#DCD8CD] bg-[#FDFCFA] p-4 text-sm text-[#102D23] outline-none transition focus:border-[#C8A96B]"
+            ></textarea>
+          </div>
+
+          <div class="mt-8">
+            <p class="mb-4 text-xs font-semibold text-[#102D23]">
+              Who is this journey for?
+            </p>
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <label class="choice-option">
+                <input type="radio" name="travellerType" value="A couple" class="peer sr-only" />
+                <span class="choice-card">A couple</span>
+              </label>
+              <label class="choice-option">
+                <input type="radio" name="travellerType" value="Solo traveller" class="peer sr-only" />
+                <span class="choice-card">Solo</span>
+              </label>
+              <label class="choice-option">
+                <input type="radio" name="travellerType" value="Family" class="peer sr-only" />
+                <span class="choice-card">Family</span>
+              </label>
+              <label class="choice-option">
+                <input type="radio" name="travellerType" value="Friends or group" class="peer sr-only" />
+                <span class="choice-card">Friends / group</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: THE EXPERIENCE -->
+        <div class="form-step hidden" data-step="1">
+          <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A17E43]">
+            Find your kind of extraordinary
+          </p>
+          <h3 class="font-editorial text-4xl text-[#102D23] sm:text-5xl">
+            What would you love to experience?
+          </h3>
+          <p class="mt-3 text-sm leading-6 text-[#74786F]">
+            Select everything that speaks to you. We will use your interests
+            to shape the direction of your journey.
+          </p>
+
+          <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Private safari and wildlife" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">01</span>
+                <span class="block font-editorial text-2xl">The wild</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Private safaris, wildlife and extraordinary lodges.</span>
+              </span>
+            </label>
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Island and coastal escape" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">02</span>
+                <span class="block font-editorial text-2xl">Island serenity</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Turquoise waters, secluded beaches and slow living.</span>
+              </span>
+            </label>
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Culture and heritage" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">03</span>
+                <span class="block font-editorial text-2xl">Culture & heritage</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Local traditions, history, art and meaningful encounters.</span>
+              </span>
+            </label>
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Luxury stays and retreats" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">04</span>
+                <span class="block font-editorial text-2xl">Exceptional stays</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Distinctive villas, beautiful lodges and considered comfort.</span>
+              </span>
+            </label>
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Adventure and exploration" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">05</span>
+                <span class="block font-editorial text-2xl">Adventure</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Mountains, nature, exploration and active escapes.</span>
+              </span>
+            </label>
+
+            <label class="experience-option">
+              <input type="checkbox" name="experiences" value="Romantic or celebratory getaway" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">06</span>
+                <span class="block font-editorial text-2xl">A special occasion</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">Honeymoons, anniversaries, birthdays and celebrations.</span>
+              </span>
+            </label>
+
+            <label class="experience-option sm:col-span-2">
+              <input type="checkbox" name="experiences" value="Bespoke concierge and other experiences" class="peer sr-only" />
+              <span class="experience-card">
+                <span class="experience-number">07</span>
+                <span class="block font-editorial text-2xl">Something entirely different</span>
+                <span class="mt-1 block text-xs leading-5 text-[#74786F]">A personal request, a special arrangement or an idea of your own.</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="mt-8">
+            <label for="destination" class="mb-3 block text-xs font-semibold text-[#102D23]">
+              Is there a destination you have in mind?
+            </label>
+            <input
+              id="destination"
+              name="destination"
+              type="text"
+              placeholder="e.g. Serengeti, Zanzibar, Kenya, or surprise me"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <!-- STEP 3: TRAVEL DETAILS -->
+        <div class="form-step hidden" data-step="2">
+          <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A17E43]">
+            The finer details
+          </p>
+          <h3 class="font-editorial text-4xl text-[#102D23] sm:text-5xl">
+            Let's shape the possibilities.
+          </h3>
+          <p class="mt-3 text-sm leading-6 text-[#74786F]">
+            A few practical details help us understand what would make
+            this journey work beautifully for you.
+          </p>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="departure" class="form-label">When would you like to travel?</label>
+              <input id="departure" name="departure" type="date" class="form-input" />
+              <p class="mt-2 text-[11px] text-[#8A8A80]">An approximate date is perfectly fine.</p>
+            </div>
+
+            <div>
+              <label for="flexibility" class="form-label">How flexible are your dates?</label>
+              <select id="flexibility" name="flexibility" class="form-input">
+                <option value="">Choose an option</option>
+                <option>Dates are fixed</option>
+                <option>Flexible by a few days</option>
+                <option>Flexible by a few weeks</option>
+                <option>Still exploring possibilities</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="duration" class="form-label">How long would you like to travel?</label>
+              <select id="duration" name="duration" class="form-input">
+                <option value="">Choose a duration</option>
+                <option>1–3 nights</option>
+                <option>4–6 nights</option>
+                <option>7–10 nights</option>
+                <option>11–14 nights</option>
+                <option>15+ nights</option>
+                <option>Help me decide</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="travellers" class="form-label">How many people will be travelling?</label>
+              <select id="travellers" name="travellers" class="form-input">
+                <option value="">Select travellers</option>
+                <option>1 traveller</option>
+                <option>2 travellers</option>
+                <option>3–4 travellers</option>
+                <option>5–8 travellers</option>
+                <option>9+ travellers</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="investment" class="form-label">What investment range feels comfortable?</label>
+              <p class="mb-3 text-xs leading-5 text-[#74786F]">
+                This helps us recommend suitable experiences and stays.
+                Choose an approximate total budget for the group.
+              </p>
+              <select id="investment" name="investment" class="form-input">
+                <option value="">Prefer to discuss this personally</option>
+                <option>Under $2,000</option>
+                <option>$2,000–$5,000</option>
+                <option>$5,000–$10,000</option>
+                <option>$10,000–$20,000</option>
+                <option>$20,000+</option>
+                <option>Open to recommendations</option>
+              </select>
+              <p class="mt-2 text-[11px] text-[#8A8A80]">
+                Indicative total trip budget in USD, not a quotation.
+              </p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="extras" class="form-label">Anything else we should know?</label>
+              <textarea
+                id="extras"
+                name="extras"
+                rows="3"
+                placeholder="Special occasions, preferred pace, accessibility needs, accommodation preferences or details that matter to you..."
+                class="form-input resize-y"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: PERSONAL CONNECTION -->
+        <div class="form-step hidden" data-step="3">
+          <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A17E43]">
+            Let's make it personal
+          </p>
+          <h3 class="font-editorial text-4xl text-[#102D23] sm:text-5xl">
+            Who are we planning this for?
+          </h3>
+          <p class="mt-3 text-sm leading-6 text-[#74786F]">
+            Leave us your details so our team can continue the conversation
+            and explore the right possibilities with you.
+          </p>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="fullName" class="form-label">Your full name *</label>
+              <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="How should we address you?" class="form-input" />
+            </div>
+
+            <div>
+              <label for="email" class="form-label">Email address *</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="form-input" />
+            </div>
+
+            <div>
+              <label for="phone" class="form-label">WhatsApp / phone number *</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+255 ..." class="form-input" />
+            </div>
+
+            <div>
+              <label for="contactPreference" class="form-label">How would you prefer we contact you?</label>
+              <select id="contactPreference" name="contactPreference" class="form-input">
+                <option>WhatsApp</option>
+                <option>Email</option>
+                <option>Phone call</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-8 border-l-2 border-[#C8A96B] bg-[#F7F5EF] p-5 sm:p-6">
+            <p class="font-editorial text-2xl italic text-[#102D23]">
+              Thoughtfully planned. Personally considered.
+            </p>
+            <p class="mt-2 text-xs leading-6 text-[#74786F]">
+              Your answers help us understand your preferences. They are a
+              starting point for a conversation, not a commitment to book.
+              Availability, services and final pricing are confirmed separately.
+            </p>
+          </div>
+
+          <label class="mt-6 flex items-start gap-3 text-xs leading-5 text-[#74786F]">
+            <input id="consent" name="consent" type="checkbox" required class="mt-1 accent-[#102D23]" />
+            <span>I agree that Kavora may use these details to respond to my travel enquiry. *</span>
+          </label>
+        </div>
+
+        <!-- FORM FEEDBACK -->
+        <p id="form-error" class="mt-5 hidden text-sm text-red-700" role="alert"></p>
+
+        <!-- NAVIGATION -->
+        <div class="mt-10 flex flex-col-reverse justify-between gap-4 border-t border-[#E4E0D6] pt-6 sm:flex-row sm:items-center">
+          <button
+            type="button"
+            id="back-button"
+            class="hidden self-start px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#74786F] transition hover:text-[#102D23]"
+          >
+            ← Previous step
+          </button>
+
+          <p class="text-[10px] leading-5 text-[#8A8A80] sm:max-w-[45%]">
+            No pressure. Just the beginning of something exceptional.
+          </p>
+
+          <button
+            type="button"
+            id="next-button"
+            class="flex items-center justify-center gap-6 bg-[#102D23] px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#1D4535]"
+          >
+            Continue <span class="text-[#C8A96B]">→</span>
+          </button>
+
+          <button
+            type="submit"
+            id="submit-button"
+            class="hidden items-center justify-center gap-6 bg-[#102D23] px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#1D4535]"
+          >
+            Begin my enquiry <span class="text-[#C8A96B]">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  #kavora-form .form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #102D23;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  #kavora-form .form-input {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid #DCD8CD;
+    background: #FDFCFA;
+    padding: 12px 14px;
+    color: #102D23;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 200ms;
+  }
+
+  #kavora-form .form-input:focus {
+    border-color: #C8A96B;
+  }
+
+  #kavora-form .form-input::placeholder {
+    color: #A09F95;
+  }
+
+  #kavora-form .choice-card {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DCD8CD;
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #646A61;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+
+  #kavora-form .choice-option input:checked + .choice-card {
+    border-color: #102D23;
+    background: #102D23;
+    color: #F7F5EF;
+  }
+
+  #kavora-form .experience-card {
+    position: relative;
+    display: block;
+    height: 100%;
+    min-height: 140px;
+    border: 1px solid #E4E0D6;
+    background: #FDFCFA;
+    padding: 22px;
+    cursor: pointer;
+    transition: all 250ms;
+  }
+
+  #kavora-form .experience-card:hover {
+    border-color: #C8A96B;
+  }
+
+  #kavora-form .experience-option input:checked + .experience-card {
+    border-color: #102D23;
+    background: #F2F0E8;
+    box-shadow: inset 0 0 0 1px #102D23;
+  }
+
+  #kavora-form .experience-number {
+    display: block;
+    margin-bottom: 12px;
+    color: #A17E43;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  #kavora-form button:focus-visible,
+  #kavora-form label:focus-within {
+    outline-color: #C8A96B;
+    outline-offset: 3px;
+  }
+</style>
+
+
+  <!-- KAVORA CORPORATE FOOTER -->
+  <footer class="bg-kavora-deep text-kavora-ivory py-12 border-t border-kavora-forest/30">
+
+    <div class="mx-auto max-w-[1440px] px-6 lg:px-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+
+      <div class="font-editorial text-xl tracking-[0.1em] uppercase font-medium">
         Kavora<span class="text-kavora-gold">.</span>
-      </a>
+      </div>
 
-      <p class="text-[10px] font-light uppercase tracking-wider text-kavora-muted">
-        © 2026 Kavora Luxury Travel &amp; Concierge. All Rights Reserved.
+      <p class="text-[11px] font-light text-kavora-muted tracking-wider uppercase">
+        © 2026 Kavora Luxury Travel Concierge. All Rights Reserved.
       </p>
 
     </div>
 
   </footer>
 
-  <script src="site-navbar.js"></script>
+
+  <script>
+    
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    let menuOpen = false;
+
+
+    /* Navbar scroll state */
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 40) {
+
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if (menuOpen) {
+          toggleMenu();
+        }
+
+      });
+
+    });
+
+    
+    //Kavora Form
+  (() => {
+    const form = document.getElementById("kavora-form");
+    if (!form || form.dataset.initialized) return;
+    form.dataset.initialized = "true";
+
+    const steps = [...form.querySelectorAll(".form-step")];
+    const nextButton = document.getElementById("next-button");
+    const backButton = document.getElementById("back-button");
+    const submitButton = document.getElementById("submit-button");
+    const progressBar = document.getElementById("progress-bar");
+    const stepLabel = document.getElementById("step-label");
+    const stepCount = document.getElementById("step-count");
+    const errorBox = document.getElementById("form-error");
+
+    const stepNames = [
+      "The vision",
+      "Your experiences",
+      "The finer details",
+      "Your personal details"
+    ];
+
+    let currentStep = 0;
+
+    function showStep(index) {
+      currentStep = index;
+
+      steps.forEach((step, i) => {
+        step.classList.toggle("hidden", i !== index);
+      });
+
+      stepLabel.textContent =
+        `Step ${String(index + 1).padStart(2, "0")} — ${stepNames[index]}`;
+      stepCount.textContent =
+        `${String(index + 1).padStart(2, "0")} / ${String(steps.length).padStart(2, "0")}`;
+      progressBar.style.width = `${((index + 1) / steps.length) * 100}%`;
+
+      backButton.classList.toggle("hidden", index === 0);
+      nextButton.classList.toggle("hidden", index === steps.length - 1);
+      submitButton.classList.toggle("hidden", index !== steps.length - 1);
+      submitButton.classList.toggle("flex", index === steps.length - 1);
+
+      errorBox.classList.add("hidden");
+
+    }
+
+    function validateStep() {
+      const activeStep = steps[currentStep];
+      const requiredFields = [...activeStep.querySelectorAll("[required]")];
+
+      for (const field of requiredFields) {
+        if (field.type === "checkbox" && field.name === "consent") {
+          if (!field.checked) {
+            errorBox.textContent = "Please provide consent before sending your enquiry.";
+            errorBox.classList.remove("hidden");
+            field.focus();
+            return false;
+          }
+        } else if (!field.checkValidity()) {
+          errorBox.textContent = "Please complete the required details before continuing.";
+          errorBox.classList.remove("hidden");
+          field.reportValidity();
+          return false;
+        }
+      }
+
+      errorBox.classList.add("hidden");
+      return true;
+    }
+
+    nextButton.addEventListener("click", () => {
+      if (!validateStep()) return;
+      showStep(Math.min(currentStep + 1, steps.length - 1));
+    });
+
+    backButton.addEventListener("click", () => {
+      showStep(Math.max(currentStep - 1, 0));
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!validateStep()) return;
+
+      const data = new FormData(form);
+      const get = (key) => String(data.get(key) || "").trim();
+      const experiences = data.getAll("experiences");
+
+      const message = [
+        "KAVORA | PRIVATE TRAVEL ENQUIRY",
+        "",
+        "THE VISION",
+        `Dream experience: ${get("dream") || "Not specified"}`,
+        `Travelling as: ${get("travellerType") || "Not specified"}`,
+        "",
+        "PREFERRED EXPERIENCES",
+        experiences.length ? experiences.join(", ") : "To be discussed",
+        `Destination: ${get("destination") || "Open to recommendations"}`,
+        "",
+        "TRAVEL DETAILS",
+        `Preferred date: ${get("departure") || "Flexible / not specified"}`,
+        `Date flexibility: ${get("flexibility") || "Not specified"}`,
+        `Duration: ${get("duration") || "Not specified"}`,
+        `Travellers: ${get("travellers") || "Not specified"}`,
+        `Indicative total budget (USD): ${get("investment") || "Prefer to discuss"}`,
+        `Additional preferences: ${get("extras") || "None provided"}`,
+        "",
+        "CLIENT CONTACT",
+        `Name: ${get("fullName")}`,
+        `Email: ${get("email")}`,
+        `Phone / WhatsApp: ${get("phone")}`,
+        `Preferred contact method: ${get("contactPreference") || "WhatsApp"}`,
+        "",
+        "This is a travel enquiry, not a confirmed booking."
+      ].join("\n");
+
+
+
+      // international WhatsApp number.
+      const kavoraWhatsApp = "255685764280";
+
+      if (!/^255\d{9}$/.test(kavoraWhatsApp)) {
+        errorBox.textContent =
+          "The form is ready, but Kavora's WhatsApp number must be configured before enquiries can be sent. Please contact the website administrator.";
+        errorBox.classList.remove("hidden");
+        return;
+      }
+
+      const whatsappURL =
+        `https://wa.me/${kavoraWhatsApp}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    });
+
+    // Do not allow travel dates in the past.
+    const departure = document.getElementById("departure");
+    const localToday = new Date();
+    departure.min = [
+      localToday.getFullYear(),
+      String(localToday.getMonth() + 1).padStart(2, "0"),
+      String(localToday.getDate()).padStart(2, "0")
+    ].join("-");
+
+    showStep(0);
+  })();
+
+  </script>
 </body>
 </html>
