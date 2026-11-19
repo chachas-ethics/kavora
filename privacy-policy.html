@@ -23,15 +23,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    tailwind.config = {
+  tailwind.config = {
       theme: {
         extend: {
           colors: {
             kavora: {
-              green: "#183C30",
-              gold: "#C5A46D",
-              ivory: "#F7F5EF",
-              dark: "#102A21"
+              green: '#0B211A',
+              forest: '#102D23',
+              ivory: '#F7F5EF',
+              gold: '#C8A96B',
             }
           },
           fontFamily: {
@@ -122,42 +122,237 @@
 
 <body class="bg-kavora-ivory text-kavora-green antialiased">
 
- 
+  <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
+
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
+
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+    <!-- Logo -->
+<a href="index.html#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
+
+
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+
+         <a
+          href="index.html#home"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="index.html#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="index.html#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+         <a
+          href="index.html#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+       
+
+        <a
+          href="index.html#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+        href="booking.html"
+          class="group relative overflow-hidden border border-kavora-gold px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="text-kavora-gold relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design My Experience
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="index.html#home"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Home
+          </a>
+
+            <a
+            href="index.html#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="index.html#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Destinations
+          </a>
+
+        
+
+          <a
+            href="index.html#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            About
+          </a>
+
+          <a
+            href="index.html#journal"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journal
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Contact Us
+          </a>
+
+           <a
+  href="booking.html"
+  rel="noopener noreferrer"
+  class="mobile-link border-b border-white/10 py-5 font-luxury text-2xl text-kavora-gold"
+>
+  Design My Experience
+</a>
+
+        </div>
+
+
+        <div class="mt-auto">
+
+          <p class="mb-4 text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
 
   <main id="top">
 
     <!-- =====================================================
-         HERO
-         ===================================================== -->
+     HERO
+     ===================================================== -->
 
-    <section class="relative isolate overflow-hidden text-white">
+<section class="relative overflow-hidden bg-kavora-forest">
 
-      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div class="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-kavora-gold/5 blur-3xl"></div>
-      </div>
+  <div class="relative mx-auto max-w-7xl px-5 pt-40 py-20 sm:px-8 sm:py-40 lg:px-12 lg:py-40">
 
-      <div class="mx-auto max-w-[1440px] px-6 pb-20 pt-12 sm:px-8 sm:pb-28 lg:px-12 lg:pb-32 lg:pt-16">
+    <p class="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-kavora-gold">
+      Kavora Africa · Legal
+    </p>
 
-       
+    <h1 class="max-w-3xl font-luxury text-4xl font-normal leading-tight text-white sm:text-5xl lg:text-6xl">
+      Privacy Policy
+    </h1>
 
-        <div class="max-w-4xl">
-          <p class="mb-6 font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-kavora-gold">
-            Kavora Africa Legal Documents
-          </p>
+    <p class="mt-5 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+      How we collect, use, protect and manage your personal information when you explore our website and luxury travel services.
+    </p>
 
-          <h1 class="font-luxury text-8xl font-normal leading-[0.95] text-kavora-green tracking-tight sm:text-7xl lg:text-7xl">
-            Privacy
-            <span class="block italic text-kavora-gold">Policy.</span>
-          </h1>
+    <div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.12em] text-white/60 sm:text-sm">
+      <span>Last updated: October 2026</span>
+    </div>
 
-          <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/15 pt-6 font-sans text-[9px] uppercase tracking-[0.17em] text-white/45">
-          
-            <span class="text-kavora-green">Last updated: October 2026</span>
-          </div>
-        </div>
+  </div>
 
-      </div>
-    </section>
+</section>
 
 
     <!-- =====================================================
@@ -293,10 +488,25 @@
               Africa trading as Kavora Africa, of Arusha, Tanzania.
             </p>
 
-            <div class="mt-6 border-l-2 border-kavora-gold bg-white p-5 sm:p-6">
-              <p class="!mt-0"><strong>Email:</strong> [OFFICIAL EMAIL]</p>
-              <p><strong>Telephone:</strong> [OFFICIAL TELEPHONE]</p>
-            </div>
+           <div class="mt-6 border-l-2 border-kavora-gold bg-white p-5 sm:p-6">
+
+  <p class="!mt-0">
+    <strong>Email:</strong>
+    <a href="mailto:info@kavoraluxurytravel.com"
+       class="hover:text-kavora-gold transition-colors">
+      info@kavoraluxurytravel.com
+    </a>
+  </p>
+
+  <p>
+    <strong>Telephone:</strong>
+    <a href="tel:+255685764280"
+       class="hover:text-kavora-gold transition-colors">
+      +255 685 764 280
+    </a>
+  </p>
+
+</div>
 
             <p>
               For the activities described in this Policy, Kavora’s role and
@@ -696,12 +906,44 @@
 
               <h3 class="mt-4 font-luxury text-2xl">Kavora Africa</h3>
 
-              <div class="mt-5 space-y-3 font-sans text-sm leading-7 text-kavora-green/70">
-                <p>Arusha, Tanzania</p>
-                <p>Privacy contact: [OFFICIAL EMAIL]</p>
-                <p>Telephone: [OFFICIAL TELEPHONE]</p>
-                <p>Website: [WEBSITE URL]</p>
-              </div>
+             <div class="mt-5 space-y-3 font-sans text-sm leading-7 text-kavora-green/70">
+
+  <p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Arusha%2C+Tanzania"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="hover:text-kavora-gold transition-colors">
+      Arusha, Tanzania
+    </a>
+  </p>
+
+  <p>
+    Privacy contact:
+    <a href="mailto:info@kavoraluxurytravel.com"
+       class="hover:text-kavora-gold transition-colors">
+      info@kavoraluxurytravel.com
+    </a>
+  </p>
+
+  <p>
+    Telephone:
+    <a href="tel:+255685764280"
+       class="hover:text-kavora-gold transition-colors">
+      +255 685 764 280
+    </a>
+  </p>
+
+  <p>
+    Website:
+    <a href="https://kavoraluxurytravel.com"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="hover:text-kavora-gold transition-colors">
+      kavoraluxurytravel.com
+    </a>
+  </p>
+
+</div>
             </div>
 
             <p>
@@ -727,112 +969,123 @@
             </p>
           </section>
 
-
-          <!-- END OF POLICY -->
-
-          <div class="mt-8 border-t border-kavora-green/10 pt-8">
-            <p class="font-sans text-[9px] uppercase tracking-[0.18em] text-kavora-green/40">
-              Kavora Africa · Privacy Policy
-            </p>
-
-            <a href="#top" class="mt-5 inline-flex items-center gap-3 font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-green transition-colors hover:text-[#A58A52]">
-              Return to top <span aria-hidden="true">↑</span>
-            </a>
-          </div>
-
         </article>
 
       </div>
     </section>
-
-
-    <!-- =====================================================
-         CONTACT CTA
-         ===================================================== -->
-
-    <section class="bg-kavora-green text-white">
-      <div class="mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-14 sm:px-8 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-20">
-
-        <div class="max-w-2xl">
-          <p class="mb-4 font-sans text-[9px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
-            Questions about your privacy?
-          </p>
-
-          <h2 class="font-luxury text-3xl leading-tight sm:text-4xl lg:text-5xl">
-            Your trust deserves a direct conversation.
-          </h2>
-
-          <p class="mt-5 max-w-xl font-sans text-sm leading-7 text-white/55">
-            Contact Kavora Africa for questions about personal information,
-            privacy requests or the handling of your travel details.
-          </p>
-        </div>
-
-        <!-- Replace the placeholder with the verified official email -->
-        <a
-          href="mailto:[OFFICIAL EMAIL]"
-          class="inline-flex w-fit items-center gap-5 border border-kavora-gold/50 px-6 py-4 font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition-colors duration-300 hover:bg-kavora-gold hover:text-kavora-green"
-        >
-          Contact our team
-          <span aria-hidden="true">↗</span>
-        </a>
-
-      </div>
-    </section>
-
   </main>
 
 
-  <!-- =====================================================
-       FOOTER
-       ===================================================== -->
+ <script>
+  
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLines = document.querySelectorAll('.menu-line');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  <footer class="bg-kavora-dark text-white">
+    let menuOpen = false;
 
-    <div class="mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
 
-      <div class="flex flex-col gap-6 border-t border-white/10 py-7 md:flex-row md:items-center md:justify-between">
+    /* Navbar scroll state */
 
-        <p class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/40">
-          © 2026 Kavora Africa
-        </p>
+    window.addEventListener('scroll', () => {
 
-        <p class="font-luxury text-base tracking-wide text-white/70">
-          Luxury Travel Concierge
-          <span class="mx-1 text-kavora-gold/70">&amp;</span>
-          Private Journeys
-        </p>
+      if (window.scrollY > 40) {
 
-        <a
-          href="#top"
-          class="group inline-flex items-center gap-3 font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-kavora-gold transition-colors hover:text-white"
-        >
-          Back to top
-          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-kavora-gold/40 text-base transition-all group-hover:-translate-y-1 group-hover:bg-kavora-gold group-hover:text-kavora-green">
-            ↑
-          </span>
-        </a>
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
 
-      </div>
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
 
-      <div class="border-t border-white/[0.06] py-5 text-center">
-        <p class="font-sans text-[8px] uppercase tracking-[0.18em] text-white/30">
-          Crafted with precision by
-          <a
-            href="https://wa.me/255788296274"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ml-1 font-semibold tracking-[0.2em] text-kavora-gold/75 transition-colors hover:text-kavora-gold"
-          >
-            Synlotech Technologies
-          </a>
-        </p>
-      </div>
+      } else {
 
-    </div>
-  </footer>
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
 
-  <script src="site-navbar.js"></script>
-  <script src="kavora-consultation.js"></script>
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if (menuOpen) {
+          toggleMenu();
+        }
+
+      });
+
+    });
+
+ </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,9 +45,207 @@
 
 <body class="overflow-x-hidden bg-kavora-ivory font-sans text-kavora-green antialiased">
 
-  <!-- ==========================================
-       NAVIGATION
-  =========================================== -->
+     <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
+
+  <header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
+  >
+
+    <nav
+      class="mx-auto flex h-24 max-w-[1600px] items-center justify-between pr-10 sm:px-8 lg:px-12"
+      aria-label="Main navigation"
+    >
+
+    <!-- Logo -->
+<a href="index.html#home" class="group relative z-10 flex items-center gap-3" aria-label="Kavora Africa Home">
+  <!-- Logo Image -->
+  <img 
+    src="thumbs/(LOGO 3) Tree left kavora right transparent bg.svg" 
+    alt="" 
+    class="-ml-5 h-36 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+  />
+</a>
+
+
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+
+         <a
+          href="index.html#home"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Home
+        </a>
+
+        <a
+          href="index.html#journeys"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Journeys
+        </a>
+
+         <a
+          href="index.html#destinations"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Destinations
+        </a>
+
+         <a
+          href="index.html#about"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          About
+        </a>
+
+       
+
+        <a
+          href="index.html#contact"
+          class="nav-link relative py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-kavora-gold transition-colors duration-300 hover:text-kavora-gold"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex">
+
+        <a
+        href="booking.html"
+          class="group relative overflow-hidden border border-kavora-gold px-6 py-3 text-[9px] font-semibold uppercase tracking-[0.24em] text-white transition-all duration-500 hover:border-kavora-gold"
+        >
+
+          <span
+            class="absolute inset-0 -translate-x-full bg-kavora-gold transition-transform duration-500 group-hover:translate-x-0"
+          ></span>
+
+          <span class="text-kavora-gold relative z-10 transition-colors duration-500 group-hover:text-kavora-green">
+            Design My Experience
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="relative z-50 flex h-10 w-10 items-center justify-center text-kavora-gold lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span
+          id="menu-icon"
+          class="relative block h-4 w-5"
+        >
+
+          <span
+            class="menu-line absolute left-0 top-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-all duration-300"
+          ></span>
+
+          <span
+            class="menu-line absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300"
+          ></span>
+
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="pointer-events-none invisible absolute inset-x-0 top-0 min-h-screen bg-kavora-green opacity-0 transition-all duration-500 lg:hidden"
+    >
+
+      <div class="flex min-h-screen flex-col px-8 pb-10 pt-32">
+
+        <div class="flex flex-col">
+
+          <a
+            href="index.html#home"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Home
+          </a>
+
+            <a
+            href="index.html#journeys"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journeys
+          </a>
+
+          <a
+            href="index.html#destinations"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Destinations
+          </a>
+
+        
+
+          <a
+            href="index.html#about"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            About
+          </a>
+
+          <a
+            href="index.html#journal"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Journal
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link border-b border-white/10 py-5 font-luxury text-3xl text-white"
+          >
+            Contact Us
+          </a>
+
+           <a
+  href="booking.html"
+  rel="noopener noreferrer"
+  class="mobile-link border-b border-white/10 py-5 font-luxury text-2xl text-kavora-gold"
+>
+  Design My Experience
+</a>
+
+        </div>
+
+
+        <div class="mt-auto">
+
+          <p class="mb-4 text-[10px] uppercase tracking-[0.3em] text-kavora-gold">
+            Luxury Travel Concierge
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
 
 
 
@@ -58,7 +256,7 @@
   <main>
 <section
   class="relative flex h-[100svh] min-h-[100vh] w-full items-end overflow-hidden bg-kavora-forest sm:min-h-[100svh]"
-  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.25), rgba(5,20,15,0.2) 35%, rgba(5,20,15,0.82)), url('https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/ff60568a427c66d0c8c64c686a369c6f20dbf422484970e1fc442d3c10f9dee5.jpeg'); background-size: cover; background-position: center;"
+  style="background-image: linear-gradient(to bottom, rgba(5,20,15,0.85), rgba(5,20,15,0.5) 35%, rgba(5,20,15,0.82)), url('https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/ff60568a427c66d0c8c64c686a369c6f20dbf422484970e1fc442d3c10f9dee5.jpeg'); background-size: cover; background-position: center;"
 >
 
   <div class="absolute inset-0 bg-kavora-forest/10"></div>
@@ -78,7 +276,7 @@
 
       <div class="reveal mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-9">
 
-        <a href="#enquire" class="group inline-flex items-center gap-5">
+        <a href="#contact" class="group inline-flex items-center gap-5">
           <span class="font-sans text-[10px] font-semibold uppercase tracking-[.24em] text-kavora-gold">
             Design My Journey
           </span>
@@ -537,65 +735,6 @@
     </section>
 
 
-  
-
-
-    <!-- ==========================================
-         ENQUIRY CTA
-    =========================================== -->
-
-    <section id="enquire" class="relative overflow-hidden bg-kavora-deep px-6 py-24 sm:px-10 sm:py-28 lg:px-20 lg:py-32">
-
-      <div class="absolute -right-32 -top-40 h-96 w-96 rounded-full border border-kavora-gold/10"></div>
-
-      <div class="absolute -right-16 -top-24 h-64 w-64 rounded-full border border-kavora-gold/10"></div>
-
-      <div class="relative mx-auto grid w-full max-w-[1450px] items-center gap-12 lg:grid-cols-[1fr_auto]">
-
-        <div>
-
-          <p class="mb-6 font-sans text-[9px] font-semibold uppercase tracking-[0.28em] text-kavora-gold">
-            Your Journey Begins Here
-          </p>
-
-          <h2 class="font-luxury text-[54px] leading-[0.95] text-white sm:text-[72px] lg:text-[88px]">
-
-            Shall we begin<br>
-            <span class="italic text-kavora-gold">with a conversation?</span>
-
-          </h2>
-
-          <p class="mt-7 max-w-lg font-sans text-[12px] leading-7 text-white/55">
-
-            Share your ideas with us. Let's start exploring what your private journey from the Serengeti to Zanzibar could look like.
-
-          </p>
-
-        </div>
-
-        <div class="lg:justify-self-end">
-
-          <a
-            href="contact.html?journey=Wilderness%20%26%20Ocean"
-            class="group inline-flex items-center gap-6 border border-kavora-gold px-7 py-5 transition-all duration-300 hover:bg-kavora-gold sm:px-9"
-          >
-
-            <span class="font-sans text-[9px] font-semibold uppercase tracking-[0.2em] text-white transition-colors group-hover:text-kavora-green">
-              Start an enquiry
-            </span>
-
-            <span class="text-lg text-kavora-gold transition-colors group-hover:text-kavora-green">
-              ↗
-            </span>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
   </main>
 
 
@@ -741,55 +880,115 @@
 
   <script>
 
-    // MOBILE NAVIGATION
-
+     const header = document.getElementById('site-header');
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const menuLineOne = document.getElementById('menu-line-one');
-    const menuLineTwo = document.getElementById('menu-line-two');
-
+    const menuLines = document.querySelectorAll('.menu-line');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    menuToggle.addEventListener('click', () => {
+    let menuOpen = false;
 
-      const isOpen = !mobileMenu.classList.contains('hidden');
 
-      mobileMenu.classList.toggle('hidden');
+    /* Navbar scroll state */
 
-      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    window.addEventListener('scroll', () => {
 
-      menuLineOne.classList.toggle('translate-y-[4px]');
-      menuLineOne.classList.toggle('rotate-45');
+      if (window.scrollY > 40) {
 
-      menuLineTwo.classList.toggle('-translate-y-[4px]');
-      menuLineTwo.classList.toggle('-rotate-45');
+        header.classList.add(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-24');
+        header.querySelector('nav').classList.add('h-20');
+
+      } else {
+
+        header.classList.remove(
+          'bg-kavora-green/95',
+          'backdrop-blur-xl',
+          'shadow-lg',
+          'shadow-black/10'
+        );
+
+        header.querySelector('nav').classList.remove('h-20');
+        header.querySelector('nav').classList.add('h-24');
+
+      }
 
     });
+
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+      menuOpen = !menuOpen;
+
+      menuToggle.setAttribute('aria-expanded', menuOpen);
+
+      if (menuOpen) {
+
+        mobileMenu.classList.remove(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        menuLines[0].classList.add('rotate-45', 'top-1/2');
+        menuLines[1].classList.add('opacity-0');
+        menuLines[2].classList.add('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      } else {
+
+        mobileMenu.classList.remove(
+          'pointer-events-auto',
+          'visible',
+          'opacity-100'
+        );
+
+        mobileMenu.classList.add(
+          'pointer-events-none',
+          'invisible',
+          'opacity-0'
+        );
+
+        menuLines[0].classList.remove('rotate-45', 'top-1/2');
+        menuLines[1].classList.remove('opacity-0');
+        menuLines[2].classList.remove('-rotate-45', 'bottom-auto', 'top-1/2');
+
+      }
+
+    }
+
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+    /* Close mobile menu when a link is clicked */
 
     mobileLinks.forEach(link => {
 
       link.addEventListener('click', () => {
 
-        mobileMenu.classList.add('hidden');
-
-        menuToggle.setAttribute('aria-expanded', 'false');
-
-        menuLineOne.classList.remove('translate-y-[4px]', 'rotate-45');
-
-        menuLineTwo.classList.remove('-translate-y-[4px]', '-rotate-45');
+        if (menuOpen) {
+          toggleMenu();
+        }
 
       });
 
     });
 
-
-    // AUTOMATIC COPYRIGHT YEAR
-
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
   </script>
-
-  <script src="site-navbar.js"></script>
   <script src="kavora-consultation.js"></script>
 </body>
 </html>
